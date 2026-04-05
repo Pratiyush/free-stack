@@ -34,7 +34,6 @@
 
 | Service | Free Tier | Limits | Rate Limits | Verified | Link |
 |---------|-----------|--------|-------------|----------|------|
-| Twilio | $15 trial credit (one-time) | Trial prefix on messages; verified numbers only | 1 msg/sec (trial) | 2026-04 | [Pricing](https://www.twilio.com/en-us/pricing) |
 
 ## Excluded Services
 
@@ -49,7 +48,6 @@
 - **Best for testing/dev**: Mailtrap (sandbox + sending), Postmark (reliable delivery, tiny volume), or Mailgun (100/day, no CC).
 - **Cheapest at scale**: Amazon SES ($0.10/1,000 emails) or Plunk self-hosted (same SES pricing, open-source UI).
 - **EmailJS**: Unique -- sends email from client-side JS without a backend. Good for contact forms on static sites.
-- **Twilio SMS**: Trial credit only, not a permanent free tier. Included for reference. US outbound: $0.0079/segment + carrier surcharges.
 - **Mailchimp**: Free tier was cut again in Jan 2026 (from 500 to 250 contacts, automations removed entirely). Barely usable for anything beyond a tiny newsletter.
 - **Amazon SES free tier changed**: Accounts created after July 15, 2025 get $200 AWS credits (shared across all services) instead of the dedicated 3,000 emails/month for 12 months.
 - **Plunk**: Open-source (AGPL-3.0), self-hostable. Cloud version offers 3,000 emails/month free. Built on AWS SES. Good alternative to Resend for those who want to own their infrastructure.

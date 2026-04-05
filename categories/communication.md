@@ -22,7 +22,6 @@
 - **Ably** offers the best permanent free tier for real-time pub/sub messaging (6M messages/month).
 - **Pusher** free tier is capped daily (200K messages/day) rather than monthly, which is unusual -- plan around daily spikes.
 - **LiveKit** is open-source (Apache 2.0) and can be self-hosted for zero cost. The managed cloud free tier (Build plan) includes 5K WebRTC minutes and 1K agent session minutes. HIPAA compliance requires Scale plan ($500/mo).
-- **Liveblocks** provides collaborative features (presence, cursors, comments, notifications) rather than audio/video. Best for multiplayer document editing (like Figma/Notion-style collaboration).
 - **PartyKit** was acquired by Cloudflare in 2024 and now runs on Cloudflare Workers/Durable Objects infrastructure. Best for custom real-time multiplayer logic at the edge. Hibernation API allows scaling to thousands of concurrent connections per room.
 - **Twilio** and **Vonage** are listed for completeness but only offer one-time trial credits, not permanent free tiers.
 - **Stream** free tier is restricted to small teams (<5 people, <$10K revenue) -- verify eligibility before relying on it.

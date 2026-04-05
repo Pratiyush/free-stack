@@ -8,7 +8,6 @@
 | **GitLab** | Free tier | 5 users (private repos), 10 GiB repo+LFS storage, 400 CI/CD compute min/mo, unlimited public repos | 10 req/sec per user | 2026-04 | [Pricing](https://about.gitlab.com/pricing/) |
 | **Bitbucket** | Free plan | Up to 5 users, unlimited public/private repos, 1 GB total workspace storage, 1 GB LFS, 50 build min/mo, 90-day pipeline log retention | API: 1,000 req/hr | 2026-04 | [Pricing](https://www.atlassian.com/software/bitbucket/pricing) |
 | **Linear** | Free plan | Unlimited members, 250 active issues, 2 teams, unlimited archived issues, all integrations + API/webhooks, 10 MB file uploads | No published rate limit | 2026-04 | [Pricing](https://linear.app/pricing) |
-| **Notion** | Free plan (Personal) | Unlimited pages & blocks (solo use); 1,000 blocks limit for multi-member workspaces; 5 guests; 5 MB file uploads; 7-day page history | API: 3 req/sec | 2026-04 | [Pricing](https://www.notion.com/pricing) |
 | **Figma** | Starter plan | 3 Figma files per team project, unlimited drafts, unlimited editors/viewers, 3 pages/file, 30-day version history, no Dev Mode | No published rate limit | 2026-04 | [Pricing](https://www.figma.com/pricing/) |
 | **Postman** | Free plan | 1 user only (as of Mar 2026), unlimited collection runs, basic monitoring, core API testing features | 300 Postman API requests/min | 2026-04 | [Pricing](https://www.postman.com/pricing/) |
 | **Insomnia** | Free plan (open source, MIT) | Unlimited local collections, unlimited requests, all HTTP/GraphQL/gRPC/WebSocket support, no cloud sync or team collaboration | Local only, no sync | 2026-04 | [Pricing](https://insomnia.rest/pricing) |
@@ -30,7 +29,6 @@
 - **GitLab** 5-user limit applies only to private top-level groups on GitLab.com; self-hosted GitLab CE is fully free and open source.
 - **Bitbucket** workspace storage limit enforced at 1 GB since May 2025; snippets removed from free plan; pipeline log retention reduced to 90 days.
 - **Linear** free tier caps at 250 active issues with a hard limit -- no grace period or overage. Archived issues do not count.
-- **Notion** free plan is unlimited for solo use but caps at 1,000 blocks for multi-member workspaces.
 - **Figma** Starter plan no longer includes FigJam files in the team project count (3 Figma files only). Dev Mode is not available on Starter.
 - **Insomnia** is open source (MIT); the free tier has full local functionality but no cloud sync/collaboration. Paid plans ($5-18/mo) add cloud sync and team features.
 - **ngrok** free plan now supports 3 concurrent endpoints (up from 1) and 20K HTTP requests/mo. Interstitial warning page remains on free plan.

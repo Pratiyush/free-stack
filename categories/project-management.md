@@ -25,5 +25,4 @@
 - **Shortcut** and **Height** are developer-focused alternatives designed specifically for engineering teams.
 - **Huly** is an all-in-one platform combining project management, documents, chat, and video -- all free with unlimited users.
 - **Vikunja** is a lightweight, self-hosted task manager (AGPLv3) with excellent migration tools for Todoist, Trello, and Microsoft To-Do. Vikunja Cloud is available as a paid hosted option starting at 4 EUR/mo.
-- **AppFlowy** is positioned as an open-source Notion alternative with project management features. The free cloud tier is limited to 2 members; self-hosting removes all limits.
 - **Focalboard** is no longer actively maintained by Mattermost (standalone version seeking community maintainers as of 2024). Still functional for self-hosting but consider Plane or Huly for actively maintained alternatives.

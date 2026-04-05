@@ -7,7 +7,6 @@
 | GitHub Actions | 2,000 mins/mo (private repos); unlimited for public repos | 500 MB packages storage; 10 concurrent jobs; 6 hr max job runtime | Per-repo and per-workflow concurrency limits | 2026-04 | [Pricing](https://github.com/pricing) |
 | GitLab CI | 400 compute mins/mo | 5 users per top-level group; 10 GB storage per project; unlimited on self-hosted runners | Minutes reset monthly; no rollover | 2026-04 | [Pricing](https://about.gitlab.com/pricing/) |
 | CircleCI | 30,000 credits/mo (~6,000 build mins on Linux/Docker) | 5 active users; 400K credits/mo for open-source Linux/Arm/Docker builds | Credits expire monthly; no rollover | 2026-04 | [Pricing](https://circleci.com/pricing/) |
-| Codecov | Free for up to 5 users; unlimited for open source | Unlimited coverage reports and repos (public and private) | No documented rate limits | 2026-04 | [Pricing](https://about.codecov.io/pricing/) |
 | Percy (BrowserStack) | 5,000 screenshots/mo | Unlimited users and projects; cross-browser; 30-day build history | Screenshots reset monthly | 2026-04 | [Pricing](https://percy.io/pricing) |
 | Chromatic | 5,000 snapshots/mo; unlimited for qualifying open source | Unlimited collaborators and Storybooks; 1 snapshot = 1 story x 1 browser x 1 viewport | No overage allowed -- testing stops at limit | 2026-04 | [Pricing](https://www.chromatic.com/pricing) |
 | Argos CI | 5,000 screenshots/mo; open-source sponsorship available | Unlimited projects; screenshot = 1 page x 1 browser x 1 viewport | No overage -- stops at limit | 2026-04 | [Pricing](https://argos-ci.com/pricing) |
@@ -18,7 +17,6 @@
 
 ## Notes
 
-- **Permanent free tiers**: GitHub Actions, GitLab CI, CircleCI, Codecov, Percy, Chromatic, Argos CI, Playwright, and Qase all offer permanent free tiers.
 - **GitHub Actions** 2026 pricing update: runner prices dropped up to 39% on Jan 1, 2026. Starting Mar 1, 2026, self-hosted runners consume free-tier minutes at list price rates.
 - **Playwright** 1.57+ switched from Chromium builds to Chrome for Testing on most platforms. 1.58 added Timeline view in HTML reports for performance debugging.
 - **Argos CI** (new) is an open-source visual regression tool offering 5,000 free screenshots/mo -- a strong alternative to Percy/Chromatic with a developer-friendly experience.
