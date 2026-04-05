@@ -123,6 +123,21 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for full guidelines.
 
 ---
 
+## Recently Added (April 2026)
+
+| Service | Category | Free Tier |
+|---------|----------|-----------|
+| Cerebras | AI/ML | 1M tokens/day — fastest free LLM inference |
+| LiveKit | Communication | 5K WebRTC min/month, open source |
+| Tolgee | Translation | Open source i18n, unlimited self-host |
+| Trieve | Search | 1GB ingestion, 1M searches/month |
+| Lago | Payments | Open source billing, free to $250K revenue |
+| Huly | Project Mgmt | Unlimited users, open source |
+| Tigris | Storage | 5GB, zero egress, S3-compatible |
+| DNS4EU | DNS | EU public resolver, GDPR-compliant |
+
+---
+
 ## License
 
 [MIT](LICENSE)
