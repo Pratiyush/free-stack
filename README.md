@@ -12,13 +12,14 @@
 
 ## Why free-stack?
 
-Other lists dump everything in one giant README. We don't.
+Other free-for-dev lists are abandoned or use outdated formats. free-stack is actively maintained.
 
 - **One file per category** — find what you need in seconds
 - **Tables with specific limits** — not vague "free tier available"
 - **Rate limits documented** — missing from every other list
 - **Verified dates** — you know if the info is current
 - **Dead services removed** — PlanetScale, Heroku, SendGrid, ElephantSQL gone
+- **Actively maintained** — monthly verification sweeps, PRs merged within 48h
 
 ---
 
