@@ -29,3 +29,5 @@
 - **Firebase Hosting** transfer limit is documented as 360 MB/day, which totals roughly 10 GB/mo.
 - **Zeabur** is a credit-based free tier ($5/mo); actual runtime depends on your resource consumption rate.
 - **Stormkit** is only free as a self-hosted solution; you must provide your own server infrastructure.
+
+> **Want to add a service?** See [CONTRIBUTING.md](../CONTRIBUTING.md) for the format and rules.
