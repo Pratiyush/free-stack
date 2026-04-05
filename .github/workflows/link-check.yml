@@ -22,3 +22,4 @@ jobs:
           name: link-report
           path: lychee/out.md
           retention-days: 30
+
