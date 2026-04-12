@@ -2,6 +2,8 @@
 
 > **323 verified free tiers** across 27 categories — organized in tables, not walls of text.
 
+🌐 **[freestack.is-a.dev](https://freestack.is-a.dev)** — Browse the site
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](CONTRIBUTING.md)
 [![Categories](https://img.shields.io/badge/categories-27-blue?style=flat-square)](#categories)
@@ -142,3 +144,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for full guidelines.
 ## License
 
 [MIT](LICENSE)
+
+---
+
+Made with ❤️ by [Pratiyush](https://github.com/Pratiyush)
