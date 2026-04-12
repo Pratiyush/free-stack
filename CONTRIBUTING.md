@@ -4,6 +4,34 @@ Thanks for contributing! Here's how to do it right.
 
 ---
 
+## Issue-First Workflow
+
+**Every change must have a GitHub issue first.** Before making any PR:
+
+1. Check existing issues — your idea may already be there
+2. If not, create a new issue describing the change
+3. Wait for a maintainer to acknowledge or tag it
+4. Reference the issue number in your PR
+
+This helps us track what's being worked on and avoids duplicate effort.
+
+---
+
+## Good First Issues
+
+Look for issues tagged with these labels:
+
+| Label | Meaning |
+|-------|---------|
+| `good first issue` | Perfect for first-time contributors |
+| `expand` | Add detailed comparison to a category section |
+| `add-service` | Add a new service entry |
+| `add-icons` | Add Lucide icons to service entries |
+| `verify` | Re-verify a service's free tier limits |
+| `help wanted` | We need community help on this |
+
+---
+
 ## Adding a Service
 
 ### 1. Pick the right category
@@ -15,26 +43,48 @@ Check the [README](README.md) for the category list. If your service doesn't fit
 Every entry must use this exact format:
 
 ```markdown
-| Service Name | What you get free | Specific limits | API/rate limits | ✅ YYYY-MM | [site](https://example.com) |
+| Service Name | What you get free | Specific limits | API/rate limits | Credit Card | Verified | Link |
 ```
 
 **Example:**
 ```markdown
-| Vercel | Hobby plan — static + serverless | 100GB bandwidth, 100 deploys/day | 1K API req/min | ✅ 2026-04 | [vercel.com](https://vercel.com/pricing) |
+| Vercel | Hobby plan — static + serverless | 100GB bandwidth, 100 deploys/day | 1K API req/min | No | Apr 2026 | [vercel.com/pricing](https://vercel.com/pricing) |
 ```
 
-### 3. Verify before submitting
+### 3. Icons
+
+We use [Lucide icons](https://github.com/lucide-icons/lucide) where a match exists for the service or its category. When adding a service, check if a relevant Lucide icon exists and include it if so.
+
+### 4. Verify before submitting
 
 - Visit the **official pricing page** (not a blog post)
 - Confirm the free tier exists and note specific limits
 - Add the current month as the verified date
 - Link to the pricing page, not the homepage
 
-### 4. Open a small PR
+### 5. Open a PR
 
 - **ONE service per PR** (preferred) or a few related services max
+- Create a branch: `add/[service-name]`
 - PR title: `add: [service-name] to [category]`
 - PR body: briefly explain what the service does
+- Reference the issue: `Closes #123`
+
+---
+
+## Expanding a Category (Comparisons)
+
+Each category should have a detailed comparison section below the main table. If you see an `expand` issue:
+
+1. Pick a category that needs expansion
+2. Research each service in detail
+3. Add a comparison section with:
+   - Pros/cons for each service
+   - Best use cases
+   - Head-to-head comparison table
+   - When to choose one over another
+4. Branch: `expand/[category-name]`
+5. PR title: `expand: [category] comparisons`
 
 ---
 
@@ -58,6 +108,7 @@ We only accept entries that:
 - Are **useful to developers** (no filler)
 
 We will close PRs that:
+- Don't reference a GitHub issue
 - Add services without verification
 - Use inconsistent formatting
 - Add self-hosted software (this list is for SaaS/PaaS/IaaS only)
@@ -72,7 +123,20 @@ We will close PRs that:
 - Limits: be specific ("500MB" not "limited storage")
 - One line per service — no multi-line descriptions
 - No emojis in table cells (emojis only in category headers)
-- Verified date: format as `✅ YYYY-MM`
+- Verified date: format as `Mon YYYY` (e.g., `Apr 2026`)
+- Icons: use [Lucide icons](https://lucide.dev) where a match exists
+
+---
+
+## Branch Naming
+
+| Type | Pattern | Example |
+|------|---------|---------|
+| Add service | `add/[service]` | `add/supabase` |
+| Update service | `update/[service]` | `update/vercel` |
+| Expand category | `expand/[category]` | `expand/databases` |
+| Fix | `fix/[description]` | `fix/dead-links` |
+| Icons | `icons/[category]` | `icons/hosting` |
 
 ---
 
