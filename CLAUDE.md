@@ -43,6 +43,20 @@ The PR template at `.github/PULL_REQUEST_TEMPLATE.md` is the source of truth —
 - **Delete merged feature branches** locally and on origin (`gh pr merge --delete-branch` handles origin; `git branch -d <name>` locally).
 - **Worktrees**: if work was done in a `git worktree` (separate checkout for parallel branches), **remove the worktree as soon as its PR is merged**. From the main repo run `git worktree remove <path>` (or `git worktree remove --force <path>` if it has untracked files you've already saved elsewhere). List active worktrees with `git worktree list`. Lingering merged worktrees pin stale refs, confuse `git status` in the wrong directory, and waste disk.
 
+## Releases & Tags
+
+Every merged PR that ships user-visible content or behavior gets a tagged GitHub Release. No silent merges to canonical.
+
+- **Semver applies**:
+  - `MAJOR` (X.0.0) — restructures, schema changes, breaking PR-template changes (e.g., the YAML migration tracked in #372).
+  - `MINOR` (1.X.0) — new categories, new automation, new top-level sections in README/docs.
+  - `PATCH` (1.0.X) — individual service add/update/remove, link fixes, doc tweaks, cleanup PRs.
+- **Tag format**: `vMAJOR.MINOR.PATCH`. Annotated tags only (`git tag -a vX.Y.Z -m "..."`). Sign if a signing key is set up locally.
+- **Release notes**: start from `gh release create vX.Y.Z --generate-notes`; rewrite the first line to highlight the user-visible change (not just the commit title). Group entries by type if more than one PR is in the tag.
+- **Build must be green before tagging**: the GitHub Pages deploy run on the merge commit must have succeeded. No tags on red builds — fix the deploy first, then tag.
+- **One tag per ship event**: bundle maintenance commits (refactors, dep bumps, cleanup) into the next service-ship tag rather than tagging them alone. Releases should map to things contributors and users care about.
+- **Auto-build assets**: when the build script (Phase 3+ of #372) lands, the release pipeline attaches `data/index.json` and a flat-Markdown export as release assets so downstream consumers can pin a version.
+
 ## Content Rules
 
 - Every service entry must follow the table format in each category file
