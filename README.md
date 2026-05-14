@@ -1,13 +1,13 @@
 # free-stack
 
-> **323 verified free tiers** across 27 categories — organized in tables, not walls of text.
+> **324 verified free tiers** across 27 categories — organized in tables, not walls of text.
 
 🌐 **[freestack.is-a.dev](https://freestack.is-a.dev)** — Browse the site
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](CONTRIBUTING.md)
 [![Categories](https://img.shields.io/badge/categories-27-blue?style=flat-square)](#categories)
-[![Entries](https://img.shields.io/badge/entries-323-green?style=flat-square)](#categories)
+[![Entries](https://img.shields.io/badge/entries-324-green?style=flat-square)](#categories)
 [![Verified](https://img.shields.io/badge/verified-April%202026-orange?style=flat-square)](#categories)
 
 ---
