@@ -41,6 +41,7 @@ The PR template at `.github/PULL_REQUEST_TEMPLATE.md` is the source of truth —
 - **Always sync `main` before starting work**: `git checkout main && git pull --ff-only` before `git checkout -b <new-branch>`. Stale-base branches cause merge conflicts and stale-PR thrash.
 - **Verify the branch name with `git status` before every `git push`.** No pushes to `main` directly — always via PR. No accidental pushes to `master`.
 - **Delete merged feature branches** locally and on origin (`gh pr merge --delete-branch` handles origin; `git branch -d <name>` locally).
+- **Worktrees**: if work was done in a `git worktree` (separate checkout for parallel branches), **remove the worktree as soon as its PR is merged**. From the main repo run `git worktree remove <path>` (or `git worktree remove --force <path>` if it has untracked files you've already saved elsewhere). List active worktrees with `git worktree list`. Lingering merged worktrees pin stale refs, confuse `git status` in the wrong directory, and waste disk.
 
 ## Content Rules
 
