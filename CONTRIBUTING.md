@@ -24,9 +24,7 @@ Look for issues tagged with these labels:
 | Label | Meaning |
 |-------|---------|
 | `good first issue` | Perfect for first-time contributors |
-| `expand` | Add detailed comparison to a category section |
 | `add-service` | Add a new service entry |
-| `add-icons` | Add Lucide icons to service entries |
 | `verify` | Re-verify a service's free tier limits |
 | `help wanted` | We need community help on this |
 
@@ -72,19 +70,9 @@ We use [Lucide icons](https://github.com/lucide-icons/lucide) where a match exis
 
 ---
 
-## Expanding a Category (Comparisons)
+## Detailed Comparisons (Deferred to v2)
 
-Each category should have a detailed comparison section below the main table. If you see an `expand` issue:
-
-1. Pick a category that needs expansion
-2. Research each service in detail
-3. Add a comparison section with:
-   - Pros/cons for each service
-   - Best use cases
-   - Head-to-head comparison table
-   - When to choose one over another
-4. Branch: `expand/[category-name]`
-5. PR title: `expand: [category] comparisons`
+Detailed per-service comparison sections (pros/cons, best-use-cases, head-to-head tables) are deferred until the data-first restructure lands. Once services live as structured YAML (see [#372](https://github.com/Pratiyush/free-stack/issues/372)), comparison content will be reintroduced as schema-driven sections that stay consistent across categories. We will reopen scoped issues for community help once the infrastructure exists.
 
 ---
 
