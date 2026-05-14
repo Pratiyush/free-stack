@@ -58,15 +58,8 @@ const categories = defineCollection({
 
 export const collections = { services, categories };
 
-export const TIER_LABELS: Record<(typeof TIER_TYPES)[number], string> = {
-  'always-free': 'Always Free',
-  'free-plan': 'Free Plan',
-  'trial-credit': 'Trial Credit',
-  'pay-as-you-go': 'Pay As You Go',
-};
-
-export const SUBCATEGORY_LABELS: Record<(typeof SUBCATEGORIES)[number], string> = {
-  permanent: 'Permanent Free Tier',
-  'expiring-credits': 'Free Credits (Expire)',
-  limited: 'Severely Limited',
-};
+// Display labels for tier_type and subcategory live in src/lib/labels.ts so
+// they can be imported into components without pulling zod into the runtime
+// bundle.
+export { TIER_LABELS, SUBCATEGORY_LABELS } from '~/lib/labels';
+export type { TierType, Subcategory } from '~/lib/labels';

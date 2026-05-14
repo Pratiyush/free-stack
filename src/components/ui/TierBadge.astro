@@ -1,0 +1,49 @@
+---
+import { TIER_LABELS, type TierType } from '~/lib/labels';
+
+interface Props {
+  tier: TierType;
+  size?: 'sm' | 'md';
+}
+
+const { tier, size = 'md' } = Astro.props;
+const label = TIER_LABELS[tier];
+---
+
+<span class:list={['tier-badge', `tier-${tier}`, `size-${size}`]}>{label}</span>
+
+<style>
+  .tier-badge {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.15rem 0.55rem;
+    border-radius: 999px;
+    border: 1px solid currentColor;
+    line-height: 1.4;
+    white-space: nowrap;
+  }
+  .size-sm {
+    font-size: 0.66rem;
+    padding: 0.1rem 0.4rem;
+  }
+  .tier-always-free {
+    color: var(--tier-always-free);
+    background: color-mix(in srgb, var(--tier-always-free) 10%, transparent);
+  }
+  .tier-free-plan {
+    color: var(--tier-free-plan);
+    background: color-mix(in srgb, var(--tier-free-plan) 10%, transparent);
+  }
+  .tier-trial-credit {
+    color: var(--tier-trial-credit);
+    background: color-mix(in srgb, var(--tier-trial-credit) 12%, transparent);
+  }
+  .tier-pay-as-you-go {
+    color: var(--tier-pay-as-you-go);
+    background: color-mix(in srgb, var(--tier-pay-as-you-go) 10%, transparent);
+  }
+</style>

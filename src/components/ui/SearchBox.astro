@@ -1,0 +1,100 @@
+---
+interface Props {
+  placeholder?: string;
+  id?: string;
+}
+
+const { placeholder = 'Search 50 free tiers…', id = 'search' } = Astro.props;
+---
+
+<label class="search-box">
+  <span class="visually-hidden">Search</span>
+  <svg
+    class="search-icon"
+    width="18"
+    height="18"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+  >
+    <circle cx="11" cy="11" r="7"></circle>
+    <path d="m21 21-4.3-4.3"></path>
+  </svg>
+  <input type="search" id={id} placeholder={placeholder} autocomplete="off" spellcheck="false" />
+  <kbd class="search-hint">/</kbd>
+</label>
+
+<style>
+  .search-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 0.85rem;
+    background: var(--color-paper-deep);
+    border: 1px solid var(--color-rule);
+    border-radius: var(--radius-md);
+    transition: border-color 0.15s ease;
+    width: 100%;
+    max-width: 480px;
+  }
+  .search-box:focus-within {
+    border-color: var(--color-ink);
+  }
+  .search-icon {
+    color: var(--color-ink-soft);
+    flex-shrink: 0;
+  }
+  input[type='search'] {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    font: inherit;
+    color: var(--color-ink);
+    min-width: 0;
+  }
+  input[type='search']::placeholder {
+    color: var(--color-ink-soft);
+  }
+  input[type='search']::-webkit-search-cancel-button {
+    appearance: none;
+  }
+  .search-hint {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--color-ink-soft);
+    background: var(--color-paper);
+    border: 1px solid var(--color-rule);
+    border-radius: 4px;
+    padding: 0.05rem 0.35rem;
+    line-height: 1.2;
+  }
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+</style>
+
+<script>
+  // Slash-key shortcut: focus search when pressing "/" outside an input
+  document.addEventListener('keydown', (e) => {
+    if (e.key === '/' && document.activeElement?.tagName !== 'INPUT') {
+      const input = document.querySelector<HTMLInputElement>('input[type="search"]');
+      if (input) {
+        e.preventDefault();
+        input.focus();
+      }
+    }
+  });
+</script>

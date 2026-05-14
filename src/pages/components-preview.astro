@@ -1,0 +1,123 @@
+---
+// Maintainer-only component preview. Not linked from anywhere; served at
+// /components-preview with noindex so it stays out of search results.
+//
+// Use real seed services once Story 2.3 lands. Until then, this page renders
+// the badge/chip/search primitives only.
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import TierBadge from '~/components/ui/TierBadge.astro';
+import CategoryChip from '~/components/ui/CategoryChip.astro';
+import SearchBox from '~/components/ui/SearchBox.astro';
+
+const tiers = ['always-free', 'free-plan', 'trial-credit', 'pay-as-you-go'] as const;
+const sampleCategories = [
+  { slug: 'hosting', name: 'Hosting & Deployment', count: 12 },
+  { slug: 'databases', name: 'Databases', count: 16 },
+  { slug: 'ai-apis', name: 'AI & ML APIs', count: 21 },
+  { slug: 'auth', name: 'Authentication & Identity', count: 15 },
+];
+---
+
+<BaseLayout title="UI primitives" description="Maintainer-only component preview.">
+  <section class="container preview">
+    <header class="preview-head">
+      <p class="eyebrow">Maintainer Preview · Not Linked</p>
+      <h1>UI Primitives</h1>
+      <p class="lede">
+        Story 2.1 components. ServiceCard demo lands once Story 2.3 seed content is in.
+      </p>
+    </header>
+
+    <section class="block">
+      <h2>TierBadge</h2>
+      <p class="muted">Maps the four <code>tier_type</code> enum values to color + label.</p>
+      <div class="row">
+        {tiers.map((t) => <TierBadge tier={t} />)}
+      </div>
+      <div class="row">
+        {tiers.map((t) => <TierBadge tier={t} size="sm" />)}
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>CategoryChip</h2>
+      <p class="muted">Linked chip with optional count.</p>
+      <div class="row">
+        {sampleCategories.map((c) => <CategoryChip slug={c.slug} name={c.name} count={c.count} />)}
+      </div>
+      <div class="row">
+        {
+          sampleCategories.map((c) => (
+            <CategoryChip slug={c.slug} name={c.name} count={c.count} size="sm" />
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>SearchBox</h2>
+      <p class="muted">Pagefind input. Press / anywhere on the page to focus.</p>
+      <SearchBox placeholder="Try typing 'database'..." />
+    </section>
+
+    <section class="block">
+      <h2>ServiceCard</h2>
+      <p class="muted">
+        ServiceCard takes a typed <code>CollectionEntry&lt;'services'&gt;</code> from the YAML content
+        collection. Renders in Sprint 2.3 once 50 seed services land. Brand-color accent bar, full-color
+        logo, tier badge, free-tier bullets, and detail link.
+      </p>
+    </section>
+  </section>
+
+  <style>
+    .preview {
+      padding-top: var(--space-xl);
+      padding-bottom: var(--space-2xl);
+    }
+    .preview-head {
+      margin-bottom: var(--space-xl);
+    }
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--color-ink-soft);
+      margin-bottom: var(--space-sm);
+    }
+    .lede {
+      color: var(--color-ink-soft);
+      max-width: 56ch;
+      margin-top: var(--space-sm);
+    }
+    .block {
+      padding: var(--space-lg) 0;
+      border-top: var(--border-rule);
+    }
+    .block:last-of-type {
+      border-bottom: var(--border-rule);
+    }
+    .block h2 {
+      font-size: 1.4rem;
+      margin-bottom: var(--space-xs);
+    }
+    .muted {
+      color: var(--color-ink-soft);
+      font-size: 0.92rem;
+      margin-bottom: var(--space-md);
+    }
+    .row {
+      display: flex;
+      gap: var(--space-sm);
+      flex-wrap: wrap;
+      margin-bottom: var(--space-sm);
+    }
+    code {
+      background: var(--color-paper-deep);
+      padding: 0.1em 0.35em;
+      border-radius: 3px;
+      font-size: 0.92em;
+    }
+  </style>
+</BaseLayout>
