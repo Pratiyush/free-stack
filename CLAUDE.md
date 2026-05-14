@@ -37,9 +37,9 @@ The PR template at `.github/PULL_REQUEST_TEMPLATE.md` is the source of truth —
 
 ### Branch hygiene
 
-- **`main` is the only canonical branch.** A stale `master` ref exists on `origin` from the pre-rename history — **never push to, merge into, or base a branch off `master`**. It should be deleted (`git push origin --delete master`) once confirmed unused.
-- **Always sync `main` before starting work**: `git checkout main && git pull --ff-only` before `git checkout -b <new-branch>`. Stale-base branches cause merge conflicts and stale-PR thrash.
-- **Verify the branch name with `git status` before every `git push`.** No pushes to `main` directly — always via PR. No accidental pushes to `master`.
+- **`master` is the only canonical branch.** Target all PRs at `master`. A `main` ref existed briefly during a rename experiment — **never push to, merge into, or base a branch off `main`**. It will be deleted once the migration completes.
+- **Always sync `master` before starting work**: `git checkout master && git pull --ff-only` before `git checkout -b <new-branch>`. Stale-base branches cause merge conflicts and stale-PR thrash.
+- **Verify the branch name with `git status` before every `git push`.** No pushes to `master` directly — always via PR. No accidental pushes to `main`.
 - **Delete merged feature branches** locally and on origin (`gh pr merge --delete-branch` handles origin; `git branch -d <name>` locally).
 - **Worktrees**: if work was done in a `git worktree` (separate checkout for parallel branches), **remove the worktree as soon as its PR is merged**. From the main repo run `git worktree remove <path>` (or `git worktree remove --force <path>` if it has untracked files you've already saved elsewhere). List active worktrees with `git worktree list`. Lingering merged worktrees pin stale refs, confuse `git status` in the wrong directory, and waste disk.
 
@@ -50,6 +50,12 @@ The PR template at `.github/PULL_REQUEST_TEMPLATE.md` is the source of truth —
 - Link to pricing page, not homepage
 - Include rate limits when available
 - Use Lucide icons (https://github.com/lucide-icons/lucide) for service logos where a match exists; otherwise use https://simpleicons.org/
+
+## Site Presentation (`docs/index.html`)
+
+- **Cards reflect each product's brand identity.** Service cards and CTA buttons should match the product's brand color. Source of truth: the `hex` value on the service's https://simpleicons.org/ entry. Apply it as the card accent, header bar, or button background — pick one consistent surface per card so the page doesn't visually shout.
+- **Logos must be colorful (full-color), not monochrome.** simpleicons.org returns monochrome SVGs by default; render them with the brand hex (`fill="#<hex>"`) so each card is recognizable at a glance. Fall back to the brand's official logo asset only if simpleicons.org doesn't carry the service.
+- **Comparison tables are free-tier-only.** The per-category comparison table shows what each service offers at **no cost** — free-tier limits, free-tier rate limits, credit-card-required flag. Paid plans and upgrade paths get a separate "Upgrade path" line in the service's `Notes`, never inside the free-tier comparison row. Services that have **no permanent free tier** (trial-only, free credits expire) belong in a clearly labeled subsection (see `ai-ml.md`'s `Free Credits (Expire)` / `Severely Limited` pattern) so they're not confused with permanent-free offerings.
 
 ## Scanning & Verification
 
