@@ -18,6 +18,7 @@
 | **Replit** | Starter plan (free) | 0.5 vCPU, 512 MB RAM, 10 GB storage, public projects only, Agent 3 trial (expires), unlimited public apps | Compute caps enforced | 2026-04 | [Pricing](https://replit.com/pricing) |
 | **ngrok** | Free plan | 3 concurrent endpoints, 1 dev domain, 20K HTTP requests/mo, 1 GB bandwidth/mo, HTTPS tunnels, no custom domains | Interstitial warning page on free plan | 2026-04 | [Pricing](https://ngrok.com/pricing) |
 | **Tailscale** | Personal plan | 3 users, 100 devices, unlimited subnet routers, MagicDNS, HTTPS certs, ACLs, personal/non-commercial use only | No published rate limit | 2026-04 | [Pricing](https://tailscale.com/pricing) |
+| **JetBrains IntelliJ IDEA** | Community Edition (free, permanent) | Java/Kotlin + JS/TS/HTML/CSS/React (added v2026.1), ESLint/Prettier/TSLint, Vite project support, dependency vulnerability scanning; debugger, Angular/Vue, and test runners require Ultimate (~$26.90/mo) | Local IDE, no usage limits | 2026-04 | [Download](https://www.jetbrains.com/idea/download/) |
 
 ## Notes
 
@@ -35,6 +36,7 @@
 - **Insomnia** is open source (MIT); the free tier has full local functionality but no cloud sync/collaboration. Paid plans ($5-18/mo) add cloud sync and team features.
 - **ngrok** free plan now supports 3 concurrent endpoints (up from 1) and 20K HTTP requests/mo. Interstitial warning page remains on free plan.
 - **Tailscale** Personal plan is explicitly for non-commercial, personal use only.
+- **JetBrains IntelliJ IDEA** (new in v2026.1) — JS/TypeScript, HTML/CSS, and React support added to the free Community Edition in March 2026. Previously these required Ultimate. Debugger for JS/TS, Angular/Vue support, and test runners still require Ultimate (~$26.90/mo).
 
 ---
 
