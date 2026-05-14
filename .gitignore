@@ -10,3 +10,28 @@ drafts/
 TODO.md
 TASKS.md
 dashboard.html
+
+# Astro / Node build output
+node_modules/
+dist/
+.astro/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Editor
+.vscode/
+.idea/
+
+# Pagefind output
+public/pagefind/
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Reference / design materials (kept local — not committed)
+ref/

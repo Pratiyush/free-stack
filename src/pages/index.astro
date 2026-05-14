@@ -1,0 +1,145 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="free-stack"
+  description="319 verified free tiers for developers across 27 categories. No ads, no affiliate links — just the free tier you can actually use."
+>
+  <section class="hero container-narrow">
+    <p class="eyebrow">Free Tiers · Verified Monthly</p>
+    <h1>Free tools that stay free.</h1>
+    <p class="lede">
+      A directory of developer services with real free tiers — permanent, not 14-day trials. Every
+      entry is verified against the official pricing page. No ads, no affiliate links, no paid
+      placement.
+    </p>
+    <div class="cta-row">
+      <a class="cta-primary" href="/catalog">Browse the catalog</a>
+      <a class="cta-secondary" href="/methodology">How we verify</a>
+    </div>
+  </section>
+
+  <section class="stats container">
+    <div class="stat">
+      <span class="stat-num">319</span>
+      <span class="stat-label">verified services</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">27</span>
+      <span class="stat-label">categories</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">$0</span>
+      <span class="stat-label">to start</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">0</span>
+      <span class="stat-label">affiliate links</span>
+    </div>
+  </section>
+
+  <section class="container-narrow about">
+    <h2>Built for shipping side projects on $0.</h2>
+    <p>
+      free-stack is open source and non-commercial. The only money is voluntary sponsorship via
+      GitHub Sponsors and Buy Me a Coffee — used to cover the domain and hosting bill, nothing else.
+    </p>
+    <p class="muted">
+      <em>v0.1.0 — Astro 6 rebuild scaffolded. Full catalog migration shipping in v0.5.0.</em>
+    </p>
+  </section>
+
+  <style>
+    .hero {
+      padding-top: var(--space-2xl);
+      padding-bottom: var(--space-xl);
+    }
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--color-ink-soft);
+      margin-bottom: var(--space-md);
+    }
+    .lede {
+      margin-top: var(--space-md);
+      font-size: 1.15rem;
+      color: var(--color-ink-soft);
+      max-width: 56ch;
+    }
+    .cta-row {
+      display: flex;
+      gap: var(--space-md);
+      margin-top: var(--space-lg);
+      flex-wrap: wrap;
+    }
+    .cta-primary,
+    .cta-secondary {
+      display: inline-block;
+      padding: 0.7rem 1.2rem;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.15s ease;
+    }
+    .cta-primary {
+      background: var(--color-ink);
+      color: var(--color-paper);
+    }
+    .cta-primary:hover {
+      background: var(--color-coral);
+    }
+    .cta-secondary {
+      background: transparent;
+      color: var(--color-ink);
+      border: 1px solid var(--color-rule);
+    }
+    .cta-secondary:hover {
+      border-color: var(--color-ink);
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-lg);
+      padding: var(--space-xl) var(--space-md);
+      border-top: var(--border-rule);
+      border-bottom: var(--border-rule);
+      margin-top: var(--space-xl);
+    }
+    .stat {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
+    .stat-num {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: 400;
+      color: var(--color-ink);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.85rem;
+      color: var(--color-ink-soft);
+      text-transform: lowercase;
+      letter-spacing: 0.02em;
+    }
+    .about {
+      padding-top: var(--space-xl);
+    }
+    .about p {
+      margin-top: var(--space-md);
+    }
+    .muted {
+      font-size: 0.9rem;
+      color: var(--color-ink-soft);
+    }
+    @media (max-width: 720px) {
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</BaseLayout>
