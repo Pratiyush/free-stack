@@ -1,8 +1,18 @@
-name: Deploy rebuild/astro preview
+name: Build rebuild/astro preview artifact
 
-# Deploys the Astro rebuild to a GitHub Pages preview path so contributors can
-# review v0.x.y releases without disturbing the production MD-era site that
-# serves freestack.is-a.dev from master. Cuts over at v0.5.0.
+# Builds the Astro rebuild and uploads it as a workflow artifact so contributors
+# can download and inspect the dist/ output. Deliberately does NOT call
+# actions/deploy-pages because:
+#  - The existing GH Pages site (master → docs/index.html) serves
+#    freestack.is-a.dev. If this workflow auto-deployed, it would clobber
+#    the production site every time we push to rebuild/astro.
+#  - The preview-URL strategy is still open: we'll either point a staging
+#    subdomain at Cloudflare Pages, or move to a sibling repo's Pages,
+#    or keep the artifact-only flow. Decided post-Sprint 1.
+#
+# To trigger a manual full deploy (when the preview-URL strategy lands),
+# add a deploy job that consumes the rebuild-preview artifact and
+# uncomment the actions/deploy-pages step.
 
 on:
   push:
@@ -11,23 +21,20 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages-rebuild
+  group: rebuild-preview
   cancel-in-progress: false
 
 jobs:
   build:
+    name: Build Astro site
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: 10
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -42,20 +49,8 @@ jobs:
         run: pnpm build
 
       - name: Upload preview artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
+          name: rebuild-preview-${{ github.sha }}
           path: dist
-          name: rebuild-preview
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: rebuild-preview
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy preview to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-        with:
-          artifact_name: rebuild-preview
+          retention-days: 7
