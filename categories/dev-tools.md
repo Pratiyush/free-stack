@@ -11,6 +11,7 @@
 | **Figma** | Starter plan | 3 Figma files per team project, unlimited drafts, unlimited editors/viewers, 3 pages/file, 30-day version history, no Dev Mode | No published rate limit | 2026-04 | [Pricing](https://www.figma.com/pricing/) |
 | **Postman** | Free plan | 1 user only (as of Mar 2026), unlimited collection runs, basic monitoring, core API testing features | 300 Postman API requests/min | 2026-04 | [Pricing](https://www.postman.com/pricing/) |
 | **Insomnia** | Free plan (open source, MIT) | Unlimited local collections, unlimited requests, all HTTP/GraphQL/gRPC/WebSocket support, no cloud sync or team collaboration | Local only, no sync | 2026-04 | [Pricing](https://insomnia.rest/pricing) |
+| **GitHub Copilot** | Free plan | 2,000 code completions/mo, 50 chat/agent requests/mo, Copilot CLI, VS Code + JetBrains + Neovim + Vim support | Completions + chat reset monthly; no credit card required | 2026-04 | [Pricing](https://github.com/features/copilot) |
 | **Cursor** | Hobby plan (free) | 2,000 code completions/mo, 50 slow premium model requests, basic chat, full VS Code-based editor | Completions reset monthly | 2026-04 | [Pricing](https://cursor.com/docs/models-and-pricing) |
 | **Windsurf** | Free plan | 25 prompt credits/mo, unlimited Tab completions, access to zero-cost models after credits exhaust | Credits reset monthly | 2026-04 | [Pricing](https://windsurf.com/pricing) |
 | **Val Town** | Free plan | 100K val runs/day, serverless TypeScript/JS functions, HTTP endpoints, cron jobs, persistent storage | Runs reset daily | 2026-04 | [Pricing](https://www.val.town/pricing) |
@@ -21,6 +22,7 @@
 ## Notes
 
 - **Postman** eliminated free team plans in March 2026; free is now single-user only. Collection runs are now unlimited on all plans. Teams of 2+ must pay.
+- **GitHub Copilot** (new) launched a permanent Free tier in late 2024: 2,000 completions and 50 chat/agent requests per month at no cost. Available in VS Code, JetBrains, Neovim, and Vim. Uses Haiku 4.5 and GPT-5 mini on the free tier; premium models (Claude Sonnet, GPT-5) require a Pro plan ($10/mo).
 - **Cursor** (new) offers a free Hobby plan with 2,000 completions and 50 slow premium requests per month. Enough for a quick trial but not a full workday of AI-assisted coding.
 - **Windsurf** (new) offers 25 free prompt credits/mo with unlimited Tab completions. After credits are exhausted, only zero-cost models remain available (degraded quality). Pricing restructured in early 2026.
 - **Val Town** (new) is a serverless TypeScript runtime with 100K free runs/day -- excellent for small APIs, cron jobs, and quick backend scripts without infrastructure.
