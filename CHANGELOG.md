@@ -1,14 +1,53 @@
 # Changelog
 
-## v1.0.0 (2026-04-05) — Launch
+All notable changes to free-stack are documented in this file.
+
+The format is based on [Keep a Changelog 1.1.0](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.html).
+
+Maintainers: add entries under `## [Unreleased]` as PRs merge. At release time, rename `[Unreleased]` → `[X.Y.Z] - YYYY-MM-DD` and start a fresh `[Unreleased]` block.
+
+---
+
+## [Unreleased]
+
+### Added
+
+- Astro 6 project scaffold with TypeScript strict mode
+- Zod content schema for services and categories (`src/content.config.ts`)
+- Design tokens (`src/styles/tokens.css`) and global styles
+- `BaseLayout.astro` with editorial typography (Fraunces / Inter Tight / JetBrains Mono)
+- Smoke-test home page at `/`
+- Maintenance scripts: `pnpm validate`, `pnpm check-logos`, `pnpm new:service`
+- CI workflow (`.github/workflows/ci.yml`): lint → validate → check-logos → build
+- GitHub Pages preview deploy for the `rebuild/astro` branch
+- Conventional Commits PR-title lint workflow
+- `.github/FUNDING.yml` for GitHub Sponsors + Buy Me a Coffee
+- `docs/category-taxonomy.md` — locked taxonomy for the 27 categories
+- `release-notes/v0.1.0.md` — first release notes file in the new workflow
+
+### Changed
+
+- Reformatted CHANGELOG into Keep a Changelog 1.1.0 structure
+- Project now uses pnpm (was: ad-hoc edits to a static HTML page)
+- `.gitignore` adds Astro build artifacts (`dist/`, `.astro/`, `node_modules/`)
+
+### Deprecated
+
+- `.github/workflows/deploy-pages.yml` — the legacy GitHub Pages deploy that serves `docs/index.html` will retire when the Astro site cuts over at `v0.5.0`
+
+---
+
+## [1.0.0] - 2026-04-05 — MD-era launch (frozen snapshot)
 
 ### Stats
+
 - 323 verified entries across 27 categories
 - Every entry verified against official pricing pages (April 2026)
 - 58 signed commits, all by Pratiyush Kumar Singh
 
-### Added since v0.1.0
-- 9 new categories: code-quality, project-management, maps, containers, logs, docs, communication, translation, iaas
+### Added since [0.1.0-md]
+
+- 9 new categories: `code-quality`, `project-management`, `maps`, `containers`, `logs`, `docs`, `communication`, `translation`, `iaas`
 - Deep-verified all 27 categories with web research (official pricing pages)
 - Top Picks section in README
 - "Services We Don't Include" section (dead/removed free tiers)
@@ -17,8 +56,9 @@
 - CI link checker fix (accept redirects, non-blocking)
 
 ### Key findings from verification
+
 - Firebase Auth Spark plan uses 3K DAU limit (not 50K MAU)
-- Gemini API cut free limits 50-80% in Dec 2025
+- Gemini API cut free limits 50–80% in Dec 2025
 - Mixpanel switched to 20M events/mo free (Feb 2026)
 - Appwrite pauses after 7 days inactivity (Feb 2026)
 - Let's Encrypt switching to 45-day certs (May 2026)
@@ -28,11 +68,12 @@
 
 ---
 
-## v0.1.0 (2026-04-05) — Initial Content
+## [0.1.0-md] - 2026-04-05 — Initial MD content (renamed from `[0.1.0]` to disambiguate from upcoming Astro `v0.1.0`)
 
 ### Added
+
 - 18 category files with ~160 verified entries total
-- Categories: hosting, databases, auth, analytics, ai-ml, email, storage, testing, dev-tools, dns, search, security, mobile, paas, baas, design, payments, collaboration
+- Categories: `hosting`, `databases`, `auth`, `analytics`, `ai-ml`, `email`, `storage`, `testing`, `dev-tools`, `dns`, `search`, `security`, `mobile`, `paas`, `baas`, `design`, `payments`, `collaboration`
 - README with category index table
 - CONTRIBUTING.md with quality bar and style guide
 - PR template with verification checklist
@@ -40,7 +81,8 @@
 - GitHub Actions: weekly link checker (lychee)
 - MIT License
 
-### Excluded (verified as no longer free)
+### Removed (verified as no longer free)
+
 - PlanetScale (free tier removed Apr 2024)
 - ElephantSQL (shut down Jan 2025)
 - Heroku (free tier removed 2022)
