@@ -1,535 +1,793 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="dark">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>free-stack — 323 verified free tiers for developers</title>
-  <meta name="description" content="323 verified free tiers across 27 categories. Organized in tables with specific limits, rate limits, and verified dates.">
-  <meta property="og:title" content="free-stack — verified free tiers for developers">
-  <meta property="og:description" content="323 verified free tiers across 27 categories. Tables, not walls of text.">
-  <meta property="og:url" content="https://as-a.dev">
-  <meta property="og:type" content="website">
-  <link rel="canonical" href="https://as-a.dev">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🆓</text></svg>">
-  <style>
-    /* Dark theme (default) */
-    :root, [data-theme="dark"] {
-      --bg: #0d1117;
-      --surface: #161b22;
-      --border: #30363d;
-      --text: #e6edf3;
-      --text-muted: #8b949e;
-      --accent: #58a6ff;
-      --accent-hover: #79c0ff;
-      --green: #3fb950;
-      --tag-bg: #1f6feb22;
-      --tag-border: #1f6feb55;
-      --row-hover: #1c2128;
-    }
-
-    /* Light theme */
-    [data-theme="light"] {
-      --bg: #ffffff;
-      --surface: #f6f8fa;
-      --border: #d1d9e0;
-      --text: #1f2328;
-      --text-muted: #656d76;
-      --accent: #0969da;
-      --accent-hover: #0550ae;
-      --green: #1a7f37;
-      --tag-bg: #ddf4ff;
-      --tag-border: #54aeff66;
-      --row-hover: #f6f8fa;
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      transition: background 0.3s, color 0.3s;
-    }
-
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-
-    /* Header */
-    header {
-      border-bottom: 1px solid var(--border);
-      padding: 24px 0;
-    }
-
-    .header-content {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-
-    .logo {
-      font-size: 24px;
-      font-weight: 700;
-      color: var(--text);
-      text-decoration: none;
-    }
-
-    .logo span { color: var(--accent); }
-
-    .header-links { display: flex; gap: 12px; align-items: center; }
-
-    .header-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 14px;
-      transition: color 0.2s;
-    }
-
-    .header-links a:hover { color: var(--accent); }
-
-    .gh-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 14px;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      color: var(--text) !important;
-      font-size: 13px;
-      font-weight: 500;
-      transition: border-color 0.2s;
-    }
-
-    .gh-btn:hover { border-color: var(--accent); }
-
-    /* Theme toggle */
-    .theme-toggle {
-      background: none;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 6px 10px;
-      cursor: pointer;
-      color: var(--text-muted);
-      font-size: 16px;
-      transition: border-color 0.2s, color 0.2s;
-      display: flex;
-      align-items: center;
-    }
-
-    .theme-toggle:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
-    .theme-toggle .icon-sun,
-    .theme-toggle .icon-moon { display: none; }
-
-    [data-theme="dark"] .theme-toggle .icon-sun { display: inline; }
-    [data-theme="light"] .theme-toggle .icon-moon { display: inline; }
-
-    /* Hero */
-    .hero {
-      padding: 48px 0 32px;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 40px;
-      font-weight: 800;
-      margin-bottom: 12px;
-    }
-
-    .hero h1 span { color: var(--accent); }
-
-    .hero p {
-      color: var(--text-muted);
-      font-size: 18px;
-      max-width: 600px;
-      margin: 0 auto 24px;
-    }
-
-    .stats {
-      display: flex;
-      gap: 32px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .stat { text-align: center; }
-
-    .stat-num {
-      font-size: 32px;
-      font-weight: 700;
-      color: var(--green);
-    }
-
-    .stat-label {
-      font-size: 13px;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    /* Search */
-    .search-wrap {
-      max-width: 600px;
-      margin: 0 auto 40px;
-      position: relative;
-    }
-
-    .search-wrap svg {
-      position: absolute;
-      left: 14px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--text-muted);
-    }
-
-    #search {
-      width: 100%;
-      padding: 12px 16px 12px 42px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      color: var(--text);
-      font-size: 16px;
-      outline: none;
-      transition: border-color 0.2s;
-    }
-
-    #search:focus { border-color: var(--accent); }
-    #search::placeholder { color: var(--text-muted); }
-
-    .search-count {
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 13px;
-      margin-top: 8px;
-    }
-
-    /* Categories */
-    .categories {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 16px;
-      margin-bottom: 48px;
-    }
-
-    .cat-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 20px;
-      cursor: pointer;
-      transition: border-color 0.2s, transform 0.1s;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .cat-card:hover {
-      border-color: var(--accent);
-      transform: translateY(-2px);
-    }
-
-    .cat-card.hidden { display: none; }
-
-    .cat-header {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 8px;
-    }
-
-    .cat-icon { font-size: 24px; }
-
-    .cat-name {
-      font-size: 16px;
-      font-weight: 600;
-    }
-
-    .cat-count {
-      margin-left: auto;
-      background: var(--tag-bg);
-      border: 1px solid var(--tag-border);
-      color: var(--accent);
-      font-size: 12px;
-      font-weight: 600;
-      padding: 2px 8px;
-      border-radius: 12px;
-    }
-
-    .cat-desc {
-      color: var(--text-muted);
-      font-size: 13px;
-      margin-bottom: 12px;
-    }
-
-    .cat-services {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 4px;
-    }
-
-    .svc-tag {
-      font-size: 11px;
-      color: var(--text-muted);
-      background: var(--bg);
-      padding: 2px 8px;
-      border-radius: 4px;
-      border: 1px solid var(--border);
-    }
-
-    /* Category detail view */
-    .cat-detail { display: none; margin-bottom: 48px; }
-    .cat-detail.active { display: block; }
-
-    .back-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      color: var(--accent);
-      text-decoration: none;
-      font-size: 14px;
-      margin-bottom: 16px;
-      cursor: pointer;
-      border: none;
-      background: none;
-      font-family: inherit;
-    }
-
-    .back-btn:hover { color: var(--accent-hover); }
-
-    .detail-title {
-      font-size: 28px;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    .detail-desc {
-      color: var(--text-muted);
-      margin-bottom: 24px;
-    }
-
-    /* Table */
-    .table-wrap {
-      overflow-x: auto;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      margin-bottom: 24px;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 14px;
-    }
-
-    th {
-      background: var(--surface);
-      padding: 12px 16px;
-      text-align: left;
-      font-weight: 600;
-      border-bottom: 1px solid var(--border);
-      white-space: nowrap;
-      position: sticky;
-      top: 0;
-    }
-
-    td {
-      padding: 12px 16px;
-      border-bottom: 1px solid var(--border);
-      vertical-align: top;
-    }
-
-    tr:last-child td { border-bottom: none; }
-    tr:hover td { background: var(--row-hover); }
-
-    td a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    td a:hover { text-decoration: underline; }
-
-    /* Footer */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 32px 0;
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 14px;
-    }
-
-    footer a { color: var(--accent); text-decoration: none; }
-    footer a:hover { text-decoration: underline; }
-
-    /* Mobile */
-    @media (max-width: 640px) {
-      .hero h1 { font-size: 28px; }
-      .hero p { font-size: 16px; }
-      .stat-num { font-size: 24px; }
-      .stats { gap: 20px; }
-      .categories { grid-template-columns: 1fr; }
-      th, td { padding: 8px 12px; font-size: 13px; }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="container header-content">
-      <a href="." class="logo">free<span>-stack</span></a>
-      <div class="header-links">
-        <a href="#categories-grid">Categories</a>
-        <a href="https://github.com/Pratiyush/free-stack/blob/main/CONTRIBUTING.md">Contribute</a>
-        <a href="https://github.com/Pratiyush/free-stack" class="gh-btn">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-          GitHub
-        </a>
-        <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">
-          <span class="icon-sun">&#9728;&#65039;</span>
-          <span class="icon-moon">&#127769;</span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <main class="container">
-    <section class="hero">
-      <h1>Verified free tiers.<br><span>Organized.</span></h1>
-      <p>Every service verified with specific limits, rate limits, and dates. Tables, not walls of text.</p>
-      <div class="stats">
-        <div class="stat"><div class="stat-num" id="total-count">323</div><div class="stat-label">Services</div></div>
-        <div class="stat"><div class="stat-num">27</div><div class="stat-label">Categories</div></div>
-        <div class="stat"><div class="stat-num">Apr 2026</div><div class="stat-label">Verified</div></div>
-      </div>
-    </section>
-
-    <section>
-      <div class="search-wrap">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        <input type="text" id="search" placeholder="Search services, categories..." autocomplete="off">
-        <div class="search-count" id="search-count"></div>
-      </div>
-    </section>
-
-    <section id="categories-grid" class="categories"></section>
-
-    <section class="cat-detail" id="cat-detail">
-      <button class="back-btn" onclick="showGrid()">&#8592; Back to categories</button>
-      <h2 class="detail-title" id="detail-title"></h2>
-      <p class="detail-desc" id="detail-desc"></p>
-      <div class="table-wrap" id="detail-table"></div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>
-        <strong>free-stack</strong> is open source and actively maintained.
-        <a href="https://github.com/Pratiyush/free-stack">Contribute on GitHub</a> &middot;
-        <a href="https://github.com/Pratiyush/free-stack/issues">Report issues</a>
-      </p>
-      <p style="margin-top:8px;">Made with &#10084;&#65039; by <a href="https://github.com/Pratiyush">Pratiyush</a></p>
-    </div>
-  </footer>
-
-  <script>
-    // Theme
-    function toggleTheme() {
-      const html = document.documentElement;
-      const current = html.getAttribute('data-theme');
-      const next = current === 'dark' ? 'light' : 'dark';
-      html.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-    }
-
-    (function() {
-      const saved = localStorage.getItem('theme');
-      if (saved) {
-        document.documentElement.setAttribute('data-theme', saved);
-      } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-        document.documentElement.setAttribute('data-theme', 'light');
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>free-stack — 323 verified free tiers for developers</title>
+    <meta
+      name="description"
+      content="323 verified free tiers across 27 categories. Organized in tables with specific limits, rate limits, and verified dates."
+    />
+    <meta property="og:title" content="free-stack — verified free tiers for developers" />
+    <meta
+      property="og:description"
+      content="323 verified free tiers across 27 categories. Tables, not walls of text."
+    />
+    <meta property="og:url" content="https://as-a.dev" />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://as-a.dev" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🆓</text></svg>"
+    />
+    <style>
+      /* Dark theme (default) */
+      :root,
+      [data-theme='dark'] {
+        --bg: #0d1117;
+        --surface: #161b22;
+        --border: #30363d;
+        --text: #e6edf3;
+        --text-muted: #8b949e;
+        --accent: #58a6ff;
+        --accent-hover: #79c0ff;
+        --green: #3fb950;
+        --tag-bg: #1f6feb22;
+        --tag-border: #1f6feb55;
+        --row-hover: #1c2128;
       }
-    })();
 
-    const CATEGORIES = [
-      { id: 'hosting', icon: '\ud83d\udce6', name: 'Hosting & Deployment', desc: 'Deploy static sites, SSR apps, and APIs for free' },
-      { id: 'databases', icon: '\ud83d\uddc4\ufe0f', name: 'Databases', desc: 'SQL, NoSQL, key-value, and edge databases' },
-      { id: 'auth', icon: '\ud83d\udd10', name: 'Authentication', desc: 'User auth, SSO, and identity management' },
-      { id: 'analytics', icon: '\ud83d\udcca', name: 'Analytics & Monitoring', desc: 'Product analytics, error tracking, uptime' },
-      { id: 'email', icon: '\ud83d\udce7', name: 'Email & Messaging', desc: 'Transactional email, marketing, and SMTP' },
-      { id: 'ai-ml', icon: '\ud83e\udd16', name: 'AI & Machine Learning', desc: 'LLM APIs, inference, and ML platforms' },
-      { id: 'storage', icon: '\ud83d\udcbe', name: 'Storage & CDN', desc: 'Object storage, image CDN, and file hosting' },
-      { id: 'search', icon: '\ud83d\udd0d', name: 'Search', desc: 'Full-text, vector, and hybrid search engines' },
-      { id: 'mobile', icon: '\ud83d\udcf1', name: 'Mobile Services', desc: 'Push notifications, crash reporting, CI/CD' },
-      { id: 'testing', icon: '\ud83e\uddea', name: 'Testing & CI/CD', desc: 'Continuous integration, visual testing, test management' },
-      { id: 'dev-tools', icon: '\ud83d\udd27', name: 'Developer Tools', desc: 'Git hosting, API clients, tunneling, IDEs' },
-      { id: 'dns', icon: '\ud83c\udf10', name: 'DNS & Domains', desc: 'DNS hosting, dynamic DNS, domain management' },
-      { id: 'docs', icon: '\ud83d\udcdd', name: 'Documentation', desc: 'Docs platforms, static site generators, CMS' },
-      { id: 'security', icon: '\ud83d\udd12', name: 'Security', desc: 'Vulnerability scanning, secrets, SSL certificates' },
-      { id: 'communication', icon: '\ud83d\udcac', name: 'Communication APIs', desc: 'WebRTC, chat, realtime, push notifications' },
-      { id: 'paas', icon: '\u2601\ufe0f', name: 'PaaS', desc: 'Platform as a Service for deploying apps' },
-      { id: 'baas', icon: '\ud83d\udd25', name: 'BaaS', desc: 'Backend as a Service \u2014 full backend in minutes' },
-      { id: 'design', icon: '\ud83c\udfa8', name: 'Design & UI', desc: 'Design tools, prototyping, icons, animation' },
-      { id: 'payments', icon: '\ud83d\udcb3', name: 'Payments', desc: 'Payment processing, billing, subscriptions' },
-      { id: 'collaboration', icon: '\ud83d\udcac', name: 'Collaboration', desc: 'Team chat, project tracking, docs' },
-      { id: 'code-quality', icon: '\ud83d\udd2c', name: 'Code Quality', desc: 'Linting, coverage, code review, SAST' },
-      { id: 'project-management', icon: '\ud83d\udccb', name: 'Project Management', desc: 'Issue tracking, kanban, agile tools' },
-      { id: 'maps', icon: '\ud83d\uddfa\ufe0f', name: 'Maps & Geo', desc: 'Geocoding, map tiles, routing, location' },
-      { id: 'containers', icon: '\ud83d\udc33', name: 'Containers', desc: 'Container registries and dev environments' },
-      { id: 'logs', icon: '\ud83d\udcdc', name: 'Logs', desc: 'Log management, observability, aggregation' },
-      { id: 'translation', icon: '\ud83c\udf0d', name: 'Translation', desc: 'Internationalization and localization platforms' },
-      { id: 'iaas', icon: '\u2601\ufe0f', name: 'IaaS', desc: 'Virtual machines, compute, and cloud infrastructure' }
-    ];
-
-    const catData = {};
-    let totalServices = 0;
-
-    async function loadCategory(id) {
-      if (catData[id]) return catData[id];
-      try {
-        const res = await fetch(`https://raw.githubusercontent.com/Pratiyush/free-stack/main/categories/${id}.md`);
-        const text = await res.text();
-        catData[id] = parseMarkdownTable(text);
-        return catData[id];
-      } catch (e) {
-        return { headers: [], rows: [], notes: '' };
+      /* Light theme */
+      [data-theme='light'] {
+        --bg: #ffffff;
+        --surface: #f6f8fa;
+        --border: #d1d9e0;
+        --text: #1f2328;
+        --text-muted: #656d76;
+        --accent: #0969da;
+        --accent-hover: #0550ae;
+        --green: #1a7f37;
+        --tag-bg: #ddf4ff;
+        --tag-border: #54aeff66;
+        --row-hover: #f6f8fa;
       }
-    }
 
-    function parseMarkdownTable(md) {
-      const lines = md.split('\n');
-      let headers = [];
-      let rows = [];
-      let notes = [];
-      let inNotes = false;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-      for (const line of lines) {
-        if (line.startsWith('## Notes') || line.startsWith('## ')) {
-          if (line.startsWith('## Notes')) inNotes = true;
-          continue;
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+        transition:
+          background 0.3s,
+          color 0.3s;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Header */
+      header {
+        border-bottom: 1px solid var(--border);
+        padding: 24px 0;
+      }
+
+      .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+
+      .logo {
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--text);
+        text-decoration: none;
+      }
+
+      .logo span {
+        color: var(--accent);
+      }
+
+      .header-links {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+      }
+
+      .header-links a {
+        color: var(--text-muted);
+        text-decoration: none;
+        font-size: 14px;
+        transition: color 0.2s;
+      }
+
+      .header-links a:hover {
+        color: var(--accent);
+      }
+
+      .gh-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 14px;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        color: var(--text) !important;
+        font-size: 13px;
+        font-weight: 500;
+        transition: border-color 0.2s;
+      }
+
+      .gh-btn:hover {
+        border-color: var(--accent);
+      }
+
+      /* Theme toggle */
+      .theme-toggle {
+        background: none;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        padding: 6px 10px;
+        cursor: pointer;
+        color: var(--text-muted);
+        font-size: 16px;
+        transition:
+          border-color 0.2s,
+          color 0.2s;
+        display: flex;
+        align-items: center;
+      }
+
+      .theme-toggle:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+
+      .theme-toggle .icon-sun,
+      .theme-toggle .icon-moon {
+        display: none;
+      }
+
+      [data-theme='dark'] .theme-toggle .icon-sun {
+        display: inline;
+      }
+      [data-theme='light'] .theme-toggle .icon-moon {
+        display: inline;
+      }
+
+      /* Hero */
+      .hero {
+        padding: 48px 0 32px;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+        font-weight: 800;
+        margin-bottom: 12px;
+      }
+
+      .hero h1 span {
+        color: var(--accent);
+      }
+
+      .hero p {
+        color: var(--text-muted);
+        font-size: 18px;
+        max-width: 600px;
+        margin: 0 auto 24px;
+      }
+
+      .stats {
+        display: flex;
+        gap: 32px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .stat {
+        text-align: center;
+      }
+
+      .stat-num {
+        font-size: 32px;
+        font-weight: 700;
+        color: var(--green);
+      }
+
+      .stat-label {
+        font-size: 13px;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      /* Search */
+      .search-wrap {
+        max-width: 600px;
+        margin: 0 auto 40px;
+        position: relative;
+      }
+
+      .search-wrap svg {
+        position: absolute;
+        left: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--text-muted);
+      }
+
+      #search {
+        width: 100%;
+        padding: 12px 16px 12px 42px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        color: var(--text);
+        font-size: 16px;
+        outline: none;
+        transition: border-color 0.2s;
+      }
+
+      #search:focus {
+        border-color: var(--accent);
+      }
+      #search::placeholder {
+        color: var(--text-muted);
+      }
+
+      .search-count {
+        text-align: center;
+        color: var(--text-muted);
+        font-size: 13px;
+        margin-top: 8px;
+      }
+
+      /* Categories */
+      .categories {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 16px;
+        margin-bottom: 48px;
+      }
+
+      .cat-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 20px;
+        cursor: pointer;
+        transition:
+          border-color 0.2s,
+          transform 0.1s;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .cat-card:hover {
+        border-color: var(--accent);
+        transform: translateY(-2px);
+      }
+
+      .cat-card.hidden {
+        display: none;
+      }
+
+      .cat-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 8px;
+      }
+
+      .cat-icon {
+        font-size: 24px;
+      }
+
+      .cat-name {
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      .cat-count {
+        margin-left: auto;
+        background: var(--tag-bg);
+        border: 1px solid var(--tag-border);
+        color: var(--accent);
+        font-size: 12px;
+        font-weight: 600;
+        padding: 2px 8px;
+        border-radius: 12px;
+      }
+
+      .cat-desc {
+        color: var(--text-muted);
+        font-size: 13px;
+        margin-bottom: 12px;
+      }
+
+      .cat-services {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+      }
+
+      .svc-tag {
+        font-size: 11px;
+        color: var(--text-muted);
+        background: var(--bg);
+        padding: 2px 8px;
+        border-radius: 4px;
+        border: 1px solid var(--border);
+      }
+
+      /* Category detail view */
+      .cat-detail {
+        display: none;
+        margin-bottom: 48px;
+      }
+      .cat-detail.active {
+        display: block;
+      }
+
+      .back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        color: var(--accent);
+        text-decoration: none;
+        font-size: 14px;
+        margin-bottom: 16px;
+        cursor: pointer;
+        border: none;
+        background: none;
+        font-family: inherit;
+      }
+
+      .back-btn:hover {
+        color: var(--accent-hover);
+      }
+
+      .detail-title {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+
+      .detail-desc {
+        color: var(--text-muted);
+        margin-bottom: 24px;
+      }
+
+      /* Table */
+      .table-wrap {
+        overflow-x: auto;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        margin-bottom: 24px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+      }
+
+      th {
+        background: var(--surface);
+        padding: 12px 16px;
+        text-align: left;
+        font-weight: 600;
+        border-bottom: 1px solid var(--border);
+        white-space: nowrap;
+        position: sticky;
+        top: 0;
+      }
+
+      td {
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--border);
+        vertical-align: top;
+      }
+
+      tr:last-child td {
+        border-bottom: none;
+      }
+      tr:hover td {
+        background: var(--row-hover);
+      }
+
+      td a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      td a:hover {
+        text-decoration: underline;
+      }
+
+      /* Footer */
+      footer {
+        border-top: 1px solid var(--border);
+        padding: 32px 0;
+        text-align: center;
+        color: var(--text-muted);
+        font-size: 14px;
+      }
+
+      footer a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      /* Mobile */
+      @media (max-width: 640px) {
+        .hero h1 {
+          font-size: 28px;
         }
-        if (inNotes && line.trim()) {
-          notes.push(line.replace(/^- /, ''));
-          continue;
+        .hero p {
+          font-size: 16px;
         }
-        if (!line.startsWith('|')) continue;
-        if (line.match(/^\|[\s-|]+$/)) continue;
-
-        const cells = line.split('|').slice(1, -1).map(c => c.trim());
-        if (cells[0] === 'Service' || cells[0] === 'Service Name') {
-          headers = cells;
-        } else if (cells[0]) {
-          rows.push(cells);
+        .stat-num {
+          font-size: 24px;
+        }
+        .stats {
+          gap: 20px;
+        }
+        .categories {
+          grid-template-columns: 1fr;
+        }
+        th,
+        td {
+          padding: 8px 12px;
+          font-size: 13px;
         }
       }
-      return { headers, rows, notes: notes.join('\n') };
-    }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container header-content">
+        <a href="." class="logo">free<span>-stack</span></a>
+        <div class="header-links">
+          <a href="#categories-grid">Categories</a>
+          <a href="https://github.com/Pratiyush/free-stack/blob/main/CONTRIBUTING.md">Contribute</a>
+          <a href="https://github.com/Pratiyush/free-stack" class="gh-btn">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+              <path
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+              />
+            </svg>
+            GitHub
+          </a>
+          <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">
+            <span class="icon-sun">&#9728;&#65039;</span>
+            <span class="icon-moon">&#127769;</span>
+          </button>
+        </div>
+      </div>
+    </header>
 
-    function renderGrid() {
-      const grid = document.getElementById('categories-grid');
-      grid.innerHTML = CATEGORIES.map(cat => `
+    <main class="container">
+      <section class="hero">
+        <h1>Verified free tiers.<br /><span>Organized.</span></h1>
+        <p>
+          Every service verified with specific limits, rate limits, and dates. Tables, not walls of
+          text.
+        </p>
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-num" id="total-count">323</div>
+            <div class="stat-label">Services</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">27</div>
+            <div class="stat-label">Categories</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">Apr 2026</div>
+            <div class="stat-label">Verified</div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="search-wrap">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+          <input
+            type="text"
+            id="search"
+            placeholder="Search services, categories..."
+            autocomplete="off"
+          />
+          <div class="search-count" id="search-count"></div>
+        </div>
+      </section>
+
+      <section id="categories-grid" class="categories"></section>
+
+      <section class="cat-detail" id="cat-detail">
+        <button class="back-btn" onclick="showGrid()">&#8592; Back to categories</button>
+        <h2 class="detail-title" id="detail-title"></h2>
+        <p class="detail-desc" id="detail-desc"></p>
+        <div class="table-wrap" id="detail-table"></div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>
+          <strong>free-stack</strong> is open source and actively maintained.
+          <a href="https://github.com/Pratiyush/free-stack">Contribute on GitHub</a> &middot;
+          <a href="https://github.com/Pratiyush/free-stack/issues">Report issues</a>
+        </p>
+        <p style="margin-top: 8px">
+          Made with &#10084;&#65039; by <a href="https://github.com/Pratiyush">Pratiyush</a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Theme
+      function toggleTheme() {
+        const html = document.documentElement;
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+      }
+
+      (function () {
+        const saved = localStorage.getItem('theme');
+        if (saved) {
+          document.documentElement.setAttribute('data-theme', saved);
+        } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+
+      const CATEGORIES = [
+        {
+          id: 'hosting',
+          icon: '\ud83d\udce6',
+          name: 'Hosting & Deployment',
+          desc: 'Deploy static sites, SSR apps, and APIs for free',
+        },
+        {
+          id: 'databases',
+          icon: '\ud83d\uddc4\ufe0f',
+          name: 'Databases',
+          desc: 'SQL, NoSQL, key-value, and edge databases',
+        },
+        {
+          id: 'auth',
+          icon: '\ud83d\udd10',
+          name: 'Authentication',
+          desc: 'User auth, SSO, and identity management',
+        },
+        {
+          id: 'analytics',
+          icon: '\ud83d\udcca',
+          name: 'Analytics & Monitoring',
+          desc: 'Product analytics, error tracking, uptime',
+        },
+        {
+          id: 'email',
+          icon: '\ud83d\udce7',
+          name: 'Email & Messaging',
+          desc: 'Transactional email, marketing, and SMTP',
+        },
+        {
+          id: 'ai-ml',
+          icon: '\ud83e\udd16',
+          name: 'AI & Machine Learning',
+          desc: 'LLM APIs, inference, and ML platforms',
+        },
+        {
+          id: 'storage',
+          icon: '\ud83d\udcbe',
+          name: 'Storage & CDN',
+          desc: 'Object storage, image CDN, and file hosting',
+        },
+        {
+          id: 'search',
+          icon: '\ud83d\udd0d',
+          name: 'Search',
+          desc: 'Full-text, vector, and hybrid search engines',
+        },
+        {
+          id: 'mobile',
+          icon: '\ud83d\udcf1',
+          name: 'Mobile Services',
+          desc: 'Push notifications, crash reporting, CI/CD',
+        },
+        {
+          id: 'testing',
+          icon: '\ud83e\uddea',
+          name: 'Testing & CI/CD',
+          desc: 'Continuous integration, visual testing, test management',
+        },
+        {
+          id: 'dev-tools',
+          icon: '\ud83d\udd27',
+          name: 'Developer Tools',
+          desc: 'Git hosting, API clients, tunneling, IDEs',
+        },
+        {
+          id: 'dns',
+          icon: '\ud83c\udf10',
+          name: 'DNS & Domains',
+          desc: 'DNS hosting, dynamic DNS, domain management',
+        },
+        {
+          id: 'docs',
+          icon: '\ud83d\udcdd',
+          name: 'Documentation',
+          desc: 'Docs platforms, static site generators, CMS',
+        },
+        {
+          id: 'security',
+          icon: '\ud83d\udd12',
+          name: 'Security',
+          desc: 'Vulnerability scanning, secrets, SSL certificates',
+        },
+        {
+          id: 'communication',
+          icon: '\ud83d\udcac',
+          name: 'Communication APIs',
+          desc: 'WebRTC, chat, realtime, push notifications',
+        },
+        {
+          id: 'paas',
+          icon: '\u2601\ufe0f',
+          name: 'PaaS',
+          desc: 'Platform as a Service for deploying apps',
+        },
+        {
+          id: 'baas',
+          icon: '\ud83d\udd25',
+          name: 'BaaS',
+          desc: 'Backend as a Service \u2014 full backend in minutes',
+        },
+        {
+          id: 'design',
+          icon: '\ud83c\udfa8',
+          name: 'Design & UI',
+          desc: 'Design tools, prototyping, icons, animation',
+        },
+        {
+          id: 'payments',
+          icon: '\ud83d\udcb3',
+          name: 'Payments',
+          desc: 'Payment processing, billing, subscriptions',
+        },
+        {
+          id: 'collaboration',
+          icon: '\ud83d\udcac',
+          name: 'Collaboration',
+          desc: 'Team chat, project tracking, docs',
+        },
+        {
+          id: 'code-quality',
+          icon: '\ud83d\udd2c',
+          name: 'Code Quality',
+          desc: 'Linting, coverage, code review, SAST',
+        },
+        {
+          id: 'project-management',
+          icon: '\ud83d\udccb',
+          name: 'Project Management',
+          desc: 'Issue tracking, kanban, agile tools',
+        },
+        {
+          id: 'maps',
+          icon: '\ud83d\uddfa\ufe0f',
+          name: 'Maps & Geo',
+          desc: 'Geocoding, map tiles, routing, location',
+        },
+        {
+          id: 'containers',
+          icon: '\ud83d\udc33',
+          name: 'Containers',
+          desc: 'Container registries and dev environments',
+        },
+        {
+          id: 'logs',
+          icon: '\ud83d\udcdc',
+          name: 'Logs',
+          desc: 'Log management, observability, aggregation',
+        },
+        {
+          id: 'translation',
+          icon: '\ud83c\udf0d',
+          name: 'Translation',
+          desc: 'Internationalization and localization platforms',
+        },
+        {
+          id: 'iaas',
+          icon: '\u2601\ufe0f',
+          name: 'IaaS',
+          desc: 'Virtual machines, compute, and cloud infrastructure',
+        },
+      ];
+
+      const catData = {};
+      let totalServices = 0;
+
+      async function loadCategory(id) {
+        if (catData[id]) return catData[id];
+        try {
+          const res = await fetch(
+            `https://raw.githubusercontent.com/Pratiyush/free-stack/main/categories/${id}.md`,
+          );
+          const text = await res.text();
+          catData[id] = parseMarkdownTable(text);
+          return catData[id];
+        } catch (e) {
+          return { headers: [], rows: [], notes: '' };
+        }
+      }
+
+      function parseMarkdownTable(md) {
+        const lines = md.split('\n');
+        let headers = [];
+        let rows = [];
+        let notes = [];
+        let inNotes = false;
+
+        for (const line of lines) {
+          if (line.startsWith('## Notes') || line.startsWith('## ')) {
+            if (line.startsWith('## Notes')) inNotes = true;
+            continue;
+          }
+          if (inNotes && line.trim()) {
+            notes.push(line.replace(/^- /, ''));
+            continue;
+          }
+          if (!line.startsWith('|')) continue;
+          if (line.match(/^\|[\s-|]+$/)) continue;
+
+          const cells = line
+            .split('|')
+            .slice(1, -1)
+            .map((c) => c.trim());
+          if (cells[0] === 'Service' || cells[0] === 'Service Name') {
+            headers = cells;
+          } else if (cells[0]) {
+            rows.push(cells);
+          }
+        }
+        return { headers, rows, notes: notes.join('\n') };
+      }
+
+      function renderGrid() {
+        const grid = document.getElementById('categories-grid');
+        grid.innerHTML = CATEGORIES.map(
+          (cat) => `
         <div class="cat-card" data-id="${cat.id}" data-name="${cat.name}" onclick="showCategory('${cat.id}')">
           <div class="cat-header">
             <span class="cat-icon">${cat.icon}</span>
@@ -539,93 +797,107 @@
           <div class="cat-desc">${cat.desc}</div>
           <div class="cat-services" id="services-${cat.id}"></div>
         </div>
-      `).join('');
+      `,
+        ).join('');
 
-      CATEGORIES.forEach(async cat => {
-        const data = await loadCategory(cat.id);
-        const countEl = document.querySelector(`[data-count="${cat.id}"]`);
-        if (countEl) countEl.textContent = data.rows.length;
-        totalServices += data.rows.length;
-        document.getElementById('total-count').textContent = totalServices;
+        CATEGORIES.forEach(async (cat) => {
+          const data = await loadCategory(cat.id);
+          const countEl = document.querySelector(`[data-count="${cat.id}"]`);
+          if (countEl) countEl.textContent = data.rows.length;
+          totalServices += data.rows.length;
+          document.getElementById('total-count').textContent = totalServices;
 
-        const svcEl = document.getElementById(`services-${cat.id}`);
-        if (svcEl && data.rows.length) {
-          svcEl.innerHTML = data.rows.slice(0, 5).map(r =>
-            `<span class="svc-tag">${r[0].replace(/\*\*/g, '')}</span>`
-          ).join('') + (data.rows.length > 5 ? `<span class="svc-tag">+${data.rows.length - 5} more</span>` : '');
-        }
-      });
-    }
-
-    async function showCategory(id) {
-      const cat = CATEGORIES.find(c => c.id === id);
-      const data = await loadCategory(id);
-
-      document.getElementById('detail-title').textContent = `${cat.icon} ${cat.name}`;
-      document.getElementById('detail-desc').textContent = cat.desc;
-
-      let html = '<table><thead><tr>';
-      data.headers.forEach(h => html += `<th>${h}</th>`);
-      html += '</tr></thead><tbody>';
-      data.rows.forEach(row => {
-        html += '<tr>';
-        row.forEach((cell, i) => {
-          cell = cell.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
-          cell = cell.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
-          html += `<td>${cell}</td>`;
+          const svcEl = document.getElementById(`services-${cat.id}`);
+          if (svcEl && data.rows.length) {
+            svcEl.innerHTML =
+              data.rows
+                .slice(0, 5)
+                .map((r) => `<span class="svc-tag">${r[0].replace(/\*\*/g, '')}</span>`)
+                .join('') +
+              (data.rows.length > 5
+                ? `<span class="svc-tag">+${data.rows.length - 5} more</span>`
+                : '');
+          }
         });
-        html += '</tr>';
-      });
-      html += '</tbody></table>';
-
-      document.getElementById('detail-table').innerHTML = html;
-      document.getElementById('categories-grid').style.display = 'none';
-      document.getElementById('cat-detail').classList.add('active');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    function showGrid() {
-      document.getElementById('categories-grid').style.display = '';
-      document.getElementById('cat-detail').classList.remove('active');
-    }
-
-    // Search
-    document.getElementById('search').addEventListener('input', async function() {
-      const q = this.value.toLowerCase().trim();
-      const cards = document.querySelectorAll('.cat-card');
-
-      if (!q) {
-        cards.forEach(c => c.classList.remove('hidden'));
-        document.getElementById('search-count').textContent = '';
-        showGrid();
-        return;
       }
 
-      showGrid();
-      let matchCount = 0;
-
-      for (const card of cards) {
-        const id = card.dataset.id;
-        const name = card.dataset.name.toLowerCase();
+      async function showCategory(id) {
+        const cat = CATEGORIES.find((c) => c.id === id);
         const data = await loadCategory(id);
-        const serviceNames = data.rows.map(r => r[0].toLowerCase().replace(/\*\*/g, '')).join(' ');
-        const allText = name + ' ' + serviceNames;
 
-        if (allText.includes(q)) {
-          card.classList.remove('hidden');
-          matchCount += data.rows.filter(r =>
-            r[0].toLowerCase().replace(/\*\*/g, '').includes(q) || name.includes(q)
-          ).length || data.rows.length;
-        } else {
-          card.classList.add('hidden');
-        }
+        document.getElementById('detail-title').textContent = `${cat.icon} ${cat.name}`;
+        document.getElementById('detail-desc').textContent = cat.desc;
+
+        let html = '<table><thead><tr>';
+        data.headers.forEach((h) => (html += `<th>${h}</th>`));
+        html += '</tr></thead><tbody>';
+        data.rows.forEach((row) => {
+          html += '<tr>';
+          row.forEach((cell, i) => {
+            cell = cell.replace(
+              /\[([^\]]+)\]\(([^)]+)\)/g,
+              '<a href="$2" target="_blank" rel="noopener">$1</a>',
+            );
+            cell = cell.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+            html += `<td>${cell}</td>`;
+          });
+          html += '</tr>';
+        });
+        html += '</tbody></table>';
+
+        document.getElementById('detail-table').innerHTML = html;
+        document.getElementById('categories-grid').style.display = 'none';
+        document.getElementById('cat-detail').classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       }
 
-      document.getElementById('search-count').textContent = q ? `Showing categories matching "${q}"` : '';
-    });
+      function showGrid() {
+        document.getElementById('categories-grid').style.display = '';
+        document.getElementById('cat-detail').classList.remove('active');
+      }
 
-    // Init
-    renderGrid();
-  </script>
-</body>
+      // Search
+      document.getElementById('search').addEventListener('input', async function () {
+        const q = this.value.toLowerCase().trim();
+        const cards = document.querySelectorAll('.cat-card');
+
+        if (!q) {
+          cards.forEach((c) => c.classList.remove('hidden'));
+          document.getElementById('search-count').textContent = '';
+          showGrid();
+          return;
+        }
+
+        showGrid();
+        let matchCount = 0;
+
+        for (const card of cards) {
+          const id = card.dataset.id;
+          const name = card.dataset.name.toLowerCase();
+          const data = await loadCategory(id);
+          const serviceNames = data.rows
+            .map((r) => r[0].toLowerCase().replace(/\*\*/g, ''))
+            .join(' ');
+          const allText = name + ' ' + serviceNames;
+
+          if (allText.includes(q)) {
+            card.classList.remove('hidden');
+            matchCount +=
+              data.rows.filter(
+                (r) => r[0].toLowerCase().replace(/\*\*/g, '').includes(q) || name.includes(q),
+              ).length || data.rows.length;
+          } else {
+            card.classList.add('hidden');
+          }
+        }
+
+        document.getElementById('search-count').textContent = q
+          ? `Showing categories matching "${q}"`
+          : '';
+      });
+
+      // Init
+      renderGrid();
+    </script>
+  </body>
 </html>
