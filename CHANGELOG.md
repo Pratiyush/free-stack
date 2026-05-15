@@ -10,6 +10,34 @@ Maintainers: add entries under `## [Unreleased]` as PRs merge. At release time, 
 
 ## [Unreleased]
 
+(Sprint 3 lands here — full migration of 323 services + category audit.)
+
+---
+
+## [0.2.0] - 2026-05-15 — Seed Catalogue
+
+### Added
+
+- 4 UI primitives in `src/components/ui/`: `ServiceCard.astro`, `TierBadge.astro`, `CategoryChip.astro`, `SearchBox.astro`
+- Brand-colored service cards — accent strip rendered from each service's `brand_color` (simpleicons.org hex)
+- Logo asset pipeline (`scripts/fetch-logo.mjs`) with mandatory source order: simpleicons.org → freeicons.io → Lucide; documented in `docs/logo-fallback.md`
+- 50 seed services across 10 categories in `src/content/services/` + `src/content/categories/`
+- 51 brand-colored placeholder logos in `public/logos/`
+- Home page (`/`) — editorial hero, recently-verified strip, category grid
+- Catalog page (`/catalog`) with `SearchBox`, tier-type filter, category filter
+- Service detail page (`/service/[slug]`) with pricing table, free-tier bullets, last-verified date, outbound links with `rel="noopener noreferrer"`
+- Category listing page (`/category/[slug]`) — generates a page per seed category at build time
+- Supporting pages: `/sponsors` (non-commercial banner, donate buttons), `/submit` (deep-links to issue forms), `/about`, `/methodology`, branded `/404`
+- Components preview page (`/components-preview`) for primitives
+
+### Changed
+
+- Home page is now editorial (Fraunces hero, paper-cream palette) — sponsor purple confined to `/sponsors` and footer only
+
+---
+
+## [0.1.0] - 2026-05-15 — Astro 6 Foundation
+
 ### Added
 
 - Astro 6 project scaffold with TypeScript strict mode
