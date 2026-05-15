@@ -18,7 +18,8 @@
     "check-logos": "node scripts/check-logos.mjs",
     "new:service": "node scripts/new-service.mjs",
     "migrate-md": "node scripts/migrate-md-to-yaml.mjs",
-    "audit-services": "node scripts/audit-services.mjs"
+    "audit-services": "node scripts/audit-services.mjs",
+    "bulk-fetch-logos": "node scripts/bulk-fetch-logos.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.12",
@@ -39,6 +40,7 @@
     "js-yaml": "^4.1.0",
     "prettier": "^3.5.0",
     "prettier-plugin-astro": "^0.14.1",
+    "simple-icons": "^15.22.0",
     "typescript": "^5.7.0"
   }
 }
