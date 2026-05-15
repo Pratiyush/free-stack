@@ -29,9 +29,6 @@ tags: [llm, ai, inference, api, fast]
 official_url: https://groq.com/
 pricing_url: https://console.groq.com/docs/rate-limits
 
-date_added: 2026-05-15
-date_verified: 2026-05-15
-
 facets:
   requests_per_day: 14400
   api_access: true
@@ -46,3 +43,7 @@ sources:
     url: https://simpleicons.org/icons/groq
     type: simpleicons
     verified: '2026-05-15'
+
+date_added: 2026-05-15
+date_updated: '2026-05-15'
+date_verified: 2026-05-15

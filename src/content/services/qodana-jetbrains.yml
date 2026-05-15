@@ -23,6 +23,8 @@ tags: []
 official_url: https://www.jetbrains.com/
 pricing_url: https://www.jetbrains.com/qodana/buy/
 
-date_added: 2026-05-15
-date_verified: 2026-05-15
 maintainer_notes: 'Pricing page is JS-rendered (curl returns ~45 chars). Needs JS verifier (Sprint 4).'
+
+date_added: 2026-05-15
+date_updated: '2026-05-15'
+date_verified: 2026-05-15
