@@ -142,7 +142,10 @@ async function auditOne(file) {
   if (data?.slug) {
     const logoPath = path.join(LOGOS_DIR, `${data.slug}.svg`);
     if (!existsSync(logoPath)) {
-      findings.push({ level: 'error', msg: `missing logo file: public/logos/${data.slug}.svg` });
+      // Missing logo is a warn (not error) so audit doesn't block CI between
+      // story 3.5 (migration stubs) and 3.6 (bulk logo fetch). --strict (story
+      // 3.11) flips warnings into failures before tagging v0.5.0.
+      findings.push({ level: 'warn', msg: `missing logo file: public/logos/${data.slug}.svg` });
     }
   }
 

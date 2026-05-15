@@ -266,7 +266,7 @@ async function main() {
           slug,
           category: targetCategory,
           subcategory: currentSubcategory || undefined,
-          brand_color: '888888',
+          brand_color: '#888888',
           summary,
           tier_type,
           free_tier:
