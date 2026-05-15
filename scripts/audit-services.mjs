@@ -41,6 +41,9 @@ const pricingTier = z.object({
   description: z.string().optional(),
   price: z.union([z.number(), z.string()]),
   unit: z.string().optional(),
+  features: z.array(z.string().min(2)).optional(),
+  cta_url: z.string().url().optional(),
+  billing: z.enum(['monthly', 'annual', 'one-time', 'usage-based', 'free']).optional(),
 });
 
 // Schema mirror of src/content.config.ts services collection.
@@ -58,6 +61,7 @@ const serviceSchema = z.object({
   notes: z.string().optional(),
   tier_type: z.enum(TIER_TYPES),
   free_tier: z.array(z.string().min(3)).min(1),
+  paid_tier_highlights: z.array(z.string().min(3)).optional(),
   pricing: z.array(pricingTier).min(1),
   tags: z.array(z.string().regex(/^[a-z0-9-]+$/)).default([]),
   official_url: z.string().url(),
