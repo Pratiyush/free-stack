@@ -81,21 +81,26 @@ If any service fails the visual check, do NOT tick the box. Fix the YAML, re-run
 
 Schema and verification scripts land first so the migration writes the right field once and CI catches breakages early.
 
-| # | Story | Branch | Output | Blocks |
+| # | Story | Status | Commit / Branch | Output |
 |---|---|---|---|---|
-| 3.1 | Verify taxonomy against schema | `meta/taxonomy-verify` | `docs/category-taxonomy.md` audited; no changes if already correct | 3.2 |
-| 3.2 | Subcategory schema bump | `feat/schema-subcategory` | Zod enum + smoke fixture | 3.3 |
-| 3.3 | Migration script + audit harness | `tooling/migrate-and-audit` | `scripts/migrate-md-to-yaml.mjs`, `scripts/audit-services.mjs` | 3.5, 3.6 |
-| 3.4 | Category YAML files (27) | `content/categories-yaml` | 27 files in `src/content/categories/` | 3.5 |
-| 3.5 | Migrate all services | `content/migrate-all` | 255 new YAMLs in `src/content/services/` (50 already seeded) | 3.6 |
-| 3.6 | Logo + brand color sweep | `content/logos-all` | `scripts/bulk-fetch-logos.mjs` + `docs/logo-coverage.md` | 3.7 |
-| 3.7 | Resolve simpleicons coverage gaps | `content/logo-gaps` | Per-service fallback decision (manual SVG / Lucide / no logo) | 3.8 |
-| 3.8 | Subcategory rendering on category pages | `feat/subcategory-render` | 3 subsection groups on `/category/<slug>` | 3.9 |
-| 3.9 | Sitemap + RSS + JSON-LD | `feat/seo-machine-readable` | All three feeds valid against W3C/Rich Results test | 3.10 |
-| 3.10 | README + CONTRIBUTING + CLAUDE.md rewrite | `docs/rewrite-for-astro` | All three docs describe the YAML workflow | 3.11 |
-| 3.11 | Verification sweep (audit + Playwright pricing-drift + manual) | `meta/verify-sweep` | `pnpm audit-services` green; `pnpm verify-pricing` ≥90% services scoring ≥80%; manual spot-check of 30 random pages logged | 3.12 |
-| 3.12 | Delete `categories/*.md` | `cleanup/remove-md-categories` | 27 files removed, all internal links updated | 3.13 |
-| 3.13 | Production cut-over | `release/v0.5.0-cutover` | `freestack.is-a.dev` serves the Astro build | tag |
+| 3.1 | Verify taxonomy against schema | ✅ done | (read-only verify) | Taxonomy audited; no changes needed |
+| 3.2 | Subcategory schema bump | ✅ done | Already in Sprint 1.3 (`44626ad`) | Zod enum + 5 seed fixtures |
+| 3.3 | Migration script + audit harness | ✅ done | `09e935a` | `scripts/migrate-md-to-yaml.mjs`, `scripts/audit-services.mjs`, CI gate |
+| 3.4 | Category YAML files (27) | ✅ done | `cdc6ca0` | 17 missing categories added (10 already seeded) |
+| 3.5 | Migrate all services | ✅ done | `63c8bcf` (+ fixes `41c1287`, `85e8e54`) | 252 new YAMLs; 302 total → 300 after triage |
+| 3.6 | Logo + brand color sweep | ✅ done | `e642981` | 196/302 simpleicons hits (60.6%); residual 106 → 3.7 |
+| 3.7 | Resolve simpleicons coverage gaps | ⏳ in flight | `content/logo-gaps-cascade` | Cascade: lobe-icons → devicon → selfh.st → colored-brands |
+| 3.8 | Subcategory rendering on category pages | ✅ done | `8c62b3e` | 3-section render on `/category/<slug>` (ai-apis: 10/7/3) |
+| 3.9 | Sitemap + RSS + JSON-LD | ✅ done | `71672b7` | `sitemap-0.xml` 336 entries · `rss.xml` 50 items · JSON-LD per service page |
+| 3.10 | README + CONTRIBUTING + CLAUDE.md rewrite | ✅ done | `dbfab00` (cherry-picking now) | YAML-first workflow; PR-template flagged stale for follow-up |
+| 3.11 | Verification sweep (audit + curl pricing-drift + manual) | 🟡 partial | `c88c734` | curl-based done (300 records); Playwright deferred to Sprint 4 |
+| 3.12 | Delete `categories/*.md` | ⏸ next | `cleanup/remove-md-categories` | Gated on 3.10 — launching after 3.10 merges |
+| 3.13 | Production cut-over | 🚫 deferred | — | Per user direction (2026-05-15) — out of scope for v0.5.0 |
+| 3.14a | Schema bump — `facets` + `sources` | ✅ done | `203f2d1` | Two optional Zod blocks; smoke fixture on `groq.yml` |
+| 3.14b | Astro port of catalog | ⏸ blocked | — | Blocks on external v4 design pass (brief at `ref/design-experiments/v3-design-brief.html`) |
+| 3.X | `date_updated` schema + backfill | ✅ done | `458c00d` + `7c6d722` (cherry-picking now) | Optional field added; all 300 services have `date_updated: 2026-05-15` |
+| 3.X | Triage 90 verification issues (story 3.11 follow-up) | ✅ done | `4431b6b` + `39ea7fc` + `1131232` + `7ccdeec` | 60 confirm-pass · 16 drift updates · 2 services removed (tebi, adaptable-io) · 2 URL fixes |
+| 3.X | POEditor drift fix | ✅ done | `9fb532f` | Free tier 30k → 1k strings |
 
 ---
 

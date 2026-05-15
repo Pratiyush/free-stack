@@ -14,19 +14,62 @@ Sprint 3 progress toward `v0.5.0`. Entries land as PRs merge to `rebuild/astro`;
 
 ### Added
 
+**Tooling**
 - `scripts/migrate-md-to-yaml.mjs` — parse the legacy `categories/*.md` tables and emit typed service YAML, with subcategory detection from section headings (`permanent` / `expiring-credits` / `limited`).
 - `scripts/audit-services.mjs` — post-migration audit: hex `brand_color`, logo file presence, summary length, optional pricing URL HTTP check. CI gate runs `pnpm audit-services --no-http` after `check-logos`.
-- `package.json` scripts: `migrate-md`, `audit-services`.
+- `scripts/bulk-fetch-logos.mjs` + `simple-icons` dependency — bulk-fetch real brand colors and tinted SVG logos from simpleicons.org for every service.
+- `package.json` scripts: `migrate-md`, `audit-services`, `bulk-fetch-logos`.
+
+**Schema**
+- Optional `facets` block on the service schema (18 fields covering quotas, capabilities, restrictions, trial/credit info, operational characteristics).
+- Optional `sources` block on the service schema (per-record provenance for pricing + brand assets + per-field overrides).
+
+**Content (catalog)**
 - 17 missing category YAMLs to complete the 27-category taxonomy (baas, code-quality, collaboration, communication, containers, design, dev-tools, documentation, iaas, logs, maps, mobile, paas, payments, project-management, security, translation).
-- 252 service YAML files migrated from `categories/*.md` — catalog grows from 50 seeded → 302 total services. Each new YAML carries placeholder `brand_color: '#888888'` and a logo path filled by the Sprint-3 logo sweep.
-- `docs/sprints/sprint-3.md` — detailed Sprint-3 execution plan with per-service migration tracker (305 subtasks, 48 pre-checked from v0.2.0 seeds), per-service AC, per-category AC, and Visual Verification Protocol.
-- `docs/sprints/sprint-3.md` §10 — Playwright pricing-drift verification spec for story 3.11 (text-presence checks against live `pricing_url` for both free-tier limits and paid plan prices; hard-fails on sunset phrases; integrates with Sprint-5 monthly cron).
+- 252 service YAML files migrated from `categories/*.md` — catalog grew from 50 seeded → 302 services initially; net 300 after triage removed 2 dead services.
+- 146 real brand colors + colored logo SVGs from simpleicons.org (story 3.6 sweep — 60.6% coverage; remaining ~106 services fall back via lobe-icons + devicon + selfh.st cascade in story 3.7).
+
+**Routes / rendering**
+- Subcategory rendering on `/category/<slug>` pages — three sections (Permanent Free Tiers / Free Credits & Trial / Severely Limited) with counts and per-section blurbs. Empty sections are skipped.
+- Sitemap (`/sitemap-index.xml` + `/sitemap-0.xml`, 336 entries via `@astrojs/sitemap`).
+- RSS feed at `/rss.xml` — 50 most-recently-verified services with absolute URLs, sorted by `date_verified` desc.
+- Schema.org `SoftwareApplication` JSON-LD in `<head>` on every `/service/<slug>` page (description, offers, applicationCategory).
+
+**Verification (story 3.11 first run)**
+- `data/pricing-verify-report.json` — 300-service pricing-drift report from a 6-sub-agent parallel curl sweep.
+- `docs/sprints/sprint-3-pricing-drift.md` — human-readable triage MD with real-drift / likely-false-positive / weak-sunset / bot-blocked / needs-JS / error buckets.
+
+**Docs**
+- `docs/sprints/sprint-3.md` — detailed Sprint-3 execution plan with per-service migration tracker (305 subtasks, 48 pre-checked from v0.2.0 seeds), per-service AC, per-category AC, Visual Verification Protocol, and §10 Playwright pricing-drift verification spec.
+- `ref/design-experiments/combined-v3.html` + `v3-design-brief.html` + `v3-design-brief-prompt.txt` + `screenshots/` — packaged hand-off for the v4 design pass (gitignored under `ref/`, local-only).
+
+### Changed
+
+- 300-service catalogue replaces the legacy MD-table corpus. Every record is a Zod-validated YAML.
+- 76 services received `date_verified` bumps to `2026-05-15` after the triage sweep (60 confirm-pass + 16 with content updates).
+- 16 services updated with drift fixes — notable: Mixpanel free tier shrank from 20M → 1M events/month; Cloudflare Workers AI pay-as-you-go corrected from $0.50/1M → $0.011/1K neurons; Argos CI renamed "Free" → "Hobby"; Koyeb shifted from always-free to credit-based; POEditor free tier shrank 30k → 1k strings.
+- 2 URL fixes: `netlify-dns` pricing_url corrected (was 404); `orama` pricing_url switched from JS-rendered docs to static `/pricing` page.
+
+### Removed
+
+- Service `tebi` — pivoted from S3-compatible storage to hospitality POS; previous 25 GB / 250 GB free tier no longer exists.
+- Service `adaptable-io` — confirmed shut down February 2025; DNS A-record gone.
 
 ### Fixed
 
 - Migration script emits `brand_color: '#888888'` (was `'888888'` without the `#`, which failed the `^#[0-9a-fA-F]{6}$` schema regex).
 - Migration script `buildSummary` enforces the schema's 10-char minimum by falling back to `<Service> — free tier; see the pricing page for details.` when the source MD's Free Tier + Key Limits columns produce a too-short string.
 - Audit script demotes "missing logo file" from error to warn, so CI stays green between story 3.5 (migration stubs) and 3.6 (logo sweep). `--strict` flips it back to fail before tagging.
+
+### Pending (still in flight as of this entry)
+
+- Story 3.7 — logo coverage cascade (lobe-icons / devicon / selfh.st / colored-brands) for the residual ~106 placeholder services.
+- Story 3.10 — README + CONTRIBUTING + CLAUDE.md rewrite for YAML-first workflow.
+- Story 3.12 — delete legacy `categories/*.md` (gated on 3.10).
+- Schema: optional `date_updated` field + backfill on all 300 services.
+- v4 mockup — external design pass per `ref/design-experiments/v3-design-brief.html` (interaction tweaks + real-data integration + dev panel).
+- Story 3.14b — Astro port of catalog from v4 mockup (4–5 evening sessions; drawer → real `/service/[slug]` route + View Transitions; compare modal → real `/compare?slugs=…` route).
+- Story 3.13 — production cut-over to the Astro build (currently deprioritised per user direction).
 
 ---
 
