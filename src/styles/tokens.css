@@ -6,11 +6,14 @@
 :root {
   /* Color palette */
   --color-paper: #f4f1ea;
+  --color-paper-warm: #efeadd; /* subtle warmer cream for hero zones and masthead bands */
   --color-paper-deep: #ebe6d9;
   --color-ink: #1a1a1a;
+  --color-ink-softer: #2a241e; /* softer ink for masthead bands on paper-warm */
   --color-ink-soft: #5a5550;
+  --color-ink-faint: #8a8580; /* faintest ink — for serials, dateline metadata */
   --color-rule: #d8d2c2;
-  --color-coral: #d94c2a; /* use sparingly — primary accent */
+  --color-coral: #d94c2a; /* selection state + primary CTA only */
   --color-sponsor: #5a4fcf; /* ONLY in /sponsors and footer support link */
 
   /* Tier-type badge colors */
@@ -49,9 +52,12 @@
 
 @theme {
   --color-paper: #f4f1ea;
+  --color-paper-warm: #efeadd;
   --color-paper-deep: #ebe6d9;
   --color-ink: #1a1a1a;
+  --color-ink-softer: #2a241e;
   --color-ink-soft: #5a5550;
+  --color-ink-faint: #8a8580;
   --color-rule: #d8d2c2;
   --color-coral: #d94c2a;
   --color-sponsor: #5a4fcf;

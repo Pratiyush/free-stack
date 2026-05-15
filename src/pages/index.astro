@@ -17,55 +17,111 @@ const recentlyVerified = [...services]
     (a, b) => new Date(b.data.date_verified).getTime() - new Date(a.data.date_verified).getTime(),
   )
   .slice(0, 6);
+
+/* Periodic-table preview wall — pick ~48 services with real brand_color (not placeholder)
+ * and a logo file, spread across categories. Sorted by date_added (newest first). */
+const wallServices = services
+  .filter(
+    (s) =>
+      s.data.brand_color &&
+      s.data.brand_color !== '#888888' &&
+      s.data.brand_color.toLowerCase() !== '#1a1a1a',
+  )
+  .sort((a, b) => new Date(b.data.date_added).getTime() - new Date(a.data.date_added).getTime())
+  .slice(0, 48);
+
+/* Editorial issue number — derived from project version, hand-bumped at release time.
+ * v0.5.0 = Issue №005. Update this string when tagging a new release. */
+const issueNumber = '005';
+const issueMonth = new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+const verifiedToday = new Date().toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'short',
+  day: '2-digit',
+}).toUpperCase().replace(',', '');
 ---
 
 <BaseLayout
   title="free-stack"
   description={`${services.length} verified free tiers for developers. No ads, no affiliate links — just the free tier you can actually use.`}
 >
-  <section class="hero container-narrow">
-    <p class="eyebrow">
-      Free Tiers · Verified {
-        new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
-      }
-    </p>
-    <h1>Free tools that stay free.</h1>
-    <p class="lede">
-      A directory of developer services with real free tiers — permanent, not 14-day trials. Every
-      entry is verified against the official pricing page. No ads, no affiliate links, no paid
-      placement.
-    </p>
-    <div class="cta-row">
-      <a class="cta-primary" href="/catalog">Browse {services.length} services</a>
-      <a class="cta-secondary" href="/methodology">How we verify</a>
+  <section class="masthead-bar container">
+    <span class="issue">Issue №{issueNumber} <span class="dot" aria-hidden="true">·</span> {issueMonth}</span>
+    <span class="verified-line">VERIFIED {verifiedToday}</span>
+  </section>
+
+  <section class="hero container">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <h1>
+          One <em>honest</em> directory of free tiers<br />
+          that <em>actually</em> stay free.
+        </h1>
+        <p class="lede">
+          {services.length} developer services with real free tiers — permanent, not 14-day trials.
+          Every entry verified against the official pricing page. No ads. No affiliate links. No
+          paid placement.
+        </p>
+        <div class="cta-row">
+          <a class="cta-primary" href="/catalog">Browse {services.length} services →</a>
+          <a class="cta-secondary" href="/methodology">How we verify</a>
+        </div>
+      </div>
+      <aside class="hero-stats" aria-label="Site stats">
+        <dl>
+          <div class="stat">
+            <dt>Services</dt>
+            <dd>{services.length}</dd>
+          </div>
+          <div class="stat">
+            <dt>Categories</dt>
+            <dd>{categories.length}</dd>
+          </div>
+          <div class="stat">
+            <dt>Affiliate links</dt>
+            <dd>0</dd>
+          </div>
+          <div class="stat">
+            <dt>Ads / trackers</dt>
+            <dd>0</dd>
+          </div>
+        </dl>
+      </aside>
     </div>
   </section>
 
-  <section class="stats container">
-    <div class="stat">
-      <span class="stat-num">{services.length}</span>
-      <span class="stat-label">verified services</span>
-    </div>
-    <div class="stat">
-      <span class="stat-num">{categories.length}</span>
-      <span class="stat-label">categories</span>
-    </div>
-    <div class="stat">
-      <span class="stat-num">$0</span>
-      <span class="stat-label">to start</span>
-    </div>
-    <div class="stat">
-      <span class="stat-num">0</span>
-      <span class="stat-label">affiliate links</span>
+  {/* Periodic table — wall of brand-colored logos. Hover lights up the tile. */}
+  <section class="wall-section container">
+    <header class="section-head">
+      <p class="rom-eyebrow"><span class="rom">i.</span> The periodic table</p>
+      <h2>{wallServices.length} services, at a glance.</h2>
+      <p class="section-blurb">
+        Every tile is a service we've verified this month. Hover to reveal the name; click for the
+        full pricing breakdown.
+      </p>
+    </header>
+    <div class="wall" role="list">
+      {
+        wallServices.map((s) => (
+          <a
+            class="wall-tile"
+            role="listitem"
+            href={`/service/${s.data.slug}`}
+            style={`--tile-accent: ${s.data.brand_color};`}
+            aria-label={s.data.name}
+          >
+            <img src={s.data.logo} alt="" loading="lazy" width="32" height="32" />
+            <span class="tile-name">{s.data.name}</span>
+          </a>
+        ))
+      }
     </div>
   </section>
 
   <section class="container categories-section">
     <header class="section-head">
-      <h2>Browse by category</h2>
-      <p class="section-blurb">
-        Pick a category to see every service we trust at that layer of the stack.
-      </p>
+      <p class="rom-eyebrow"><span class="rom">ii.</span> Browse by category</p>
+      <h2>{categories.length} layers of the stack.</h2>
     </header>
     <div class="category-grid">
       {
@@ -78,10 +134,10 @@ const recentlyVerified = [...services]
 
   <section class="container recently-section">
     <header class="section-head">
-      <h2>Recently verified</h2>
-      <p class="section-blurb">The six most recently re-checked entries.</p>
+      <p class="rom-eyebrow"><span class="rom">iii.</span> Recently verified</p>
+      <h2>Six entries last re-checked.</h2>
     </header>
-    <div class="grid">
+    <div class="recent-grid">
       {
         recentlyVerified.map((s) => {
           const cat = categories.find((c) => c.id === s.data.category);
@@ -92,7 +148,8 @@ const recentlyVerified = [...services]
   </section>
 
   <section class="container-narrow about">
-    <h2>Why this exists.</h2>
+    <p class="rom-eyebrow"><span class="rom">iv.</span> Why this exists</p>
+    <h2>The free-tier list, kept honest.</h2>
     <p>
       Every "awesome free tier" list inevitably rots. Services kill their free tiers; tables get
       stale; nobody knows what's actually still free. free-stack solves that with a single rule:
@@ -101,30 +158,80 @@ const recentlyVerified = [...services]
     </p>
     <p>
       The project is open source and non-commercial. The only money is voluntary sponsorship via
-      GitHub Sponsors and Buy Me a Coffee — used to cover the domain and hosting bill, nothing else. <a
-        href="/sponsors">More on sponsorship</a
-      >.
+      GitHub Sponsors and Buy Me a Coffee — used to cover the domain and hosting bill, nothing else.
+      <a href="/sponsors">More on sponsorship →</a>
     </p>
   </section>
 
   <style>
-    .hero {
-      padding-top: var(--space-2xl);
-      padding-bottom: var(--space-xl);
-    }
-    .eyebrow {
+    /* Masthead bar — Issue № · Month / VERIFIED date. Mono, ink-faint, rule above + below. */
+    .masthead-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       font-family: var(--font-mono);
-      font-size: 0.78rem;
-      text-transform: uppercase;
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      color: var(--color-ink-faint);
+      padding: 0.5rem var(--space-md);
+      border-top: 1px solid var(--color-rule);
+      border-bottom: 1px solid var(--color-rule);
+      background: var(--color-paper-warm);
+    }
+    .masthead-bar .issue {
+      text-transform: none;
       letter-spacing: 0.12em;
+    }
+    .masthead-bar .verified-line {
       color: var(--color-ink-soft);
-      margin-bottom: var(--space-md);
+      font-weight: 500;
+    }
+    .masthead-bar .dot {
+      color: var(--color-rule);
+    }
+
+    /* Hero — paper-cream base with soft radial tints. */
+    .hero {
+      position: relative;
+      padding: var(--space-2xl) var(--space-md) var(--space-xl);
+      background:
+        radial-gradient(ellipse at 0% 0%, color-mix(in srgb, var(--color-coral) 8%, transparent), transparent 50%),
+        radial-gradient(ellipse at 100% 100%, color-mix(in srgb, var(--color-coral) 5%, transparent), transparent 60%),
+        var(--color-paper);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: var(--space-2xl);
+      align-items: end;
+    }
+    @media (max-width: 880px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.6rem, 6vw, 4.4rem);
+      line-height: 1.05;
+      letter-spacing: -0.018em;
+      font-weight: 350;
+      margin: 0;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--color-coral);
+      font-weight: 400;
     }
     .lede {
-      margin-top: var(--space-md);
-      font-size: 1.15rem;
-      color: var(--color-ink-soft);
+      font-family: var(--font-display);
+      font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+      color: var(--color-ink);
+      line-height: 1.55;
+      margin: var(--space-lg) 0 0;
       max-width: 56ch;
+      font-weight: 350;
     }
     .cta-row {
       display: flex;
@@ -135,11 +242,12 @@ const recentlyVerified = [...services]
     .cta-primary,
     .cta-secondary {
       display: inline-block;
-      padding: 0.7rem 1.2rem;
+      padding: 0.7rem 1.3rem;
       border-radius: var(--radius-md);
       text-decoration: none;
       font-weight: 500;
       transition: all 0.15s ease;
+      font-family: var(--font-body);
     }
     .cta-primary {
       background: var(--color-ink);
@@ -156,46 +264,133 @@ const recentlyVerified = [...services]
     .cta-secondary:hover {
       border-color: var(--color-ink);
     }
-    .stats {
+
+    /* Stats as definition list — editorial reference voice. */
+    .hero-stats dl {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: var(--space-lg);
-      padding: var(--space-xl) var(--space-md);
-      border-top: var(--border-rule);
-      border-bottom: var(--border-rule);
-      margin-top: var(--space-xl);
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-md) var(--space-lg);
+      margin: 0;
     }
-    .stat {
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-xs);
+    .hero-stats .stat dt {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-ink-faint);
     }
-    .stat-num {
+    .hero-stats .stat dd {
+      margin: 0.2rem 0 0;
       font-family: var(--font-display);
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       font-weight: 400;
       color: var(--color-ink);
       line-height: 1;
+      font-feature-settings: 'tnum';
     }
-    .stat-label {
-      font-size: 0.85rem;
-      color: var(--color-ink-soft);
-      text-transform: lowercase;
-      letter-spacing: 0.02em;
-    }
-    .categories-section,
-    .recently-section {
+
+    /* Periodic-table wall of logos. */
+    .wall-section {
       padding-top: var(--space-2xl);
     }
+    .wall {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
+      gap: 4px;
+      margin-top: var(--space-lg);
+      background: var(--color-rule);
+      border: 1px solid var(--color-rule);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+    .wall-tile {
+      position: relative;
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      background: color-mix(in srgb, var(--tile-accent) 6%, var(--color-paper));
+      transition: background 0.18s ease, transform 0.18s ease;
+    }
+    .wall-tile img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+      transition: transform 0.18s ease;
+      filter: grayscale(0.4) opacity(0.85);
+    }
+    .wall-tile .tile-name {
+      position: absolute;
+      bottom: 4px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-family: var(--font-mono);
+      font-size: 0.55rem;
+      color: var(--color-ink);
+      letter-spacing: 0.04em;
+      opacity: 0;
+      transition: opacity 0.18s ease;
+      pointer-events: none;
+    }
+    .wall-tile:hover,
+    .wall-tile:focus-visible {
+      background: color-mix(in srgb, var(--tile-accent) 22%, var(--color-paper));
+      transform: scale(1.04);
+      z-index: 2;
+      outline: none;
+    }
+    .wall-tile:hover img,
+    .wall-tile:focus-visible img {
+      filter: none;
+      transform: scale(1.1);
+    }
+    .wall-tile:hover .tile-name,
+    .wall-tile:focus-visible .tile-name {
+      opacity: 1;
+    }
+    .wall-tile:focus-visible {
+      outline: 2px solid var(--color-coral);
+      outline-offset: -2px;
+    }
+
+    /* Section heads — roman-numeral eyebrow + Fraunces h2. */
     .section-head {
       margin-bottom: var(--space-md);
     }
+    .rom-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--color-ink-faint);
+      margin: 0 0 var(--space-xs);
+    }
+    .rom {
+      font-family: var(--font-display);
+      font-style: italic;
+      color: var(--color-coral);
+      font-size: 1.1em;
+      margin-right: 0.4em;
+    }
     .section-head h2 {
-      font-size: 1.6rem;
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3vw, 2.1rem);
+      font-weight: 400;
+      margin: 0;
+      letter-spacing: -0.01em;
     }
     .section-blurb {
       color: var(--color-ink-soft);
-      margin-top: var(--space-xs);
+      margin-top: var(--space-sm);
+      max-width: 56ch;
+      line-height: 1.55;
+    }
+
+    .categories-section,
+    .recently-section {
+      padding-top: var(--space-2xl);
     }
     .category-grid {
       display: flex;
@@ -203,7 +398,7 @@ const recentlyVerified = [...services]
       flex-wrap: wrap;
       margin-top: var(--space-md);
     }
-    .grid {
+    .recent-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: var(--space-md);
@@ -211,14 +406,25 @@ const recentlyVerified = [...services]
     }
     .about {
       padding-top: var(--space-2xl);
+      padding-bottom: var(--space-2xl);
+    }
+    .about h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3vw, 2.1rem);
+      font-weight: 400;
+      margin: var(--space-xs) 0 var(--space-md);
+      letter-spacing: -0.01em;
     }
     .about p {
       margin-top: var(--space-md);
+      line-height: 1.65;
+      max-width: 65ch;
     }
-    @media (max-width: 720px) {
-      .stats {
-        grid-template-columns: repeat(2, 1fr);
-      }
+    .about a {
+      color: var(--color-ink);
+    }
+    .about a:hover {
+      color: var(--color-coral);
     }
   </style>
 </BaseLayout>

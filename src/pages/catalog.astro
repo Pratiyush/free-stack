@@ -98,6 +98,22 @@ const tierTypes = ['always-free', 'free-plan', 'trial-credit', 'pay-as-you-go'] 
       });
     });
     catSelect?.addEventListener('change', applyFilters);
+
+    /* Sticky filter bar — apply shadow when the bar is stuck to the viewport top.
+       Pattern adapted from ref/design-experiments/combined-v2.html (sentinel). */
+    const filterBar = document.querySelector<HTMLElement>('.filters');
+    if (filterBar) {
+      const sentinel = document.createElement('span');
+      sentinel.style.cssText = 'display:block;height:1px;width:1px;';
+      filterBar.parentElement?.insertBefore(sentinel, filterBar);
+      const obs = new IntersectionObserver(
+        ([entry]) => {
+          filterBar.classList.toggle('stuck', !entry.isIntersecting);
+        },
+        { rootMargin: '-1px 0px 0px 0px', threshold: [1] },
+      );
+      obs.observe(sentinel);
+    }
   </script>
 
   <style>
@@ -133,6 +149,19 @@ const tierTypes = ['always-free', 'free-plan', 'trial-credit', 'pay-as-you-go'] 
       border-top: var(--border-rule);
       border-bottom: var(--border-rule);
       margin-bottom: var(--space-md);
+      position: sticky;
+      top: 0;
+      background: var(--color-paper);
+      z-index: 5;
+      transition: box-shadow 0.18s ease;
+    }
+    .filters.stuck {
+      box-shadow: 0 4px 12px rgba(26, 26, 26, 0.08);
+    }
+    @media (max-width: 720px) {
+      .filters {
+        position: static;
+      }
     }
     .filter-group {
       border: none;
@@ -175,6 +204,10 @@ const tierTypes = ['always-free', 'free-plan', 'trial-credit', 'pay-as-you-go'] 
       background: var(--color-ink);
       color: var(--color-paper);
       border-color: var(--color-ink);
+    }
+    .filter-btn:focus-visible {
+      outline: 2px solid var(--color-coral);
+      outline-offset: 2px;
     }
     .filter-select {
       font: inherit;

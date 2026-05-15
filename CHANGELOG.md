@@ -10,7 +10,33 @@ Maintainers: add entries under `## [Unreleased]` as PRs merge. At release time, 
 
 ## [Unreleased]
 
-Next: `v0.8.0` "Contributor Workflow" (Sprint 4) — 5 YAML issue forms, submission-to-PR automation, weekly verify-links cron, CODEOWNERS, Release Drafter, Playwright pricing-drift upgrade.
+Next: `v0.9.0` "Content Depth + View Modes" — schema bump (`features[]`, `cta_url`, `billing` per pricing tier + `paid_tier_highlights[]`), 12 parallel agents expand `pricing[]` across all 300 services, table view with inline-expand on `/catalog`, hero refinement (Issue № inline + sidebar pull-quote + 6-col wall).
+
+---
+
+## [0.8.0] - 2026-05-15 — Editorial Polish
+
+Sprint 4 ships the v4 design pass synthesised from the 10-agent review of `ref/`. The catalog reads like an almanac now: periodic-table cards with brand-colored head-bands, Issue №/dateline chrome on every service page, a wall-of-logos hero, View Transitions, and a real `/compare?slugs=…` route.
+
+### Added
+
+- **`src/pages/compare.astro`** — real `/compare?slugs=…` route with type-to-search picker, sortable facet rows grouped by Overview / Quotas / Capabilities / Restrictions / Trial / Operational, URL state sync, max 4 services, fully client-side from a pre-rendered JSON blob.
+- **`docs/sprints/sprint-4.md`** — Sprint 4 plan including all 6 stories, spec deltas vs the v3 brief, and the parallel-track outline.
+- **View Transitions** — `<ClientRouter />` in BaseLayout + `transition:name="card-<slug>"` on cards; catalog → detail animates smoothly without a JS framework.
+- **Tokens** — `--color-paper-warm` (hero zones), `--color-ink-softer` (masthead bands), `--color-ink-faint` (serials, dateline metadata).
+
+### Changed
+
+- **`ServiceCard.astro`** rebuilt with periodic-table treatment: 4px brand-color head-band on top (was 4px left strip), 9% brand-tinted hero zone, framed white logo inset, hanging em-dash bullets, conditional `cc_required` pill, border-color-only hover (no translate).
+- **`src/pages/service/[slug].astro`** rebuilt with editorial almanac chrome: `§ <CATEGORY> · № <SERIAL>` masthead, italic Fraunces h1, mono uppercase `VERIFIED · ADDED` dateline rule, roman-numeral section dividers, italic Fraunces brand-color Free row in the pricing table, footnote-style sources block.
+- **`src/pages/index.astro`** rebuilt with editorial hero: masthead bar (Issue №005 · May 2026 / VERIFIED date), paper-cream + radial coral tints, italic Fraunces h1 with brand-color emphasis, stats as a definition list, 48-tile periodic-table wall-of-logos that lights up on hover.
+- **`src/pages/catalog.astro`** — sticky filter bar with IntersectionObserver sentinel pattern; coral focus-visible ring on filter buttons.
+
+### Skipped / deferred to v0.9.0
+
+- Full hash-sync overlay drawer (View Transitions handle the navigation case now)
+- Filter category chips with live counts
+- `__all` reset chip pattern
 
 ---
 

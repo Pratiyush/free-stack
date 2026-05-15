@@ -2,17 +2,35 @@
 import { getCollection, getEntry } from 'astro:content';
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import TierBadge from '~/components/ui/TierBadge.astro';
-import CategoryChip from '~/components/ui/CategoryChip.astro';
 
 export async function getStaticPaths() {
   const services = await getCollection('services');
+
+  // Compute a per-category serial number: services within each category sorted
+  // by date_added ascending get № 001, 002, etc. Stable, editorial-feeling identifier.
+  const byCategory: Record<string, typeof services> = {};
+  for (const s of services) {
+    (byCategory[s.data.category] ??= []).push(s);
+  }
+  for (const cat of Object.keys(byCategory)) {
+    byCategory[cat].sort((a, b) => {
+      const da = new Date(a.data.date_added).getTime();
+      const db = new Date(b.data.date_added).getTime();
+      return da - db || a.data.slug.localeCompare(b.data.slug);
+    });
+  }
+  const serialOf = new Map<string, number>();
+  for (const cat of Object.keys(byCategory)) {
+    byCategory[cat].forEach((s, i) => serialOf.set(s.data.slug, i + 1));
+  }
+
   return services.map((service) => ({
     params: { slug: service.id },
-    props: { service },
+    props: { service, serial: serialOf.get(service.data.slug) ?? 0 },
   }));
 }
 
-const { service } = Astro.props;
+const { service, serial } = Astro.props as { service: any; serial: number };
 const {
   name,
   summary,
@@ -29,12 +47,12 @@ const {
   category,
   date_added,
   date_verified,
+  sources,
 } = service.data;
 
 const categoryEntry = await getEntry('categories', category);
 const accent = brand_color ?? '#1a1a1a';
 
-// Schema.org JSON-LD record (SoftwareApplication). Emitted in <head> for SEO.
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
@@ -49,17 +67,36 @@ const jsonLd = {
     ...(pricing_url ? { url: pricing_url } : {}),
   },
 };
+
 const verifiedDate = date_verified instanceof Date ? date_verified : new Date(date_verified);
-const verifiedDisplay = verifiedDate.toLocaleDateString('en-US', {
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
-});
 const addedDate = date_added instanceof Date ? date_added : new Date(date_added);
-const addedDisplay = addedDate.toLocaleDateString('en-US', {
-  year: 'numeric',
-  month: 'short',
-});
+const fmt = (d: Date) =>
+  d
+    .toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: '2-digit' })
+    .toUpperCase()
+    .replace(',', '');
+
+const categoryUpper = (categoryEntry?.data.name ?? category).toUpperCase();
+const serialStr = String(serial).padStart(3, '0');
+
+// Roman-numeral section sequence — editorial almanac voice.
+const roman = ['i.', 'ii.', 'iii.', 'iv.', 'v.', 'vi.'];
+
+// Sources / footnotes — flatten into a numbered list if present.
+type Source = { url: string; verified?: string; label?: string };
+const collectSources = (s: any): Source[] => {
+  if (!s) return [];
+  const out: Source[] = [];
+  if (s.pricing?.url) out.push({ url: s.pricing.url, verified: s.pricing.verified, label: 'Pricing' });
+  if (s.brand?.url) out.push({ url: s.brand.url, verified: s.brand.verified, label: 'Brand' });
+  if (Array.isArray(s.overrides)) {
+    for (const o of s.overrides) {
+      if (o?.url) out.push({ url: o.url, verified: o.verified, label: o.field });
+    }
+  }
+  return out;
+};
+const footnotes = collectSources(sources);
 ---
 
 <BaseLayout
@@ -76,33 +113,42 @@ const addedDisplay = addedDate.toLocaleDateString('en-US', {
         <a href={`/category/${category}`}>{categoryEntry?.data.name ?? category}</a>
       </nav>
 
+      {/* Editorial masthead: § CATEGORY · № SERIAL — sets the almanac tone. */}
+      <p class="masthead">
+        <span class="section-mark">§</span> <span class="cat">{categoryUpper}</span>
+        <span class="dot" aria-hidden="true">·</span>
+        <span class="numero">№</span> <span class="serial">{serialStr}</span>
+      </p>
+
       <header class="page-head">
         <div class="logo-large" aria-hidden="true">
           <img src={logo} alt="" width="64" height="64" />
         </div>
         <div class="head-text">
-          <p class="eyebrow">{categoryEntry?.data.name ?? category}</p>
           <h1>{name}</h1>
           <div class="badge-row">
             <TierBadge tier={tier_type} />
-            <span class="verified" title={`Verified ${verifiedDisplay}`}>
-              Verified <time datetime={verifiedDate.toISOString()}>{verifiedDisplay}</time>
-            </span>
           </div>
         </div>
       </header>
 
+      <p class="dateline">
+        Verified <time datetime={verifiedDate.toISOString()}>{fmt(verifiedDate)}</time>
+        <span class="dot" aria-hidden="true">·</span>
+        Added <time datetime={addedDate.toISOString()}>{fmt(addedDate)}</time>
+      </p>
+
       <p class="lede">{summary}</p>
 
       <section class="block">
-        <h2>What you get on the free tier</h2>
+        <h2><span class="rom">{roman[0]}</span> Free tier</h2>
         <ul class="free-tier">
-          {free_tier.map((bullet) => <li>{bullet}</li>)}
+          {free_tier.map((bullet: string) => <li>{bullet}</li>)}
         </ul>
       </section>
 
       <section class="block">
-        <h2>Pricing</h2>
+        <h2><span class="rom">{roman[1]}</span> Pricing</h2>
         <table class="pricing-table">
           <thead>
             <tr>
@@ -113,18 +159,19 @@ const addedDisplay = addedDate.toLocaleDateString('en-US', {
           </thead>
           <tbody>
             {
-              pricing.map((tier) => (
-                <tr>
-                  <td>
-                    <strong>{tier.name}</strong>
-                  </td>
-                  <td>
-                    {typeof tier.price === 'number' ? `$${tier.price}` : tier.price}
-                    {tier.unit && <span class="unit">{tier.unit}</span>}
-                  </td>
-                  <td>{tier.description ?? ''}</td>
-                </tr>
-              ))
+              pricing.map((tier: any) => {
+                const isFree = tier.name === 'Free' || tier.price === 0 || tier.price === 'Free';
+                return (
+                  <tr class={isFree ? 'free-row' : ''}>
+                    <td class="plan">{tier.name}</td>
+                    <td class="price">
+                      {typeof tier.price === 'number' ? `$${tier.price}` : tier.price}
+                      {tier.unit && <span class="unit">{tier.unit}</span>}
+                    </td>
+                    <td class="notes">{tier.description ?? ''}</td>
+                  </tr>
+                );
+              })
             }
           </tbody>
         </table>
@@ -133,17 +180,17 @@ const addedDisplay = addedDate.toLocaleDateString('en-US', {
       {
         notes && (
           <section class="block">
-            <h2>Notes</h2>
-            <p>{notes}</p>
+            <h2><span class="rom">{roman[2]}</span> Limits & notes</h2>
+            <p class="notes-body">{notes}</p>
           </section>
         )
       }
 
       <section class="block links">
-        <h2>Links</h2>
+        <h2><span class="rom">{roman[notes ? 3 : 2]}</span> Links</h2>
         <ul class="link-list">
           <li>
-            <a href={official_url} rel="noopener noreferrer" target="_blank"> Official site → </a>
+            <a href={official_url} rel="noopener noreferrer" target="_blank">Official site →</a>
           </li>
           {
             pricing_url && (
@@ -169,9 +216,9 @@ const addedDisplay = addedDate.toLocaleDateString('en-US', {
       {
         tags.length > 0 && (
           <section class="block">
-            <h2>Tags</h2>
+            <h2><span class="rom">{roman[notes ? 4 : 3]}</span> Tags</h2>
             <div class="tag-row">
-              {tags.map((t) => (
+              {tags.map((t: string) => (
                 <span class="tag">#{t}</span>
               ))}
             </div>
@@ -179,18 +226,39 @@ const addedDisplay = addedDate.toLocaleDateString('en-US', {
         )
       }
 
+      {
+        footnotes.length > 0 && (
+          <section class="block sources">
+            <h2><span class="rom">{roman[notes ? 5 : 4]}</span> Sources</h2>
+            <ol class="footnotes">
+              {footnotes.map((f) => (
+                <li>
+                  <a href={f.url} rel="noopener noreferrer" target="_blank">
+                    {f.label ?? 'Source'} — {f.url}
+                  </a>
+                  {f.verified && <span class="src-date"> · verified {f.verified}</span>}
+                </li>
+              ))}
+            </ol>
+          </section>
+        )
+      }
+
       <footer class="page-footer">
         <p class="meta">
-          Added {addedDisplay}. Last verified <time datetime={verifiedDate.toISOString()}
-            >{verifiedDisplay}</time
-          >.
-          {' '}
           <a
             href={`https://github.com/Pratiyush/free-stack/edit/master/src/content/services/${service.id}.yml`}
             rel="noopener noreferrer"
           >
             Suggest an edit
-          </a>.
+          </a>
+          {' · '}
+          <a
+            href={`https://github.com/Pratiyush/free-stack/issues/new?title=Pricing+change%3A+${encodeURIComponent(name)}`}
+            rel="noopener noreferrer"
+          >
+            Report pricing change
+          </a>
         </p>
       </footer>
     </div>
@@ -206,7 +274,7 @@ const addedDisplay = addedDate.toLocaleDateString('en-US', {
       gap: 0.4rem;
       font-size: 0.85rem;
       color: var(--color-ink-soft);
-      margin-bottom: var(--space-md);
+      margin-bottom: var(--space-lg);
     }
     .breadcrumb a {
       color: var(--color-ink-soft);
@@ -215,37 +283,59 @@ const addedDisplay = addedDate.toLocaleDateString('en-US', {
     .breadcrumb a:hover {
       color: var(--color-ink);
     }
+
+    /* Editorial masthead — § CATEGORY · № SERIAL in mono, ink-faint. */
+    .masthead {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      color: var(--color-ink-faint);
+      margin: 0 0 var(--space-sm);
+      display: flex;
+      align-items: baseline;
+      gap: 0.5em;
+      flex-wrap: wrap;
+    }
+    .section-mark,
+    .numero {
+      color: var(--accent);
+      font-weight: 500;
+    }
+    .dot {
+      color: var(--color-rule);
+    }
+
     .page-head {
       display: grid;
       grid-template-columns: auto 1fr;
       gap: var(--space-md);
       align-items: center;
       padding-bottom: var(--space-md);
-      border-bottom: 4px solid var(--accent);
-      margin-bottom: var(--space-lg);
+      margin-bottom: var(--space-sm);
     }
     .logo-large {
-      width: 64px;
-      height: 64px;
+      width: 72px;
+      height: 72px;
       display: flex;
       align-items: center;
       justify-content: center;
+      background: #fff;
+      border: 1px solid var(--color-rule);
       border-radius: var(--radius-md);
-      background: color-mix(in srgb, var(--accent) 10%, transparent);
+      box-shadow: inset 0 0 0 4px color-mix(in srgb, var(--accent) 9%, transparent);
     }
     .logo-large img {
       width: 48px;
       height: 48px;
     }
-    .eyebrow {
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--color-ink-soft);
-    }
     h1 {
-      margin-top: var(--space-xs);
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 5vw, 3.4rem);
+      line-height: 1.05;
+      letter-spacing: -0.015em;
+      margin: 0;
+      font-style: italic;
+      font-weight: 400;
     }
     .badge-row {
       display: flex;
@@ -253,25 +343,58 @@ const addedDisplay = addedDate.toLocaleDateString('en-US', {
       align-items: center;
       margin-top: var(--space-sm);
     }
-    .verified {
-      font-size: 0.82rem;
-      color: var(--color-ink-soft);
+
+    /* Dateline rule — VERIFIED <DATE> · ADDED <DATE>, JetBrains Mono uppercase. */
+    .dateline {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      color: var(--color-ink-faint);
+      padding: var(--space-xs) 0 var(--space-md);
+      border-top: 1px solid var(--color-rule);
+      border-bottom: 1px solid var(--color-rule);
+      margin: 0 0 var(--space-lg);
+      display: flex;
+      gap: 0.6em;
+      flex-wrap: wrap;
     }
+    .dateline time {
+      color: var(--color-ink-soft);
+      font-weight: 500;
+    }
+
     .lede {
-      font-size: 1.2rem;
+      font-family: var(--font-display);
+      font-size: clamp(1.15rem, 2.2vw, 1.35rem);
       color: var(--color-ink);
       line-height: 1.55;
-      margin-bottom: var(--space-xl);
-      max-width: 65ch;
+      margin: 0 0 var(--space-xl);
+      max-width: 58ch;
+      font-weight: 350;
     }
+
     .block {
       padding: var(--space-lg) 0;
       border-top: var(--border-rule);
     }
     .block h2 {
-      font-size: 1.35rem;
-      margin-bottom: var(--space-md);
+      font-family: var(--font-display);
+      font-size: 1.45rem;
+      font-weight: 500;
+      margin: 0 0 var(--space-md);
+      display: flex;
+      align-items: baseline;
+      gap: 0.5em;
     }
+    /* Roman numeral on each section heading — small italic Fraunces in accent color. */
+    .rom {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 0.85em;
+      font-weight: 400;
+      color: var(--accent);
+    }
+
     .free-tier {
       list-style: none;
       padding: 0;
@@ -279,17 +402,15 @@ const addedDisplay = addedDate.toLocaleDateString('en-US', {
       gap: var(--space-sm);
     }
     .free-tier li {
-      padding-left: 1.5rem;
-      position: relative;
+      padding-left: 1.4rem;
+      text-indent: -1.4rem;
     }
     .free-tier li::before {
-      content: '✓';
-      position: absolute;
-      left: 0;
-      top: 0;
+      content: '— ';
       color: var(--accent);
-      font-weight: 600;
+      font-weight: 500;
     }
+
     .pricing-table {
       width: 100%;
       border-collapse: collapse;
@@ -304,20 +425,49 @@ const addedDisplay = addedDate.toLocaleDateString('en-US', {
     }
     .pricing-table th {
       font-family: var(--font-mono);
-      font-size: 0.78rem;
+      font-size: 0.72rem;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--color-ink-soft);
+      letter-spacing: 0.1em;
+      color: var(--color-ink-faint);
       font-weight: 500;
+    }
+    .pricing-table td.plan {
+      font-weight: 500;
+    }
+    .pricing-table td.price {
+      font-family: var(--font-mono);
     }
     .pricing-table tr:last-child td {
       border-bottom: none;
     }
+
+    /* Free row gets italic Fraunces in brand-color — the editorial flourish. */
+    .pricing-table .free-row td {
+      background: color-mix(in srgb, var(--accent) 6%, transparent);
+    }
+    .pricing-table .free-row td.plan,
+    .pricing-table .free-row td.price {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 400;
+      color: var(--accent);
+      font-size: 1.05rem;
+    }
+    .pricing-table .free-row td.notes {
+      color: var(--color-ink);
+    }
     .pricing-table .unit {
       color: var(--color-ink-soft);
-      font-size: 0.92em;
-      margin-left: 0.25rem;
+      font-size: 0.9em;
+      margin-left: 0.2rem;
     }
+
+    .notes-body {
+      max-width: 65ch;
+      line-height: 1.65;
+      color: var(--color-ink);
+    }
+
     .link-list {
       list-style: none;
       padding: 0;
@@ -328,11 +478,14 @@ const addedDisplay = addedDate.toLocaleDateString('en-US', {
     .link-list a {
       color: var(--accent);
       text-decoration: none;
+      font-family: var(--font-mono);
+      font-size: 0.92rem;
     }
     .link-list a:hover {
       text-decoration: underline;
       text-decoration-color: var(--accent);
     }
+
     .tag-row {
       display: flex;
       gap: var(--space-xs);
@@ -343,16 +496,45 @@ const addedDisplay = addedDate.toLocaleDateString('en-US', {
       font-size: 0.82rem;
       color: var(--color-ink-soft);
     }
+
+    .footnotes {
+      list-style: decimal;
+      padding-left: 1.4rem;
+      color: var(--color-ink-soft);
+      font-size: 0.88rem;
+      line-height: 1.55;
+    }
+    .footnotes li {
+      margin-bottom: 0.4rem;
+    }
+    .footnotes a {
+      color: var(--color-ink);
+      text-decoration: underline;
+      text-decoration-color: var(--color-rule);
+    }
+    .footnotes a:hover {
+      text-decoration-color: var(--accent);
+    }
+    .src-date {
+      font-family: var(--font-mono);
+      font-size: 0.78em;
+      color: var(--color-ink-faint);
+    }
+
     .page-footer {
       padding-top: var(--space-xl);
       border-top: var(--border-rule);
     }
     .meta {
-      font-size: 0.88rem;
+      font-size: 0.85rem;
       color: var(--color-ink-soft);
+      font-family: var(--font-mono);
     }
     .meta a {
       color: var(--color-ink-soft);
+    }
+    .meta a:hover {
+      color: var(--accent);
     }
   </style>
 </BaseLayout>

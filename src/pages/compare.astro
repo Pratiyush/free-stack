@@ -1,0 +1,598 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '~/layouts/BaseLayout.astro';
+
+const services = await getCollection('services');
+
+/* Minimal JSON shape — only fields the compare table needs. Pre-rendered into a
+ * <script type="application/json"> blob so the client-side compare logic can
+ * filter by `?slugs=` without making a separate fetch. */
+const compactServices = services.map((s) => ({
+  slug: s.data.slug,
+  name: s.data.name,
+  brand_color: s.data.brand_color ?? '#1a1a1a',
+  logo: s.data.logo,
+  category: s.data.category,
+  tier_type: s.data.tier_type,
+  summary: s.data.summary,
+  free_tier: s.data.free_tier,
+  pricing_url: s.data.pricing_url ?? s.data.official_url,
+  official_url: s.data.official_url,
+  facets: s.data.facets ?? {},
+}));
+---
+
+<BaseLayout
+  title="Compare"
+  description="Compare up to 4 free-tier services side by side."
+  canonical="https://freestack.is-a.dev/compare"
+>
+  <article class="compare-page container" data-compare-root>
+    <header class="compare-head">
+      <p class="rom-eyebrow"><span class="rom">§</span> COMPARE</p>
+      <h1>Side-by-side, free tier only.</h1>
+      <p class="lede" data-compare-lede>
+        Pick up to 4 services and put their free tiers in the same row. Append slugs to the URL,
+        share it, or use the picker below.
+      </p>
+    </header>
+
+    <section class="picker" data-picker>
+      <label for="picker-input">
+        <span class="picker-label">Add a service</span>
+        <input
+          id="picker-input"
+          type="text"
+          placeholder="Type to search… (e.g. groq, supabase)"
+          autocomplete="off"
+          spellcheck="false"
+          data-picker-input
+        />
+      </label>
+      <ul class="picker-results" data-picker-results hidden></ul>
+      <p class="picker-help">
+        Or share a URL: <code>/compare?slugs=anthropic-claude,groq,deepseek</code>
+      </p>
+    </section>
+
+    <section class="empty-state" data-empty-state>
+      <p>No services selected yet.</p>
+      <p class="hint">
+        Try <a href="/compare?slugs=anthropic-claude,groq,deepseek">a sample comparison →</a>
+      </p>
+    </section>
+
+    <section class="compare-grid" data-compare-grid hidden>
+      <div class="compare-scroll">
+        <table class="compare-table">
+          <thead data-compare-thead></thead>
+          <tbody data-compare-tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </article>
+
+  <script type="application/json" id="compare-data" set:html={JSON.stringify(compactServices)} />
+
+  <script>
+    /* ---------- compare page client ---------- */
+    type Svc = {
+      slug: string;
+      name: string;
+      brand_color: string;
+      logo: string;
+      category: string;
+      tier_type: string;
+      summary: string;
+      free_tier: string[];
+      pricing_url: string;
+      official_url: string;
+      facets: Record<string, unknown>;
+    };
+
+    const dataEl = document.getElementById('compare-data');
+    const SERVICES: Svc[] = JSON.parse(dataEl?.textContent ?? '[]');
+    const BY_SLUG = new Map(SERVICES.map((s) => [s.slug, s]));
+
+    const MAX = 4;
+    const root = document.querySelector<HTMLElement>('[data-compare-root]');
+    const tbody = document.querySelector<HTMLElement>('[data-compare-tbody]');
+    const thead = document.querySelector<HTMLElement>('[data-compare-thead]');
+    const gridEl = document.querySelector<HTMLElement>('[data-compare-grid]');
+    const emptyEl = document.querySelector<HTMLElement>('[data-empty-state]');
+    const ledeEl = document.querySelector<HTMLElement>('[data-compare-lede]');
+    const pickerInput = document.querySelector<HTMLInputElement>('[data-picker-input]');
+    const pickerResults = document.querySelector<HTMLElement>('[data-picker-results]');
+
+    /* Facet rows we know how to render. Each row only renders if at least one
+       selected service has a non-null value for it. */
+    const FACET_ROWS: Array<{
+      key: string;
+      label: string;
+      group: string;
+      fmt?: (v: unknown) => string;
+    }> = [
+      { key: 'requests_per_day', label: 'Requests / day', group: 'Quotas', fmt: numFmt },
+      { key: 'requests_per_month', label: 'Requests / month', group: 'Quotas', fmt: numFmt },
+      { key: 'storage_gb', label: 'Storage (GB)', group: 'Quotas', fmt: numFmt },
+      { key: 'bandwidth_gb_month', label: 'Bandwidth / mo (GB)', group: 'Quotas', fmt: numFmt },
+      { key: 'projects', label: 'Projects', group: 'Quotas', fmt: numFmt },
+      { key: 'team_seats', label: 'Team seats', group: 'Quotas', fmt: numFmt },
+      { key: 'custom_domain', label: 'Custom domain', group: 'Capabilities', fmt: triFmt },
+      { key: 'ssl', label: 'SSL', group: 'Capabilities', fmt: triFmt },
+      { key: 'api_access', label: 'API access', group: 'Capabilities', fmt: triFmt },
+      { key: 'oss', label: 'Open source', group: 'Capabilities', fmt: triFmt },
+      { key: 'self_host', label: 'Self-hostable', group: 'Capabilities', fmt: triFmt },
+      { key: 'cc_required', label: 'Credit card required', group: 'Restrictions', fmt: triFmt },
+      { key: 'auto_pause_days', label: 'Auto-pause (days idle)', group: 'Restrictions', fmt: numFmt },
+      { key: 'branding_required', label: 'Branding required', group: 'Restrictions', fmt: triFmt },
+      { key: 'trial_days', label: 'Trial length (days)', group: 'Trial', fmt: numFmt },
+      { key: 'credit_usd', label: 'Credit (USD)', group: 'Trial', fmt: usdFmt },
+      { key: 'credit_expiry_days', label: 'Credit expiry (days)', group: 'Trial', fmt: numFmt },
+      { key: 'data_retention_days', label: 'Data retention (days)', group: 'Operational', fmt: numFmt },
+    ];
+
+    function numFmt(v: unknown): string {
+      if (v === null || v === undefined) return '—';
+      if (typeof v === 'number') return v.toLocaleString('en-US');
+      return String(v);
+    }
+    function usdFmt(v: unknown): string {
+      if (v === null || v === undefined) return '—';
+      if (typeof v === 'number') return `$${v.toLocaleString('en-US')}`;
+      return String(v);
+    }
+    function triFmt(v: unknown): string {
+      if (v === true) return '✓';
+      if (v === false) return '✗';
+      return '—';
+    }
+
+    function getSlugsFromUrl(): string[] {
+      const raw = new URLSearchParams(window.location.search).get('slugs') ?? '';
+      return raw
+        .split(',')
+        .map((s) => s.trim())
+        .filter(Boolean)
+        .slice(0, MAX);
+    }
+
+    function setSlugsInUrl(slugs: string[]) {
+      const url = new URL(window.location.href);
+      if (slugs.length) url.searchParams.set('slugs', slugs.join(','));
+      else url.searchParams.delete('slugs');
+      window.history.replaceState({}, '', url);
+    }
+
+    function render() {
+      const slugs = getSlugsFromUrl();
+      const selected = slugs.map((slug) => BY_SLUG.get(slug)).filter(Boolean) as Svc[];
+
+      if (selected.length === 0) {
+        gridEl?.setAttribute('hidden', '');
+        emptyEl?.removeAttribute('hidden');
+        if (ledeEl) ledeEl.textContent =
+          'Pick up to 4 services and put their free tiers in the same row.';
+        return;
+      }
+
+      emptyEl?.setAttribute('hidden', '');
+      gridEl?.removeAttribute('hidden');
+      if (ledeEl)
+        ledeEl.textContent = `Comparing ${selected.length} service${selected.length > 1 ? 's' : ''}. Share this URL to share the comparison.`;
+
+      // Header row — logo + name + remove button per service.
+      if (thead) {
+        thead.innerHTML = `
+          <tr>
+            <th class="row-label" scope="col">Field</th>
+            ${selected
+              .map(
+                (s) => `
+                <th class="svc-col" scope="col" style="--accent: ${s.brand_color}">
+                  <div class="svc-head">
+                    <img src="${s.logo}" alt="" width="28" height="28" loading="lazy" />
+                    <div>
+                      <a href="/service/${s.slug}" class="svc-name">${s.name}</a>
+                      <span class="svc-tier">${s.tier_type.replace('-', ' ')}</span>
+                    </div>
+                    <button type="button" class="remove-btn" data-remove="${s.slug}" aria-label="Remove ${s.name}">✕</button>
+                  </div>
+                </th>
+              `,
+              )
+              .join('')}
+          </tr>
+        `;
+      }
+
+      // Body — group facets, omit rows where every selected service has no value.
+      if (tbody) {
+        const groups: Record<string, typeof FACET_ROWS> = {};
+        for (const row of FACET_ROWS) {
+          const hasAnyValue = selected.some(
+            (s) => s.facets?.[row.key] !== undefined && s.facets?.[row.key] !== null,
+          );
+          if (!hasAnyValue) continue;
+          (groups[row.group] ??= []).push(row);
+        }
+
+        // Always-render summary + free tier as the first group.
+        let html = `
+          <tr class="group-row">
+            <th colspan="${selected.length + 1}">Overview</th>
+          </tr>
+          <tr>
+            <th scope="row" class="row-label">Summary</th>
+            ${selected.map((s) => `<td class="summary-cell">${s.summary}</td>`).join('')}
+          </tr>
+          <tr>
+            <th scope="row" class="row-label">Free tier</th>
+            ${selected
+              .map(
+                (s) => `<td><ul class="ft-list">${s.free_tier
+                  .map((b) => `<li>${escapeHtml(b)}</li>`)
+                  .join('')}</ul></td>`,
+              )
+              .join('')}
+          </tr>
+          <tr>
+            <th scope="row" class="row-label">Pricing page</th>
+            ${selected
+              .map(
+                (s) =>
+                  `<td><a href="${s.pricing_url}" rel="noopener noreferrer" target="_blank">View →</a></td>`,
+              )
+              .join('')}
+          </tr>
+        `;
+
+        for (const [group, rows] of Object.entries(groups)) {
+          html += `<tr class="group-row"><th colspan="${selected.length + 1}">${group}</th></tr>`;
+          for (const row of rows) {
+            html += `<tr><th scope="row" class="row-label">${row.label}</th>`;
+            for (const s of selected) {
+              const v = s.facets?.[row.key];
+              const display = row.fmt ? row.fmt(v) : numFmt(v);
+              html += `<td class="num-cell">${display}</td>`;
+            }
+            html += `</tr>`;
+          }
+        }
+        tbody.innerHTML = html;
+
+        // Wire remove buttons.
+        tbody.parentElement
+          ?.querySelectorAll<HTMLButtonElement>('[data-remove]')
+          .forEach((btn) => {
+            btn.addEventListener('click', () => {
+              const target = btn.dataset.remove;
+              if (!target) return;
+              const next = getSlugsFromUrl().filter((s) => s !== target);
+              setSlugsInUrl(next);
+              render();
+            });
+          });
+      }
+    }
+
+    function escapeHtml(s: string): string {
+      return s
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    /* Picker — type to search, click to add. */
+    function renderPicker(query: string) {
+      if (!pickerResults) return;
+      const q = query.trim().toLowerCase();
+      if (!q) {
+        pickerResults.hidden = true;
+        return;
+      }
+      const current = new Set(getSlugsFromUrl());
+      const matches = SERVICES.filter(
+        (s) =>
+          !current.has(s.slug) &&
+          (s.name.toLowerCase().includes(q) || s.slug.includes(q) || s.category.includes(q)),
+      ).slice(0, 8);
+      if (matches.length === 0) {
+        pickerResults.innerHTML = `<li class="picker-empty">No matches.</li>`;
+      } else {
+        pickerResults.innerHTML = matches
+          .map(
+            (s) =>
+              `<li><button type="button" data-add="${s.slug}"><img src="${s.logo}" width="20" height="20" alt="" /><span>${s.name}</span><span class="picker-cat">${s.category}</span></button></li>`,
+          )
+          .join('');
+      }
+      pickerResults.hidden = false;
+      pickerResults.querySelectorAll<HTMLButtonElement>('[data-add]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const slug = btn.dataset.add;
+          if (!slug) return;
+          const next = [...getSlugsFromUrl()];
+          if (!next.includes(slug) && next.length < MAX) next.push(slug);
+          setSlugsInUrl(next);
+          if (pickerInput) pickerInput.value = '';
+          pickerResults.hidden = true;
+          render();
+        });
+      });
+    }
+
+    pickerInput?.addEventListener('input', (e) => {
+      renderPicker((e.target as HTMLInputElement).value);
+    });
+    pickerInput?.addEventListener('focus', () => {
+      if (pickerInput.value) renderPicker(pickerInput.value);
+    });
+    document.addEventListener('click', (e) => {
+      const t = e.target as HTMLElement;
+      if (!t.closest('[data-picker]')) {
+        if (pickerResults) pickerResults.hidden = true;
+      }
+    });
+
+    // Initial render + handle back/forward.
+    render();
+    window.addEventListener('popstate', render);
+  </script>
+
+  <style>
+    .compare-page {
+      padding-top: var(--space-xl);
+      padding-bottom: var(--space-2xl);
+    }
+    .compare-head {
+      max-width: 700px;
+      margin-bottom: var(--space-xl);
+    }
+    .rom-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      color: var(--color-ink-faint);
+      margin: 0 0 var(--space-xs);
+    }
+    .rom {
+      color: var(--color-coral);
+      margin-right: 0.4em;
+    }
+    .compare-head h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 400;
+      font-style: italic;
+      letter-spacing: -0.015em;
+      margin: 0;
+      line-height: 1.1;
+    }
+    .lede {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 350;
+      color: var(--color-ink);
+      line-height: 1.55;
+      margin: var(--space-md) 0 0;
+      max-width: 56ch;
+    }
+
+    .picker {
+      padding: var(--space-md) var(--space-lg);
+      background: var(--color-paper-warm);
+      border: 1px solid var(--color-rule);
+      border-radius: var(--radius-md);
+      margin-bottom: var(--space-lg);
+      position: relative;
+    }
+    .picker label {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
+    .picker-label {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-ink-faint);
+    }
+    .picker input {
+      font: inherit;
+      padding: 0.6rem 0.8rem;
+      border: 1px solid var(--color-rule);
+      border-radius: var(--radius-sm);
+      background: var(--color-paper);
+      color: var(--color-ink);
+    }
+    .picker input:focus {
+      outline: 2px solid var(--color-coral);
+      outline-offset: 1px;
+      border-color: var(--color-coral);
+    }
+    .picker-results {
+      list-style: none;
+      padding: 0;
+      margin: var(--space-xs) 0 0;
+      max-height: 320px;
+      overflow-y: auto;
+      background: var(--color-paper);
+      border: 1px solid var(--color-rule);
+      border-radius: var(--radius-sm);
+      position: absolute;
+      left: var(--space-lg);
+      right: var(--space-lg);
+      z-index: 10;
+    }
+    .picker-results button {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      width: 100%;
+      padding: 0.5rem 0.8rem;
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      font: inherit;
+      text-align: left;
+      color: var(--color-ink);
+    }
+    .picker-results button:hover {
+      background: var(--color-paper-warm);
+    }
+    .picker-results .picker-cat {
+      margin-left: auto;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--color-ink-faint);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .picker-empty {
+      padding: 0.6rem 0.8rem;
+      color: var(--color-ink-soft);
+    }
+    .picker-help {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--color-ink-faint);
+      margin: var(--space-sm) 0 0;
+    }
+    .picker-help code {
+      background: var(--color-paper);
+      padding: 0.1rem 0.3rem;
+      border-radius: 3px;
+      border: 1px solid var(--color-rule);
+    }
+
+    .empty-state {
+      padding: var(--space-2xl);
+      text-align: center;
+      border: 1px dashed var(--color-rule);
+      border-radius: var(--radius-md);
+      color: var(--color-ink-soft);
+    }
+    .empty-state .hint {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      margin-top: var(--space-sm);
+    }
+    .empty-state a {
+      color: var(--color-coral);
+      text-decoration: none;
+    }
+
+    .compare-grid {
+      border: 1px solid var(--color-rule);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+    .compare-scroll {
+      overflow-x: auto;
+    }
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 720px;
+    }
+    .compare-table th,
+    .compare-table td {
+      padding: var(--space-sm) var(--space-md);
+      border-bottom: 1px solid var(--color-rule);
+      vertical-align: top;
+      font-size: 0.9rem;
+    }
+    .compare-table th.row-label {
+      width: 180px;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-ink-faint);
+      font-weight: 500;
+      text-align: left;
+      background: var(--color-paper-warm);
+    }
+    .compare-table .group-row th {
+      background: var(--color-paper);
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--color-ink);
+      padding: var(--space-md);
+      border-top: 2px solid var(--color-ink);
+      text-transform: none;
+      letter-spacing: 0;
+      text-align: left;
+    }
+    .compare-table .svc-col {
+      border-top: 4px solid var(--accent);
+      background: color-mix(in srgb, var(--accent) 6%, var(--color-paper));
+      vertical-align: top;
+    }
+    .svc-head {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: var(--space-sm);
+      align-items: center;
+    }
+    .svc-name {
+      font-family: var(--font-display);
+      font-weight: 500;
+      color: var(--color-ink);
+      text-decoration: none;
+      font-size: 1rem;
+      display: block;
+    }
+    .svc-tier {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-ink-soft);
+    }
+    .remove-btn {
+      background: transparent;
+      border: 1px solid transparent;
+      color: var(--color-ink-faint);
+      cursor: pointer;
+      font-size: 0.85rem;
+      padding: 0.2rem 0.4rem;
+      border-radius: var(--radius-sm);
+    }
+    .remove-btn:hover {
+      color: var(--color-coral);
+      border-color: var(--color-coral);
+    }
+    .num-cell {
+      font-family: var(--font-mono);
+      color: var(--color-ink);
+    }
+    .summary-cell {
+      max-width: 280px;
+      color: var(--color-ink);
+      line-height: 1.5;
+    }
+    .ft-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+    .ft-list li {
+      padding-left: 1.1em;
+      text-indent: -1.1em;
+      line-height: 1.45;
+      color: var(--color-ink);
+    }
+    .ft-list li::before {
+      content: '— ';
+      color: var(--color-ink-faint);
+    }
+  </style>
+</BaseLayout>

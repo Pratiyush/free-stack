@@ -1,5 +1,6 @@
 ---
 import '~/styles/global.css';
+import { ClientRouter } from 'astro:transitions';
 
 interface Props {
   title: string;
@@ -37,6 +38,7 @@ const fullTitle = title === 'free-stack' ? title : `${title} — free-stack`;
       href="/rss.xml"
     />
     <meta name="generator" content={Astro.generator} />
+    <ClientRouter />
     <slot name="head" />
   </head>
   <body>
