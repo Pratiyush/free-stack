@@ -1,0 +1,6 @@
+slug: dev-tools
+name: Developer Tools
+blurb: Git hosting, IDEs, API clients, tunneling, AI assistants — the everyday glue of a developer's stack.
+icon: wrench
+order: 80
+parent: null

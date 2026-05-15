@@ -1,0 +1,6 @@
+slug: security
+name: Security
+blurb: SAST, SCA, secret scanning, SSL, and secrets management — free for OSS and small teams.
+icon: shield-check
+order: 140
+parent: null

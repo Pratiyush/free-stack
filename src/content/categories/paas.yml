@@ -1,0 +1,6 @@
+slug: paas
+name: Platform as a Service
+blurb: App platforms — push code, get a running service — with permanent free tiers (not 14-day trials).
+icon: layers-3
+order: 160
+parent: null

@@ -1,0 +1,6 @@
+slug: baas
+name: Backend as a Service
+blurb: Full backends without the backend — auth + db + storage + APIs bundled, no server management.
+icon: server-cog
+order: 170
+parent: null

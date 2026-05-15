@@ -1,0 +1,6 @@
+slug: logs
+name: Log Management
+blurb: Log aggregation, search, and analysis — cloud platforms with free quotas plus self-hosted open-source options.
+icon: scroll-text
+order: 130
+parent: null

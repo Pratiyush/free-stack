@@ -1,0 +1,6 @@
+slug: maps
+name: Maps & Geolocation
+blurb: Map tiles, geocoding, routing, and place search — free tiers from Mapbox to Nominatim, plus fully open-source stacks.
+icon: map
+order: 210
+parent: null

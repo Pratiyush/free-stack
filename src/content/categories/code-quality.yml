@@ -1,0 +1,6 @@
+slug: code-quality
+name: Code Quality
+blurb: Static analysis, code review, coverage, and AI-powered code review — free for open source or hobby use.
+icon: code-2
+order: 90
+parent: null
