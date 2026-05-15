@@ -2,7 +2,7 @@ name: DeepSeek
 slug: deepseek
 category: ai-apis
 subcategory: expiring-credits
-brand_color: '#888888'
+brand_color: '#4D6BFE'
 logo: /logos/deepseek.svg
 
 summary: '5M free tokens (30-day expiry) — DeepSeek V3/V4, R1; no rate limits on API; chat is free unlimited'

@@ -2,7 +2,7 @@ name: CockroachDB
 slug: cockroachdb
 category: databases
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#6933FF'
 logo: /logos/cockroachdb.svg
 
 summary: 'Free monthly allowance (Postgres-compatible)'

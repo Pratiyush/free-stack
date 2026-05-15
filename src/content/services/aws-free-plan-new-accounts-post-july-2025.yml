@@ -2,7 +2,7 @@ name: 'AWS Free Plan (new accounts, post-July 2025)'
 slug: aws-free-plan-new-accounts-post-july-2025
 category: iaas
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#FF9900'
 logo: /logos/aws-free-plan-new-accounts-post-july-2025.svg
 
 summary: 'Credit-based free plan (6 months)'

@@ -2,7 +2,7 @@ name: IBM Cloud
 slug: ibm-cloud
 category: iaas
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#054ADA'
 logo: /logos/ibm-cloud.svg
 
 summary: 'Lite plan (permanent, 40+ services)'

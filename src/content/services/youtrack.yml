@@ -2,7 +2,7 @@ name: YouTrack
 slug: youtrack
 category: project-management
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#46C6F2'
 logo: /logos/youtrack.svg
 
 summary: Free for up to 10 users (cloud and server)

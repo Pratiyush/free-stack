@@ -2,7 +2,7 @@ name: SuperTokens
 slug: supertokens
 category: auth
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#F73B5A'
 logo: /logos/supertokens.svg
 
 summary: 'Free (self-hosted: unlimited; cloud: 5K MAU)'

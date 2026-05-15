@@ -2,7 +2,7 @@ name: Stormkit
 slug: stormkit
 category: hosting
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#0066FF'
 logo: /logos/stormkit.svg
 
 summary: 'Self-hosted free tier (1 seat)'

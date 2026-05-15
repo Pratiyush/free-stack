@@ -2,7 +2,7 @@ name: Quay.io
 slug: quay-io
 category: containers
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#205D9E'
 logo: /logos/quay-io.svg
 
 summary: Free for public repos

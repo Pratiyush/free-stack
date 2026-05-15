@@ -2,7 +2,7 @@ name: POEditor
 slug: poeditor
 category: translation
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#41B0EE'
 logo: /logos/poeditor.svg
 
 summary: Free plan (permanent) — up to 1,000 strings

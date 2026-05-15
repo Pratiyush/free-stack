@@ -2,7 +2,7 @@ name: WorkOS AuthKit
 slug: workos-authkit
 category: auth
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#6363F1'
 logo: /logos/workos-authkit.svg
 
 summary: Free up to 1M MAU

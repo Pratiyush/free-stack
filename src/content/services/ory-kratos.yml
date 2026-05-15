@@ -2,7 +2,7 @@ name: Ory (Kratos)
 slug: ory-kratos
 category: auth
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#592878'
 logo: /logos/ory-kratos.svg
 
 summary: 'Free (self-hosted: unlimited; cloud: free developer plan)'

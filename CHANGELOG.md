@@ -10,7 +10,13 @@ Maintainers: add entries under `## [Unreleased]` as PRs merge. At release time, 
 
 ## [Unreleased]
 
-Sprint 3 progress toward `v0.5.0`. Entries land as PRs merge to `rebuild/astro`; finalised at tag time.
+Next: `v0.8.0` "Contributor Workflow" (Sprint 4) — 5 YAML issue forms, submission-to-PR automation, weekly verify-links cron, CODEOWNERS, Release Drafter, Playwright pricing-drift upgrade.
+
+---
+
+## [0.5.0] - 2026-05-15 — Full Migration
+
+Sprint 3 ships. Every service is now a typed YAML record; the legacy 27 Markdown tables are gone; the catalogue carries optional `facets` + `sources` blocks for the comparison-table renderer; logo coverage reaches ~83% (250/300 services with real brand colors + tinted SVGs).
 
 ### Added
 
@@ -61,15 +67,13 @@ Sprint 3 progress toward `v0.5.0`. Entries land as PRs merge to `rebuild/astro`;
 - Migration script `buildSummary` enforces the schema's 10-char minimum by falling back to `<Service> — free tier; see the pricing page for details.` when the source MD's Free Tier + Key Limits columns produce a too-short string.
 - Audit script demotes "missing logo file" from error to warn, so CI stays green between story 3.5 (migration stubs) and 3.6 (logo sweep). `--strict` flips it back to fail before tagging.
 
-### Pending (still in flight as of this entry)
+### Deferred to v0.8.0+
 
-- Story 3.7 — logo coverage cascade (lobe-icons / devicon / selfh.st / colored-brands) for the residual ~106 placeholder services.
-- Story 3.10 — README + CONTRIBUTING + CLAUDE.md rewrite for YAML-first workflow.
-- Story 3.12 — delete legacy `categories/*.md` (gated on 3.10).
-- Schema: optional `date_updated` field + backfill on all 300 services.
-- v4 mockup — external design pass per `ref/design-experiments/v3-design-brief.html` (interaction tweaks + real-data integration + dev panel).
-- Story 3.14b — Astro port of catalog from v4 mockup (4–5 evening sessions; drawer → real `/service/[slug]` route + View Transitions; compare modal → real `/compare?slugs=…` route).
-- Story 3.13 — production cut-over to the Astro build (currently deprioritised per user direction).
+- Story 3.13 — production cut-over to the Astro build (`freestack.is-a.dev` still points at the v1.0.0 MD-era site).
+- Story 3.14b — Astro port of catalog from v4 mockup (blocked on external v4 design pass per `ref/design-experiments/v3-design-brief.html`).
+- Playwright pricing-drift verifier (Sprint 4 §10 of `docs/sprints/sprint-3.md`).
+- Compare modal as `/compare?slugs=a,b,c` real route.
+- Story 3.7 residual: ~50 services still carry `brand_color: '#888888'` placeholder; the cascade fell back to monochrome for self-hosted or niche services. Logged in `docs/logo-coverage.md` for follow-up.
 
 ---
 

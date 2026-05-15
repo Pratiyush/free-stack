@@ -2,7 +2,7 @@ name: Together AI
 slug: together-ai
 category: ai-apis
 subcategory: expiring-credits
-brand_color: '#888888'
+brand_color: '#0F6FFF'
 logo: /logos/together-ai.svg
 
 summary: '$25 free credits + 71 permanently free models — 200+ models; free models include Llama 3.1 405B, DeepSeek V3, Qwen'

@@ -2,7 +2,7 @@ name: AWS ECR Public
 slug: aws-ecr-public
 category: containers
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#FF9900'
 logo: /logos/aws-ecr-public.svg
 
 summary: Free permanently (public repos)

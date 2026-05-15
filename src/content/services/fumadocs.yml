@@ -2,7 +2,7 @@ name: Fumadocs
 slug: fumadocs
 category: documentation
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#FF6B35'
 logo: /logos/fumadocs.svg
 
 summary: 'Fully free (OSS, MIT license)'

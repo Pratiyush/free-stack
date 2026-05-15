@@ -2,7 +2,7 @@ name: Fireworks AI
 slug: fireworks-ai
 category: ai-apis
 subcategory: expiring-credits
-brand_color: '#888888'
+brand_color: '#5019C5'
 logo: /logos/fireworks-ai.svg
 
 summary: '$1 free starter credits — 50+ models, fast inference'

@@ -2,7 +2,7 @@ name: Plane
 slug: plane
 category: project-management
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#3F76FF'
 logo: /logos/plane.svg
 
 summary: 'Free forever (cloud); open-source self-hosted'

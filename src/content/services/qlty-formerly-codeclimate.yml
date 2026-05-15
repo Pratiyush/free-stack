@@ -2,7 +2,7 @@ name: Qlty (formerly CodeClimate)
 slug: qlty-formerly-codeclimate
 category: code-quality
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#0E1112'
 logo: /logos/qlty-formerly-codeclimate.svg
 
 summary: Free CLI for all use (no contributor limits); Qlty Cloud free for unlimited private contributors

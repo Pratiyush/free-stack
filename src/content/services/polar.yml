@@ -2,7 +2,7 @@ name: Polar
 slug: polar
 category: payments
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#0062FF'
 logo: /logos/polar.svg
 
 summary: 'No monthly fee, Merchant of Record'

@@ -2,7 +2,7 @@ name: BrowserStack
 slug: browserstack
 category: testing
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#F26B3A'
 logo: /logos/browserstack.svg
 
 summary: Free for Percy (5K screenshots) + Test Management only

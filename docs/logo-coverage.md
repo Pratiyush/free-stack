@@ -321,3 +321,91 @@ Format per line: `slug — name — matched-simpleicons-slug — result`.
 ## ❌ Errors
 
 _None._
+
+## Story 3.7 — cascade fill
+
+**Generated:** 2026-05-15
+**Placeholders entering 3.7:** 51
+**Filled:** 1
+**Residual misses:** 50
+
+### Hits per source
+
+#### lobe (@lobehub/icons-static-svg) — 0
+
+_None._
+
+#### devicon — 0
+
+_None._
+
+#### selfh.st (selfhst/icons) — 0
+
+_None._
+
+#### svgl — 0
+
+_None._
+
+#### iconify @logos — 0
+
+_None._
+
+#### iconify @simple-icons — 1
+
+- `cockroachdb` — CockroachDB — `cockroachlabs` → #6933FF
+
+### Manual fallback queue
+
+Services with no colorful upstream match. Pick a Lucide icon tinted with a category color, or generate a monogram tile. **Maintainer review required — do not auto-pick.**
+
+- `ably` — Ably
+- `aiven` — Aiven
+- `back4app` — **Back4App**
+- `back4app-containers` — **Back4App Containers**
+- `checkly` — Checkly
+- `coherence` — **Coherence**
+- `creem` — Creem
+- `cronitor` — Cronitor
+- `deepsource` — DeepSource
+- `descope` — Descope
+- `dns4eu` — **DNS4EU**
+- `emailjs` — EmailJS
+- `geoapify` — Geoapify
+- `gitguardian` — **GitGuardian**
+- `height` — Height
+- `huly` — Huly
+- `hyperswitch` — Hyperswitch
+- `iconbuddy` — IconBuddy
+- `imagekit` — ImageKit
+- `kinde` — Kinde
+- `lago` — Lago
+- `lark` — Lark
+- `liveblocks` — Liveblocks
+- `locationiq` — LocationIQ
+- `locize` — Locize
+- `logflare` — Logflare
+- `lokalise` — Lokalise
+- `mailersend` — MailerSend
+- `motherduck` — MotherDuck
+- `no-ip` — **No-IP**
+- `papertrail` — Papertrail
+- `paradedb` — **ParadeDB**
+- `phrase` — Phrase
+- `postmark` — Postmark
+- `propelauth` — PropelAuth
+- `protomaps` — Protomaps
+- `qovery` — **Qovery**
+- `semgrep` — **Semgrep**
+- `sendbird` — Sendbird
+- `smtp2go` — SMTP2GO
+- `spline` — Spline
+- `starlight-astro` — Starlight (Astro)
+- `stream` — Stream
+- `tantivy` — **Tantivy**
+- `testflight` — **TestFlight**
+- `tigris` — Tigris
+- `tolgee` — Tolgee
+- `trunk-check` — Trunk Check
+- `twist` — Twist
+- `val-town` — **Val Town**

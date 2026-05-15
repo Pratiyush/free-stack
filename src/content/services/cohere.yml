@@ -2,7 +2,7 @@ name: Cohere
 slug: cohere
 category: ai-apis
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#39594D'
 logo: /logos/cohere.svg
 
 summary: 'Trial key (free forever) — 1,000 API calls/month; Command R+, R7B, Embed 4, Rerank 3.5'

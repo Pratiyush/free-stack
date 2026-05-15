@@ -6,7 +6,8 @@ Thumbs.db
 marketing/
 local/
 drafts/
-.claude/
+.claude/worktrees/
+.claude/settings.local.json
 TODO.md
 TASKS.md
 dashboard.html

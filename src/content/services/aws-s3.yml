@@ -2,7 +2,7 @@ name: AWS S3
 slug: aws-s3
 category: storage
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#569A31'
 logo: /logos/aws-s3.svg
 
 summary: 5 GB Standard storage (12 months only)

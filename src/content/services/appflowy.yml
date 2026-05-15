@@ -2,7 +2,7 @@ name: AppFlowy
 slug: appflowy
 category: project-management
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#9333EA'
 logo: /logos/appflowy.svg
 
 summary: 'Free cloud tier (Basic plan); open-source self-hosted'

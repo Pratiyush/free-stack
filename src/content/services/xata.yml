@@ -2,7 +2,7 @@ name: Xata
 slug: xata
 category: databases
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#9F87FF'
 logo: /logos/xata.svg
 
 summary: Free plan (Postgres)

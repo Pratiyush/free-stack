@@ -2,7 +2,7 @@ name: Focalboard
 slug: focalboard
 category: project-management
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#5A67D8'
 logo: /logos/focalboard.svg
 
 summary: 'Fully free and open source; self-hosted only'

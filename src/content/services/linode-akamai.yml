@@ -2,7 +2,7 @@ name: Linode (Akamai)
 slug: linode-akamai
 category: iaas
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#00A95C'
 logo: /logos/linode-akamai.svg
 
 summary: Trial credits only (not permanent)

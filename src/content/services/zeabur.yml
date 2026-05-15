@@ -2,7 +2,7 @@ name: Zeabur
 slug: zeabur
 category: hosting
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#6300FF'
 logo: /logos/zeabur.svg
 
 summary: Serverless plan (free)

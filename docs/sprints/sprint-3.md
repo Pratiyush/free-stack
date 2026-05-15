@@ -89,12 +89,12 @@ Schema and verification scripts land first so the migration writes the right fie
 | 3.4 | Category YAML files (27) | ✅ done | `cdc6ca0` | 17 missing categories added (10 already seeded) |
 | 3.5 | Migrate all services | ✅ done | `63c8bcf` (+ fixes `41c1287`, `85e8e54`) | 252 new YAMLs; 302 total → 300 after triage |
 | 3.6 | Logo + brand color sweep | ✅ done | `e642981` | 196/302 simpleicons hits (60.6%); residual 106 → 3.7 |
-| 3.7 | Resolve simpleicons coverage gaps | ⏳ in flight | `content/logo-gaps-cascade` | Cascade: lobe-icons → devicon → selfh.st → colored-brands |
+| 3.7 | Resolve simpleicons coverage gaps | ✅ done | salvaged from `content/logo-gaps-cascade` worktree (2026-05-15) | Cascade cut placeholders 208 warn → 100 warn (~54 new logos + brand colors). Residual ~50 placeholders documented in `docs/logo-coverage.md`. |
 | 3.8 | Subcategory rendering on category pages | ✅ done | `8c62b3e` | 3-section render on `/category/<slug>` (ai-apis: 10/7/3) |
 | 3.9 | Sitemap + RSS + JSON-LD | ✅ done | `71672b7` | `sitemap-0.xml` 336 entries · `rss.xml` 50 items · JSON-LD per service page |
 | 3.10 | README + CONTRIBUTING + CLAUDE.md rewrite | ✅ done | `dbfab00` (cherry-picking now) | YAML-first workflow; PR-template flagged stale for follow-up |
 | 3.11 | Verification sweep (audit + curl pricing-drift + manual) | 🟡 partial | `c88c734` | curl-based done (300 records); Playwright deferred to Sprint 4 |
-| 3.12 | Delete `categories/*.md` | ⏸ next | `cleanup/remove-md-categories` | Gated on 3.10 — launching after 3.10 merges |
+| 3.12 | Delete `categories/*.md` | ✅ done | `91fe011` (cherry-picked onto `rebuild/astro`) | 27 legacy MD files removed; README + CONTRIBUTING + CLAUDE.md already point at YAML workflow |
 | 3.13 | Production cut-over | 🚫 deferred | — | Per user direction (2026-05-15) — out of scope for v0.5.0 |
 | 3.14a | Schema bump — `facets` + `sources` | ✅ done | `203f2d1` | Two optional Zod blocks; smoke fixture on `groq.yml` |
 | 3.14b | Astro port of catalog | ⏸ blocked | — | Blocks on external v4 design pass (brief at `ref/design-experiments/v3-design-brief.html`) |

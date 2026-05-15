@@ -2,7 +2,7 @@ name: '**AWS Route 53**'
 slug: aws-route-53
 category: dns
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#FF9900'
 logo: /logos/aws-route-53.svg
 
 summary: No free tier

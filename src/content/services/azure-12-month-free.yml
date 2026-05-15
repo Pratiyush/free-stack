@@ -2,7 +2,7 @@ name: 'Azure 12-Month Free'
 slug: azure-12-month-free
 category: iaas
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#0078D4'
 logo: /logos/azure-12-month-free.svg
 
 summary: '12-month trial (new accounts)'

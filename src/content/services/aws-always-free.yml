@@ -2,7 +2,7 @@ name: AWS Always Free
 slug: aws-always-free
 category: iaas
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#FF9900'
 logo: /logos/aws-always-free.svg
 
 summary: Permanent free tier (30+ services)

@@ -2,7 +2,7 @@ name: Hanko
 slug: hanko
 category: auth
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#0F172A'
 logo: /logos/hanko.svg
 
 summary: Hanko — free tier; see the pricing page for details.

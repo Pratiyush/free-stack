@@ -2,7 +2,7 @@ name: Taiga
 slug: taiga
 category: project-management
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#83EAF1'
 logo: /logos/taiga.svg
 
 summary: Open-source agile project management — 1 public project + 1 private project, 10 MB storage, unlimited users, community support.

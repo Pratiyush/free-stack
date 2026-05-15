@@ -2,7 +2,7 @@ name: Logto
 slug: logto
 category: auth
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#5D34F2'
 logo: /logos/logto.svg
 
 summary: Logto — free tier; see the pricing page for details.

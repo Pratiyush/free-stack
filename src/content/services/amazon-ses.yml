@@ -1,7 +1,7 @@
 name: Amazon SES
 slug: amazon-ses
 category: email
-brand_color: '#888888'
+brand_color: '#DD344C'
 logo: /logos/amazon-ses.svg
 
 summary: 'Free for 12 months (pre-Jul 2025 accounts: 3,000/month); new accounts get $200 AWS credits'

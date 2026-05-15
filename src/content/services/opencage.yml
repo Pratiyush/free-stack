@@ -2,7 +2,7 @@ name: OpenCage
 slug: opencage
 category: maps
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#42B649'
 logo: /logos/opencage.svg
 
 summary: 'Free trial: 2,500 requests/day for testing'
