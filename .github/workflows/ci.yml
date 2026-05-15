@@ -40,5 +40,8 @@ jobs:
       - name: Check logos
         run: pnpm check-logos
 
+      - name: Audit services
+        run: pnpm audit-services --no-http
+
       - name: Build
         run: pnpm build

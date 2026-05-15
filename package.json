@@ -16,7 +16,9 @@
     "lint:fix": "prettier --write .",
     "validate": "node scripts/validate-services.mjs",
     "check-logos": "node scripts/check-logos.mjs",
-    "new:service": "node scripts/new-service.mjs"
+    "new:service": "node scripts/new-service.mjs",
+    "migrate-md": "node scripts/migrate-md-to-yaml.mjs",
+    "audit-services": "node scripts/audit-services.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.12",
