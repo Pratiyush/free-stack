@@ -14,7 +14,22 @@ export const TIER_LABELS: Record<TierType, string> = {
 };
 
 export const SUBCATEGORY_LABELS: Record<Subcategory, string> = {
-  permanent: 'Permanent Free Tier',
-  'expiring-credits': 'Free Credits (Expire)',
+  permanent: 'Permanent Free Tiers',
+  'expiring-credits': 'Free Credits / Trial',
   limited: 'Severely Limited',
 };
+
+export const SUBCATEGORY_BLURBS: Record<Subcategory, string> = {
+  permanent: 'Free tiers that work today and are advertised as permanent — no trial expiry.',
+  'expiring-credits':
+    "Free credits or trial offers that expire — track the expiry date in each service's notes.",
+  limited: 'Free tiers that are technically free but too restrictive for production use.',
+};
+
+// Order in which subcategory sections render on category pages. Permanent
+// comes first because it's the default and the most common case.
+export const SUBCATEGORY_ORDER: readonly Subcategory[] = [
+  'permanent',
+  'expiring-credits',
+  'limited',
+] as const;

@@ -2,6 +2,12 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import ServiceCard from '~/components/ui/ServiceCard.astro';
+import {
+  SUBCATEGORY_LABELS,
+  SUBCATEGORY_BLURBS,
+  SUBCATEGORY_ORDER,
+  type Subcategory,
+} from '~/lib/labels';
 
 export async function getStaticPaths() {
   const categories = await getCollection('categories');
@@ -16,6 +22,18 @@ const allServices = await getCollection('services');
 const services = allServices
   .filter((s) => s.data.category === category.id)
   .sort((a, b) => a.data.name.localeCompare(b.data.name));
+
+// Bucket services by subcategory. Missing/undefined subcategory falls back to
+// 'permanent' — the default expectation for any free-tier listing.
+const sections = SUBCATEGORY_ORDER.map((key) => ({
+  key,
+  label: SUBCATEGORY_LABELS[key],
+  blurb: SUBCATEGORY_BLURBS[key],
+  services: services.filter((s) => {
+    const sub: Subcategory = s.data.subcategory ?? 'permanent';
+    return sub === key;
+  }),
+})).filter((section) => section.services.length > 0);
 ---
 
 <BaseLayout
@@ -40,11 +58,21 @@ const services = allServices
       services.length === 0 ? (
         <p class="empty">No services in this category yet.</p>
       ) : (
-        <div class="grid">
-          {services.map((s) => (
-            <ServiceCard service={s} categoryName={category.data.name} />
-          ))}
-        </div>
+        sections.map((section) => (
+          <section class="subcat-section" aria-labelledby={`subcat-${section.key}`}>
+            <header class="subcat-head">
+              <h2 id={`subcat-${section.key}`}>
+                {section.label} <span class="subcat-count">({section.services.length})</span>
+              </h2>
+              <p class="subcat-blurb">{section.blurb}</p>
+            </header>
+            <div class="grid">
+              {section.services.map((s) => (
+                <ServiceCard service={s} categoryName={category.data.name} />
+              ))}
+            </div>
+          </section>
+        ))
       )
     }
   </section>
@@ -87,6 +115,31 @@ const services = allServices
       color: var(--color-ink-soft);
       margin-top: var(--space-md);
       max-width: 65ch;
+    }
+    .subcat-section {
+      margin-bottom: var(--space-2xl);
+    }
+    .subcat-section:last-child {
+      margin-bottom: 0;
+    }
+    .subcat-head {
+      margin-bottom: var(--space-md);
+    }
+    .subcat-head h2 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+    .subcat-count {
+      color: var(--color-ink-soft);
+      font-weight: 400;
+      font-family: var(--font-mono);
+      font-size: 0.95em;
+    }
+    .subcat-blurb {
+      margin-top: var(--space-xs);
+      color: var(--color-ink-soft);
+      max-width: 65ch;
+      font-size: 0.95rem;
     }
     .grid {
       display: grid;
