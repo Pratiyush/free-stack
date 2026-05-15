@@ -22,7 +22,13 @@ const { services, categoryName } = Astro.props;
     <thead>
       <tr>
         <th class="th-name" scope="col">Service</th>
-        {!categoryName && <th class="th-cat" scope="col">Category</th>}
+        {
+          !categoryName && (
+            <th class="th-cat" scope="col">
+              Category
+            </th>
+          )
+        }
         <th class="th-tier" scope="col">Tier</th>
         <th class="th-quotas" scope="col">Quotas</th>
         <th class="th-cc" scope="col">CC?</th>
@@ -37,8 +43,10 @@ const { services, categoryName } = Astro.props;
           const slugId = `row-${s.data.slug}`;
           const detailId = `detail-${s.data.slug}`;
           const quotas: string[] = [];
-          if (f.requests_per_day != null) quotas.push(`${f.requests_per_day.toLocaleString()} req/d`);
-          if (f.requests_per_month != null) quotas.push(`${f.requests_per_month.toLocaleString()} req/mo`);
+          if (f.requests_per_day != null)
+            quotas.push(`${f.requests_per_day.toLocaleString()} req/d`);
+          if (f.requests_per_month != null)
+            quotas.push(`${f.requests_per_month.toLocaleString()} req/mo`);
           if (f.storage_gb != null) quotas.push(`${f.storage_gb} GB`);
           if (f.bandwidth_gb_month != null) quotas.push(`${f.bandwidth_gb_month} GB/mo`);
           const quotaText = quotas.slice(0, 2).join(' · ') || '—';
@@ -105,13 +113,7 @@ const { services, categoryName } = Astro.props;
                   </svg>
                 </td>
               </tr>
-              <tr
-                class="detail-row"
-                id={detailId}
-                hidden
-                role="region"
-                aria-labelledby={slugId}
-              >
+              <tr class="detail-row" id={detailId} hidden role="region" aria-labelledby={slugId}>
                 <td colspan={categoryName ? 5 : 6}>
                   <div class="detail-inner" style={`--row-accent: ${accent};`}>
                     <div class="detail-grid">

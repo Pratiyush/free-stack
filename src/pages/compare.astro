@@ -124,12 +124,22 @@ const compactServices = services.map((s) => ({
       { key: 'oss', label: 'Open source', group: 'Capabilities', fmt: triFmt },
       { key: 'self_host', label: 'Self-hostable', group: 'Capabilities', fmt: triFmt },
       { key: 'cc_required', label: 'Credit card required', group: 'Restrictions', fmt: triFmt },
-      { key: 'auto_pause_days', label: 'Auto-pause (days idle)', group: 'Restrictions', fmt: numFmt },
+      {
+        key: 'auto_pause_days',
+        label: 'Auto-pause (days idle)',
+        group: 'Restrictions',
+        fmt: numFmt,
+      },
       { key: 'branding_required', label: 'Branding required', group: 'Restrictions', fmt: triFmt },
       { key: 'trial_days', label: 'Trial length (days)', group: 'Trial', fmt: numFmt },
       { key: 'credit_usd', label: 'Credit (USD)', group: 'Trial', fmt: usdFmt },
       { key: 'credit_expiry_days', label: 'Credit expiry (days)', group: 'Trial', fmt: numFmt },
-      { key: 'data_retention_days', label: 'Data retention (days)', group: 'Operational', fmt: numFmt },
+      {
+        key: 'data_retention_days',
+        label: 'Data retention (days)',
+        group: 'Operational',
+        fmt: numFmt,
+      },
     ];
 
     function numFmt(v: unknown): string {
@@ -171,8 +181,8 @@ const compactServices = services.map((s) => ({
       if (selected.length === 0) {
         gridEl?.setAttribute('hidden', '');
         emptyEl?.removeAttribute('hidden');
-        if (ledeEl) ledeEl.textContent =
-          'Pick up to 4 services and put their free tiers in the same row.';
+        if (ledeEl)
+          ledeEl.textContent = 'Pick up to 4 services and put their free tiers in the same row.';
         return;
       }
 
@@ -230,9 +240,10 @@ const compactServices = services.map((s) => ({
             <th scope="row" class="row-label">Free tier</th>
             ${selected
               .map(
-                (s) => `<td><ul class="ft-list">${s.free_tier
-                  .map((b) => `<li>${escapeHtml(b)}</li>`)
-                  .join('')}</ul></td>`,
+                (s) =>
+                  `<td><ul class="ft-list">${s.free_tier
+                    .map((b) => `<li>${escapeHtml(b)}</li>`)
+                    .join('')}</ul></td>`,
               )
               .join('')}
           </tr>
@@ -262,17 +273,15 @@ const compactServices = services.map((s) => ({
         tbody.innerHTML = html;
 
         // Wire remove buttons.
-        tbody.parentElement
-          ?.querySelectorAll<HTMLButtonElement>('[data-remove]')
-          .forEach((btn) => {
-            btn.addEventListener('click', () => {
-              const target = btn.dataset.remove;
-              if (!target) return;
-              const next = getSlugsFromUrl().filter((s) => s !== target);
-              setSlugsInUrl(next);
-              render();
-            });
+        tbody.parentElement?.querySelectorAll<HTMLButtonElement>('[data-remove]').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const target = btn.dataset.remove;
+            if (!target) return;
+            const next = getSlugsFromUrl().filter((s) => s !== target);
+            setSlugsInUrl(next);
+            render();
           });
+        });
       }
     }
 

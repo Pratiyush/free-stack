@@ -52,7 +52,13 @@ const ccRequired = facets?.cc_required === true;
   <footer class="card-footer">
     <div class="badge-row">
       <TierBadge tier={tier_type} size="sm" />
-      {ccRequired && <span class="cc-pill" title="Credit card required to sign up">CC req</span>}
+      {
+        ccRequired && (
+          <span class="cc-pill" title="Credit card required to sign up">
+            CC req
+          </span>
+        )
+      }
     </div>
     <a class="detail-link" href={`/service/${slug}`}>Details →</a>
   </footer>
