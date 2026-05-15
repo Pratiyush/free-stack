@@ -19,8 +19,9 @@ pricing:
   - name: Free
     price: 0
     unit: /month
-  - name: Professional
-    price: 99
+  - name: Starter
+    description: 35K snapshots included, then $0.008 each
+    price: 179
     unit: /month
 
 tags: [visual-testing, storybook, components, regression, ui-testing]

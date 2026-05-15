@@ -4,24 +4,25 @@ category: analytics
 brand_color: '#7856FF'
 logo: /logos/mixpanel.svg
 
-summary: Event-based analytics with 20M events/mo (Feb 2026 pricing), 20K session replays, and unlimited reports.
+summary: Event-based analytics with 1M events/mo on the free tier, 10K session replays, no credit card required.
 
 tier_type: always-free
 
 free_tier:
-  - 20M events/mo
-  - 20K session replays/mo
+  - 1M events/month (free tier, capped)
+  - 10K session replays/month
   - Unlimited reports
-  - No group analytics or data export on free tier
-  - Limited cohorts
+  - No group analytics or data export
+  - Older accounts may be on legacy 20M plan
 
 pricing:
   - name: Free
+    description: Capped at 1M monthly events
     price: 0
     unit: /month
   - name: Growth
-    price: 999
-    unit: /month
+    description: Usage-based, starts at $0; $0.28 per 1K events after 1M free
+    price: 'Usage'
 
 tags: [analytics, events, product-analytics, session-replay, cohorts]
 

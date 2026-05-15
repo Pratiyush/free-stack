@@ -4,24 +4,25 @@ category: hosting
 brand_color: '#1C1F23'
 logo: /logos/koyeb.svg
 
-summary: Forever-free starter plan with 512 MB RAM, 0.1 vCPU, and 100 GB outbound bandwidth/mo.
+summary: Monthly free compute credit on the "Free 5h" instance (0.25 vCPU, 1 GB RAM, 1 GB storage); pay-per-use beyond.
 
-tier_type: always-free
+tier_type: free-plan
 
 free_tier:
-  - 1 web service
-  - 512 MB RAM
-  - 0.1 vCPU
-  - 2 GB SSD storage
-  - 100 GB outbound bandwidth/mo
+  - Free 5h instance (5 hours/month included)
+  - 0.25 vCPU, 1 GB RAM
+  - 1 GB persistent storage
+  - Scale-to-zero on inactivity
+  - Pay-per-use after monthly free credit
 
 pricing:
   - name: Free
+    description: 5 hours/month on Free 5h instance
     price: 0
     unit: /month
-  - name: Growth
-    price: 12
-    unit: /month
+  - name: Pay-as-you-go
+    description: Small instance from $0.04/hr (~$29.76/mo always-on)
+    price: 'Usage'
 
 tags: [serverless, deployment, paas, docker, containers]
 

@@ -31,3 +31,4 @@ pricing_url: https://ai.google.dev/gemini-api/docs/rate-limits
 
 date_added: 2026-05-15
 date_verified: 2026-05-15
+maintainer_notes: 'Rate-limits page redirects to Google OAuth (HTTP 302) for unauthenticated curl; curl-only verifier blocked. Needs JS verifier or signed-in fetch (Sprint 4).'

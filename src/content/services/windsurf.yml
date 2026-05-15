@@ -5,23 +5,30 @@ subcategory: permanent
 brand_color: '#0B100F'
 logo: /logos/windsurf.svg
 
-summary: '**Windsurf** — free tier; see the pricing page for details.'
+summary: AI coding IDE (Cascade) with a free tier — light usage allowance that refreshes daily and weekly, no credit card.
 
 tier_type: free-plan
 
 free_tier:
-  - Free plan
-  - Credits reset monthly
+  - Free plan ($0/month)
+  - Light usage allowance refreshes daily and weekly
+  - Tab previews and deploys
+  - Access to premium models at "API price"
+  - No credit card required
 
 pricing:
   - name: Free
     price: 0
     unit: /month
+  - name: Pro
+    description: Standard usage at API price; unlimited
+    price: 20
+    unit: /month
 
-tags: []
+tags: [ide, ai-coding, agents, code-assistant, cascade]
 
 official_url: https://windsurf.com/
 pricing_url: https://windsurf.com/pricing
 
 date_added: 2026-05-15
-date_verified: 2026-05-01
+date_verified: 2026-05-15

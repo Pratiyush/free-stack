@@ -10,17 +10,18 @@ tier_type: free-plan
 
 free_tier:
   - 100 databases
-  - 5 GB storage
-  - 500M rows read/mo
-  - 10M rows written/mo
-  - Always-on (no scale-to-zero)
+  - 5 GB total storage
+  - 500M row-reads/mo
+  - 10M row-writes/mo
+  - 3 GB sync bandwidth/mo
 
 pricing:
   - name: Free
     price: 0
     unit: /month
-  - name: Pro
-    price: 29
+  - name: Developer
+    description: Unlimited databases; overage $0.75/GB storage, $1/B reads
+    price: 4.99
     unit: /month
 
 tags: [sqlite, libsql, database, edge-computing, serverless]

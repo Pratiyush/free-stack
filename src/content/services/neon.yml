@@ -19,9 +19,12 @@ pricing:
   - name: Free
     price: 0
     unit: /month
-  - name: Pro
-    price: 15
-    unit: /month
+  - name: Launch
+    description: Usage-based; typical spend $15/mo for intermittent load
+    price: 'Usage'
+  - name: Scale
+    description: Usage-based; typical spend $701/mo for high load
+    price: 'Usage'
 
 tags: [postgres, serverless, database, sql, branching]
 

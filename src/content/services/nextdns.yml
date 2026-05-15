@@ -9,11 +9,11 @@ summary: Privacy-first DNS resolver with 300K queries/mo, ad blocking, tracker b
 tier_type: always-free
 
 free_tier:
-  - 300K queries/mo
+  - 300K queries/month
   - Unlimited devices
-  - All features (ad blocking, tracker blocking, parental controls)
   - Unlimited configurations
-  - Email alerts at 250K and 300K
+  - Access to all features (ad/tracker blocking, parental controls)
+  - Community support
 
 pricing:
   - name: Free

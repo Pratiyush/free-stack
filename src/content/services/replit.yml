@@ -5,23 +5,30 @@ subcategory: permanent
 brand_color: '#F26207'
 logo: /logos/replit.svg
 
-summary: Starter plan (free)
+summary: Starter plan with free daily Agent credits, built-in database, and up to 1 published project.
 
 tier_type: free-plan
 
 free_tier:
-  - Starter plan (free)
-  - Compute caps enforced
+  - Free daily Agent credits
+  - Built-in database for full-stack apps
+  - Create slides, videos, animations
+  - Publish up to 1 project
+  - Compute caps enforced (paused on inactivity)
 
 pricing:
-  - name: Free
+  - name: Starter
     price: 0
     unit: /month
+  - name: Core
+    description: $25 of monthly credits, 5 collaborators
+    price: 25
+    unit: /month
 
-tags: []
+tags: [ide, dev-environment, agents, hosting, collaboration]
 
 official_url: https://replit.com/
 pricing_url: https://replit.com/pricing
 
 date_added: 2026-05-15
-date_verified: 2026-05-01
+date_verified: 2026-05-15

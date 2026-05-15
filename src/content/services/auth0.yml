@@ -20,7 +20,7 @@ pricing:
     price: 0
     unit: /month
   - name: Essentials
-    price: 30
+    price: 35
     unit: /month
 
 tags: [authentication, sso, identity, mfa, enterprise]

@@ -24,4 +24,5 @@ official_url: https://www.back4app.com/
 pricing_url: https://www.back4app.com/pricing
 
 date_added: 2026-05-15
-date_verified: 2026-05-01
+date_verified: 2026-05-15
+maintainer_notes: 'Pricing page is JS-rendered (curl returns <1 KB shell); curl-only verifier cannot confirm bullets. Needs JS verifier (Sprint 4).'

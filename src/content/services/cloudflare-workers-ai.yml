@@ -21,7 +21,7 @@ pricing:
     price: 0
     unit: /month
   - name: Pay-as-you-go
-    description: $0.50 per 1M neurons
+    description: $0.011 per 1,000 neurons on Workers Paid
     price: 'Usage'
 
 tags: [ai, edge-computing, serverless, workers, on-device]

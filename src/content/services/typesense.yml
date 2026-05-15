@@ -31,3 +31,4 @@ pricing_url: https://cloud.typesense.org/pricing
 
 date_added: 2026-05-15
 date_verified: 2026-05-15
+maintainer_notes: 'Pricing page is JS-rendered (configurator widget); curl text does not surface the 720-hour free trial bullet. Cloud landing still advertises "Free credits, no credit card" on signup. Needs JS verifier (Sprint 4) to confirm 720 h figure.'

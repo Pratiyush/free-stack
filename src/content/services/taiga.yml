@@ -5,23 +5,30 @@ subcategory: permanent
 brand_color: '#888888'
 logo: /logos/taiga.svg
 
-summary: Free for up to 15 users
+summary: Open-source agile project management — 1 public project + 1 private project, 10 MB storage, unlimited users, community support.
 
 tier_type: free-plan
 
 free_tier:
-  - Free for up to 15 users
-  - No documented rate limits
+  - 1 public project + 1 private project
+  - Up to 10 MB storage
+  - Unlimited number of users
+  - Community support
+  - Self-host option also free (AGPL)
 
 pricing:
-  - name: Free
+  - name: Free (Gratis)
     price: 0
     unit: /month
+  - name: Enthusiast
+    description: 5 public + 5 private projects, 100 MB
+    price: 5
+    unit: /month
 
-tags: []
+tags: [project-management, agile, scrum, kanban, open-source]
 
 official_url: https://taiga.io/
 pricing_url: https://taiga.io/deployment-pricing-options/
 
 date_added: 2026-05-15
-date_verified: 2026-05-01
+date_verified: 2026-05-15

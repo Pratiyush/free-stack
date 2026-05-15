@@ -19,9 +19,9 @@ pricing:
   - name: Free
     price: 0
     unit: /month
-  - name: Startup
-    price: 429
-    unit: /month
+  - name: Pay-as-you-go
+    description: Usage-based; $0/mo if under free tier, $0.00005/event after 1M
+    price: 'Usage'
 
 tags: [analytics, product-analytics, session-replay, open-source, feature-flags]
 
