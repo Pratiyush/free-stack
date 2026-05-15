@@ -1,0 +1,32 @@
+name: Mailgun
+slug: mailgun
+category: email
+brand_color: '#F06B66'
+logo: /logos/mailgun.svg
+
+summary: Email API with 100 emails/day (~3K/mo), 1 domain, 1-day retention, and no credit card required.
+
+tier_type: always-free
+
+free_tier:
+  - 100 emails/day
+  - 1 domain
+  - 1-day log retention
+  - No credit card required
+  - Standard API limits
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+  - name: Flex
+    price: 35
+    unit: /month
+
+tags: [email, transactional-email, api, smtp, email-validation]
+
+official_url: https://www.mailgun.com/
+pricing_url: https://www.mailgun.com/pricing/
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

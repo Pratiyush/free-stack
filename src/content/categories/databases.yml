@@ -1,0 +1,6 @@
+slug: databases
+name: Databases
+blurb: Postgres, MySQL, SQLite, Redis, Mongo, DuckDB and more — managed or serverless, all with usable free tiers.
+icon: database
+order: 20
+parent: null

@@ -1,0 +1,32 @@
+name: Upstash Redis
+slug: upstash-redis
+category: databases
+brand_color: '#00C98D'
+logo: /logos/upstash-redis.svg
+
+summary: Serverless Redis with 256 MB data, 10 databases, and 500K commands/mo on the free plan.
+
+tier_type: free-plan
+
+free_tier:
+  - 256 MB data size
+  - 10 databases
+  - 500K commands/mo
+  - 200 GB bandwidth/mo
+  - Serverless pricing
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+  - name: Pay-as-you-go
+    description: $0.30/GB storage + per-command
+    price: 'Usage'
+
+tags: [redis, cache, serverless, key-value-store, database]
+
+official_url: https://upstash.com/
+pricing_url: https://upstash.com/pricing/redis
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

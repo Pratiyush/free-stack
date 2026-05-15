@@ -1,0 +1,33 @@
+name: Mistral AI
+slug: mistral
+category: ai-apis
+subcategory: permanent
+brand_color: '#FA520F'
+logo: /logos/mistral.svg
+
+summary: French LLM provider with free experiment tier, all models (Mistral Large, Codestral), and ~1B tokens/mo.
+
+tier_type: always-free
+
+free_tier:
+  - ~1B tokens/month
+  - All models available (Mistral Large, Codestral)
+  - Phone verification required
+  - ~1 RPS limit
+  - 500K TPM
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+  - name: Paid
+    description: Per 1M input tokens
+    price: '$0.14 – $0.81'
+
+tags: [llm, ai, api, mistral, models]
+
+official_url: https://mistral.ai/
+pricing_url: https://mistral.ai/pricing/
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

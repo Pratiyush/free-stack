@@ -1,0 +1,6 @@
+slug: search
+name: Search
+blurb: Hosted search APIs and self-hostable search engines — full-text, vector, hybrid.
+icon: search
+order: 190
+parent: null

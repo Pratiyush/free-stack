@@ -1,0 +1,30 @@
+name: DuckDNS
+slug: duckdns
+category: dns
+brand_color: '#F9B000'
+logo: /logos/duckdns.svg
+
+summary: Community-run dynamic DNS with 5 subdomains, IPv4/IPv6 support, and HTTPS at no cost.
+
+tier_type: always-free
+
+free_tier:
+  - 5 subdomains per account
+  - IPv4 and IPv6 support
+  - HTTPS support
+  - API-based updates
+  - No ads or charges
+
+pricing:
+  - name: Free
+    description: Community-funded nonprofit
+    price: 0
+    unit: /month
+
+tags: [dynamic-dns, dns, home-lab, iot, subdomains]
+
+official_url: https://www.duckdns.org/
+pricing_url: https://www.duckdns.org/
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

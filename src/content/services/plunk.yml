@@ -1,0 +1,32 @@
+name: Plunk
+slug: plunk
+category: email
+brand_color: '#FF6363'
+logo: /logos/plunk.svg
+
+summary: Open-source transactional email with 3K emails/mo, unlimited contacts, and a self-hosted option available.
+
+tier_type: always-free
+
+free_tier:
+  - 3K emails/month
+  - Unlimited contacts
+  - Open source (self-hosted free)
+  - Cloud version free forever
+  - Built on AWS SES
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+  - name: Self-hosted
+    description: AWS SES costs apply
+    price: 'Usage'
+
+tags: [email, transactional-email, open-source, self-hosted, api]
+
+official_url: https://www.useplunk.com/
+pricing_url: https://www.useplunk.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

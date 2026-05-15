@@ -1,0 +1,32 @@
+name: Orama
+slug: orama
+category: search
+brand_color: '#000000'
+logo: /logos/orama.svg
+
+summary: Full-text, vector, and hybrid search with 100K docs per index, 3 indexes, and unlimited queries.
+
+tier_type: always-free
+
+free_tier:
+  - 3 indexes
+  - 100K docs per index
+  - Unlimited search queries (full-text, vector, hybrid)
+  - 5 user segments
+  - 3 triggers per index
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+  - name: Growth
+    price: 99
+    unit: /month
+
+tags: [search, full-text-search, vector-search, hybrid-search, api]
+
+official_url: https://orama.com/
+pricing_url: https://docs.orama.com/cloud/understanding-orama/pricing-limits
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

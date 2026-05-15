@@ -1,0 +1,33 @@
+name: Vercel
+slug: vercel
+category: hosting
+brand_color: '#000000'
+logo: /logos/vercel.svg
+
+summary: Next.js-optimized full-stack deployment with 100 GB bandwidth/mo, 1M edge requests, and 1M function invocations on the Hobby plan.
+
+tier_type: free-plan
+
+free_tier:
+  - 100 GB bandwidth/mo
+  - 1M edge requests/mo
+  - 1M function invocations/mo
+  - 4 hrs active CPU/mo
+  - 360 GB-hrs provisioned memory/mo
+
+pricing:
+  - name: Hobby
+    description: Personal projects only
+    price: 0
+    unit: /month
+  - name: Pro
+    price: 20
+    unit: /user/month
+
+tags: [deployment, edge-computing, nextjs, serverless, jamstack]
+
+official_url: https://vercel.com/
+pricing_url: https://vercel.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

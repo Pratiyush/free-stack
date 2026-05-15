@@ -1,0 +1,33 @@
+name: WorkOS AuthKit
+slug: workos
+category: auth
+brand_color: '#6363F1'
+logo: /logos/workos.svg
+
+summary: Enterprise-grade auth with 1M free monthly active users, SSO, and MFA included at all tiers.
+
+tier_type: free-plan
+
+free_tier:
+  - 1M monthly active users
+  - MFA included at all tiers
+  - Social login included
+  - All core auth features
+  - No credit card required
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+  - name: Enterprise SSO
+    description: Per-connection
+    price: 125
+    unit: /connection/month
+
+tags: [authentication, sso, mfa, identity, enterprise]
+
+official_url: https://workos.com/
+pricing_url: https://workos.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

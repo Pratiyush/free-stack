@@ -1,0 +1,34 @@
+name: Cerebras
+slug: cerebras
+category: ai-apis
+subcategory: permanent
+brand_color: '#FF4438'
+logo: /logos/cerebras.svg
+
+summary: Ultra-fast inference with 1M tokens/day free, Llama and Qwen models, and ~2,600 tokens/sec speed.
+
+tier_type: always-free
+
+free_tier:
+  - 1M tokens/day free
+  - Llama 3.1 8B available
+  - Qwen 3 32B/235B available
+  - Ultra-fast inference (~2,600 tok/sec)
+  - Rate-limited free tier
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+  - name: Developer
+    description: 10x higher rate limits
+    price: 25
+    unit: /month
+
+tags: [llm, ai, inference, api, fast]
+
+official_url: https://cerebras.ai/
+pricing_url: https://www.cerebras.ai/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

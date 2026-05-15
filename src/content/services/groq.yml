@@ -1,0 +1,33 @@
+name: Groq
+slug: groq
+category: ai-apis
+subcategory: permanent
+brand_color: '#F55036'
+logo: /logos/groq.svg
+
+summary: Ultra-fast LLM inference with Llama, Gemma, and Whisper models, 14.4K RPD, no credit card required.
+
+tier_type: always-free
+
+free_tier:
+  - 14.4K requests/day (varies by model)
+  - 500K tokens/day for some models
+  - 30 RPM per model (varies)
+  - All models available
+  - No credit card required
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+  - name: Usage-based
+    description: Higher limits
+    price: 'Usage'
+
+tags: [llm, ai, inference, api, fast]
+
+official_url: https://groq.com/
+pricing_url: https://console.groq.com/docs/rate-limits
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

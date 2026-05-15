@@ -1,0 +1,6 @@
+slug: auth
+name: Authentication & Identity
+blurb: Drop-in auth, identity providers, and user management — passwordless, social, enterprise SSO.
+icon: key-round
+order: 30
+parent: null

@@ -1,0 +1,32 @@
+name: GitHub Actions
+slug: github-actions
+category: testing
+brand_color: '#2088FF'
+logo: /logos/github-actions.svg
+
+summary: CI/CD with 2K mins/mo for private repos, unlimited for public repos, 500 MB storage, and no credit card.
+
+tier_type: always-free
+
+free_tier:
+  - 2K mins/mo for private repos
+  - Unlimited for public repos
+  - 500 MB packages storage
+  - 10 concurrent jobs
+  - 6 hr max job runtime
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+  - name: Pro
+    price: 4
+    unit: /user/month
+
+tags: [ci-cd, testing, automation, workflows, github]
+
+official_url: https://github.com/features/actions
+pricing_url: https://github.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

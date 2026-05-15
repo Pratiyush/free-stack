@@ -1,0 +1,6 @@
+slug: storage
+name: Storage & CDN
+blurb: Object storage, image CDNs, file uploads — egress-friendly free tiers (R2, B2) plus image-optimized services.
+icon: hard-drive
+order: 40
+parent: null

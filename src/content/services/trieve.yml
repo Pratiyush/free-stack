@@ -1,0 +1,32 @@
+name: Trieve
+slug: trieve
+category: search
+brand_color: '#A33EB5'
+logo: /logos/trieve.svg
+
+summary: Search and vector database with 1 GB free ingestion, 1M searches/mo, and 5-year analytics retention.
+
+tier_type: always-free
+
+free_tier:
+  - First 1 GB ingested free
+  - First 1M searches/mo free
+  - First 1M messages/mo free
+  - 5-year analytics retention
+  - Usage-based after free tier
+
+pricing:
+  - name: Free tier
+    price: 0
+    unit: /month
+  - name: Pay-as-you-go
+    description: $0.01/page, $2/GB ingested
+    price: 'Usage'
+
+tags: [search, vector-search, api, embeddings, database]
+
+official_url: https://www.trieve.ai/
+pricing_url: https://www.trieve.ai/blog/usage-based-pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

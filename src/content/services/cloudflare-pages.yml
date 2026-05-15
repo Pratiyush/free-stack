@@ -1,0 +1,33 @@
+name: Cloudflare Pages
+slug: cloudflare-pages
+category: hosting
+brand_color: '#F38020'
+logo: /logos/cloudflare-pages.svg
+
+summary: Static and dynamic site deployment with unlimited bandwidth and commercial use allowed at no cost.
+
+tier_type: always-free
+
+free_tier:
+  - Unlimited bandwidth
+  - Unlimited requests
+  - 500 builds/mo
+  - 20K files per site
+  - 20 min build timeout
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+  - name: Workers Paid
+    description: Higher Workers limits
+    price: 5
+    unit: /month
+
+tags: [static-hosting, cdn, deployment, edge-computing, serverless]
+
+official_url: https://pages.cloudflare.com/
+pricing_url: https://www.cloudflare.com/plans/developer-platform/
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

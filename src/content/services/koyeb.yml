@@ -1,0 +1,32 @@
+name: Koyeb
+slug: koyeb
+category: hosting
+brand_color: '#1C1F23'
+logo: /logos/koyeb.svg
+
+summary: Forever-free starter plan with 512 MB RAM, 0.1 vCPU, and 100 GB outbound bandwidth/mo.
+
+tier_type: always-free
+
+free_tier:
+  - 1 web service
+  - 512 MB RAM
+  - 0.1 vCPU
+  - 2 GB SSD storage
+  - 100 GB outbound bandwidth/mo
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+  - name: Growth
+    price: 12
+    unit: /month
+
+tags: [serverless, deployment, paas, docker, containers]
+
+official_url: https://www.koyeb.com/
+pricing_url: https://www.koyeb.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

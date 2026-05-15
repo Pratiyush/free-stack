@@ -1,0 +1,32 @@
+name: Mixpanel
+slug: mixpanel
+category: analytics
+brand_color: '#7856FF'
+logo: /logos/mixpanel.svg
+
+summary: Event-based analytics with 20M events/mo (Feb 2026 pricing), 20K session replays, and unlimited reports.
+
+tier_type: always-free
+
+free_tier:
+  - 20M events/mo
+  - 20K session replays/mo
+  - Unlimited reports
+  - No group analytics or data export on free tier
+  - Limited cohorts
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+  - name: Growth
+    price: 999
+    unit: /month
+
+tags: [analytics, events, product-analytics, session-replay, cohorts]
+
+official_url: https://mixpanel.com/
+pricing_url: https://mixpanel.com/pricing/
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

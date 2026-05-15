@@ -1,0 +1,32 @@
+name: Supabase Storage
+slug: supabase-storage
+category: storage
+brand_color: '#25B700'
+logo: /logos/supabase-storage.svg
+
+summary: File storage integrated with Postgres, 1 GB free tier, 50 MB max file size, 5 GB egress/mo.
+
+tier_type: free-plan
+
+free_tier:
+  - 1 GB file storage
+  - 50 MB max file size
+  - 5 GB storage egress/mo
+  - Integrated with Postgres
+  - Bucket-based organization
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+  - name: Pro
+    price: 25
+    unit: /month
+
+tags: [file-storage, cloud-storage, postgres, backend, bucket]
+
+official_url: https://supabase.com/
+pricing_url: https://supabase.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

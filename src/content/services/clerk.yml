@@ -1,0 +1,32 @@
+name: Clerk
+slug: clerk
+category: auth
+brand_color: '#6C47FF'
+logo: /logos/clerk.svg
+
+summary: Passwordless and social auth for 50K monthly retained users with no credit card required.
+
+tier_type: free-plan
+
+free_tier:
+  - 50K monthly retained users
+  - 100 monthly retained organizations
+  - Social login (Google, GitHub, Facebook, etc.)
+  - No credit card required
+  - All core features included
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+  - name: Pro
+    price: 25
+    unit: /month
+
+tags: [authentication, passwordless, social-login, identity, users]
+
+official_url: https://clerk.com/
+pricing_url: https://clerk.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

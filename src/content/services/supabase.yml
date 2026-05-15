@@ -1,0 +1,32 @@
+name: Supabase
+slug: supabase
+category: databases
+brand_color: '#25B700'
+logo: /logos/supabase.svg
+
+summary: Postgres database with 500 MB storage, 1 GB file storage, and 5 GB egress/mo on the free plan.
+
+tier_type: free-plan
+
+free_tier:
+  - 500 MB database storage
+  - 1 GB file storage
+  - 5 GB egress/mo
+  - 50K monthly active users
+  - 2 projects
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+  - name: Pro
+    price: 25
+    unit: /month
+
+tags: [postgres, database, backend-as-a-service, sql, auth]
+
+official_url: https://supabase.com/
+pricing_url: https://supabase.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

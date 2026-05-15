@@ -1,0 +1,32 @@
+name: PostHog
+slug: posthog
+category: analytics
+brand_color: '#1D4AFF'
+logo: /logos/posthog.svg
+
+summary: All-in-one product analytics with 1M events/mo, 5K session recordings, and an open-source self-host option.
+
+tier_type: always-free
+
+free_tier:
+  - 1M events/mo
+  - 5K session recordings/mo
+  - Unlimited team members
+  - 1 project
+  - 1-year data retention
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+  - name: Startup
+    price: 429
+    unit: /month
+
+tags: [analytics, product-analytics, session-replay, open-source, feature-flags]
+
+official_url: https://posthog.com/
+pricing_url: https://posthog.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

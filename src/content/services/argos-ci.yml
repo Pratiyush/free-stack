@@ -1,0 +1,32 @@
+name: Argos CI
+slug: argos-ci
+category: testing
+brand_color: '#16A34A'
+logo: /logos/argos-ci.svg
+
+summary: Open-source visual regression tool with 5K free screenshots/mo, unlimited projects, and developer-friendly setup.
+
+tier_type: always-free
+
+free_tier:
+  - 5K screenshots/mo
+  - Unlimited projects
+  - Screenshot = 1 page × 1 browser × 1 viewport
+  - Open-source sponsorship available
+  - No overage (stops at limit)
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+  - name: Pro
+    price: 29
+    unit: /month
+
+tags: [visual-testing, regression, open-source, ci-cd, screenshots]
+
+official_url: https://argos-ci.com/
+pricing_url: https://argos-ci.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

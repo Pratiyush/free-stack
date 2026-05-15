@@ -1,0 +1,32 @@
+name: Resend
+slug: resend
+category: email
+brand_color: '#000000'
+logo: /logos/resend.svg
+
+summary: Transactional email for developers with 3K emails/mo (100/day), React Email integration, and 1-day logs.
+
+tier_type: always-free
+
+free_tier:
+  - 3K emails/month
+  - 100 emails/day
+  - 1 domain
+  - 1-day log retention
+  - 2-5 req/sec rate limit
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+  - name: Pro
+    price: 20
+    unit: /month
+
+tags: [email, transactional-email, api, smtp, react-email]
+
+official_url: https://resend.com/
+pricing_url: https://resend.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

@@ -1,0 +1,33 @@
+name: GitHub Pages
+slug: github-pages
+category: hosting
+brand_color: '#181717'
+logo: /logos/github-pages.svg
+
+summary: Static site hosting with 1 GB size limit and 100 GB bandwidth/mo, no credit card required.
+
+tier_type: always-free
+
+free_tier:
+  - 1 GB site size recommended
+  - 100 GB bandwidth/mo (soft limit)
+  - 10 builds/hr (soft limit)
+  - Static sites only
+  - Public repos only
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+  - name: GitHub Pro
+    description: Unlocks private repo Pages
+    price: 4
+    unit: /user/month
+
+tags: [static-hosting, deployment, git, open-source]
+
+official_url: https://pages.github.com/
+pricing_url: https://github.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

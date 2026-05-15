@@ -1,0 +1,32 @@
+name: Amplitude
+slug: amplitude
+category: analytics
+brand_color: '#1A56DB'
+logo: /logos/amplitude.svg
+
+summary: Product analytics with 50K MAU free, 10M events/mo, 1K session replays, and 12-month retention.
+
+tier_type: always-free
+
+free_tier:
+  - 50K monthly active users
+  - 10M events/mo
+  - 1K session replays/mo
+  - Unlimited feature flags
+  - 12-month data retention
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+  - name: Growth
+    price: 2295
+    unit: /month
+
+tags: [analytics, product-analytics, events, feature-flags, session-replay]
+
+official_url: https://amplitude.com/
+pricing_url: https://amplitude.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

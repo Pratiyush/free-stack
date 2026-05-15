@@ -1,0 +1,32 @@
+name: Stytch
+slug: stytch
+category: auth
+brand_color: '#0B2157'
+logo: /logos/stytch.svg
+
+summary: Platform-agnostic auth with 10K free MAU, all auth methods (MFA, SSO, RBAC), and no feature gates.
+
+tier_type: free-plan
+
+free_tier:
+  - 10K monthly active users
+  - All auth methods included
+  - MFA, SSO, RBAC included
+  - 5 SSO/SCIM connections
+  - Overage billing at usage rates
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+  - name: Growth
+    price: 99
+    unit: /month
+
+tags: [authentication, mfa, sso, identity, passwordless]
+
+official_url: https://stytch.com/
+pricing_url: https://stytch.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

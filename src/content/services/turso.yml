@@ -1,0 +1,32 @@
+name: Turso
+slug: turso
+category: databases
+brand_color: '#4FF900'
+logo: /logos/turso.svg
+
+summary: LibSQL (SQLite fork) with 100 free databases, 5 GB storage, and 500M rows read/mo.
+
+tier_type: free-plan
+
+free_tier:
+  - 100 databases
+  - 5 GB storage
+  - 500M rows read/mo
+  - 10M rows written/mo
+  - Always-on (no scale-to-zero)
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+  - name: Pro
+    price: 29
+    unit: /month
+
+tags: [sqlite, libsql, database, edge-computing, serverless]
+
+official_url: https://turso.tech/
+pricing_url: https://turso.tech/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

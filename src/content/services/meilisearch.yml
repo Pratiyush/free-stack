@@ -1,0 +1,33 @@
+name: Meilisearch
+slug: meilisearch
+category: search
+brand_color: '#FF5CAA'
+logo: /logos/meilisearch.svg
+
+summary: Fast open-source search with instant results and an MIT license; self-hosted unlimited, no permanent free cloud tier.
+
+tier_type: always-free
+
+free_tier:
+  - Unlimited searches and documents (self-hosted)
+  - MIT open-source license
+  - All core features included
+  - Single binary deployment
+  - No managed free tier
+
+pricing:
+  - name: Self-hosted
+    description: MIT open source
+    price: 0
+    unit: /month
+  - name: Cloud Build
+    price: 30
+    unit: /month
+
+tags: [search, open-source, full-text-search, self-hosted, api]
+
+official_url: https://www.meilisearch.com/
+pricing_url: https://www.meilisearch.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

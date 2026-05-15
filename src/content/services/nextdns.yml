@@ -1,0 +1,33 @@
+name: NextDNS
+slug: nextdns
+category: dns
+brand_color: '#0072FD'
+logo: /logos/nextdns.svg
+
+summary: Privacy-first DNS resolver with 300K queries/mo, ad blocking, tracker blocking, and parental controls included.
+
+tier_type: always-free
+
+free_tier:
+  - 300K queries/mo
+  - Unlimited devices
+  - All features (ad blocking, tracker blocking, parental controls)
+  - Unlimited configurations
+  - Email alerts at 250K and 300K
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+  - name: Pro
+    description: Unlimited queries
+    price: 1.99
+    unit: /month
+
+tags: [dns, privacy, resolver, ad-blocking, security]
+
+official_url: https://nextdns.io/
+pricing_url: https://nextdns.io/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

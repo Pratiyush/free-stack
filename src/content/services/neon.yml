@@ -1,0 +1,32 @@
+name: Neon
+slug: neon
+category: databases
+brand_color: '#00E699'
+logo: /logos/neon.svg
+
+summary: Serverless Postgres with 100 free projects, auto-branching, and 100 CU-hours/mo per project.
+
+tier_type: free-plan
+
+free_tier:
+  - 100 free projects
+  - 0.5 GB storage per branch
+  - 100 CU-hours/project/mo
+  - 5 GB egress/mo
+  - Auto-scale up to 2 CU with scale-to-zero
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+  - name: Pro
+    price: 15
+    unit: /month
+
+tags: [postgres, serverless, database, sql, branching]
+
+official_url: https://neon.tech/
+pricing_url: https://neon.tech/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

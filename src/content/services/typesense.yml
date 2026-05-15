@@ -1,0 +1,33 @@
+name: Typesense Cloud
+slug: typesense
+category: search
+brand_color: '#DA4167'
+logo: /logos/typesense.svg
+
+summary: Typo-tolerant search with a one-time 720-hour free trial (30 days continuous), no credit card required.
+
+tier_type: free-plan
+
+free_tier:
+  - 720 hours cluster time (lifetime)
+  - 10 GB bandwidth (lifetime)
+  - One-time non-recurring allowance
+  - No credit card required
+  - ~30 days continuous use
+
+pricing:
+  - name: Free trial
+    description: One-time 720 hr
+    price: 0
+    unit: /month
+  - name: Growth
+    price: 79
+    unit: /month
+
+tags: [search, typo-tolerance, full-text-search, api, open-source]
+
+official_url: https://typesense.org/
+pricing_url: https://cloud.typesense.org/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

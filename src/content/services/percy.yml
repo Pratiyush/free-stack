@@ -1,0 +1,33 @@
+name: Percy
+slug: percy
+category: testing
+brand_color: '#9E66BF'
+logo: /logos/percy.svg
+
+summary: Visual regression testing with 5K screenshots/mo, cross-browser support, and 30-day build history.
+
+tier_type: always-free
+
+free_tier:
+  - 5K screenshots/mo
+  - Unlimited users and projects
+  - Cross-browser testing
+  - 30-day build history
+  - Screenshots reset monthly
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+  - name: Unlimited
+    description: Unlimited screenshots
+    price: 269
+    unit: /month
+
+tags: [visual-testing, regression, screenshots, testing, browserstack]
+
+official_url: https://percy.io/
+pricing_url: https://percy.io/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

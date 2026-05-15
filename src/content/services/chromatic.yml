@@ -1,0 +1,32 @@
+name: Chromatic
+slug: chromatic
+category: testing
+brand_color: '#FC521F'
+logo: /logos/chromatic.svg
+
+summary: Visual testing for UI components with 5K snapshots/mo, unlimited for open source, no overage billing.
+
+tier_type: always-free
+
+free_tier:
+  - 5K snapshots/mo
+  - Unlimited for qualifying open source
+  - Unlimited collaborators and Storybooks
+  - 1 snapshot = 1 story × 1 browser × 1 viewport
+  - No overage (stops at limit)
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+  - name: Professional
+    price: 99
+    unit: /month
+
+tags: [visual-testing, storybook, components, regression, ui-testing]
+
+official_url: https://www.chromatic.com/
+pricing_url: https://www.chromatic.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

@@ -1,0 +1,30 @@
+name: Playwright
+slug: playwright
+category: testing
+brand_color: '#2EAD33'
+logo: /logos/playwright.svg
+
+summary: Fully open-source test framework with no limits, supports Chromium/Firefox/WebKit, runs locally or in CI.
+
+tier_type: always-free
+
+free_tier:
+  - No limits on runs
+  - Chromium, Firefox, WebKit support
+  - Local or CI execution
+  - Open source (MIT license)
+  - All features included
+
+pricing:
+  - name: Free
+    description: MIT open source
+    price: 0
+    unit: /month
+
+tags: [testing, e2e, automation, open-source, framework]
+
+official_url: https://playwright.dev/
+pricing_url: https://playwright.dev/
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

@@ -1,0 +1,32 @@
+name: Cloudflare DNS
+slug: cloudflare-dns
+category: dns
+brand_color: '#F38020'
+logo: /logos/cloudflare-dns.svg
+
+summary: DNS hosting with unlimited zones, 200 records/zone, unlimited queries, and DDoS protection included.
+
+tier_type: always-free
+
+free_tier:
+  - Unlimited zones
+  - 200 DNS records/zone
+  - Unlimited DNS queries
+  - Proxied traffic and DDoS protection
+  - 'API: 1,200 req/5min'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+  - name: Pro
+    price: 20
+    unit: /month
+
+tags: [dns, domain, ddos-protection, cdn, security]
+
+official_url: https://www.cloudflare.com/
+pricing_url: https://www.cloudflare.com/plans/
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

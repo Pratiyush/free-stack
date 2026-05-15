@@ -1,0 +1,33 @@
+name: Cloudflare Workers AI
+slug: cloudflare-workers-ai
+category: ai-apis
+subcategory: permanent
+brand_color: '#F38020'
+logo: /logos/cloudflare-workers-ai.svg
+
+summary: On-device AI with 10K Neurons/day free across all models, integrated with Cloudflare Workers.
+
+tier_type: always-free
+
+free_tier:
+  - 10K Neurons/day
+  - Resets 00:00 UTC daily
+  - Many open-source models available
+  - Per-model limits apply
+  - Integrated with Workers
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+  - name: Pay-as-you-go
+    description: $0.50 per 1M neurons
+    price: 'Usage'
+
+tags: [ai, edge-computing, serverless, workers, on-device]
+
+official_url: https://workers.cloudflare.com/
+pricing_url: https://developers.cloudflare.com/workers-ai/platform/pricing/
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

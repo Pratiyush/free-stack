@@ -1,0 +1,6 @@
+slug: dns
+name: DNS & Domains
+blurb: DNS hosting, resolvers, and dynamic DNS — free authoritative DNS plus privacy-focused recursive options.
+icon: globe
+order: 60
+parent: null

@@ -1,0 +1,32 @@
+name: Cloudinary
+slug: cloudinary
+category: storage
+brand_color: '#3448C5'
+logo: /logos/cloudinary.svg
+
+summary: Image and video transformation with 25 credits/mo (~25 GB bandwidth), 20K transforms/mo, and 10 GB storage.
+
+tier_type: free-plan
+
+free_tier:
+  - 25 credits/mo
+  - 20K transformations/mo
+  - 10 GB storage
+  - 20 GB bandwidth
+  - 300K total assets
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+  - name: Plus
+    price: 99
+    unit: /month
+
+tags: [image-transformation, video-transformation, cdn, file-storage, api]
+
+official_url: https://cloudinary.com/
+pricing_url: https://cloudinary.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

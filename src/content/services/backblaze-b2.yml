@@ -1,0 +1,32 @@
+name: Backblaze B2
+slug: backblaze-b2
+category: storage
+brand_color: '#E32636'
+logo: /logos/backblaze-b2.svg
+
+summary: Cloud storage with 10 GB free, 1 GB daily downloads, and S3-compatible API at no cost.
+
+tier_type: always-free
+
+free_tier:
+  - 10 GB storage
+  - 1 GB download/day
+  - Free uploads
+  - 2.5K Class B and 2.5K Class C transactions/day
+  - Class A operations free
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+  - name: Pay-as-you-go
+    description: $0.01/GB/mo storage
+    price: 'Usage'
+
+tags: [object-storage, s3-compatible, cloud-storage, backup, file-storage]
+
+official_url: https://www.backblaze.com/
+pricing_url: https://www.backblaze.com/cloud-storage/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

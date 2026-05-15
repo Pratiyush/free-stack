@@ -1,0 +1,30 @@
+name: Google Analytics 4
+slug: google-analytics-4
+category: analytics
+brand_color: '#E37400'
+logo: /logos/google-analytics-4.svg
+
+summary: Event-based analytics with 500 event types, 50 custom dimensions, and 2-month retention (max 14 months) by default.
+
+tier_type: always-free
+
+free_tier:
+  - Unlimited events (10M/property/mo recommended)
+  - 500 event types
+  - 50 custom dimensions
+  - 50 custom metrics
+  - 2-month event-data retention (max 14 months)
+
+pricing:
+  - name: Free
+    description: GA4 is always free
+    price: 0
+    unit: /month
+
+tags: [analytics, web-analytics, events, tracking, google]
+
+official_url: https://analytics.google.com/
+pricing_url: https://analytics.google.com/
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

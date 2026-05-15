@@ -1,0 +1,6 @@
+slug: testing
+name: Testing & CI/CD
+blurb: CI/CD pipelines, visual regression, and E2E testing tools — generous free tiers for public repos.
+icon: flask-conical
+order: 100
+parent: null

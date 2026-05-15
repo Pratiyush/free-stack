@@ -1,0 +1,33 @@
+name: Namecheap FreeDNS
+slug: namecheap-freedns
+category: dns
+brand_color: '#DE3723'
+logo: /logos/namecheap-freedns.svg
+
+summary: Free DNS hosting with full record types, dynamic DNS, and email forwarding included regardless of registrar.
+
+tier_type: always-free
+
+free_tier:
+  - A/AAAA/CNAME/NS/MX/TXT/SRV records
+  - Dynamic DNS support
+  - Email forwarding
+  - URL forwarding
+  - Works with any registrar
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+  - name: Domain registration
+    description: Starts at $0.98/year
+    price: 0.98
+    unit: /year
+
+tags: [dns, domain, email-forwarding, url-forwarding, registrar]
+
+official_url: https://www.namecheap.com/
+pricing_url: https://www.namecheap.com/domains/freedns/
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

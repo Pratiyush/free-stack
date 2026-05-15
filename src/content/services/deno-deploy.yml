@@ -1,0 +1,32 @@
+name: Deno Deploy
+slug: deno-deploy
+category: hosting
+brand_color: '#000000'
+logo: /logos/deno-deploy.svg
+
+summary: Edge computing platform for Deno with 1M requests/mo, 100 GB egress, and commercial use allowed at no cost.
+
+tier_type: always-free
+
+free_tier:
+  - 1M requests/mo
+  - 100 GB egress/mo
+  - 1 GiB KV storage
+  - Commercial use allowed
+  - Hard caps on requests and egress
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+  - name: Pro
+    description: Higher request and egress limits
+    price: 'Custom'
+
+tags: [edge-computing, serverless, deno, javascript, typescript]
+
+official_url: https://deno.com/deploy
+pricing_url: https://deno.com/deploy/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

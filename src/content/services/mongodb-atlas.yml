@@ -1,0 +1,33 @@
+name: MongoDB Atlas
+slug: mongodb-atlas
+category: databases
+brand_color: '#13AA52'
+logo: /logos/mongodb-atlas.svg
+
+summary: NoSQL MongoDB database with 512 MB free cluster, shared resources, and 100 ops/sec rate limit.
+
+tier_type: always-free
+
+free_tier:
+  - 512 MB storage
+  - Shared RAM and vCPU
+  - 1 free cluster per project
+  - 100 ops/sec rate limit
+  - 32 MB sort memory
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+  - name: Dedicated
+    description: Production workloads
+    price: 57
+    unit: /month
+
+tags: [nosql, mongodb, document-database, cloud, managed-database]
+
+official_url: https://www.mongodb.com/
+pricing_url: https://www.mongodb.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

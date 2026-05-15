@@ -1,0 +1,6 @@
+slug: hosting
+name: Hosting & Deployment
+blurb: Static hosting, JAMstack platforms, and edge deployment — free tiers honest about bandwidth and build minutes.
+icon: cloud
+order: 10
+parent: null

@@ -1,0 +1,32 @@
+name: Auth0
+slug: auth0
+category: auth
+brand_color: '#EB5424'
+logo: /logos/auth0.svg
+
+summary: Identity platform with 25K free MAU, custom domains, social/enterprise SSO, and RBAC included.
+
+tier_type: free-plan
+
+free_tier:
+  - 25K monthly active users
+  - Unlimited social and Okta connections
+  - Passwordless login
+  - Custom domains included
+  - Organizations and RBAC included
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+  - name: Essentials
+    price: 30
+    unit: /month
+
+tags: [authentication, sso, identity, mfa, enterprise]
+
+official_url: https://auth0.com/
+pricing_url: https://auth0.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-15

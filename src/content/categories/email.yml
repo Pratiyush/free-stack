@@ -1,0 +1,6 @@
+slug: email
+name: Email & Messaging
+blurb: Transactional email, marketing email, client-side senders, and SMS — every free tier verified against the pricing page.
+icon: mail
+order: 50
+parent: null

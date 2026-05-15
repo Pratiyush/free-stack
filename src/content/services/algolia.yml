@@ -1,0 +1,32 @@
+name: Algolia
+slug: algolia
+category: search
+brand_color: '#003DFF'
+logo: /logos/algolia.svg
+
+summary: Search-as-a-service with 10K searches/mo, 1M records, 10 indices, and app deletion after 60 days inactivity.
+
+tier_type: always-free
+
+free_tier:
+  - 10K search requests/mo
+  - 1M records
+  - 10 indices
+  - Highest 3 record-count days excluded from billing
+  - API rate limited
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+  - name: Growth
+    price: 150
+    unit: /month
+
+tags: [search, full-text-search, api, saas, indexing]
+
+official_url: https://www.algolia.com/
+pricing_url: https://www.algolia.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-15
