@@ -12,8 +12,8 @@
 
 - One PR per issue (unless tightly related)
 - Branch naming: `add/[service]`, `update/[service]`, `fix/[description]`, `expand/[category]`, `cleanup/[scope]`, `docs/[scope]`
-- PR title format: `add: [service] to [category]` / `update: [service]` / `expand: [category] comparisons`
-- Target branch: `main`
+- PR title format: Conventional Commits (`content: add <service> to <category>` / `content: update <service>` / `feat: <change>` / `fix: <change>` / `docs: <scope>` / `chore: <scope>`). The PR-title lint workflow enforces this.
+- Target branch: `master` (see Branch hygiene below).
 
 ### Required PR body
 
@@ -22,11 +22,13 @@ Every PR description must include:
 1. **Closes #N** — the issue this PR resolves (or `Part of #N` for multi-PR work)
 2. **What changed** — 1–3 sentences summarizing the diff
 3. **Verification checklist** — for content PRs:
-   - [ ] Entry follows the table format in the target category
-   - [ ] `Link` points to the pricing page (not the homepage)
-   - [ ] `Verified` is set to the current month/year
-   - [ ] Rate limits included where available
-   - [ ] Notes section updated if the entry has caveats
+   - [ ] YAML at `src/content/services/<slug>.yml` validates (`pnpm validate` is green)
+   - [ ] `pricing_url` points to the official pricing page (not the homepage)
+   - [ ] `date_verified` is set to the current month/year
+   - [ ] `free_tier` bullets include concrete quotas and rate limits where available
+   - [ ] `brand_color` matches the simpleicons.org hex (or fallback is logged in `docs/logo-coverage.md`)
+   - [ ] Logo file exists at `public/logos/<slug>.svg` (`pnpm check-logos` is green)
+   - [ ] `notes` updated if the entry has caveats (auto-pause, CC-required, trial-only, etc.)
 
 The PR template at `.github/PULL_REQUEST_TEMPLATE.md` is the source of truth — keep it in sync with this checklist.
 
@@ -59,23 +61,24 @@ Every merged PR that ships user-visible content or behavior gets a tagged GitHub
 
 ## Content Rules
 
-- Every service entry must follow the table format in each category file
-- Include verified date (current month/year)
-- Link to pricing page, not homepage
-- Include rate limits when available
-- Use Lucide icons (https://github.com/lucide-icons/lucide) for service logos where a match exists; otherwise use https://simpleicons.org/
+- **Every service is a typed YAML at `src/content/services/<slug>.yml`** validated against the Zod schema in `src/content.config.ts`. The legacy `categories/*.md` tables were migrated during Sprint 3 (`docs/sprints/sprint-3.md`) and will be deleted in story 3.12 once this docs rewrite lands.
+- Required fields per record: `name`, `slug`, `category`, `logo`, `summary` (10–180 chars), `tier_type` (`always-free` / `free-plan` / `trial-credit` / `pay-as-you-go`), `free_tier` (≥1 bullet), `pricing` (≥1 row), `tags`, `official_url`, `date_added`, `date_verified`. `pricing_url` is strongly preferred over the homepage. Full spec lives in `src/content.config.ts` — that file is the source of truth.
+- Optional but encouraged: `subcategory`, `brand_color` (from simpleicons.org hex), `notes`, `docs_url`, plus the **`facets`** block (typed quotas/capabilities — `storage_gb`, `requests_per_day`, `cc_required`, `oss`, `self_host`, `trial_days`, `credit_usd`, etc.) and the **`sources`** block (per-fact provenance with URL + verified date) added in story 3.14a.
+- `date_verified` must be the current month/year at write time. Re-verify against the live pricing page, not blog posts.
+- Logo lookup cascade (story 3.7): simpleicons.org → lobe-icons → devicon → selfh.st icons → brand-colored placeholder (logged in `docs/logo-coverage.md`). Render simpleicons SVGs with `fill="#<brand_color>"` so they're full-color, not monochrome.
 
-## Site Presentation (`docs/index.html`)
+## Site Presentation
 
-- **Cards reflect each product's brand identity.** Service cards and CTA buttons should match the product's brand color. Source of truth: the `hex` value on the service's https://simpleicons.org/ entry. Apply it as the card accent, header bar, or button background — pick one consistent surface per card so the page doesn't visually shout.
-- **Logos must be colorful (full-color), not monochrome.** simpleicons.org returns monochrome SVGs by default; render them with the brand hex (`fill="#<hex>"`) so each card is recognizable at a glance. Fall back to the brand's official logo asset only if simpleicons.org doesn't carry the service.
-- **Comparison tables are free-tier-only.** The per-category comparison table shows what each service offers at **no cost** — free-tier limits, free-tier rate limits, credit-card-required flag. Paid plans and upgrade paths get a separate "Upgrade path" line in the service's `Notes`, never inside the free-tier comparison row. Services that have **no permanent free tier** (trial-only, free credits expire) belong in a clearly labeled subsection (see `ai-ml.md`'s `Free Credits (Expire)` / `Severely Limited` pattern) so they're not confused with permanent-free offerings.
+- **Astro site (production target).** The site is built from `src/content/services/*.yml` and `src/content/categories/*.yml`. Pages live in `src/pages/`; primitives in `src/components/ui/`. Service cards render the `brand_color` accent automatically — don't hard-code colors in components.
+- **Comparison surfaces are free-tier-only.** Category pages and the catalog (`/catalog`) surface free-tier fields (limits, rate limits, `facets.cc_required`, `facets.trial_days`). Paid upgrade paths belong in the service's `notes` or in `pricing[]` rows beyond `name: Free` — never collapsed into the free-tier comparison row. Services with no permanent free tier go in `subcategory: expiring-credits` or `subcategory: limited` so they group correctly on the site (see `ai-apis` category for the canonical pattern).
+- **Legacy: `docs/index.html`.** The static HTML site is retained for the GitHub Pages preview only. It gets retired at production cut-over (story 3.13). Don't add features to it; fix only if it actively breaks.
 
 ## Scanning & Verification
 
+- **Sprint 3 sweep (complete).** Every service in `src/content/services/*.yml` was re-verified during the Sprint 3 pricing-drift sweep. Pass rate, drift cohort, and per-batch decisions live in `docs/sprints/sprint-3-pricing-drift.md`.
+- **Ongoing cadence.** A weekly cron lands in Sprint 5 to re-run the pricing-drift check; until then, `date_verified` is bumped per-PR when a service is touched.
 - **Daily scan at 8 PM** — scheduled task `free-stack-daily` checks for new free tiers across tracked categories and writes draft entries to `marketing/drafts/YYYY-MM-DD-<service>.md` for review before any commit. The scan never opens issues or PRs autonomously; it only proposes drafts.
-- **Monthly verification sweep** — re-verify every entry's `Verified` date; bump it or remove the entry based on the current pricing-page reality.
-- **Dead services** go to "Services We Don't Include" in README with a one-line reason.
+- **Dead services** go to "Services We Don't Include" in `README.md` with a one-line reason, and their YAML is deleted from `src/content/services/`.
 
 ## Link Check
 
