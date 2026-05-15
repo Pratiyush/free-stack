@@ -30,8 +30,39 @@ const wallServices = services
   .sort((a, b) => new Date(b.data.date_added).getTime() - new Date(a.data.date_added).getTime())
   .slice(0, 48);
 
-/* Editorial Issue №. v0.8.0 = Issue №008. Bumped at tag time. */
-const issueNumber = '008';
+/* Editorial Issue №. v0.9.0 = Issue №009. Bumped at tag time. */
+const issueNumber = '009';
+
+/* Schema.org JSON-LD — Organization + WebSite (with SearchAction) on the home page. */
+const siteUrl = 'https://freestack.is-a.dev';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      name: 'free-stack',
+      url: siteUrl,
+      logo: `${siteUrl}/favicon.svg`,
+      sameAs: ['https://github.com/Pratiyush/free-stack'],
+      description:
+        'Open-source catalogue of verified free-tier developer services. No ads, no affiliate links.',
+    },
+    {
+      '@type': 'WebSite',
+      name: 'free-stack',
+      url: siteUrl,
+      description: `${services.length} developer services with real free tiers — verified monthly.`,
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: {
+          '@type': 'EntryPoint',
+          urlTemplate: `${siteUrl}/catalog?q={search_term_string}`,
+        },
+        'query-input': 'required name=search_term_string',
+      },
+    },
+  ],
+};
 const issueMonth = new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
 const verifiedToday = new Date()
   .toLocaleDateString('en-US', {
@@ -47,6 +78,7 @@ const verifiedToday = new Date()
   title="free-stack"
   description={`${services.length} verified free tiers for developers. No ads, no affiliate links — just the free tier you can actually use.`}
 >
+  <script slot="head" type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)} />
   <section class="hero">
     <div class="container hero-inner">
       {

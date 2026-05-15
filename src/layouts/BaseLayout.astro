@@ -6,15 +6,21 @@ interface Props {
   title: string;
   description?: string;
   canonical?: string;
+  ogImage?: string;
+  ogType?: 'website' | 'article';
 }
 
 const {
   title,
-  description = '319 verified free tiers for developers across 27 categories. No ads, no affiliate links.',
+  description = '300 verified free tiers for developers across 27 categories. No ads, no affiliate links.',
   canonical = Astro.url.href,
+  ogImage = '/favicon.svg', // TODO Sprint 5: generate 1200x630 PNG OG cards per-service
+  ogType = 'website',
 } = Astro.props;
 
 const fullTitle = title === 'free-stack' ? title : `${title} — free-stack`;
+const siteUrl = 'https://freestack.is-a.dev';
+const absoluteOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
 ---
 
 <!doctype html>
@@ -25,10 +31,22 @@ const fullTitle = title === 'free-stack' ? title : `${title} — free-stack`;
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+
+    {/* Open Graph */}
+    <meta property="og:site_name" content="free-stack" />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={absoluteOgImage} />
+    <meta property="og:locale" content="en_US" />
+
+    {/* Twitter card */}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={absoluteOgImage} />
+
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link
@@ -37,6 +55,13 @@ const fullTitle = title === 'free-stack' ? title : `${title} — free-stack`;
       title="free-stack — recently verified free tiers"
       href="/rss.xml"
     />
+
+    {
+      /* Preconnect to font origin + preload critical body font.
+        Inter Tight is the most-used; Fraunces + JBM can load progressively. */
+    }
+    <link rel="preconnect" href="https://freestack.is-a.dev" crossorigin />
+
     <meta name="generator" content={Astro.generator} />
     <ClientRouter />
     <slot name="head" />

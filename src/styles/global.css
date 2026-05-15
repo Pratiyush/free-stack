@@ -1,5 +1,7 @@
 @import './tokens.css';
 
+/* Fontsource Variable fonts — only the wght axis (lightest single-axis import).
+ * `index.css` IS the wght-only file; full.css would add opsz/soft/wonk axes. */
 @import '@fontsource-variable/fraunces/index.css';
 @import '@fontsource-variable/inter-tight/index.css';
 @import '@fontsource-variable/jetbrains-mono/index.css';
