@@ -41,6 +41,70 @@ const services = defineCollection({
     last_changed: z.coerce.date().optional(),
     maintainer_notes: z.string().optional(),
     submitted_by: z.string().optional(),
+    facets: z
+      .object({
+        // Quotas
+        team_seats: z.number().int().nonnegative().nullable().optional(),
+        projects: z.number().int().nonnegative().nullable().optional(),
+        storage_gb: z.number().nonnegative().nullable().optional(),
+        bandwidth_gb_month: z.number().nonnegative().nullable().optional(),
+        requests_per_day: z.number().int().nonnegative().nullable().optional(),
+        requests_per_month: z.number().int().nonnegative().nullable().optional(),
+        // Capabilities (tristate: true/false/null)
+        custom_domain: z.boolean().nullable().optional(),
+        ssl: z.boolean().nullable().optional(),
+        api_access: z.boolean().nullable().optional(),
+        oss: z.boolean().nullable().optional(),
+        self_host: z.boolean().nullable().optional(),
+        // Restrictions
+        cc_required: z.boolean().nullable().optional(),
+        auto_pause_days: z.number().int().nonnegative().nullable().optional(),
+        branding_required: z.boolean().nullable().optional(),
+        // For credits/trials
+        trial_days: z.number().int().nonnegative().nullable().optional(),
+        credit_usd: z.number().nonnegative().nullable().optional(),
+        credit_expiry_days: z.number().int().nonnegative().nullable().optional(),
+        // Operational
+        support_channels: z.array(z.enum(['community', 'email', 'chat', 'phone'])).optional(),
+        data_retention_days: z.number().int().nonnegative().nullable().optional(),
+      })
+      .partial()
+      .optional(),
+    sources: z
+      .object({
+        pricing: z
+          .object({
+            url: z.string().url(),
+            section: z.string().optional(),
+            verified: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+          })
+          .optional(),
+        brand: z
+          .object({
+            url: z.string().url(),
+            type: z.enum([
+              'simpleicons',
+              'lucide',
+              'devicon',
+              'lobe-icons',
+              'selfhst',
+              'custom',
+              'manual',
+            ]),
+            verified: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+          })
+          .optional(),
+        overrides: z
+          .record(
+            z.string(),
+            z.object({
+              url: z.string().url(),
+              verified: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+            }),
+          )
+          .optional(),
+      })
+      .optional(),
   }),
 });
 

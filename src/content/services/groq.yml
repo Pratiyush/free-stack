@@ -31,3 +31,18 @@ pricing_url: https://console.groq.com/docs/rate-limits
 
 date_added: 2026-05-15
 date_verified: 2026-05-15
+
+facets:
+  requests_per_day: 14400
+  api_access: true
+  cc_required: false
+
+sources:
+  pricing:
+    url: https://console.groq.com/docs/rate-limits
+    section: '#free-tier'
+    verified: '2026-05-15'
+  brand:
+    url: https://simpleicons.org/icons/groq
+    type: simpleicons
+    verified: '2026-05-15'
