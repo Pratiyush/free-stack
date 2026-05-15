@@ -1,38 +1,43 @@
 ## Closes
 
-<!-- Link to the GitHub issue this PR addresses -->
+<!-- Link to the GitHub issue this PR addresses. Use `Part of #N` for multi-PR work. -->
 Closes #
 
-## What
+## What changed
 
-- [ ] Adding new entry
-- [ ] Updating existing entry
-- [ ] Expanding category with comparisons
-- [ ] Adding icons
-- [ ] Removing outdated entry
+<!-- 1–3 sentences summarising the diff. -->
+
+## Type of change
+
+- [ ] `content:` — add / update / remove a service YAML in `src/content/services/`
+- [ ] `feat:` — schema change, new capability, or new tooling
+- [ ] `fix:` — bug fix (site rendering, build, data correctness)
+- [ ] `docs:` — documentation only
+- [ ] `chore:` — tooling, deps, infra
 - [ ] Other (describe below)
 
-## Service Details
+## Verification checklist (content PRs)
 
-<!-- Fill this section for add/update PRs. Delete for expand/icon PRs. -->
+<!-- Delete this section for docs/feat/fix/chore PRs that don't touch a service YAML. -->
 
-| Field | Value |
-|-------|-------|
-| **Service Name** | |
-| **Category** | |
-| **Free Tier** | |
-| **Limits** | |
-| **Rate Limits** | |
-| **Credit Card Required** | Yes / No |
-| **Verified Date** | Mon YYYY |
-| **Pricing Page** | [link]() |
+- [ ] YAML at `src/content/services/<slug>.yml` validates (`pnpm validate` passes)
+- [ ] `pricing_url` points to the official pricing page (not the homepage)
+- [ ] `date_verified` is set to the current month/year (today, for new entries)
+- [ ] `free_tier` bullets include concrete quotas and rate limits where the service publishes them
+- [ ] `brand_color` matches the service's simpleicons.org hex (or the fallback is logged in `docs/logo-coverage.md`)
+- [ ] Logo file exists at `public/logos/<slug>.svg` (`pnpm check-logos` passes)
+- [ ] `notes` updated if the entry has caveats (auto-pause, CC-required, trial-only, etc.)
 
-## Checklist
+## Local gate
 
-- [ ] References a GitHub issue (`Closes #123`)
-- [ ] Verified on official pricing page (not a blog)
-- [ ] Free tier is permanent (not a trial)
-- [ ] Service is actively maintained
-- [ ] No duplicate entry exists in repo
-- [ ] Table format matches existing entries
-- [ ] Branch follows naming convention (`add/`, `update/`, `expand/`, `icons/`, `fix/`)
+- [ ] `pnpm lint` — green
+- [ ] `pnpm validate` — green
+- [ ] `pnpm check-logos` — green
+- [ ] `pnpm audit-services --no-http` — green
+- [ ] `pnpm build` — green
+
+## Other
+
+- [ ] References a GitHub issue (`Closes #123` or `Part of #123`)
+- [ ] PR title follows Conventional Commits (`content:` / `feat:` / `fix:` / `docs:` / `chore:`)
+- [ ] Branch follows naming convention (`add/`, `update/`, `expand/`, `fix/`, `docs/`, `cleanup/`)
