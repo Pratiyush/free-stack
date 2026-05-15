@@ -30,7 +30,14 @@ const fullTitle = title === 'free-stack' ? title : `${title} — free-stack`;
     <meta property="og:url" content={canonical} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="free-stack — recently verified free tiers"
+      href="/rss.xml"
+    />
     <meta name="generator" content={Astro.generator} />
+    <slot name="head" />
   </head>
   <body>
     <header class="site-header">

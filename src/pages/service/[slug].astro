@@ -33,6 +33,22 @@ const {
 
 const categoryEntry = await getEntry('categories', category);
 const accent = brand_color ?? '#1a1a1a';
+
+// Schema.org JSON-LD record (SoftwareApplication). Emitted in <head> for SEO.
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name,
+  description: summary,
+  url: official_url,
+  applicationCategory: 'DeveloperApplication',
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'USD',
+    ...(pricing_url ? { url: pricing_url } : {}),
+  },
+};
 const verifiedDate = date_verified instanceof Date ? date_verified : new Date(date_verified);
 const verifiedDisplay = verifiedDate.toLocaleDateString('en-US', {
   year: 'numeric',
@@ -51,6 +67,7 @@ const addedDisplay = addedDate.toLocaleDateString('en-US', {
   description={summary}
   canonical={`https://freestack.is-a.dev/service/${service.id}`}
 >
+  <script slot="head" type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)} />
   <article class="service-page" style={`--accent: ${accent};`}>
     <div class="container-narrow">
       <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -178,26 +195,6 @@ const addedDisplay = addedDate.toLocaleDateString('en-US', {
       </footer>
     </div>
   </article>
-
-  <script
-    type="application/ld+json"
-    set:html={JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'SoftwareApplication',
-      name,
-      description: summary,
-      url: official_url,
-      offers: pricing.map((p) => ({
-        '@type': 'Offer',
-        name: p.name,
-        price: typeof p.price === 'number' ? p.price : 0,
-        priceCurrency: 'USD',
-        description: p.description ?? '',
-      })),
-      applicationCategory: categoryEntry?.data.name ?? category,
-      softwareVersion: '1.0',
-    })}
-  />
 
   <style>
     .service-page {
