@@ -166,11 +166,14 @@ function inferTierType(subcategory, creditCard) {
   return 'free-plan';
 }
 
-/** Compose a <=180 char summary string from the free tier + key limits. */
-function buildSummary(freeTier, keyLimits) {
+/** Compose a 10-180 char summary string from the free tier + key limits, with a
+ *  service-name fallback so the schema's min(10) constraint always holds. */
+function buildSummary(freeTier, keyLimits, serviceName) {
   const base = [freeTier, keyLimits].filter(Boolean).join(' — ');
-  if (base.length <= 180) return base;
-  return base.slice(0, 177).trimEnd() + '...';
+  if (base.length >= 10 && base.length <= 180) return base;
+  if (base.length > 180) return base.slice(0, 177).trimEnd() + '...';
+  // base is empty or <10 chars — synthesize a placeholder using the name.
+  return `${serviceName} — free tier; see the pricing page for details.`;
 }
 
 async function main() {
@@ -242,7 +245,7 @@ async function main() {
         const linkCell = iLink >= 0 ? cells[iLink] || '' : '';
         const link = parseLink(linkCell);
 
-        const summary = buildSummary(freeTierText, keyLimitsText);
+        const summary = buildSummary(freeTierText, keyLimitsText, serviceName);
         const free_tier = [freeTierText, keyLimitsText, rateText]
           .filter(Boolean)
           .filter((b) => b.length >= 3);
