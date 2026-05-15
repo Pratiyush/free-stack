@@ -1,0 +1,118 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Submit a service"
+  description="Submit a free-tier service to free-stack via a GitHub issue form."
+  canonical="https://freestack.is-a.dev/submit"
+>
+  <section class="container-narrow submit-page">
+    <header>
+      <p class="eyebrow">Contribute</p>
+      <h1>Submit a service.</h1>
+      <p class="lede">
+        Spotted a developer service with a real free tier we don't list? Open an issue with the
+        pre-filled form below. A maintainer reviews, labels it, and the YAML record + PR is
+        scaffolded automatically.
+      </p>
+    </header>
+
+    <div class="cta-wrap">
+      <a
+        class="cta"
+        href="https://github.com/Pratiyush/free-stack/issues/new/choose"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Open a submission issue →
+      </a>
+    </div>
+
+    <section class="block">
+      <h2>Before you submit</h2>
+      <ul class="checklist">
+        <li>
+          The free tier must be permanent. Trial credits and 14-day evaluation tiers are not
+          eligible.
+        </li>
+        <li>The service must be alive — commits in the last 18 months or active marketing.</li>
+        <li>
+          No credit card requirements without disclosure (we don't exclude them, but we flag them).
+        </li>
+        <li>You don't have a commercial affiliation with the service (or you've disclosed it).</li>
+      </ul>
+    </section>
+
+    <section class="block">
+      <h2>What happens next</h2>
+      <ol class="steps">
+        <li>The form lands as an issue with the <code>submission</code> label.</li>
+        <li>A maintainer reviews the free-tier claim against today's pricing page.</li>
+        <li>If accepted, they add the <code>ready-to-scaffold</code> label.</li>
+        <li>
+          A GitHub Action parses the issue and opens a draft PR with the YAML record filled in.
+        </li>
+        <li>CI runs lint → validate → check-logos → build. Green is required to merge.</li>
+        <li>Merge → Cloudflare Pages deploys → your service shows up in the catalog.</li>
+      </ol>
+    </section>
+  </section>
+
+  <style>
+    .submit-page {
+      padding-top: var(--space-xl);
+      padding-bottom: var(--space-2xl);
+    }
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--color-ink-soft);
+      margin-bottom: var(--space-sm);
+    }
+    .lede {
+      margin-top: var(--space-md);
+      font-size: 1.1rem;
+      color: var(--color-ink-soft);
+      max-width: 56ch;
+    }
+    .cta-wrap {
+      margin: var(--space-xl) 0;
+    }
+    .cta {
+      display: inline-block;
+      padding: 0.9rem 1.6rem;
+      background: var(--color-ink);
+      color: var(--color-paper);
+      text-decoration: none;
+      border-radius: var(--radius-md);
+      font-weight: 500;
+    }
+    .cta:hover {
+      background: var(--color-coral);
+    }
+    .block {
+      padding: var(--space-lg) 0;
+      border-top: var(--border-rule);
+    }
+    .block h2 {
+      font-size: 1.35rem;
+      margin-bottom: var(--space-md);
+    }
+    .checklist,
+    .steps {
+      padding-left: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+    code {
+      background: var(--color-paper-deep);
+      padding: 0.1em 0.35em;
+      border-radius: 3px;
+      font-size: 0.92em;
+    }
+  </style>
+</BaseLayout>

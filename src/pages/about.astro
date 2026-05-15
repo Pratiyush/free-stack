@@ -1,0 +1,114 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="About"
+  description="About free-stack — an open-source, non-commercial directory of developer free tiers."
+  canonical="https://freestack.is-a.dev/about"
+>
+  <section class="container-narrow about-page">
+    <header>
+      <p class="eyebrow">About</p>
+      <h1>Built by one developer, kept honest by being open source.</h1>
+    </header>
+
+    <p>
+      free-stack is run by <a href="https://github.com/Pratiyush" rel="noopener noreferrer"
+        >Pratiyush</a
+      >. It started as a personal table of free-tier services I trusted enough to use on real
+      projects. The list grew. Friends asked. So it became a public directory with one rule: every
+      entry is verified against today's pricing page.
+    </p>
+
+    <section class="block">
+      <h2>The pledge</h2>
+      <ul class="pledge">
+        <li><strong>No ads.</strong> Not now, not later, not "just one banner."</li>
+        <li>
+          <strong>No affiliate links.</strong> Outbound links go straight to the official URL with no
+          <code>?ref=</code> parameter.
+        </li>
+        <li>
+          <strong>No paid placement.</strong> Sponsors get a thank-you on the sponsors page. They don't
+          get a higher slot in the catalog.
+        </li>
+        <li>
+          <strong>No tracking.</strong> No third-party analytics. No cookies. If we ever add traffic analytics,
+          it'll be the kind that runs on the server with zero PII.
+        </li>
+      </ul>
+    </section>
+
+    <section class="block">
+      <h2>How to help</h2>
+      <p>
+        Submit services you trust via <a href="/submit">the issue form</a>. Report pricing changes
+        as soon as you spot them — the same form covers it. If you want to back the bandwidth bill,
+        the <a href="/sponsors">sponsors page</a> has the donate buttons.
+      </p>
+    </section>
+
+    <section class="block">
+      <h2>How it's built</h2>
+      <p>
+        Astro 6 static site. Tailwind CSS v4. Content lives in YAML files validated against a Zod
+        schema at build time. Pagefind indexes search at build. Deploys to Cloudflare Pages on every
+        merge. Source is on
+        <a href="https://github.com/Pratiyush/free-stack" rel="noopener noreferrer">GitHub</a>.
+      </p>
+    </section>
+  </section>
+
+  <style>
+    .about-page {
+      padding-top: var(--space-xl);
+      padding-bottom: var(--space-2xl);
+    }
+    .about-page > p {
+      margin-top: var(--space-md);
+      font-size: 1.1rem;
+      color: var(--color-ink-soft);
+      max-width: 65ch;
+    }
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--color-ink-soft);
+      margin-bottom: var(--space-sm);
+    }
+    .block {
+      padding: var(--space-lg) 0;
+      border-top: var(--border-rule);
+    }
+    .block h2 {
+      font-size: 1.35rem;
+      margin-bottom: var(--space-md);
+    }
+    .pledge {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+    .pledge li {
+      padding-left: 1.5rem;
+      position: relative;
+    }
+    .pledge li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--color-coral);
+    }
+    code {
+      background: var(--color-paper-deep);
+      padding: 0.1em 0.35em;
+      border-radius: 3px;
+      font-size: 0.92em;
+    }
+  </style>
+</BaseLayout>

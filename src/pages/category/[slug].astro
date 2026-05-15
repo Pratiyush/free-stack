@@ -1,0 +1,102 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import ServiceCard from '~/components/ui/ServiceCard.astro';
+
+export async function getStaticPaths() {
+  const categories = await getCollection('categories');
+  return categories.map((cat) => ({
+    params: { slug: cat.id },
+    props: { category: cat },
+  }));
+}
+
+const { category } = Astro.props;
+const allServices = await getCollection('services');
+const services = allServices
+  .filter((s) => s.data.category === category.id)
+  .sort((a, b) => a.data.name.localeCompare(b.data.name));
+---
+
+<BaseLayout
+  title={category.data.name}
+  description={category.data.blurb}
+  canonical={`https://freestack.is-a.dev/category/${category.id}`}
+>
+  <section class="category-page container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/catalog">All services</a>
+      <span aria-hidden="true">›</span>
+      <span>{category.data.name}</span>
+    </nav>
+
+    <header class="category-head container-narrow">
+      <p class="eyebrow">Category · {services.length} service{services.length === 1 ? '' : 's'}</p>
+      <h1>{category.data.name}</h1>
+      <p class="lede">{category.data.blurb}</p>
+    </header>
+
+    {
+      services.length === 0 ? (
+        <p class="empty">No services in this category yet.</p>
+      ) : (
+        <div class="grid">
+          {services.map((s) => (
+            <ServiceCard service={s} categoryName={category.data.name} />
+          ))}
+        </div>
+      )
+    }
+  </section>
+
+  <style>
+    .category-page {
+      padding-top: var(--space-xl);
+      padding-bottom: var(--space-2xl);
+    }
+    .breadcrumb {
+      display: flex;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      color: var(--color-ink-soft);
+      margin-bottom: var(--space-md);
+    }
+    .breadcrumb a {
+      color: var(--color-ink-soft);
+      text-decoration: none;
+    }
+    .breadcrumb a:hover {
+      color: var(--color-ink);
+    }
+    .category-head {
+      margin-bottom: var(--space-xl);
+    }
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--color-ink-soft);
+      margin-bottom: var(--space-sm);
+    }
+    h1 {
+      margin-top: var(--space-xs);
+    }
+    .lede {
+      font-size: 1.15rem;
+      color: var(--color-ink-soft);
+      margin-top: var(--space-md);
+      max-width: 65ch;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: var(--space-md);
+    }
+    .empty {
+      padding: var(--space-xl) 0;
+      text-align: center;
+      color: var(--color-ink-soft);
+    }
+  </style>
+</BaseLayout>

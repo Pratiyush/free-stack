@@ -1,13 +1,34 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '~/layouts/BaseLayout.astro';
+import ServiceCard from '~/components/ui/ServiceCard.astro';
+import CategoryChip from '~/components/ui/CategoryChip.astro';
+
+const services = await getCollection('services');
+const categories = (await getCollection('categories')).sort((a, b) => a.data.order - b.data.order);
+
+const countByCategory = new Map<string, number>();
+for (const s of services) {
+  countByCategory.set(s.data.category, (countByCategory.get(s.data.category) ?? 0) + 1);
+}
+
+const recentlyVerified = [...services]
+  .sort(
+    (a, b) => new Date(b.data.date_verified).getTime() - new Date(a.data.date_verified).getTime(),
+  )
+  .slice(0, 6);
 ---
 
 <BaseLayout
   title="free-stack"
-  description="319 verified free tiers for developers across 27 categories. No ads, no affiliate links — just the free tier you can actually use."
+  description={`${services.length} verified free tiers for developers. No ads, no affiliate links — just the free tier you can actually use.`}
 >
   <section class="hero container-narrow">
-    <p class="eyebrow">Free Tiers · Verified Monthly</p>
+    <p class="eyebrow">
+      Free Tiers · Verified {
+        new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
+      }
+    </p>
     <h1>Free tools that stay free.</h1>
     <p class="lede">
       A directory of developer services with real free tiers — permanent, not 14-day trials. Every
@@ -15,18 +36,18 @@ import BaseLayout from '~/layouts/BaseLayout.astro';
       placement.
     </p>
     <div class="cta-row">
-      <a class="cta-primary" href="/catalog">Browse the catalog</a>
+      <a class="cta-primary" href="/catalog">Browse {services.length} services</a>
       <a class="cta-secondary" href="/methodology">How we verify</a>
     </div>
   </section>
 
   <section class="stats container">
     <div class="stat">
-      <span class="stat-num">319</span>
+      <span class="stat-num">{services.length}</span>
       <span class="stat-label">verified services</span>
     </div>
     <div class="stat">
-      <span class="stat-num">27</span>
+      <span class="stat-num">{categories.length}</span>
       <span class="stat-label">categories</span>
     </div>
     <div class="stat">
@@ -39,14 +60,50 @@ import BaseLayout from '~/layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <section class="container categories-section">
+    <header class="section-head">
+      <h2>Browse by category</h2>
+      <p class="section-blurb">
+        Pick a category to see every service we trust at that layer of the stack.
+      </p>
+    </header>
+    <div class="category-grid">
+      {
+        categories.map((c) => (
+          <CategoryChip slug={c.id} name={c.data.name} count={countByCategory.get(c.id) ?? 0} />
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="container recently-section">
+    <header class="section-head">
+      <h2>Recently verified</h2>
+      <p class="section-blurb">The six most recently re-checked entries.</p>
+    </header>
+    <div class="grid">
+      {
+        recentlyVerified.map((s) => {
+          const cat = categories.find((c) => c.id === s.data.category);
+          return <ServiceCard service={s} categoryName={cat?.data.name} variant="compact" />;
+        })
+      }
+    </div>
+  </section>
+
   <section class="container-narrow about">
-    <h2>Built for shipping side projects on $0.</h2>
+    <h2>Why this exists.</h2>
     <p>
-      free-stack is open source and non-commercial. The only money is voluntary sponsorship via
-      GitHub Sponsors and Buy Me a Coffee — used to cover the domain and hosting bill, nothing else.
+      Every "awesome free tier" list inevitably rots. Services kill their free tiers; tables get
+      stale; nobody knows what's actually still free. free-stack solves that with a single rule:
+      every entry must point at today's pricing page, and every entry has a "verified" date you can
+      hold us to.
     </p>
-    <p class="muted">
-      <em>v0.1.0 — Astro 6 rebuild scaffolded. Full catalog migration shipping in v0.5.0.</em>
+    <p>
+      The project is open source and non-commercial. The only money is voluntary sponsorship via
+      GitHub Sponsors and Buy Me a Coffee — used to cover the domain and hosting bill, nothing else. <a
+        href="/sponsors">More on sponsorship</a
+      >.
     </p>
   </section>
 
@@ -126,15 +183,37 @@ import BaseLayout from '~/layouts/BaseLayout.astro';
       text-transform: lowercase;
       letter-spacing: 0.02em;
     }
+    .categories-section,
+    .recently-section {
+      padding-top: var(--space-2xl);
+    }
+    .section-head {
+      margin-bottom: var(--space-md);
+    }
+    .section-head h2 {
+      font-size: 1.6rem;
+    }
+    .section-blurb {
+      color: var(--color-ink-soft);
+      margin-top: var(--space-xs);
+    }
+    .category-grid {
+      display: flex;
+      gap: var(--space-sm);
+      flex-wrap: wrap;
+      margin-top: var(--space-md);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: var(--space-md);
+      margin-top: var(--space-md);
+    }
     .about {
-      padding-top: var(--space-xl);
+      padding-top: var(--space-2xl);
     }
     .about p {
       margin-top: var(--space-md);
-    }
-    .muted {
-      font-size: 0.9rem;
-      color: var(--color-ink-soft);
     }
     @media (max-width: 720px) {
       .stats {

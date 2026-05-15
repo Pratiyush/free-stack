@@ -1,0 +1,138 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Methodology"
+  description="How free-stack defines a 'real free tier' — inclusion and exclusion criteria."
+  canonical="https://freestack.is-a.dev/methodology"
+>
+  <section class="container-narrow methodology-page">
+    <header>
+      <p class="eyebrow">Methodology</p>
+      <h1>What counts as a free tier.</h1>
+      <p class="lede">
+        Not every service that says "free" deserves a slot in the catalog. Here's the bar.
+      </p>
+    </header>
+
+    <section class="block">
+      <h2>Four tier types we list</h2>
+      <dl class="tier-defs">
+        <dt>Always free</dt>
+        <dd>
+          Permanent. No expiration, no time limit. Generally has a hard ceiling on usage (e.g., 10
+          GB storage) but stays free forever within that ceiling.
+        </dd>
+        <dt>Free plan</dt>
+        <dd>
+          The free row of a multi-tier pricing page. Permanent. May require credit card after a
+          grace period; we flag that explicitly.
+        </dd>
+        <dt>Trial credit</dt>
+        <dd>
+          A one-time credit balance (e.g., $25 to spend on the API) that funds free usage until
+          depleted. Useful, but not the same as a permanent free tier.
+        </dd>
+        <dt>Pay as you go</dt>
+        <dd>
+          Per-use pricing with a meaningful free baseline (e.g., first N requests/month free).
+          Common for usage-based services like LLM APIs.
+        </dd>
+      </dl>
+    </section>
+
+    <section class="block">
+      <h2>What we won't list</h2>
+      <ul class="exclusion">
+        <li>14-day trial that calls itself "free."</li>
+        <li>"Free for non-commercial use only" that gates HTTPS or other essentials.</li>
+        <li>Services requiring a credit card up front without disclosure.</li>
+        <li>Tools abandoned for 18+ months (no commits, no marketing, no signs of life).</li>
+        <li>
+          "Lifetime deal" services on AppSumo that are not actually run by their maintainers
+          anymore.
+        </li>
+      </ul>
+      <p>When in doubt, we default to not listing.</p>
+    </section>
+
+    <section class="block">
+      <h2>Verification cadence</h2>
+      <p>
+        Every entry has a <code>date_verified</code> field. We re-verify entries at least once per month
+        against the live pricing page. A weekly link-check workflow opens an issue if any URL goes 404.
+        Entries unverified for more than 90 days get flagged.
+      </p>
+    </section>
+
+    <section class="block">
+      <h2>Trust signals</h2>
+      <ul>
+        <li>
+          Every commit lives on <a
+            href="https://github.com/Pratiyush/free-stack"
+            rel="noopener noreferrer">GitHub</a
+          > — the entire history is public.
+        </li>
+        <li>Every change is gated by CI (schema validation, logo presence, build).</li>
+        <li>No code is merged without a maintainer review.</li>
+        <li>Every release is annotated and notes are published per tag.</li>
+      </ul>
+    </section>
+  </section>
+
+  <style>
+    .methodology-page {
+      padding-top: var(--space-xl);
+      padding-bottom: var(--space-2xl);
+    }
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--color-ink-soft);
+      margin-bottom: var(--space-sm);
+    }
+    .lede {
+      margin-top: var(--space-md);
+      font-size: 1.1rem;
+      color: var(--color-ink-soft);
+      max-width: 56ch;
+    }
+    .block {
+      padding: var(--space-lg) 0;
+      border-top: var(--border-rule);
+    }
+    .block h2 {
+      font-size: 1.35rem;
+      margin-bottom: var(--space-md);
+    }
+    .tier-defs {
+      display: grid;
+      grid-template-columns: minmax(140px, max-content) 1fr;
+      gap: var(--space-sm) var(--space-md);
+    }
+    .tier-defs dt {
+      font-weight: 500;
+      color: var(--color-ink);
+    }
+    .tier-defs dd {
+      color: var(--color-ink-soft);
+      margin: 0;
+    }
+    .exclusion {
+      padding-left: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
+    code {
+      background: var(--color-paper-deep);
+      padding: 0.1em 0.35em;
+      border-radius: 3px;
+      font-size: 0.92em;
+    }
+  </style>
+</BaseLayout>

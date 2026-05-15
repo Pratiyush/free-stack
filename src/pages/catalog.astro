@@ -1,0 +1,199 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import ServiceCard from '~/components/ui/ServiceCard.astro';
+import SearchBox from '~/components/ui/SearchBox.astro';
+import { TIER_LABELS } from '~/lib/labels';
+
+const services = (await getCollection('services')).sort((a, b) =>
+  a.data.name.localeCompare(b.data.name),
+);
+const categories = (await getCollection('categories')).sort((a, b) => a.data.order - b.data.order);
+
+const tierTypes = ['always-free', 'free-plan', 'trial-credit', 'pay-as-you-go'] as const;
+---
+
+<BaseLayout
+  title="Catalog"
+  description={`Browse ${services.length} verified free tiers for developers. Filter by category and tier type.`}
+  canonical="https://freestack.is-a.dev/catalog"
+>
+  <section class="catalog container">
+    <header class="catalog-head container-narrow">
+      <p class="eyebrow">
+        Catalog · {services.length} services across {categories.length} categories
+      </p>
+      <h1>Every free tier we trust.</h1>
+      <p class="lede">
+        Filter by tier type or category. Each entry has been verified against the official pricing
+        page within the last 30 days.
+      </p>
+      <div class="search-row">
+        <SearchBox placeholder={`Search ${services.length} services…`} id="catalog-search" />
+      </div>
+    </header>
+
+    <div class="filters" role="region" aria-label="Filters">
+      <fieldset class="filter-group">
+        <legend>Tier type</legend>
+        <div class="filter-buttons">
+          <button type="button" data-filter-tier="" class="filter-btn active">All</button>
+          {
+            tierTypes.map((t) => (
+              <button type="button" data-filter-tier={t} class="filter-btn">
+                {TIER_LABELS[t]}
+              </button>
+            ))
+          }
+        </div>
+      </fieldset>
+      <fieldset class="filter-group">
+        <legend>Category</legend>
+        <select class="filter-select" data-filter-category>
+          <option value="">All categories</option>
+          {categories.map((c) => <option value={c.id}>{c.data.name}</option>)}
+        </select>
+      </fieldset>
+    </div>
+
+    <p class="result-count" data-result-count>{services.length} services</p>
+
+    <div class="grid" data-grid>
+      {
+        services.map((s) => {
+          const cat = categories.find((c) => c.id === s.data.category);
+          return <ServiceCard service={s} categoryName={cat?.data.name} />;
+        })
+      }
+    </div>
+  </section>
+
+  <script>
+    const grid = document.querySelector<HTMLElement>('[data-grid]');
+    const tierBtns = document.querySelectorAll<HTMLButtonElement>('[data-filter-tier]');
+    const catSelect = document.querySelector<HTMLSelectElement>('[data-filter-category]');
+    const resultCount = document.querySelector<HTMLElement>('[data-result-count]');
+    const cards = Array.from(grid?.querySelectorAll<HTMLElement>('.service-card') ?? []);
+
+    function applyFilters() {
+      const tier = document.querySelector<HTMLButtonElement>('[data-filter-tier].active')?.dataset
+        .filterTier;
+      const cat = catSelect?.value;
+      let visible = 0;
+      cards.forEach((card) => {
+        const matchTier = !tier || card.dataset.tier === tier;
+        const matchCat = !cat || card.dataset.category === cat;
+        const show = matchTier && matchCat;
+        card.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+      if (resultCount) resultCount.textContent = `${visible} service${visible === 1 ? '' : 's'}`;
+    }
+
+    tierBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        tierBtns.forEach((b) => b.classList.remove('active'));
+        btn.classList.add('active');
+        applyFilters();
+      });
+    });
+    catSelect?.addEventListener('change', applyFilters);
+  </script>
+
+  <style>
+    .catalog {
+      padding-top: var(--space-xl);
+      padding-bottom: var(--space-2xl);
+    }
+    .catalog-head {
+      margin-bottom: var(--space-lg);
+    }
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--color-ink-soft);
+      margin-bottom: var(--space-sm);
+    }
+    .lede {
+      font-size: 1.1rem;
+      color: var(--color-ink-soft);
+      margin-top: var(--space-md);
+      max-width: 65ch;
+    }
+    .search-row {
+      margin-top: var(--space-lg);
+    }
+    .filters {
+      display: flex;
+      gap: var(--space-lg);
+      flex-wrap: wrap;
+      padding: var(--space-md) 0;
+      border-top: var(--border-rule);
+      border-bottom: var(--border-rule);
+      margin-bottom: var(--space-md);
+    }
+    .filter-group {
+      border: none;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      flex-wrap: wrap;
+    }
+    .filter-group legend {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-ink-soft);
+      margin-right: var(--space-sm);
+      float: left;
+    }
+    .filter-buttons {
+      display: flex;
+      gap: 0.3rem;
+      flex-wrap: wrap;
+    }
+    .filter-btn {
+      font: inherit;
+      padding: 0.3rem 0.8rem;
+      border: 1px solid var(--color-rule);
+      border-radius: 999px;
+      background: transparent;
+      color: var(--color-ink-soft);
+      cursor: pointer;
+      font-size: 0.85rem;
+      transition: all 0.15s ease;
+    }
+    .filter-btn:hover {
+      border-color: var(--color-ink);
+      color: var(--color-ink);
+    }
+    .filter-btn.active {
+      background: var(--color-ink);
+      color: var(--color-paper);
+      border-color: var(--color-ink);
+    }
+    .filter-select {
+      font: inherit;
+      padding: 0.3rem 0.6rem;
+      border: 1px solid var(--color-rule);
+      border-radius: var(--radius-sm);
+      background: var(--color-paper);
+      color: var(--color-ink);
+    }
+    .result-count {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--color-ink-soft);
+      margin-bottom: var(--space-md);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: var(--space-md);
+    }
+  </style>
+</BaseLayout>

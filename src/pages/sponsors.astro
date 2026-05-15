@@ -1,0 +1,126 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Sponsors"
+  description="free-stack is funded entirely by sponsorship. No ads, no affiliate links."
+  canonical="https://freestack.is-a.dev/sponsors"
+>
+  <section class="container-narrow sponsors-page">
+    <header class="page-head">
+      <p class="eyebrow">Support</p>
+      <h1>Sponsors keep free-stack online.</h1>
+    </header>
+
+    <div class="banner">
+      <p>
+        <strong>Sponsorship does not influence rankings or listings.</strong> The editorial bar is the
+        same for every service: a real free tier you can use today. Money pays for the domain and hosting,
+        nothing else.
+      </p>
+    </div>
+
+    <section class="block">
+      <h2>The ledger</h2>
+      <p>
+        Annual costs for free-stack: roughly <strong>$12–15</strong> for the `.dev` domain (when we register
+        one — currently on `freestack.is-a.dev` for free) and <strong>$0</strong> for Cloudflare Pages
+        hosting (unlimited bandwidth free tier). Any surplus rolls into the following year.
+      </p>
+    </section>
+
+    <section class="block donate-row">
+      <a
+        class="donate sponsor-primary"
+        href="https://github.com/sponsors/Pratiyush"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Sponsor on GitHub
+      </a>
+      <a
+        class="donate sponsor-secondary"
+        href="https://www.buymeacoffee.com/pratiyush"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Buy Me a Coffee
+      </a>
+    </section>
+
+    <section class="block">
+      <h2>Why no ads?</h2>
+      <p>
+        Affiliate links create an incentive to list services that pay best, not services that are
+        best. The cleanest way to avoid that bias is to not take affiliate money in the first place.
+        Read more on <a href="/methodology">our methodology</a>.
+      </p>
+    </section>
+  </section>
+
+  <style>
+    .sponsors-page {
+      padding-top: var(--space-xl);
+      padding-bottom: var(--space-2xl);
+    }
+    .page-head {
+      margin-bottom: var(--space-lg);
+    }
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--color-sponsor);
+      margin-bottom: var(--space-sm);
+    }
+    .banner {
+      padding: var(--space-md);
+      background: color-mix(in srgb, var(--color-sponsor) 8%, transparent);
+      border-left: 3px solid var(--color-sponsor);
+      border-radius: var(--radius-sm);
+      margin-bottom: var(--space-xl);
+    }
+    .banner p {
+      margin: 0;
+      color: var(--color-ink);
+    }
+    .block {
+      padding: var(--space-lg) 0;
+      border-top: var(--border-rule);
+    }
+    .block h2 {
+      font-size: 1.35rem;
+      margin-bottom: var(--space-md);
+    }
+    .donate-row {
+      display: flex;
+      gap: var(--space-md);
+      flex-wrap: wrap;
+    }
+    .donate {
+      display: inline-block;
+      padding: 0.7rem 1.2rem;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .sponsor-primary {
+      background: var(--color-sponsor);
+      color: var(--color-paper);
+    }
+    .sponsor-primary:hover {
+      filter: brightness(1.1);
+    }
+    .sponsor-secondary {
+      background: transparent;
+      color: var(--color-sponsor);
+      border: 1px solid var(--color-sponsor);
+    }
+    .sponsor-secondary:hover {
+      background: var(--color-sponsor);
+      color: var(--color-paper);
+    }
+  </style>
+</BaseLayout>
