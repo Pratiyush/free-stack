@@ -37,6 +37,10 @@ const services = defineCollection({
     pricing_url: z.string().url().optional(),
     docs_url: z.string().url().optional(),
     date_added: z.coerce.date(),
+    date_updated: z
+      .string()
+      .regex(/^\d{4}-\d{2}-\d{2}$/)
+      .optional(),
     date_verified: z.coerce.date(),
     last_changed: z.coerce.date().optional(),
     maintainer_notes: z.string().optional(),
