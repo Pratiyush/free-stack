@@ -10,13 +10,57 @@ summary: '12-month trial (new accounts)'
 tier_type: free-plan
 
 free_tier:
-  - '12-month trial (new accounts)'
-  - '**Expires after 12 months** -- auto-converts to pay-as-you-go unless deprovisioned'
+  - '12-month free for new accounts'
+  - 750 hours B1S Linux VM and 750 hours B1S Windows VM
+  - 64 GB SSD-managed disk (P6) x2
+  - 5 GB LRS-hot Blob storage
+  - 250 GB SQL Database (S0)
+  - 15 GB inbound + 15 GB outbound bandwidth
+  - '$200 credit for first 30 days'
+  - 'Expires after 12 months -- auto-converts to PAYG unless deprovisioned'
+
+paid_tier_highlights:
+  - 'After 12 months, services bill at pay-as-you-go rates'
+  - 'Reserved instances and savings plans for up to 72% discount'
+  - '55+ Always-Free services continue at no charge'
+  - 'Spot VMs available for non-critical compute up to 90% off'
+  - 'Enterprise Agreement and CSP options for volume discounts'
 
 pricing:
-  - name: Free
+  - name: 12-Month Free Services
     price: 0
-    unit: /month
+    billing: free
+    description: Popular services free for first 12 months on new accounts
+    features:
+      - 750 hours B1S Linux and Windows VM
+      - 64 GB x 2 SSD-managed disks
+      - 5 GB Blob storage (LRS hot)
+      - 250 GB SQL Database (S0)
+      - 15 GB inbound + 15 GB outbound bandwidth
+      - $200 credit for first 30 days
+    cta_url: https://azure.microsoft.com/free/
+  - name: Always-Free Services
+    price: 0
+    billing: free
+    description: 55+ services that stay free beyond the 12-month window
+    features:
+      - Azure Functions 1M requests/mo
+      - Azure App Service 10 web/mobile apps
+      - Cosmos DB 1000 RU/s + 25 GB storage
+      - Azure DevOps 5 free users
+      - Azure AD B2C 50k MAU
+    cta_url: https://azure.microsoft.com/en-us/pricing/free-services
+  - name: Pay-As-You-Go
+    price: Usage-based
+    billing: usage-based
+    description: Standard Azure pricing after free tier expires
+    features:
+      - 200+ Azure services
+      - Pay only for what you use
+      - Reserved instance discounts
+      - Spot VM up to 90% off
+      - Always-Free quotas still apply
+    cta_url: https://azure.microsoft.com/en-us/pricing/
 
 tags: []
 
@@ -25,4 +69,4 @@ pricing_url: https://azure.microsoft.com/en-us/pricing/free-services
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

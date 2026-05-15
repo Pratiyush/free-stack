@@ -11,12 +11,109 @@ tier_type: free-plan
 
 free_tier:
   - Free plan (no credit card required)
-  - 'Containers sleep on inactivity, limited compute'
+  - 0.25 shared CPU and 256 MB RAM
+  - 100 GB transfer/month
+  - GitHub deployment and custom Docker containers
+  - 'USA region only; community support; containers sleep on inactivity'
+
+paid_tier_highlights:
+  - 'Shared from $5/mo (0.5 CPU, 512 MB) for MVPs with daily backups + CDN'
+  - 'Shared 2/3 scale up to 1 CPU + 2 GB RAM and 200 GB transfer'
+  - 'Dedicated from $50/mo: 2 dedicated CPU, premium support'
+  - 'Dedicated 3 $200/mo: 4 CPU, 8 GB RAM, 1 TB transfer'
+  - 'Enterprise adds bespoke plans and on-premise options'
 
 pricing:
   - name: Free
     price: 0
-    unit: /month
+    billing: free
+    description: For testing and learning the platform
+    features:
+      - 0.25 shared CPU
+      - 256 MB RAM
+      - 100 GB transfer
+      - GitHub deploy + custom Docker
+      - Community support
+      - USA region only
+    cta_url: https://www.back4app.com/signup-containers
+  - name: Shared
+    price: 5
+    unit: /month per container
+    billing: monthly
+    description: Serverless container for MVPs
+    features:
+      - 0.5 CPU, 512 MB RAM
+      - 100 GB transfer
+      - Global CDN
+      - Daily backups
+      - Support tickets
+    cta_url: https://www.back4app.com/signup-containers
+  - name: Shared 2
+    price: 15
+    unit: /month per container
+    billing: monthly
+    description: Mid-tier shared container
+    features:
+      - 1 CPU, 1 GB RAM
+      - 150 GB transfer
+      - Global CDN
+      - Daily backups
+    cta_url: https://www.back4app.com/signup-containers
+  - name: Shared 3
+    price: 25
+    unit: /month per container
+    billing: monthly
+    description: Enhanced shared tier
+    features:
+      - 1 CPU, 2 GB RAM
+      - 200 GB transfer
+      - Global CDN
+      - Daily backups
+    cta_url: https://www.back4app.com/signup-containers
+  - name: Dedicated
+    price: 50
+    unit: /month per container
+    billing: monthly
+    description: Dedicated infrastructure for production
+    features:
+      - 2 dedicated CPU
+      - 2 GB RAM
+      - 250 GB transfer
+      - Global CDN
+      - Premium support
+    cta_url: https://www.back4app.com/signup-containers
+  - name: Dedicated 2
+    price: 100
+    unit: /month per container
+    billing: monthly
+    description: High-performance dedicated tier
+    features:
+      - 2 dedicated CPU
+      - 4 GB RAM
+      - 500 GB transfer
+      - Premium support
+    cta_url: https://www.back4app.com/signup-containers
+  - name: Dedicated 3
+    price: 200
+    unit: /month per container
+    billing: monthly
+    description: Maximum dedicated resources
+    features:
+      - 4 dedicated CPU
+      - 8 GB RAM
+      - 1 TB transfer
+      - Premium support
+    cta_url: https://www.back4app.com/signup-containers
+  - name: Enterprise
+    price: Contact sales
+    billing: annual
+    description: Bespoke plans with professional services
+    features:
+      - Custom resources
+      - On-premise options
+      - Dedicated support
+      - SLA available
+    cta_url: https://www.back4app.com/contact
 
 tags: []
 
@@ -25,4 +122,4 @@ pricing_url: https://www.back4app.com/pricing/container-as-a-service
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

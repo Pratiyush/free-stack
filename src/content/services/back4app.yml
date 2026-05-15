@@ -10,20 +10,88 @@ summary: Free plan (no credit card required)
 tier_type: free-plan
 
 free_tier:
-  - Free plan (no credit card required)
-  - Hard limits; Parse Server compatible
+  - 25K monthly requests
+  - 250 MB database
+  - 1 GB data transfer
+  - 1 GB file storage
+  - Parse Server compatible
+  - No credit card required
+
+paid_tier_highlights:
+  - 'MVP $15/app/mo (annual): 500K requests, 1 GB DB, daily backups'
+  - 'Pay-As-You-Go $80/app/mo: 5M requests, 3 GB DB, 1 TB transfer'
+  - 'Dedicated $400/app/mo: unlimited requests on 10 CPU / 14 GB cluster'
+  - 'Dedicated tier is HIPAA-eligible with point-in-time restore'
+  - 'Enterprise: custom resources, multi-region, SLA'
 
 pricing:
   - name: Free
     price: 0
-    unit: /month
+    billing: free
+    description: Free for prototyping; no credit card
+    features:
+      - 25K monthly requests
+      - 250 MB database
+      - 1 GB transfer
+      - 1 GB file storage
+      - Parse Server compatible
+    cta_url: https://www.back4app.com/signup
+  - name: MVP
+    price: 15
+    unit: /app/month (annual)
+    billing: annual
+    description: For launching MVPs
+    features:
+      - 500K monthly requests
+      - 1 GB database
+      - 250 GB data transfer
+      - 50 GB file storage
+      - Daily backups (7-day retention)
+      - Up to 3 collaborators
+    cta_url: https://www.back4app.com/signup
+  - name: Pay-As-You-Go
+    price: 80
+    unit: /app/month (annual)
+    billing: annual
+    description: For production apps with growing scale
+    features:
+      - 5M monthly requests
+      - 3 GB database
+      - 1 TB data transfer
+      - 250 GB file storage
+      - Daily backups + 14-day access logs
+      - Up to 7 collaborators
+      - Custom domains
+    cta_url: https://www.back4app.com/signup
+  - name: Dedicated
+    price: 400
+    unit: /app/month (annual)
+    billing: annual
+    description: Dedicated cluster for production workloads
+    features:
+      - Unlimited requests (10 CPU / 14 GB)
+      - 8 GB database
+      - 2 TB data transfer
+      - 1 TB file storage
+      - Point-in-time restore
+      - Up to 20 collaborators
+      - HIPAA-eligible
+    cta_url: https://www.back4app.com/signup
+  - name: Enterprise
+    price: Contact sales
+    billing: annual
+    description: Custom resources, multi-region, SLA
+    features:
+      - Custom CPU/RAM
+      - Multi-region
+      - Dedicated support
+      - SLA included
+    cta_url: https://www.back4app.com/contact
 
 tags: []
 
 official_url: https://www.back4app.com/
-pricing_url: https://www.back4app.com/pricing
-
-maintainer_notes: 'Pricing page is JS-rendered (curl returns <1 KB shell); curl-only verifier cannot confirm bullets. Needs JS verifier (Sprint 4).'
+pricing_url: https://www.back4app.com/pricing/backend-as-a-service
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'

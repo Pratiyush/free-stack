@@ -10,13 +10,57 @@ summary: Permanent free tier (55+ services)
 tier_type: free-plan
 
 free_tier:
-  - Permanent free tier (55+ services)
-  - 'No always-free VM; B1S VM is 12-month trial only. $200 credit for first 30 days on new accounts'
+  - Permanent free tier across 55+ services
+  - 'Azure Functions: 1M requests + 400K GB-sec/month'
+  - 'Cosmos DB: 1,000 RU/s and 25 GB storage'
+  - 'App Service: 10 web, mobile, or API apps'
+  - 'Azure DevOps: 5 free users, unlimited private Git'
+  - 'Azure AD B2C: 50,000 MAU'
+  - 'No always-free VM; B1S is 12-month trial only'
+  - '$200 credit for first 30 days on new accounts'
+
+paid_tier_highlights:
+  - 'Always-Free quotas continue indefinitely; no expiration'
+  - 'Pay-as-you-go after free quotas exceeded'
+  - 'Reserved Instance discounts up to 72% on long-term commits'
+  - 'Azure Hybrid Benefit reuses on-prem Windows/SQL licenses'
+  - 'Spot VMs offer up to 90% off for interruptible workloads'
 
 pricing:
-  - name: Free
+  - name: Always Free
     price: 0
-    unit: /month
+    billing: free
+    description: 55+ services permanently free within monthly quotas
+    features:
+      - Azure Functions 1M requests/mo
+      - Cosmos DB 1000 RU/s + 25 GB
+      - 10 App Service web/mobile apps
+      - Azure DevOps 5 users
+      - Azure AD B2C 50k MAU
+      - Notebooks free CPU compute
+    cta_url: https://azure.microsoft.com/en-us/pricing/free-services
+  - name: Free Account ($200 credit)
+    price: 0
+    billing: free
+    description: $200 credit for first 30 days plus 12-month free services
+    features:
+      - $200 credit for 30 days
+      - 12-month free Linux/Windows B1S VMs
+      - 5 GB Blob storage
+      - 250 GB SQL Database
+      - Bandwidth quotas
+    cta_url: https://azure.microsoft.com/free/
+  - name: Pay-As-You-Go
+    price: Usage-based
+    billing: usage-based
+    description: Standard Azure pricing for everything beyond free
+    features:
+      - 200+ Azure services
+      - Reserved instances and savings plans
+      - Spot VMs up to 90% off
+      - Always-Free quotas still apply
+      - Azure Hybrid Benefit available
+    cta_url: https://azure.microsoft.com/en-us/pricing/
 
 tags: []
 
@@ -25,4 +69,4 @@ pricing_url: https://azure.microsoft.com/en-us/pricing/free-services
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

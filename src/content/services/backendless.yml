@@ -10,13 +10,76 @@ summary: Free plan (no credit card required)
 tier_type: free-plan
 
 free_tier:
-  - Free plan (no credit card required)
-  - '300 API calls/min rate limit; exceeding fixed limits blocks app with 30-day grace period'
+  - Free Cloud plan (no credit card required)
+  - 50 API requests/minute
+  - 20 database tables, 15,000 objects per table
+  - 1 GB file storage
+  - 'Fixed limits; no SSL, daily backups, or team permissions'
+  - 30-day grace period on overages
+
+paid_tier_highlights:
+  - 'Cloud Scale from $15/mo: unlimited API requests, 10 GB storage'
+  - 'Scale plan adds free SSL, daily backups, team permissions'
+  - 'Function Packs $5-$399/mo for storage, real-time, security extras'
+  - 'Backendless Pro: free on-premise self-host with no functional limits'
+  - 'Managed Backendless: paid 24x7x365 ops for Pro installations'
 
 pricing:
-  - name: Free
+  - name: Cloud Free
     price: 0
-    unit: /month
+    billing: free
+    description: Hosted BaaS with fixed quotas; no CC required
+    features:
+      - 50 API requests/minute
+      - 20 tables, 15K objects each
+      - 1 GB file storage
+      - All platform features available
+      - No SSL/daily backups/team perms
+    cta_url: https://develop.backendless.com/registration
+  - name: Cloud Scale
+    price: 15
+    unit: /month (variable + fixed)
+    billing: usage-based
+    description: Flexible limits for growing apps
+    features:
+      - Unlimited API requests
+      - 100 tables, 100K objects each
+      - 10 GB file storage
+      - Daily backups
+      - Free SSL certificate
+      - Team permissions
+    cta_url: https://backendless.com/pricing/backendless-cloud/
+  - name: Function Packs
+    price: 5
+    unit: /pack/month (from)
+    billing: monthly
+    description: À la carte capacity add-ons
+    features:
+      - Extra file storage
+      - Real-time connections
+      - Enterprise security features
+      - $5-$399/pack range
+    cta_url: https://backendless.com/pricing/
+  - name: Backendless Pro (self-host)
+    price: 0
+    billing: free
+    description: Free-licensed self-hosted installation
+    features:
+      - Install anywhere
+      - No functional limits
+      - High transactional volume
+      - Scales easily
+    cta_url: https://backendless.com/pricing/backendless-pro/
+  - name: Managed Backendless
+    price: Contact sales
+    billing: annual
+    description: Managed ops for Pro installations
+    features:
+      - 24x7x365 monitoring
+      - Expert team support
+      - Proactive issue resolution
+      - Managed environment
+    cta_url: https://backendless.com/pricing/managed-backendless/
 
 tags: []
 
@@ -25,4 +88,4 @@ pricing_url: https://backendless.com/pricing/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

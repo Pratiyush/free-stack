@@ -9,19 +9,68 @@ summary: Cloud storage with 10 GB free, 1 GB daily downloads, and S3-compatible 
 tier_type: always-free
 
 free_tier:
-  - 10 GB storage
-  - 1 GB download/day
+  - 10 GB storage always free
+  - 3x storage in free egress per month (e.g. 30 GB free if you store 10 GB)
   - Free uploads
-  - 2.5K Class B and 2.5K Class C transactions/day
+  - 2,500 Class B and 2,500 Class C transactions/day
   - Class A operations free
+  - S3-compatible API at no extra cost
+
+paid_tier_highlights:
+  - 'Pay-as-you-go: $6.95/TB-month storage; $0.01/GB egress past 3x quota'
+  - 'B2 Reserve: $19,500/year for 250 TB (~$6.50/TB-month)'
+  - 'B2 Overdrive: $15/TB-month with unlimited free egress (multi-PB commit)'
+  - 'Free egress via Fastly, Cloudflare, bunny.net, CacheFly partners'
+  - 'No retrieval or API fees beyond the included quotas'
 
 pricing:
   - name: Free
     price: 0
-    unit: /month
-  - name: Pay-as-you-go
-    description: $0.01/GB/mo storage
-    price: 'Usage'
+    billing: free
+    description: 10 GB always-free with S3-compatible API
+    features:
+      - 10 GB storage always free
+      - 3x storage egress free per month
+      - 2.5K Class B transactions/day
+      - 2.5K Class C transactions/day
+      - Class A operations free
+      - S3-compatible API
+    cta_url: https://www.backblaze.com/sign-up/cloud-storage
+  - name: Pay-As-You-Go
+    price: 6.95
+    unit: /TB-month
+    billing: usage-based
+    description: Standard cloud-storage pricing with generous egress
+    features:
+      - $6.95/TB-month storage
+      - Free egress up to 3x storage
+      - $0.01/GB overage egress
+      - Class B/C transactions billed lightly
+      - First 10 GB always free
+    cta_url: https://www.backblaze.com/sign-up/cloud-storage
+  - name: B2 Reserve
+    price: 19500
+    unit: /year for 250 TB
+    billing: annual
+    description: Annual commitment with lower per-TB cost
+    features:
+      - ~$6.50/TB-month
+      - 250 TB minimum commit
+      - Free egress up to 3x storage
+      - $0.01/GB overage egress
+      - Invoice billing
+    cta_url: https://www.backblaze.com/contact-sales/cloud-storage
+  - name: B2 Overdrive
+    price: 15
+    unit: /TB-month
+    billing: usage-based
+    description: High-performance multi-PB tier with unlimited egress
+    features:
+      - Starts at $15/TB-month
+      - Unlimited free egress
+      - Multi-petabyte commit required
+      - High-throughput access
+    cta_url: https://www.backblaze.com/contact-sales/b2-overdrive
 
 tags: [object-storage, s3-compatible, cloud-storage, backup, file-storage]
 
