@@ -1,0 +1,27 @@
+name: Percy (BrowserStack)
+slug: percy-browserstack
+category: testing
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/percy-browserstack.svg
+
+summary: '5,000 screenshots/mo'
+
+tier_type: free-plan
+
+free_tier:
+  - '5,000 screenshots/mo'
+  - Screenshots reset monthly
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://percy.io/
+pricing_url: https://percy.io/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

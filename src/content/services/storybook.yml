@@ -1,0 +1,27 @@
+name: Storybook
+slug: storybook
+category: design
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/storybook.svg
+
+summary: 'Free (open-source)'
+
+tier_type: free-plan
+
+free_tier:
+  - 'Free (open-source)'
+  - 'Self-hosted, no usage limits, MIT license'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://storybook.js.org/
+pricing_url: https://storybook.js.org/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

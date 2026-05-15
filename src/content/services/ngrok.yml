@@ -1,0 +1,27 @@
+name: '**ngrok**'
+slug: ngrok
+category: dev-tools
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/ngrok.svg
+
+summary: '**ngrok** — free tier; see the pricing page for details.'
+
+tier_type: free-plan
+
+free_tier:
+  - Free plan
+  - Interstitial warning page on free plan
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://ngrok.com/
+pricing_url: https://ngrok.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

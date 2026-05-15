@@ -1,0 +1,27 @@
+name: Jira
+slug: jira
+category: project-management
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/jira.svg
+
+summary: Free for up to 10 users
+
+tier_type: free-plan
+
+free_tier:
+  - Free for up to 10 users
+  - Community support only
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.atlassian.com/
+pricing_url: https://www.atlassian.com/software/jira/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

@@ -1,0 +1,27 @@
+name: Logflare
+slug: logflare
+category: logs
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/logflare.svg
+
+summary: Free metered plan
+
+tier_type: free-plan
+
+free_tier:
+  - Free metered plan
+  - '5 events/sec avg over 60s, 90-day retention; no SMS alerts on free'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://logflare.app/
+pricing_url: https://logflare.app/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

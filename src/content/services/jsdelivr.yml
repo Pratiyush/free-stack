@@ -1,0 +1,27 @@
+name: jsDelivr
+slug: jsdelivr
+category: storage
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/jsdelivr.svg
+
+summary: 'Unlimited bandwidth, fully free public CDN'
+
+tier_type: free-plan
+
+free_tier:
+  - 'Unlimited bandwidth, fully free public CDN'
+  - No documented rate limits; serves 150B+ requests/mo
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.jsdelivr.com/
+pricing_url: https://www.jsdelivr.com/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

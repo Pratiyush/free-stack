@@ -1,0 +1,27 @@
+name: Agora
+slug: agora
+category: communication
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/agora.svg
+
+summary: '10,000 free minutes/month'
+
+tier_type: free-plan
+
+free_tier:
+  - '10,000 free minutes/month'
+  - Free minutes apply per account; does NOT apply to CDN live streaming or Signaling SDK
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.agora.io/
+pricing_url: https://www.agora.io/en/pricing/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

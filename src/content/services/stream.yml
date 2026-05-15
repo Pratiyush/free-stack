@@ -1,0 +1,27 @@
+name: Stream
+slug: stream
+category: communication
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/stream.svg
+
+summary: 'Free for teams <5 members & <$10K revenue'
+
+tier_type: free-plan
+
+free_tier:
+  - 'Free for teams <5 members & <$10K revenue'
+  - Media transfer billed separately (~$0.12/GB); not intended for production on free tier
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://getstream.io/
+pricing_url: https://getstream.io/chat/pricing/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

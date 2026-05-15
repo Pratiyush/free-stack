@@ -1,0 +1,27 @@
+name: '**Vercel DNS**'
+slug: vercel-dns
+category: dns
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/vercel-dns.svg
+
+summary: Free (Hobby plan)
+
+tier_type: free-plan
+
+free_tier:
+  - Free (Hobby plan)
+  - Included with Hobby plan limits
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://vercel.com/
+pricing_url: https://vercel.com/docs/domains
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

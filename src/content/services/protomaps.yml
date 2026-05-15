@@ -1,0 +1,27 @@
+name: Protomaps
+slug: protomaps
+category: maps
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/protomaps.svg
+
+summary: 'Fully free and open source (BSD/CC-BY); self-hosted'
+
+tier_type: free-plan
+
+free_tier:
+  - 'Fully free and open source (BSD/CC-BY); self-hosted'
+  - 'N/A -- self-hosted; limited by your CDN'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://protomaps.com/
+pricing_url: https://protomaps.com/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

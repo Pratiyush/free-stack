@@ -1,0 +1,26 @@
+name: Hanko
+slug: hanko
+category: auth
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/hanko.svg
+
+summary: Hanko — free tier; see the pricing page for details.
+
+tier_type: free-plan
+
+free_tier:
+  - Free plan
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.hanko.io/
+pricing_url: https://www.hanko.io/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

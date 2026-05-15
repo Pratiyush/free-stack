@@ -1,0 +1,28 @@
+name: Hugging Face Inference
+slug: hugging-face-inference
+category: ai-apis
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/hugging-face-inference.svg
+
+summary: 'Free monthly credits — ~100K characters/month; 1,000s of models (text, image, audio)'
+
+tier_type: always-free
+
+free_tier:
+  - Free monthly credits
+  - '~100K characters/month; 1,000s of models (text, image, audio)'
+  - 60 RPM
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://huggingface.co/
+pricing_url: https://huggingface.co/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

@@ -1,0 +1,27 @@
+name: Creem
+slug: creem
+category: payments
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/creem.svg
+
+summary: 'No monthly fee, Merchant of Record'
+
+tier_type: free-plan
+
+free_tier:
+  - 'No monthly fee, Merchant of Record'
+  - 'Lower rate than Paddle/LemonSqueezy, designed for indie hackers and SaaS'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.creem.io/
+pricing_url: https://www.creem.io/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

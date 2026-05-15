@@ -1,0 +1,27 @@
+name: Google Maps Platform
+slug: google-maps-platform
+category: maps
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/google-maps-platform.svg
+
+summary: 'Per-SKU free thresholds: Essentials 10K/mo, Pro 5K/mo, Enterprise 1K/mo; Map Tiles 100K/mo'
+
+tier_type: free-plan
+
+free_tier:
+  - 'Per-SKU free thresholds: Essentials 10K/mo, Pro 5K/mo, Enterprise 1K/mo; Map Tiles 100K/mo'
+  - 'Per-SKU rate limits apply'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://mapsplatform.google.com/
+pricing_url: https://mapsplatform.google.com/pricing/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

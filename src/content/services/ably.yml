@@ -1,0 +1,27 @@
+name: Ably
+slug: ably
+category: communication
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/ably.svg
+
+summary: Free plan (permanent)
+
+tier_type: free-plan
+
+free_tier:
+  - Free plan (permanent)
+  - No time limit on free tier; messages counted by publish + delivery
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://ably.com/
+pricing_url: https://ably.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

@@ -1,0 +1,27 @@
+name: Nextra
+slug: nextra
+category: documentation
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/nextra.svg
+
+summary: 'Fully free (OSS, MIT license)'
+
+tier_type: free-plan
+
+free_tier:
+  - 'Fully free (OSS, MIT license)'
+  - 'Static site generator -- deploy on Vercel/Cloudflare/Netlify free tiers. Used by Next.js, React, Tailwind docs'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://nextra.site/
+pricing_url: https://nextra.site/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

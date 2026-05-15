@@ -1,0 +1,27 @@
+name: 'Azure 12-Month Free'
+slug: azure-12-month-free
+category: iaas
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/azure-12-month-free.svg
+
+summary: '12-month trial (new accounts)'
+
+tier_type: free-plan
+
+free_tier:
+  - '12-month trial (new accounts)'
+  - '**Expires after 12 months** -- auto-converts to pay-as-you-go unless deprovisioned'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://azure.microsoft.com/
+pricing_url: https://azure.microsoft.com/en-us/pricing/free-services
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

@@ -1,0 +1,26 @@
+name: Loops
+slug: loops
+category: email
+brand_color: '#888888'
+logo: /logos/loops.svg
+
+summary: Free forever
+
+tier_type: free-plan
+
+free_tier:
+  - Free forever
+  - Not published
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://loops.so/
+pricing_url: https://loops.so/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

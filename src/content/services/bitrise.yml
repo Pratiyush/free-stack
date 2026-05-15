@@ -1,0 +1,27 @@
+name: '**Bitrise**'
+slug: bitrise
+category: mobile
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/bitrise.svg
+
+summary: Hobby plan (free)
+
+tier_type: free-plan
+
+free_tier:
+  - Hobby plan (free)
+  - '90-min build timeout; 1 credit = 1 min Linux or 30 sec macOS; no credit card required'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://bitrise.io/
+pricing_url: https://bitrise.io/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

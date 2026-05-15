@@ -1,0 +1,27 @@
+name: Nominatim (OpenStreetMap)
+slug: nominatim-openstreetmap
+category: maps
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/nominatim-openstreetmap.svg
+
+summary: 'Fully free and open source; self-hostable'
+
+tier_type: free-plan
+
+free_tier:
+  - 'Fully free and open source; self-hostable'
+  - 1 request/sec on public instance
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://operations.osmfoundation.org/
+pricing_url: https://operations.osmfoundation.org/policies/nominatim/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

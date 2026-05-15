@@ -1,0 +1,27 @@
+name: Polar
+slug: polar
+category: payments
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/polar.svg
+
+summary: 'No monthly fee, Merchant of Record'
+
+tier_type: free-plan
+
+free_tier:
+  - 'No monthly fee, Merchant of Record'
+  - 'Stripe''s 2.9%+30c included in the 4% rate, +1.5% international card fee passed through at cost, +0.5% for subscription payments'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://polar.sh/
+pricing_url: https://polar.sh/resources/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

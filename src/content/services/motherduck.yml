@@ -1,0 +1,27 @@
+name: MotherDuck
+slug: motherduck
+category: databases
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/motherduck.svg
+
+summary: Free plan (cloud DuckDB)
+
+tier_type: always-free
+
+free_tier:
+  - Free plan (cloud DuckDB)
+  - Hard cap on storage and compute; no overage on free plan
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://motherduck.com/
+pricing_url: https://motherduck.com/product/pricing/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

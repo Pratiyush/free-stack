@@ -1,0 +1,27 @@
+name: Oracle Cloud Always Free
+slug: oracle-cloud-always-free
+category: iaas
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/oracle-cloud-always-free.svg
+
+summary: Permanent free tier (most generous)
+
+tier_type: free-plan
+
+free_tier:
+  - Permanent free tier (most generous)
+  - ARM instances may face capacity constraints in popular regions due to high demand
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.oracle.com/
+pricing_url: https://www.oracle.com/cloud/free/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

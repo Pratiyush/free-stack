@@ -1,0 +1,27 @@
+name: Mapbox
+slug: mapbox
+category: maps
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/mapbox.svg
+
+summary: 50K web map loads/mo; 100K geocoding requests/mo; 25K mobile MAUs
+
+tier_type: free-plan
+
+free_tier:
+  - 50K web map loads/mo; 100K geocoding requests/mo; 25K mobile MAUs
+  - '1,000 geocoding requests/min (adjustable)'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.mapbox.com/
+pricing_url: https://www.mapbox.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

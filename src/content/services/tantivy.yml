@@ -1,0 +1,27 @@
+name: '**Tantivy**'
+slug: tantivy
+category: search
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/tantivy.svg
+
+summary: 'Open-source (MIT)'
+
+tier_type: free-plan
+
+free_tier:
+  - 'Open-source (MIT)'
+  - 'Library only, no managed service; embed in your app'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://github.com/
+pricing_url: https://github.com/quickwit-oss/tantivy
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

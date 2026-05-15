@@ -1,0 +1,27 @@
+name: POEditor
+slug: poeditor
+category: translation
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/poeditor.svg
+
+summary: Free plan (permanent)
+
+tier_type: free-plan
+
+free_tier:
+  - Free plan (permanent)
+  - 'Free trial (10 days): 30,000 strings; OSI-licensed open-source projects: free with no limits'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://poeditor.com/
+pricing_url: https://poeditor.com/pricing/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

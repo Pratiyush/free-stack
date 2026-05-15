@@ -1,0 +1,25 @@
+name: Checkly
+slug: checkly
+category: analytics
+brand_color: '#888888'
+logo: /logos/checkly.svg
+
+summary: Hobby (free)
+
+tier_type: free-plan
+
+free_tier:
+  - Hobby (free)
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.checklyhq.com/
+pricing_url: https://www.checklyhq.com/pricing/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

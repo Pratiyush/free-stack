@@ -1,0 +1,27 @@
+name: '**Insomnia**'
+slug: insomnia
+category: dev-tools
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/insomnia.svg
+
+summary: 'Free plan (open source, MIT)'
+
+tier_type: free-plan
+
+free_tier:
+  - 'Free plan (open source, MIT)'
+  - 'Local only, no sync'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://insomnia.rest/
+pricing_url: https://insomnia.rest/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

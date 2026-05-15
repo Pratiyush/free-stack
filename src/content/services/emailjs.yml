@@ -1,0 +1,26 @@
+name: EmailJS
+slug: emailjs
+category: email
+brand_color: '#888888'
+logo: /logos/emailjs.svg
+
+summary: Free forever
+
+tier_type: free-plan
+
+free_tier:
+  - Free forever
+  - Not published
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.emailjs.com/
+pricing_url: https://www.emailjs.com/pricing/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

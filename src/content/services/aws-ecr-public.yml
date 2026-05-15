@@ -1,0 +1,27 @@
+name: AWS ECR Public
+slug: aws-ecr-public
+category: containers
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/aws-ecr-public.svg
+
+summary: Free permanently (public repos)
+
+tier_type: free-plan
+
+free_tier:
+  - Free permanently (public repos)
+  - '500GB/mo anonymous transfer, 5TB/mo authenticated transfer; same-region AWS compute always free'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://aws.amazon.com/
+pricing_url: https://aws.amazon.com/ecr/pricing/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

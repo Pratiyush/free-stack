@@ -1,0 +1,27 @@
+name: Codecov
+slug: codecov
+category: code-quality
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/codecov.svg
+
+summary: Free for up to 5 users; unlimited public repos
+
+tier_type: free-plan
+
+free_tier:
+  - Free for up to 5 users; unlimited public repos
+  - No documented rate limits
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://about.codecov.io/
+pricing_url: https://about.codecov.io/pricing/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

@@ -1,0 +1,27 @@
+name: Monday.com
+slug: monday-com
+category: collaboration
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/monday-com.svg
+
+summary: Free Individual plan
+
+tier_type: free-plan
+
+free_tier:
+  - Free Individual plan
+  - 'No guest access, no integrations, no automations, boards become read-only if limits exceeded'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://monday.com/
+pricing_url: https://monday.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

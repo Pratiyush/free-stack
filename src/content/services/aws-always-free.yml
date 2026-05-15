@@ -1,0 +1,27 @@
+name: AWS Always Free
+slug: aws-always-free
+category: iaas
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/aws-always-free.svg
+
+summary: Permanent free tier (30+ services)
+
+tier_type: free-plan
+
+free_tier:
+  - Permanent free tier (30+ services)
+  - 'No free compute (EC2) on always-free tier; EC2 t2.micro is 12-month trial only'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://aws.amazon.com/
+pricing_url: https://aws.amazon.com/free/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

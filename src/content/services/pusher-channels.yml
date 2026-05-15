@@ -1,0 +1,27 @@
+name: Pusher Channels
+slug: pusher-channels
+category: communication
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/pusher-channels.svg
+
+summary: Sandbox plan (permanent)
+
+tier_type: free-plan
+
+free_tier:
+  - Sandbox plan (permanent)
+  - Daily message cap resets at midnight UTC; not suited for production workloads
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://pusher.com/
+pricing_url: https://pusher.com/channels/pricing/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

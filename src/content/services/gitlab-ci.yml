@@ -1,0 +1,27 @@
+name: GitLab CI
+slug: gitlab-ci
+category: testing
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/gitlab-ci.svg
+
+summary: 400 compute mins/mo
+
+tier_type: free-plan
+
+free_tier:
+  - 400 compute mins/mo
+  - Minutes reset monthly; no rollover
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://about.gitlab.com/
+pricing_url: https://about.gitlab.com/pricing/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

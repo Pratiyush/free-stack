@@ -1,0 +1,27 @@
+name: Lago
+slug: lago
+category: payments
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/lago.svg
+
+summary: 'Free (open-source, self-hosted) / Cloud Starter $0/mo'
+
+tier_type: free-plan
+
+free_tier:
+  - 'Free (open-source, self-hosted) / Cloud Starter $0/mo'
+  - 'Event-driven metering up to 15K events/sec, supports flat-rate + usage-based + tiered + volume + package pricing models, no revenue share on self-hosted'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://getlago.com/
+pricing_url: https://getlago.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

@@ -1,0 +1,27 @@
+name: HyperDX
+slug: hyperdx
+category: logs
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/hyperdx.svg
+
+summary: Free tier (no credit card)
+
+tier_type: free-plan
+
+free_tier:
+  - Free tier (no credit card)
+  - '3-day retention, 1 user; open-source self-host option available'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.hyperdx.io/
+pricing_url: https://www.hyperdx.io/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

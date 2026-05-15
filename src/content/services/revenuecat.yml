@@ -1,0 +1,27 @@
+name: '**RevenueCat**'
+slug: revenuecat
+category: mobile
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/revenuecat.svg
+
+summary: Free under $2.5K MTR
+
+tier_type: free-plan
+
+free_tier:
+  - Free under $2.5K MTR
+  - 'Free until $2,500/mo tracked revenue (gross, before store cut); then 1% of MTR'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.revenuecat.com/
+pricing_url: https://www.revenuecat.com/pricing/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

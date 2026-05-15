@@ -1,0 +1,27 @@
+name: IconBuddy
+slug: iconbuddy
+category: design
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/iconbuddy.svg
+
+summary: IconBuddy — free tier; see the pricing page for details.
+
+tier_type: free-plan
+
+free_tier:
+  - Free tier
+  - 'Premium tier ($69 one-time) for full 300K+ library and advanced features'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://iconbuddy.com/
+pricing_url: https://iconbuddy.com/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

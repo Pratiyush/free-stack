@@ -1,0 +1,27 @@
+name: Docker Hub
+slug: docker-hub
+category: containers
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/docker-hub.svg
+
+summary: Docker Personal (free forever)
+
+tier_type: free-plan
+
+free_tier:
+  - Docker Personal (free forever)
+  - '200 pulls per 6-hour window (unauthenticated: 100/6hr); HTTP 429 when exceeded'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.docker.com/
+pricing_url: https://www.docker.com/pricing/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

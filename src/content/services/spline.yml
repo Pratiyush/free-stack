@@ -1,0 +1,27 @@
+name: Spline
+slug: spline
+category: design
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/spline.svg
+
+summary: Spline — free tier; see the pricing page for details.
+
+tier_type: free-plan
+
+free_tier:
+  - Free plan
+  - 'Spline logo watermark on exports, no code/mobile exports, no version history, no video imports, no asset library'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://spline.design/
+pricing_url: https://spline.design/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

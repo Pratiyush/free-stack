@@ -1,0 +1,27 @@
+name: '**DNS4EU**'
+slug: dns4eu
+category: dns
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/dns4eu.svg
+
+summary: Free public resolver
+
+tier_type: free-plan
+
+free_tier:
+  - Free public resolver
+  - No usage caps for individuals
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.joindns4.eu/
+pricing_url: https://www.joindns4.eu/for-public
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

@@ -1,0 +1,27 @@
+name: Firebase Storage
+slug: firebase-storage
+category: storage
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/firebase-storage.svg
+
+summary: 5 GB stored (Blaze plan required since Feb 2026)
+
+tier_type: free-plan
+
+free_tier:
+  - 5 GB stored (Blaze plan required since Feb 2026)
+  - 'Blaze plan mandatory; no-cost usage preserved on *.appspot.com buckets'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://firebase.google.com/
+pricing_url: https://firebase.google.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

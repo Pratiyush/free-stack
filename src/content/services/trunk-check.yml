@@ -1,0 +1,27 @@
+name: Trunk Check
+slug: trunk-check
+category: code-quality
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/trunk-check.svg
+
+summary: Free for public repos + private repos with up to 5 active committers
+
+tier_type: free-plan
+
+free_tier:
+  - Free for public repos + private repos with up to 5 active committers
+  - No documented rate limits
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://trunk.io/
+pricing_url: https://trunk.io/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

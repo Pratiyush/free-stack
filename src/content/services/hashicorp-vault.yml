@@ -1,0 +1,27 @@
+name: '**HashiCorp Vault**'
+slug: hashicorp-vault
+category: security
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/hashicorp-vault.svg
+
+summary: 'Community Edition (self-hosted)'
+
+tier_type: free-plan
+
+free_tier:
+  - 'Community Edition (self-hosted)'
+  - HCP Vault Secrets free tier EOL July 2026; use Community Edition
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.hashicorp.com/
+pricing_url: https://www.hashicorp.com/en/lp/vault-p
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

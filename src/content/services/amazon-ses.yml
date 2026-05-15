@@ -1,0 +1,26 @@
+name: Amazon SES
+slug: amazon-ses
+category: email
+brand_color: '#888888'
+logo: /logos/amazon-ses.svg
+
+summary: 'Free for 12 months (pre-Jul 2025 accounts: 3,000/month); new accounts get $200 AWS credits'
+
+tier_type: free-plan
+
+free_tier:
+  - 'Free for 12 months (pre-Jul 2025 accounts: 3,000/month); new accounts get $200 AWS credits'
+  - Standard AWS limits
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://aws.amazon.com/
+pricing_url: https://aws.amazon.com/ses/pricing/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

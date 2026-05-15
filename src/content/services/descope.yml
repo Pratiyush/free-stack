@@ -1,0 +1,26 @@
+name: Descope
+slug: descope
+category: auth
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/descope.svg
+
+summary: Free Forever plan
+
+tier_type: free-plan
+
+free_tier:
+  - Free Forever plan
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.descope.com/
+pricing_url: https://www.descope.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

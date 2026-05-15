@@ -1,0 +1,27 @@
+name: Weblate
+slug: weblate
+category: translation
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/weblate.svg
+
+summary: 'Free for libre/open-source projects (hosted); free self-hosted'
+
+tier_type: free-plan
+
+free_tier:
+  - 'Free for libre/open-source projects (hosted); free self-hosted'
+  - Paid hosted plans start at EUR 19/month for proprietary projects
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://weblate.org/
+pricing_url: https://weblate.org/en/hosting/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

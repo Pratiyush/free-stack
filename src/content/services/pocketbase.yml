@@ -1,0 +1,27 @@
+name: '**PocketBase**'
+slug: pocketbase
+category: baas
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/pocketbase.svg
+
+summary: 'Free (open-source, self-hosted)'
+
+tier_type: free-plan
+
+free_tier:
+  - 'Free (open-source, self-hosted)'
+  - 'Self-hosted only (no managed free cloud), runs on any $5/mo VPS'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://pocketbase.io/
+pricing_url: https://pocketbase.io/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

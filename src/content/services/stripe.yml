@@ -1,0 +1,27 @@
+name: Stripe
+slug: stripe
+category: payments
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/stripe.svg
+
+summary: 'No monthly fee, pay-per-transaction'
+
+tier_type: free-plan
+
+free_tier:
+  - 'No monthly fee, pay-per-transaction'
+  - '+1.5% for international cards, +1% for currency conversion, ACH debit 0.8% capped at $5, Radar fraud protection included'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://stripe.com/
+pricing_url: https://stripe.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

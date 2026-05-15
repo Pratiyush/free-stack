@@ -1,0 +1,27 @@
+name: Bunny CDN
+slug: bunny-cdn
+category: storage
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/bunny-cdn.svg
+
+summary: '14-day free trial only'
+
+tier_type: free-plan
+
+free_tier:
+  - '14-day free trial only'
+  - No permanent free tier
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://bunny.net/
+pricing_url: https://bunny.net/pricing/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

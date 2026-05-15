@@ -1,0 +1,27 @@
+name: Zeabur
+slug: zeabur
+category: hosting
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/zeabur.svg
+
+summary: Serverless plan (free)
+
+tier_type: always-free
+
+free_tier:
+  - Serverless plan (free)
+  - 'Auto-sleep after inactivity (cold-start latency). Services suspended when credits exhausted until next month reset'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://zeabur.com/
+pricing_url: https://zeabur.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

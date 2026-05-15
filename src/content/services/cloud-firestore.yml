@@ -1,0 +1,27 @@
+name: Cloud Firestore
+slug: cloud-firestore
+category: databases
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/cloud-firestore.svg
+
+summary: Spark plan (free)
+
+tier_type: always-free
+
+free_tier:
+  - Spark plan (free)
+  - '50K reads/day, 20K writes/day, 20K deletes/day, resets midnight PT'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://firebase.google.com/
+pricing_url: https://firebase.google.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

@@ -1,0 +1,27 @@
+name: '**Socket.dev**'
+slug: socket-dev
+category: security
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/socket-dev.svg
+
+summary: Free for open source
+
+tier_type: free-plan
+
+free_tier:
+  - Free for open source
+  - 'Free forever for open-source; paid starts at $25/mo for private repos'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://socket.dev/
+pricing_url: https://socket.dev/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

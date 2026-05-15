@@ -1,0 +1,27 @@
+name: Lokalise
+slug: lokalise
+category: translation
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/lokalise.svg
+
+summary: Free plan (permanent)
+
+tier_type: free-plan
+
+free_tier:
+  - Free plan (permanent)
+  - '14-day trial with Enterprise features; free plan for individuals/small projects only'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://lokalise.com/
+pricing_url: https://lokalise.com/pricing/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

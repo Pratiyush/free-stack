@@ -1,0 +1,27 @@
+name: Meta Llama API
+slug: meta-llama-api
+category: ai-apis
+subcategory: limited
+brand_color: '#888888'
+logo: /logos/meta-llama-api.svg
+
+summary: 'Limited preview, no confirmed free tier — Official API at llama.com in limited preview; use Groq/Together/OpenRouter for free Llama access instead'
+
+tier_type: free-plan
+
+free_tier:
+  - 'Limited preview, no confirmed free tier'
+  - Official API at llama.com in limited preview; use Groq/Together/OpenRouter for free Llama access instead
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.llama.com/
+pricing_url: https://www.llama.com/products/llama-api/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

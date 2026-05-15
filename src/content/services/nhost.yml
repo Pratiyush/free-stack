@@ -1,0 +1,27 @@
+name: '**Nhost**'
+slug: nhost
+category: baas
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/nhost.svg
+
+summary: Starter plan (free forever)
+
+tier_type: free-plan
+
+free_tier:
+  - Starter plan (free forever)
+  - '1 active project per org, pauses after 1 week of inactivity; reactivates instantly'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://nhost.io/
+pricing_url: https://nhost.io/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

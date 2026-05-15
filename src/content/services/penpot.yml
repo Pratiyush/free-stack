@@ -1,0 +1,27 @@
+name: Penpot
+slug: penpot
+category: design
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/penpot.svg
+
+summary: 'Free plan (open-source)'
+
+tier_type: free-plan
+
+free_tier:
+  - 'Free plan (open-source)'
+  - 'No per-editor pricing, fully featured free tier with no paywalls, plugins supported on all plans'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://penpot.app/
+pricing_url: https://penpot.app/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

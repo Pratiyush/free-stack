@@ -1,0 +1,27 @@
+name: '**Expo (EAS)**'
+slug: expo-eas
+category: mobile
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/expo-eas.svg
+
+summary: '**Expo (EAS)** — free tier; see the pricing page for details.'
+
+tier_type: free-plan
+
+free_tier:
+  - Free plan
+  - 'Lower-priority builds on free tier; resets monthly'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://expo.dev/
+pricing_url: https://expo.dev/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

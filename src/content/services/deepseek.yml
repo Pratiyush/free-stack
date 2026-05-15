@@ -1,0 +1,28 @@
+name: DeepSeek
+slug: deepseek
+category: ai-apis
+subcategory: expiring-credits
+brand_color: '#888888'
+logo: /logos/deepseek.svg
+
+summary: '5M free tokens (30-day expiry) — DeepSeek V3/V4, R1; no rate limits on API; chat is free unlimited'
+
+tier_type: trial-credit
+
+free_tier:
+  - '5M free tokens (30-day expiry)'
+  - 'DeepSeek V3/V4, R1; no rate limits on API; chat is free unlimited'
+  - No hard rate limits
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://api-docs.deepseek.com/
+pricing_url: https://api-docs.deepseek.com/quick_start/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

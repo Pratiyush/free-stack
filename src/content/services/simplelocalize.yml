@@ -1,0 +1,27 @@
+name: SimpleLocalize
+slug: simplelocalize
+category: translation
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/simplelocalize.svg
+
+summary: Community plan (free forever)
+
+tier_type: free-plan
+
+free_tier:
+  - Community plan (free forever)
+  - All features included on every plan; paid starts at EUR 12/mo (Developer)
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://simplelocalize.io/
+pricing_url: https://simplelocalize.io/pricing/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

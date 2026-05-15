@@ -1,0 +1,28 @@
+name: Mistral AI
+slug: mistral-ai
+category: ai-apis
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/mistral-ai.svg
+
+summary: 'Free Experiment tier — All models incl. Mistral Large & Codestral; ~1B tokens/month'
+
+tier_type: always-free
+
+free_tier:
+  - Free Experiment tier
+  - 'All models incl. Mistral Large & Codestral; ~1B tokens/month'
+  - '~1 RPS, 500K TPM'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://mistral.ai/
+pricing_url: https://mistral.ai/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

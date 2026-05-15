@@ -1,0 +1,26 @@
+name: Ory (Kratos)
+slug: ory-kratos
+category: auth
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/ory-kratos.svg
+
+summary: 'Free (self-hosted: unlimited; cloud: free developer plan)'
+
+tier_type: free-plan
+
+free_tier:
+  - 'Free (self-hosted: unlimited; cloud: free developer plan)'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.ory.com/
+pricing_url: https://www.ory.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

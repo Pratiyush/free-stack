@@ -1,0 +1,25 @@
+name: Sentry
+slug: sentry
+category: analytics
+brand_color: '#888888'
+logo: /logos/sentry.svg
+
+summary: Developer (free)
+
+tier_type: free-plan
+
+free_tier:
+  - Developer (free)
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://sentry.io/
+pricing_url: https://sentry.io/pricing/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

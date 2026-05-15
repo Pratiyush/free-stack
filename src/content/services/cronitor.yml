@@ -1,0 +1,25 @@
+name: Cronitor
+slug: cronitor
+category: analytics
+brand_color: '#888888'
+logo: /logos/cronitor.svg
+
+summary: Hacker (free)
+
+tier_type: free-plan
+
+free_tier:
+  - Hacker (free)
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://cronitor.io/
+pricing_url: https://cronitor.io/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

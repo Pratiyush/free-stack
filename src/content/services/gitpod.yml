@@ -1,0 +1,27 @@
+name: Gitpod
+slug: gitpod
+category: containers
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/gitpod.svg
+
+summary: Free tier (permanent)
+
+tier_type: free-plan
+
+free_tier:
+  - Free tier (permanent)
+  - 'Up to 3 parallel environments; auto-delete after 3 days of inactivity; paid starts at $9/mo'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://gitpod.io/
+pricing_url: https://gitpod.io/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

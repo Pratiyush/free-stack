@@ -1,0 +1,27 @@
+name: '**ZincSearch**'
+slug: zincsearch
+category: search
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/zincsearch.svg
+
+summary: 'Open-source (Apache 2.0)'
+
+tier_type: free-plan
+
+free_tier:
+  - 'Open-source (Apache 2.0)'
+  - 'No managed cloud; self-host only'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://github.com/
+pricing_url: https://github.com/zincsearch/zincsearch
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

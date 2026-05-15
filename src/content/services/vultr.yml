@@ -1,0 +1,27 @@
+name: Vultr
+slug: vultr
+category: iaas
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/vultr.svg
+
+summary: Trial credits only (not permanent)
+
+tier_type: free-plan
+
+free_tier:
+  - Trial credits only (not permanent)
+  - '**Trial only** -- credit card required, credits expire after 12 months. Cheapest plan: $2.50/mo (1 vCPU, 512MB)'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.vultr.com/
+pricing_url: https://www.vultr.com/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

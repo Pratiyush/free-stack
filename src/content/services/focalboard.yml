@@ -1,0 +1,27 @@
+name: Focalboard
+slug: focalboard
+category: project-management
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/focalboard.svg
+
+summary: 'Fully free and open source; self-hosted only'
+
+tier_type: free-plan
+
+free_tier:
+  - 'Fully free and open source; self-hosted only'
+  - 'N/A -- self-hosted'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.focalboard.com/
+pricing_url: https://www.focalboard.com/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

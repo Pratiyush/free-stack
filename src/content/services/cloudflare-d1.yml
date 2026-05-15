@@ -1,0 +1,27 @@
+name: Cloudflare D1
+slug: cloudflare-d1
+category: databases
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/cloudflare-d1.svg
+
+summary: Workers Free plan (SQLite at edge)
+
+tier_type: always-free
+
+free_tier:
+  - Workers Free plan (SQLite at edge)
+  - '5M rows read/day, 100K rows written/day, resets midnight UTC'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://developers.cloudflare.com/
+pricing_url: https://developers.cloudflare.com/d1/platform/pricing/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

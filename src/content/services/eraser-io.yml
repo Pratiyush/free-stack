@@ -1,0 +1,27 @@
+name: Eraser.io
+slug: eraser-io
+category: design
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/eraser-io.svg
+
+summary: Eraser.io — free tier; see the pricing page for details.
+
+tier_type: free-plan
+
+free_tier:
+  - Free plan
+  - 'Limited AI generations/mo, single user, community support only'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.eraser.io/
+pricing_url: https://www.eraser.io/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

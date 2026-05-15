@@ -1,0 +1,27 @@
+name: 'Harbor (self-hosted)'
+slug: harbor-self-hosted
+category: containers
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/harbor-self-hosted.svg
+
+summary: 'Open-source, fully free'
+
+tier_type: free-plan
+
+free_tier:
+  - 'Open-source, fully free'
+  - No vendor rate limits; limited by your own infrastructure
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://goharbor.io/
+pricing_url: https://goharbor.io/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

@@ -1,0 +1,27 @@
+name: PayPal
+slug: paypal
+category: payments
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/paypal.svg
+
+summary: No monthly fee (standard)
+
+tier_type: free-plan
+
+free_tier:
+  - No monthly fee (standard)
+  - '+1.5% for international transactions, dispute fees apply, widely recognized checkout'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.paypal.com/
+pricing_url: https://www.paypal.com/us/business/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

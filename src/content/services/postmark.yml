@@ -1,0 +1,26 @@
+name: Postmark
+slug: postmark
+category: email
+brand_color: '#888888'
+logo: /logos/postmark.svg
+
+summary: Free forever (Developer)
+
+tier_type: free-plan
+
+free_tier:
+  - Free forever (Developer)
+  - Standard API limits
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://postmarkapp.com/
+pricing_url: https://postmarkapp.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

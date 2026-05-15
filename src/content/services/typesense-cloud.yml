@@ -1,0 +1,27 @@
+name: '**Typesense Cloud**'
+slug: typesense-cloud
+category: search
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/typesense-cloud.svg
+
+summary: 'One-time free trial'
+
+tier_type: free-plan
+
+free_tier:
+  - 'One-time free trial'
+  - ~30 days continuous use; no monthly replenishment
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://cloud.typesense.org/
+pricing_url: https://cloud.typesense.org/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

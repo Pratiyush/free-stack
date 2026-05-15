@@ -1,0 +1,27 @@
+name: 'AWS Free Plan (new accounts, post-July 2025)'
+slug: aws-free-plan-new-accounts-post-july-2025
+category: iaas
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/aws-free-plan-new-accounts-post-july-2025.svg
+
+summary: 'Credit-based free plan (6 months)'
+
+tier_type: free-plan
+
+free_tier:
+  - 'Credit-based free plan (6 months)'
+  - 'Replaces 12-month trial for new accounts created after July 15, 2025. 6-month plan; converts to paid after'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://aws.amazon.com/
+pricing_url: https://aws.amazon.com/free/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

@@ -1,0 +1,27 @@
+name: Plane
+slug: plane
+category: project-management
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/plane.svg
+
+summary: 'Free forever (cloud); open-source self-hosted'
+
+tier_type: free-plan
+
+free_tier:
+  - 'Free forever (cloud); open-source self-hosted'
+  - No documented rate limits
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://plane.so/
+pricing_url: https://plane.so/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

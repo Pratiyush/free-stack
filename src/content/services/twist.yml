@@ -1,0 +1,27 @@
+name: Twist
+slug: twist
+category: collaboration
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/twist.svg
+
+summary: Twist — free tier; see the pricing page for details.
+
+tier_type: free-plan
+
+free_tier:
+  - Free plan
+  - '1-month message history limit (older threads hidden), no advanced search, paid plan $5/user/mo for full history'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://twist.com/
+pricing_url: https://twist.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

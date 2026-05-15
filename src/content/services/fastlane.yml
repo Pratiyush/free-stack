@@ -1,0 +1,27 @@
+name: '**Fastlane**'
+slug: fastlane
+category: mobile
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/fastlane.svg
+
+summary: 'Open-source (MIT)'
+
+tier_type: free-plan
+
+free_tier:
+  - 'Open-source (MIT)'
+  - 'Self-hosted; integrates with any CI (GitHub Actions, etc.)'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://fastlane.tools/
+pricing_url: https://fastlane.tools/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

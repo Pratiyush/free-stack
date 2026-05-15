@@ -1,0 +1,27 @@
+name: Sendbird
+slug: sendbird
+category: communication
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/sendbird.svg
+
+summary: Developer plan (permanent)
+
+tier_type: free-plan
+
+free_tier:
+  - Developer plan (permanent)
+  - 'No credit card required; 30-day trial available for 1,000 MAU with Pro features'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://sendbird.com/
+pricing_url: https://sendbird.com/pricing/chat
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

@@ -1,0 +1,27 @@
+name: Hashnode
+slug: hashnode
+category: documentation
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/hashnode.svg
+
+summary: Free forever (all users)
+
+tier_type: free-plan
+
+free_tier:
+  - Free forever (all users)
+  - 'Single-author blog; team features require Startup plan ($199/mo)'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://hashnode.com/
+pricing_url: https://hashnode.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

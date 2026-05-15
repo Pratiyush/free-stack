@@ -1,0 +1,27 @@
+name: '**Squarespace Domains**'
+slug: squarespace-domains
+category: dns
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/squarespace-domains.svg
+
+summary: DNS included with domain purchase
+
+tier_type: free-plan
+
+free_tier:
+  - DNS included with domain purchase
+  - No free tier without domain purchase
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://domains.squarespace.com/
+pricing_url: https://domains.squarespace.com/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

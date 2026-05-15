@@ -1,0 +1,27 @@
+name: '**OneSignal**'
+slug: onesignal
+category: mobile
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/onesignal.svg
+
+summary: '**OneSignal** — free tier; see the pricing page for details.'
+
+tier_type: free-plan
+
+free_tier:
+  - Free plan
+  - '1 Journey (2 steps), 6 segments, 2 data tags; 18-month inactive subscriber retention'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://onesignal.com/
+pricing_url: https://onesignal.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

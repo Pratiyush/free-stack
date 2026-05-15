@@ -1,0 +1,27 @@
+name: Geoapify
+slug: geoapify
+category: maps
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/geoapify.svg
+
+summary: '3,000 credits/day (~90K/mo)'
+
+tier_type: free-plan
+
+free_tier:
+  - '3,000 credits/day (~90K/mo)'
+  - Daily credit cap resets at midnight
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.geoapify.com/
+pricing_url: https://www.geoapify.com/pricing/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

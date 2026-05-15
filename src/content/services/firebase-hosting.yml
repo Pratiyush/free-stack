@@ -1,0 +1,27 @@
+name: Firebase Hosting
+slug: firebase-hosting
+category: hosting
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/firebase-hosting.svg
+
+summary: Spark plan (free)
+
+tier_type: always-free
+
+free_tier:
+  - Spark plan (free)
+  - 'Hard cap on Spark; no overage billing. Note: Cloud Storage for Firebase on Spark lost access Feb 2026 (Hosting unaffected)'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://firebase.google.com/
+pricing_url: https://firebase.google.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

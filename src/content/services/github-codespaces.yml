@@ -1,0 +1,27 @@
+name: GitHub Codespaces
+slug: github-codespaces
+category: containers
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/github-codespaces.svg
+
+summary: Free for personal accounts
+
+tier_type: free-plan
+
+free_tier:
+  - Free for personal accounts
+  - 'Compute: $0.18/hr after free quota; storage: $0.07/GB/mo after free quota'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://github.com/
+pricing_url: https://github.com/features/codespaces
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

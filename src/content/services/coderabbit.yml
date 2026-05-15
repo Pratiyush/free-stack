@@ -1,0 +1,27 @@
+name: CodeRabbit
+slug: coderabbit
+category: code-quality
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/coderabbit.svg
+
+summary: Free for public and private repos; unlimited repos and team members
+
+tier_type: free-plan
+
+free_tier:
+  - Free for public and private repos; unlimited repos and team members
+  - '200 files/hr; 4 PR reviews/hr; 3 back-to-back reviews then cooldown'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.coderabbit.ai/
+pricing_url: https://www.coderabbit.ai/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

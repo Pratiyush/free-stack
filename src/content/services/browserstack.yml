@@ -1,0 +1,27 @@
+name: BrowserStack
+slug: browserstack
+category: testing
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/browserstack.svg
+
+summary: Free for Percy (5K screenshots) + Test Management only
+
+tier_type: free-plan
+
+free_tier:
+  - Free for Percy (5K screenshots) + Test Management only
+  - '30-min Live + 100-min Automate trial only'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.browserstack.com/
+pricing_url: https://www.browserstack.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

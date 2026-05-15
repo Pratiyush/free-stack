@@ -1,0 +1,27 @@
+name: '**Strapi Cloud**'
+slug: strapi-cloud
+category: baas
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/strapi-cloud.svg
+
+summary: Free plan (no credit card required)
+
+tier_type: free-plan
+
+free_tier:
+  - Free plan (no credit card required)
+  - 'Auto cold-start on inactivity; no overages (hard cap); personal/non-commercial use only'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://strapi.io/
+pricing_url: https://strapi.io/pricing-cloud
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

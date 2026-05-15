@@ -1,0 +1,26 @@
+name: Mailchimp
+slug: mailchimp
+category: email
+brand_color: '#888888'
+logo: /logos/mailchimp.svg
+
+summary: Free forever (heavily restricted)
+
+tier_type: free-plan
+
+free_tier:
+  - Free forever (heavily restricted)
+  - Not published
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://mailchimp.com/
+pricing_url: https://mailchimp.com/pricing/marketing/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

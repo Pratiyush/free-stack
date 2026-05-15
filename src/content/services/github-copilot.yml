@@ -1,0 +1,27 @@
+name: '**GitHub Copilot**'
+slug: github-copilot
+category: dev-tools
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/github-copilot.svg
+
+summary: '**GitHub Copilot** — free tier; see the pricing page for details.'
+
+tier_type: free-plan
+
+free_tier:
+  - Free plan
+  - Completions + chat reset monthly; no credit card required
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://github.com/
+pricing_url: https://github.com/features/copilot
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

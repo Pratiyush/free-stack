@@ -1,0 +1,27 @@
+name: Docsify + GitHub Pages
+slug: docsify-github-pages
+category: documentation
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/docsify-github-pages.svg
+
+summary: Fully free (OSS + free hosting)
+
+tier_type: free-plan
+
+free_tier:
+  - Fully free (OSS + free hosting)
+  - 'Client-side rendered; same GitHub Pages limits (1GB site, 100GB bandwidth/mo)'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://docsify.js.org/
+pricing_url: https://docsify.js.org/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

@@ -1,0 +1,27 @@
+name: AWS S3
+slug: aws-s3
+category: storage
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/aws-s3.svg
+
+summary: 5 GB Standard storage (12 months only)
+
+tier_type: free-plan
+
+free_tier:
+  - 5 GB Standard storage (12 months only)
+  - 'Expires after 12 months -- NOT a permanent free tier'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://aws.amazon.com/
+pricing_url: https://aws.amazon.com/free/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

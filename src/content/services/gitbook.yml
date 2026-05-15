@@ -1,0 +1,27 @@
+name: GitBook
+slug: gitbook
+category: documentation
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/gitbook.svg
+
+summary: 'Free for individuals & OSS'
+
+tier_type: free-plan
+
+free_tier:
+  - 'Free for individuals & OSS'
+  - '1 user only, no team collaboration, no custom domain on free (custom domain requires $65/mo+)'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.gitbook.com/
+pricing_url: https://www.gitbook.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

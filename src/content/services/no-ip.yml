@@ -1,0 +1,27 @@
+name: '**No-IP**'
+slug: no-ip
+category: dns
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/no-ip.svg
+
+summary: Free Dynamic DNS
+
+tier_type: free-plan
+
+free_tier:
+  - Free Dynamic DNS
+  - '1 hostname; 30-day renewal'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.noip.com/
+pricing_url: https://www.noip.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

@@ -1,0 +1,27 @@
+name: Netlify
+slug: netlify
+category: hosting
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/netlify.svg
+
+summary: 'Free plan (credit-based since Sep 2025)'
+
+tier_type: always-free
+
+free_tier:
+  - 'Free plan (credit-based since Sep 2025)'
+  - Hard caps; site suspended for remainder of month if exceeded. 1 team member only
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.netlify.com/
+pricing_url: https://www.netlify.com/pricing/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

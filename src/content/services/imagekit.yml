@@ -1,0 +1,27 @@
+name: ImageKit
+slug: imagekit
+category: storage
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/imagekit.svg
+
+summary: 20 GB bandwidth/mo
+
+tier_type: free-plan
+
+free_tier:
+  - 20 GB bandwidth/mo
+  - 'Functionality pauses mid-month if limits exceeded'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://imagekit.io/
+pricing_url: https://imagekit.io/plans/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

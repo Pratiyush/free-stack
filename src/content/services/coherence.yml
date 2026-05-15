@@ -1,0 +1,27 @@
+name: '**Coherence**'
+slug: coherence
+category: paas
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/coherence.svg
+
+summary: Free tier for small teams
+
+tier_type: free-plan
+
+free_tier:
+  - Free tier for small teams
+  - 'Connects to your AWS/GCP, limited to 1 active environment'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.withcoherence.com/
+pricing_url: https://www.withcoherence.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

@@ -1,0 +1,27 @@
+name: Perplexity API
+slug: perplexity-api
+category: ai-apis
+subcategory: limited
+brand_color: '#888888'
+logo: /logos/perplexity-api.svg
+
+summary: No free tier for API — Must add payment method to generate API key; Pro subscribers get $5/mo credit only
+
+tier_type: free-plan
+
+free_tier:
+  - No free tier for API
+  - Must add payment method to generate API key; Pro subscribers get $5/mo credit only
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://docs.perplexity.ai/
+pricing_url: https://docs.perplexity.ai/docs/getting-started/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

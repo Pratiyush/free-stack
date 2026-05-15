@@ -1,0 +1,27 @@
+name: Basecamp
+slug: basecamp
+category: collaboration
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/basecamp.svg
+
+summary: Basecamp — free tier; see the pricing page for details.
+
+tier_type: free-plan
+
+free_tier:
+  - Free plan
+  - 'Single project only, very limited storage, free forever for teachers/students/nonprofits'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://basecamp.com/
+pricing_url: https://basecamp.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

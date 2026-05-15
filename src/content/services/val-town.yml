@@ -1,0 +1,27 @@
+name: '**Val Town**'
+slug: val-town
+category: dev-tools
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/val-town.svg
+
+summary: '**Val Town** — free tier; see the pricing page for details.'
+
+tier_type: free-plan
+
+free_tier:
+  - Free plan
+  - Runs reset daily
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.val.town/
+pricing_url: https://www.val.town/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

@@ -1,0 +1,27 @@
+name: Trello
+slug: trello
+category: collaboration
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/trello.svg
+
+summary: Trello — free tier; see the pricing page for details.
+
+tier_type: free-plan
+
+free_tier:
+  - Free plan
+  - '250 automation (Butler) command runs/mo shared across all boards, no advanced checklists, no custom fields beyond basics'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://trello.com/
+pricing_url: https://trello.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

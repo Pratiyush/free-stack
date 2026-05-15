@@ -1,0 +1,27 @@
+name: '**Tailscale**'
+slug: tailscale
+category: dev-tools
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/tailscale.svg
+
+summary: Personal plan
+
+tier_type: free-plan
+
+free_tier:
+  - Personal plan
+  - No published rate limit
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://tailscale.com/
+pricing_url: https://tailscale.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

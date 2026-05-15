@@ -1,0 +1,27 @@
+name: Codacy
+slug: codacy
+category: code-quality
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/codacy.svg
+
+summary: 'Free for open-source repos (full Pro features); Starter plan free for up to 2 committers'
+
+tier_type: free-plan
+
+free_tier:
+  - 'Free for open-source repos (full Pro features); Starter plan free for up to 2 committers'
+  - 'Per-committer seat model'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.codacy.com/
+pricing_url: https://www.codacy.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

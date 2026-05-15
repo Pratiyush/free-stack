@@ -1,0 +1,27 @@
+name: Tolgee
+slug: tolgee
+category: translation
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/tolgee.svg
+
+summary: Free plan (permanent)
+
+tier_type: free-plan
+
+free_tier:
+  - Free plan (permanent)
+  - '3 seats on cloud free plan; open-source, self-hostable'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://tolgee.io/
+pricing_url: https://tolgee.io/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

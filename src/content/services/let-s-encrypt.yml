@@ -1,0 +1,27 @@
+name: '**Let''s Encrypt**'
+slug: let-s-encrypt
+category: security
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/let-s-encrypt.svg
+
+summary: Free forever
+
+tier_type: free-plan
+
+free_tier:
+  - Free forever
+  - 50 certs/registered domain/week; 300 new orders/3 hrs per account; renewals exempt from domain limit
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://letsencrypt.org/
+pricing_url: https://letsencrypt.org/docs/rate-limits/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

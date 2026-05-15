@@ -1,0 +1,27 @@
+name: GitLab Container Registry
+slug: gitlab-container-registry
+category: containers
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/gitlab-container-registry.svg
+
+summary: Free tier (included with GitLab Free)
+
+tier_type: free-plan
+
+free_tier:
+  - Free tier (included with GitLab Free)
+  - '5 users per namespace, CI/CD 400 min/mo (shared)'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://about.gitlab.com/
+pricing_url: https://about.gitlab.com/pricing/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

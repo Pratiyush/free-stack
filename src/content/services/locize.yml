@@ -1,0 +1,27 @@
+name: Locize
+slug: locize
+category: translation
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/locize.svg
+
+summary: Free plan (permanent)
+
+tier_type: free-plan
+
+free_tier:
+  - Free plan (permanent)
+  - Official i18next cloud platform; fixed pricing tiers above free (Starter/Professional/Enterprise)
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://locize.com/
+pricing_url: https://locize.com/pricing.html
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

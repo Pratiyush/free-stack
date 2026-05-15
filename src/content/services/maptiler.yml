@@ -1,0 +1,27 @@
+name: MapTiler
+slug: maptiler
+category: maps
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/maptiler.svg
+
+summary: 'Free cloud plan for non-commercial/R&D use'
+
+tier_type: free-plan
+
+free_tier:
+  - 'Free cloud plan for non-commercial/R&D use'
+  - 'No documented per-second limits'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.maptiler.com/
+pricing_url: https://www.maptiler.com/cloud/pricing/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

@@ -1,0 +1,27 @@
+name: LocationIQ
+slug: locationiq
+category: maps
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/locationiq.svg
+
+summary: '5,000 requests/day (~150K/mo)'
+
+tier_type: free-plan
+
+free_tier:
+  - '5,000 requests/day (~150K/mo)'
+  - '2 requests/sec; 48-hr cache allowed'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://locationiq.com/
+pricing_url: https://locationiq.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

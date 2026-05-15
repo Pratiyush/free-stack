@@ -1,0 +1,27 @@
+name: Surge.sh
+slug: surge-sh
+category: hosting
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/surge-sh.svg
+
+summary: Surge.sh — free tier; see the pricing page for details.
+
+tier_type: always-free
+
+free_tier:
+  - Free plan
+  - Static sites only. No custom SSL on free tier (requires $30/mo Surge Professional). No documented bandwidth cap
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://surge.sh/
+pricing_url: https://surge.sh/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

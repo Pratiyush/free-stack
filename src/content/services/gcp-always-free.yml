@@ -1,0 +1,27 @@
+name: GCP Always Free
+slug: gcp-always-free
+category: iaas
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/gcp-always-free.svg
+
+summary: Permanent free tier
+
+tier_type: free-plan
+
+free_tier:
+  - Permanent free tier
+  - Billing account required but no charges within limits; limits shared across all projects per billing account
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://cloud.google.com/
+pricing_url: https://cloud.google.com/free
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

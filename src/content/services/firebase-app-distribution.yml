@@ -1,0 +1,27 @@
+name: '**Firebase (App Distribution)**'
+slug: firebase-app-distribution
+category: mobile
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/firebase-app-distribution.svg
+
+summary: '**Firebase (App Distribution)** — free tier; see the pricing page for details.'
+
+tier_type: free-plan
+
+free_tier:
+  - Free
+  - No usage limits; free service for beta distribution
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://firebase.google.com/
+pricing_url: https://firebase.google.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

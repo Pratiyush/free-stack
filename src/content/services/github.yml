@@ -1,0 +1,27 @@
+name: '**GitHub**'
+slug: github
+category: dev-tools
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/github.svg
+
+summary: '**GitHub** — free tier; see the pricing page for details.'
+
+tier_type: free-plan
+
+free_tier:
+  - Free plan
+  - '5,000 API requests/hr (authenticated)'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://github.com/
+pricing_url: https://github.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

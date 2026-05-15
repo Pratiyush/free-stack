@@ -1,0 +1,27 @@
+name: Asana
+slug: asana
+category: collaboration
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/asana.svg
+
+summary: Personal plan (free)
+
+tier_type: free-plan
+
+free_tier:
+  - Personal plan (free)
+  - 'No timeline/Gantt, no custom fields, no forms, no reporting dashboards'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://asana.com/
+pricing_url: https://asana.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

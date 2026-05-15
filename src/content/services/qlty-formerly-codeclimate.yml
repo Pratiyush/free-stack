@@ -1,0 +1,27 @@
+name: Qlty (formerly CodeClimate)
+slug: qlty-formerly-codeclimate
+category: code-quality
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/qlty-formerly-codeclimate.svg
+
+summary: Free CLI for all use (no contributor limits); Qlty Cloud free for unlimited private contributors
+
+tier_type: free-plan
+
+free_tier:
+  - Free CLI for all use (no contributor limits); Qlty Cloud free for unlimited private contributors
+  - No documented rate limits
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://codeclimate.com/
+pricing_url: https://codeclimate.com/quality/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

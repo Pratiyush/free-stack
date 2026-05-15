@@ -1,0 +1,27 @@
+name: '**Qovery**'
+slug: qovery
+category: paas
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/qovery.svg
+
+summary: 'Free plan (BYOC -- bring your own cloud)'
+
+tier_type: free-plan
+
+free_tier:
+  - 'Free plan (BYOC -- bring your own cloud)'
+  - 'Deploys to **your own** AWS/GCP/Azure account (you pay cloud infra costs); Qovery layer is free'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.qovery.com/
+pricing_url: https://www.qovery.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

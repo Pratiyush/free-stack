@@ -1,0 +1,27 @@
+name: '**Firebase (Remote Config)**'
+slug: firebase-remote-config
+category: mobile
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/firebase-remote-config.svg
+
+summary: Free (Spark plan)
+
+tier_type: free-plan
+
+free_tier:
+  - Free (Spark plan)
+  - No usage limits; free on all plans
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://firebase.google.com/
+pricing_url: https://firebase.google.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

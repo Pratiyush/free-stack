@@ -1,0 +1,27 @@
+name: '**Directus Cloud**'
+slug: directus-cloud
+category: baas
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/directus-cloud.svg
+
+summary: Community Cloud (free)
+
+tier_type: free-plan
+
+free_tier:
+  - Community Cloud (free)
+  - No quota limits on usage; 24/7 system monitoring; BSL license (free for orgs under $5M revenue)
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://directus.io/
+pricing_url: https://directus.io/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

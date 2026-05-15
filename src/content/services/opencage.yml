@@ -1,0 +1,27 @@
+name: OpenCage
+slug: opencage
+category: maps
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/opencage.svg
+
+summary: 'Free trial: 2,500 requests/day for testing'
+
+tier_type: free-plan
+
+free_tier:
+  - 'Free trial: 2,500 requests/day for testing'
+  - 1 request/sec on free trial
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://opencagedata.com/
+pricing_url: https://opencagedata.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

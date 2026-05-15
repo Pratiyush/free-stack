@@ -1,0 +1,27 @@
+name: Phrase
+slug: phrase
+category: translation
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/phrase.svg
+
+summary: '14-day trial only (not permanent)'
+
+tier_type: free-plan
+
+free_tier:
+  - '14-day trial only (not permanent)'
+  - 'Trial only -- not suitable for permanent free usage'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://phrase.com/
+pricing_url: https://phrase.com/pricing/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

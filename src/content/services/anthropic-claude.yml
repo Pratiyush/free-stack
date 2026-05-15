@@ -1,0 +1,28 @@
+name: Anthropic (Claude)
+slug: anthropic-claude
+category: ai-apis
+subcategory: expiring-credits
+brand_color: '#888888'
+logo: /logos/anthropic-claude.svg
+
+summary: '~$5 starter credits (one-time) — New accounts only; credits expire; no permanent free tier'
+
+tier_type: trial-credit
+
+free_tier:
+  - '~$5 starter credits (one-time)'
+  - New accounts only; credits expire; no permanent free tier
+  - Standard rate limits
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://platform.claude.com/
+pricing_url: https://platform.claude.com/docs/en/about-claude/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

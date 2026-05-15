@@ -1,0 +1,27 @@
+name: Aiven
+slug: aiven
+category: databases
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/aiven.svg
+
+summary: Free plan (Postgres + Kafka)
+
+tier_type: always-free
+
+free_tier:
+  - Free plan (Postgres + Kafka)
+  - 'Kafka: 250 kb/s throughput (in+out); powers off after 24h inactivity (both Postgres and Kafka)'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://aiven.io/
+pricing_url: https://aiven.io/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

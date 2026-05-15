@@ -1,0 +1,28 @@
+name: OpenRouter
+slug: openrouter
+category: ai-apis
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/openrouter.svg
+
+summary: '29+ free models — DeepSeek V3/R1, Llama, Qwen3 Coder 480B, and more; 50 RPD free'
+
+tier_type: always-free
+
+free_tier:
+  - 29+ free models
+  - 'DeepSeek V3/R1, Llama, Qwen3 Coder 480B, and more; 50 RPD free'
+  - 20 RPM
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://openrouter.ai/
+pricing_url: https://openrouter.ai/collections/free-models
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

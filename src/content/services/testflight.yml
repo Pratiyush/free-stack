@@ -1,0 +1,27 @@
+name: '**TestFlight**'
+slug: testflight
+category: mobile
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/testflight.svg
+
+summary: Free (Apple)
+
+tier_type: free-plan
+
+free_tier:
+  - Free (Apple)
+  - Builds expire after 90 days; requires Apple Developer Program ($99/yr)
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://developer.apple.com/
+pricing_url: https://developer.apple.com/testflight/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

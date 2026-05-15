@@ -1,0 +1,27 @@
+name: Discord
+slug: discord
+category: collaboration
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/discord.svg
+
+summary: Free (no paid requirement)
+
+tier_type: free-plan
+
+free_tier:
+  - Free (no paid requirement)
+  - '10 MB file upload limit per file (unlimited uploads/day), no SLA or business support'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://discord.com/
+pricing_url: https://discord.com/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

@@ -1,0 +1,27 @@
+name: Taiga
+slug: taiga
+category: project-management
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/taiga.svg
+
+summary: Free for up to 15 users
+
+tier_type: free-plan
+
+free_tier:
+  - Free for up to 15 users
+  - No documented rate limits
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://taiga.io/
+pricing_url: https://taiga.io/deployment-pricing-options/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

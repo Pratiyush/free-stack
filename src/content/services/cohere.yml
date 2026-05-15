@@ -1,0 +1,28 @@
+name: Cohere
+slug: cohere
+category: ai-apis
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/cohere.svg
+
+summary: 'Trial key (free forever) — 1,000 API calls/month; Command R+, R7B, Embed 4, Rerank 3.5'
+
+tier_type: always-free
+
+free_tier:
+  - Trial key (free forever)
+  - '1,000 API calls/month; Command R+, R7B, Embed 4, Rerank 3.5'
+  - 'Chat 20 RPM, Embed 5 RPM'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://cohere.com/
+pricing_url: https://cohere.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

@@ -1,0 +1,27 @@
+name: PartyKit (Cloudflare)
+slug: partykit-cloudflare
+category: communication
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/partykit-cloudflare.svg
+
+summary: Free tier (included with Cloudflare Workers free)
+
+tier_type: free-plan
+
+free_tier:
+  - Free tier (included with Cloudflare Workers free)
+  - Acquired by Cloudflare (2024); uses Workers free tier (100K requests/day). Hibernation API reduces memory usage
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.partykit.io/
+pricing_url: https://www.partykit.io/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

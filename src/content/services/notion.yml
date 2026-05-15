@@ -1,0 +1,27 @@
+name: Notion
+slug: notion
+category: collaboration
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/notion.svg
+
+summary: Notion — free tier; see the pricing page for details.
+
+tier_type: free-plan
+
+free_tier:
+  - Free plan
+  - 'Multi-member workspaces capped at 1,000 blocks on free plan, 5 MB file upload limit, no admin tools, no SAML SSO'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.notion.so/
+pricing_url: https://www.notion.so/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

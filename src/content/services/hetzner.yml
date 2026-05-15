@@ -1,0 +1,27 @@
+name: Hetzner
+slug: hetzner
+category: iaas
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/hetzner.svg
+
+summary: No free tier
+
+tier_type: free-plan
+
+free_tier:
+  - No free tier
+  - 'Not applicable -- included for completeness as frequently asked about'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.hetzner.com/
+pricing_url: https://www.hetzner.com/cloud/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

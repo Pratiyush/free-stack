@@ -1,0 +1,27 @@
+name: Figma
+slug: figma
+category: design
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/figma.svg
+
+summary: Starter plan (free forever)
+
+tier_type: free-plan
+
+free_tier:
+  - Starter plan (free forever)
+  - '30-day version history, no shared libraries, no advanced permissions, deleted files count toward limit for 30 days'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.figma.com/
+pricing_url: https://www.figma.com/pricing/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

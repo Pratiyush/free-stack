@@ -1,0 +1,27 @@
+name: Slack
+slug: slack
+category: collaboration
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/slack.svg
+
+summary: Slack — free tier; see the pricing page for details.
+
+tier_type: free-plan
+
+free_tier:
+  - Free plan
+  - 'No group video calls, no shared channels, no workflow builder, history hidden (not deleted) after 90 days'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://slack.com/
+pricing_url: https://slack.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

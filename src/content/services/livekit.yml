@@ -1,0 +1,27 @@
+name: LiveKit
+slug: livekit
+category: communication
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/livekit.svg
+
+summary: Build plan (free)
+
+tier_type: free-plan
+
+free_tier:
+  - Build plan (free)
+  - 'No credit card required; open-source server can be self-hosted for unlimited free usage'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://livekit.com/
+pricing_url: https://livekit.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

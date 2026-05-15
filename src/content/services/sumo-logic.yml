@@ -1,0 +1,27 @@
+name: Sumo Logic
+slug: sumo-logic
+category: logs
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/sumo-logic.svg
+
+summary: Free forever account
+
+tier_type: free-plan
+
+free_tier:
+  - Free forever account
+  - '7-day data retention, 20 credits/day for logs+metrics+traces'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.sumologic.com/
+pricing_url: https://www.sumologic.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

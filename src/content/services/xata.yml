@@ -1,0 +1,27 @@
+name: Xata
+slug: xata
+category: databases
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/xata.svg
+
+summary: Free plan (Postgres)
+
+tier_type: always-free
+
+free_tier:
+  - Free plan (Postgres)
+  - '75 req/sec, 15 parallel connections; no cold starts, no inactivity pausing'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://xata.io/
+pricing_url: https://xata.io/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

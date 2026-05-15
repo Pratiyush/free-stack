@@ -1,0 +1,27 @@
+name: Tigris
+slug: tigris
+category: storage
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/tigris.svg
+
+summary: '5 GB storage, zero egress fees'
+
+tier_type: free-plan
+
+free_tier:
+  - '5 GB storage, zero egress fees'
+  - 'No per-request rate limit documented'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.tigrisdata.com/
+pricing_url: https://www.tigrisdata.com/pricing/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

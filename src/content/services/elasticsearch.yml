@@ -1,0 +1,27 @@
+name: '**Elasticsearch**'
+slug: elasticsearch
+category: search
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/elasticsearch.svg
+
+summary: 'Open-source (self-hosted)'
+
+tier_type: free-plan
+
+free_tier:
+  - 'Open-source (self-hosted)'
+  - 'Elastic Cloud: 14-day trial only, no permanent free tier; paid starts ~$16.40/mo'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.elastic.co/
+pricing_url: https://www.elastic.co/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

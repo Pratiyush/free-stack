@@ -1,0 +1,27 @@
+name: Google Artifact Registry
+slug: google-artifact-registry
+category: containers
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/google-artifact-registry.svg
+
+summary: Free tier (permanent)
+
+tier_type: free-plan
+
+free_tier:
+  - Free tier (permanent)
+  - Inbound transfer free; outbound charged at Premium tier rates beyond free quota
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://cloud.google.com/
+pricing_url: https://cloud.google.com/artifact-registry/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

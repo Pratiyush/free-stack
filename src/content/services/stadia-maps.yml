@@ -1,0 +1,27 @@
+name: Stadia Maps
+slug: stadia-maps
+category: maps
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/stadia-maps.svg
+
+summary: '2,500 free credits/mo'
+
+tier_type: free-plan
+
+free_tier:
+  - '2,500 free credits/mo'
+  - 'No documented per-second limits'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://stadiamaps.com/
+pricing_url: https://stadiamaps.com/pricing/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

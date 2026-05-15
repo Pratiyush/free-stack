@@ -1,0 +1,27 @@
+name: '**DigitalOcean App Platform**'
+slug: digitalocean-app-platform
+category: paas
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/digitalocean-app-platform.svg
+
+summary: '**DigitalOcean App Platform** — free tier; see the pricing page for details.'
+
+tier_type: free-plan
+
+free_tier:
+  - Free plan
+  - 'Static sites only on free tier, no dynamic apps; additional static apps $3/mo'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.digitalocean.com/
+pricing_url: https://www.digitalocean.com/pricing/app-platform
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

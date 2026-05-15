@@ -1,0 +1,27 @@
+name: '**Codemagic**'
+slug: codemagic
+category: mobile
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/codemagic.svg
+
+summary: Free (500 min/mo)
+
+tier_type: free-plan
+
+free_tier:
+  - Free (500 min/mo)
+  - Single user; no free Linux/Windows minutes; resets monthly; $0.10/min overage on Mac
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://codemagic.io/
+pricing_url: https://codemagic.io/pricing/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

@@ -1,0 +1,27 @@
+name: Hyperswitch
+slug: hyperswitch
+category: payments
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/hyperswitch.svg
+
+summary: 'Free (open-source, self-hosted)'
+
+tier_type: free-plan
+
+free_tier:
+  - 'Free (open-source, self-hosted)'
+  - 'Self-hosted: free with no transaction fees, fully managed cloud available from Juspay with enterprise SLAs, supports cards/wallets/BNPL/UPI/Pay-by-Bank globally'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://hyperswitch.io/
+pricing_url: https://hyperswitch.io/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

@@ -1,0 +1,27 @@
+name: Travis CI
+slug: travis-ci
+category: testing
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/travis-ci.svg
+
+summary: First 100 builds free (trial only)
+
+tier_type: free-plan
+
+free_tier:
+  - First 100 builds free (trial only)
+  - 'Credit-based after trial'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.travis-ci.com/
+pricing_url: https://www.travis-ci.com/pricing/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

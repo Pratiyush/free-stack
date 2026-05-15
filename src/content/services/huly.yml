@@ -1,0 +1,27 @@
+name: Huly
+slug: huly
+category: project-management
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/huly.svg
+
+summary: Free cloud tier with unlimited users
+
+tier_type: free-plan
+
+free_tier:
+  - Free cloud tier with unlimited users
+  - No documented rate limits
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://huly.io/
+pricing_url: https://huly.io/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

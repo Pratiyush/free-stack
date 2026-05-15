@@ -1,0 +1,27 @@
+name: Quay.io
+slug: quay-io
+category: containers
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/quay-io.svg
+
+summary: Free for public repos
+
+tier_type: free-plan
+
+free_tier:
+  - Free for public repos
+  - 'Fair use: 100GB storage, 1TB egress/mo (soft limits, contact for OSS exceptions)'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://quay.io/
+pricing_url: https://quay.io/plans/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

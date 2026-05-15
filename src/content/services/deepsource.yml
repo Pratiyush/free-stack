@@ -1,0 +1,27 @@
+name: DeepSource
+slug: deepsource
+category: code-quality
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/deepsource.svg
+
+summary: 'Free: 1 private repo, 3 team members, 500 analysis runs/mo, 50 Autofix runs/mo; unlimited public repos'
+
+tier_type: free-plan
+
+free_tier:
+  - 'Free: 1 private repo, 3 team members, 500 analysis runs/mo, 50 Autofix runs/mo; unlimited public repos'
+  - 500 analysis runs/mo on free tier
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://deepsource.com/
+pricing_url: https://deepsource.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

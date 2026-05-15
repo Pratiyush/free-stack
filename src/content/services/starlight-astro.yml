@@ -1,0 +1,27 @@
+name: Starlight (Astro)
+slug: starlight-astro
+category: documentation
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/starlight-astro.svg
+
+summary: 'Fully free (OSS, MIT license)'
+
+tier_type: free-plan
+
+free_tier:
+  - 'Fully free (OSS, MIT license)'
+  - 'Framework-agnostic: extend with React, Vue, Svelte, Solid. Deploy on any static host'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://starlight.astro.build/
+pricing_url: https://starlight.astro.build/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

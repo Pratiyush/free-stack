@@ -1,0 +1,27 @@
+name: '**JetBrains IntelliJ IDEA**'
+slug: jetbrains-intellij-idea
+category: dev-tools
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/jetbrains-intellij-idea.svg
+
+summary: 'Community Edition (free, permanent)'
+
+tier_type: free-plan
+
+free_tier:
+  - 'Community Edition (free, permanent)'
+  - 'Local IDE, no usage limits'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.jetbrains.com/
+pricing_url: https://www.jetbrains.com/idea/download/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

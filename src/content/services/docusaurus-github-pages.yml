@@ -1,0 +1,27 @@
+name: Docusaurus + GitHub Pages
+slug: docusaurus-github-pages
+category: documentation
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/docusaurus-github-pages.svg
+
+summary: Fully free (OSS + free hosting)
+
+tier_type: free-plan
+
+free_tier:
+  - Fully free (OSS + free hosting)
+  - 'Static site generator -- deploy free on GitHub Pages (1GB site, 100GB bandwidth/mo) or Cloudflare Pages (unlimited)'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://docusaurus.io/
+pricing_url: https://docusaurus.io/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

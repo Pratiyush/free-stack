@@ -1,0 +1,27 @@
+name: Height
+slug: height
+category: project-management
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/height.svg
+
+summary: Free for up to 10 members
+
+tier_type: free-plan
+
+free_tier:
+  - Free for up to 10 members
+  - No documented rate limits
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://height.app/
+pricing_url: https://height.app/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

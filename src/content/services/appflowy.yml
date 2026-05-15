@@ -1,0 +1,27 @@
+name: AppFlowy
+slug: appflowy
+category: project-management
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/appflowy.svg
+
+summary: 'Free cloud tier (Basic plan); open-source self-hosted'
+
+tier_type: free-plan
+
+free_tier:
+  - 'Free cloud tier (Basic plan); open-source self-hosted'
+  - No documented rate limits
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://appflowy.com/
+pricing_url: https://appflowy.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

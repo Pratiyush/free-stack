@@ -1,0 +1,27 @@
+name: Paddle
+slug: paddle
+category: payments
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/paddle.svg
+
+summary: 'No monthly fee, Merchant of Record'
+
+tier_type: free-plan
+
+free_tier:
+  - 'No monthly fee, Merchant of Record'
+  - 'MoR model (Paddle is seller of record), handles all tax remittance, effective rate can be higher with 2-3% currency conversion margin on cross-currency payouts'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.paddle.com/
+pricing_url: https://www.paddle.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

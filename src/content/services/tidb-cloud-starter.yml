@@ -1,0 +1,27 @@
+name: TiDB Cloud Starter
+slug: tidb-cloud-starter
+category: databases
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/tidb-cloud-starter.svg
+
+summary: 'Free quota (MySQL-compatible)'
+
+tier_type: always-free
+
+free_tier:
+  - 'Free quota (MySQL-compatible)'
+  - Denies new connections when quota exhausted; resets monthly
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.pingcap.com/
+pricing_url: https://www.pingcap.com/pricing/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

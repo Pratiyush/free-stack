@@ -1,0 +1,27 @@
+name: Zeplin
+slug: zeplin
+category: design
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/zeplin.svg
+
+summary: Zeplin — free tier; see the pricing page for details.
+
+tier_type: free-plan
+
+free_tier:
+  - Free plan
+  - '30-day version history, only owner can upload designs on free plan'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://zeplin.io/
+pricing_url: https://zeplin.io/pricing/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

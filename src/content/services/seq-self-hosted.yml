@@ -1,0 +1,27 @@
+name: 'Seq (self-hosted)'
+slug: seq-self-hosted
+category: logs
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/seq-self-hosted.svg
+
+summary: 'Individual license (free, single user)'
+
+tier_type: free-plan
+
+free_tier:
+  - 'Individual license (free, single user)'
+  - No ingestion rate limit; limited by your own infrastructure. No native SSL (use reverse proxy)
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://datalust.co/
+pricing_url: https://datalust.co/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

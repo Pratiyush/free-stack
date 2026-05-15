@@ -1,0 +1,27 @@
+name: Deno KV
+slug: deno-kv
+category: databases
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/deno-kv.svg
+
+summary: 'Free with Deno Deploy (key-value)'
+
+tier_type: always-free
+
+free_tier:
+  - 'Free with Deno Deploy (key-value)'
+  - 'Shared with Deno Deploy free tier (15 CPU-hours/mo)'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://deno.com/
+pricing_url: https://deno.com/deploy/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

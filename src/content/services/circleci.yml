@@ -1,0 +1,27 @@
+name: CircleCI
+slug: circleci
+category: testing
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/circleci.svg
+
+summary: '30,000 credits/mo (~6,000 build mins on Linux/Docker)'
+
+tier_type: free-plan
+
+free_tier:
+  - '30,000 credits/mo (~6,000 build mins on Linux/Docker)'
+  - Credits expire monthly; no rollover
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://circleci.com/
+pricing_url: https://circleci.com/pricing/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

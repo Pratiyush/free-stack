@@ -1,0 +1,27 @@
+name: ClickUp
+slug: clickup
+category: collaboration
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/clickup.svg
+
+summary: Free Forever plan
+
+tier_type: free-plan
+
+free_tier:
+  - Free Forever plan
+  - 'Limited automations, limited custom fields, no goals/portfolios on free tier'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://clickup.com/
+pricing_url: https://clickup.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

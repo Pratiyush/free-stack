@@ -1,0 +1,27 @@
+name: Linear
+slug: linear
+category: collaboration
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/linear.svg
+
+summary: Linear — free tier; see the pricing page for details.
+
+tier_type: free-plan
+
+free_tier:
+  - Free plan
+  - 'New issue creation blocked at 250 issues until archive/upgrade, no priority support, upgrade to Basic ($8/user/mo) for 5 teams + unlimited issues'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://linear.app/
+pricing_url: https://linear.app/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

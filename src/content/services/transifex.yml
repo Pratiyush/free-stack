@@ -1,0 +1,27 @@
+name: Transifex
+slug: transifex
+category: translation
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/transifex.svg
+
+summary: 'Free for qualifying open-source only'
+
+tier_type: free-plan
+
+free_tier:
+  - 'Free for qualifying open-source only'
+  - '15-day full-feature trial; open-source must have no funding/revenue/commercialization'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.transifex.com/
+pricing_url: https://www.transifex.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

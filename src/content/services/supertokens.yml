@@ -1,0 +1,26 @@
+name: SuperTokens
+slug: supertokens
+category: auth
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/supertokens.svg
+
+summary: 'Free (self-hosted: unlimited; cloud: 5K MAU)'
+
+tier_type: free-plan
+
+free_tier:
+  - 'Free (self-hosted: unlimited; cloud: 5K MAU)'
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://supertokens.com/
+pricing_url: https://supertokens.com/pricing
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

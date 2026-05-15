@@ -1,0 +1,27 @@
+name: '**GitLab**'
+slug: gitlab
+category: dev-tools
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/gitlab.svg
+
+summary: '**GitLab** — free tier; see the pricing page for details.'
+
+tier_type: free-plan
+
+free_tier:
+  - Free tier
+  - 10 req/sec per user
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://about.gitlab.com/
+pricing_url: https://about.gitlab.com/pricing/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01

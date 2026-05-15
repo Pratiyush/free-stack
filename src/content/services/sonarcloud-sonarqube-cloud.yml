@@ -1,0 +1,27 @@
+name: SonarCloud (SonarQube Cloud)
+slug: sonarcloud-sonarqube-cloud
+category: code-quality
+subcategory: permanent
+brand_color: '#888888'
+logo: /logos/sonarcloud-sonarqube-cloud.svg
+
+summary: Free for open source; 50K LoC for private repos
+
+tier_type: free-plan
+
+free_tier:
+  - Free for open source; 50K LoC for private repos
+  - No documented rate limits
+
+pricing:
+  - name: Free
+    price: 0
+    unit: /month
+
+tags: []
+
+official_url: https://www.sonarsource.com/
+pricing_url: https://www.sonarsource.com/plans-and-pricing/
+
+date_added: 2026-05-15
+date_verified: 2026-05-01
