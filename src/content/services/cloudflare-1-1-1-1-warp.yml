@@ -12,11 +12,50 @@ tier_type: free-plan
 free_tier:
   - Free (resolver + VPN)
   - No bandwidth cap on free WARP
+  - Available on iOS/Android/macOS/Windows/Linux
+  - DNS-over-HTTPS and DNS-over-TLS
+  - No account required
+
+paid_tier_highlights:
+  - WARP+ subscription unlocks Cloudflare's premium routing network
+  - Lower latency + faster routing on WARP+
+  - Cloudflare One / Zero Trust packages WARP for orgs
+  - Device-posture and Gateway policies via Cloudflare One
+  - Free tier for first 50 users on Cloudflare Zero Trust
 
 pricing:
   - name: Free
+    description: Personal DNS resolver + WARP VPN at no cost
     price: 0
-    unit: /month
+    billing: free
+    features:
+      - 1.1.1.1 DNS resolver
+      - WARP encrypted tunnel
+      - iOS, Android, macOS, Windows, Linux
+      - DoH and DoT support
+      - No bandwidth cap
+      - No account required
+    cta_url: https://one.one.one.one/
+  - name: WARP+
+    description: Premium routing via Cloudflare backbone
+    price: 4.99
+    unit: /mo (starts at)
+    billing: monthly
+    features:
+      - Larger Cloudflare network access
+      - Reduced latency
+      - Closer global servers
+      - Premium throughput
+  - name: Cloudflare One (Zero Trust)
+    description: Org-managed WARP + Gateway + access policies
+    price: 'Contact sales'
+    billing: annual
+    features:
+      - Free for up to 50 users
+      - Device-posture controls
+      - Gateway DNS + HTTP filtering
+      - Threat protection
+      - Custom team management
 
 tags: []
 
@@ -25,4 +64,4 @@ pricing_url: https://1.1.1.1/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

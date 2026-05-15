@@ -14,9 +14,38 @@ free_tier:
   - Acquired by Cloudflare (2024); uses Workers free tier (100K requests/day). Hibernation API reduces memory usage
 
 pricing:
-  - name: Free
+  - name: Individual (Free)
     price: 0
     unit: /month
+    billing: free
+    description: Free for small projects on shared infrastructure
+    features:
+      - Up to 10 live projects
+      - Hibernation API
+      - Storage cleared every 24 hours
+      - Global edge platform
+      - Open-source SDK
+    cta_url: https://www.partykit.io/
+  - name: Commercial (BYO Cloudflare)
+    price: 0
+    unit: /month
+    billing: usage-based
+    description: Deploy to your own Cloudflare account
+    features:
+      - Custom domains
+      - Unlimited projects
+      - Pay only your Cloudflare usage
+      - Cloudflare Workers free tier (100K req/day)
+      - Durable Objects backend
+      - Persistent storage on paid Cloudflare
+    cta_url: https://www.partykit.io/
+
+paid_tier_highlights:
+  - PartyKit itself has no paid subscription tiers
+  - Commercial deployment uses your own Cloudflare account costs
+  - Cloudflare Workers free tier covers 100K requests/day
+  - Durable Objects pricing applies via Cloudflare account
+  - Hibernation API minimizes Cloudflare usage costs
 
 tags: []
 
@@ -25,4 +54,4 @@ pricing_url: https://www.partykit.io/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

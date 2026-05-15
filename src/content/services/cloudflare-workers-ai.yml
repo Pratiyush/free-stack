@@ -16,13 +16,36 @@ free_tier:
   - Per-model limits apply
   - Integrated with Workers
 
+paid_tier_highlights:
+  - Workers Paid keeps the 10K free Neurons/day allowance
+  - Overage billed at $0.011 per 1,000 Neurons
+  - Full model catalog (LLMs, embeddings, image, audio)
+  - Per-model pricing scales with input/output tokens
+  - Usage monitoring via Cloudflare dashboard
+
 pricing:
-  - name: Free
+  - name: Workers Free
     price: 0
     unit: /month
-  - name: Pay-as-you-go
-    description: $0.011 per 1,000 neurons on Workers Paid
-    price: 'Usage'
+    description: Daily allocation at no charge, no credit card required
+    features:
+      - 10,000 Neurons/day at no charge
+      - Access to all available AI models
+      - Daily limits reset at 00:00 UTC
+      - No credit card required
+      - Errors when daily limit is exceeded
+    billing: free
+  - name: Workers Paid
+    price: 0.011
+    unit: per 1K Neurons over free allocation
+    description: Production-ready metered billing on top of free allowance
+    features:
+      - Includes 10K Neurons/day free allowance
+      - $0.011 per 1,000 Neurons above allocation
+      - Full LLM, embedding, image, and audio catalog
+      - Per-model pricing varies by input/output tokens
+      - Dashboard usage monitoring
+    billing: usage-based
 
 tags: [ai, edge-computing, serverless, workers, on-device]
 

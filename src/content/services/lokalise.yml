@@ -17,6 +17,69 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    billing: free
+    description: For teams exploring localization and first projects
+    features:
+      - Basic project management
+      - Collaborative web-based editor
+      - Translation memory
+      - 2FA security
+      - 24/7 support access
+    cta_url: https://app.lokalise.com/signup
+  - name: Explorer
+    price: 144
+    unit: /month
+    billing: monthly
+    description: Essential localization package for efficient workflows
+    features:
+      - Everything in Free
+      - Enhanced capacity and language support
+      - Spelling/grammar checking
+      - Glossary management
+      - Task management with custom statuses
+    cta_url: https://lokalise.com/pricing/
+  - name: Growth
+    price: 499
+    unit: /month
+    billing: monthly
+    description: Expanding teams with stronger automation
+    features:
+      - Everything in Explorer
+      - Advanced automation triggers
+      - In-context web/mobile editors
+      - Workflow templates and customization
+      - Analytics and translator statistics
+    cta_url: https://lokalise.com/pricing/
+  - name: Advanced
+    price: 999
+    unit: /month
+    billing: monthly
+    description: For teams with complex, multi-product workflows
+    features:
+      - Complete Growth features
+      - Priority customer support
+      - Custom AI profiles (RAG)
+      - Dedicated account management
+      - Workflow audit capabilities
+    cta_url: https://lokalise.com/pricing/
+  - name: Enterprise
+    price: Custom
+    billing: annual
+    description: Global orgs with bespoke security and support needs
+    features:
+      - All Advanced features
+      - Solutions engineer support
+      - Premium success services
+      - Regular business reviews
+      - Private communication channel
+    cta_url: https://lokalise.com/contact-us/
+
+paid_tier_highlights:
+  - Explorer at $144/mo unlocks glossary, spellcheck, and task management
+  - Growth at $499/mo adds automation triggers and workflow templates
+  - Advanced at $999/mo adds custom AI/RAG profiles and audit
+  - Enterprise adds solutions engineer and private channel support
+  - 14-day Enterprise trial available for evaluation
 
 tags: []
 
@@ -25,4 +88,4 @@ pricing_url: https://lokalise.com/pricing/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

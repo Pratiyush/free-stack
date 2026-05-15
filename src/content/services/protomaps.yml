@@ -14,9 +14,32 @@ free_tier:
   - 'N/A -- self-hosted; limited by your CDN'
 
 pricing:
-  - name: Free
+  - name: Free / self-host (open source)
     price: 0
-    unit: /month
+    description: BSD/CC-BY open-source basemaps; self-host PMTiles
+    features:
+      - BSD-licensed software, CC-BY map data
+      - Free download of planet PMTiles or extracted areas
+      - Self-host as a single static file on your CDN
+      - No usage fees when self-hosted
+      - Noncommercial use of hosted API is free
+    cta_url: https://github.com/protomaps/PMTiles
+    billing: free
+  - name: GitHub Sponsor (commercial hosted API)
+    price: Sponsor
+    description: Commercial use of hosted API via GitHub Sponsors
+    features:
+      - Required for commercial use of Protomaps hosted API
+      - Multiple sponsorship tiers via GitHub Sponsors
+      - Supports project maintenance
+    cta_url: https://github.com/sponsors/protomaps
+    billing: monthly
+
+paid_tier_highlights:
+  - Software (BSD) and tiles (CC-BY) are fully open source
+  - Self-host PMTiles as a single static file with no ongoing fees
+  - Noncommercial use of the hosted API is free
+  - Commercial use of the hosted API requires GitHub Sponsorship
 
 tags: []
 
@@ -25,4 +48,4 @@ pricing_url: https://protomaps.com/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

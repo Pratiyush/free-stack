@@ -14,9 +14,35 @@ free_tier:
   - 'Hard cap on Spark; no overage billing. Note: Cloud Storage for Firebase on Spark lost access Feb 2026 (Hosting unaffected)'
 
 pricing:
-  - name: Free
+  - name: Spark (Free)
     price: 0
     unit: /month
+    billing: free
+    description: Free static and dynamic hosting on the Spark plan
+    features:
+      - 10 GB storage
+      - 360 MB/day data transfer
+      - Custom domain with managed SSL
+      - Global CDN
+      - Hard cap with no overage billing
+    cta_url: https://console.firebase.google.com/
+  - name: Blaze (Pay-as-you-go)
+    price: Usage-based
+    billing: usage-based
+    description: Higher quotas with usage-based billing beyond free tier
+    features:
+      - Keeps Spark free thresholds
+      - App Hosting $0.20/GiB uncached, $0.15/GiB cached
+      - Higher daily transfer
+      - Multiple sites per project
+      - Preview channels and rollback
+    cta_url: https://console.firebase.google.com/
+
+paid_tier_highlights:
+  - Blaze removes the 360 MB/day Spark transfer cap
+  - App Hosting bandwidth billed per GiB beyond free
+  - Required for high-traffic sites or multi-region needs
+  - Keeps free Spark thresholds before metering
 
 tags: []
 
@@ -25,4 +51,4 @@ pricing_url: https://firebase.google.com/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

@@ -14,15 +14,44 @@ free_tier:
   - 'Managed: BYOC on AWS/GCP (paid); Ubicloud managed (paid); no permanent free cloud tier'
 
 pricing:
-  - name: Free
+  - name: Community (Self-Hosted)
     price: 0
     unit: /month
+    billing: free
+    description: Open-source AGPL-3.0 ParadeDB
+    features:
+      - GNU AGPL v3.0 license
+      - Full-text and analytics search in Postgres
+      - BM25 search via pg_search extension
+      - Self-hosted on any infrastructure
+      - Community GitHub support
+      - Docker image available
+    cta_url: https://github.com/paradedb/paradedb
+  - name: Enterprise
+    price: Custom
+    billing: annual
+    description: Commercial license with managed deployment
+    features:
+      - Commercial license (not AGPL)
+      - BYOC on AWS/GCP
+      - Ubicloud managed hosting
+      - Priority support with SLA
+      - Enterprise features
+      - Email - sales@paradedb.com
+    cta_url: mailto:sales@paradedb.com
+
+paid_tier_highlights:
+  - Enterprise removes AGPL copyleft requirements
+  - Managed BYOC deployments on AWS and GCP
+  - Ubicloud-managed hosting option
+  - Priority support with response SLAs
+  - No permanent free managed cloud tier
 
 tags: []
 
-official_url: https://github.com/
-pricing_url: https://github.com/paradedb/paradedb
+official_url: https://www.paradedb.com/
+pricing_url: https://www.paradedb.com/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

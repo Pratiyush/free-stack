@@ -12,11 +12,41 @@ tier_type: always-free
 free_tier:
   - Spark plan (free)
   - '50K reads/day, 20K writes/day, 20K deletes/day, resets midnight PT'
+  - 1 GiB total stored data
+  - 10 GiB/mo network egress
+  - No payment method required
+
+paid_tier_highlights:
+  - Blaze (Pay-as-you-go) preserves all Spark free quotas
+  - Beyond free tier, Google Cloud pricing applies per operation/GB
+  - Multiple databases per project on Blaze + Enterprise edition
+  - 50K realtime update units/day included on Blaze
+  - Eligible projects can receive $300 in free Google Cloud credit
 
 pricing:
-  - name: Free
+  - name: Spark
+    description: Generous free quotas with no payment method
     price: 0
-    unit: /month
+    billing: free
+    features:
+      - 50K reads/day
+      - 20K writes/day
+      - 20K deletes/day
+      - 1 GiB stored data
+      - 10 GiB/mo network egress
+      - Resets at midnight PT
+    cta_url: https://console.firebase.google.com/
+  - name: Blaze (Pay-as-you-go)
+    description: Free Spark tier + usage-based scaling
+    price: 'Usage'
+    billing: usage-based
+    features:
+      - Free up to Spark limits
+      - Google Cloud pricing beyond
+      - 50K realtime update units/day free
+      - Multiple databases per project
+      - $300 free credit for eligible projects
+      - Enterprise edition available
 
 tags: []
 
@@ -25,4 +55,4 @@ pricing_url: https://firebase.google.com/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

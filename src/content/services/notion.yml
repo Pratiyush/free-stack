@@ -17,6 +17,60 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    billing: free
+    description: For organizing every corner of your work and life
+    features:
+      - Unlimited blocks for individuals
+      - 1,000 block cap for teams
+      - Collaborative workspace
+      - 7-day page history
+      - Integrate with Slack, GitHub, etc
+      - 5 MB file upload limit
+    cta_url: https://www.notion.so/signup
+  - name: Plus
+    price: 10
+    unit: /user/month
+    billing: annual
+    description: For small groups to plan and get organized
+    features:
+      - Unlimited blocks for teams
+      - Unlimited file uploads
+      - 30-day page history
+      - Custom websites
+      - Up to 100 guests
+    cta_url: https://www.notion.so/signup
+  - name: Business
+    price: 20
+    unit: /user/month
+    billing: annual
+    description: For companies using Notion to connect teams
+    features:
+      - SAML SSO
+      - Private teamspaces
+      - Bulk PDF export
+      - Advanced page analytics
+      - 90-day page history
+      - Up to 250 guests
+    cta_url: https://www.notion.so/signup
+  - name: Enterprise
+    price: Custom
+    billing: annual
+    description: For organizations needing advanced controls and support
+    features:
+      - User provisioning (SCIM)
+      - Advanced security & controls
+      - Audit log
+      - Customer success manager
+      - Workspace analytics
+      - Unlimited page history
+    cta_url: https://www.notion.so/contact-sales
+
+paid_tier_highlights:
+  - Plus removes 1,000 block cap and adds unlimited file uploads
+  - Business adds SAML SSO and private teamspaces
+  - Enterprise adds SCIM provisioning and audit logs
+  - Notion AI add-on available on all plans
+  - Guest collaborator limits scale with tier
 
 tags: []
 
@@ -25,4 +79,4 @@ pricing_url: https://www.notion.so/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

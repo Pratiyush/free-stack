@@ -15,6 +15,58 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    billing: free
+    description: Hobby projects, no credit card required
+    features:
+      - 50 monitors with 5-minute intervals
+      - HTTP, port, ping monitoring
+      - Keyword and SSL/Domain expiration
+      - 1 basic status page
+      - Up to 5 integrations
+    cta_url: https://uptimerobot.com/signUp
+  - name: Solo
+    price: 7
+    unit: /month annual
+    billing: monthly
+    description: For solopreneurs and hobbyists
+    features:
+      - 10-50 monitors at 60-second intervals
+      - API, UDP, multi-location monitoring
+      - Slow response and DNS monitoring
+      - 9 integrations
+      - Basic status pages
+    cta_url: https://uptimerobot.com/pricing/
+  - name: Team
+    price: 29
+    unit: /month annual
+    billing: monthly
+    description: Small teams needing collaboration
+    features:
+      - 100 monitors at 60-second intervals
+      - All monitoring types
+      - 3 full-featured status pages
+      - All 12 integrations
+      - 3 notify and 3 login seats
+    cta_url: https://uptimerobot.com/pricing/
+  - name: Enterprise
+    price: 54
+    unit: /month annual
+    billing: monthly
+    description: 200-1,000+ monitors at 30s intervals
+    features:
+      - 200-1,000+ monitors
+      - 30-second monitoring intervals
+      - Unlimited status pages
+      - All 12 integrations
+      - 5 notify and 5 login seats
+    cta_url: https://uptimerobot.com/pricing/
+
+paid_tier_highlights:
+  - Solo from $7/mo enables 60-second monitoring and multi-location checks
+  - Team at $29/mo unlocks 100 monitors + full-featured status pages
+  - Enterprise from $54/mo adds 30-second intervals and unlimited status pages
+  - All paid plans include API, UDP, DNS, and SSL monitoring
+  - All 12 integrations available on Team and Enterprise
 
 tags: []
 
@@ -23,4 +75,4 @@ pricing_url: https://uptimerobot.com/pricing/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

@@ -16,13 +16,72 @@ free_tier:
   - No credit card required
 
 pricing:
-  - name: Free
+  - name: Free (AuthKit)
     price: 0
     unit: /month
+    billing: free
+    description: First 1M monthly active users free
+    features:
+      - 1M MAU free
+      - Email + password
+      - Social login
+      - Passkey support
+      - MFA included
+    cta_url: https://workos.com/sign-up
+  - name: Pay-as-you-go
+    price: Usage
+    billing: usage-based
+    description: Automatic volume discounts and dedicated Slack
+    features:
+      - Automatic volume discounts
+      - Deploy in minutes
+      - Dedicated Slack channel
+      - All AuthKit features
+      - Enterprise SSO available
+    cta_url: https://workos.com/pricing
   - name: Enterprise SSO
-    description: Per-connection
     price: 125
     unit: /connection/month
+    billing: monthly
+    description: Per-connection SSO pricing with volume discounts
+    features:
+      - Okta, Entra, Google IdPs
+      - 20-60% discounts (16+ connections)
+      - Custom for 201+ connections
+      - Enterprise-grade auth
+      - JIT provisioning
+    cta_url: https://workos.com/pricing
+  - name: Directory Sync
+    price: 125
+    unit: /connection/month
+    billing: monthly
+    description: SCIM directory provisioning, volume discounts
+    features:
+      - SCIM 2.0 support
+      - Same volume tiers as SSO
+      - Automated user provisioning
+      - Custom 201+ pricing
+      - Multi-IdP support
+    cta_url: https://workos.com/pricing
+  - name: Audit Logs
+    price: 99
+    unit: /month
+    billing: monthly
+    description: Streaming ($125) or retention ($99) audit logs
+    features:
+      - SIEM integration
+      - Event streaming
+      - Configurable retention
+      - Compliance docs
+      - $125/mo for streaming, $99/mo for retention
+    cta_url: https://workos.com/pricing
+
+paid_tier_highlights:
+  - Enterprise SSO from $125/connection/mo, volume discounts to $50
+  - Directory Sync (SCIM) at $125/connection/mo with same volume tiers
+  - Audit Logs from $99/mo for retention, $125/mo for streaming
+  - Custom Domain at $99/mo for branded auth
+  - Radar bot/fraud protection free for 1k checks, then $100/50K checks
 
 tags: [authentication, sso, mfa, identity, enterprise]
 

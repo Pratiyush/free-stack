@@ -16,7 +16,58 @@ free_tier:
 pricing:
   - name: Free
     price: 0
-    unit: /month
+    unit: /developer/month
+    billing: free
+    description: Individual developers and small teams staying secure
+    features:
+      - Unlimited developers and repos
+      - 1,000 scans/month
+      - Detects 70+ risk types
+      - Block malicious dependencies
+      - AI analysis for hidden behavior
+    cta_url: https://socket.dev/pricing
+  - name: Team
+    price: 25
+    unit: /developer/month
+    billing: monthly
+    description: Growing teams; 20% annual savings
+    features:
+      - 5,000 scans/month
+      - Precomputed reachability analysis
+      - Priority scoring
+      - Slack alerts
+      - 10 members, 3 repo labels
+    cta_url: https://socket.dev/pricing
+  - name: Business
+    price: 50
+    unit: /developer/month
+    billing: monthly
+    description: Enterprise-grade automation and compliance
+    features:
+      - Unlimited members and scans
+      - Vanta compliance integrations
+      - SBOM import/export
+      - SSO/SAML and webhooks
+      - Scans GitHub Actions and AI models
+      - Unlimited API quota
+    cta_url: https://socket.dev/pricing
+  - name: Enterprise
+    price: Custom
+    billing: annual
+    description: Function-level reachability eliminating 90% of CVEs
+    features:
+      - Function-level reachability for dynamic langs
+      - Multi-platform (GitLab, Bitbucket, Azure)
+      - SCIM provisioning and audit logs
+      - Named account manager
+      - IP restrictions, migration assistance
+    cta_url: https://socket.dev/pricing
+
+paid_tier_highlights:
+  - Team ($25/dev) adds 5K scans and reachability analysis
+  - Business ($50/dev) brings SSO/SAML and unlimited scans
+  - Business includes Vanta compliance and SBOM
+  - Enterprise unlocks function-level CVE filtering
 
 tags: []
 

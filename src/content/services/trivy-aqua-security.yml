@@ -14,9 +14,50 @@ free_tier:
   - 'Self-hosted only; Trivy Enterprise (paid) adds centralized management and compliance reporting'
 
 pricing:
-  - name: Free
+  - name: Trivy (Open Source)
     price: 0
-    unit: /month
+    description: Apache 2.0 — self-hosted only
+    billing: free
+    features:
+      - Container image vulnerability scanning
+      - IaC misconfiguration scanning
+      - Secrets detection
+      - SBOM generation
+      - Filesystem and repo scanning
+      - Kubernetes resource scanning
+      - Self-hosted only
+    cta_url: https://github.com/aquasecurity/trivy
+  - name: Aqua Dev Security
+    price: Custom
+    description: Pricing based on number of code repositories
+    billing: annual
+    features:
+      - Code repo discovery
+      - Dynamic Threat Analysis (DTA)
+      - Open-source health scoring
+      - IaC scanning + pipeline security
+      - CI/CD posture management
+      - SBOM generation + toolchain governance
+    cta_url: https://www.aquasec.com/contact-sales/
+  - name: Aqua Cloud Security
+    price: Custom
+    description: Pricing based on number of workloads
+    billing: annual
+    features:
+      - Cloud auto-discovery + agentless scanning
+      - Multi-cloud (AWS, Azure, GCP, Oracle, Alibaba)
+      - eBPF-based threat detection
+      - Drift prevention + malware protection
+      - Service identity segmentation
+      - Audit trails + compliance reporting
+    cta_url: https://www.aquasec.com/contact-sales/
+
+paid_tier_highlights:
+  - Aqua Dev Security priced per code repository
+  - Aqua Cloud Security priced per workload (EC2, Fargate, Lambda)
+  - Centralized management + compliance reporting in paid tiers
+  - Dynamic Threat Analysis only in Aqua paid platform
+  - eBPF runtime threat detection in Aqua Cloud Security
 
 tags: []
 
@@ -25,4 +66,4 @@ pricing_url: https://trivy.dev/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

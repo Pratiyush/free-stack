@@ -13,10 +13,48 @@ free_tier:
   - 'Free: 1 private repo, 3 team members, 500 analysis runs/mo, 50 Autofix runs/mo; unlimited public repos'
   - 500 analysis runs/mo on free tier
 
+paid_tier_highlights:
+  - Team at $24/user/mo (yearly) unlocks unlimited private repos
+  - $100/yr AI Review credit per user on Team
+  - Unlimited Autofix and code formatting on Team
+  - Monorepo support, API/Webhooks, priority support
+  - Enterprise adds self-hosted, BYOK AI, SSO, IP restrictions
+
 pricing:
-  - name: Free
+  - name: Open Source
     price: 0
     unit: /month
+    description: Community plan for public repositories
+    features:
+      - Unlimited public repositories
+      - 1,000 PRs reviewed/month
+      - Pay-as-you-go AI Review and code formatting
+      - Static Analysis, SAST, IaC included
+      - No private repository support
+    billing: free
+  - name: Team
+    price: 24
+    unit: /user/month (annual)
+    description: Unlimited PR reviews with comprehensive tooling
+    features:
+      - Unlimited public and private repos
+      - Unlimited pull request reviews
+      - $100/yr AI Review credit per user
+      - Unlimited Autofix and code formatting
+      - OSS Dependency Scanning (3 targets)
+      - Monorepo support, API/Webhooks, priority support
+    billing: annual
+  - name: Enterprise
+    price: Custom
+    description: Self-hosted and compliance capabilities
+    features:
+      - All Team plan features
+      - Self-hosted or Enterprise Cloud
+      - BYOK AI (Claude, OpenAI, Gemini)
+      - SSO and IP restrictions
+      - Dedicated account manager with SLA
+      - Migration assistance, manual invoicing
+    billing: annual
 
 tags: []
 
@@ -25,4 +63,4 @@ pricing_url: https://deepsource.com/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

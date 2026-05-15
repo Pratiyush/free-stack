@@ -16,7 +16,60 @@ free_tier:
 pricing:
   - name: Free
     price: 0
-    unit: /month
+    unit: /member/month
+    billing: free
+    description: Basic diagramming for evaluating Eraser
+    features:
+      - 3 files
+      - 3 AI diagrams
+      - 7-day version history
+      - Unlimited guests
+      - Diagram-as-code and Markdown notes
+      - GitHub, Notion, Confluence, VS Code integrations
+    cta_url: https://app.tryeraser.com/auth/sign-up
+  - name: Starter
+    price: 15
+    unit: /member/month
+    billing: annual
+    description: Unlimited files with more AI generation and custom icons
+    features:
+      - Unlimited files
+      - 40 AI diagrams
+      - 90-day version history
+      - Private files
+      - 20 custom icons
+      - API access
+    cta_url: https://app.tryeraser.com/auth/sign-up
+  - name: Business
+    price: 45
+    unit: /member/month
+    billing: annual
+    description: Advanced collaboration with SSO and unlimited history
+    features:
+      - 250 AI diagrams
+      - Unlimited version history
+      - SAML SSO
+      - 100 custom icons
+      - Reference diagrams
+      - Everything in Starter
+    cta_url: https://app.tryeraser.com/auth/sign-up
+  - name: Enterprise
+    price: Custom
+    description: Flexible deployment with customer success manager
+    features:
+      - Unlimited AI diagrams
+      - Unlimited version history
+      - Flexible deployments
+      - Customer success manager
+      - ACH and wire transfer billing
+      - Usage reporting
+    cta_url: https://cal.com/shin-kim/eraser-enterprise-plan
+
+paid_tier_highlights:
+  - Starter at $15/member/mo unlocks unlimited files and 40 AI diagrams
+  - Business at $45/member/mo adds SAML SSO and unlimited history
+  - Enterprise tier offers flexible deployment and dedicated CSM
+  - AI diagram budgets grow at every paid tier
 
 tags: []
 
@@ -25,4 +78,4 @@ pricing_url: https://www.eraser.io/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

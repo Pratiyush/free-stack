@@ -12,15 +12,64 @@ free_tier:
   - Developer (free)
 
 pricing:
-  - name: Free
+  - name: Developer
     price: 0
     unit: /month
+    billing: free
+    description: Free forever feature flagging plus observability, no card
+    features:
+      - Unlimited seats and feature flags
+      - 30 idiomatic SDKs
+      - 5K Session Replays and Errors
+      - 10M Logs and Traces
+      - A/B Tests and Experiments
+    cta_url: https://launchdarkly.com/start-trial/
+  - name: Foundation
+    price: 12
+    unit: /service-connection/month
+    billing: monthly
+    description: Feature management and experimentation for growing teams
+    features:
+      - Everything in Developer
+      - Unlimited projects
+      - User, account, device targeting
+      - Scalable observability usage
+      - SSO and yearly billing options
+    cta_url: https://launchdarkly.com/pricing
+  - name: Enterprise
+    price: Custom
+    billing: annual
+    description: Advanced feature management at scale with governance
+    features:
+      - Advanced user targeting
+      - Release automation, scheduling, approvals
+      - SAML and SCIM integration
+      - Custom roles and teams
+      - Annual contracts only
+    cta_url: https://launchdarkly.com/contact-sales
+  - name: Guardian
+    price: Custom
+    billing: annual
+    description: Monitors and guards releases with automated rollback
+    features:
+      - Release Monitoring
+      - Guardrail Metrics
+      - Automatic Pause or Rollback
+      - Advanced Observability
+      - Exposure Insights
+    cta_url: https://launchdarkly.com/contact-sales
+
+paid_tier_highlights:
+  - Foundation at $12/service-connection/mo plus $10/1K client MAU
+  - Enterprise adds release automation, SAML, SCIM, custom roles
+  - Guardian add-on layers release monitoring and auto-rollback
+  - Free Developer tier includes 5K replays and 10M logs/traces
 
 tags: []
 
 official_url: https://launchdarkly.com/
-pricing_url: https://launchdarkly.com/docs/home/observability
+pricing_url: https://launchdarkly.com/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

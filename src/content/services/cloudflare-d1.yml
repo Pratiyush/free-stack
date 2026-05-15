@@ -12,11 +12,41 @@ tier_type: always-free
 free_tier:
   - Workers Free plan (SQLite at edge)
   - '5M rows read/day, 100K rows written/day, resets midnight UTC'
+  - 5 GB total storage included
+  - Scale-to-zero compute billing
+  - Read replicas included at no extra cost
+
+paid_tier_highlights:
+  - Workers Paid ($5/mo) removes daily limits with monthly allowances
+  - 25B row reads + 50M row writes included on Paid plan
+  - Storage beyond 5 GB billed at $0.75/GB-month
+  - No data transfer or throughput charges
+  - Read replicas remain included on Paid
 
 pricing:
-  - name: Free
+  - name: Workers Free
+    description: Prototype D1 at no cost with daily limits
     price: 0
-    unit: /month
+    billing: free
+    features:
+      - 5M rows read/day
+      - 100K rows written/day
+      - 5 GB storage total
+      - Scale-to-zero compute
+      - Daily limits reset 00:00 UTC
+    cta_url: https://dash.cloudflare.com/sign-up/workers-and-pages
+  - name: Workers Paid
+    description: Monthly allowances + usage overages, no daily caps
+    price: 5
+    unit: /mo (starts at)
+    billing: monthly
+    features:
+      - 25B reads/mo included ($0.001/M after)
+      - 50M writes/mo included ($1/M after)
+      - 5 GB storage included ($0.75/GB-mo after)
+      - No data transfer charges
+      - Scale-to-zero when idle
+      - Read replicas at no extra cost
 
 tags: []
 
@@ -25,4 +55,4 @@ pricing_url: https://developers.cloudflare.com/d1/platform/pricing/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

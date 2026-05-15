@@ -14,9 +14,36 @@ free_tier:
   - 'Blaze plan mandatory; no-cost usage preserved on *.appspot.com buckets'
 
 pricing:
-  - name: Free
+  - name: Spark (Legacy free quotas on Blaze)
     price: 0
     unit: /month
+    billing: free
+    description: 5 GB no-cost usage retained on Blaze for legacy buckets
+    features:
+      - 5 GB stored (no-cost tier on *.appspot.com)
+      - 1 GB/day download
+      - 20K upload, 50K download operations/day
+      - Blaze plan required since Feb 2026
+      - Hard cap removed (metered after free)
+    cta_url: https://console.firebase.google.com/
+  - name: Blaze (Pay-as-you-go)
+    price: Usage-based
+    billing: usage-based
+    description: Metered storage and egress beyond the free thresholds
+    features:
+      - $0.026/GB stored per month
+      - $0.12/GB downloaded
+      - $0.05 per 10K upload operations
+      - $0.004 per 10K download operations
+      - Multiple buckets per project
+      - Required for any Cloud Storage usage
+    cta_url: https://console.firebase.google.com/
+
+paid_tier_highlights:
+  - Blaze plan mandatory for Cloud Storage as of Feb 2026
+  - Storage billed at $0.026/GB-month above free tier
+  - Egress billed at $0.12/GB downloaded
+  - Multiple buckets per project on Blaze
 
 tags: []
 
@@ -25,4 +52,4 @@ pricing_url: https://firebase.google.com/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

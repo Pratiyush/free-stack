@@ -1,0 +1,139 @@
+---
+/* ViewToggle — grid ↔ table chip pair.
+ * Renders client-side toggle that:
+ *   • switches [hidden] between sibling .grid-view and .table-view containers
+ *   • persists choice to localStorage (key: 'fs-catalog-view')
+ *   • syncs to URL via ?view=table or removes the param when grid
+ *   • reads URL or localStorage on first paint to restore prior choice
+ *
+ * The parent page must render BOTH a [data-view="grid"] element AND a
+ * [data-view="table"] element. The toggle hides the inactive one.
+ */
+---
+
+<div class="view-toggle" role="tablist" aria-label="Catalog view mode" data-view-toggle>
+  <button
+    type="button"
+    role="tab"
+    class="view-btn active"
+    data-view-mode="grid"
+    aria-selected="true"
+    aria-controls="view-grid"
+  >
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+      <rect x="0.5" y="0.5" width="5" height="5" stroke="currentColor"></rect>
+      <rect x="8.5" y="0.5" width="5" height="5" stroke="currentColor"></rect>
+      <rect x="0.5" y="8.5" width="5" height="5" stroke="currentColor"></rect>
+      <rect x="8.5" y="8.5" width="5" height="5" stroke="currentColor"></rect>
+    </svg>
+    Grid
+  </button>
+  <button
+    type="button"
+    role="tab"
+    class="view-btn"
+    data-view-mode="table"
+    aria-selected="false"
+    aria-controls="view-table"
+  >
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+      <line x1="0.5" y1="3.5" x2="13.5" y2="3.5" stroke="currentColor"></line>
+      <line x1="0.5" y1="7" x2="13.5" y2="7" stroke="currentColor"></line>
+      <line x1="0.5" y1="10.5" x2="13.5" y2="10.5" stroke="currentColor"></line>
+    </svg>
+    Table
+  </button>
+</div>
+
+<script>
+  const STORAGE_KEY = 'fs-catalog-view';
+
+  function getInitialMode(): 'grid' | 'table' {
+    // Priority: URL param > localStorage > default 'grid'.
+    const url = new URLSearchParams(window.location.search).get('view');
+    if (url === 'table' || url === 'grid') return url;
+    const stored = localStorage.getItem(STORAGE_KEY);
+    if (stored === 'table' || stored === 'grid') return stored;
+    return 'grid';
+  }
+
+  function applyMode(mode: 'grid' | 'table') {
+    const grid = document.querySelector<HTMLElement>('[data-view="grid"]');
+    const table = document.querySelector<HTMLElement>('[data-view="table"]');
+    if (!grid || !table) return;
+
+    grid.toggleAttribute('hidden', mode !== 'grid');
+    table.toggleAttribute('hidden', mode !== 'table');
+
+    document.querySelectorAll<HTMLButtonElement>('[data-view-mode]').forEach((btn) => {
+      const active = btn.dataset.viewMode === mode;
+      btn.classList.toggle('active', active);
+      btn.setAttribute('aria-selected', active ? 'true' : 'false');
+    });
+
+    // Persist + URL sync.
+    localStorage.setItem(STORAGE_KEY, mode);
+    const url = new URL(window.location.href);
+    if (mode === 'table') url.searchParams.set('view', 'table');
+    else url.searchParams.delete('view');
+    window.history.replaceState({}, '', url);
+  }
+
+  // Wire toggle buttons.
+  document.querySelectorAll<HTMLButtonElement>('[data-view-mode]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const mode = btn.dataset.viewMode as 'grid' | 'table';
+      applyMode(mode);
+    });
+  });
+
+  // Initial mode (after DOM is ready).
+  applyMode(getInitialMode());
+</script>
+
+<style>
+  .view-toggle {
+    display: inline-flex;
+    gap: 0;
+    border: 1px solid var(--color-rule);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+  }
+  .view-btn {
+    font: inherit;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.8rem;
+    background: var(--color-paper);
+    color: var(--color-ink-soft);
+    border: none;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition:
+      background 0.15s ease,
+      color 0.15s ease;
+    border-right: 1px solid var(--color-rule);
+  }
+  .view-btn:last-child {
+    border-right: none;
+  }
+  .view-btn:hover {
+    color: var(--color-ink);
+    background: var(--color-paper-warm);
+  }
+  .view-btn.active {
+    background: var(--color-ink);
+    color: var(--color-paper);
+  }
+  .view-btn.active svg {
+    stroke: var(--color-paper);
+  }
+  .view-btn:focus-visible {
+    outline: 2px solid var(--color-coral);
+    outline-offset: 2px;
+  }
+  .view-btn svg {
+    flex-shrink: 0;
+  }
+</style>

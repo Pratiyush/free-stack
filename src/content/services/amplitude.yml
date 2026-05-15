@@ -9,19 +9,68 @@ summary: Product analytics with 50K MAU free, 10M events/mo, 1K session replays,
 tier_type: always-free
 
 free_tier:
-  - 50K monthly active users
-  - 10M events/mo
-  - 1K session replays/mo
+  - 10K MTUs and up to 2M events/month (Starter plan, 2026)
+  - Out-of-the-box analytics and templates
+  - Session Replay and Web Experimentation
   - Unlimited feature flags
-  - 12-month data retention
+  - AI Feedback and unlimited sources/destinations
+
+paid_tier_highlights:
+  - 'Plus from $49/mo lifts to 300K MTUs / 25M events with behavioral cohorts'
+  - 'Growth (custom) adds Feature Experimentation, causal insights, real-time syncs'
+  - 'Enterprise adds cross-product analysis, mutual exclusion groups, bandits'
+  - 'Higher tiers unlock advanced permissions, account manager, longer retention'
 
 pricing:
-  - name: Free
+  - name: Starter
     price: 0
-    unit: /month
+    billing: free
+    description: For individuals and explorers getting started
+    features:
+      - 10K MTUs, up to 2M events
+      - Out-of-the-box analytics and templates
+      - Session Replay
+      - Unlimited feature flags
+      - Web Experimentation and AI Feedback
+      - Unlimited sources and destinations
+    cta_url: https://app.amplitude.com/signup
+  - name: Plus
+    price: 49
+    unit: /month (annual)
+    billing: annual
+    description: For small teams finding product-market fit
+    features:
+      - Up to 300K MTUs or 25M events
+      - Unlimited product analytics
+      - Behavioral cohorts
+      - Feature tagging
+      - Custom audiences and syncs
+      - Online customer support
+    cta_url: https://app.amplitude.com/signup?next=%2Fcheckout
   - name: Growth
-    price: 2295
-    unit: /month
+    price: Contact sales
+    billing: annual
+    description: For businesses looking to scale
+    features:
+      - Custom MTU or event volume
+      - Advanced behavioral analysis
+      - Causal insights and monitoring
+      - Feature Experimentation
+      - Real-time streaming and syncs
+      - Predictive audiences
+    cta_url: https://amplitude.com/sales-contact
+  - name: Enterprise
+    price: Contact sales
+    billing: annual
+    description: For larger enterprises with complex requirements
+    features:
+      - Custom MTU or event volume
+      - Cross-product analysis
+      - Advanced data and permission controls
+      - Mutual exclusion groups for A/B tests
+      - Multi-armed bandit experiments
+      - Assigned account manager
+    cta_url: https://amplitude.com/sales-contact
 
 tags: [analytics, product-analytics, events, feature-flags, session-replay]
 

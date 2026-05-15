@@ -17,6 +17,64 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    billing: free
+    description: 500 MB storage / 1 GB transfer; public images always free
+    cta_url: https://docs.github.com/en/billing/concepts/product-billing/github-packages
+    features:
+      - 500 MB shared package storage
+      - 1 GB monthly data transfer
+      - Free unlimited public images
+      - Container registry storage currently free
+      - Actions pulls always free
+  - name: GitHub Pro
+    price: 4
+    unit: /user/month
+    billing: monthly
+    description: 2 GB storage and 10 GB monthly data transfer
+    cta_url: https://github.com/pricing
+    features:
+      - 2 GB shared storage
+      - 10 GB monthly data transfer
+      - Free unlimited public images
+      - Granular permissions
+  - name: GitHub Team
+    price: 4
+    unit: /user/month
+    billing: monthly
+    description: Org plan with 2 GB storage and 10 GB transfer
+    cta_url: https://github.com/pricing
+    features:
+      - 2 GB shared storage
+      - 10 GB monthly data transfer
+      - Org-level access controls
+      - Audit log
+  - name: GitHub Enterprise
+    price: 21
+    unit: /user/month
+    billing: monthly
+    description: 50 GB storage and 100 GB monthly data transfer
+    cta_url: https://github.com/pricing
+    features:
+      - 50 GB shared storage
+      - 100 GB monthly data transfer
+      - SAML SSO and audit log
+      - SLA and premium support
+  - name: Overage
+    price: Usage
+    billing: usage-based
+    description: Storage and data transfer billed by metered usage above plan
+    cta_url: https://github.com/pricing/calculator?feature=packages
+    features:
+      - Storage billed by hourly usage rate
+      - Data transfer per-GB
+      - Pricing calculator available
+      - Public images and inbound always free
+
+paid_tier_highlights:
+  - Pro/Team at $4/user/mo lifts quota to 2 GB storage and 10 GB transfer
+  - Enterprise at $21/user/mo includes 50 GB storage and 100 GB transfer
+  - Public container images are always free, regardless of plan
+  - Inbound data transfer is free; only egress counts toward quota
 
 tags: []
 
@@ -25,4 +83,4 @@ pricing_url: https://docs.github.com/en/billing/concepts/product-billing/github-
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

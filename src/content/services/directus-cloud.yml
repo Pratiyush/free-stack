@@ -14,9 +14,47 @@ free_tier:
   - No quota limits on usage; 24/7 system monitoring; BSL license (free for orgs under $5M revenue)
 
 pricing:
-  - name: Free
+  - name: Community / Self-Hosted
     price: 0
     unit: /month
+    billing: free
+    description: Free to self-host for entities under $5M annual finances (BSL)
+    features:
+      - No quota limits on self-hosted usage
+      - Full open-source codebase
+      - Community support
+      - Commercial license required above $5M revenue
+    cta_url: https://directus.io/
+  - name: Professional
+    price: 99
+    unit: /month
+    billing: annual
+    description: Best for development, staging, and early production projects
+    features:
+      - 5 Studio Users included
+      - 75,000 Database Entries
+      - 250,000 API requests/month
+      - 500 GB API Bandwidth/month
+      - 150 GB Total File Storage
+      - 24/7 system monitoring
+    cta_url: https://directus.cloud/register
+  - name: Enterprise
+    price: Custom
+    billing: annual
+    description: Large projects with robust security, scale, and support needs
+    features:
+      - Custom Studio Users and entries
+      - Multiple environments
+      - Premium support with SLAs
+      - 20+ region availability
+      - Dedicated infrastructure
+    cta_url: https://directus.io/demo
+
+paid_tier_highlights:
+  - Professional plan at $99/mo (annual) for staging and early production
+  - Enterprise plan with custom pricing, dedicated infrastructure, and SLAs
+  - 20+ region availability on Enterprise
+  - Premium support tiers available on paid plans
 
 tags: []
 
@@ -25,4 +63,4 @@ pricing_url: https://directus.io/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

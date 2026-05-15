@@ -12,11 +12,63 @@ tier_type: free-plan
 free_tier:
   - Free plan
   - 'Unmetered DDoS; 5 firewall rules; community-only support'
+  - Universal SSL (TLS 1.3, auto-renewing)
+  - Unlimited DNS queries
+  - HTTP/3 and HTTP/2 support
+
+paid_tier_highlights:
+  - Pro ($20/mo) adds WAF managed rulesets + image optimization
+  - Business ($200/mo) supports custom SSL upload + PCI + 100% SLA
+  - Enterprise has Advanced Certificate Manager + custom SLAs
+  - Custom hostnames + SSL for SaaS available on Enterprise
+  - 24/7 chat support on Business and above
 
 pricing:
   - name: Free
+    description: Universal SSL + DDoS + DNS at no cost
     price: 0
-    unit: /month
+    billing: free
+    features:
+      - Universal SSL (TLS 1.3)
+      - Unmetered DDoS mitigation
+      - 5 page rules
+      - HTTP/3 + HTTP/2
+      - Community support only
+    cta_url: https://dash.cloudflare.com/sign-up
+  - name: Pro
+    description: WAF + image optimization for pro sites
+    price: 20
+    unit: /mo
+    billing: monthly
+    features:
+      - Everything in Free
+      - WAF managed rules
+      - Image optimization (Polish)
+      - Lossy + lossless image opts
+      - Email support
+      - 20 page rules
+  - name: Business
+    description: PCI + 100% SLA + custom SSL
+    price: 200
+    unit: /mo
+    billing: monthly
+    features:
+      - Everything in Pro
+      - 100% uptime SLA
+      - Custom SSL upload
+      - PCI compliance support
+      - 24/7 chat support
+      - Bypass cache on cookie
+  - name: Enterprise
+    description: Premium routing, advanced WAF, custom SLA
+    price: 'Contact sales'
+    billing: annual
+    features:
+      - Advanced Certificate Manager
+      - Custom SLA + premium support
+      - SSL for SaaS / custom hostnames
+      - Advanced WAF + bot management
+      - Dedicated solutions engineer
 
 tags: []
 
@@ -25,4 +77,4 @@ pricing_url: https://www.cloudflare.com/plans/free/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

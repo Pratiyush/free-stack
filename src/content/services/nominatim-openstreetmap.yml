@@ -14,9 +14,34 @@ free_tier:
   - 1 request/sec on public instance
 
 pricing:
-  - name: Free
+  - name: Public API
     price: 0
     unit: /month
+    billing: free
+    description: OSM-hosted public geocoding service (occasional use)
+    features:
+      - Free open data (ODbL)
+      - 1 request/sec rate limit
+      - Forward and reverse geocoding
+      - Address search
+      - Requires HTTP User-Agent
+      - No bulk/heavy commercial use
+    cta_url: https://nominatim.openstreetmap.org/
+  - name: Self-Hosted
+    price: 0
+    unit: /month
+    billing: free
+    description: Run your own Nominatim instance (no rate limits)
+    features:
+      - Apache 2.0 / GPL licensed code
+      - No rate limits
+      - Full control of indexing
+      - Docker image available
+      - Heavy use friendly
+    cta_url: https://nominatim.org/release-docs/latest/admin/Installation/
+
+paid_tier_highlights:
+  - This service is always-free; no paid tiers exist
 
 tags: []
 

@@ -19,10 +19,70 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    billing: free
+    description: Try Mailtrap Email API/SMTP
+    features:
+      - 4,000 emails/month
+      - 150 emails/day limit
+      - 1 user
+      - 1 domain
+      - 3 days of email logs
+    cta_url: https://mailtrap.io/register/signup
   - name: Basic
-    description: 10K emails/mo, 5 domains, 3 users
     price: 15
     unit: /month
+    billing: monthly
+    description: For startups and small businesses (10K-100K emails)
+    features:
+      - Up to 50,000 emails/month
+      - 3 users
+      - 5 domains
+      - 5 days of email logs
+      - $1 per 1,000 overage emails
+    cta_url: https://mailtrap.io/pricing/
+  - name: Business
+    price: 85
+    unit: /month
+    billing: monthly
+    description: Growing businesses (100K-750K emails); best value
+    features:
+      - Up to 750,000 emails/month
+      - 1,000 users
+      - Dedicated IP
+      - 15 days of email logs
+      - $0.88 per 1,000 overage emails
+    cta_url: https://mailtrap.io/pricing/
+  - name: Enterprise
+    price: 750
+    unit: /month
+    billing: monthly
+    description: For organizations that send at scale (1.5M-5M+)
+    features:
+      - 1.5M to 5M+ emails/month
+      - 30 days of email logs
+      - Priority support
+      - Custom contracts
+      - DPA included
+    cta_url: https://mailtrap.io/pricing/
+  - name: Sandbox Basic
+    price: 14
+    unit: /month
+    billing: annual
+    description: Email Sandbox testing for startups
+    features:
+      - 500 test emails/month
+      - 100 forwarded emails/month
+      - 3 users
+      - 7MB max email size
+      - Single sandbox
+    cta_url: https://mailtrap.io/pricing/
+
+paid_tier_highlights:
+  - Basic at $15/mo unlocks 10K-50K emails and 5 domains
+  - Business at $85/mo adds dedicated IP and 750K emails/month
+  - Enterprise at $750/mo scales to 5M+ emails with priority support
+  - 15-day log retention on Business, 30-day on Enterprise
+  - Email Sandbox tiers available separately for testing workflows
 
 tags: [email, transactional-email, testing, sandbox, smtp]
 

@@ -17,11 +17,52 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    billing: free
+    description: Base Discord experience with messaging and community features
+    features:
+      - Unlimited servers and direct messaging
+      - Voice and video calls with screen sharing
+      - 10 MB file upload limit per file
+      - Standard emoji reactions
+      - Up to 100 servers per account
+    cta_url: https://discord.com/register
+  - name: Nitro Basic
+    price: 2.99
+    unit: /month
+    billing: monthly
+    description: Nitro starter perks for chat customization
+    features:
+      - Custom emoji anywhere
+      - 50 MB file uploads
+      - Custom app icons
+      - Nitro profile badge
+      - 300+ exclusive stickers
+      - Soundboard sounds anywhere
+    cta_url: https://discord.com/feature/store
+  - name: Nitro
+    price: 9.99
+    unit: /month
+    billing: monthly
+    description: Full Nitro perks plus Xbox Game Pass and HD streaming
+    features:
+      - Everything in Nitro Basic
+      - 500 MB file uploads
+      - HD video streaming and custom backgrounds
+      - Xbox Game Pass with cloud gaming
+      - Custom profiles and per-server profiles
+      - 2 Server Boosts plus 30% off additional boosts
+    cta_url: https://discord.com/feature/store
+
+paid_tier_highlights:
+  - Nitro Basic at $2.99/mo adds custom emoji and 50 MB uploads
+  - Nitro at $9.99/mo unlocks 500 MB uploads and HD streaming
+  - Nitro bundles Xbox Game Pass and cloud gaming hours
+  - Includes 2 Server Boosts plus 30% off extra boosts
 
 tags: []
 
 official_url: https://discord.com/
-pricing_url: https://discord.com/
+pricing_url: https://discord.com/nitro
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'

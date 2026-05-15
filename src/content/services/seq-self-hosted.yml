@@ -14,9 +14,62 @@ free_tier:
   - No ingestion rate limit; limited by your own infrastructure. No native SSL (use reverse proxy)
 
 pricing:
-  - name: Free
+  - name: Individual
     price: 0
-    unit: /month
+    unit: /year
+    billing: free
+    description: Single-user free license for self-hosted Seq
+    features:
+      - 1 user
+      - 50 GB storage limit
+      - Community support
+      - Unlimited retention time
+      - Unlimited log sources
+      - Unlimited saved searches and dashboards
+    cta_url: https://datalust.co/pricing
+  - name: Team
+    price: 790
+    unit: /year
+    billing: annual
+    description: For small teams up to 10 users
+    features:
+      - Up to 10 users
+      - 100 GB storage limit
+      - 1 server install
+      - Priority email support
+      - Unlimited retention
+    cta_url: https://datalust.co/pricing
+  - name: Standard
+    price: 2290
+    unit: /year
+    billing: annual
+    description: Unlimited users and storage; up to 3 servers
+    features:
+      - Unlimited users
+      - Unlimited storage
+      - Up to 3 server installs
+      - Priority email support
+      - Unlimited retention
+    cta_url: https://datalust.co/pricing
+  - name: Datacenter
+    price: 7990
+    unit: /year
+    billing: annual
+    description: Unlimited server installs with clustering and auditing
+    features:
+      - Unlimited users and storage
+      - Unlimited server installs
+      - Clustering
+      - Auditing
+      - Assisted onboarding
+      - Priority email support
+    cta_url: https://datalust.co/pricing
+
+paid_tier_highlights:
+  - Team ($790/yr) supports 10 users and 100 GB storage
+  - Standard ($2,290/yr) goes unlimited on users and storage
+  - Standard allows up to 3 server installs
+  - Datacenter ($7,990/yr) adds clustering and auditing
 
 tags: []
 
@@ -25,4 +78,4 @@ pricing_url: https://datalust.co/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

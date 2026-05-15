@@ -13,10 +13,26 @@ free_tier:
   - 'No monthly fee, Merchant of Record'
   - 'Lower rate than Paddle/LemonSqueezy, designed for indie hackers and SaaS'
 
+paid_tier_highlights:
+  - Single transparent rate of 3.9% + $0.40 per transaction
+  - No setup fees, monthly fees, or cancellation penalties
+  - Global tax compliance (VAT, GST, sales tax in 50+ countries)
+  - Fraud and chargeback protection included
+  - Reliable payouts on the 1st and 15th of each month
+
 pricing:
-  - name: Free
-    price: 0
-    unit: /month
+  - name: Standard
+    price: '3.9% + $0.40'
+    unit: per successful transaction
+    description: One transparent rate for all transactions
+    features:
+      - Global tax compliance (50+ countries)
+      - Fraud and chargeback protection
+      - Cards, Apple Pay, Google Pay supported
+      - Revenue splits for co-founders, affiliates
+      - Automated invoicing and reliable payouts
+      - No setup, monthly, or cancellation fees
+    billing: usage-based
 
 tags: []
 

@@ -10,11 +10,53 @@ tier_type: free-plan
 
 free_tier:
   - Free plan
+  - Up to 5 hosts with 1-day metric retention
+  - Core collection and visualization features
+  - 1,000+ integrations on free tier
+
+paid_tier_highlights:
+  - Pro at $15/host/mo (annual) adds 15-month retention
+  - Pro includes unlimited users and alerting
+  - Enterprise at $23/host/mo adds ML anomaly detection
+  - Watchdog and Live Processes monitoring on Enterprise
+  - Governance Console and SCIM on Enterprise
 
 pricing:
   - name: Free
     price: 0
-    unit: /month
+    unit: /host/month
+    description: Core collection and visualization features
+    features:
+      - Up to 5 hosts maximum
+      - Basic metrics and events
+      - 1-day metric retention
+      - Out-of-the-box dashboards
+      - 1,000+ integrations
+    billing: free
+  - name: Pro
+    price: 15
+    unit: /host/month (annual)
+    description: Centralized monitoring for systems, services, serverless
+    features:
+      - 15-month metric retention
+      - 1,000+ pre-built integrations
+      - Host and container mapping
+      - Enterprise-grade security
+      - Unlimited users
+      - Unlimited alerting
+    billing: annual
+  - name: Enterprise
+    price: 23
+    unit: /host/month (annual)
+    description: Advanced monitoring with ML-based capabilities
+    features:
+      - All Pro features
+      - ML-powered anomaly detection
+      - Live Processes monitoring
+      - Governance Console
+      - Watchdog automated insights
+      - SCIM, multiple SAML providers
+    billing: annual
 
 tags: []
 
@@ -23,4 +65,4 @@ pricing_url: https://www.datadoghq.com/pricing/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

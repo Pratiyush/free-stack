@@ -14,10 +14,78 @@ free_tier:
   - '1,000 API calls/month; Command R+, R7B, Embed 4, Rerank 3.5'
   - 'Chat 20 RPM, Embed 5 RPM'
 
+paid_tier_highlights:
+  - Production Command R+ at $2.50/$10 per 1M input/output tokens
+  - Command R at $0.50/$1.50 per 1M input/output tokens
+  - Embed 4 at $0.10/$0.10 per 1M tokens (input/output)
+  - Model Vault dedicated instances from $2,500/mo
+  - North and Compass workplace systems via enterprise sales
+
 pricing:
-  - name: Free
+  - name: Trial API Key
     price: 0
-    unit: /month
+    description: Free testing key automatically created upon signup
+    features:
+      - Rate-limited access (Chat 20 RPM, Embed 5 RPM)
+      - 1,000 API calls/month
+      - Not for production or commercial use
+      - Personal account access only
+      - No billing required
+    billing: free
+  - name: Command R+ (Production)
+    price: '$2.50 input / $10 output per 1M tokens'
+    unit: per 1M tokens
+    description: Latest Command R+ model for production workloads
+    features:
+      - Pay-as-you-go billing
+      - Billed monthly or at $250 balance
+      - Full production-scale access
+      - Owner privileges required to activate
+      - Enterprise-grade performance
+    billing: usage-based
+  - name: Command R (Production)
+    price: '$0.50 input / $1.50 output per 1M tokens'
+    unit: per 1M tokens
+    description: Cost-effective Command R model for production
+    features:
+      - Pay-as-you-go billing
+      - Lower-cost production deployments
+      - Production-ready performance
+      - Standard enterprise access
+      - Established model stability
+    billing: usage-based
+  - name: Embed 4 (Production)
+    price: '$0.10 per 1M tokens'
+    unit: per 1M tokens
+    description: Multimodal embedding and retrieval model
+    features:
+      - Semantic search capabilities
+      - Cost-effective retrieval
+      - Document embedding support
+      - Enterprise deployment-ready
+      - Production-grade performance
+    billing: usage-based
+  - name: Model Vault
+    price: '$2,500–$6,500/mo'
+    unit: /instance
+    description: Dedicated managed deployment instances
+    features:
+      - Fully managed infrastructure
+      - No multi-tenancy overhead
+      - Guaranteed performance
+      - Self-serve dashboard access
+      - Fixed or flexible pricing plans
+    billing: monthly
+  - name: Enterprise (North / Compass)
+    price: Custom
+    description: All-in-one AI platform for enterprise workflows
+    features:
+      - Intuitive interface features
+      - Purpose-built generative models
+      - Intelligent search capabilities
+      - AI agents for workflows
+      - Contact sales for pricing
+    billing: annual
 
 tags: []
 
@@ -26,4 +94,4 @@ pricing_url: https://cohere.com/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

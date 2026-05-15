@@ -9,20 +9,55 @@ summary: Open-source visual regression tool with 5K free screenshots/mo on the H
 tier_type: always-free
 
 free_tier:
-  - 5,000 screenshots (Hobby plan)
+  - 5,000 screenshots/month (Hobby plan)
   - Unlimited Playwright traces
   - Unlimited projects
-  - GitHub & GitLab integration
+  - GitHub and GitLab integration
   - Community support
+
+paid_tier_highlights:
+  - 'Pro from $100/mo: 35,000 screenshots and team review tools'
+  - 'Pro: extra screenshots $0.004 each ($0.0015 for Storybook)'
+  - 'Pro: Slack notifications, optional GitHub SSO ($50/mo)'
+  - 'Enterprise adds SAML SSO, fine-grained ACL, 99.99% SLA'
+  - 'Pro Support and dedicated CSM on Enterprise'
 
 pricing:
   - name: Hobby
     price: 0
-    unit: /month
+    billing: free
+    description: For personal projects with up to 5k screenshots
+    features:
+      - Up to 5,000 screenshots/month
+      - Unlimited Playwright Traces
+      - Visual changes detection
+      - GitHub and GitLab integration
+      - Community support
+    cta_url: https://app.argos-ci.com/login
   - name: Pro
-    description: Starts at $100/mo, 35K screenshots included
     price: 100
     unit: /month
+    billing: usage-based
+    description: Team collaboration with included screenshot allowance
+    features:
+      - 35,000 screenshots included
+      - Extra screenshots $0.004 each
+      - Storybook extras $0.0015 each
+      - Collaborative review and Slack notifications
+      - Pro Support
+      - Optional GitHub SSO ($50/mo)
+    cta_url: https://app.argos-ci.com/signup?plan=pro
+  - name: Enterprise
+    price: Contact sales
+    billing: annual
+    description: Tailored allocation, SAML SSO, SLA
+    features:
+      - Custom screenshot allocation
+      - SAML SSO
+      - Fine-grained access control
+      - Dedicated support
+      - 99.99% uptime SLA
+    cta_url: mailto:contact@argos-ci.com
 
 tags: [visual-testing, regression, open-source, ci-cd, screenshots]
 

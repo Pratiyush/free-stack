@@ -13,9 +13,74 @@ free_tier:
   - 'Free (self-hosted: unlimited; cloud: free developer plan)'
 
 pricing:
-  - name: Free
+  - name: Developer
     price: 0
     unit: /month
+    billing: free
+    description: Test and integration environments
+    features:
+      - 2 development environments
+      - 1 member
+      - Password, passkeys, passwordless auth
+      - Unlimited social connections
+      - OAuth2 & OIDC provider
+      - Community support
+    cta_url: https://console.ory.sh/registration
+  - name: Production
+    price: 770
+    unit: /year
+    billing: annual
+    description: Production identity security at competitive price
+    features:
+      - 1 production + 3 staging environments
+      - All top-tier security features
+      - Permissions and M2M tokens
+      - Standard support
+      - Advanced brute force & DoS protection
+      - Custom domains
+    cta_url: https://console.ory.sh/registration?preferred_plan=Production
+  - name: Growth
+    price: 9350
+    unit: /year
+    billing: annual
+    description: Piloting traffic growth with B2B SSO
+    features:
+      - 2 production + 5 staging environments
+      - Advanced analytics (7-day history)
+      - B2B SSO (OIDC only)
+      - Unlimited members
+      - Live event streaming
+    cta_url: https://console.ory.sh/registration?preferred_plan=Growth
+  - name: Enterprise (SaaS)
+    price: Custom
+    billing: annual
+    description: Managed SaaS for mission-critical applications
+    features:
+      - Multi-region deployments
+      - Event firehose to data lake
+      - Enterprise integrations
+      - Multi-tenancy support
+      - Concierge onboarding
+      - 99.99% uptime SLA
+    cta_url: https://www.ory.com/contact
+  - name: Self-Hosted (Open Source)
+    price: 0
+    billing: free
+    description: Apache 2.0 self-hosted Ory Kratos
+    features:
+      - Apache 2.0 license
+      - Unlimited usage
+      - Full hosting control
+      - Community support
+      - Self-managed deployment
+    cta_url: https://github.com/ory/kratos
+
+paid_tier_highlights:
+  - Production environments only on paid tiers (Free has 0 prod)
+  - Advanced analytics and historical data on Growth+
+  - B2B SSO, SAML, SCIM unlocked on paid plans
+  - Volume discounts on DAUs, M2M tokens, permission checks
+  - Premium support with response SLAs on paid tiers
 
 tags: []
 
@@ -24,4 +89,4 @@ pricing_url: https://www.ory.com/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

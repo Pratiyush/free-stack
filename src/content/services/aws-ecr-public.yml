@@ -10,19 +10,59 @@ summary: Free permanently (public repos)
 tier_type: free-plan
 
 free_tier:
-  - Free permanently (public repos)
-  - '500GB/mo anonymous transfer, 5TB/mo authenticated transfer; same-region AWS compute always free'
+  - Free permanently for public repos
+  - 50 GB/month always-free public-repo storage
+  - 500 GB/month anonymous data transfer
+  - 5 TB/month authenticated data transfer
+  - Unlimited same-region AWS compute pulls
+
+paid_tier_highlights:
+  - 'Public-repo overages: pull cost is billed to the downloading AWS account'
+  - 'Private ECR: $0.10/GB-month storage after 500 MB/12-month free tier'
+  - 'Cross-region transfers from private repos: $0.09/GB'
+  - 'Within-region transfers from ECR to EC2/Lambda/Fargate are free'
+  - 'No additional charges for IAM-controlled access to public repos'
 
 pricing:
-  - name: Free
+  - name: Public Registry Free
     price: 0
-    unit: /month
+    billing: free
+    description: Always-free hosting for public container images
+    features:
+      - 50 GB/month always-free storage per account
+      - 500 GB/month anonymous transfer to internet
+      - 5 TB/month authenticated transfer
+      - Unlimited same-region AWS compute pulls
+      - Public discovery via gallery
+    cta_url: https://gallery.ecr.aws/
+  - name: Private Registry (Free Tier)
+    price: 0
+    billing: free
+    description: 12-month free for new AWS accounts
+    features:
+      - 500 MB/month private repo storage
+      - Available for first 12 months
+      - Same-region transfer free
+      - IAM-controlled access
+    cta_url: https://aws.amazon.com/ecr/
+  - name: Private Registry (Pay-as-you-go)
+    price: 0.10
+    unit: /GB-month
+    billing: usage-based
+    description: Pay-as-you-go for private repository storage
+    features:
+      - $0.10 per GB-month storage
+      - $0.09/GB cross-region transfer
+      - Free same-region transfer to AWS compute
+      - Image scanning included
+      - Lifecycle policies for cleanup
+    cta_url: https://aws.amazon.com/ecr/pricing/
 
 tags: []
 
-official_url: https://aws.amazon.com/
+official_url: https://aws.amazon.com/ecr/
 pricing_url: https://aws.amazon.com/ecr/pricing/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

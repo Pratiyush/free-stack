@@ -9,19 +9,97 @@ summary: Identity platform with 25K free MAU, custom domains, social/enterprise 
 tier_type: free-plan
 
 free_tier:
-  - 25K monthly active users
-  - Unlimited social and Okta connections
+  - 25K monthly active users (B2C and B2B)
+  - Unlimited social connections, 1 Enterprise Connection
   - Passwordless login
-  - Custom domains included
-  - Organizations and RBAC included
+  - Custom domains and 5 Organizations
+  - Self-Service SSO (B2B) and basic attack protection
+  - Community support; no credit card
+
+paid_tier_highlights:
+  - 'B2C Essentials from $35/mo adds pro MFA, 10 Orgs, audit log streaming'
+  - 'B2C Professional from $240/mo adds custom DB, enterprise MFA, Security Center'
+  - 'B2B Essentials from $150/mo adds unlimited Orgs and 3 SSO connections'
+  - 'B2B Professional from $800/mo adds custom token exchange, 5 SSO conns'
+  - 'Enterprise tiers add 99.99% SLA, private deployment, custom limits'
 
 pricing:
   - name: Free
     price: 0
-    unit: /month
-  - name: Essentials
+    billing: free
+    description: Up to 25K MAU; B2C or B2B; no credit card
+    features:
+      - Up to 25,000 MAUs
+      - Passwordless authentication
+      - 1 Enterprise Connection
+      - 5 Organizations
+      - Self-Service SSO (B2B)
+      - Basic attack protection
+      - Community support
+    cta_url: https://auth0.com/signup
+  - name: B2C Essentials
     price: 35
-    unit: /month
+    unit: /month (500 MAUs)
+    billing: monthly
+    description: B2C mid-tier with pro MFA and 10 Organizations
+    features:
+      - Higher auth/API limits
+      - Pro MFA
+      - RBAC per organization
+      - 10 Organizations
+      - Audit log streaming
+      - Standard support
+    cta_url: https://auth0.com/pricing
+  - name: B2C Professional
+    price: 240
+    unit: /month (500 MAUs)
+    billing: monthly
+    description: Enhanced security and custom databases for B2C
+    features:
+      - Enhanced attack protection
+      - Custom user database logins
+      - Enterprise MFA
+      - M2M token add-on
+      - Security Center
+      - Separate prod/dev environments
+    cta_url: https://auth0.com/pricing
+  - name: B2B Essentials
+    price: 150
+    unit: /month (500 MAUs)
+    billing: monthly
+    description: For B2B with unlimited Orgs and SSO
+    features:
+      - Unlimited Organizations
+      - 3 SSO Enterprise Connections
+      - RBAC
+      - Pro MFA
+      - Audit log streaming
+      - Standard support
+    cta_url: https://auth0.com/pricing
+  - name: B2B Professional
+    price: 800
+    unit: /month (500 MAUs)
+    billing: monthly
+    description: Enterprise-grade B2B with custom token exchange
+    features:
+      - 5 Enterprise Connections
+      - Custom token exchange
+      - Enterprise MFA
+      - Enhanced attack protection
+      - Security Center
+      - M2M token add-on
+    cta_url: https://auth0.com/pricing
+  - name: Enterprise
+    price: Contact sales
+    billing: annual
+    description: Custom user and SSO tiers with 99.99% SLA
+    features:
+      - 99.99% SLA
+      - Enterprise rate limits
+      - Private deployment option
+      - Enterprise administration and support
+      - Advanced security features
+    cta_url: https://auth0.com/contact-us/sales
 
 tags: [authentication, sso, identity, mfa, enterprise]
 

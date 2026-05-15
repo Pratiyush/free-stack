@@ -14,15 +14,66 @@ free_tier:
   - 'Local IDE, no usage limits'
 
 pricing:
-  - name: Free
+  - name: Community Edition
     price: 0
     unit: /month
+    billing: free
+    description: Free, open-source IDE for JVM and Android development
+    features:
+      - Apache 2.0 licensed
+      - Java, Kotlin, Groovy, Scala support
+      - Maven, Gradle, sbt build tools
+      - Git, Mercurial, Subversion VCS
+      - Free for commercial and personal use
+    cta_url: https://www.jetbrains.com/idea/download/
+  - name: Ultimate Individual
+    price: 16.90
+    unit: /month
+    billing: monthly
+    description: Full IDE for individuals; web, enterprise, database tooling
+    features:
+      - All Community features included
+      - Spring, Jakarta EE, Quarkus, Micronaut frameworks
+      - JavaScript/TypeScript, React, Angular, Vue
+      - SQL and JPA tools, database editor
+      - Profiler, code coverage, remote development
+    cta_url: https://www.jetbrains.com/idea/buy/
+  - name: Ultimate Business
+    price: 24.90
+    unit: /user/month
+    billing: monthly
+    description: Per-user commercial license for organizations
+    features:
+      - All Ultimate Individual features
+      - Centralized license management
+      - Priority customer support
+      - JetBrains AI Assistant compatible
+      - Volume-discounted pricing
+    cta_url: https://www.jetbrains.com/idea/buy/
+  - name: All Products Pack
+    price: 28.90
+    unit: /user/month
+    billing: monthly
+    description: Bundle including IntelliJ IDEA Ultimate plus all IDEs
+    features:
+      - All JetBrains IDEs (PyCharm, WebStorm, GoLand, etc.)
+      - .NET tools (Rider, ReSharper)
+      - Cross-product license activation
+      - Discounted vs buying individually
+      - Available for Individual and Business
+    cta_url: https://www.jetbrains.com/store/
+
+paid_tier_highlights:
+  - Ultimate Individual at $16.90/mo adds web, database, enterprise tools
+  - Ultimate Business at $24.90/user/mo for commercial team use
+  - All Products Pack at $28.90/mo bundles every JetBrains IDE
+  - Annual billing offers ~20% discount vs monthly
 
 tags: []
 
 official_url: https://www.jetbrains.com/
-pricing_url: https://www.jetbrains.com/idea/download/
+pricing_url: https://www.jetbrains.com/idea/buy/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

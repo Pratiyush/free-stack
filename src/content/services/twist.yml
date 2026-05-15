@@ -16,7 +16,46 @@ free_tier:
 pricing:
   - name: Free
     price: 0
-    unit: /month
+    unit: /user/month
+    billing: free
+    description: Entry plan with 1-month message history and basic features
+    features:
+      - 1 month of comments and message history
+      - Up to 5 integrations
+      - 5 GB file storage
+      - Up to 500 members & guests
+      - Standard support
+    cta_url: https://twist.com/signup
+  - name: Unlimited
+    price: 6
+    unit: /user/month
+    billing: monthly
+    description: Full history, unlimited resources, priority support
+    features:
+      - Full comment & message history
+      - Unlimited integrations
+      - Unlimited file storage
+      - Unlimited members & guests
+      - Priority support
+    cta_url: https://twist.com/pricing
+  - name: Enterprise
+    price: Custom
+    billing: monthly
+    description: Custom plan for organizations with 200+ employees
+    features:
+      - Custom seat counts
+      - Enterprise security
+      - Dedicated onboarding
+      - Volume pricing
+      - SLA support
+    cta_url: mailto:support@twist.com
+
+paid_tier_highlights:
+  - Unlimited plan at EUR 6/user/month unlocks full message history
+  - Unlimited integrations and unlimited file storage on Unlimited
+  - Priority support on paid plans
+  - Enterprise tier (custom pricing) for 200+ employees
+  - All paid plans remove the 1-month history cap
 
 tags: []
 
@@ -25,4 +64,4 @@ pricing_url: https://twist.com/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

@@ -14,9 +14,115 @@ free_tier:
   - Daily message cap resets at midnight UTC; not suited for production workloads
 
 pricing:
-  - name: Free
+  - name: Sandbox
     price: 0
     unit: /month
+    description: Free dev/test tier; 200K msgs/day, 100 connections
+    features:
+      - 200K messages/day
+      - 100 concurrent connections
+      - Best-effort email support
+      - 24/7 platform monitoring
+      - Functions available
+    cta_url: https://dashboard.pusher.com/accounts/sign_up
+    billing: free
+  - name: Startup
+    price: 49
+    unit: /month
+    description: 1M msgs/day; 500 concurrent connections
+    features:
+      - 1M messages/day
+      - 500 concurrent connections
+      - Email support
+      - 24/7 platform monitoring
+      - Functions available
+    cta_url: https://dashboard.pusher.com/accounts/sign_up
+    billing: monthly
+  - name: Pro
+    price: 99
+    unit: /month
+    description: 4M msgs/day; 2,000 connections + monitoring integrations
+    features:
+      - 4M messages/day
+      - 2,000 concurrent connections
+      - Monitoring integrations
+      - Email support
+      - Functions available
+    cta_url: https://dashboard.pusher.com/accounts/sign_up
+    billing: monthly
+  - name: Business
+    price: 299
+    unit: /month
+    description: 10M msgs/day; 5,000 connections; premium support
+    features:
+      - 10M messages/day
+      - 5,000 concurrent connections
+      - Premium support, 24h SLA target
+      - Monitoring integrations
+    cta_url: https://dashboard.pusher.com/accounts/sign_up
+    billing: monthly
+  - name: Premium
+    price: 499
+    unit: /month
+    description: 20M msgs/day; 10,000 connections; 1h SLA target
+    features:
+      - 20M messages/day
+      - 10,000 concurrent connections
+      - Premium support, 1h response target
+      - Monitoring integrations
+    cta_url: https://dashboard.pusher.com/accounts/sign_up
+    billing: monthly
+  - name: Growth
+    price: 699
+    unit: /month
+    description: 40M msgs/day; 15,000 connections
+    features:
+      - 40M messages/day
+      - 15,000 concurrent connections
+      - 1h response target
+      - Monitoring integrations
+    cta_url: https://dashboard.pusher.com/accounts/sign_up
+    billing: monthly
+  - name: Plus
+    price: 899
+    unit: /month
+    description: 60M msgs/day; 20,000 connections
+    features:
+      - 60M messages/day
+      - 20,000 concurrent connections
+      - 1h SLA
+      - Priority email support
+    cta_url: https://dashboard.pusher.com/accounts/sign_up
+    billing: monthly
+  - name: Growth Plus
+    price: 1199
+    unit: /month
+    description: 90M msgs/day; 30,000 connections
+    features:
+      - 90M messages/day
+      - 30,000 concurrent connections
+      - 1h response target
+      - Priority support
+      - Custom onboarding assistance
+    cta_url: https://dashboard.pusher.com/accounts/sign_up
+    billing: monthly
+  - name: Enterprise
+    price: Custom
+    description: Up to 100B msgs/day; 10M+ connections; custom SLA
+    features:
+      - Unlimited message capacity
+      - 10M+ concurrent connections
+      - Custom SLAs available
+      - Dedicated support team and account management
+    cta_url: https://pusher.com/contact?origin=channels
+    billing: annual
+
+paid_tier_highlights:
+  - Sandbox free with 200K msgs/day and 100 connections (dev/test only)
+  - Startup $49/mo (1M msgs, 500 conn); Pro $99/mo (4M msgs, 2K conn)
+  - Business $299/mo and Premium $499/mo add premium support and SLAs
+  - Growth/Plus/Growth Plus scale to 90M msgs/day at $1,199/mo
+  - Enterprise tier handles 100B msgs/day with custom SLA and pricing
 
 tags: []
 
@@ -25,4 +131,4 @@ pricing_url: https://pusher.com/channels/pricing/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

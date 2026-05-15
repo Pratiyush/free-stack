@@ -17,6 +17,57 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    billing: free
+    description: Essential issue tracking for individuals and small teams
+    features:
+      - Unlimited members
+      - 2 teams
+      - 250 issues
+      - Agent platform access
+      - Linear Agent (beta)
+    cta_url: https://linear.app/signup
+  - name: Basic
+    price: 10
+    unit: /user/month
+    billing: annual
+    description: Expanded capabilities for growing teams
+    features:
+      - All Free features included
+      - 5 teams
+      - Unlimited issues and file uploads
+      - Admin roles
+      - Full API and webhook access
+    cta_url: https://linear.app/pricing
+  - name: Business
+    price: 16
+    unit: /user/month
+    billing: annual
+    description: Advanced intelligence and integrations for scaling orgs
+    features:
+      - Unlimited teams and private teams
+      - Triage Intelligence and Code Intelligence (beta)
+      - Linear Agent automations and Linear Insights
+      - Zendesk and Intercom integrations
+      - Guest account support
+    cta_url: https://linear.app/pricing
+  - name: Enterprise
+    price: Custom
+    billing: annual
+    description: Enterprise infrastructure, SAML/SCIM, and dedicated support
+    features:
+      - Invoice/PO and SAML/SCIM billing options
+      - Granular admin controls and advanced org modeling
+      - Migration and onboarding support
+      - Priority support with account management
+      - Enterprise-grade security
+    cta_url: https://linear.app/contact/sales
+
+paid_tier_highlights:
+  - Basic at $10/user/mo unlocks 5 teams and unlimited issues
+  - Business at $16/user/mo adds Triage/Code Intelligence and Insights
+  - Enterprise adds SAML/SCIM, advanced admin controls, and priority support
+  - Annual billing required for all paid tiers
+  - Guest access available on Business and Enterprise
 
 tags: []
 
@@ -25,4 +76,4 @@ pricing_url: https://linear.app/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

@@ -12,11 +12,58 @@ tier_type: free-plan
 free_tier:
   - Free plan (permanent)
   - '1-day log retention on free tier (3 days with card on file); HD video included'
+  - 10,000 free participant-minutes/month
+
+paid_tier_highlights:
+  - Pay-as-you-go at $0.004/participant-minute for video/audio
+  - Audio-only at $0.00099/participant-minute
+  - Cloud recording at $0.01349/recorded minute
+  - Premium support tier at $1,500/mo for SLA-backed help
+  - Enterprise support at $5,000/mo with 24/7 coverage
 
 pricing:
   - name: Free
     price: 0
     unit: /month
+    description: 10,000 free participant-minutes every month
+    features:
+      - 10,000 free participant-minutes/mo
+      - Video and audio calls
+      - Email and chat support (best effort)
+      - Community discussions access
+      - Full HD video quality
+    billing: free
+  - name: Pay-As-You-Go
+    price: '$0.004/participant-minute'
+    unit: per participant-minute
+    description: Usage-based pricing after free tier exhausted
+    features:
+      - $0.004/min video/audio calls
+      - $0.00099/min audio-only calls
+      - $0.01349/min cloud recording
+      - $0.0059/min realtime transcription
+      - $0.0043/min post-call transcription
+    billing: usage-based
+  - name: Premium Support
+    price: 1500
+    unit: /month
+    description: Enhanced support tier for developers
+    features:
+      - 24-hour, 5-day/week support
+      - Email, chat, Slack channels
+      - 5 hours of dev integration support
+      - Quarterly check-ins
+    billing: monthly
+  - name: Enterprise Support
+    price: 5000
+    unit: /month
+    description: Full-service support for large deployments
+    features:
+      - 24/7 support via email, chat, Slack
+      - 12 hours of dev integration support
+      - Weekly check-ins (first 90 days)
+      - Dedicated Slack channel
+    billing: monthly
 
 tags: []
 

@@ -17,12 +17,47 @@ free_tier:
 
 pricing:
   - name: Hobby
-    description: Personal projects only
     price: 0
     unit: /month
+    billing: free
+    description: Personal projects, free forever
+    features:
+      - Automatic CI/CD deployment
+      - Global CDN with auto-routing
+      - Web Application Firewall
+      - DDoS mitigation
+      - Traffic and performance insights
+    cta_url: https://vercel.com/signup
   - name: Pro
     price: 20
     unit: /user/month
+    billing: monthly
+    description: Build and scale your app; $20/mo + usage
+    features:
+      - $20 monthly usage credit included
+      - Advanced spend management
+      - Unlimited viewer seats
+      - Faster builds, no queue
+      - Team collaboration
+    cta_url: https://vercel.com/pricing
+  - name: Enterprise
+    price: Custom
+    billing: monthly
+    description: Critical security, performance, SLA, support
+    features:
+      - 99.99% uptime SLA
+      - SCIM directory sync
+      - Multi-region compute with failover
+      - Advanced observability
+      - Dedicated support
+    cta_url: https://vercel.com/contact/sales
+
+paid_tier_highlights:
+  - Pro at $20/user/mo unlocks team features and faster builds
+  - $20 monthly usage credit included on Pro
+  - Enterprise offers 99.99% SLA and multi-region failover
+  - SCIM and advanced spend management on paid plans
+  - Hobby plan restricted to personal projects only
 
 tags: [deployment, edge-computing, nextjs, serverless, jamstack]
 

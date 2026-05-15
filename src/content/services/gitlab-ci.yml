@@ -16,7 +16,46 @@ free_tier:
 pricing:
   - name: Free
     price: 0
-    unit: /month
+    unit: /user/month
+    billing: free
+    description: 400 compute minutes/mo on GitLab.com SaaS
+    cta_url: https://about.gitlab.com/pricing/
+    features:
+      - 400 compute minutes/mo
+      - Shared runners (Linux, macOS, Windows)
+      - Container scanning
+      - 5 licensed users in private groups
+      - 10 GiB storage
+  - name: Premium
+    price: 29
+    unit: /user/month
+    billing: annual
+    description: 10,000 compute minutes/mo, advanced CI/CD
+    cta_url: https://about.gitlab.com/pricing/
+    features:
+      - 10,000 compute minutes/mo
+      - Unlimited licensed users
+      - 500 GiB storage
+      - Multiple approvers in code review
+      - Merge request approvals
+      - SLA management
+  - name: Ultimate
+    price: Custom
+    description: 50,000 compute minutes/mo with security and compliance
+    cta_url: https://about.gitlab.com/pricing/
+    features:
+      - 50,000 compute minutes/mo
+      - Application security testing
+      - Software supply chain security
+      - Vulnerability management
+      - Compliance and governance
+      - Value stream management
+
+paid_tier_highlights:
+  - Premium at $29/user/mo lifts CI/CD minutes from 400 to 10,000
+  - Ultimate adds 50,000 minutes plus security scanning and compliance
+  - Extra compute minutes can be purchased a la carte
+  - Self-managed runners are free and bypass minute quotas
 
 tags: []
 
@@ -25,4 +64,4 @@ pricing_url: https://about.gitlab.com/pricing/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

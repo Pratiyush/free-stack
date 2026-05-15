@@ -15,9 +15,72 @@ free_tier:
   - 60 RPM
 
 pricing:
-  - name: Free
+  - name: Free Hub
     price: 0
     unit: /month
+    billing: free
+    description: Free hub account with monthly inference credits
+    features:
+      - Free monthly Inference API credits (~$0.10)
+      - Access to thousands of open models
+      - Git-based collaboration on models and datasets
+      - Free CPU Basic Spaces hosting (2 vCPU, 16GB)
+      - ZeroGPU free with dynamic GPU allocation
+    cta_url: https://huggingface.co/join
+  - name: PRO
+    price: 9
+    unit: /month
+    billing: monthly
+    description: Boost personal HF experience with more storage and compute
+    features:
+      - 10× private storage capacity
+      - 20× included Inference credits
+      - 8× ZeroGPU quota and priority queue
+      - Spaces Dev Mode and ZeroGPU Spaces hosting
+      - PRO badge and personal blog publishing
+    cta_url: https://huggingface.co/pricing
+  - name: Team
+    price: 20
+    unit: /user/month
+    billing: monthly
+    description: Instant setup for growing teams with SSO and audit
+    features:
+      - SSO (SAML and OIDC)
+      - Storage Regions for data location control
+      - Detailed audit logs
+      - Granular access via Resource Groups
+      - Repository analytics and advanced compute
+    cta_url: https://huggingface.co/enterprise
+  - name: Enterprise
+    price: 50
+    unit: /user/month
+    billing: annual
+    description: Annual-committed enterprise plan with managed billing
+    features:
+      - All Team features included
+      - Highest storage, bandwidth, API rate limits
+      - SCIM provisioning for user management
+      - Advanced security and access controls
+      - Dedicated support and compliance review
+    cta_url: https://huggingface.co/enterprise
+  - name: Inference Endpoints
+    price: 'From $0.033'
+    unit: /hour
+    billing: usage-based
+    description: Dedicated autoscaling inference infrastructure
+    features:
+      - CPU instances from $0.033/hour
+      - GPU options (T4, L4, L40S, A100, H100, H200)
+      - AWS, Azure, GCP region choice
+      - Multi-GPU configurations up to 8x
+      - Production-grade autoscaling
+    cta_url: https://ui.endpoints.huggingface.co/
+
+paid_tier_highlights:
+  - PRO at $9/mo unlocks 20× inference credits and ZeroGPU priority
+  - Team at $20/user/mo adds SSO, audit logs, and resource groups
+  - Enterprise from $50/user/mo adds SCIM and dedicated support
+  - Inference Endpoints billed hourly from $0.033 (CPU) to $74 (B200)
 
 tags: []
 
@@ -26,4 +89,4 @@ pricing_url: https://huggingface.co/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

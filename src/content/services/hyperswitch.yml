@@ -14,14 +14,50 @@ free_tier:
   - 'Self-hosted: free with no transaction fees, fully managed cloud available from Juspay with enterprise SLAs, supports cards/wallets/BNPL/UPI/Pay-by-Bank globally'
 
 pricing:
-  - name: Free
+  - name: Self-Host Community Edition
     price: 0
-    unit: /month
+    billing: free
+    description: For businesses self-hosting their full payments stack
+    features:
+      - 90+ payment integrations
+      - Unified Checkout SDK
+      - Vault for secure payment data
+      - Intelligent payment routing
+      - Fraud orchestration
+    cta_url: https://hyperswitch.io/
+  - name: Self-Host Enterprise Edition
+    price: Custom
+    billing: annual
+    description: Self-hosted with vendor SLA support and account management
+    features:
+      - All Community features
+      - SLA-driven technical support
+      - Dedicated account manager
+      - Accelerated and prioritized feature releases
+      - Self-managed uptime responsibility
+    cta_url: https://hyperswitch.io/contact-us
+  - name: Hyperswitch Cloud
+    price: Custom
+    billing: usage-based
+    description: Fully managed cloud payments orchestration
+    features:
+      - 210+ payment integrations
+      - 99.999% uptime guarantee
+      - PCI-DSS 4.0 and ISO 27001:2022 compliance
+      - Revenue Recovery and Cost Observability
+      - Hosting and reconciliation included
+    cta_url: https://hyperswitch.io/contact-us
+
+paid_tier_highlights:
+  - Self-Host Enterprise adds SLA support and dedicated account manager
+  - Hyperswitch Cloud adds 99.999% uptime and 210+ integrations
+  - PCI-DSS 4.0 and ISO 27001 compliance live on Cloud only
+  - Community Edition remains 100% free and self-hosted
 
 tags: []
 
 official_url: https://hyperswitch.io/
-pricing_url: https://hyperswitch.io/
+pricing_url: https://hyperswitch.io/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'

@@ -14,9 +14,48 @@ free_tier:
   - 'Not applicable -- included for completeness as frequently asked about'
 
 pricing:
-  - name: Free
-    price: 0
+  - name: Cost Optimized (Shared)
+    price: 'From ~$4'
     unit: /month
+    billing: monthly
+    description: Shared-vCPU plans for test and side-project workloads
+    features:
+      - CX/CPX/CAX series with shared vCPUs
+      - 20 GB+ NVMe SSD storage included
+      - 20 TB outbound traffic included
+      - IPv4 + IPv6 included on most plans
+      - Hourly billing capped at monthly rate
+    cta_url: https://accounts.hetzner.com/signUp
+  - name: Regular Performance (Shared)
+    price: 'From ~$7'
+    unit: /month
+    billing: monthly
+    description: Best price-performance shared-vCPU instances
+    features:
+      - CPX-series AMD or CAX-series ARM
+      - Higher base clock than cost-optimized
+      - 20 TB traffic and NVMe storage
+      - Snapshots, backups, volumes available
+      - Hourly billing with monthly cap
+    cta_url: https://accounts.hetzner.com/signUp
+  - name: General Purpose (Dedicated)
+    price: 'From ~$30'
+    unit: /month
+    billing: monthly
+    description: Dedicated vCPUs for production business workloads
+    features:
+      - Dedicated AMD vCPUs (CCX series)
+      - Guaranteed CPU performance
+      - 80 GB+ NVMe SSD storage
+      - Higher traffic allotments
+      - Hourly billing with monthly cap
+    cta_url: https://accounts.hetzner.com/signUp
+
+paid_tier_highlights:
+  - Hetzner Cloud has no free tier; cheapest CX22 starts under $5/month
+  - Cost Optimized shared instances target test and side projects
+  - Regular Performance balances price and reserved CPU headroom
+  - Dedicated vCPU plans (CCX) target production and SaaS workloads
 
 tags: []
 
@@ -25,4 +64,4 @@ pricing_url: https://www.hetzner.com/cloud/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

@@ -14,9 +14,47 @@ free_tier:
   - ~30 days continuous use; no monthly replenishment
 
 pricing:
-  - name: Free
+  - name: Free trial
     price: 0
-    unit: /month
+    unit: lifetime
+    billing: free
+    description: One-time 720-hour cluster trial (~30 days)
+    features:
+      - 720 hours cluster time (lifetime)
+      - 10 GB bandwidth (lifetime)
+      - No credit card required
+      - Full typo-tolerant search API
+      - Dedicated cluster
+    cta_url: https://cloud.typesense.org/
+  - name: Dedicated Cluster
+    price: Usage
+    billing: usage-based
+    description: Configure RAM, vCPUs, HA, SDN; hourly billing per cluster
+    features:
+      - 0.5 GB – 1,024 GB RAM
+      - 2+ vCPUs with burst capacity
+      - Optional GPU acceleration
+      - Optional High Availability
+      - Optional Search Delivery Network
+    cta_url: https://cloud.typesense.org/
+  - name: Enterprise (migration program)
+    price: Custom
+    billing: monthly
+    description: Free consulting & support for Algolia migrations at scale
+    features:
+      - '$1k+/mo Algolia: 30-min consulting call'
+      - '$2k+/mo: 1-yr prioritized business support'
+      - '$3k+/mo: 1-yr enterprise support + private Slack'
+      - Benchmarking and advisory board access
+      - Dedicated migration help
+    cta_url: https://typesense.org/algolia-alternative/
+
+paid_tier_highlights:
+  - Pay only for cluster size; no record or query limits
+  - Add HA, GPU acceleration, or SDN per cluster
+  - Free critical production support included
+  - Algolia migration program for high-spend customers
+  - Bandwidth charged separately for outbound transfer
 
 tags: []
 
@@ -25,4 +63,4 @@ pricing_url: https://cloud.typesense.org/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

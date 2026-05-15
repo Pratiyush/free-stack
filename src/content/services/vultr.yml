@@ -14,15 +14,66 @@ free_tier:
   - '**Trial only** -- credit card required, credits expire after 12 months. Cheapest plan: $2.50/mo (1 vCPU, 512MB)'
 
 pricing:
-  - name: Free
+  - name: Free trial credit
     price: 0
+    billing: free
+    description: New-account trial credit (CC required, 12-month expiry)
+    features:
+      - Credit applied to first month
+      - Try any cloud product
+      - Credit card required
+      - Credits expire after 12 months
+      - No permanent free tier
+    cta_url: https://www.vultr.com/register/
+  - name: Regular Performance
+    price: 2.50
     unit: /month
+    billing: monthly
+    description: Entry-level plan, prev-gen Intel + SSD
+    features:
+      - 1 vCPU, 512 MB RAM, 10 GB SSD
+      - 0.5 TB bandwidth
+      - Prev-gen Intel CPUs
+      - For personal blogs, low-traffic sites
+      - Hourly billing option
+    cta_url: https://www.vultr.com/pricing/
+  - name: High Frequency
+    price: 6
+    unit: /month
+    billing: monthly
+    description: 3 GHz+ Intel Xeon, NVMe SSD
+    features:
+      - 1 vCPU, 1 GB RAM, 32 GB NVMe
+      - 1 TB bandwidth
+      - 3 GHz+ Intel Xeon
+      - For CMS, small game servers
+      - Hourly billing option
+    cta_url: https://www.vultr.com/pricing/
+  - name: VX1 Cloud Compute
+    price: 43.80
+    unit: /month
+    billing: monthly
+    description: Up to 33% more cost-effective per vCPU
+    features:
+      - Cloud-native workloads
+      - Higher vCPU efficiency
+      - NVMe storage
+      - Multiple regions
+      - Hourly billing
+    cta_url: https://www.vultr.com/pricing/
+
+paid_tier_highlights:
+  - Regular Performance from $2.50/mo for entry workloads
+  - High Frequency from $6/mo with NVMe + 3 GHz+ Xeon
+  - General Purpose from $30/mo, Memory Optimized from $40/mo
+  - VX1 Cloud Compute claims up to 33% better cost per vCPU
+  - Bare metal, GPU, and Kubernetes products billed separately
 
 tags: []
 
 official_url: https://www.vultr.com/
-pricing_url: https://www.vultr.com/
+pricing_url: https://www.vultr.com/pricing/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

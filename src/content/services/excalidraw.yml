@@ -14,9 +14,39 @@ free_tier:
   - 'No account required, fully free, end-to-end encrypted collaboration'
 
 pricing:
-  - name: Free
+  - name: Free (Excalidraw open source)
     price: 0
-    unit: /month
+    unit: /user/month
+    billing: free
+    description: Open-source whiteboard with E2EE collaboration in the browser
+    features:
+      - Full editor functionality
+      - 1 infinite scene
+      - Unlimited collaborators
+      - Export to PNG, SVG, or file
+      - Notion, Obsidian, and other integrations
+      - End-to-end encrypted in browser
+    cta_url: https://excalidraw.com/
+  - name: Plus
+    price: 6
+    unit: /user/month
+    billing: monthly
+    description: Cloud-saved scenes with team management and extended AI
+    features:
+      - Unlimited scenes and folders
+      - Cloud storage with access management
+      - Sharing with edit/view rights
+      - Voice hangouts and screen sharing
+      - Extended AI features
+      - Teams management and collaboration
+      - 14-day free trial
+    cta_url: https://app.excalidraw.com/sign-up
+
+paid_tier_highlights:
+  - Plus at $6/user/mo adds unlimited cloud-saved scenes and folders
+  - Plus unlocks team management and access controls
+  - Voice hangouts and screen sharing ship on the paid tier
+  - 14-day Plus trial available before billing
 
 tags: []
 
@@ -25,4 +55,4 @@ pricing_url: https://plus.excalidraw.com/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

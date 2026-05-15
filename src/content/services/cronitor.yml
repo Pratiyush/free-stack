@@ -10,11 +10,51 @@ tier_type: free-plan
 
 free_tier:
   - Hacker (free)
+  - 5 monitors, email + Slack alerts, basic status page
+
+paid_tier_highlights:
+  - Business at $2/mo per monitor + $5/mo per extra user
+  - Unlimited API requests, 12-month data retention
+  - 10 alert integrations and automatic email reports
+  - SAML SSO add-on at +$5/user/mo on Business
+  - Enterprise from $6,000/yr with dedicated engineer
 
 pricing:
-  - name: Free
+  - name: Hacker
     price: 0
     unit: /month
+    description: Limited monitoring for homelabs and small projects
+    features:
+      - 5 monitors included
+      - Email and Slack alerts
+      - Basic status page
+      - No SMS alerts
+      - No premium integrations
+    billing: free
+  - name: Business
+    price: '$2/monitor + $5/user'
+    unit: /month
+    description: Pay-as-you-go with 14-day free trial, volume discounts
+    features:
+      - Unlimited monitors (variable pricing)
+      - Unlimited API requests
+      - 10 alert integrations
+      - 12-month data retention
+      - Multiple environments
+      - SAML SSO available (+$5/user/mo)
+    billing: monthly
+  - name: Enterprise
+    price: '$6,000+/yr'
+    unit: /year
+    description: Enterprise-grade service and support
+    features:
+      - Custom monitor limits
+      - Custom features and integrations
+      - Dedicated engineer
+      - Priority support
+      - Flexible invoice billing
+      - SCIM access controls
+    billing: annual
 
 tags: []
 
@@ -23,4 +63,4 @@ pricing_url: https://cronitor.io/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

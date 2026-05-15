@@ -20,10 +20,66 @@ pricing:
   - name: Free (Gratis)
     price: 0
     unit: /month
+    description: 1 public + 1 private project, 10 MB storage
+    billing: free
+    features:
+      - 1 public project, 1 private project
+      - Up to 10 MB storage
+      - Unlimited users
+      - Community support
+    cta_url: https://tree.taiga.io/register
   - name: Enthusiast
-    description: 5 public + 5 private projects, 100 MB
     price: 5
-    unit: /month
+    unit: /month (EUR)
+    description: 5 public + 5 private projects, 100 MB
+    billing: monthly
+    features:
+      - 5 public + 5 private projects
+      - Up to 100 MB storage
+      - Unlimited users
+      - Community support
+      - Funds open-source project
+    cta_url: https://tree.taiga.io/user-settings/contrib/subscriptions
+  - name: Basic
+    price: 20
+    unit: /month (EUR)
+    description: Unlimited projects, 500 MB, basic support
+    billing: monthly
+    features:
+      - Unlimited projects
+      - Up to 500 MB storage
+      - Unlimited users
+      - Basic support
+      - Funds open-source project
+    cta_url: https://tree.taiga.io/user-settings/contrib/subscriptions
+  - name: Premium
+    price: 60
+    unit: /month (EUR)
+    description: 3 GB storage with premium support
+    billing: monthly
+    features:
+      - Unlimited projects
+      - Up to 3 GB storage
+      - Unlimited users
+      - Premium support
+    cta_url: https://tree.taiga.io/user-settings/contrib/subscriptions
+  - name: Private Cloud / On-Premise
+    price: Custom
+    description: Dedicated hosted instance or behind-firewall deployment
+    billing: annual
+    features:
+      - Dedicated 8 GB RAM / 2 vCPU / 100 GB SSD
+      - Unlimited projects + users
+      - Priority support with SLA
+      - Managed updates and maintenance
+      - VPN/firewall deployment option
+    cta_url: https://taiga.io/contact/
+
+paid_tier_highlights:
+  - Enthusiast at EUR5/mo opens 5 public + 5 private projects
+  - Basic at EUR20/mo unlocks unlimited projects + 500 MB storage
+  - Premium at EUR60/mo provides 3 GB storage + premium support
+  - Private Cloud / On-Premise available with priority SLA
 
 tags: [project-management, agile, scrum, kanban, open-source]
 

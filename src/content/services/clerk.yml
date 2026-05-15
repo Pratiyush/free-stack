@@ -15,13 +15,59 @@ free_tier:
   - No credit card required
   - All core features included
 
+paid_tier_highlights:
+  - Pro ($20/mo annual) removes branding and adds MFA, 7-day logs
+  - 1 Enterprise SSO connection included on Pro
+  - Business ($250/mo annual) bundles SOC2 + priority support
+  - Enterprise SSO across workspace + HIPAA available
+  - 99.99% uptime SLA on Enterprise plans
+
 pricing:
-  - name: Free
+  - name: Hobby
+    description: Everything you need to start building, free
     price: 0
-    unit: /month
+    billing: free
+    features:
+      - Up to 3 dashboard seats
+      - Unlimited applications
+      - 50K MAU per app
+      - Prebuilt UIs + APIs
+      - Custom domain support
+      - 1-day log retention
+    cta_url: https://dashboard.clerk.com/sign-up
   - name: Pro
-    price: 25
-    unit: /month
+    description: Scale with comprehensive auth capabilities
+    price: 20
+    unit: /mo (annual)
+    billing: annual
+    features:
+      - 50K MAU included ($0.02 each more)
+      - 1 Enterprise SSO connection
+      - Remove Clerk branding
+      - Multi-factor authentication
+      - Custom session lifetime
+      - 7-day log retention
+  - name: Business
+    description: Compliance and growing teams
+    price: 250
+    unit: /mo (annual)
+    billing: annual
+    features:
+      - 10 dashboard seats ($20 each more)
+      - SOC2 Report included
+      - Enhanced dashboard roles
+      - Priority support
+      - 30-day log retention
+  - name: Enterprise
+    description: Tailored solutions with SLA + HIPAA
+    price: 'Contact sales'
+    billing: annual
+    features:
+      - 99.99% uptime SLA
+      - Workspace-wide Enterprise SSO
+      - Dedicated Slack support
+      - HIPAA available with BAA
+      - Custom log retention
 
 tags: [authentication, passwordless, social-login, identity, users]
 

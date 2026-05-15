@@ -13,10 +13,76 @@ free_tier:
   - Hobby plan (free)
   - Completions reset monthly
 
+paid_tier_highlights:
+  - Pro at $20/mo includes $20 API usage and Bugbot/Cloud Agents
+  - Pro Plus at $60/mo includes $70 API usage for daily agent users
+  - Ultra at $200/mo includes $400 API usage for power users
+  - Teams at $40/user/mo adds SSO, admin dashboard, central billing
+  - Enterprise unlocks SCIM, pooled usage, invoice billing
+
 pricing:
-  - name: Free
+  - name: Hobby
     price: 0
     unit: /month
+    description: Free tier for individual exploration
+    features:
+      - Free completions (monthly reset)
+      - Limited Auto/Composer usage
+      - Community support
+      - Access to base feature set
+    billing: free
+  - name: Pro
+    price: 20
+    unit: /month
+    description: Starter plan for individual developers
+    features:
+      - $20 included API usage monthly
+      - Generous Auto + Composer usage
+      - Unlimited tab completions
+      - Extended agent usage limits
+      - Access to Bugbot and Cloud Agents
+    billing: monthly
+  - name: Pro Plus
+    price: 60
+    unit: /month
+    description: Mid-tier plan for daily agent users
+    features:
+      - $70 included API usage monthly
+      - Unlimited tab completions
+      - Extended agent usage limits
+      - Access to Bugbot and Cloud Agents
+    billing: monthly
+  - name: Ultra
+    price: 200
+    unit: /month
+    description: High-tier plan for power users running multiple agents
+    features:
+      - $400 included API usage monthly
+      - Unlimited tab completions
+      - Extended agent usage limits
+      - Access to Bugbot and Cloud Agents
+    billing: monthly
+  - name: Teams
+    price: 40
+    unit: /user/month
+    description: Collaborative plan for teams requiring advanced controls
+    features:
+      - Privacy mode enforcement
+      - Admin dashboard with usage stats
+      - Centralized team billing
+      - SAML/OIDC SSO support
+      - Cursor Token Rate for non-Auto requests
+    billing: monthly
+  - name: Enterprise
+    price: Custom
+    description: Tailored solution for large organizations
+    features:
+      - Priority support
+      - Pooled usage across team
+      - Invoice billing available
+      - SCIM provisioning
+      - Advanced security controls
+    billing: annual
 
 tags: []
 
@@ -25,4 +91,4 @@ pricing_url: https://cursor.com/docs/models-and-pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

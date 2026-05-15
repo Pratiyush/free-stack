@@ -17,6 +17,69 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    billing: free
+    description: Dashboard basics and community support
+    features:
+      - Manage 1 own server
+      - 2C4G build CI spec
+      - 48-hour log retention
+      - Low file upload limit
+      - Single file container management
+    cta_url: https://dash.zeabur.com/
+  - name: Dev
+    price: 5
+    unit: /month
+    billing: monthly
+    description: Dashboard, monitoring & backups (14-day free)
+    features:
+      - Manage up to 3 own servers
+      - 7-day log retention
+      - Medium file upload limit
+      - Zeabur Agent access
+      - Domain purchase capability
+    cta_url: https://zeabur.com/pricing
+  - name: Pro
+    price: 19
+    unit: /month
+    billing: monthly
+    description: Full AI Agent & priority support
+    features:
+      - Manage up to 10 own servers
+      - 4C8G build CI spec
+      - 30-day log retention
+      - Advanced log search and forwarding
+      - Zeabur Agent support
+    cta_url: https://zeabur.com/pricing
+  - name: Team
+    price: 79
+    unit: /month
+    billing: monthly
+    description: 3 seats included, +$24/seat
+    features:
+      - Unlimited own servers
+      - 90-day log retention
+      - Team project collaboration
+      - Role and permission management
+      - Priority technical support
+    cta_url: https://zeabur.com/pricing
+  - name: Enterprise
+    price: Custom
+    billing: monthly
+    description: Custom limits, contracts, dedicated resources
+    features:
+      - Custom usage limits
+      - Dedicated technical resources
+      - Custom contracts
+      - Priority support
+      - SLA available
+    cta_url: https://zeabur.com/contact
+
+paid_tier_highlights:
+  - Dev at $5/mo unlocks up to 3 servers and 7-day logs
+  - Pro at $19/mo offers 10 servers, 4C8G CI, advanced logs
+  - Team at $79/mo includes 3 seats and unlimited servers
+  - 14-day free trial on Dev and Pro plans
+  - Enterprise tier for custom contracts and SLAs
 
 tags: []
 
@@ -25,4 +88,4 @@ pricing_url: https://zeabur.com/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

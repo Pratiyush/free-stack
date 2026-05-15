@@ -14,9 +14,59 @@ free_tier:
   - 'Functionality pauses mid-month if limits exceeded'
 
 pricing:
-  - name: Free
+  - name: Forever Free
     price: 0
     unit: /month
+    billing: free
+    description: For low-traffic sites, side projects, and prototyping
+    features:
+      - 20 GB bandwidth/month
+      - 3 GB DAM storage (fixed)
+      - 500 video units/month
+      - 650 extension units/month
+      - 2 user seats
+    cta_url: https://imagekit.io/registration
+  - name: Lite
+    price: 9
+    unit: /month
+    billing: monthly
+    description: For sites needing optimization and storage with overages
+    features:
+      - 40 GB bandwidth included ($0.50/GB overage)
+      - 10 GB storage included ($0.10/GB overage)
+      - 500 video units/month
+      - 650 extension units/month
+      - 3 user seats
+    cta_url: https://imagekit.io/registration
+  - name: Pro
+    price: 89
+    unit: /month
+    billing: monthly
+    description: Complete image and video processing with advanced DAM
+    features:
+      - 225 GB bandwidth included ($0.45/GB overage)
+      - 225 GB storage included ($0.09/GB overage)
+      - 5,000 video units/month
+      - 4,000 extension units/month
+      - 5 user seats ($9 each additional)
+    cta_url: https://imagekit.io/registration
+  - name: Enterprise
+    price: Custom
+    billing: annual
+    description: Enterprise-grade with SSO and dedicated support
+    features:
+      - Custom bandwidth and storage limits
+      - Single Sign-On and multi-account setup
+      - Dedicated customer success manager
+      - Advanced security features
+      - Custom processing limits
+    cta_url: https://imagekit.io/contact
+
+paid_tier_highlights:
+  - Lite at $9/mo unlocks pay-as-you-go bandwidth and storage overages
+  - Pro at $89/mo includes 225 GB bandwidth and 225 GB storage
+  - Enterprise adds SSO, dedicated CSM, and custom limits
+  - Standalone DAM Pro at $89/mo for asset-only workflows
 
 tags: []
 
@@ -25,4 +75,4 @@ pricing_url: https://imagekit.io/plans/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

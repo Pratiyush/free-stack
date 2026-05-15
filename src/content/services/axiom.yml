@@ -10,13 +10,57 @@ summary: Always Free tier (no credit card)
 tier_type: free-plan
 
 free_tier:
-  - Always Free tier (no credit card)
-  - '30-day retention, 1,000 users, 100 datasets, 1,024 fields/dataset'
+  - 500 GB/month data ingest (Personal plan, no CC)
+  - 10 GB-hours/month query compute
+  - 25 GB storage included
+  - 30-day data retention
+  - 2 datasets, 256 fields per dataset
+  - Email support
+
+paid_tier_highlights:
+  - 'Axiom Cloud from $25/mo: 1 TB ingest, 100 GB storage, 100 datasets'
+  - 'Automatic volume discounts as usage grows; configurable retention'
+  - 'Add-ons: SSO ($100/mo), Directory Sync ($100/mo), RBAC ($50/mo), Audit Log ($50/mo)'
+  - 'No artificial limits; self-serve enterprise via console'
 
 pricing:
-  - name: Free
+  - name: Personal
     price: 0
+    billing: free
+    description: Generous free allowance for devs and small projects
+    features:
+      - 500 GB/month data ingest
+      - 10 GB-hours/month query compute
+      - 25 GB storage
+      - 30-day retention
+      - 2 datasets, 256 fields each
+      - Email support
+    cta_url: https://app.axiom.co/register
+  - name: Axiom Cloud
+    price: 25
     unit: /month
+    billing: usage-based
+    description: Usage-based scaling from dev to enterprise
+    features:
+      - 1,000 GB/month data ingest
+      - 100 GB-hours/month query compute
+      - 100 GB storage included
+      - Configurable retention
+      - Up to 100 datasets, 1,024 fields each
+      - Automatic volume discounts
+    cta_url: https://app.axiom.co/register
+  - name: Enterprise Add-ons
+    price: 50
+    unit: /month per add-on
+    billing: monthly
+    description: SSO, RBAC, audit log, directory sync à la carte
+    features:
+      - SAML SSO $100/mo
+      - Directory Sync $100/mo
+      - RBAC $50/mo
+      - Audit Log $50/mo
+      - Self-serve via console
+    cta_url: https://app.axiom.co/
 
 tags: []
 
@@ -25,4 +69,4 @@ pricing_url: https://axiom.co/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

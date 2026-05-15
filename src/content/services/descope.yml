@@ -11,11 +11,65 @@ tier_type: free-plan
 
 free_tier:
   - Free Forever plan
+  - 7,500 MAUs, 10 monthly active tenants
+  - 3 SSO connections and 1 federated OIDC app
+  - All authentication methods, RBAC and MFA included
+
+paid_tier_highlights:
+  - Pro from $249/mo (annual) raises MAUs to 10K and 99.99% SLA
+  - Growth from $799/mo includes SCIM, bot protection, 25K MAUs
+  - HIPAA BAA and multi-region data residency on Growth
+  - Enterprise unlocks unlimited MAUs, tenants, SAML/OIDC apps
+  - Dedicated customer success engineer on Enterprise
 
 pricing:
-  - name: Free
+  - name: Free Forever
     price: 0
     unit: /month
+    description: For hobbyists, tinkerers, and solo builders
+    features:
+      - 7,500 MAUs
+      - 10 monthly active tenants
+      - 3 SSO connections, 1 federated OIDC app
+      - All authentication methods
+      - RBAC and MFA included
+      - Community support with 99% SLA
+    billing: free
+  - name: Pro
+    price: 249
+    unit: /month (annual)
+    description: For early-stage startups
+    features:
+      - 10,000 MAUs
+      - 35 monthly active tenants
+      - 5 SSO connections
+      - 2 federated SAML/OIDC apps
+      - Custom domain and CI/CD integration
+      - Web/Slack support, 99.99% SLA
+    billing: annual
+  - name: Growth
+    price: 799
+    unit: /month (annual)
+    description: For growth-stage startups and scaleups
+    features:
+      - 25,000 MAUs
+      - 100 monthly active tenants
+      - 10 SSO connections
+      - Unlimited SAML/OIDC apps
+      - Bot protection, 1M anonymous users
+      - SCIM, fine-grained authorization
+      - Multi-region data residency, HIPAA BAA
+    billing: annual
+  - name: Enterprise
+    price: Custom
+    description: For large enterprises
+    features:
+      - Unlimited MAUs, tenants, federated apps
+      - Tiered discounts and premium support
+      - Dedicated customer success engineer
+      - Custom deployments
+      - Unlimited test and anonymous users
+    billing: annual
 
 tags: []
 
@@ -24,4 +78,4 @@ pricing_url: https://www.descope.com/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

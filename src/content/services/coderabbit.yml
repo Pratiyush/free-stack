@@ -13,10 +13,58 @@ free_tier:
   - Free for public and private repos; unlimited repos and team members
   - '200 files/hr; 4 PR reviews/hr; 3 back-to-back reviews then cooldown'
 
+paid_tier_highlights:
+  - Pro at $24/user/mo (annual) adds full PR reviews and linters
+  - Pro Plus at $48/user/mo unlocks custom pre-merge checks, UTG
+  - Enterprise adds self-hosting, RBAC, SSO, audit logging
+  - Linear and Jira integrations from Pro tier
+  - 5–15 MCP connections depending on paid tier
+
 pricing:
   - name: Free
     price: 0
-    unit: /month
+    unit: /user/month
+    description: PR summarization for each pull request
+    features:
+      - 14-day free trial of Pro plan, no credit card
+      - Unlimited public and private repositories
+      - PR summarization
+      - Reviews in IDE/CLI
+    billing: free
+  - name: Pro
+    price: 24
+    unit: /user/month (annual)
+    description: Comprehensive pull request reviews and insights
+    features:
+      - Linters and SAST tools support
+      - Jira and Linear integrations
+      - Agentic chat with CodeRabbit
+      - Product analytics dashboards
+      - Docstring generation
+      - 5 MCP connections, 1 linked repository
+    billing: annual
+  - name: Pro Plus
+    price: 48
+    unit: /user/month (annual)
+    description: Enhanced features with advanced capabilities
+    features:
+      - All Pro plan features
+      - Custom pre-merge checks
+      - Unit-test generation, simplify, conflict resolution
+      - Issue planning
+      - 15 MCP connections, 10 linked repos
+    billing: annual
+  - name: Enterprise
+    price: Custom
+    unit: /organization
+    description: Centralized quality guardrails and dedicated support
+    features:
+      - All Pro Plus features
+      - Custom RBAC, SSO, audit logging
+      - API access and self-hosting option
+      - Multi-org support and SLA support
+      - Dedicated CSM, EU SaaS deployment
+    billing: annual
 
 tags: []
 
@@ -25,4 +73,4 @@ pricing_url: https://www.coderabbit.ai/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

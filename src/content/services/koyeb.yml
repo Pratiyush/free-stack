@@ -20,9 +20,66 @@ pricing:
     description: 5 hours/month on Free 5h instance
     price: 0
     unit: /month
+    billing: free
+    features:
+      - Free 5h instance (5 hours/month included)
+      - 0.25 vCPU, 1 GB RAM
+      - 1 GB persistent storage
+      - Scale-to-zero on inactivity
+      - Pay-per-use after monthly free credit
+    cta_url: https://app.koyeb.com/auth/signup
   - name: Pay-as-you-go
     description: Small instance from $0.04/hr (~$29.76/mo always-on)
     price: 'Usage'
+    billing: usage-based
+    features:
+      - Compute billed per second
+      - Small instance from $0.04/hour
+      - GPU instances available
+      - Free tier credit applies first
+    cta_url: https://app.koyeb.com/auth/signup
+  - name: Pro
+    price: 29
+    unit: /month
+    billing: monthly
+    description: For production apps with team and support features
+    features:
+      - $10 included compute credit
+      - Up to 10 users and 100 services
+      - NVMe Volumes and Snapshots
+      - 5 concurrent builds
+      - Email and chat support
+    cta_url: https://www.koyeb.com/pricing
+  - name: Scale
+    price: 299
+    unit: /month
+    billing: monthly
+    description: Scale infrastructure with enhanced team and support
+    features:
+      - $100 included compute credit
+      - Up to 50 users and 1,000 services
+      - AWS Regions access
+      - Slack cross-connect integration
+      - 99.9% uptime SLA
+    cta_url: https://www.koyeb.com/pricing
+  - name: Enterprise
+    price: 'From 1000'
+    unit: /month
+    billing: annual
+    description: Private dedicated locations and enterprise security
+    features:
+      - Private dedicated regions
+      - Unlimited users with SSO and RBAC
+      - Custom RAM, CPU, GPU configurations
+      - ISO27001 and SOC2 certifications
+      - 99.99% uptime SLA, 24/7 support
+    cta_url: https://www.koyeb.com/pricing
+
+paid_tier_highlights:
+  - Pro at $29/mo adds $10 compute credit and team/support features
+  - Scale at $299/mo adds $100 credit, AWS regions, and 99.9% SLA
+  - Enterprise from $1,000/mo adds dedicated regions and 99.99% SLA
+  - All paid tiers include compute on top of subscription
 
 tags: [serverless, deployment, paas, docker, containers]
 

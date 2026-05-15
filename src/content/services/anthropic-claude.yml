@@ -10,20 +10,93 @@ summary: '~$5 starter credits (one-time) — New accounts only; credits expire; 
 tier_type: trial-credit
 
 free_tier:
-  - '~$5 starter credits (one-time)'
-  - New accounts only; credits expire; no permanent free tier
-  - Standard rate limits
+  - 'Claude.ai Free: limited daily messages on Claude Sonnet'
+  - 'API: ~$5 starter credits for new accounts (one-time, expire)'
+  - Web search, file uploads, and memory included on Free
+  - 'No permanent free API tier; API is metered pay-as-you-go'
+
+paid_tier_highlights:
+  - 'Pro from $17/mo (annual) adds higher usage, Projects, Claude Code, Research'
+  - 'Max from $100/mo gives 5x-20x usage vs Pro plus priority access'
+  - 'Team $20/seat/mo (annual) adds central billing, SSO, admin controls'
+  - 'Enterprise adds SCIM, audit logs, HIPAA-ready, IP allowlisting'
+  - 'Claude API: pay per token across Haiku/Sonnet/Opus model families'
 
 pricing:
   - name: Free
     price: 0
+    billing: free
+    description: Try Claude with basic chat and content creation
+    features:
+      - Chat on web, iOS, Android, desktop
+      - Code generation and data visualisation
+      - Web search ability
+      - Memory across conversations
+      - File creation and code execution
+    cta_url: https://claude.ai/login?plan=free
+  - name: Pro
+    price: 17
+    unit: /month (annual)
+    billing: annual
+    description: Higher usage and Pro features for individuals
+    features:
+      - 5x more usage than Free
+      - Claude Code and Claude Cowork
+      - Unlimited Projects
+      - Research feature access
+      - Microsoft 365 and Outlook integrations
+    cta_url: https://claude.ai/login?plan=pro
+  - name: Max
+    price: 100
     unit: /month
+    billing: monthly
+    description: Premium tier with highest individual usage
+    features:
+      - 5x or 20x usage vs Pro
+      - Elevated output limits
+      - Early access to advanced features
+      - Priority access at peak times
+    cta_url: https://claude.ai/login?plan=max
+  - name: Team
+    price: 20
+    unit: /seat/month (annual)
+    billing: annual
+    description: Collaboration plan for 5-150 members
+    features:
+      - Central billing and admin
+      - SSO support
+      - Enterprise search across org
+      - Admin controls for connectors
+      - Premium seats from $100/seat
+    cta_url: https://claude.ai/upgrade
+  - name: Enterprise
+    price: Contact sales
+    billing: annual
+    description: Enterprise security, compliance, governance
+    features:
+      - Role-based access with granular permissions
+      - SCIM and audit logs
+      - HIPAA-ready offering
+      - Custom data retention controls
+      - IP allowlisting and network access control
+    cta_url: https://claude.ai/create/enterprise
+  - name: API (pay-as-you-go)
+    price: Usage-based
+    billing: usage-based
+    description: Per-token billing across Haiku, Sonnet, Opus
+    features:
+      - Claude Haiku (cheapest)
+      - Claude Sonnet (balanced)
+      - Claude Opus (most capable)
+      - Prompt caching discounts
+      - Batch API 50% discount
+    cta_url: https://console.anthropic.com/
 
 tags: []
 
-official_url: https://platform.claude.com/
-pricing_url: https://platform.claude.com/docs/en/about-claude/pricing
+official_url: https://www.anthropic.com/
+pricing_url: https://claude.com/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

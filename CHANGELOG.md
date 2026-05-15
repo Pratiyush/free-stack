@@ -10,7 +10,41 @@ Maintainers: add entries under `## [Unreleased]` as PRs merge. At release time, 
 
 ## [Unreleased]
 
-Next: `v0.9.0` "Content Depth + View Modes" — schema bump (`features[]`, `cta_url`, `billing` per pricing tier + `paid_tier_highlights[]`), 12 parallel agents expand `pricing[]` across all 300 services, table view with inline-expand on `/catalog`, hero refinement (Issue № inline + sidebar pull-quote + 6-col wall).
+Next: `v2.0.0` "Production Quality" (Sprint 5) — Lighthouse 98+ in CI, takedown policy + `/legal`, monthly verification cron, `/changelog` page, build assets attached to releases, opt-in Cloudflare Web Analytics, State of Free Tiers 2026 annual report, 2nd maintainer onboarding, Playwright pricing-drift verifier, **production cutover** to the Astro build, marketing launch.
+
+---
+
+## [0.9.0] - 2026-05-15 — Content Depth + View Modes
+
+Every service now carries the full pricing breakdown — every published tier, every feature, every signup URL. The catalog can render as grid or info-dense table with inline-expand on row click. Hero is bigger, with dateline + Issue № inline, sidebar pull-quote, and a stronger 6-column wall of brand-colored logos.
+
+### Added
+
+- **Schema additions** (purely additive — all 300 existing YAMLs validate unchanged):
+  - `pricingTier`: optional `features[]` (bullet list of what's included), `cta_url` (tier-specific signup link), `billing` (monthly / annual / one-time / usage-based / free).
+  - Service: optional `paid_tier_highlights[]` (3-5 bullets summarising what users get above Free).
+- **`src/components/ui/ViewToggle.astro`** — Grid ↔ Table chip pair. Persists to `localStorage` + URL `?view=table`.
+- **`src/components/ui/ServiceTable.astro`** — info-dense table renderer with sortable columns, brand-color row accent, inline-expand accordion. Pattern from `ref/design-experiments/table.html` + `dashboard.html`.
+- **12 parallel content-expansion agents** (background) — each owned a batch of 25 services, fetched live pricing pages, extracted every tier into the new schema. Total: **271/300 services expanded** (29 skipped as bot-blocked / JS-rendered; tracked for Sprint 5 Playwright verifier).
+
+### Changed
+
+- **`src/pages/index.astro`** — Issue № + dateline merged INTO the hero (above the h1, not a separate strip). H1 capped at 5.5rem (was 4.4rem). Added sidebar pull-quote drawn from `ref/docs/CONVERSATION.md`. Wall-of-logos is now a fixed 6-column grid with service names visible by default. View Transition wired on wall-tile click.
+- **`src/pages/catalog.astro`** — dual-render with grid AND table view; toggle controls `[hidden]`. Filters now sync to table-row visibility too.
+- **`src/pages/category/[slug].astro`** — same dual-render with view toggle.
+- **271 services** received fresh `pricing[]` arrays with `features[]` / `cta_url` / `billing` per tier, plus a service-level `paid_tier_highlights[]`. `date_verified` and `date_updated` bumped to `2026-05-15` across all updated entries.
+- **3 YAML quoting fixes** — `betterstack.yml`, `tidb-cloud-starter.yml`, `twilio.yml`, `turso.yml`, `typesense-cloud.yml` had list items containing colons (e.g. `- Enterprise add-ons: SSO, ...`) that YAML parses as mappings; wrapped in quotes.
+- **One YAML parse fix** — `loops.yml` had `- "Powered by Loops" footer branding` (quoted prefix + unquoted suffix → parse error). Re-quoted as full string.
+
+### Skipped (deferred to Sprint 5 Playwright verifier)
+
+29 services across 4 batches couldn't be expanded via WebFetch because their pricing pages are bot-blocked or JS-rendered:
+- brevo, brevo-sendinblue, canva (Cloudflare interstitial)
+- coherence (ECONNREFUSED across hosts), crowdin (JS-rendered)
+- linode-akamai (Akamai 403), meta-llama-api (no public pricing)
+- papertrail (SolarWinds 403), qodana-jetbrains, quay-io (RedHat 403)
+- render, sendbird (domain safety check), strapi-cloud (JS-rendered)
+- umami-cloud, vonage (403), youtrack (JS-rendered)
 
 ---
 

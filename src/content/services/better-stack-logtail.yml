@@ -13,10 +13,64 @@ free_tier:
   - Free plan
   - '3-day log retention; paid starts at $24/mo for 30GB + 30-day retention'
 
+paid_tier_highlights:
+  - Responder seat unlocks Uptime + Telemetry at $29-$34/user/mo
+  - Telemetry bundles scale 40 GB to 700 GB across logs/metrics/traces
+  - AI SRE root-cause analysis billed per-token usage
+  - Additional status pages, audit logs, SSO available as add-ons
+  - 60-day money-back guarantee on all paid plans
+
 pricing:
-  - name: Free
+  - name: Team Member (Free)
+    description: Telemetry-only seat with Slack and email alerts
     price: 0
-    unit: /month
+    billing: free
+    features:
+      - Telemetry access (logs, metrics, traces)
+      - Slack and email alerts
+      - 10 monitors and heartbeats
+      - 3-day log retention
+      - Community support
+  - name: Responder
+    description: Full Uptime + Telemetry with incident response
+    price: 29
+    unit: /user/mo (annual)
+    billing: annual
+    features:
+      - Everything in Team Member
+      - On-call scheduling, iOS/Android apps
+      - Unlimited alerts and escalations
+      - 1 branded status page (1K subscribers)
+      - Native Slack/Teams incident workflows
+  - name: Telemetry Nano
+    description: Entry log bundle for small workloads
+    price: 30
+    unit: /mo (starts at)
+    billing: monthly
+    features:
+      - 40 GB logs / 40 GB metrics / 40 GB traces
+      - 30-day retention
+      - SQL querying via warehouse
+      - All Sources/Sinks integrations
+  - name: Telemetry Mega
+    description: Production-scale log + trace bundle
+    price: 250
+    unit: /mo (starts at)
+    billing: monthly
+    features:
+      - 340 GB each of logs/metrics/traces
+      - Sentry-compatible error tracking
+      - Session replay (5K replays included)
+      - 90-day error retention
+  - name: Enterprise add-ons
+    description: SSO, audit logs, white-label, custom reporting
+    price: 'Contact sales'
+    billing: annual
+    features:
+      - SSO (Azure/Okta) at $5/user/mo
+      - Audit logs at $250/mo
+      - White-label status pages
+      - SLA/SLI reporting
 
 tags: []
 
@@ -25,4 +79,4 @@ pricing_url: https://betterstack.com/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

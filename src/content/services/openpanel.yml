@@ -12,9 +12,69 @@ free_tier:
   - Free cloud tier
 
 pricing:
-  - name: Free
+  - name: Free Trial / Self-Hosted
     price: 0
     unit: /month
+    billing: free
+    description: 30-day trial or unlimited events via self-hosting
+    features:
+      - 30-day trial (no credit card)
+      - Unlimited events via self-hosting (AGPL)
+      - Unlimited websites/apps
+      - Unlimited dashboards
+      - Unlimited tracked profiles
+    cta_url: https://dashboard.openpanel.dev/onboarding
+  - name: 5K events
+    price: 2.50
+    unit: /month
+    billing: monthly
+    description: Entry-level tracking for small projects
+    features:
+      - 5,000 events/month
+      - All cloud features
+      - Unlimited dashboards
+      - Yearly $25
+    cta_url: https://dashboard.openpanel.dev/onboarding
+  - name: 100K events
+    price: 20
+    unit: /month
+    billing: monthly
+    description: Growing product with moderate traffic
+    features:
+      - 100,000 events/month
+      - Unlimited websites
+      - Unlimited dashboards
+      - Yearly $200
+    cta_url: https://dashboard.openpanel.dev/onboarding
+  - name: 1M events
+    price: 90
+    unit: /month
+    billing: monthly
+    description: High-volume tracking
+    features:
+      - 1,000,000 events/month
+      - Unlimited websites
+      - Unlimited dashboards
+      - Yearly $900
+    cta_url: https://dashboard.openpanel.dev/onboarding
+  - name: 10M+ events
+    price: 350
+    unit: /month
+    billing: monthly
+    description: Enterprise-class capacity ($350-$900/mo)
+    features:
+      - 10M+ events/month
+      - All features
+      - Custom plans available
+      - Yearly $3,500-$9,000
+    cta_url: https://dashboard.openpanel.dev/onboarding
+
+paid_tier_highlights:
+  - Progressive scaling - only pay for event volume
+  - Yearly billing offers 2 months free
+  - Custom plans available for usage exceeding 50M monthly events
+  - Open-source self-hosting available with completely unlimited events
+  - All features included at every tier - only event volume scales
 
 tags: []
 
@@ -23,4 +83,4 @@ pricing_url: https://openpanel.dev/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

@@ -15,9 +15,72 @@ free_tier:
   - Standard rate limits
 
 pricing:
-  - name: Free
+  - name: Free credits
     price: 0
-    unit: /month
+    billing: free
+    description: $25 sign-up credit; +$150/mo with data sharing
+    features:
+      - $25 initial free credits
+      - Up to $150/mo via data sharing
+      - Standard rate limits
+      - All Grok models
+      - 2M context window
+    cta_url: https://console.x.ai/
+  - name: Grok 4.3
+    price: 1.25
+    unit: per 1M input tokens
+    billing: usage-based
+    description: Flagship model; $1.25 input / $2.50 output
+    features:
+      - $1.25/1M input tokens
+      - $2.50/1M output tokens
+      - 2M context window
+      - Most intelligent + fastest
+      - Reasoning and non-reasoning modes
+    cta_url: https://docs.x.ai/developers/models
+  - name: Grok 4.1 Fast
+    price: 0.20
+    unit: per 1M input tokens
+    billing: usage-based
+    description: Budget option; $0.20 input / $0.50 output
+    features:
+      - $0.20/1M input tokens
+      - $0.50/1M output tokens
+      - Non-reasoning mode
+      - High throughput
+      - Lower cost tier
+    cta_url: https://docs.x.ai/developers/models
+  - name: Image generation
+    price: 0.02
+    unit: per image
+    billing: usage-based
+    description: Standard $0.02 / Quality $0.05 per image
+    features:
+      - Standard images $0.02
+      - Quality images $0.05
+      - Photorealistic output
+      - Single-image generation
+      - API access
+    cta_url: https://docs.x.ai/developers/models
+  - name: Voice & Audio
+    price: 0.05
+    unit: per minute
+    billing: usage-based
+    description: Real-time voice $0.05/min; TTS $15/1M chars
+    features:
+      - Real-time conversation $0.05/min
+      - TTS $15/1M characters
+      - STT $0.10/hr REST
+      - STT $0.20/hr streaming
+      - Video gen $0.05/second
+    cta_url: https://docs.x.ai/developers/models
+
+paid_tier_highlights:
+  - Grok 4.3 at $1.25/$2.50 per 1M tokens with 2M context window
+  - Grok 4.1 Fast at $0.20/$0.50 per 1M tokens for budget workloads
+  - Image generation from $0.02/image; video at $0.05/second
+  - Real-time voice $0.05/min; STT from $0.10/hr
+  - Up to $150/mo data-sharing credit on top of $25 sign-up credit
 
 tags: []
 

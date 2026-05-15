@@ -17,6 +17,46 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    billing: free
+    description: $10 of free usage to try Gitpod / Ona cloud dev environments
+    cta_url: https://ona.com/pricing
+    features:
+      - $10 free usage (one-time)
+      - 4 cores, 16 GB RAM, 80 GB disk
+      - Up to 3 parallel environments
+      - Background Agents access
+      - VS Code Web editing
+      - Auto-delete after 3 days inactive
+  - name: Core
+    price: 20
+    unit: /month
+    billing: monthly
+    description: For individuals and teams scaling dev operations
+    cta_url: https://ona.com/pricing
+    features:
+      - Up to 100 team members
+      - Unlimited parallel environments
+      - Up to 32 cores, 128 GB RAM, 200 GB disk
+      - GPU support
+      - Prebuilds for fast starts
+      - Role-based access management
+  - name: Enterprise
+    price: Custom
+    description: Bank-grade VPC deployment with audit and SSO
+    cta_url: https://ona.com/pricing
+    features:
+      - Bank-grade VPC deployment
+      - SSO and OIDC authentication
+      - Detailed audit trails
+      - Dedicated account manager
+      - Custom environment policies
+      - Warm pools for instant starts
+
+paid_tier_highlights:
+  - Core from $20/mo lifts cap to 100 team members and 32-core machines
+  - Core adds prebuilds, GPU support, RBAC
+  - Enterprise offers VPC deployment with SSO, audit, dedicated support
+  - Free is one-time $10 credit (not recurring) — Gitpod rebranded to Ona
 
 tags: []
 

@@ -17,6 +17,106 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    billing: free
+    description: Entry-level plan for getting started with i18next
+    features:
+      - 100K standard CDN downloads/month
+      - 2,000 words
+      - 2 languages
+      - 5 namespaces
+      - 1 user
+    cta_url: https://www.locize.app/register
+  - name: Starter
+    price: 7
+    unit: /month
+    billing: monthly
+    description: Small projects, billed monthly
+    features:
+      - 1M standard CDN downloads
+      - 15,000 words
+      - 5 languages
+      - 10 namespaces
+      - 5 users
+    cta_url: https://locize.com/pricing.html
+  - name: Starter-Plus
+    price: 19
+    unit: /month
+    billing: monthly
+    description: Intermediate tier with expanded capacity
+    features:
+      - 3M standard CDN downloads
+      - 30,000 words
+      - 7 languages
+      - 25 namespaces
+      - 5 users
+    cta_url: https://locize.com/pricing.html
+  - name: Growth
+    price: 49
+    unit: /month
+    billing: monthly
+    description: Scaling teams with workflow features
+    features:
+      - 5M standard + 150K pro CDN downloads
+      - 60,000 words
+      - 10 languages
+      - Review workflow and glossary
+      - 10 users
+    cta_url: https://locize.com/pricing.html
+  - name: Professional
+    price: 99
+    unit: /month
+    billing: monthly
+    description: Enterprise-ready with advanced features
+    features:
+      - 7M standard + 250K pro downloads
+      - 100,000 words
+      - 20 languages
+      - Unlimited users
+      - SSO add-on available
+    cta_url: https://locize.com/pricing.html
+  - name: Professional-Plus
+    price: 149
+    unit: /month
+    billing: monthly
+    description: Expanded languages and tenants
+    features:
+      - 10M standard + 350K pro downloads
+      - 150,000 words
+      - 50 languages
+      - Unlimited users
+      - Standard backups included
+    cta_url: https://locize.com/pricing.html
+  - name: Enterprise
+    price: 199
+    unit: /month
+    billing: monthly
+    description: Maximum capacity with full compliance features
+    features:
+      - 15M standard + 500K pro downloads
+      - 200,000 words
+      - 150 languages
+      - Audit log included
+      - SSO included
+    cta_url: https://locize.com/pricing.html
+  - name: Pay-as-you-go
+    price: 5
+    unit: /month
+    billing: usage-based
+    description: Base fee with no limits on languages, users, or namespaces
+    features:
+      - $5/month base fee
+      - Usage-based pricing
+      - No language limits
+      - No user limits
+      - No namespace limits
+    cta_url: https://locize.com/pricing.html
+
+paid_tier_highlights:
+  - Starter at $7/mo unlocks 1M downloads and 5 languages
+  - Growth at $49/mo adds review workflow, glossary, and 10 users
+  - Professional at $99/mo includes unlimited users and SSO add-on
+  - Enterprise at $199/mo bundles audit log, SSO, and 150 languages
+  - Pay-as-you-go at $5/mo base removes all limits with usage billing
 
 tags: []
 
@@ -25,4 +125,4 @@ pricing_url: https://locize.com/pricing.html
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

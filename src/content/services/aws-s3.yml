@@ -10,19 +10,98 @@ summary: 5 GB Standard storage (12 months only)
 tier_type: free-plan
 
 free_tier:
-  - 5 GB Standard storage (12 months only)
+  - 5 GB S3 Standard storage (12 months only)
+  - 20,000 GET requests/month
+  - 2,000 PUT/COPY/POST/LIST requests/month
+  - 100 GB data transfer out/month
   - 'Expires after 12 months -- NOT a permanent free tier'
+  - 'New post-Jul 2025 accounts get $200 credits via AWS Free Plan instead'
+
+paid_tier_highlights:
+  - 'S3 Standard: $0.023/GB-month (first 50 TB) in us-east-1'
+  - 'S3 Intelligent-Tiering auto-moves data between tiers to save 30-40%'
+  - 'Standard-IA $0.0125/GB; One Zone-IA $0.01/GB for infrequent access'
+  - 'Glacier Instant $0.004/GB-month; Deep Archive $0.00099/GB-month'
+  - 'Egress: first 100 GB/mo free, then $0.09/GB to internet'
 
 pricing:
-  - name: Free
+  - name: Free Tier (12 months)
     price: 0
-    unit: /month
+    billing: free
+    description: 5 GB Standard storage and request quotas for 12 months
+    features:
+      - 5 GB S3 Standard storage
+      - 20,000 GET requests/month
+      - 2,000 PUT/POST/LIST requests/month
+      - 100 GB data transfer out/month
+      - 12-month limit; not permanent
+    cta_url: https://aws.amazon.com/free/
+  - name: S3 Standard
+    price: 0.023
+    unit: /GB-month
+    billing: usage-based
+    description: General-purpose storage with millisecond latency
+    features:
+      - $0.023/GB (first 50 TB), us-east-1
+      - $0.022/GB (50-500 TB)
+      - $0.021/GB (over 500 TB)
+      - 99.999999999% durability
+      - 99.99% availability SLA
+      - $0.005 per 1k PUT, $0.0004 per 1k GET
+    cta_url: https://console.aws.amazon.com/s3/
+  - name: S3 Intelligent-Tiering
+    price: 0.023
+    unit: /GB-month (frequent access)
+    billing: usage-based
+    description: Auto-moves objects across access tiers to save cost
+    features:
+      - $0.023/GB Frequent Access tier
+      - $0.0125/GB Infrequent Access tier
+      - $0.004/GB Archive Instant Access tier
+      - $0.0025/GB Archive Access tier
+      - $0.00099/GB Deep Archive
+      - $0.0025 monitoring fee per 1k objects
+    cta_url: https://aws.amazon.com/s3/storage-classes/intelligent-tiering/
+  - name: S3 Standard-IA
+    price: 0.0125
+    unit: /GB-month
+    billing: usage-based
+    description: Infrequent access with millisecond retrieval
+    features:
+      - $0.0125/GB-month storage
+      - $0.01/GB retrieval fee
+      - 99.9% availability SLA
+      - 30-day minimum storage duration
+      - For backups and DR
+    cta_url: https://aws.amazon.com/s3/storage-classes/
+  - name: S3 Glacier Instant Retrieval
+    price: 0.004
+    unit: /GB-month
+    billing: usage-based
+    description: Archive with millisecond retrieval
+    features:
+      - $0.004/GB-month storage
+      - $0.03/GB retrieval
+      - 99.9% availability SLA
+      - 90-day minimum storage duration
+    cta_url: https://aws.amazon.com/s3/storage-classes/glacier/
+  - name: S3 Glacier Deep Archive
+    price: 0.00099
+    unit: /GB-month
+    billing: usage-based
+    description: Cheapest tier for long-term archive
+    features:
+      - $0.00099/GB-month storage
+      - 12-hour retrieval time
+      - 180-day minimum storage duration
+      - For compliance/regulatory archives
+    cta_url: https://aws.amazon.com/s3/storage-classes/glacier/
 
 tags: []
 
-official_url: https://aws.amazon.com/
-pricing_url: https://aws.amazon.com/free/
+official_url: https://aws.amazon.com/s3/
+pricing_url: https://aws.amazon.com/s3/pricing/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

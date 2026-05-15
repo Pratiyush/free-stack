@@ -14,9 +14,48 @@ free_tier:
   - '1 editor seat, no AI features, no collaboration; Pro is $250/mo'
 
 pricing:
-  - name: Free
+  - name: Hobby
     price: 0
     unit: /month
+    billing: free
+    description: For individuals
+    features:
+      - Full platform access
+      - Custom domain
+      - Web editor
+      - MCP server
+      - Custom components
+    cta_url: https://dashboard.mintlify.com/signup
+  - name: Pro
+    price: 250
+    unit: /month
+    billing: monthly
+    description: For startups; 15% off annual
+    features:
+      - Everything in Hobby
+      - Assistant agent
+      - Writing agent
+      - Preview deployments
+      - Password protection
+    cta_url: https://www.mintlify.com/pricing
+  - name: Enterprise
+    price: Custom
+    billing: annual
+    description: For scaling and global teams
+    features:
+      - Everything in Pro
+      - Self-updating workflows
+      - Boosted performance
+      - Enterprise security and compliance
+      - Migration and support services
+    cta_url: https://www.mintlify.com/enterprise
+
+paid_tier_highlights:
+  - Pro at $250/mo unlocks Assistant agent and writing agent
+  - Pro adds preview deployments and password protection
+  - Enterprise adds self-updating workflows and dedicated migration
+  - All plans include 5,000 AI credits/month ($0.01 per overage)
+  - 15% annual discount on Pro plan
 
 tags: []
 
@@ -25,4 +64,4 @@ pricing_url: https://www.mintlify.com/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

@@ -14,9 +14,20 @@ free_tier:
   - 'Self-hosted only (no managed free cloud), runs on any $5/mo VPS'
 
 pricing:
-  - name: Free
+  - name: Free (open source, self-hosted)
     price: 0
-    unit: /month
+    description: Single-file open-source backend; self-host only
+    features:
+      - Open source under MIT license
+      - Runs as a standalone single binary
+      - Embedded SQLite database + realtime + auth
+      - Extensible via Go and JavaScript hooks
+      - No managed cloud or paid plans
+    cta_url: https://github.com/pocketbase/pocketbase
+    billing: free
+
+paid_tier_highlights:
+  - This service is always-free; no paid tiers exist
 
 tags: []
 

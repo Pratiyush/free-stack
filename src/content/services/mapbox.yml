@@ -14,9 +14,108 @@ free_tier:
   - '1,000 geocoding requests/min (adjustable)'
 
 pricing:
-  - name: Free
+  - name: Free Tier
     price: 0
     unit: /month
+    billing: free
+    description: Generous monthly free quotas across products
+    features:
+      - 50K free Mapbox GL JS loads/mo
+      - 100K free geocoding requests/mo
+      - 25K free mobile MAUs
+      - 50K free static image requests
+      - 750 free tileset hosting days
+    cta_url: https://account.mapbox.com/auth/signup/
+  - name: Mapbox GL JS
+    price: 5
+    unit: /1K loads
+    billing: usage-based
+    description: Web vector maps after 50K free loads
+    features:
+      - Unlimited interactivity per load
+      - Tile requests included
+      - Real-time map styling
+      - High performance rendering
+      - Volume discounts
+    cta_url: https://www.mapbox.com/pricing
+  - name: Maps SDK Mobile
+    price: 4
+    unit: /1K MAU
+    billing: usage-based
+    description: Android/iOS mobile maps after 25K free MAUs
+    features:
+      - Dynamic rendering
+      - Unlimited tile requests per user
+      - Powerful map controls
+      - Volume discounts
+      - Modern SDK
+    cta_url: https://www.mapbox.com/pricing
+  - name: Geocoding API
+    price: 0.75
+    unit: /1K requests
+    billing: usage-based
+    description: Geocoding after 100K free requests
+    features:
+      - Forward and reverse geocoding
+      - Address validation
+      - POI search
+      - Volume discounts
+      - Worldwide coverage
+    cta_url: https://www.mapbox.com/pricing
+  - name: Directions API
+    price: 2
+    unit: /1K requests
+    billing: usage-based
+    description: Routing after 100K free requests
+    features:
+      - Traffic-aware routing
+      - Driving/walking/cycling modes
+      - Incident consideration
+      - Volume discounts
+      - Polyline geometry
+    cta_url: https://www.mapbox.com/pricing
+  - name: Individual Support
+    price: 50
+    unit: /month
+    billing: monthly
+    description: Web ticket support with 3-day response
+    features:
+      - Web form ticket submission
+      - 3 business days response
+      - Tailored expert advice
+      - Technical resources access
+      - For individual developers
+    cta_url: https://www.mapbox.com/pricing
+  - name: Business Support
+    price: 500
+    unit: /month
+    billing: monthly
+    description: 10% of monthly spend (min $500/mo, $6K/year)
+    features:
+      - 1-3 business days response
+      - 4-hour emergency response
+      - Best practice guidance
+      - Custom implementation advice
+      - Multiple team members
+    cta_url: https://www.mapbox.com/pricing
+  - name: Premium Support
+    price: Custom
+    billing: annual
+    description: Dedicated Support Engineer with 30-min response
+    features:
+      - Dedicated Support Engineer
+      - 30-minute emergency response
+      - Private collaboration spaces
+      - Phone/video support
+      - Strategic partnership
+    cta_url: https://www.mapbox.com/contact
+
+paid_tier_highlights:
+  - GL JS loads at $5 per 1K beyond 50K free monthly loads
+  - Mobile MAUs at $4 per 1K beyond 25K free monthly users
+  - Geocoding at $0.75 per 1K and Directions at $2 per 1K after free
+  - Individual Support at $50/mo; Business 10% of spend (min $500)
+  - Premium Support adds dedicated engineer and 30-min response
 
 tags: []
 
@@ -25,4 +124,4 @@ pricing_url: https://www.mapbox.com/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

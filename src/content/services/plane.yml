@@ -16,7 +16,58 @@ free_tier:
 pricing:
   - name: Free
     price: 0
-    unit: /month
+    unit: /user/month
+    description: No-frills PM for startups and passion projects
+    features:
+      - Up to 12 users
+      - Projects, work items, cycles, modules
+      - Five layouts with unlimited views
+      - Project pages for documentation
+      - 500 AI credits per seat
+    cta_url: https://app.plane.so/sign-up
+    billing: free
+  - name: Pro
+    price: 6
+    unit: /user/month
+    description: Advanced features for mature teams (25% off annually)
+    features:
+      - Everything in Free
+      - 1,000 AI credits/seat/mo
+      - Custom work item types and properties
+      - Workspace wiki and time tracking
+      - Templates, dashboards, epics, teamspaces
+    cta_url: https://app.plane.so/upgrade/pro/
+    billing: monthly
+  - name: Business
+    price: 13
+    unit: /user/month
+    description: Group PMs and larger teams with workflow controls
+    features:
+      - Everything in Pro
+      - 2,000 AI credits/seat/mo
+      - Project templates for scaling
+      - Recurring work items automation
+      - Intake via email/forms, nested pages
+    cta_url: https://app.plane.so/upgrade/business/
+    billing: monthly
+  - name: Enterprise Grid
+    price: Custom
+    description: Private deployments with granular access controls
+    features:
+      - Everything in Business
+      - Flexible AI credit allocation
+      - Private managed deployments
+      - Granular access controls and approvals
+      - LDAP auth, API-enabled audit logs
+      - Migration and implementation services
+    cta_url: https://app.plane.so/talk-to-sales
+    billing: annual
+
+paid_tier_highlights:
+  - Free plan supports up to 12 users with 500 AI credits per seat
+  - Pro $6/user/mo adds workspace wiki, time tracking, templates
+  - Business $13/user/mo unlocks recurring items, nested pages, intake forms
+  - Enterprise Grid offers private deployments, LDAP, audit logs (custom price)
 
 tags: []
 
@@ -25,4 +76,4 @@ pricing_url: https://plane.so/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

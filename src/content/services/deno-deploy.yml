@@ -15,13 +15,59 @@ free_tier:
   - Commercial use allowed
   - Hard caps on requests and egress
 
+paid_tier_highlights:
+  - Pro at $20/mo lifts to 5M requests, 200GB egress, 5GB KV
+  - Builder at $200/mo for Subhosting (20M req, 100K deployments)
+  - Overage pricing $2/M requests, $0.50/GB egress on Pro
+  - Enterprise tier offers custom allocations and 99.95% SLA
+  - All tiers include KV reads/writes and edge runtime
+
 pricing:
   - name: Free
     price: 0
     unit: /month
+    description: For personal use and smaller projects
+    features:
+      - 1M requests/month
+      - 20GB egress bandwidth
+      - 1 GiB KV storage
+      - 450K KV read units/mo
+      - 300K KV write units/mo
+      - 20 active deployments max
+    billing: free
   - name: Pro
-    description: Higher request and egress limits
-    price: 'Custom'
+    price: 20
+    unit: /month
+    description: Team collaboration with advanced features
+    features:
+      - 5M requests/mo (then $2/M)
+      - 200GB egress (then $0.50/GB)
+      - 5GB KV storage (then $0.75/GiB)
+      - 1.3M KV reads/mo (then $1/M)
+      - 900K KV writes/mo (then $2.50/M)
+      - 100 active deployments
+    billing: monthly
+  - name: Builder
+    price: 200
+    unit: /month
+    description: Subhosting users and growing platforms
+    features:
+      - 20M requests/mo (then $2/M)
+      - 300GB egress (then $0.50/GB)
+      - 10 GiB KV storage (then $0.75/GiB)
+      - 5M KV reads/mo (then $1/M)
+      - 3M KV writes/mo (then $2.50/M)
+      - 100,000 active deployments
+    billing: monthly
+  - name: Enterprise
+    price: Custom
+    description: Maximum support, security, and performance
+    features:
+      - Custom requests, egress, KV allocations
+      - Unlimited custom domains
+      - 99.95% reliability SLA
+      - Dedicated support and security review
+    billing: annual
 
 tags: [edge-computing, serverless, deno, javascript, typescript]
 

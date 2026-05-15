@@ -17,7 +17,43 @@ free_tier:
 pricing:
   - name: Free
     price: 0
-    unit: /month
+    billing: free
+    description: $5 trial credits (30-day expiry) + rate-limited free tier
+    features:
+      - $5 trial credits expiring in 30 days
+      - Llama 8B/70B/405B free with rate limits
+      - ~30 RPM small models, ~1 RPM large
+      - Access via API and Playground
+      - Real-time usage tracking
+    cta_url: https://cloud.sambanova.ai/plans/pricing
+  - name: Pay-As-You-Go
+    price: Variable
+    unit: per 1M tokens
+    billing: usage-based
+    description: Per-token pricing across multiple models
+    features:
+      - DeepSeek-V3.1-cb from $0.15-$0.75 per 1M tokens
+      - Mid-range models $0.22-$0.63 input
+      - Premium DeepSeek-V3.1/V3.2 $3.00-$4.50 per 1M
+      - Separate input/output token rates
+      - No upfront commitments
+    cta_url: https://cloud.sambanova.ai/plans/pricing
+  - name: Commits and Credits
+    price: Custom
+    billing: usage-based
+    description: Commitment-based pricing options
+    features:
+      - Volume-based credit packages
+      - Custom rate tiers
+      - Real-time usage tracking
+      - Billing dashboard
+    cta_url: https://cloud.sambanova.ai/plans/pricing
+
+paid_tier_highlights:
+  - Pay-as-you-go starts at $0.15 per 1M tokens (DeepSeek-V3.1-cb)
+  - Premium models priced $3.00-$4.50 per 1M tokens
+  - Separate input vs output token billing
+  - Credits/commits packages available for volume buyers
 
 tags: []
 
@@ -26,4 +62,4 @@ pricing_url: https://cloud.sambanova.ai/plans/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

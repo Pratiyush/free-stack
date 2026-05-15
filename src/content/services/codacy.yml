@@ -13,10 +13,48 @@ free_tier:
   - 'Free for open-source repos (full Pro features); Starter plan free for up to 2 committers'
   - 'Per-committer seat model'
 
+paid_tier_highlights:
+  - Team plan from $18/dev/mo adds 100 private repos and PR feedback
+  - Sharable security and coding standards across IDEs
+  - 49-language SAST, secret, dependency scans
+  - Business adds AI Inventory, AI Risk Hub, DAST, container scans
+  - Daily SCA and malicious-package re-scans on Business
+
 pricing:
-  - name: Free
+  - name: Developer
     price: 0
-    unit: /month
+    unit: /developer/month
+    description: For AI-driven engineers shipping faster
+    features:
+      - IDE plugins for VSCode, IntelliJ, Cursor
+      - Real-time SAST, secrets, dependency scans
+      - Quality analysis for error-prone code and complexity
+      - Works with any MCP-ready LLM (Copilot, Claude)
+      - TypeScript, JavaScript, Python, Java support
+    billing: free
+  - name: Team
+    price: 18
+    unit: /developer/month (annual)
+    description: Modern teams up to 30 devs protecting their apps
+    features:
+      - Everything in Developer plan
+      - Sharable security and coding standards
+      - Up to 100 private repos, unlimited lines
+      - AI-powered PR feedback with context
+      - 49 languages, SAST, secrets, dependency scans
+      - Security & Risk Management with SLA tracking
+    billing: annual
+  - name: Business
+    price: Custom
+    description: Leading organizations with enterprise security needs
+    features:
+      - Everything in Team plan
+      - Unlimited private projects
+      - Daily SCA and malicious package re-scans
+      - AI Inventory and AI Risk Hub
+      - DAST and container image scanning
+      - Dedicated CSM and premium support
+    billing: annual
 
 tags: []
 
@@ -25,4 +63,4 @@ pricing_url: https://www.codacy.com/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

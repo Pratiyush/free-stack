@@ -17,6 +17,61 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    description: For individuals building and testing APIs
+    features:
+      - Multi-protocol API client
+      - Collections and environments
+      - Unlimited mock servers
+      - 50 AI credits/month
+      - Performance testing (unlimited runs)
+      - 1,000 API monitoring requests/month
+    cta_url: https://identity.getpostman.com/signup
+    billing: free
+  - name: Solo
+    price: 9
+    unit: /user/month
+    description: Move faster with AI and automation (annual)
+    features:
+      - Everything in Free
+      - 400 AI credits/month
+      - Data-driven testing with exports
+      - Unlimited private NPM packages
+      - Custom-branded documentation
+      - 10,000 API monitoring requests/month
+    cta_url: https://www.postman.com/buy?plan=solo&interval=annually
+    billing: annual
+  - name: Team
+    price: 19
+    unit: /user/month
+    description: Build and ship APIs together (annual)
+    features:
+      - Everything in Solo
+      - 400 AI credits per user/month
+      - Team collaboration features
+      - SDK generation
+      - Basic role-based access control
+      - Unlimited collection viewers
+    cta_url: https://www.postman.com/buy?plan=team&interval=annually
+    billing: annual
+  - name: Enterprise
+    price: 49
+    unit: /user/month
+    description: Build, manage, distribute APIs at scale (annual)
+    features:
+      - Everything in Team
+      - 800 AI credits/user/month (pooled)
+      - API Catalog and Insights
+      - Private API Network
+      - Advanced RBAC and audit logs
+      - Private test and Flows runners
+    cta_url: https://www.postman.com/company/contact-sales/
+    billing: annual
+
+paid_tier_highlights:
+  - Free includes unlimited mock servers, 50 AI credits, 1K monitoring req/mo
+  - Solo $9/user/mo adds 400 AI credits and 10K monitoring req/mo (annual)
+  - Team $19/user/mo unlocks SDK generation and RBAC
+  - Enterprise $49/user/mo for API Catalog, audit logs, private runners
 
 tags: []
 
@@ -25,4 +80,4 @@ pricing_url: https://www.postman.com/pricing/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

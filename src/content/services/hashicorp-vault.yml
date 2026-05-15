@@ -14,9 +14,46 @@ free_tier:
   - HCP Vault Secrets free tier EOL July 2026; use Community Edition
 
 pricing:
-  - name: Free
+  - name: Community Edition
     price: 0
     unit: /month
+    billing: free
+    description: Self-hosted open-source secrets management
+    features:
+      - MPL 2.0 licensed core
+      - Self-managed clusters and HA on your infra
+      - Encryption-as-a-service, dynamic secrets, KV
+      - Community support via GitHub and forum
+      - No vendor caps; scales with your hardware
+    cta_url: https://developer.hashicorp.com/vault/downloads
+  - name: HCP Vault Dedicated
+    price: Usage
+    billing: usage-based
+    description: Fully managed Vault clusters on HashiCorp Cloud Platform
+    features:
+      - Managed deployments in AWS or Azure
+      - Pay-per-hour cluster pricing
+      - Auto-upgrades and managed backups
+      - Multi-region replication options
+      - Customer support tiers available
+    cta_url: https://portal.cloud.hashicorp.com/sign-up
+  - name: Enterprise
+    price: Custom
+    billing: annual
+    description: Self-managed Vault Enterprise with commercial features
+    features:
+      - HSM auto-unseal and FIPS 140-2 builds
+      - DR replication and performance replication
+      - Namespaces for multi-tenancy
+      - Premium support and SLAs
+      - Compliance reporting (SOC 2, HIPAA)
+    cta_url: https://www.hashicorp.com/contact-sales
+
+paid_tier_highlights:
+  - HCP Vault Dedicated bills hourly for managed clusters
+  - Enterprise adds DR/performance replication and HSM unseal
+  - Namespaces and FIPS builds are Enterprise-only
+  - HCP Vault Secrets free tier was retired in July 2026
 
 tags: []
 

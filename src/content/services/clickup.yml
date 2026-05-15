@@ -12,11 +12,83 @@ tier_type: free-plan
 free_tier:
   - Free Forever plan
   - 'Limited automations, limited custom fields, no goals/portfolios on free tier'
+  - Unlimited tasks and team members
+  - 60MB storage and 1 form
+  - 24/7 support
+
+paid_tier_highlights:
+  - Unlimited ($7/user/mo annual) adds unlimited storage and Gantt
+  - Business ($12/user/mo) unlocks 5K automations + Google SSO
+  - Enterprise adds SAML SSO, audit logs, HIPAA option, custom branding
+  - Brain AI add-on at $9/user/mo for unlimited AI features
+  - Everything AI ($28/user/mo) bundles full agentic suite
 
 pricing:
-  - name: Free
+  - name: Free Forever
+    description: Basic collaborative workspace with core tools
     price: 0
-    unit: /month
+    billing: free
+    features:
+      - Unlimited tasks and members
+      - Kanban, calendar, sprint views
+      - 60MB storage, 1 form
+      - Basic custom fields
+      - 24/7 support
+    cta_url: https://app.clickup.com/signup
+  - name: Unlimited
+    description: Full collaboration suite for growing teams
+    price: 7
+    unit: /user/mo (annual)
+    billing: annual
+    features:
+      - Unlimited storage and forms
+      - Gantt charts + integrations
+      - Native time tracking + goals
+      - ClickUp Chat + email integration
+      - Resource management
+      - Guest permissions
+  - name: Business
+    description: Advanced reporting + automation for mid-market
+    price: 12
+    unit: /user/mo (annual)
+    billing: annual
+    features:
+      - Unlimited dashboards
+      - 5K automations/mo
+      - Mind maps + private whiteboards
+      - Sprint points + proofing
+      - Google SSO + SMS 2FA
+  - name: Enterprise
+    description: Enterprise-grade security and control
+    price: 'Contact sales'
+    billing: annual
+    features:
+      - 250K automations/mo
+      - SAML SSO + audit logs
+      - Custom roles + HIPAA available
+      - Dedicated CSM
+      - Custom branding + data residency
+  - name: Brain AI add-on
+    description: Unlimited AI assistant + 1,500 Super Credits/mo
+    price: 9
+    unit: /user/mo
+    billing: monthly
+    features:
+      - Unlimited AI assistant + agent
+      - Access to Claude, ChatGPT, Gemini
+      - Enterprise workspace search
+      - 1,500 AI Super Credits/mo
+  - name: Everything AI add-on
+    description: Full agentic suite with all AI features
+    price: 28
+    unit: /user/mo
+    billing: monthly
+    features:
+      - All Brain AI features
+      - Ambient answers + AI notetaker
+      - AI automations + dashboards
+      - 3x Super Agent usage
+      - 5K AI Super Credits/mo
 
 tags: []
 
@@ -25,4 +97,4 @@ pricing_url: https://clickup.com/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

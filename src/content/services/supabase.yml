@@ -19,9 +19,61 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    description: Essentials for development and testing
+    billing: free
+    features:
+      - Unlimited API requests
+      - 50,000 monthly active users
+      - 500 MB database size
+      - 5 GB egress
+      - 1 GB file storage
+      - Community support
+      - 2 active projects maximum
+    cta_url: https://supabase.com/dashboard/sign-up
   - name: Pro
     price: 25
     unit: /month
+    description: Scalable plan with higher limits and email support
+    billing: monthly
+    features:
+      - 100K MAU (then $0.00325/MAU)
+      - 8 GB disk per project (then $0.125/GB)
+      - 250 GB egress included
+      - 100 GB file storage
+      - 7-day log retention + daily backups
+      - Email support
+    cta_url: https://supabase.com/dashboard/org/_/billing
+  - name: Team
+    price: 599
+    unit: /month
+    description: SOC2/ISO 27001 with priority SLAs
+    billing: monthly
+    features:
+      - SOC2 & ISO 27001 certified
+      - Project-scoped + read-only access
+      - Priority email support with SLAs
+      - 28-day log retention
+      - 14-day backup retention
+      - HIPAA available as paid add-on
+    cta_url: https://supabase.com/dashboard/org/_/billing
+  - name: Enterprise
+    price: Custom
+    description: Custom solutions, BYO cloud, 24x7 premium support
+    billing: annual
+    features:
+      - Designated support manager
+      - 24x7x365 premium support
+      - Uptime SLAs guaranteed
+      - Bring-your-own-cloud (BYOC)
+      - Private Slack channel
+      - 90-day log retention
+    cta_url: https://supabase.com/contact/enterprise
+
+paid_tier_highlights:
+  - Pro at $25/mo scales to 100K MAU + 8 GB disk + email support
+  - Team at $599/mo adds SOC2/ISO 27001 + priority SLAs
+  - Enterprise offers BYO cloud + 24x7 premium support
+  - HIPAA compliance available as paid Team add-on
 
 tags: [postgres, database, backend-as-a-service, sql, auth]
 

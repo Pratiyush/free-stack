@@ -19,9 +19,56 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    description: 1 GB file storage on Supabase Free plan
+    billing: free
+    features:
+      - 1 GB file storage
+      - 50 MB max file size
+      - 5 GB storage egress/mo
+      - Bucket-based organization
+      - Integrated with Postgres + Row-Level Security
+    cta_url: https://supabase.com/dashboard/sign-up
   - name: Pro
     price: 25
     unit: /month
+    description: 100 GB storage; overage $0.021/GB
+    billing: monthly
+    features:
+      - 100 GB file storage
+      - 250 GB egress included
+      - Storage overage $0.021/GB
+      - Egress overage $0.09/GB
+      - 7-day log retention + email support
+    cta_url: https://supabase.com/dashboard/org/_/billing
+  - name: Team
+    price: 599
+    unit: /month
+    description: SOC2/ISO 27001 with priority SLAs
+    billing: monthly
+    features:
+      - All Pro storage features
+      - SOC2 & ISO 27001 certified
+      - Priority email support with SLAs
+      - 28-day log retention
+      - HIPAA add-on available
+    cta_url: https://supabase.com/dashboard/org/_/billing
+  - name: Enterprise
+    price: Custom
+    description: BYO cloud, custom SLAs, 24x7 support
+    billing: annual
+    features:
+      - Bring-your-own-cloud (BYOC)
+      - 24x7x365 premium support
+      - Custom uptime SLAs
+      - Designated support manager
+      - 90-day log retention
+    cta_url: https://supabase.com/contact/enterprise
+
+paid_tier_highlights:
+  - Pro at $25/mo scales to 100 GB storage + 250 GB egress
+  - Storage overage $0.021/GB, egress overage $0.09/GB
+  - Team at $599/mo adds SOC2/ISO 27001 + priority SLAs
+  - Enterprise unlocks BYOC + custom SLAs
 
 tags: [file-storage, cloud-storage, postgres, backend, bucket]
 

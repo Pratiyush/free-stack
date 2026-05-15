@@ -17,12 +17,59 @@ free_tier:
 
 pricing:
   - name: Self-hosted
-    description: MIT open source
     price: 0
     unit: /month
-  - name: Cloud Build
+    billing: free
+    description: MIT-licensed open-source self-hosted deployment
+    features:
+      - Unlimited searches and documents
+      - MIT open-source license
+      - All core features included
+      - Single binary deployment
+      - Community support
+    cta_url: https://github.com/meilisearch/meilisearch
+  - name: Cloud (Build)
     price: 30
     unit: /month
+    billing: monthly
+    description: Usage-based managed cloud; 14-day free trial
+    features:
+      - 100K docs and 50K searches (base)
+      - Fully managed infrastructure
+      - Seamless auto-scaling
+      - Email support included
+      - No credit card for trial
+    cta_url: https://cloud.meilisearch.com/register
+  - name: Cloud (Resource-based)
+    price: 23
+    unit: /month
+    billing: monthly
+    description: Reserved XS instance with predictable monthly cost
+    features:
+      - Reserved instance sizing
+      - Predictable monthly billing
+      - All managed cloud features
+      - Email support
+      - Scalable instance tiers
+    cta_url: https://www.meilisearch.com/pricing
+  - name: Enterprise
+    price: Custom
+    billing: annual
+    description: Custom infra and dedicated resources
+    features:
+      - Custom infra and dedicated resources
+      - Up to 99.999% uptime SLA
+      - Dedicated Slack channel
+      - SSO SAML and SOC 2 compliance
+      - Volume discounts
+    cta_url: https://www.meilisearch.com/contact
+
+paid_tier_highlights:
+  - Cloud Build starts at $30/mo (usage-based) or $23/mo (XS instance)
+  - 14-day free Cloud trial; no credit card required
+  - Enterprise adds 99.999% SLA, SAML SSO, and SOC 2 compliance
+  - Self-hosted MIT-licensed deployment is free forever
+  - Auto-scaling and email support included on Cloud tiers
 
 tags: [search, open-source, full-text-search, self-hosted, api]
 

@@ -15,9 +15,56 @@ free_tier:
   - Varies by model
 
 pricing:
-  - name: Free
+  - name: Try for Free
     price: 0
-    unit: /month
+    billing: free
+    description: Limited free runs on select Try-for-Free models
+    features:
+      - Limited runs on curated models
+      - No upfront credit card for trial models
+      - Billing required after free quota
+      - Access to community models
+    cta_url: https://replicate.com/pricing
+  - name: Public Models (Pay-as-you-go)
+    price: Variable
+    unit: per-second or per-token
+    billing: usage-based
+    description: Community models billed by compute time or tokens
+    features:
+      - Time-based billing varies by hardware
+      - Token/image-based pricing on select models
+      - No upfront costs or commitments
+      - Cost estimates on each model page
+      - Access to community + proprietary models
+    cta_url: https://replicate.com/pricing
+  - name: Private Models (Dedicated)
+    price: Variable
+    unit: per-hour uptime
+    billing: usage-based
+    description: Custom Cog models on dedicated hardware
+    features:
+      - Pay for instance uptime
+      - Auto-scaling based on traffic
+      - No shared queues
+      - Fast-booting fine-tunes (active-time only)
+      - Hourly rates $0.09-$43.92/hr
+    cta_url: https://replicate.com/pricing
+  - name: Enterprise
+    price: Custom
+    billing: annual
+    description: Volume discounts, SLAs, dedicated support
+    features:
+      - Dedicated account manager
+      - Priority support
+      - Volume discounts
+      - Performance SLAs
+    cta_url: https://replicate.com/pricing
+
+paid_tier_highlights:
+  - Pay-as-you-go billing by compute time or tokens
+  - Hardware rates span CPU ($0.09/hr) to 8xH100 ($43.92/hr)
+  - Private dedicated models with auto-scaling
+  - Enterprise tier offers SLAs and volume discounts
 
 tags: []
 
@@ -26,4 +73,4 @@ pricing_url: https://replicate.com/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

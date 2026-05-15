@@ -14,9 +14,47 @@ free_tier:
   - Inbound transfer free; outbound charged at Premium tier rates beyond free quota
 
 pricing:
-  - name: Free
+  - name: Free Tier
     price: 0
     unit: /month
+    billing: free
+    description: First 0.5 GB storage free; inbound transfer always free
+    cta_url: https://cloud.google.com/artifact-registry/pricing
+    features:
+      - 0.5 GB storage/mo free
+      - Inbound transfer always free
+      - Same-location egress always free
+      - Inbound to Google Cloud always free
+      - Applies to standard, remote, gcr.io repos
+  - name: Storage Overage
+    price: 0.10
+    unit: /GB/month
+    billing: usage-based
+    description: $0.10/GB-month after the free 0.5 GB allowance
+    cta_url: https://cloud.google.com/artifact-registry/pricing
+    features:
+      - Flat $0.10/GB-mo storage
+      - Same price for regional and multi-regional
+      - Hourly metering
+      - No commitment required
+  - name: Egress
+    price: Usage
+    billing: usage-based
+    description: Cross-region and internet egress billed by Premium tier
+    cta_url: https://cloud.google.com/artifact-registry/pricing
+    features:
+      - US/Canada cross-region $0.01/GB
+      - Europe cross-region $0.02/GB
+      - Asia cross-region $0.05/GB
+      - Cross-continent $0.08/GB
+      - Oceania $0.15/GB
+      - Internet egress at Premium tier rates
+
+paid_tier_highlights:
+  - $0.10/GB-month storage after free 0.5 GB allowance
+  - Inbound transfer and same-location reads always free
+  - Cross-region egress starts at $0.01/GB (US) and tops at $0.15/GB (Oceania)
+  - Vulnerability scanning billed separately via Artifact Analysis
 
 tags: []
 
@@ -25,4 +63,4 @@ pricing_url: https://cloud.google.com/artifact-registry/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

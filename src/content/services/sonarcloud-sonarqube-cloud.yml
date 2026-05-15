@@ -16,7 +16,47 @@ free_tier:
 pricing:
   - name: Free
     price: 0
+    billing: free
+    description: For developers wanting to try SonarQube
+    features:
+      - Maximum 5 users
+      - 30+ languages and frameworks
+      - Private projects up to 50K LoC
+      - Unlimited public project scanning
+      - DevOps platform integration
+    cta_url: https://www.sonarsource.com/plans-and-pricing/
+  - name: Team
+    price: 32
     unit: /month
+    billing: monthly
+    description: Essential plan for teams and small businesses
+    features:
+      - Unlimited users
+      - Issue detection and SAST
+      - Main branch and PR analysis
+      - Custom quality profiles and gates
+      - AI CodeFix functionality
+      - Improved secrets detection
+    cta_url: https://www.sonarsource.com/plans-and-pricing/
+  - name: Enterprise
+    price: Custom
+    billing: annual
+    description: Mission critical, scalability, performance
+    features:
+      - 6 additional enterprise languages
+      - SSO and SCIM authentication
+      - Portfolio management
+      - Audit logs and IP allowlist
+      - CMK and BYOK encryption
+      - MISRA C++:2023 compliance
+      - Dedicated Enterprise SLA
+    cta_url: https://www.sonarsource.com/plans-and-pricing/
+
+paid_tier_highlights:
+  - Team (from $32/mo) removes 50K LoC cap, unlimited users
+  - Team adds AI CodeFix and improved secrets detection
+  - Enterprise unlocks SSO/SCIM and portfolio management
+  - Enterprise adds CMK/BYOK encryption and MISRA compliance
 
 tags: []
 
@@ -25,4 +65,4 @@ pricing_url: https://www.sonarsource.com/plans-and-pricing/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

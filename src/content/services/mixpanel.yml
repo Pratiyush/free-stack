@@ -17,12 +17,46 @@ free_tier:
 
 pricing:
   - name: Free
-    description: Capped at 1M monthly events
     price: 0
     unit: /month
+    billing: free
+    description: Capped at 1M monthly events; perpetual free tier
+    features:
+      - Up to 1M monthly events
+      - 5 saved reports per seat
+      - 10K monthly session replays
+      - Basic analytics (insights, funnels, retention)
+      - Slack community support
+    cta_url: https://mixpanel.com/register/
   - name: Growth
-    description: Usage-based, starts at $0; $0.28 per 1K events after 1M free
-    price: 'Usage'
+    price: Usage
+    billing: usage-based
+    description: First 1M events free; $0.28 per 1K events thereafter
+    features:
+      - Up to 20M monthly events
+      - Unlimited saved reports
+      - 20K free session replays/mo (customizable to 500K)
+      - Behavioral cohorts and multi-touch attribution
+      - 60 Spark AI queries monthly
+    cta_url: https://mixpanel.com/pricing/
+  - name: Enterprise
+    price: Custom
+    billing: annual
+    description: Unlimited events with advanced analytics and governance
+    features:
+      - Unlimited monthly events
+      - 300 Spark AI queries monthly
+      - HIPAA compliance tools and SAML SSO
+      - Dedicated account manager
+      - 24/7 premium support
+    cta_url: https://mixpanel.com/contact-us/sales/
+
+paid_tier_highlights:
+  - Growth uses pay-as-you-go at $0.28 per 1K events past 1M free
+  - Growth unlocks unlimited reports and behavioral cohorts
+  - Spark AI queries available (60/mo Growth, 300/mo Enterprise)
+  - Enterprise adds HIPAA, SAML SSO, and 24/7 premium support
+  - Startup program offers first year free for qualifying companies
 
 tags: [analytics, events, product-analytics, session-replay, cohorts]
 

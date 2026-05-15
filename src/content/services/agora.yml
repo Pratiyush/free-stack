@@ -10,13 +10,94 @@ summary: '10,000 free minutes/month'
 tier_type: free-plan
 
 free_tier:
-  - '10,000 free minutes/month'
+  - '10,000 free minutes/month across most core products'
   - Free minutes apply per account; does NOT apply to CDN live streaming or Signaling SDK
+  - 'Signaling: 1M messages/month free; Chat: 500 MAU free; Conversational AI/STT: 300 min free'
+
+paid_tier_highlights:
+  - 'Voice Calling from $0.99 per 1k minutes after the 10k free monthly minutes'
+  - 'Video Calling from $3.99 per 1k minutes; Broadcast streaming from $0.59 per 1k'
+  - 'Signaling from $59/mo; Chat from $349/mo for higher MAU and message tiers'
+  - 'Conversational AI Engine $0.10/min after 300 free minutes'
+  - 'Enterprise plans add volume discounts, custom SLAs, and dedicated support'
 
 pricing:
-  - name: Free
+  - name: Free Quota
     price: 0
+    billing: free
+    description: 10k minutes/month across most real-time products
+    features:
+      - 10,000 RTC minutes/month (voice/video/whiteboard/recording)
+      - Signaling 1M messages/month free
+      - Chat free up to 500 MAU
+      - 300 free minutes for Conversational AI Engine
+      - 300 free minutes for Real-Time STT/Translation
+    cta_url: https://console.agora.io/signup
+  - name: Voice Calling
+    price: 0.99
+    unit: /1,000 minutes
+    billing: usage-based
+    description: Pay-as-you-go voice chat after free quota
+    features:
+      - $0.99 per 1k minutes
+      - 10k free minutes/month
+      - Customizable integration
+      - Volume discounts available
+    cta_url: https://www.agora.io/en/pricing/voice-calling
+  - name: Video Calling
+    price: 3.99
+    unit: /1,000 minutes
+    billing: usage-based
+    description: HD real-time video chat priced per 1k minutes
+    features:
+      - $3.99 per 1k minutes (HD)
+      - 10k free minutes/month
+      - Flexible billing options
+      - Enterprise pricing available
+    cta_url: https://www.agora.io/en/pricing/video-calling
+  - name: Interactive Live Streaming
+    price: 0.99
+    unit: /1,000 minutes
+    billing: usage-based
+    description: Ultra-low-latency interactive streaming
+    features:
+      - $0.99 per 1k minutes
+      - 10k free minutes/month
+      - Audience and host roles
+      - Scalable to large audiences
+    cta_url: https://www.agora.io/en/pricing/interactive-live-streaming
+  - name: Signaling
+    price: 59
     unit: /month
+    billing: monthly
+    description: Low-latency, high-concurrency signaling and sync
+    features:
+      - From $59/month
+      - 1M messages/month free
+      - Presence and channel events
+      - Storage and history tiers
+    cta_url: https://www.agora.io/en/pricing/signaling
+  - name: Chat
+    price: 349
+    unit: /month
+    billing: monthly
+    description: Messaging SDK with group and private chats
+    features:
+      - From $349/month
+      - Free up to 500 MAU
+      - Private and group chat
+      - Push notifications
+    cta_url: https://www.agora.io/en/pricing/chat
+  - name: Enterprise
+    price: Contact sales
+    billing: usage-based
+    description: Custom pricing, volume discounts, dedicated support
+    features:
+      - Volume discounts
+      - Custom SLAs
+      - Dedicated solution architects
+      - Compliance options
+    cta_url: https://www.agora.io/en/talk-to-us/
 
 tags: []
 
@@ -25,4 +106,4 @@ pricing_url: https://www.agora.io/en/pricing/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

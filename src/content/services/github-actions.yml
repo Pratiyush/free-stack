@@ -19,9 +19,46 @@ pricing:
   - name: Free
     price: 0
     unit: /month
-  - name: Pro
+    billing: free
+    description: 2,000 CI/CD minutes/mo for private; unlimited for public
+    cta_url: https://github.com/pricing
+    features:
+      - 2,000 CI/CD minutes/mo private repos
+      - Unlimited minutes on public repos
+      - 500 MB packages storage
+      - 10 concurrent jobs
+      - 6 hr max job runtime
+      - Linux, Windows, macOS runners
+  - name: Team
     price: 4
     unit: /user/month
+    billing: monthly
+    description: Advanced collaboration; 3K CI/CD minutes/mo
+    cta_url: https://github.com/pricing
+    features:
+      - 3,000 CI/CD minutes/mo private repos
+      - 2 GB packages storage
+      - Code owners and required reviewers
+      - Repository rules and branch protection
+      - 60 concurrent jobs
+  - name: Enterprise
+    price: 21
+    unit: /user/month
+    billing: monthly
+    description: Security and compliance with 50K CI/CD minutes/mo
+    cta_url: https://github.com/pricing
+    features:
+      - 50,000 CI/CD minutes/mo
+      - 50 GB packages storage
+      - 180 concurrent jobs
+      - SAML SSO and audit log
+      - Premium 24/7 support
+
+paid_tier_highlights:
+  - Team at $4/user/mo includes 3K CI/CD mins and 2 GB packages
+  - Enterprise at $21/user/mo includes 50K CI/CD mins and 50 GB packages
+  - Extra minutes billed per-minute (Linux $0.008/min, Windows $0.016, macOS $0.08)
+  - Public repos always get unlimited minutes on every tier
 
 tags: [ci-cd, testing, automation, workflows, github]
 

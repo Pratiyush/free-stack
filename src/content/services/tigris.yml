@@ -14,9 +14,71 @@ free_tier:
   - 'No per-request rate limit documented'
 
 pricing:
-  - name: Free
+  - name: Free Tier
     price: 0
     unit: /month
+    description: 5 GB Standard storage; zero egress fees
+    billing: free
+    features:
+      - 5 GB Standard storage monthly
+      - 10,000 Class A requests/month
+      - 100,000 Class B requests/month
+      - Zero egress fees
+      - Global distribution
+    cta_url: https://console.storage.dev/signup
+  - name: Standard
+    price: '$0.02'
+    unit: /GB/month
+    description: Primary tier; free egress, free retrieval
+    billing: usage-based
+    features:
+      - $0.02/GB/month storage
+      - $0.005/1,000 Class A requests
+      - $0.0005/1,000 Class B requests
+      - Free data retrieval and egress
+      - No minimum retention
+    cta_url: https://console.storage.dev/signup
+  - name: Infrequent Access
+    price: '$0.01'
+    unit: /GB/month
+    description: Data accessed less than monthly
+    billing: usage-based
+    features:
+      - $0.01/GB/month storage
+      - $0.01/GB retrieval charge
+      - 30-day minimum storage retention
+      - $0.005/1,000 Class A requests
+      - Free egress
+    cta_url: https://console.storage.dev/signup
+  - name: Archive
+    price: '$0.004'
+    unit: /GB/month
+    description: Long-term cold storage
+    billing: usage-based
+    features:
+      - $0.004/GB/month storage
+      - Free retrieval (restore required first)
+      - 90-day minimum retention
+      - Zero egress fees
+    cta_url: https://console.storage.dev/signup
+  - name: Archive Instant Retrieval
+    price: '$0.004'
+    unit: /GB/month
+    description: Archive option with immediate access
+    billing: usage-based
+    features:
+      - $0.004/GB/month storage
+      - $0.03/GB retrieval charge
+      - 90-day minimum retention
+      - Instant data restoration
+      - Free egress
+    cta_url: https://console.storage.dev/signup
+
+paid_tier_highlights:
+  - Standard storage $0.02/GB/mo with free egress
+  - Infrequent Access $0.01/GB/mo + $0.01/GB retrieval
+  - Archive $0.004/GB/mo with 90-day minimum retention
+  - Zero egress fees across all paid tiers
 
 tags: []
 
@@ -25,4 +87,4 @@ pricing_url: https://www.tigrisdata.com/pricing/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

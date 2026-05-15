@@ -14,9 +14,59 @@ free_tier:
   - Denies new connections when quota exhausted; resets monthly
 
 pricing:
-  - name: Free
+  - name: TiDB Cloud Starter
     price: 0
     unit: /month
+    description: 25 GiB row + 25 GiB column storage, 250M RUs free
+    billing: usage-based
+    features:
+      - 25 GiB row storage included free
+      - 25 GiB column storage included free
+      - 250M RUs/month free
+      - $0.20 per additional GiB storage
+      - $0.10 per additional 1M RUs
+      - Auto-scales down to zero
+    cta_url: https://tidbcloud.com/free-trial
+  - name: TiDB Cloud Essential (Preview)
+    price: '~$20'
+    unit: /day (typical small production)
+    description: Production DBaaS without infrastructure complexity
+    billing: usage-based
+    features:
+      - Autoscaling up to 100K RUs
+      - Point-in-time backup with 30-day retention
+      - Encryption in transit and at rest
+      - 99.99% multi-zone availability
+      - Predictable usage-based pricing
+    cta_url: https://tidbcloud.com/free-trial
+  - name: TiDB Cloud Premium (Preview)
+    price: 1800
+    unit: /month (from)
+    description: Mission-critical hyper-scale DBaaS
+    billing: monthly
+    features:
+      - Unlimited autoscaling compute
+      - CMEK, PrivateLink, VPC peering
+      - 99.99% multi-zone availability
+      - Enterprise-grade security
+    cta_url: https://tidbcloud.com/free-trial
+  - name: TiDB Cloud Dedicated
+    price: '$0.22'
+    unit: /hour (from)
+    description: Predictable traffic with dedicated infrastructure
+    billing: usage-based
+    features:
+      - 4-32 vCPU node options
+      - PCI-DSS and SOC 2 Type II compliant
+      - AWS, Google Cloud, Azure availability
+      - Dedicated cluster infrastructure
+    cta_url: https://tidbcloud.com/signup/
+
+paid_tier_highlights:
+  - Essential (~$20/day) adds 30-day PITR + 99.99% SLA
+  - Premium from $1,800/mo unlocks CMEK + PrivateLink + VPC peering
+  - Dedicated from $0.22/hr provides PCI-DSS + SOC 2 Type II
+  - 'Storage overage on Starter: $0.20/GiB and $0.10/1M RUs'
 
 tags: []
 
@@ -25,4 +75,4 @@ pricing_url: https://www.pingcap.com/pricing/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

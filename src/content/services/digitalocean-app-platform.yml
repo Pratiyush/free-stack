@@ -12,11 +12,41 @@ tier_type: free-plan
 free_tier:
   - Free plan
   - 'Static sites only on free tier, no dynamic apps; additional static apps $3/mo'
+  - Up to 3 static-site apps with 1 GiB transfer each
+
+paid_tier_highlights:
+  - Paid container instances start at $5/mo
+  - Container sizes range $5–$50/mo based on vCPU/memory
+  - Horizontal, vertical, and CPU-based autoscaling
+  - Managed databases (Development and Production)
+  - Up to 10 deploy revisions for rollbacks
 
 pricing:
   - name: Free
     price: 0
     unit: /month
+    description: Static sites only, no dynamic apps
+    features:
+      - Up to 3 apps with static sites
+      - 1 GiB data transfer per app
+      - Deploy from GitHub and GitLab
+      - Automatic HTTPS, global CDN
+      - Custom domain support
+      - DDoS mitigation
+    billing: free
+  - name: Paid (Container)
+    price: 5
+    unit: starting /month per instance
+    description: Dynamic container deployment with scaling
+    features:
+      - Deploy from container registries
+      - Shared and dedicated CPU options
+      - Horizontal and vertical scaling
+      - CPU-based autoscaling
+      - Automatic OS patching, hourly metrics
+      - Log forwarding, dedicated egress IP
+      - Up to 10 revisions for rollbacks
+    billing: monthly
 
 tags: []
 
@@ -25,4 +55,4 @@ pricing_url: https://www.digitalocean.com/pricing/app-platform
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

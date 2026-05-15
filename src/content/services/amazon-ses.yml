@@ -9,19 +9,91 @@ summary: 'Free for 12 months (pre-Jul 2025 accounts: 3,000/month); new accounts 
 tier_type: free-plan
 
 free_tier:
-  - 'Free for 12 months (pre-Jul 2025 accounts: 3,000/month); new accounts get $200 AWS credits'
-  - Standard AWS limits
+  - 'Free for 12 months: 3,000 message charges/month'
+  - 'Applies to outbound, inbound, and Virtual Deliverability Manager'
+  - 'New post-Jul 2025 accounts get $200 AWS credits via Free Plan'
+  - Standard AWS limits and sandbox approval needed for production sending
+
+paid_tier_highlights:
+  - 'Outbound email: $0.10 per 1,000 messages after free tier'
+  - 'Inbound email: $0.10 per 1,000 emails received'
+  - 'Dedicated IP: $24.95/mo (standard) or $15/mo + tiered (managed)'
+  - 'Virtual Deliverability Manager: $0.07 per 1k (drops to $0.02 at 100M+)'
+  - 'Mail Manager add-on for ingress, archiving, and routing'
 
 pricing:
-  - name: Free
+  - name: Free Tier
     price: 0
-    unit: /month
+    billing: free
+    description: 12-month free allowance for new AWS accounts
+    features:
+      - 3,000 outbound message charges/month
+      - 3,000 inbound message charges/month
+      - Includes VDM processing
+      - Available for first 12 months
+      - $200 AWS credits for new accounts via Free Plan
+    cta_url: https://aws.amazon.com/ses/
+  - name: Outbound Email
+    price: 0.10
+    unit: /1,000 emails
+    billing: usage-based
+    description: Standard outbound email sending after free tier
+    features:
+      - $0.10 per 1,000 outbound emails
+      - $0.12 per GB attachment data
+      - $0.03 per 1,000 emails for Global Endpoints (multi-region)
+      - $0.01 per email validation (API)
+      - Email Validation auto $0.01 per 1,000 validations
+    cta_url: https://aws.amazon.com/ses/
+  - name: Inbound Email
+    price: 0.10
+    unit: /1,000 emails
+    billing: usage-based
+    description: Receiving emails via SES inbound endpoints
+    features:
+      - $0.10 per 1,000 inbound emails
+      - $0.09 per 1,000 incoming-mail chunks (256 KB)
+      - Lambda / S3 / SNS integration
+    cta_url: https://aws.amazon.com/ses/
+  - name: Dedicated IP
+    price: 24.95
+    unit: /month per IP
+    billing: monthly
+    description: Standard, Managed, and BYOIP options
+    features:
+      - Standard $24.95/mo per IP
+      - Managed $15/mo + tiered ($0.08-$0.02 per 1k)
+      - BYOIP $24.95/mo per IP (256 IP minimum)
+      - Reputation isolation
+    cta_url: https://aws.amazon.com/ses/
+  - name: Virtual Deliverability Manager
+    price: 0.07
+    unit: /1,000 emails
+    billing: usage-based
+    description: Inbox-placement analytics and advisor
+    features:
+      - $0.07 per 1k emails (0-10M)
+      - $0.05 per 1k emails (10-100M)
+      - $0.02 per 1k emails (100M+)
+      - First 5,000 queries/month free
+    cta_url: https://aws.amazon.com/ses/
+  - name: Mail Manager
+    price: 50
+    unit: /month per endpoint
+    billing: monthly
+    description: Hosted mail gateway with archiving and routing
+    features:
+      - $50/mo per Open/mTLS ingress endpoint
+      - $0.15 per 1k emails processed
+      - $0.10 per 1k recipients sent to internet
+      - $2 per GB archived; $0.19 per GB-month storage
+    cta_url: https://aws.amazon.com/ses/
 
 tags: []
 
-official_url: https://aws.amazon.com/
+official_url: https://aws.amazon.com/ses/
 pricing_url: https://aws.amazon.com/ses/pricing/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

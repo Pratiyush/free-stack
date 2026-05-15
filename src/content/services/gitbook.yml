@@ -16,7 +16,59 @@ free_tier:
 pricing:
   - name: Free
     price: 0
-    unit: /month
+    unit: /site/month
+    billing: free
+    description: For individuals — block editor, GitHub/GitLab sync, search
+    cta_url: https://www.gitbook.com/pricing
+    features:
+      - Block-based visual editor
+      - Sync with GitHub or GitLab
+      - Interactive API playgrounds
+      - Preview deployments
+      - Unlimited page views
+      - LLM optimizations
+  - name: Premium
+    price: 65
+    unit: /site/month
+    billing: monthly
+    description: For public, branded docs sites; $12 per extra user
+    cta_url: https://www.gitbook.com/pricing
+    features:
+      - Team collaboration
+      - AI search and custom domain
+      - Advanced branding
+      - Analytics & user feedback
+      - Site redirects
+      - PDF export
+  - name: Ultimate
+    price: 249
+    unit: /site/month
+    billing: monthly
+    description: For centralized docs with AI; $12 per extra user
+    cta_url: https://www.gitbook.com/pricing
+    features:
+      - AI Assistant (500 answers)
+      - AI insights and GitBook Agent
+      - Adaptive content
+      - Authenticated access
+      - Content consolidation
+      - Channels feature
+  - name: Enterprise
+    price: Custom
+    description: For global teams scaling docs; SAML SSO and dedicated support
+    cta_url: https://www.gitbook.com/pricing
+    features:
+      - SAML SSO authentication
+      - White-glove migration
+      - Custom integrations
+      - Dedicated support and training
+      - Unlimited adaptive content
+
+paid_tier_highlights:
+  - Premium at $65/site/mo unlocks team collaboration and custom domain
+  - Ultimate at $249/site/mo adds AI Assistant, agent, and adaptive content
+  - All paid tiers add $12/user/mo for collaborators
+  - Enterprise offers SAML SSO and dedicated migration support
 
 tags: []
 
@@ -25,4 +77,4 @@ pricing_url: https://www.gitbook.com/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

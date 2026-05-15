@@ -19,9 +19,59 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    billing: free
+    description: Perpetual free tier with 100 GB/month data ingest
+    features:
+      - 100 GB data ingest monthly
+      - One full platform user
+      - Unlimited basic users
+      - Access to 50+ capabilities
+      - Automatic logs obfuscation
+      - 500 synthetic checks
+    cta_url: https://newrelic.com/signup
+  - name: Standard
+    price: 10
+    unit: /user/month
+    billing: usage-based
+    description: For small teams; up to 5 full platform users
+    features:
+      - Up to 5 full platform users
+      - Unlimited basic users
+      - $0.40/GB ingest beyond 100 GB
+      - Ticketed support
+      - 2-day support response SLA
+      - SAML SSO
+    cta_url: https://newrelic.com/signup
   - name: Pro
-    price: 99
-    unit: /month
+    price: 349
+    unit: /user/year
+    billing: annual
+    description: Unlimited full platform users with 2-hour critical SLA
+    features:
+      - Unlimited full platform users
+      - $0.40/GB ingest beyond 100 GB
+      - 2-hour critical support response SLA
+      - Data Plus eligibility
+      - Commitment options available
+    cta_url: https://newrelic.com/request-pricing-pro
+  - name: Enterprise
+    price: Custom
+    billing: annual
+    description: FedRAMP, HIPAA, 1-hour critical SLA
+    features:
+      - Unlimited full platform users
+      - FedRAMP Moderate and HIPAA eligibility
+      - Priority ticket routing
+      - 1-hour critical support response SLA
+      - Data Plus included
+    cta_url: https://newrelic.com/request-pricing-enterprise
+
+paid_tier_highlights:
+  - Standard caps at 5 users; Pro/Enterprise offer unlimited platform access
+  - Pro provides 2-hour response SLA; Enterprise guarantees 1-hour critical
+  - Enterprise adds FedRAMP Moderate and HIPAA eligibility
+  - Data Plus option adds 90-day retention and advanced obfuscation
+  - Pro/Enterprise enable commitment and consumption-based pricing
 
 tags: [observability, apm, monitoring, logs, infrastructure]
 

@@ -12,11 +12,93 @@ tier_type: free-plan
 free_tier:
   - '14-day free trial only'
   - No permanent free tier
+  - $1/mo minimum across Bunny services
+
+paid_tier_highlights:
+  - Standard Network bandwidth from $0.01/GB across 119 PoPs
+  - Volume Network drops as low as $0.002/GB for 1-2 PB tier
+  - No request fees on either tier — bandwidth-only billing
+  - Region toggle and per-zone overage protection
+  - Custom enterprise pricing above 2 PB/mo
 
 pricing:
-  - name: Free
+  - name: 14-day Trial
+    description: Free 14-day evaluation, $1/mo minimum after
     price: 0
-    unit: /month
+    billing: free
+    features:
+      - Full CDN feature access
+      - 119 PoPs Standard Network
+      - All advanced features
+      - Convert to paid after 14 days
+    cta_url: https://dash.bunny.net/account/register
+  - name: Standard EU/NA
+    description: Lightning-fast 119-PoP CDN, Europe + North America
+    price: 0.01
+    unit: /GB
+    billing: usage-based
+    features:
+      - 119 global PoPs
+      - No request fees
+      - Region toggle on/off
+      - Overcharge protection
+      - $1/mo minimum
+  - name: Standard Asia & Oceania
+    description: APAC region CDN delivery
+    price: 0.03
+    unit: /GB
+    billing: usage-based
+    features:
+      - Regional Asia-Pacific routing
+      - Same feature set as EU/NA
+      - Bandwidth-based billing
+      - Full feature access
+  - name: Standard South America
+    description: South America CDN delivery
+    price: 0.045
+    unit: /GB
+    billing: usage-based
+    features:
+      - Optimized SA routing
+      - No request charges
+      - Overcharge protection
+  - name: Standard Middle East & Africa
+    description: MEA CDN delivery
+    price: 0.06
+    unit: /GB
+    billing: usage-based
+    features:
+      - Dedicated MEA routing
+      - No per-request fees
+      - Spending controls
+  - name: Volume Network (first 500 TB)
+    description: 10 PoPs, world-cheapest for high-bandwidth projects
+    price: 0.005
+    unit: /GB
+    billing: usage-based
+    features:
+      - 10 PoPs global single rate
+      - Tiered volume discounts
+      - Petabyte-scale capacity
+      - All standard features
+  - name: Volume Network (1-2 PB)
+    description: Ultra-volume discount tier
+    price: 0.002
+    unit: /GB
+    billing: usage-based
+    features:
+      - Lowest standard pricing
+      - Global unified rates
+      - All premium features
+  - name: Volume Network (2 PB+)
+    description: Enterprise-level custom pricing
+    price: 'Contact sales'
+    billing: annual
+    features:
+      - Negotiated custom rates
+      - Dedicated account management
+      - Custom SLA options
+      - Priority support
 
 tags: []
 
@@ -25,4 +107,4 @@ pricing_url: https://bunny.net/pricing/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

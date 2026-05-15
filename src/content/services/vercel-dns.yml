@@ -14,9 +14,48 @@ free_tier:
   - Included with Hobby plan limits
 
 pricing:
-  - name: Free
+  - name: Hobby
     price: 0
     unit: /month
+    billing: free
+    description: DNS bundled with Vercel Hobby plan
+    features:
+      - Anycast DNS network
+      - A, AAAA, CNAME, MX, TXT records
+      - Free SSL via Let's Encrypt
+      - Domain management dashboard
+      - Free forever for personal use
+    cta_url: https://vercel.com/signup
+  - name: Pro
+    price: 20
+    unit: /user/month
+    billing: monthly
+    description: DNS bundled with Vercel Pro plan
+    features:
+      - All Hobby DNS features
+      - Team collaboration
+      - Higher request limits
+      - Domain transfer support
+      - Priority support
+    cta_url: https://vercel.com/pricing
+  - name: Enterprise
+    price: Custom
+    billing: monthly
+    description: DNS as part of Vercel Enterprise
+    features:
+      - 99.99% uptime SLA
+      - SCIM provisioning
+      - Multi-region failover
+      - Dedicated support
+      - Custom domain limits
+    cta_url: https://vercel.com/contact/sales
+
+paid_tier_highlights:
+  - DNS included in every Vercel plan; no standalone DNS pricing
+  - Pro at $20/user/mo adds team domain management
+  - Enterprise includes SLA and SCIM for domain workflows
+  - Free SSL certificates via Let's Encrypt at all tiers
+  - Anycast DNS network at all tiers
 
 tags: []
 

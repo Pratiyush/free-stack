@@ -14,9 +14,41 @@ free_tier:
   - No usage caps for individuals
 
 pricing:
-  - name: Free
+  - name: DNS4EU For Public
     price: 0
     unit: /month
+    billing: free
+    description: EU-funded public resolver free for individual residents
+    features:
+      - Protective malware and fraud blocking
+      - Optional child protection filtering
+      - Optional ad-blocking profile
+      - GDPR-compliant anonymized data handling
+      - DNS over HTTPS and TLS encryption
+      - Rate-limited to 1,000 queries/second per IP
+    cta_url: https://www.joindns4.eu/for-public
+  - name: DNS4GOV
+    price: Custom
+    description: Government-grade sovereign resolver for state institutions
+    features:
+      - EU-sovereign operations
+      - Dedicated reporting
+      - Security tailored to public sector
+    cta_url: https://www.joindns4.eu/
+  - name: DNS4EU For Telcos / Whalebone Immunity
+    price: Custom
+    description: Managed DNS security for ISPs and critical infrastructure
+    features:
+      - Enterprise protective DNS
+      - Sector-specific policies
+      - Integration with telco networks
+    cta_url: https://www.joindns4.eu/
+
+paid_tier_highlights:
+  - DNS4GOV offers sovereign government-grade resolver service
+  - DNS4EU For Telcos extends protection to ISP subscribers
+  - Whalebone Immunity covers critical infrastructure verticals
+  - Custom pricing for enterprise and public-sector deployments
 
 tags: []
 
@@ -25,4 +57,4 @@ pricing_url: https://www.joindns4.eu/for-public
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

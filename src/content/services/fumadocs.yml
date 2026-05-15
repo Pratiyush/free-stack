@@ -17,6 +17,18 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    billing: free
+    description: Fully open-source documentation framework (MIT license)
+    cta_url: https://www.fumadocs.dev/
+    features:
+      - MIT-licensed open source
+      - Supports Next.js, Tanstack Start, React Router, Waku
+      - Built-in search and theming
+      - MDX content support
+      - Active maintenance and community
+
+paid_tier_highlights:
+  - This service is always-free; no paid tiers exist
 
 tags: []
 

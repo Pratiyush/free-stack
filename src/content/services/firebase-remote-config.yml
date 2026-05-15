@@ -14,9 +14,21 @@ free_tier:
   - No usage limits; free on all plans
 
 pricing:
-  - name: Free
+  - name: Free (Spark and Blaze)
     price: 0
     unit: /month
+    billing: free
+    description: Remote Config included free on every Firebase plan
+    features:
+      - Server-side parameter updates without redeploying
+      - Conditional targeting by audience, version, country
+      - A/B Testing integration
+      - Personalization with ML
+      - No usage limits on Spark or Blaze
+    cta_url: https://console.firebase.google.com/
+
+paid_tier_highlights:
+  - This service is always-free; no paid tiers exist
 
 tags: []
 
@@ -25,4 +37,4 @@ pricing_url: https://firebase.google.com/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

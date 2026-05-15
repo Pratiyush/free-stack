@@ -14,9 +14,48 @@ free_tier:
   - 'Local only, no sync'
 
 pricing:
-  - name: Free
+  - name: Essentials
     price: 0
-    unit: /month
+    unit: /user/month
+    billing: free
+    description: Everything a small team needs to get started with APIs
+    features:
+      - Unlimited Git Sync projects for up to 3 users
+      - Unlimited Cloud and Local projects
+      - Inso CLI for CI/CD automation
+      - Unlimited collection runs and environments
+      - 1,000 mock server requests/month
+    cta_url: https://insomnia.rest/pricing
+  - name: Pro
+    price: 12
+    unit: /user/month
+    billing: monthly
+    description: More control for scaling teams (15% savings annually)
+    features:
+      - Unlimited users with Git Sync access
+      - Unlimited organizations
+      - Role-based access control (RBAC)
+      - 10,000 mock server requests/month
+      - All Essentials features
+    cta_url: https://insomnia.rest/pricing
+  - name: Enterprise
+    price: 45
+    unit: /user/month
+    billing: annual
+    description: Work at scale across many teams with SSO and SCIM
+    features:
+      - SSO (SAML/OIDC) and SCIM integration
+      - Control project storage location
+      - Domain capture and invite management
+      - Native vault integrations (AWS, GCP, HashiCorp, Azure)
+      - Unlimited mock server requests
+    cta_url: https://insomnia.rest/pricing
+
+paid_tier_highlights:
+  - Pro at $12/user/mo lifts the 3-user Git Sync cap and adds RBAC
+  - Enterprise at $45/user/mo adds SSO/SCIM and native vault integration
+  - Annual billing saves 15% on Pro tier
+  - Mock server request quota scales from 1K to unlimited across tiers
 
 tags: []
 
@@ -25,4 +64,4 @@ pricing_url: https://insomnia.rest/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

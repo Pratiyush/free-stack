@@ -14,9 +14,22 @@ free_tier:
   - 'Static site generator -- deploy on Vercel/Cloudflare/Netlify free tiers. Used by Next.js, React, Tailwind docs'
 
 pricing:
-  - name: Free
+  - name: Free (OSS)
     price: 0
     unit: /month
+    billing: free
+    description: Open-source MIT-licensed static site generator
+    features:
+      - MIT license
+      - Built on Next.js + MDX
+      - Theme system (docs, blog, custom)
+      - Search built-in
+      - Deploy to Vercel/Cloudflare/Netlify free tiers
+      - Used by Next.js, React, Tailwind docs
+    cta_url: https://nextra.site/docs
+
+paid_tier_highlights:
+  - This service is always-free; no paid tiers exist
 
 tags: []
 

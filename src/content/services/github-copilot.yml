@@ -17,6 +17,71 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    billing: free
+    description: 50 agent/chat requests and 2K code completions per month
+    cta_url: https://github.com/features/copilot/plans
+    features:
+      - 50 agent mode or chat requests/mo
+      - 2,000 code completions/mo
+      - Access to Haiku 4.5 and GPT-5 mini
+      - Copilot CLI
+      - MCP server integration
+      - No credit card required
+  - name: Pro
+    price: 10
+    unit: /user/month
+    billing: monthly
+    description: Unlimited inline suggestions and 300 premium requests/mo
+    cta_url: https://github.com/features/copilot/plans
+    features:
+      - Unlimited agent mode and chats with GPT-5 mini
+      - 300 premium requests/mo
+      - Unlimited inline suggestions
+      - Code review for PRs
+      - Cloud agent for task delegation
+      - Access to Claude and Codex models
+  - name: Pro+
+    price: 39
+    unit: /user/month
+    billing: monthly
+    description: Advanced agents and full model library
+    cta_url: https://github.com/features/copilot/plans
+    features:
+      - All Claude Opus versions
+      - 1,500 premium requests/mo
+      - Third-party coding agent delegation
+      - GitHub Spark platform access
+      - Enhanced cloud agent capabilities
+  - name: Business
+    price: 19
+    unit: /user/month
+    billing: monthly
+    description: For organizations; centralized policy and audit
+    cta_url: https://github.com/features/copilot/plans
+    features:
+      - Org-level policy management
+      - Audit log
+      - IP indemnity
+      - Public code filter
+      - SSO via SAML
+  - name: Enterprise
+    price: 39
+    unit: /user/month
+    billing: monthly
+    description: Natively built into GitHub.com with fine-tuned models
+    cta_url: https://github.com/features/copilot/plans
+    features:
+      - Customization across GitHub.com
+      - Fine-tuned models on private code
+      - Advanced policy controls
+      - Premium support
+      - Knowledge bases
+
+paid_tier_highlights:
+  - Pro at $10/user/mo unlocks unlimited completions and 300 premium requests
+  - Pro+ at $39/user/mo raises to 1,500 premium requests and Claude Opus
+  - Business at $19/user/mo adds org policy, audit log, IP indemnity
+  - Enterprise at $39/user/mo includes fine-tuned models on private code
 
 tags: []
 
@@ -25,4 +90,4 @@ pricing_url: https://github.com/features/copilot
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

@@ -13,9 +13,60 @@ free_tier:
   - Free up to 1M MAU
 
 pricing:
-  - name: Free
+  - name: Free (AuthKit)
     price: 0
     unit: /month
+    billing: free
+    description: First 1M monthly active users free
+    features:
+      - 1M MAU free
+      - Email + password
+      - Social login
+      - Passkey support
+      - MFA included
+    cta_url: https://workos.com/sign-up
+  - name: Pay-as-you-go
+    price: Usage
+    billing: usage-based
+    description: Volume discounts, dedicated Slack channel
+    features:
+      - Automatic volume discounts
+      - Deploy in minutes
+      - Dedicated Slack channel
+      - All AuthKit features
+      - Enterprise SSO available
+    cta_url: https://workos.com/pricing
+  - name: SSO (per connection)
+    price: 125
+    unit: /connection/month
+    billing: monthly
+    description: Enterprise SSO connections; volume discounts to $50
+    features:
+      - Okta, Entra, Google IdPs
+      - 20-60% volume discounts (16+)
+      - Custom 201+ pricing
+      - Enterprise-grade auth
+      - JIT provisioning
+    cta_url: https://workos.com/pricing
+  - name: Directory Sync (per connection)
+    price: 125
+    unit: /connection/month
+    billing: monthly
+    description: SCIM directory sync to your app
+    features:
+      - SCIM 2.0 support
+      - Same volume tiers as SSO
+      - Automated provisioning
+      - Custom 201+ pricing
+      - Multi-IdP support
+    cta_url: https://workos.com/pricing
+
+paid_tier_highlights:
+  - Free up to 1M MAU for AuthKit
+  - Enterprise SSO from $125/connection/mo with volume discounts to $50
+  - Directory Sync (SCIM) at same volume tiers as SSO
+  - Audit Logs from $99-$125/mo for streaming/retention
+  - Custom Domain at $99/mo for branded auth
 
 tags: []
 
@@ -24,4 +75,4 @@ pricing_url: https://workos.com/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

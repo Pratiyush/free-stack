@@ -16,7 +16,59 @@ free_tier:
 pricing:
   - name: Free
     price: 0
-    unit: /month
+    unit: /contributing developer
+    billing: free
+    description: For individual devs and small teams
+    features:
+      - Unlimited contributing developers
+      - Limited tests per product
+      - IDE plugins
+      - Cloud SCM integration
+      - Data encryption in transit and at rest
+      - SOC2, GDPR, ISO27001 compliant
+    cta_url: https://snyk.io/plans/
+  - name: Team
+    price: 25
+    unit: /contributing developer/month
+    billing: monthly
+    description: Build AI trust and security; min 5, max 10 devs
+    features:
+      - Up to 10 contributing developers
+      - Jira integration
+      - Snyk Open Source (1K tests/mo)
+      - Snyk Code (1K tests/mo)
+      - License compliance
+      - SDLC scanning
+    cta_url: https://snyk.io/plans/
+  - name: Ignite
+    price: 1260
+    unit: /contributing developer/year
+    billing: annual
+    description: Enterprise-grade platform for <50 devs
+    features:
+      - SCA, SAST, IaC, Container scanning
+      - 10 DAST targets included
+      - Advanced risk factors
+      - Advanced analytics
+      - Complete asset coverage visibility
+    cta_url: https://snyk.io/plans/
+  - name: Enterprise
+    price: Custom
+    billing: annual
+    description: Unify AppSec across SDLC
+    features:
+      - Customizable contributing developers
+      - Multi-group/organization support
+      - Advanced risk factors
+      - Snyk Learning Management add-on
+      - FedRAMP compliance available
+    cta_url: https://snyk.io/plans/
+
+paid_tier_highlights:
+  - Team (from $25/dev) adds Jira and 1K tests/month
+  - Ignite ($1,260/dev/yr) brings advanced risk factors
+  - Ignite includes SCA, SAST, IaC, Container scanning
+  - Enterprise adds FedRAMP and multi-org support
 
 tags: []
 
@@ -25,4 +77,4 @@ pricing_url: https://snyk.io/plans/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

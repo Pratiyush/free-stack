@@ -15,14 +15,55 @@ free_tier:
   - 1 snapshot = 1 story × 1 browser × 1 viewport
   - No overage (stops at limit)
 
+paid_tier_highlights:
+  - Starter ($179/mo) adds 35K snapshots + Safari/Firefox/Edge testing
+  - Pro ($399/mo) ships 85K snapshots + custom domain
+  - Snapshots beyond plan billed at $0.008 each on Starter and Pro
+  - Enterprise unlocks SSO, custom Git integrations, priority support
+  - Unlimited accessibility usage on Enterprise
+
 pricing:
   - name: Free
+    description: Spin up tests at no cost
     price: 0
-    unit: /month
+    billing: free
+    features:
+      - 5K snapshots/mo
+      - Test on Chrome
+      - Unlimited projects + users
+      - Unlimited collaborators
+      - Git and CI integrations
+    cta_url: https://www.chromatic.com/start
   - name: Starter
-    description: 35K snapshots included, then $0.008 each
+    description: Expand test coverage across major browsers
     price: 179
-    unit: /month
+    unit: /mo
+    billing: monthly
+    features:
+      - Everything in Free
+      - 35K snapshots included
+      - Safari, Firefox, Edge testing
+      - $0.008/snapshot overage
+  - name: Pro
+    description: Ship bug-free at scale
+    price: 399
+    unit: /mo
+    billing: monthly
+    features:
+      - Everything in Starter
+      - 85K snapshots included
+      - $0.008/snapshot overage
+      - Custom domain
+  - name: Enterprise
+    description: Critical protection for organizations
+    price: 'Contact sales'
+    billing: annual
+    features:
+      - Everything in Pro
+      - Unlimited accessibility usage
+      - SSO + custom Git integrations
+      - Priority support + SLA
+      - Data retention controls
 
 tags: [visual-testing, storybook, components, regression, ui-testing]
 

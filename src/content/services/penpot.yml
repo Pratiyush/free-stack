@@ -14,9 +14,59 @@ free_tier:
   - 'No per-editor pricing, fully featured free tier with no paywalls, plugins supported on all plans'
 
 pricing:
-  - name: Free
+  - name: Professional
     price: 0
     unit: /month
+    description: Free, fully featured plan with no editor paywalls
+    features:
+      - Up to 8 team members, unlimited viewers
+      - Up to 10 GB storage
+      - 7 days autosave/deleted-file recovery
+      - Unlimited design files and teams
+      - Plugin support
+    cta_url: https://design.penpot.app/#/auth/register
+    billing: free
+  - name: Unlimited
+    price: 7
+    unit: /user/month
+    description: $175/mo cap; extra space and longer history
+    features:
+      - Up to 25 GB storage
+      - 30 days autosave / deleted-file recovery
+      - Early access to upcoming features
+      - 50% discount on Penpot events
+      - Capped monthly billing at $175
+    cta_url: https://design.penpot.app/#/settings/subscriptions?subscription=subscription-to-penpot-unlimited
+    billing: monthly
+  - name: Enterprise
+    price: 950
+    unit: /month
+    description: Flat-rate plan with unlimited storage and 90-day history
+    features:
+      - Unlimited storage
+      - 90 days autosave / deleted-file recovery
+      - Customizable add-ons
+      - Early access to features
+    cta_url: https://design.penpot.app/#/settings/subscriptions?subscription=subscription-to-penpot-enterprise
+    billing: monthly
+  - name: Private Server
+    price: 50000
+    unit: /year
+    description: Dedicated infra, SSO, audit logs, region choice
+    features:
+      - Dedicated private infrastructure
+      - Enterprise SSO and SCIM provisioning
+      - Audit logs
+      - IP whitelisting
+      - Choice of hosting region
+    cta_url: https://penpot.app/talk-to-us
+    billing: annual
+
+paid_tier_highlights:
+  - Free Professional plan stays fully featured with no editor paywalls
+  - Unlimited $7/user/mo unlocks 25 GB storage and 30-day history (capped at $175/mo)
+  - Enterprise $950/mo flat for unlimited storage and 90-day history
+  - Private Server $50K/year for dedicated infra, SSO, SCIM, region choice
 
 tags: []
 
@@ -25,4 +75,4 @@ pricing_url: https://penpot.app/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

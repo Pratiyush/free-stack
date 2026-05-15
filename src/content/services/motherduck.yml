@@ -14,9 +14,50 @@ free_tier:
   - Hard cap on storage and compute; no overage on free plan
 
 pricing:
-  - name: Free
+  - name: Lite
     price: 0
     unit: /month
+    billing: free
+    description: For solo practitioners and hobbyists
+    features:
+      - Up to 3 internal active users, 2 service accounts
+      - 10 GB free storage
+      - 10 hrs Pulse compute/month
+      - Community support
+      - 1-day snapshot retention
+    cta_url: https://app.motherduck.com/
+  - name: Business
+    price: 250
+    unit: /org/month
+    billing: monthly
+    description: Production analytics + usage-based compute and storage
+    features:
+      - Up to 10 internal active users, unlimited service accounts
+      - 5 instance types with read-scaling replicas
+      - 90-day snapshot retention
+      - Query history access
+      - 99.9% availability SLA
+      - Expert support with response SLA
+    cta_url: https://app.motherduck.com/
+  - name: Enterprise
+    price: Custom
+    billing: monthly
+    description: Custom plans for large-scale deployments
+    features:
+      - Unlimited internal users and service accounts
+      - Fixed-cost capacity pricing
+      - AWS PrivateLink connectivity
+      - HIPAA BAA available
+      - All Business plan features
+      - Customizable SLA
+    cta_url: https://motherduck.com/contact-us/product-expert/
+
+paid_tier_highlights:
+  - Multiple compute instance types for scalable workloads
+  - SSO, SCIM, SOC 2 Type II, GDPR, optional HIPAA BAA
+  - Database sharing, Dives visualizations, FixIt error resolution
+  - Expert support with guaranteed response SLAs
+  - 90-day snapshot retention vs 1-day on Free
 
 tags: []
 
@@ -25,4 +66,4 @@ pricing_url: https://motherduck.com/product/pricing/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

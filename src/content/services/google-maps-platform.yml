@@ -14,9 +14,67 @@ free_tier:
   - 'Per-SKU rate limits apply'
 
 pricing:
-  - name: Free
+  - name: Free (Pay-as-you-go)
     price: 0
     unit: /month
+    billing: free
+    description: Per-SKU free monthly thresholds; pay only above quota
+    cta_url: https://mapsplatform.google.com/pricing/
+    features:
+      - Essentials 10K calls/SKU/mo free
+      - Pro 5K calls/SKU/mo free
+      - Enterprise 1K calls/SKU/mo free
+      - Map Tiles 100K/mo free
+      - Per-SKU rate limits
+  - name: Starter
+    price: 100
+    unit: /month
+    billing: monthly
+    description: 50K monthly calls including Dynamic Maps and Geocoding
+    cta_url: https://mapsplatform.google.com/pricing/
+    features:
+      - 50,000 monthly calls
+      - Dynamic Maps
+      - Geocoding
+      - Volume discount over PAYG
+  - name: Essentials
+    price: 275
+    unit: /month
+    billing: monthly
+    description: 100K monthly calls across Maps, Routes, Places, Environment
+    cta_url: https://mapsplatform.google.com/pricing/
+    features:
+      - 100,000 monthly calls
+      - Most popular products bundled
+      - Maps, Routes, Places, Environment
+      - Volume discount
+  - name: Pro
+    price: 1200
+    unit: /month
+    billing: monthly
+    description: 250K monthly calls with advanced features
+    cta_url: https://mapsplatform.google.com/pricing/
+    features:
+      - 250,000 monthly calls
+      - Address Validation Pro
+      - Places Aggregate API
+      - Immersive Maps
+      - Larger volume discount
+  - name: Enterprise
+    price: Custom
+    description: Custom calls and full feature access
+    cta_url: https://mapsplatform.google.com/pricing/
+    features:
+      - Custom monthly call volume
+      - Most powerful features
+      - Extensive customization
+      - Dedicated account support
+
+paid_tier_highlights:
+  - Starter from $100/mo bundles 50K calls (Dynamic Maps + Geocoding)
+  - Essentials $275/mo for 100K calls; Pro $1,200/mo for 250K calls
+  - Pro tier unlocks Address Validation Pro and Immersive Maps
+  - Per-SKU free thresholds (10K Essentials / 5K Pro / 1K Enterprise) on PAYG
 
 tags: []
 
@@ -25,4 +83,4 @@ pricing_url: https://mapsplatform.google.com/pricing/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

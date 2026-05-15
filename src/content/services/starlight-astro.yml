@@ -14,9 +14,21 @@ free_tier:
   - 'Framework-agnostic: extend with React, Vue, Svelte, Solid. Deploy on any static host'
 
 pricing:
-  - name: Free
+  - name: Open Source (MIT)
     price: 0
-    unit: /month
+    billing: free
+    description: Fully free; framework-agnostic Astro docs theme
+    features:
+      - MIT license
+      - Self-hosted on any static host
+      - Extend with React, Vue, Svelte, Solid
+      - i18n built in
+      - Full-text search
+      - No usage limits
+    cta_url: https://starlight.astro.build/
+
+paid_tier_highlights:
+  - This service is always-free; no paid tiers exist
 
 tags: []
 

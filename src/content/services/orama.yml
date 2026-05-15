@@ -16,12 +16,60 @@ free_tier:
   - 3 triggers per index
 
 pricing:
-  - name: Free
+  - name: Base (Free)
     price: 0
     unit: /month
-  - name: Growth
-    price: 99
+    billing: free
+    description: To get started with Orama
+    features:
+      - Unlimited searches
+      - 2 included projects
+      - 500 docs per project
+      - 60 days analytics
+      - 500 AI sessions
+    cta_url: https://cloud.oramasearch.com/auth/signup
+  - name: Build
+    price: 100
     unit: /month
+    billing: monthly
+    description: For small-scale deployments
+    features:
+      - Unlimited searches
+      - 5 included projects
+      - 10,000 docs per project
+      - 90 days analytics
+      - 10,000 AI sessions
+    cta_url: https://cloud.oramasearch.com/auth/signup
+  - name: Scale
+    price: 1450
+    unit: /month
+    billing: monthly
+    description: For large projects and teams
+    features:
+      - Unlimited searches
+      - 10 included projects
+      - 100,000 docs per project
+      - Unlimited analytics
+      - 50,000 AI sessions
+    cta_url: https://cloud.oramasearch.com/auth/signup
+  - name: Enterprise
+    price: Custom
+    billing: annual
+    description: For enterprises and resellers
+    features:
+      - Unlimited projects
+      - Unlimited docs
+      - Unlimited analytics
+      - Unlimited AI sessions
+      - Mail/Slack/phone support
+    cta_url: mailto:info@oramasearch.com
+
+paid_tier_highlights:
+  - Project capacity scales from 2 to unlimited
+  - Document limits grow from 500 to 100,000+ per project
+  - AI sessions scale from 500 to 50,000+ included
+  - Analytics retention extends from 60 days to unlimited
+  - Support upgrades from community to mail/Slack/phone
 
 tags: [search, full-text-search, vector-search, hybrid-search, api]
 

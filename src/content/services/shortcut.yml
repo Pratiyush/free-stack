@@ -16,7 +16,59 @@ free_tier:
 pricing:
   - name: Free
     price: 0
-    unit: /month
+    unit: /user/month
+    billing: free
+    description: For teams getting started
+    features:
+      - Kanban views and Roadmap
+      - Reports for quick insights
+      - Sprint planning with Iterations
+      - Docs for collaboration
+      - GitHub, Slack, Figma integrations
+      - Up to 10 users
+    cta_url: https://www.shortcut.com/pricing
+  - name: Team
+    price: 10
+    unit: /user/month
+    billing: monthly
+    description: Small teams; $8.50/user yearly
+    features:
+      - Suite of Reports
+      - Work In Progress limits
+      - Multiple custom workflows
+      - Automations for repetitive tasks
+      - All integrations
+    cta_url: https://www.shortcut.com/pricing
+  - name: Business
+    price: 16
+    unit: /user/month
+    billing: monthly
+    description: Fast-growing teams; $12/user yearly
+    features:
+      - Unlimited everything
+      - Objectives and key results
+      - Advanced Custom Fields
+      - Advanced Reports
+      - Multiple Workspaces for sandboxing
+    cta_url: https://www.shortcut.com/pricing
+  - name: Enterprise
+    price: Custom
+    billing: annual
+    description: Mature software companies
+    features:
+      - Predictable volume pricing
+      - Premier support SLAs
+      - SSO and SCIM
+      - Custom terms
+      - Dedicated Slack channel
+      - Onboarding support
+    cta_url: https://www.shortcut.com/pricing
+
+paid_tier_highlights:
+  - Team ($10/user, $8.50 yearly) adds WIP limits and automations
+  - Business ($16/user, $12 yearly) unlocks OKRs and custom fields
+  - Business removes feature caps with unlimited everything
+  - Enterprise brings SSO/SCIM and premier support SLAs
 
 tags: []
 
@@ -25,4 +77,4 @@ pricing_url: https://www.shortcut.com/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

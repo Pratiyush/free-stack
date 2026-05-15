@@ -11,12 +11,67 @@ tier_type: free-plan
 
 free_tier:
   - 'Free cloud tier (Basic plan); open-source self-hosted'
-  - No documented rate limits
+  - 1 collaborative workspace, up to 2 members
+  - Unlimited pages and blocks
+  - 5 GB storage
+  - Intelligent search and real-time collaboration
+
+paid_tier_highlights:
+  - 'Pro $10/user/mo (annual) adds unlimited storage and 50 members'
+  - 'Pro adds 100 guest editors, unlimited AI responses, 50 AI images/mo'
+  - 'AI MAX $8/user/mo adds GPT-5, Gemini 2.5 Pro, Claude 3.7 access'
+  - 'Vault Workspace $6/user/mo runs AI locally for full privacy'
+  - 'Self-hosting available free under AGPL'
 
 pricing:
   - name: Free
     price: 0
-    unit: /month
+    billing: free
+    description: Free forever for individuals and small groups
+    features:
+      - 1 collaborative workspace (up to 2 members)
+      - Unlimited pages and blocks
+      - 5 GB storage
+      - Intelligent search
+      - Real-time collaboration
+      - Mobile app access
+    cta_url: https://appflowy.com/download
+  - name: Pro
+    price: 10
+    unit: /user/month (annual)
+    billing: annual
+    description: For small teams managing projects and knowledge
+    features:
+      - Everything in Free
+      - Unlimited storage
+      - Up to 50 workspace members
+      - Up to 100 guest editors
+      - Unlimited AI responses
+      - 50 AI images monthly
+      - Custom namespace
+    cta_url: https://appflowy.com/download
+  - name: AI MAX
+    price: 8
+    unit: /user/month
+    billing: monthly
+    description: Add-on with access to top frontier models
+    features:
+      - Unlimited AI responses
+      - Unlimited file uploads
+      - 50 AI images monthly
+      - GPT-5, Gemini 2.5 Pro, Claude 3.7
+    cta_url: https://appflowy.com/download
+  - name: Vault Workspace
+    price: 6
+    unit: /user/month (annual)
+    billing: annual
+    description: Private offline AI running on local hardware
+    features:
+      - Local AI processing
+      - Unlimited AI responses
+      - Unlimited file size for AI Chat
+      - Ultimate privacy protection
+    cta_url: https://appflowy.com/download
 
 tags: []
 
@@ -25,4 +80,4 @@ pricing_url: https://appflowy.com/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

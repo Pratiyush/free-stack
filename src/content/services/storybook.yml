@@ -14,9 +14,21 @@ free_tier:
   - 'Self-hosted, no usage limits, MIT license'
 
 pricing:
-  - name: Free
+  - name: Open Source (MIT)
     price: 0
-    unit: /month
+    billing: free
+    description: Free open-source frontend workshop tool
+    features:
+      - MIT license
+      - Self-hosted, no usage limits
+      - 2200+ contributors
+      - Component library docs
+      - Visual testing addon support
+      - Cross-framework support (React, Vue, etc.)
+    cta_url: https://storybook.js.org/
+
+paid_tier_highlights:
+  - This service is always-free; no paid tiers exist
 
 tags: []
 
@@ -25,4 +37,4 @@ pricing_url: https://storybook.js.org/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

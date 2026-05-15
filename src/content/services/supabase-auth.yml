@@ -19,9 +19,55 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    description: 50K MAU included on Supabase Free plan
+    billing: free
+    features:
+      - 50,000 monthly active users
+      - Unlimited API requests
+      - Social login providers included
+      - 2 projects maximum
+      - Community support
+    cta_url: https://supabase.com/dashboard/sign-up
   - name: Pro
     price: 25
     unit: /month
+    description: 100K MAU then $0.00325/MAU; email support
+    billing: monthly
+    features:
+      - 100K MAU then $0.00325/MAU
+      - Email support, 7-day log retention
+      - Daily backups (7-day retention)
+      - SAML SSO add-on available
+    cta_url: https://supabase.com/dashboard/org/_/billing
+  - name: Team
+    price: 599
+    unit: /month
+    description: SOC2/ISO 27001 with SLAs
+    billing: monthly
+    features:
+      - SOC2 & ISO 27001 certified
+      - Priority email support with SLAs
+      - 28-day log retention
+      - Project-scoped + read-only access
+      - HIPAA add-on available
+    cta_url: https://supabase.com/dashboard/org/_/billing
+  - name: Enterprise
+    price: Custom
+    description: 24x7 premium support, BYO cloud, custom SLAs
+    billing: annual
+    features:
+      - Designated support manager
+      - 24x7x365 premium support
+      - Uptime SLAs guaranteed
+      - Bring-your-own-cloud (BYOC)
+      - 90-day log retention
+    cta_url: https://supabase.com/contact/enterprise
+
+paid_tier_highlights:
+  - Pro at $25/mo unlocks 100K MAU + email support
+  - Team at $599/mo adds SOC2/ISO 27001 + priority SLAs
+  - SAML SSO and HIPAA available as paid add-ons
+  - Enterprise offers BYOC + custom SLAs
 
 tags: [authentication, postgres, identity, api, sql]
 

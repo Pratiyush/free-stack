@@ -14,9 +14,48 @@ free_tier:
   - 'Compute: $0.18/hr after free quota; storage: $0.07/GB/mo after free quota'
 
 pricing:
-  - name: Free
+  - name: GitHub Free
     price: 0
     unit: /month
+    billing: free
+    description: 120 core-hours and 15 GB storage per month for personal accounts
+    cta_url: https://github.com/features/codespaces
+    features:
+      - 120 core-hours/mo (60 hrs on 2-core)
+      - 15 GB-month storage
+      - Personal accounts only
+      - Pre-built dev container images
+      - Access from browser, VS Code, JetBrains
+  - name: GitHub Pro
+    price: 4
+    unit: /user/month
+    billing: monthly
+    description: 180 core-hours and 20 GB storage per month
+    cta_url: https://github.com/pricing
+    features:
+      - 180 core-hours/mo
+      - 20 GB-month storage
+      - Private repository support
+      - Advanced auditing
+      - Priority email support
+  - name: Pay-as-you-go (Org)
+    price: 0.18
+    unit: /core-hour
+    billing: usage-based
+    description: For organizations; no free quota — compute and storage metered
+    cta_url: https://docs.github.com/billing/managing-billing-for-github-codespaces
+    features:
+      - $0.18/hr 2-core machine
+      - $0.36/hr 4-core, $0.72/hr 8-core
+      - $1.44/hr 16-core, $2.88/hr 32-core
+      - $0.07/GB-month storage overage
+      - Org spending controls
+
+paid_tier_highlights:
+  - GitHub Pro at $4/user/mo unlocks 180 core-hrs and 20 GB-mo storage
+  - Compute overage starts at $0.18/hr for 2-core machine
+  - Storage overage is $0.07/GB-month after free quota
+  - Organizations pay-as-you-go from the first hour (no free quota)
 
 tags: []
 
@@ -25,4 +64,4 @@ pricing_url: https://github.com/features/codespaces
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

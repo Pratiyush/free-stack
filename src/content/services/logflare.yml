@@ -14,9 +14,60 @@ free_tier:
   - '5 events/sec avg over 60s, 90-day retention; no SMS alerts on free'
 
 pricing:
-  - name: Free
+  - name: Project (Free)
     price: 0
     unit: /month
+    billing: free
+    description: Entry-level tier for small projects
+    features:
+      - Unlimited team members and sources
+      - 4-hour alert frequency
+      - Up to 50 fields
+      - 3-day maximum event retention
+      - 5 events/second rate limit
+    cta_url: https://logflare.app/auth/login
+  - name: Metered
+    price: 15
+    unit: /million events
+    billing: usage-based
+    description: Scalable plan after 1M free events/month
+    features:
+      - Unlimited team members, sources, dashboards
+      - 1-minute alert frequency
+      - Google Data Studio integration
+      - Up to 500 fields
+      - 90-day event retention
+    cta_url: https://logflare.app/pricing
+  - name: Metered BYOB
+    price: 10
+    unit: /million events
+    billing: usage-based
+    description: Bring Your Own BigQuery for unlimited retention
+    features:
+      - Unlimited team members and storage
+      - 1-minute alerts with Google Data Studio
+      - Up to 500 fields
+      - Unlimited retention period
+      - Unlimited rate limits
+    cta_url: https://logflare.app/pricing
+  - name: Enterprise
+    price: Custom
+    billing: annual
+    description: Custom solutions for high-volume deployments
+    features:
+      - Custom volume pricing
+      - Dedicated infrastructure
+      - Premium support
+      - SLA available
+      - Custom integrations
+    cta_url: https://logflare.app/pricing
+
+paid_tier_highlights:
+  - Metered at $15/M events unlocks 500 fields and 90-day retention
+  - Metered BYOB at $10/M events provides unlimited BigQuery retention
+  - 1-minute alerts and Google Data Studio on all paid tiers
+  - Enterprise adds custom pricing and dedicated infrastructure
+  - 1M events/month included free on metered plans
 
 tags: []
 
@@ -25,4 +76,4 @@ pricing_url: https://logflare.app/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

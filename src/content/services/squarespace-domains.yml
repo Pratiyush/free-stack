@@ -14,9 +14,37 @@ free_tier:
   - No free tier without domain purchase
 
 pricing:
-  - name: Free
+  - name: Domain Registration (includes free DNS)
+    price: Variable
+    unit: per domain/year
+    billing: annual
+    description: All-inclusive pricing; DNS included with domain
+    features:
+      - Premium DNS (CloudDNS with DNSSEC)
+      - WHOIS privacy protection
+      - SSL/TLS certificate
+      - Email forwarding (up to 100 addresses)
+      - Two-factor authentication
+      - Domain forwarding
+      - 24/7 customer support
+    cta_url: https://domains.squarespace.com/
+  - name: Free Domain (with Squarespace plan)
     price: 0
-    unit: /month
+    unit: first year
+    billing: annual
+    description: First domain free for new Squarespace subscribers
+    features:
+      - Free for 1 year with annual website plan
+      - All premium DNS features included
+      - Bundled with site builder subscription
+      - WHOIS privacy included
+    cta_url: https://domains.squarespace.com/
+
+paid_tier_highlights:
+  - Domain pricing is all-inclusive (DNS, SSL, WHOIS, email forwarding)
+  - First domain free with annual Squarespace plan subscription
+  - No separate DNS tier - included with every domain registration
+  - 24/7 customer support included on all domains
 
 tags: []
 
@@ -25,4 +53,4 @@ pricing_url: https://domains.squarespace.com/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

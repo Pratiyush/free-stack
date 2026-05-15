@@ -14,9 +14,59 @@ free_tier:
   - Media transfer billed separately (~$0.12/GB); not intended for production on free tier
 
 pricing:
-  - name: Free
+  - name: Build
     price: 0
     unit: /month
+    description: Free to start — no credit card required
+    billing: free
+    features:
+      - 1,000 MAU / 100 concurrent connections
+      - All Chat features included
+      - Community support
+      - Optional image & files CDN
+    cta_url: https://getstream.io/chat/trial/
+  - name: Start
+    price: 399
+    unit: /month
+    description: Robust chat features for growing apps ($499 monthly)
+    billing: annual
+    features:
+      - 10,000 MAU / 500 concurrent connections
+      - Advanced moderation & filters
+      - Global EDGE network
+      - Offline support and data export
+      - 1M API calls included; $0.09 per MAU overage
+    cta_url: https://getstream.io/chat/trial/
+  - name: Elevate
+    price: 599
+    unit: /month
+    description: Multi-tenant + HIPAA features ($675 monthly)
+    billing: annual
+    features:
+      - 10,000 MAU / 500 concurrent connections
+      - Multi tenancy / teams
+      - Advanced search
+      - HIPAA compliance
+      - Message translations
+    cta_url: https://getstream.io/chat/trial/
+  - name: Enterprise
+    price: Custom
+    description: Custom volume pricing with 99.999% SLA
+    billing: annual
+    features:
+      - AI moderation
+      - 99.999% SLA uptime
+      - Dedicated servers
+      - 24/7 support with Slack channel
+      - SAML/SSO security
+      - Migration guarantee
+    cta_url: https://getstream.io/contact/
+
+paid_tier_highlights:
+  - Start ($399/mo annual) scales to 10K MAU + advanced moderation
+  - Elevate ($599/mo annual) adds multi-tenancy and HIPAA compliance
+  - Enterprise tier offers 99.999% SLA + dedicated servers
+  - 1M API calls included on Start; $0.09 per MAU overage
 
 tags: []
 
@@ -25,4 +75,4 @@ pricing_url: https://getstream.io/chat/pricing/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

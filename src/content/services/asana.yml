@@ -10,13 +10,82 @@ summary: Personal plan (free)
 tier_type: free-plan
 
 free_tier:
-  - Personal plan (free)
-  - 'No timeline/Gantt, no custom fields, no forms, no reporting dashboards'
+  - Personal plan (free forever, up to 2 users / 10 seats)
+  - Unlimited tasks and projects
+  - List, board, and calendar views
+  - Unlimited storage (100 MB max per file)
+  - 100+ integrations
+  - 'No timeline/Gantt, custom fields, forms, or reporting dashboards'
+
+paid_tier_highlights:
+  - 'Starter from $10.99/user/mo adds Timeline/Gantt, forms, custom fields'
+  - 'Advanced from $24.99/user/mo adds portfolios, goals, approvals, time tracking'
+  - 'Enterprise adds SAML, SCIM, capacity planning, AI Studio (200K credits)'
+  - 'Enterprise+ adds SIEM, eDiscovery, DLP, data residency, EKM'
 
 pricing:
-  - name: Free
+  - name: Personal
     price: 0
-    unit: /month
+    billing: free
+    description: For one or two people managing personal projects
+    features:
+      - Up to 2 users
+      - Unlimited tasks and projects
+      - List, board, and calendar views
+      - Unlimited storage (100 MB per file)
+      - Status updates
+      - 100+ free integrations
+    cta_url: https://asana.com/create-account
+  - name: Starter
+    price: 10.99
+    unit: /user/month (annual)
+    billing: annual
+    description: For growing teams that need to track progress
+    features:
+      - Timeline and Gantt views
+      - Reporting dashboards
+      - Unlimited automations
+      - Forms and custom templates
+      - Custom fields
+      - AI Studio Basic (50K credits/month)
+    cta_url: https://asana.com/create-account
+  - name: Advanced
+    price: 24.99
+    unit: /user/month (annual)
+    billing: annual
+    description: For portfolios and goals across departments
+    features:
+      - Unlimited portfolios
+      - Goals and workload tracking
+      - Approvals and proofing
+      - Salesforce/Tableau/Power BI support
+      - Time tracking and formulas
+      - AI Studio Basic (75K credits/month)
+    cta_url: https://asana.com/create-account
+  - name: Enterprise
+    price: Contact sales
+    billing: annual
+    description: Coordinate complex work across departments
+    features:
+      - SAML authentication
+      - SCIM user provisioning
+      - Universal workload visibility
+      - Capacity planning
+      - Service accounts and view-only licenses
+      - AI Studio Basic (200K credits/month)
+    cta_url: https://asana.com/sales
+  - name: Enterprise+
+    price: Contact sales
+    billing: annual
+    description: Advanced security and compliance controls
+    features:
+      - All Enterprise features
+      - SIEM integration (Splunk)
+      - eDiscovery support
+      - Data Loss Prevention integration
+      - Data residency options
+      - Enterprise Key Management
+    cta_url: https://asana.com/sales
 
 tags: []
 
@@ -25,4 +94,4 @@ pricing_url: https://asana.com/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

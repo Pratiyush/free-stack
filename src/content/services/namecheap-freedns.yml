@@ -16,13 +16,35 @@ free_tier:
   - Works with any registrar
 
 pricing:
-  - name: Free
+  - name: FreeDNS
     price: 0
     unit: /month
+    billing: free
+    description: Free DNS hosting with full record types and dynamic DNS
+    features:
+      - A/AAAA/CNAME/NS/MX/TXT/SRV records
+      - Dynamic DNS support
+      - Email forwarding
+      - URL forwarding
+      - Works with any registrar
+    cta_url: https://www.namecheap.com/domains/freedns/
   - name: Domain registration
-    description: Starts at $0.98/year
     price: 0.98
     unit: /year
+    billing: annual
+    description: Optional add-on; .com from $5.98/yr, others from $0.98/yr
+    features:
+      - Free WhoisGuard privacy
+      - 2FA for account security
+      - Free email forwarding
+      - DNSSEC supported
+    cta_url: https://www.namecheap.com/domains/
+
+paid_tier_highlights:
+  - FreeDNS itself remains free; paid offering is domain registration
+  - Domain registration starts at $0.98/year for select TLDs
+  - Free WhoisGuard privacy included with registered domains
+  - Premium DNS upgrade adds DDoS protection and SLA
 
 tags: [dns, domain, email-forwarding, url-forwarding, registrar]
 

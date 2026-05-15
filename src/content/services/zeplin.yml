@@ -17,6 +17,57 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    billing: free
+    description: One flat fee, unlimited designers and devs
+    features:
+      - 1 project
+      - Unlimited users on the project
+      - 100 screens to begin
+      - 3 AI design reviews per week
+      - 30-day version history
+    cta_url: https://app.zeplin.io/signup
+  - name: Basic
+    price: 13.75
+    unit: /month annual
+    billing: monthly
+    description: Flat rate per project, no per-seat costs
+    features:
+      - 1-12 projects available
+      - Unlimited team members per project
+      - 1,000 screens per project
+      - 20 weekly AI design reviews
+      - 1-year version history
+    cta_url: https://zeplin.io/pricing/
+  - name: Advanced
+    price: 12
+    unit: /seat/month annual
+    billing: monthly
+    description: Manage all projects and members in one place
+    features:
+      - 50 projects with unlimited screens
+      - 4 user roles, granular permissions
+      - Unlimited complimentary reviewers
+      - Flow boards, permanent version history
+      - Team workspace tools
+    cta_url: https://zeplin.io/pricing/
+  - name: Enterprise
+    price: Custom
+    billing: monthly
+    description: Compliance controls for large organizations
+    features:
+      - Unlimited projects and screens
+      - SSO, MFA, SCIM provisioning
+      - Invoiced billing
+      - Activity logging, success manager
+      - 24-hour priority support SLA
+    cta_url: https://zeplin.io/contact-sales/
+
+paid_tier_highlights:
+  - Basic from $13.75/mo (annual) per project, no seat fees
+  - Advanced at $12/seat/mo for 50 projects + granular roles
+  - Permanent version history on Advanced and above
+  - Enterprise adds SSO, MFA, SCIM, and 24-hour priority SLA
+  - All paid plans extend version history beyond Free's 30 days
 
 tags: []
 
@@ -25,4 +76,4 @@ pricing_url: https://zeplin.io/pricing/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

@@ -1,0 +1,493 @@
+---
+/* ServiceTable — info-dense table view of services.
+ * Each row is clickable; click toggles an inline-expand detail row below.
+ * Keyboard: Enter / Space on focused row toggles; Escape collapses any open row.
+ *
+ * The detail row reuses the same fields the service-detail page shows:
+ * summary, free_tier bullets, key facets, pricing rows, links.
+ */
+import type { CollectionEntry } from 'astro:content';
+import { TIER_LABELS } from '~/lib/labels';
+
+interface Props {
+  services: CollectionEntry<'services'>[];
+  categoryName?: string;
+}
+
+const { services, categoryName } = Astro.props;
+---
+
+<div class="table-scroll" role="region" aria-label="Services table">
+  <table class="service-table">
+    <thead>
+      <tr>
+        <th class="th-name" scope="col">Service</th>
+        {!categoryName && <th class="th-cat" scope="col">Category</th>}
+        <th class="th-tier" scope="col">Tier</th>
+        <th class="th-quotas" scope="col">Quotas</th>
+        <th class="th-cc" scope="col">CC?</th>
+        <th class="th-action" scope="col" aria-label="Open"></th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        services.map((s) => {
+          const f = s.data.facets ?? {};
+          const accent = s.data.brand_color ?? '#1a1a1a';
+          const slugId = `row-${s.data.slug}`;
+          const detailId = `detail-${s.data.slug}`;
+          const quotas: string[] = [];
+          if (f.requests_per_day != null) quotas.push(`${f.requests_per_day.toLocaleString()} req/d`);
+          if (f.requests_per_month != null) quotas.push(`${f.requests_per_month.toLocaleString()} req/mo`);
+          if (f.storage_gb != null) quotas.push(`${f.storage_gb} GB`);
+          if (f.bandwidth_gb_month != null) quotas.push(`${f.bandwidth_gb_month} GB/mo`);
+          const quotaText = quotas.slice(0, 2).join(' · ') || '—';
+
+          return (
+            <>
+              <tr
+                class="row"
+                id={slugId}
+                data-slug={s.data.slug}
+                style={`--row-accent: ${accent};`}
+                tabindex="0"
+                role="button"
+                aria-expanded="false"
+                aria-controls={detailId}
+              >
+                <td class="cell-name">
+                  <img
+                    src={s.data.logo}
+                    alt=""
+                    width="24"
+                    height="24"
+                    loading="lazy"
+                    class="row-logo"
+                  />
+                  <span class="row-name">{s.data.name}</span>
+                </td>
+                {!categoryName && (
+                  <td class="cell-cat">
+                    <span class="cat-mono">{s.data.category}</span>
+                  </td>
+                )}
+                <td class="cell-tier">
+                  <span class:list={['tier-pill', `tier-${s.data.tier_type}`]}>
+                    {TIER_LABELS[s.data.tier_type]}
+                  </span>
+                </td>
+                <td class="cell-quotas">{quotaText}</td>
+                <td class="cell-cc">
+                  {f.cc_required === true ? (
+                    <span class="cc-yes">CC</span>
+                  ) : f.cc_required === false ? (
+                    <span class="cc-no">no</span>
+                  ) : (
+                    <span class="cc-unk">—</span>
+                  )}
+                </td>
+                <td class="cell-action">
+                  <svg
+                    class="chevron"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 14 14"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M5 3L9 7L5 11"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </td>
+              </tr>
+              <tr
+                class="detail-row"
+                id={detailId}
+                hidden
+                role="region"
+                aria-labelledby={slugId}
+              >
+                <td colspan={categoryName ? 5 : 6}>
+                  <div class="detail-inner" style={`--row-accent: ${accent};`}>
+                    <div class="detail-grid">
+                      <div class="detail-summary">
+                        <p class="detail-eyebrow">Summary</p>
+                        <p class="detail-text">{s.data.summary}</p>
+                      </div>
+                      <div class="detail-freetier">
+                        <p class="detail-eyebrow">Free tier</p>
+                        <ul>
+                          {s.data.free_tier.slice(0, 5).map((b: string) => (
+                            <li>{b}</li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div class="detail-facets">
+                        <p class="detail-eyebrow">Key facets</p>
+                        <dl>
+                          {f.api_access != null && (
+                            <>
+                              <dt>API access</dt>
+                              <dd>{f.api_access ? 'Yes' : 'No'}</dd>
+                            </>
+                          )}
+                          {f.custom_domain != null && (
+                            <>
+                              <dt>Custom domain</dt>
+                              <dd>{f.custom_domain ? 'Yes' : 'No'}</dd>
+                            </>
+                          )}
+                          {f.oss != null && (
+                            <>
+                              <dt>Open source</dt>
+                              <dd>{f.oss ? 'Yes' : 'No'}</dd>
+                            </>
+                          )}
+                          {f.self_host != null && (
+                            <>
+                              <dt>Self-host</dt>
+                              <dd>{f.self_host ? 'Yes' : 'No'}</dd>
+                            </>
+                          )}
+                          {f.auto_pause_days != null && (
+                            <>
+                              <dt>Auto-pause</dt>
+                              <dd>{f.auto_pause_days} d idle</dd>
+                            </>
+                          )}
+                        </dl>
+                      </div>
+                    </div>
+                    <div class="detail-cta">
+                      <a class="detail-link primary" href={`/service/${s.data.slug}`}>
+                        Full pricing breakdown →
+                      </a>
+                      {s.data.pricing_url && (
+                        <a
+                          class="detail-link"
+                          href={s.data.pricing_url}
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          Official pricing page ↗
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </>
+          );
+        })
+      }
+    </tbody>
+  </table>
+</div>
+
+<script>
+  /* Inline-expand row toggling.
+   * Click or keyboard-activate a row → toggle its detail row.
+   * Only one row open at a time. Escape collapses everything. */
+
+  function closeAllRows(except?: HTMLElement) {
+    document.querySelectorAll<HTMLElement>('.service-table .row').forEach((row) => {
+      if (row === except) return;
+      const detailId = row.getAttribute('aria-controls');
+      const detail = detailId ? document.getElementById(detailId) : null;
+      if (detail) detail.toggleAttribute('hidden', true);
+      row.setAttribute('aria-expanded', 'false');
+      row.classList.remove('expanded');
+    });
+  }
+
+  function toggleRow(row: HTMLElement) {
+    const detailId = row.getAttribute('aria-controls');
+    const detail = detailId ? document.getElementById(detailId) : null;
+    if (!detail) return;
+    const isOpen = !detail.hidden;
+    closeAllRows(row);
+    if (isOpen) {
+      detail.toggleAttribute('hidden', true);
+      row.setAttribute('aria-expanded', 'false');
+      row.classList.remove('expanded');
+    } else {
+      detail.toggleAttribute('hidden', false);
+      row.setAttribute('aria-expanded', 'true');
+      row.classList.add('expanded');
+    }
+  }
+
+  document.querySelectorAll<HTMLElement>('.service-table .row').forEach((row) => {
+    row.addEventListener('click', (e) => {
+      // Don't toggle when clicking an interactive child (e.g. detail-link inside the open detail).
+      const target = e.target as HTMLElement;
+      if (target.closest('a, button, input, [role="button"][data-no-toggle]')) return;
+      toggleRow(row);
+    });
+    row.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleRow(row);
+      }
+    });
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeAllRows();
+  });
+</script>
+
+<style>
+  .table-scroll {
+    overflow-x: auto;
+    border: 1px solid var(--color-rule);
+    border-radius: var(--radius-md);
+    background: var(--color-paper);
+  }
+  .service-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 720px;
+    font-size: 0.92rem;
+  }
+  .service-table thead th {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-ink-faint);
+    font-weight: 500;
+    text-align: left;
+    padding: var(--space-sm) var(--space-md);
+    border-bottom: 1px solid var(--color-rule);
+    background: var(--color-paper-warm);
+    white-space: nowrap;
+  }
+  .service-table .th-cc,
+  .service-table .th-action {
+    text-align: center;
+  }
+  .service-table .row {
+    cursor: pointer;
+    border-bottom: 1px solid var(--color-rule);
+    transition: background 0.15s ease;
+    position: relative;
+  }
+  .service-table .row > td {
+    padding: var(--space-sm) var(--space-md);
+    vertical-align: middle;
+  }
+  .service-table .row:hover {
+    background: var(--color-paper-warm);
+  }
+  .service-table .row:focus-visible {
+    outline: 2px solid var(--color-coral);
+    outline-offset: -2px;
+  }
+  .service-table .row.expanded {
+    background: color-mix(in srgb, var(--row-accent) 4%, var(--color-paper-warm));
+    border-bottom-color: transparent;
+  }
+  .service-table .row.expanded::before {
+    content: '';
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 3px;
+    background: var(--row-accent);
+  }
+
+  .cell-name {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+  .row-logo {
+    flex-shrink: 0;
+    object-fit: contain;
+  }
+  .row-name {
+    font-weight: 500;
+    color: var(--color-ink);
+  }
+  .cat-mono {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--color-ink-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .tier-pill {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.18rem 0.5rem;
+    border-radius: 999px;
+    border: 1px solid currentColor;
+    white-space: nowrap;
+  }
+  .tier-always-free {
+    color: var(--tier-always-free);
+  }
+  .tier-free-plan {
+    color: var(--tier-free-plan);
+  }
+  .tier-trial-credit {
+    color: var(--tier-trial-credit);
+  }
+  .tier-pay-as-you-go {
+    color: var(--tier-pay-as-you-go);
+  }
+  .cell-quotas {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    color: var(--color-ink);
+    white-space: nowrap;
+  }
+  .cell-cc {
+    text-align: center;
+  }
+  .cc-yes {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    padding: 0.15rem 0.4rem;
+    background: color-mix(in srgb, var(--color-coral) 12%, transparent);
+    color: var(--color-coral);
+    border-radius: var(--radius-sm);
+  }
+  .cc-no {
+    color: var(--color-ink-faint);
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+  }
+  .cc-unk {
+    color: var(--color-ink-faint);
+  }
+  .cell-action {
+    text-align: center;
+  }
+  .chevron {
+    color: var(--color-ink-faint);
+    transition:
+      transform 0.18s ease,
+      color 0.18s ease;
+  }
+  .row.expanded .chevron {
+    transform: rotate(90deg);
+    color: var(--color-coral);
+  }
+
+  /* Detail row — inline accordion expand. */
+  .detail-row > td {
+    padding: 0;
+    background: color-mix(in srgb, var(--row-accent) 3%, var(--color-paper));
+    border-bottom: 1px solid var(--color-rule);
+    border-top: 1px solid color-mix(in srgb, var(--row-accent) 25%, transparent);
+  }
+  .detail-inner {
+    padding: var(--space-md) var(--space-lg);
+    position: relative;
+  }
+  .detail-inner::before {
+    content: '';
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 3px;
+    background: var(--row-accent);
+  }
+  .detail-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 1fr;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-md);
+  }
+  @media (max-width: 880px) {
+    .detail-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .detail-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-ink-faint);
+    margin: 0 0 var(--space-xs);
+  }
+  .detail-text {
+    color: var(--color-ink);
+    line-height: 1.55;
+    margin: 0;
+    max-width: 50ch;
+  }
+  .detail-freetier ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .detail-freetier li {
+    color: var(--color-ink);
+    padding-left: 1.2em;
+    text-indent: -1.2em;
+    line-height: 1.45;
+    font-size: 0.9rem;
+  }
+  .detail-freetier li::before {
+    content: '— ';
+    color: var(--row-accent);
+  }
+  .detail-facets dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.25rem 0.8rem;
+    margin: 0;
+    font-size: 0.88rem;
+  }
+  .detail-facets dt {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-ink-faint);
+  }
+  .detail-facets dd {
+    margin: 0;
+    color: var(--color-ink);
+  }
+  .detail-cta {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+  }
+  .detail-link {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--color-ink-soft);
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    border: 1px solid var(--color-rule);
+    border-radius: var(--radius-sm);
+    transition: all 0.15s ease;
+  }
+  .detail-link:hover {
+    color: var(--color-ink);
+    border-color: var(--row-accent);
+  }
+  .detail-link.primary {
+    background: var(--color-ink);
+    color: var(--color-paper);
+    border-color: var(--color-ink);
+  }
+  .detail-link.primary:hover {
+    background: var(--row-accent);
+    border-color: var(--row-accent);
+  }
+</style>

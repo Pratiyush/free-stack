@@ -15,6 +15,33 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    billing: free
+    description: Donation-supported privacy analytics for reasonable personal use
+    cta_url: https://www.goatcounter.com/
+    features:
+      - No tracking of personal data
+      - No cookies required
+      - Adds ~3.5 KB to your site
+      - Open source and self-hostable
+      - Multiple integration options
+      - Tracks unique visits, browsers, location
+  - name: Self-hosted
+    price: 0
+    unit: /month
+    billing: free
+    description: Run open-source GoatCounter on your own infrastructure
+    cta_url: https://github.com/arp242/goatcounter
+    features:
+      - Source code available on GitHub
+      - No usage limits when self-hosting
+      - Same privacy-preserving design
+      - Drop-in JavaScript integration
+      - SQLite or PostgreSQL backend
+
+paid_tier_highlights:
+  - This service is always-free; no paid tiers exist
+  - High-volume users (millions of pageviews) are asked to self-host
+  - Optional GitHub Sponsors donations support server costs
 
 tags: []
 
@@ -23,4 +50,4 @@ pricing_url: https://www.goatcounter.com/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

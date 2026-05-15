@@ -14,9 +14,26 @@ free_tier:
   - Builds expire after 90 days; requires Apple Developer Program ($99/yr)
 
 pricing:
-  - name: Free
+  - name: TestFlight (included)
     price: 0
     unit: /month
+    description: Included with Apple Developer Program ($99/yr)
+    billing: free
+    features:
+      - Up to 100 internal testers
+      - Up to 10,000 external testers
+      - 90-day build expiration
+      - Up to 100 builds, multiple simultaneous tests
+      - Up to 30 devices per tester
+      - Crash reports + tester feedback
+      - Public-link distribution
+    cta_url: https://developer.apple.com/testflight/
+
+paid_tier_highlights:
+  - Requires Apple Developer Program membership at $99/year
+  - No tiered pricing — TestFlight itself is bundled free
+  - Builds expire after 90 days regardless of plan
+  - Same caps apply to all developer accounts
 
 tags: []
 

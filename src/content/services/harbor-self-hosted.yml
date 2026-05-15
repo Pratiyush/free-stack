@@ -14,9 +14,21 @@ free_tier:
   - No vendor rate limits; limited by your own infrastructure
 
 pricing:
-  - name: Free
+  - name: Open Source
     price: 0
     unit: /month
+    billing: free
+    description: Fully open-source CNCF Graduated container registry
+    features:
+      - Apache 2.0 licensed, no commercial tiers
+      - Vulnerability scanning, signing, replication, RBAC
+      - OCI artifact and Helm chart support
+      - Self-hosted; unlimited users and registries
+      - CNCF Graduated project with community support
+    cta_url: https://goharbor.io/docs/
+
+paid_tier_highlights:
+  - This service is always-free; no paid tiers exist
 
 tags: []
 
@@ -25,4 +37,4 @@ pricing_url: https://goharbor.io/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

@@ -14,9 +14,73 @@ free_tier:
   - Paid hosted plans start at EUR 19/month for proprietary projects
 
 pricing:
-  - name: Free
+  - name: Libre
     price: 0
     unit: /month
+    billing: free
+    description: Free hosted plan for public/libre open-source projects only
+    features:
+      - Up to 160,000 hosted strings
+      - Public projects only
+      - Unlimited translator accounts
+      - Continuous localization
+      - Same engine as paid plans
+    cta_url: https://hosted.weblate.org/
+  - name: 10k
+    price: 47
+    unit: /month
+    billing: monthly
+    description: Hosted plan for up to 10,000 strings
+    features:
+      - 10,000 hosted strings
+      - Unlimited projects & components
+      - Unlimited translator accounts
+      - 14-day gratis trial
+      - VAT excluded
+    cta_url: https://weblate.org/en/hosting/
+  - name: 40k
+    price: 70
+    unit: /month
+    billing: monthly
+    description: Hosted plan for up to 40,000 strings
+    features:
+      - 40,000 hosted strings
+      - Unlimited translator accounts
+      - All collaboration features
+      - 14-day gratis trial
+      - 20% off on annual billing
+    cta_url: https://weblate.org/en/hosting/
+  - name: 160k
+    price: 114
+    unit: /month
+    billing: monthly
+    description: Hosted plan for up to 160,000 strings
+    features:
+      - 160,000 hosted strings
+      - Unlimited translator accounts
+      - All collaboration features
+      - 14-day gratis trial
+      - 20% off on annual billing
+    cta_url: https://weblate.org/en/hosting/
+  - name: 2.5M
+    price: 342
+    unit: /month
+    billing: monthly
+    description: Hosted plan for up to 2.56M strings
+    features:
+      - 2,560,000 hosted strings
+      - Unlimited translator accounts
+      - Optional dedicated instance
+      - 14-day gratis trial
+      - 20% off on annual billing
+    cta_url: https://weblate.org/en/hosting/
+
+paid_tier_highlights:
+  - Hosted plans from EUR 47/mo (10k strings) up to EUR 616/mo (10M strings)
+  - Custom unlimited plan available for enterprise
+  - 20% discount when billed annually
+  - 14-day free trial on every paid hosted plan
+  - Self-hosted is fully free under copyleft license
 
 tags: []
 

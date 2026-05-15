@@ -17,6 +17,57 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    billing: free
+    description: Start using Val Town today
+    features:
+      - 100,000 runs/day
+      - MCP integration
+      - 15-minute cron intervals
+      - 1-minute wall clock time per run
+      - Unlimited public vals
+    cta_url: https://www.val.town/auth/signup
+  - name: Pro
+    price: 8.33
+    unit: /month annual
+    billing: monthly
+    description: For personal projects
+    features:
+      - $5 Townie AI credit monthly
+      - 10 custom domains
+      - 1-minute cron intervals
+      - 10-minute wall clock per run
+      - Unlimited private vals
+    cta_url: https://www.val.town/pricing
+  - name: Teams
+    price: 166.67
+    unit: /month annual
+    billing: monthly
+    description: Collaboration and production use
+    features:
+      - $100 Townie AI credit monthly
+      - Unlimited custom domains
+      - 5 million runs/day
+      - Team accounts
+      - Slack Connect integration
+    cta_url: https://www.val.town/pricing
+  - name: Enterprise
+    price: Custom
+    billing: monthly
+    description: Advanced needs and scale
+    features:
+      - Flexible Townie AI credits
+      - No usage limits
+      - Log export capability
+      - SOC 2 compliance
+      - Custom support
+    cta_url: https://www.val.town/pricing
+
+paid_tier_highlights:
+  - Pro at $8.33/mo (annual) for unlimited private vals
+  - Teams at $166.67/mo enables 5M runs/day and team accounts
+  - $5–$100 monthly Townie AI credit included with paid plans
+  - 1-minute cron intervals and 10-minute wall clock on Pro+
+  - Enterprise tier offers SOC 2 compliance and log export
 
 tags: []
 
@@ -25,4 +76,4 @@ pricing_url: https://www.val.town/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

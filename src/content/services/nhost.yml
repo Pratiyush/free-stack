@@ -14,9 +14,62 @@ free_tier:
   - '1 active project per org, pauses after 1 week of inactivity; reactivates instantly'
 
 pricing:
-  - name: Free
+  - name: Starter
     price: 0
     unit: /month
+    billing: free
+    description: Get your idea off the ground for free
+    features:
+      - 1 GB database
+      - 1 GB storage
+      - 5 GB egress
+      - Functions & Realtime APIs
+      - Unlimited users
+      - Community support
+    cta_url: https://app.nhost.io
+  - name: Pro
+    price: 25
+    unit: /month
+    billing: monthly
+    description: Production applications, scale as needed
+    features:
+      - 10 GB database
+      - 50 GB storage
+      - 50 GB egress
+      - Automated backups & PITR
+      - Managed Grafana metrics
+      - Email support
+    cta_url: https://app.nhost.io
+  - name: Team
+    price: 599
+    unit: /month
+    billing: monthly
+    description: Collaborate with added support
+    features:
+      - SOC 2 Type II compliance
+      - Email support SLA
+      - Dedicated Discord channel
+      - Connect external databases
+      - Advanced GraphQL features
+    cta_url: https://app.nhost.io
+  - name: Enterprise
+    price: Custom
+    billing: annual
+    description: Custom infrastructure and 24x7 support
+    features:
+      - SLAs
+      - Dedicated technical account manager
+      - Dedicated clusters (add-on)
+      - Custom infrastructure
+      - 24x7x365 support
+    cta_url: mailto:hello@nhost.io
+
+paid_tier_highlights:
+  - Automated daily backups and PITR on Pro+
+  - SOC 2 Type II compliance and SLAs on Team+
+  - Higher resource limits with pay-as-you-grow overages
+  - Managed Grafana metrics and alerting on Pro+
+  - Dedicated TAM and 24x7 support on Enterprise
 
 tags: []
 
@@ -25,4 +78,4 @@ pricing_url: https://nhost.io/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

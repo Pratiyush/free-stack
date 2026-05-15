@@ -14,9 +14,48 @@ free_tier:
   - 'Free until $2,500/mo tracked revenue (gross, before store cut); then 1% of MTR'
 
 pricing:
-  - name: Free
+  - name: Pro
     price: 0
-    unit: /month
+    unit: under $2.5K MTR
+    billing: usage-based
+    description: Free up to $2,500 MTR, then 1% of tracked revenue
+    features:
+      - Open-source SDKs for all platforms
+      - Unified subscription backend
+      - A/B testing with remote config
+      - Native paywall editor
+      - Pre-built MMP integrations
+      - 40+ success metrics dashboard
+    cta_url: https://www.revenuecat.com/pricing/
+  - name: Growth Tools
+    price: 1
+    unit: '% of MTR on conversions'
+    billing: usage-based
+    description: Standalone paywalls, web-to-app funnels, A/B testing
+    features:
+      - Paywall builder with templates
+      - Web-to-app funnel creation
+      - A/B/n testing
+      - Works alongside existing IAP
+      - Pay only for conversions tracked
+    cta_url: https://www.revenuecat.com/pricing/
+  - name: Enterprise
+    price: Custom
+    billing: annual
+    description: Volume-based pricing for high-volume apps
+    features:
+      - Volume discounts
+      - Flexible tracking configurations
+      - Dedicated support
+      - Custom SLAs
+      - Custom integrations
+    cta_url: https://www.revenuecat.com/pricing/
+
+paid_tier_highlights:
+  - Pro tier free under $2,500 MTR; 1% of tracked revenue beyond
+  - Growth Tools charged at 1% of MTR on conversions only
+  - Enterprise adds volume discounts and dedicated support
+  - All tiers include paywall editor and A/B testing
 
 tags: []
 

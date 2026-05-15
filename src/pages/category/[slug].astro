@@ -2,6 +2,8 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import ServiceCard from '~/components/ui/ServiceCard.astro';
+import ServiceTable from '~/components/ui/ServiceTable.astro';
+import ViewToggle from '~/components/ui/ViewToggle.astro';
 import {
   SUBCATEGORY_LABELS,
   SUBCATEGORY_BLURBS,
@@ -54,25 +56,37 @@ const sections = SUBCATEGORY_ORDER.map((key) => ({
       <p class="lede">{category.data.blurb}</p>
     </header>
 
+    {services.length === 0 && <p class="empty">No services in this category yet.</p>}
+
     {
-      services.length === 0 ? (
-        <p class="empty">No services in this category yet.</p>
-      ) : (
-        sections.map((section) => (
-          <section class="subcat-section" aria-labelledby={`subcat-${section.key}`}>
-            <header class="subcat-head">
-              <h2 id={`subcat-${section.key}`}>
-                {section.label} <span class="subcat-count">({section.services.length})</span>
-              </h2>
-              <p class="subcat-blurb">{section.blurb}</p>
-            </header>
-            <div class="grid">
-              {section.services.map((s) => (
-                <ServiceCard service={s} categoryName={category.data.name} />
-              ))}
-            </div>
-          </section>
-        ))
+      services.length > 0 && (
+        <>
+          <div class="view-row">
+            <ViewToggle />
+          </div>
+
+          <div data-view="grid">
+            {sections.map((section) => (
+              <section class="subcat-section" aria-labelledby={`subcat-${section.key}`}>
+                <header class="subcat-head">
+                  <h2 id={`subcat-${section.key}`}>
+                    {section.label} <span class="subcat-count">({section.services.length})</span>
+                  </h2>
+                  <p class="subcat-blurb">{section.blurb}</p>
+                </header>
+                <div class="grid">
+                  {section.services.map((s) => (
+                    <ServiceCard service={s} categoryName={category.data.name} />
+                  ))}
+                </div>
+              </section>
+            ))}
+          </div>
+
+          <div data-view="table" hidden>
+            <ServiceTable services={services} categoryName={category.data.name} />
+          </div>
+        </>
       )
     }
   </section>
@@ -140,6 +154,11 @@ const sections = SUBCATEGORY_ORDER.map((key) => ({
       color: var(--color-ink-soft);
       max-width: 65ch;
       font-size: 0.95rem;
+    }
+    .view-row {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: var(--space-md);
     }
     .grid {
       display: grid;

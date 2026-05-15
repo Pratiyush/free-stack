@@ -14,9 +14,47 @@ free_tier:
   - 5 req/sec on Limited; higher on Base/Freemium
 
 pricing:
-  - name: Free
+  - name: Limited
     price: 0
     unit: /month
+    billing: free
+    description: No credit card required, ideal for prototypes
+    features:
+      - 1,000 transactions/day
+      - 5 requests/second rate limit
+      - Access to Maps, Routing, Geocoding APIs
+      - Community forum support
+      - No credit card required
+    cta_url: https://platform.here.com/sign-up
+  - name: Base
+    price: 0
+    unit: /month
+    billing: usage-based
+    description: Credit card on file unlocks higher monthly free quota
+    features:
+      - 30,000 transactions/month free
+      - Pay-as-you-go above quota
+      - All Maps, Routing, Geocoding, Traffic APIs
+      - Higher rate limits than Limited
+      - Credit card required
+    cta_url: https://platform.here.com/sign-up
+  - name: Pro
+    price: Custom
+    billing: annual
+    description: Volume-discounted enterprise plan with SLA
+    features:
+      - 250K+ transactions/month included
+      - Volume-tiered pricing
+      - SLA-backed availability
+      - Premium developer support
+      - Bulk geocoding and routing
+    cta_url: https://www.here.com/contact
+
+paid_tier_highlights:
+  - Base plan adds pay-as-you-go past 30K free monthly transactions
+  - Pro/Custom plans negotiate volume discounts and SLAs with HERE sales
+  - Free Limited tier has no credit card requirement; capped at 1K/day
+  - Higher request-per-second rates require Base or above
 
 tags: []
 
@@ -25,4 +63,4 @@ pricing_url: https://www.here.com/get-started/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

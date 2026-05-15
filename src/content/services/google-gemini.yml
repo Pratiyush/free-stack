@@ -20,9 +20,51 @@ pricing:
   - name: Free
     price: 0
     unit: /month
-  - name: Paid
-    description: Per 1M tokens
-    price: '$0.075 / $0.30+'
+    billing: free
+    description: Always-free tier with Pro, Flash, and Flash-Lite access
+    cta_url: https://ai.google.dev/pricing
+    features:
+      - 2.5 Pro 100 RPD, 5 RPM
+      - Flash 250 RPD, 10 RPM
+      - Flash-Lite 1,000 RPD, 15 RPM
+      - 250K TPM shared
+      - 1M context window
+  - name: Tier 1 (Paid)
+    price: Usage
+    billing: usage-based
+    description: Pay-per-token after enabling billing; $250 spend cap
+    cta_url: https://ai.google.dev/pricing
+    features:
+      - Pro $1.25 in / $10 out per 1M tokens
+      - Flash $0.30 in / $2.50 out per 1M tokens
+      - Flash-Lite $0.10 in / $0.40 out per 1M tokens
+      - 50% off via Batch API
+      - Context caching at reduced rates
+  - name: Tier 2
+    price: Usage
+    billing: usage-based
+    description: $100 spent + 3 days; $2,000 cap; higher limits
+    cta_url: https://ai.google.dev/pricing
+    features:
+      - Higher RPM/TPM/RPD
+      - Same per-token prices
+      - $2,000 spend cap
+  - name: Tier 3
+    price: Usage
+    billing: usage-based
+    description: $1,000 spent + 30 days; $20K-$100K+ cap
+    cta_url: https://ai.google.dev/pricing
+    features:
+      - Top tier rate limits
+      - Batch enqueue up to 5B tokens
+      - Highest spend cap
+      - Priority capacity access
+
+paid_tier_highlights:
+  - Tier 1 unlocks per-token pricing — Pro $1.25/$10 per 1M
+  - Tier 2 and Tier 3 unlock higher rate limits after spend thresholds
+  - Batch API gives 50% discount on output
+  - Context caching reduces costs on long-prompt workloads
 
 tags: [llm, ai, gemini, google, api]
 

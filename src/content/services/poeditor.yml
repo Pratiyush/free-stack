@@ -19,6 +19,71 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    description: 1,000 strings, unlimited projects, 5 contributors
+    features:
+      - 1,000 strings limit
+      - Unlimited projects
+      - Up to 5 contributors
+      - Translation Memory & History
+      - Basic API and Git integrations
+    cta_url: https://poeditor.com/register/
+    billing: free
+  - name: Start
+    price: 20
+    unit: /month
+    description: 3,000 strings; for integrators building workflows
+    features:
+      - 3,000 strings
+      - Unlimited projects
+      - API access
+      - Git integrations
+      - Slack & Teams integrations
+    cta_url: https://poeditor.com/login/?plan=3
+    billing: monthly
+  - name: Plus
+    price: 60
+    unit: /month
+    description: 10,000 strings; data insights and analytics
+    features:
+      - 10,000 strings
+      - Unlimited projects and contributors
+      - AI translation support
+      - Custom workflows
+      - Glossary management
+      - Audit logs and webhooks
+    cta_url: https://poeditor.com/login/?plan=4
+    billing: monthly
+  - name: Premium
+    price: 160
+    unit: /month
+    description: 30,000 strings; automation-focused teams
+    features:
+      - 30,000 strings
+      - All Plus features
+      - Advanced API capabilities
+      - SSO support
+      - Priority support
+    cta_url: https://poeditor.com/login/?plan=5
+    billing: monthly
+  - name: Enterprise
+    price: 260
+    unit: /month
+    description: 100,000 strings; multi-region scaling
+    features:
+      - 100,000 strings
+      - All Premium features
+      - Custom integrations
+      - Dedicated account management
+      - Custom SLAs
+    cta_url: https://poeditor.com/contact/
+    billing: monthly
+
+paid_tier_highlights:
+  - Free plan caps at 1,000 strings with unlimited projects and 5 contributors
+  - Start $20/mo for 3,000 strings; Plus $60/mo for 10,000 strings + AI translation
+  - Premium $160/mo unlocks SSO and 30,000 strings
+  - Enterprise $260/mo for 100,000 strings, custom integrations, SLAs
+  - OSI open-source projects are free with no limits (apply via project settings)
 
 tags: []
 

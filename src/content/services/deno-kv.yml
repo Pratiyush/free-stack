@@ -13,10 +13,53 @@ free_tier:
   - 'Free with Deno Deploy (key-value)'
   - 'Shared with Deno Deploy free tier (15 CPU-hours/mo)'
 
+paid_tier_highlights:
+  - Pro at $20/mo lifts to 5GB KV with 1.3M reads / 900K writes
+  - Builder at $200/mo includes 10 GiB KV with 5M reads / 3M writes
+  - Overage at $0.75/GiB storage, $1/M reads, $2.50/M writes
+  - Enterprise tier offers custom allocations
+  - KV is automatically global, low-latency, ACID-compliant
+
 pricing:
   - name: Free
     price: 0
     unit: /month
+    description: Free KV storage with Deno Deploy Free
+    features:
+      - 1 GiB KV storage
+      - 450K KV read units/mo
+      - 300K KV write units/mo
+      - Shared with Deno Deploy free tier
+      - Auto-global, low-latency
+    billing: free
+  - name: Pro
+    price: 20
+    unit: /month
+    description: Higher KV limits via Deno Deploy Pro
+    features:
+      - 5GB KV storage (then $0.75/GiB)
+      - 1.3M KV read units/mo
+      - 900K KV write units/mo
+      - Includes Pro Deno Deploy quotas
+    billing: monthly
+  - name: Builder
+    price: 200
+    unit: /month
+    description: Subhosting-scale KV via Deno Deploy Builder
+    features:
+      - 10 GiB KV storage (then $0.75/GiB)
+      - 5M KV read units/mo
+      - 3M KV write units/mo
+      - Includes Builder Deno Deploy quotas
+    billing: monthly
+  - name: Enterprise
+    price: Custom
+    description: Custom KV allocations with SLA
+    features:
+      - Custom storage and request units
+      - 99.95% reliability SLA
+      - Dedicated support
+    billing: annual
 
 tags: []
 
@@ -25,4 +68,4 @@ pricing_url: https://deno.com/deploy/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

@@ -17,6 +17,56 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    billing: free
+    description: Free forever for small teams up to 10 users
+    features:
+      - Up to 10 users
+      - Unlimited projects, boards, backlogs
+      - 2 GB file storage
+      - Community support
+      - Scrum, Kanban, agile reporting
+    cta_url: https://www.atlassian.com/software/jira/free
+  - name: Standard
+    price: 7.53
+    unit: /user/month
+    billing: monthly
+    description: For growing teams needing more storage and roles
+    features:
+      - Up to 50,000 users
+      - 250 GB file storage
+      - User roles and permissions
+      - Audit logs
+      - 9 hour/5 day support
+    cta_url: https://www.atlassian.com/software/jira/pricing
+  - name: Premium
+    price: 13.53
+    unit: /user/month
+    billing: monthly
+    description: For organizations needing scale, automation, and IP allowlists
+    features:
+      - Advanced roadmaps and dependencies
+      - Project archiving and sandbox
+      - Unlimited storage
+      - 99.9% uptime SLA
+      - 24/7 Premium support
+    cta_url: https://www.atlassian.com/software/jira/pricing
+  - name: Enterprise
+    price: Custom
+    billing: annual
+    description: Global-scale Jira with SAML, audit, and 99.95% SLA
+    features:
+      - Unlimited automation runs
+      - SAML SSO and SCIM provisioning
+      - 99.95% uptime SLA
+      - 24/7 Enterprise support
+      - Atlassian Access included
+    cta_url: https://www.atlassian.com/enterprise
+
+paid_tier_highlights:
+  - Standard at $7.53/user/mo lifts 10-user cap to 50K and adds roles
+  - Premium at $13.53/user/mo adds advanced roadmaps and 99.9% SLA
+  - Enterprise adds SAML SSO, SCIM, and 99.95% uptime guarantee
+  - 24/7 support requires Premium or above
 
 tags: []
 
@@ -25,4 +75,4 @@ pricing_url: https://www.atlassian.com/software/jira/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

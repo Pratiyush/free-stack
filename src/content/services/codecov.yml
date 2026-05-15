@@ -13,10 +13,57 @@ free_tier:
   - Free for up to 5 users; unlimited public repos
   - No documented rate limits
 
+paid_tier_highlights:
+  - Team ($5/user/mo) scales to 10 users, 2,500 monthly uploads
+  - Pro ($12/user/mo) gives unlimited uploads and flaky-test detection
+  - Bundle analysis with size detection across all paid tiers
+  - Enterprise adds dedicated cloud, OKTA, IP allowlisting
+  - Sentry integration support starts in Team plan
+
 pricing:
-  - name: Free
+  - name: Developer
     price: 0
     unit: /month
+    description: Basic coverage tracking for individual developers
+    features:
+      - 1 max user (unlimited for open source)
+      - 250 private repo uploads/month
+      - PR comments and status checks
+      - Bundle analysis with size detection
+      - Failed test reporting
+    billing: free
+  - name: Team
+    price: 5
+    unit: /user/month
+    description: Small teams up to 10 members needing collaborative coverage
+    features:
+      - Up to 10 max users
+      - 2,500 private repo uploads/month
+      - PR comments, status checks, API access
+      - Sentry integration support
+      - Email support
+    billing: monthly
+  - name: Pro
+    price: 12
+    unit: /user/month
+    description: Unlimited uploads and advanced segmentation for any team size
+    features:
+      - Unlimited users
+      - Unlimited private and public uploads
+      - Flags, components, carryforward flags
+      - Complete bundle analysis capabilities
+      - Flaky test detection included
+    billing: monthly
+  - name: Enterprise
+    price: Custom
+    description: Dedicated infrastructure, premium support, compliance
+    features:
+      - Custom user limits
+      - Dedicated cloud hosting option
+      - Faster processing
+      - OKTA login and IP allowlisting
+      - Sr. Solutions Architect access
+    billing: annual
 
 tags: []
 
@@ -25,4 +72,4 @@ pricing_url: https://about.codecov.io/pricing/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

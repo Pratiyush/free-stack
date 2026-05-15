@@ -14,9 +14,47 @@ free_tier:
   - '75 req/sec, 15 parallel connections; no cold starts, no inactivity pausing'
 
 pricing:
-  - name: Free
+  - name: Open Source
     price: 0
-    unit: /month
+    billing: free
+    description: Self-host on Kubernetes, free forever
+    features:
+      - Deploy on Kubernetes
+      - Copy-on-Write branches
+      - Scale-to-zero compute
+      - Community support
+      - All Xata features
+    cta_url: https://xata.io/docs/self-hosted/
+  - name: Standard
+    price: 0.012
+    unit: per hour compute
+    billing: usage-based
+    description: Hourly compute + monthly storage; for scaling teams
+    features:
+      - Instant Copy-on-Write branches
+      - Scale-to-zero compute
+      - Data anonymization/masking
+      - Advanced observability
+      - Standard support
+    cta_url: https://xata.io/pricing
+  - name: Enterprise
+    price: Custom
+    billing: monthly
+    description: Tailored deployments and BYOC
+    features:
+      - Deploy in your cloud (BYOC)
+      - White-label option
+      - Flexible pricing
+      - Dedicated Solution Architect
+      - Priority support
+    cta_url: https://xata.io/contact
+
+paid_tier_highlights:
+  - Standard plan starts at $0.012/hour compute + storage
+  - Storage from $0.17/GB/mo (general) to $0.30/GB/mo (premium NVMe)
+  - Enterprise offers Bring-Your-Own-Cloud deployments
+  - White-label option for platform providers on Enterprise
+  - Open Source edition for self-hosting on Kubernetes
 
 tags: []
 
@@ -25,4 +63,4 @@ pricing_url: https://xata.io/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

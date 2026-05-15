@@ -20,10 +20,69 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    billing: free
+    description: Light usage allowance, no credit card
+    features:
+      - Daily and weekly usage allowance
+      - Tab and previews access
+      - Knowledge base access
+      - All premium models supported
+      - No credit card required
+    cta_url: https://windsurf.com/download
   - name: Pro
-    description: Standard usage at API price; unlimited
     price: 20
     unit: /month
+    billing: monthly
+    description: Standard usage at API price, unlimited
+    features:
+      - Standard usage allowance at API price
+      - Unlimited extra usage
+      - Tab and preview features
+      - Deploy capabilities
+      - Fast Context feature
+    cta_url: https://windsurf.com/pricing
+  - name: Teams
+    price: 40
+    unit: /user/month
+    billing: monthly
+    description: For teams with centralized billing & admin dashboard
+    features:
+      - Standard usage at API price
+      - Unlimited extra usage
+      - Centralized billing
+      - Admin dashboard with analytics
+      - Priority support
+    cta_url: https://windsurf.com/pricing
+  - name: Max
+    price: 200
+    unit: /month
+    billing: monthly
+    description: Heavy usage allowance and Devin Cloud agents
+    features:
+      - Heavy usage at API price
+      - Unlimited extra usage
+      - Access to Devin Cloud agents
+      - SWE-1.5 model access
+      - All features included
+    cta_url: https://windsurf.com/pricing
+  - name: Enterprise
+    price: Custom
+    billing: monthly
+    description: Unlimited usage, RBAC, SSO, volume discounts
+    features:
+      - Unlimited usage
+      - RBAC and SSO access control
+      - Volume-based discounts
+      - Hybrid deployment option
+      - Account management
+    cta_url: https://windsurf.com/enterprise
+
+paid_tier_highlights:
+  - Pro at $20/mo unlocks unlimited usage at API pricing
+  - Teams at $40/user/mo adds admin dashboard and centralized billing
+  - Max at $200/mo provides Devin Cloud agents and SWE-1.5 access
+  - Enterprise offers RBAC, SSO, and hybrid deployment
+  - All paid plans deliver unlimited extra usage at API price
 
 tags: [ide, ai-coding, agents, code-assistant, cascade]
 

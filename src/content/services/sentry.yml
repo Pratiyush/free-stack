@@ -12,9 +12,62 @@ free_tier:
   - Developer (free)
 
 pricing:
-  - name: Free
+  - name: Developer
     price: 0
     unit: /month
+    billing: free
+    description: For solo devs on small projects
+    features:
+      - 1 user
+      - Error Monitoring and Tracing
+      - 5K errors, 5GB logs, 5M spans
+      - 50 session replays
+      - 10 custom dashboards
+      - Email alerts
+    cta_url: https://sentry.io/pricing/
+  - name: Team
+    price: 26
+    unit: /month
+    billing: annual
+    description: Monitor application as it scales; billed annually
+    features:
+      - Unlimited users
+      - 50K errors included
+      - Third-party integrations
+      - 20 custom dashboards
+      - 20 metric monitors
+      - Up to 90-day lookback
+    cta_url: https://sentry.io/pricing/
+  - name: Business
+    price: 80
+    unit: /month
+    billing: annual
+    description: For teams needing more powerful debugging
+    features:
+      - Unlimited custom dashboards
+      - 1,000 metric monitors with anomaly detection
+      - Advanced quota management
+      - SAML and SCIM support
+      - 90-day sampled retention
+      - Cross-project issue tracking
+    cta_url: https://sentry.io/pricing/
+  - name: Enterprise
+    price: Custom
+    billing: annual
+    description: For orgs with advanced needs
+    features:
+      - Technical account manager
+      - Custom data retention
+      - BAA, HIPAA, SOC2, ISO 27001
+      - Data residency options
+      - Premium customer success
+    cta_url: https://sentry.io/pricing/
+
+paid_tier_highlights:
+  - Team ($26/mo) adds unlimited users and 50K errors
+  - Business ($80/mo) unlocks SAML/SCIM and unlimited dashboards
+  - Business adds anomaly detection on metric monitors
+  - Enterprise brings HIPAA, SOC2, ISO 27001, data residency
 
 tags: []
 
@@ -23,4 +76,4 @@ pricing_url: https://sentry.io/pricing/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

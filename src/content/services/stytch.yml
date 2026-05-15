@@ -16,12 +16,38 @@ free_tier:
   - Overage billing at usage rates
 
 pricing:
-  - name: Free
+  - name: Pay as You Go
     price: 0
     unit: /month
-  - name: Growth
-    price: 99
-    unit: /month
+    description: Usage-based billing starting at $0; 10K MAU free
+    billing: usage-based
+    features:
+      - 10,000 monthly active users included
+      - Unlimited organizations
+      - 5 SSO or SCIM connections included
+      - 1,000 M2M tokens included
+      - Full authn and authz feature suite
+      - Pre-built UI components
+    cta_url: https://stytch.com/dashboard
+  - name: Enterprise
+    price: Custom
+    description: Discounted rates, enterprise SLA, HIPAA-ready
+    billing: annual
+    features:
+      - Discounted rates on usage
+      - Enterprise support SLA
+      - Private support Slack channel
+      - 99.99% uptime SLA
+      - HIPAA/BAA compliance available
+      - Migration support
+    cta_url: https://stytch.com/contact/sales
+
+paid_tier_highlights:
+  - Pay-as-you-go after 10K MAU — no fixed monthly minimum
+  - Add-on email customization + brand removal $99/mo
+  - Fraud & risk prevention $0.005 per fingerprint (10K free)
+  - Additional SSO/SCIM connections $125/connection
+  - Enterprise unlocks 99.99% SLA + HIPAA/BAA
 
 tags: [authentication, mfa, sso, identity, passwordless]
 

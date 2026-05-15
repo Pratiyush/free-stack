@@ -14,9 +14,63 @@ free_tier:
   - '15-day full-feature trial; open-source must have no funding/revenue/commercialization'
 
 pricing:
-  - name: Free
+  - name: Open-Source / Free
     price: 0
     unit: /month
+    description: Free for qualifying OSS only; 15-day trial otherwise
+    billing: free
+    features:
+      - Qualifying open-source projects only
+      - 15-day full-feature trial for others
+      - Unlimited projects and files
+      - Translation Memory
+      - Online editor + collaboration tools
+    cta_url: https://app.transifex.com/signup/
+  - name: Starter
+    price: 135
+    unit: /month (annual, from)
+    description: Essentials for individuals + small teams
+    billing: annual
+    features:
+      - Unlimited projects and files
+      - Translation Memory
+      - Machine translation support
+      - Online editor + collaboration
+      - Git, Figma, Zendesk integrations
+      - API, SDKs, CLI, webhooks
+    cta_url: https://app.transifex.com/signup/
+  - name: Growth
+    price: 200
+    unit: /month (annual, from)
+    description: For scaling teams; AI words included
+    billing: annual
+    features:
+      - Everything in Starter
+      - 60,000 AI words/year (annual)
+      - Advanced editor capabilities
+      - Advanced Translation Memory
+      - Context via screenshots
+      - Search across projects
+      - Glossary support
+    cta_url: https://app.transifex.com/signup/
+  - name: Enterprise+
+    price: Custom
+    description: All features, dedicated support, enhanced security
+    billing: annual
+    features:
+      - Everything in Growth
+      - 300,000 AI words/year (annual)
+      - Enterprise Translation Memory Suite
+      - Next-level QA
+      - Enhanced security
+      - Extended support + business reviews
+    cta_url: https://www.transifex.com/talk-to-sales
+
+paid_tier_highlights:
+  - Starter from $135/mo (annual) unlocks integrations + Translation Memory
+  - Growth from $200/mo (annual) adds 60K AI words/year
+  - Enterprise+ includes 300K AI words/year + dedicated support
+  - Free tier restricted to qualifying open-source projects only
 
 tags: []
 
@@ -25,4 +79,4 @@ pricing_url: https://www.transifex.com/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

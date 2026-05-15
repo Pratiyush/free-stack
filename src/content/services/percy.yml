@@ -19,10 +19,31 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    description: 5K screenshots/mo, cross-browser, 30-day build history
+    features:
+      - 5K screenshots/month
+      - Unlimited users and projects
+      - Cross-browser testing
+      - 30-day build history
+    cta_url: https://percy.io/signup
+    billing: free
   - name: Unlimited
-    description: Unlimited screenshots
     price: 269
     unit: /month
+    description: Unlimited screenshots for visual regression testing
+    features:
+      - Unlimited screenshots
+      - Cross-browser testing
+      - Unlimited users and projects
+      - Extended build history
+    cta_url: https://percy.io/signup
+    billing: monthly
+
+paid_tier_highlights:
+  - Free 5K screenshots/mo with unlimited users and projects
+  - Unlimited paid tier $269/mo removes screenshot cap
+  - Cross-browser visual testing on Chromium, Firefox, WebKit
+  - Pricing page is JS-rendered; figures sourced from prior YAML (pricing_url returned 404 during verify)
 
 tags: [visual-testing, regression, screenshots, testing, browserstack]
 

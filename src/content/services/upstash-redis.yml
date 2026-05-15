@@ -19,9 +19,57 @@ pricing:
   - name: Free
     price: 0
     unit: /month
-  - name: Pay-as-you-go
-    description: $0.30/GB storage + per-command
-    price: 'Usage'
+    billing: free
+    description: For prototypes and hobby projects
+    features:
+      - 256 MB data size
+      - 500K monthly commands
+      - 1 database
+      - TLS encryption
+      - Community support
+    cta_url: https://console.upstash.com/
+  - name: Pay as You Go
+    price: 0.2
+    unit: per 100K commands
+    billing: usage-based
+    description: Flexible pricing for variable traffic
+    features:
+      - 100 GB data size
+      - Unlimited monthly bandwidth
+      - Up to 100 databases
+      - REST API access
+      - IP allowlist and ACL security
+    cta_url: https://upstash.com/pricing/redis
+  - name: Fixed (Pro)
+    price: 10
+    unit: /month base
+    billing: monthly
+    description: Predictable cost; no per-command pricing
+    features:
+      - 250 MB to 500 GB data options
+      - 50 GB monthly bandwidth included
+      - Multi-zone high availability
+      - Primary-replica configuration
+      - Email support
+    cta_url: https://upstash.com/pricing/redis
+  - name: Enterprise
+    price: Custom
+    billing: monthly
+    description: For businesses with advanced infrastructure needs
+    features:
+      - 100K+ commands per second capacity
+      - Unlimited bandwidth and databases
+      - Dedicated resources
+      - HIPAA compliance
+      - Professional support with SLA
+    cta_url: https://upstash.com/enterprise
+
+paid_tier_highlights:
+  - Pay-as-you-go at $0.2 per 100K commands, scales to 100 GB
+  - Fixed Pro plans from $10/mo with predictable costs
+  - Multi-zone HA and primary-replica on Fixed plans
+  - Enterprise tier offers dedicated resources & HIPAA compliance
+  - Unlimited bandwidth on PAYG and Enterprise
 
 tags: [redis, cache, serverless, key-value-store, database]
 

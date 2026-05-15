@@ -15,9 +15,37 @@ free_tier:
   - 20 RPM
 
 pricing:
-  - name: Free
+  - name: Free models
     price: 0
     unit: /month
+    billing: free
+    description: 29+ free models with rate limits
+    features:
+      - DeepSeek V3/R1, Llama, Qwen3 Coder 480B
+      - 50 requests/day per model (free credits)
+      - 20 RPM rate limit
+      - Models marked with ":free" suffix
+      - $0/M input and output tokens
+    cta_url: https://openrouter.ai/
+  - name: Pay-as-you-go credits
+    price: Usage
+    billing: usage-based
+    description: Prepaid credits for premium models
+    features:
+      - 400+ models from 60+ providers
+      - OpenAI SDK compatible
+      - Dynamic per-model pricing
+      - No subscription required
+      - Credits work across all models
+      - Minimum $10 credit purchase
+    cta_url: https://openrouter.ai/credits
+
+paid_tier_highlights:
+  - Pay-as-you-go credits unlock 400+ premium models
+  - No subscription - only pay for what you use
+  - OpenAI SDK works out of the box
+  - Higher daily free model quota for users with $10+ in credits
+  - Credit-based system works across any model or provider
 
 tags: []
 
@@ -26,4 +54,4 @@ pricing_url: https://openrouter.ai/collections/free-models
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

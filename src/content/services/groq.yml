@@ -20,9 +20,43 @@ pricing:
   - name: Free
     price: 0
     unit: /month
-  - name: Usage-based
-    description: Higher limits
-    price: 'Usage'
+    billing: free
+    description: 14.4K req/day across models, no credit card required
+    cta_url: https://console.groq.com/docs/rate-limits
+    features:
+      - 14,400 requests/day (varies by model)
+      - 500K tokens/day for some models
+      - 30 RPM per model (varies)
+      - All models available
+      - No credit card required
+  - name: Pay-as-you-go
+    price: Usage
+    billing: usage-based
+    description: Per-token pricing on Llama, GPT-OSS, Qwen, Whisper, Orpheus
+    cta_url: https://groq.com/pricing/
+    features:
+      - Llama 3.1 8B $0.05 in / $0.08 out per 1M
+      - Llama 3.3 70B $0.59 in / $0.79 out per 1M
+      - GPT-OSS 120B $0.15 in / $0.60 out per 1M
+      - 50% off cached input tokens
+      - 50% off via Batch API
+      - Whisper $0.04-$0.111/hr transcribed
+  - name: Enterprise
+    price: Custom
+    description: Volume pricing with dedicated capacity and SLA
+    cta_url: https://groq.com/pricing/
+    features:
+      - Custom rate limits
+      - Dedicated capacity
+      - SLA-backed support
+      - Higher security guarantees
+      - Volume discounts
+
+paid_tier_highlights:
+  - Pay-as-you-go starts at $0.05 in / $0.08 out per 1M (Llama 3.1 8B)
+  - Prompt caching gives 50% discount on cached input tokens
+  - Batch API offers 50% cost reduction
+  - Enterprise tier available for volume pricing and SLA
 
 tags: [llm, ai, inference, api, fast]
 

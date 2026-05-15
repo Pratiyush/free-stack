@@ -17,6 +17,59 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    billing: free
+    description: Solo developers and passion projects
+    features:
+      - 15 Android and 15 iOS builds/month
+      - Low-priority build queue
+      - 60 minutes of CI/CD Workflows
+      - Submit to app stores
+      - Updates to 1K MAUs
+      - Access to Launch
+    cta_url: https://expo.dev/signup
+  - name: Starter
+    price: 19
+    unit: /month
+    billing: monthly
+    description: Ready-to-launch apps with high-priority builds
+    features:
+      - $45 of build credit included
+      - High-priority queue
+      - Access to large workers
+      - Updates to 3K MAUs
+      - Usage-based CI/CD pricing
+      - Custom domain per project
+    cta_url: https://expo.dev/signup
+  - name: Production
+    price: 199
+    unit: /month
+    billing: monthly
+    description: Teams shipping production apps with SSO and priority support
+    features:
+      - $225 of build credit included
+      - 2 included concurrencies
+      - Updates to 50K MAUs
+      - 10 environment-variable environments
+      - Priority support
+      - SSO and 1 TiB storage/bandwidth
+    cta_url: https://expo.dev/signup
+  - name: Enterprise
+    price: Custom
+    description: Apps with scale, security, and compliance needs
+    features:
+      - $1,000+ of build credit
+      - 5 included concurrencies
+      - Updates to 1M+ MAUs
+      - CI/CD Workflows insights
+      - 99.9% uptime SLA
+      - Strategic and Slack support add-ons
+    cta_url: https://expo.dev/contact
+
+paid_tier_highlights:
+  - Starter at $19/mo adds $45 build credit and priority queue
+  - Production at $199/mo adds SSO and 50K MAU updates
+  - Enterprise scales to 1M+ MAUs with 99.9% SLA
+  - Build credit, concurrencies, and storage grow with each tier
 
 tags: []
 
@@ -25,4 +78,4 @@ pricing_url: https://expo.dev/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

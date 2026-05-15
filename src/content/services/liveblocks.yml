@@ -17,6 +17,57 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    billing: free
+    description: For personal projects and prototyping; no credit card
+    features:
+      - 500 monthly active rooms (max)
+      - 256 MB realtime storage
+      - 512 MB file storage
+      - 24 hours version history
+      - 3 team seats included
+    cta_url: https://liveblocks.io/dashboard/signup
+  - name: Pro
+    price: 30
+    unit: /month
+    billing: monthly
+    description: For independent developers and small teams shipping commercial apps
+    features:
+      - 500 included monthly active rooms; $0.03/room overage
+      - 8 GB realtime storage included
+      - 100 GB file storage included
+      - Remove Liveblocks branding option
+      - Up to 50 simultaneous connections per room
+    cta_url: https://liveblocks.io/pricing
+  - name: Team
+    price: 600
+    unit: /month
+    billing: monthly
+    description: For teams needing SSO, compliance, and expanded seats
+    features:
+      - 500 included rooms; $0.03/room overage
+      - SOC 2 and HIPAA compliance support
+      - SAML single sign-on
+      - 10 team seats included
+      - 100 max simultaneous connections per room
+    cta_url: https://liveblocks.io/pricing
+  - name: Enterprise
+    price: Custom
+    billing: annual
+    description: Volume discounts, multi-region, and customized infrastructure
+    features:
+      - Custom monthly active rooms and configurations
+      - Multi-region hosting support
+      - Management API, SCIM and directory sync
+      - Advanced permissions and volume discounts
+      - 100 max simultaneous connections per room
+    cta_url: https://liveblocks.io/contact/sales
+
+paid_tier_highlights:
+  - Pro at $30/mo unlocks 8 GB realtime storage and branding removal
+  - Team at $600/mo adds SAML SSO, SOC 2/HIPAA, and 10 seats
+  - Overage at $0.03 per monthly active room beyond 500 included
+  - Enterprise adds multi-region hosting, SCIM, and volume discounts
+  - All paid tiers include usage-based overage billing
 
 tags: []
 
@@ -25,4 +76,4 @@ pricing_url: https://liveblocks.io/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

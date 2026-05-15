@@ -10,13 +10,55 @@ summary: Permanent free tier (30+ services)
 tier_type: free-plan
 
 free_tier:
-  - Permanent free tier (30+ services)
-  - 'No free compute (EC2) on always-free tier; EC2 t2.micro is 12-month trial only'
+  - Permanent free tier across 30+ services
+  - 'Lambda: 1M requests + 400K GB-sec compute per month'
+  - 'DynamoDB: 25 GB storage + 25 read/write capacity units'
+  - 'CloudFront: 1 TB egress and 10M requests/month'
+  - 'CloudWatch: 10 custom metrics, 1M API requests'
+  - 'No free compute (EC2) on Always Free; EC2 free is 12-month trial only'
+
+paid_tier_highlights:
+  - 'Pay-as-you-go pricing applies after Always Free quotas exceeded'
+  - 'New AWS accounts (post-Jul 2025) get $200 Free Plan credits for 6 months'
+  - '12-month free tier separately covers EC2 t2.micro, RDS, S3 5 GB'
+  - 'Paid Plan unlocks 150+ AWS services beyond the always-free 30+'
+  - 'Enterprise Support adds dedicated TAM, infrastructure event management'
 
 pricing:
-  - name: Free
+  - name: Always Free
     price: 0
-    unit: /month
+    billing: free
+    description: 30+ services with permanent monthly free quotas
+    features:
+      - Lambda 1M requests + 400K GB-sec/month
+      - DynamoDB 25 GB + 25 RCU/WCU
+      - CloudFront 1 TB egress + 10M requests/month
+      - CloudWatch 10 custom metrics + 5 GB logs
+      - SNS 1M publishes, SQS 1M requests
+      - DynamoDB Streams 2.5M reads
+    cta_url: https://aws.amazon.com/free/
+  - name: Free Plan (6 months)
+    price: 0
+    billing: free
+    description: $200 in credits for new accounts; no charges by default
+    features:
+      - Up to $200 in AWS credits
+      - 6-month no-commitment window
+      - Access to Always Free services
+      - Upgrade to Paid Plan when ready
+      - No CC charge unless you upgrade
+    cta_url: https://aws.amazon.com/free/
+  - name: Paid (Pay-as-you-go)
+    price: Usage-based
+    billing: usage-based
+    description: Standard AWS pricing after free quotas exceeded
+    features:
+      - 150+ AWS services
+      - Pay-as-you-go for usage
+      - Reserved Instance and Savings Plan discounts
+      - Volume discounts at scale
+      - Always Free quotas still apply
+    cta_url: https://aws.amazon.com/pricing/
 
 tags: []
 
@@ -25,4 +67,4 @@ pricing_url: https://aws.amazon.com/free/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

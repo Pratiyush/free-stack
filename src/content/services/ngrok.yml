@@ -17,6 +17,61 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    billing: free
+    description: Get online fast for testing
+    features:
+      - $5 included usage credit
+      - Up to 3 online endpoints
+      - 1 GB data transfer
+      - 20k HTTP/S requests/month
+      - Interstitial page on endpoints
+      - 1 team member
+    cta_url: https://dashboard.ngrok.com/signup
+  - name: Hobbyist
+    price: 8
+    unit: /month
+    billing: annual
+    description: For solo devs, home labs, and game servers
+    features:
+      - $10 monthly included usage
+      - Up to 3 online endpoints
+      - 5 GB data transfer
+      - 100k HTTP/S requests/month
+      - No interstitial pages
+      - 1 team member
+    cta_url: https://dashboard.ngrok.com/billing/choose-a-plan
+  - name: Pay-as-you-go
+    price: 20
+    unit: /month
+    billing: usage-based
+    description: Production-grade for teams shipping live traffic
+    features:
+      - $20 monthly included usage
+      - Unlimited online endpoints
+      - Unlimited data transfer
+      - Unlimited HTTP/S requests
+      - Unlimited team members
+      - Custom domains and wildcards
+    cta_url: https://dashboard.ngrok.com/billing/choose-a-plan
+  - name: Enterprise
+    price: Custom
+    billing: annual
+    description: Compliance, SSO/RBAC, dedicated support
+    features:
+      - SSO/RBAC
+      - Region routing
+      - HIPAA BAA available
+      - SOC 2 verification
+      - Dedicated support
+      - Log exporting
+    cta_url: https://ngrok.com/contact-sales
+
+paid_tier_highlights:
+  - Paid plans remove interstitial warning pages and add TCP/TLS
+  - Pay-as-you-go enables unlimited endpoints and team members
+  - Enterprise unlocks SSO/RBAC, custom domains, dedicated support
+  - Extended traffic inspector retention (72h vs 24h on free)
+  - HIPAA BAA and SOC 2 only on Enterprise
 
 tags: []
 
@@ -25,4 +80,4 @@ pricing_url: https://ngrok.com/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

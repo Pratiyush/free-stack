@@ -13,9 +13,47 @@ free_tier:
   - Not published
 
 pricing:
-  - name: Free
+  - name: Early Stage (Free)
     price: 0
     unit: /month
+    billing: free
+    description: For early products and smaller audiences
+    features:
+      - Up to 4,000 sends per month
+      - Storage for up to 1,000 subscribed contacts
+      - All features included
+      - '"Powered by Loops" footer branding'
+      - No credit card required
+    cta_url: https://app.loops.so/register
+  - name: Paid
+    price: Usage
+    billing: usage-based
+    description: Scales with audience size; pricing via slider
+    features:
+      - Scales with subscriber count
+      - Removes "Powered by Loops" branding
+      - All Loops features included
+      - Email and broadcast support
+      - Audience segmentation
+    cta_url: https://loops.so/pricing
+  - name: Custom
+    price: Custom
+    billing: annual
+    description: Tailored plans for high-volume senders; email for quote
+    features:
+      - Custom subscriber volumes
+      - Custom send limits
+      - Priority support
+      - Custom contracts available
+      - Dedicated success contact
+    cta_url: https://loops.so/pricing
+
+paid_tier_highlights:
+  - Paid tier scales pricing with audience size beyond 1,000 contacts
+  - Removes "Powered by Loops" footer branding on paid plans
+  - Custom plans available via direct email contact
+  - All features included even on the free tier
+  - 4,000 sends and 1,000 contacts on the free plan
 
 tags: []
 

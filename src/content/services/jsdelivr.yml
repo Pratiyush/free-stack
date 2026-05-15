@@ -14,9 +14,24 @@ free_tier:
   - No documented rate limits; serves 150B+ requests/mo
 
 pricing:
-  - name: Free
+  - name: Free Public CDN
     price: 0
     unit: /month
+    billing: free
+    description: Free CDN for open source, no commercial tiers
+    features:
+      - Unlimited bandwidth
+      - Auto-syncs all npm and GitHub releases
+      - Multi-CDN backbone (Cloudflare, Fastly, G-Core, Bunny)
+      - Optimized for JS, ESM, web fonts
+      - 150B+ requests/month served
+    cta_url: https://www.jsdelivr.com/
+
+paid_tier_highlights:
+  - This service is always-free; no paid tiers exist
+  - Operating costs covered by corporate infrastructure sponsors
+  - Sponsorship tier exists for companies wanting to support jsDelivr
+  - No SLA or commercial support offering
 
 tags: []
 
@@ -25,4 +40,4 @@ pricing_url: https://www.jsdelivr.com/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

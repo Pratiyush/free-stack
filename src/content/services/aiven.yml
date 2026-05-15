@@ -10,13 +10,88 @@ summary: Free plan (Postgres + Kafka)
 tier_type: always-free
 
 free_tier:
-  - Free plan (Postgres + Kafka)
-  - 'Kafka: 250 kb/s throughput (in+out); powers off after 24h inactivity (both Postgres and Kafka)'
+  - Free plan (Postgres + Kafka + MySQL)
+  - 'Postgres/MySQL: 1 CPU, 1 GB RAM, 1 GB disk on a single node'
+  - 'Kafka: 250 KiB/s throughput, 3-day retention, 5 topics x 2 partitions'
+  - Powers off after 24h inactivity
+
+paid_tier_highlights:
+  - 'Developer Kafka from $35/mo lifts throughput to 1 MB/s and 20 topics'
+  - 'Startup tier from $200/mo gives 3 dedicated VMs with HA failover'
+  - 'Business from $500/mo scales to 18 TB storage with Kafka Connect'
+  - 'Premium from $1,900/mo gives up to 30 VMs and 184 TB storage'
+  - 'Enterprise add-ons: tiered storage, PrivateLink, BYOC, premium support'
 
 pricing:
   - name: Free
     price: 0
-    unit: /month
+    billing: free
+    description: Single-node Postgres/MySQL or limited Kafka cluster
+    features:
+      - Postgres/MySQL 1 CPU, 1 GB RAM, 1 GB disk
+      - Kafka 250 KiB/s throughput
+      - 5 Kafka topics x 2 partitions
+      - 3-day retention
+      - Schema Registry and REST proxy
+    cta_url: https://console.aiven.io/signup
+  - name: Developer (Kafka)
+    price: 35
+    unit: /month (from $0.05/hour)
+    billing: usage-based
+    description: Dev-grade Kafka cluster for non-production workloads
+    features:
+      - 1 MB/s throughput
+      - 3-day retention
+      - Up to 20 topics, 100 partitions
+      - Kafka Connect compatible
+      - Schema Registry and REST proxy
+    cta_url: https://console.aiven.io/signup?service=kafka&plan_type=developer
+  - name: Startup
+    price: 200
+    unit: /month (from $0.27/hour)
+    billing: usage-based
+    description: Production-ready 3-node cluster
+    features:
+      - 3 dedicated VMs
+      - 2 CPU, 2-4 GB RAM per VM
+      - 90 GB total storage
+      - High availability with automatic failover
+      - 24/7 support
+    cta_url: https://console.aiven.io/signup?service=kafka&plan_type=startup
+  - name: Business
+    price: 500
+    unit: /month (from $0.69/hour)
+    billing: usage-based
+    description: Scalable production cluster
+    features:
+      - 3 dedicated VMs
+      - 2-16 CPU, 4-32 GB RAM per VM
+      - 600 GB to 18 TB storage
+      - Kafka Connect in same cluster
+      - Tiered Storage add-on
+    cta_url: https://console.aiven.io/signup?service=kafka&plan_type=business
+  - name: Premium
+    price: 1900
+    unit: /month (from $2.60/hour)
+    billing: usage-based
+    description: Enterprise-grade cluster with maximum scale
+    features:
+      - 6-30 dedicated VMs
+      - 4-16 CPU, 8-32 GB RAM per VM
+      - Up to 184 TB storage
+      - Tiered Storage and BYOC options
+      - Enterprise support
+    cta_url: https://console.aiven.io/signup?service=kafka&plan_type=premium
+  - name: Enterprise
+    price: Contact sales
+    billing: usage-based
+    description: Custom contracts, BYOC, dedicated CSM
+    features:
+      - Bring Your Own Cloud
+      - Custom commits with discounts
+      - Dedicated technical account manager
+      - SOC2/HIPAA/PCI compliance
+    cta_url: https://aiven.io/contact
 
 tags: []
 
@@ -25,4 +100,4 @@ pricing_url: https://aiven.io/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

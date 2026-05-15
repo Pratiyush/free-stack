@@ -16,7 +16,47 @@ free_tier:
 pricing:
   - name: Free
     price: 0
-    unit: /month
+    unit: /user/month
+    billing: free
+    description: For individuals and personal projects; SCM + CI/CD included
+    cta_url: https://about.gitlab.com/pricing/
+    features:
+      - Source code management
+      - 400 compute minutes/mo
+      - 10 GiB storage
+      - 5 licensed users in private groups
+      - Container scanning
+      - Built-in CI/CD
+  - name: Premium
+    price: 29
+    unit: /user/month
+    billing: annual
+    description: Scaling orgs needing enhanced productivity and collaboration
+    cta_url: https://about.gitlab.com/pricing/
+    features:
+      - Unlimited licensed users
+      - 10,000 compute minutes/mo
+      - 500 GiB storage
+      - Advanced CI/CD
+      - Team project management
+      - SLA management
+  - name: Ultimate
+    price: Custom
+    description: Enterprises requiring advanced security and compliance
+    cta_url: https://about.gitlab.com/pricing/
+    features:
+      - 50,000 compute minutes/mo
+      - Application security testing
+      - Software supply chain security
+      - Vulnerability management
+      - Compliance and governance
+      - Value stream management
+
+paid_tier_highlights:
+  - Premium at $29/user/mo unlocks unlimited users and 10K compute mins
+  - Ultimate adds 50K compute mins plus security and supply-chain features
+  - GitLab Duo Agent Platform credits bundled at $12-24/user/mo
+  - All tiers include built-in CI/CD and container registry
 
 tags: []
 
@@ -25,4 +65,4 @@ pricing_url: https://about.gitlab.com/pricing/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

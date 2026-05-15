@@ -14,10 +14,46 @@ free_tier:
   - 'DeepSeek V3/V4, R1; no rate limits on API; chat is free unlimited'
   - No hard rate limits
 
+paid_tier_highlights:
+  - V4-Flash at $0.14 input / $0.28 output per 1M tokens
+  - Cache-hit input as low as $0.0028 per 1M tokens
+  - V4-Pro at $0.435 input / $0.87 output per 1M tokens
+  - 75% discount on V4-Pro through May 31, 2026
+  - 1M-token context with 384K max output
+
 pricing:
-  - name: Free
+  - name: Trial Credits
     price: 0
-    unit: /month
+    description: 5M free tokens with 30-day expiry on signup
+    features:
+      - 5M tokens free, expires after 30 days
+      - DeepSeek V4-Flash and V4-Pro access
+      - No hard rate limits
+      - Chat interface always free
+      - No credit card required
+    billing: free
+  - name: DeepSeek-V4-Flash
+    price: '$0.14 input / $0.28 output per 1M'
+    unit: per 1M tokens
+    description: Pay-as-you-go fast model with JSON and tool calls
+    features:
+      - $0.0028/1M tokens input on cache hit
+      - $0.14/1M tokens input on cache miss
+      - $0.28/1M tokens output
+      - 1M-token context, 384K max output
+      - JSON output, tool calls, FIM completion
+    billing: usage-based
+  - name: DeepSeek-V4-Pro
+    price: '$0.435 input / $0.87 output per 1M'
+    unit: per 1M tokens
+    description: Reasoning-grade model with 75% promo discount
+    features:
+      - $0.003625/1M tokens input on cache hit
+      - $0.435/1M tokens input on cache miss
+      - $0.87/1M tokens output
+      - 1M-token context, 384K max output
+      - Discount through May 31, 2026
+    billing: usage-based
 
 tags: []
 

@@ -16,10 +16,36 @@ free_tier:
   - 2-month event-data retention (max 14 months)
 
 pricing:
-  - name: Free
-    description: GA4 is always free
+  - name: Free (Standard)
     price: 0
     unit: /month
+    billing: free
+    description: GA4 standard tier is free with generous event quotas
+    cta_url: https://analytics.google.com/
+    features:
+      - Unlimited events (10M/property/mo recommended)
+      - 500 distinct event types
+      - 50 custom dimensions
+      - 50 custom metrics
+      - 2-month event-data retention (14 months max)
+      - BigQuery export
+  - name: Google Analytics 360
+    price: Custom
+    description: Enterprise tier with higher limits and SLA (~$150K/yr est.)
+    cta_url: https://marketingplatform.google.com/about/analytics-360/
+    features:
+      - Up to 5 billion events/mo
+      - Higher data freshness and processing
+      - SLA-backed support
+      - Roll-up reporting across properties
+      - Advanced data integrations
+      - Larger BigQuery export quotas
+
+paid_tier_highlights:
+  - GA4 Standard covers nearly all use-cases at $0
+  - Google Analytics 360 (~$150K/yr) lifts limits to 5B events/mo
+  - GA360 adds SLA, roll-ups, and larger BigQuery export
+  - Standard already includes free BigQuery export — rare on other tools
 
 tags: [analytics, web-analytics, events, tracking, google]
 

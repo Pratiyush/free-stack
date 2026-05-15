@@ -17,6 +17,45 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    billing: free
+    description: 50 GB log ingestion + 14-day retention; no credit card required
+    cta_url: https://grafana.com/pricing/
+    features:
+      - 50 GB log ingestion/mo
+      - 14-day log retention
+      - Community support only
+      - LogQL queries
+      - Loki + Grafana visualization
+  - name: Pro
+    price: 19
+    unit: /month
+    billing: monthly
+    description: Extended retention and usage-based pricing
+    cta_url: https://grafana.com/pricing/
+    features:
+      - 30 days log retention
+      - 8×5 email support
+      - Pay-as-you-go for excess logs
+      - Higher included usage
+      - LogQL with metrics
+  - name: Enterprise
+    price: 25000
+    unit: /year
+    billing: annual
+    description: Premium support and custom retention; from $25K/yr commit
+    cta_url: https://grafana.com/pricing/
+    features:
+      - 24/7 premium support
+      - Custom retention policies
+      - BYOC / Federal Cloud deployment
+      - Dedicated Observability Architect
+      - Compliance and SOC certifications
+
+paid_tier_highlights:
+  - Pro from $19/mo extends Loki retention from 14 to 30 days
+  - Enterprise from $25K/yr unlocks custom retention and 24/7 support
+  - Pay-as-you-go billing on logs beyond included quota
+  - BYOC and Federal Cloud deployment available on Enterprise
 
 tags: []
 
@@ -25,4 +64,4 @@ pricing_url: https://grafana.com/pricing/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

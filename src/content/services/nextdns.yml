@@ -19,10 +19,59 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    billing: free
+    description: 300K queries/month with graceful degradation
+    features:
+      - 300,000 queries per month
+      - Unlimited devices
+      - Unlimited configurations
+      - Access to all features
+      - Community support
+      - Continues as basic DNS after quota
+    cta_url: https://nextdns.io/signup
   - name: Pro
-    description: Unlimited queries
     price: 1.99
     unit: /month
+    billing: monthly
+    description: For personal and close family use
+    features:
+      - Unlimited queries
+      - Unlimited devices
+      - Unlimited configurations
+      - Access to all features
+      - Community support
+      - 17% off with annual (€19.90/yr)
+    cta_url: https://nextdns.io/signup
+  - name: Business
+    price: 19.90
+    unit: /50 employees/month
+    billing: monthly
+    description: For small and medium businesses
+    features:
+      - Unlimited queries
+      - Unlimited devices
+      - Unlimited configurations
+      - Email support
+      - Annual €199 (€199/yr per 50 employees)
+    cta_url: https://nextdns.io/signup
+  - name: Education
+    price: 19.90
+    unit: /250 students/month
+    billing: monthly
+    description: For schools and universities
+    features:
+      - Unlimited queries
+      - Unlimited devices
+      - Email support
+      - Annual pricing available
+    cta_url: https://nextdns.io/signup
+
+paid_tier_highlights:
+  - Unlimited DNS queries vs 300K monthly cap on Free
+  - Email support access (Free is community only)
+  - Scalable Business/Education pricing models
+  - 17% annual savings with yearly commitment
+  - Pro is only €1.99/month for unlimited personal use
 
 tags: [dns, privacy, resolver, ad-blocking, security]
 

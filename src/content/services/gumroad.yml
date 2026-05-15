@@ -17,6 +17,41 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    billing: usage-based
+    description: No monthly fee; transaction-based pricing for creators
+    features:
+      - No monthly subscription fees
+      - Merchant of Record handles tax compliance worldwide
+      - Digital products, courses, memberships, and physical goods
+      - Direct deposit or PayPal payouts globally
+      - Instant storefront, no code required
+    cta_url: https://gumroad.com/signup
+  - name: Direct Sales Fee
+    price: '10% + $0.50'
+    unit: /transaction
+    billing: usage-based
+    description: Fee for sales via creator profile or direct customer links
+    features:
+      - Applies to all direct-link sales
+      - $0.50 flat fee per transaction plus 10%
+      - No monthly minimums
+    cta_url: https://gumroad.com/signup
+  - name: Marketplace Sales Fee
+    price: '30%'
+    unit: /transaction
+    billing: usage-based
+    description: Fee for new customers via Gumroad Discover marketplace
+    features:
+      - Applies only to first-time Discover customers
+      - Drops to direct-sales fee on repeat purchases
+      - Exposure via Gumroad's discovery channels
+    cta_url: https://gumroad.com/signup
+
+paid_tier_highlights:
+  - Direct-link sales charged 10% plus $0.50 per transaction
+  - Discover marketplace sales charged 30% for new-customer attribution
+  - Merchant of Record model includes global tax compliance
+  - No monthly subscription fee on any tier
 
 tags: []
 

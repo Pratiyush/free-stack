@@ -17,6 +17,58 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    description: 7-day retention, 20 credits/day for logs/metrics/traces
+    billing: free
+    features:
+      - 7-day data retention
+      - 20 credits/day shared across logs, metrics, traces
+      - Free forever account
+      - Basic dashboards and search
+      - Community support
+    cta_url: https://www.sumologic.com/sign-up/
+  - name: Essentials
+    price: Custom
+    description: Ad-hoc investigation for small-medium DevOps/SecOps
+    billing: annual
+    features:
+      - Onboard in minutes
+      - AI-driven alerting to reduce false positives
+      - ML-powered root cause analysis
+      - Hundreds of integrations
+      - Real-time anomaly detection
+      - Standard 8x5 support
+    cta_url: https://www.sumologic.com/contact
+  - name: Enterprise Suite
+    price: Custom
+    description: Real-time threat detection + SIEM + UEBA
+    billing: annual
+    features:
+      - Cloud-native SIEM with entity detection
+      - MITRE ATT&CK + UEBA coverage
+      - Premium threat intel (CrowdStrike, Intel471)
+      - Advanced log analytics
+      - 24/7 enterprise support with TAM
+      - Case management + war room
+    cta_url: https://www.sumologic.com/contact
+  - name: Flex Pricing
+    price: Custom
+    description: Unlimited ingest with scan-based pricing
+    billing: annual
+    features:
+      - Unlimited log data ingest at $0
+      - Unlimited users across org
+      - 100% indexed data
+      - Real-time alerting
+      - Multiple deployment regions
+      - Profile-based pricing (500-2000 scans/GB)
+    cta_url: https://www.sumologic.com/contact
+
+paid_tier_highlights:
+  - Essentials adds AI-driven alerting + ML root-cause analysis
+  - Enterprise Suite includes cloud-native SIEM + MITRE ATT&CK
+  - Premium threat-intel feeds (CrowdStrike, Intel471) in Enterprise
+  - Flex Pricing offers unlimited ingest with scan-based costs
+  - 24/7 support with TAM included in Enterprise Suite
 
 tags: []
 
@@ -25,4 +77,4 @@ pricing_url: https://www.sumologic.com/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

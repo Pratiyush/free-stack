@@ -16,7 +16,44 @@ free_tier:
 pricing:
   - name: Free
     price: 0
-    unit: /month
+    unit: /user/month
+    billing: free
+    description: Included with GitLab Free tier; 10 GiB storage shared
+    cta_url: https://about.gitlab.com/pricing/
+    features:
+      - Included with GitLab Free
+      - 10 GiB storage shared with repo
+      - 5 licensed users in private groups
+      - 400 CI/CD minutes/mo (shared)
+      - Public projects unlimited
+  - name: Premium
+    price: 29
+    unit: /user/month
+    billing: annual
+    description: 500 GiB storage and 10K CI/CD minutes
+    cta_url: https://about.gitlab.com/pricing/
+    features:
+      - 500 GiB storage
+      - 10,000 compute minutes/mo
+      - Unlimited licensed users
+      - Advanced CI/CD
+      - Merge request approvals
+  - name: Ultimate
+    price: Custom
+    description: Top tier with vulnerability scanning and compliance
+    cta_url: https://about.gitlab.com/pricing/
+    features:
+      - 50,000 compute minutes/mo
+      - Container scanning
+      - Vulnerability management
+      - Software supply chain security
+      - Compliance and governance
+
+paid_tier_highlights:
+  - Premium at $29/user/mo lifts storage from 10 GiB to 500 GiB
+  - Ultimate adds container scanning and vulnerability management
+  - Compute minutes scale 400 → 10K → 50K across tiers
+  - Public registries always free regardless of tier
 
 tags: []
 
@@ -25,4 +62,4 @@ pricing_url: https://about.gitlab.com/pricing/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

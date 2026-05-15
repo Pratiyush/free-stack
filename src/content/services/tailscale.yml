@@ -14,9 +14,62 @@ free_tier:
   - No published rate limit
 
 pricing:
-  - name: Free
+  - name: Personal
     price: 0
     unit: /month
+    description: Free forever for individuals connecting devices
+    billing: free
+    features:
+      - Unlimited user devices
+      - Up to 6 users
+      - Up to 3 ACL groups
+      - Up to 50 tagged resources
+      - 1,000 mins/mo for ephemeral resources
+      - Nearly all Tailscale features
+      - SSH and Kubernetes capabilities
+    cta_url: https://login.tailscale.com/start
+  - name: Standard
+    price: 8
+    unit: /user/month
+    description: Teams adopting Tailscale as connectivity platform
+    billing: monthly
+    features:
+      - Unlimited users
+      - SCIM provisioning
+      - Up to 10 ACL groups
+      - MDM and device-posture integrations
+      - Advanced user roles
+    cta_url: https://login.tailscale.com/start
+  - name: Premium
+    price: 18
+    unit: /user/month
+    description: Advanced compliance and heavy ephemeral use
+    billing: monthly
+    features:
+      - Up to 300 ACL groups
+      - 10,000 mins/mo ephemeral resources
+      - Just-in-time access
+      - Advanced Tailscale SSH
+      - Network flow logs and log streaming
+      - Regional routing + priority support
+    cta_url: https://login.tailscale.com/start
+  - name: Enterprise
+    price: Custom
+    description: Full platform across PAM, AI security, CI/CD
+    billing: annual
+    features:
+      - Custom device quantities/limits
+      - Solutions engineer consultation
+      - Custom MSAs and SLAs
+      - Premium dedicated support
+      - Pay-by-invoice option
+    cta_url: https://tailscale.com/contact/sales
+
+paid_tier_highlights:
+  - Standard at $8/user/mo unlocks SCIM + MDM integrations
+  - Premium at $18/user/mo adds JIT access + network flow logs
+  - 10,000 mins/mo ephemeral resources on Premium
+  - Enterprise unlocks custom MSAs, SLAs, and dedicated support
 
 tags: []
 

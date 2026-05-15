@@ -14,9 +14,38 @@ free_tier:
   - '100 simultaneous Realtime DB connections; Cloud Storage requires Blaze plan as of Feb 2026 (no-cost usage tier still applies on Blaze)'
 
 pricing:
-  - name: Free
+  - name: Spark
     price: 0
     unit: /month
+    billing: free
+    description: Free Firebase tier with no payment method required
+    features:
+      - Firestore 1 GiB storage, 50K reads/day, 20K writes/day
+      - Cloud Functions 2M invocations/month
+      - Realtime DB 100 concurrent connections, 1 GB storage
+      - Hosting 10 GB storage, 360 MB/day transfer
+      - Authentication 50K monthly active users
+      - Free Analytics, Crashlytics, A/B Testing
+      - Cloud Storage requires Blaze since Feb 2026
+    cta_url: https://console.firebase.google.com/
+  - name: Blaze (Pay-as-you-go)
+    price: Usage-based
+    billing: usage-based
+    description: Same free quotas plus pay-per-use beyond them
+    features:
+      - Keeps Spark no-cost thresholds
+      - $300 in free Google Cloud credit if eligible
+      - Cloud Functions $0.40 per million invocations after free tier
+      - Cloud Storage $0.026/GB stored, $0.12/GB downloaded
+      - Multiple databases and buckets per project
+      - Full Google Cloud integration
+    cta_url: https://console.firebase.google.com/
+
+paid_tier_highlights:
+  - Blaze unlocks Cloud Storage and higher service quotas
+  - Pay-as-you-go billing keeps Spark free thresholds intact
+  - New Blaze accounts can get $300 in Google Cloud credit
+  - Required for production scale across Firestore, Functions, Storage
 
 tags: []
 
@@ -25,4 +54,4 @@ pricing_url: https://firebase.google.com/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

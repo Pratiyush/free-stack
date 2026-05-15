@@ -14,9 +14,20 @@ free_tier:
   - 'Self-hosted; no vendor limits. Written in Rust, very low resource usage vs Logstash/Fluentd'
 
 pricing:
-  - name: Free
+  - name: Free (open source)
     price: 0
-    unit: /month
+    billing: free
+    description: Apache 2.0 license; self-hosted single binary
+    features:
+      - Written in Rust, low resource use
+      - Single static binary, no dependencies
+      - Logs, metrics, traces pipeline
+      - 300+ contributors
+      - No vendor limits
+    cta_url: https://vector.dev/docs/setup/installation/
+
+paid_tier_highlights:
+  - This service is always-free; no paid tiers exist
 
 tags: []
 
@@ -25,4 +36,4 @@ pricing_url: https://vector.dev/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

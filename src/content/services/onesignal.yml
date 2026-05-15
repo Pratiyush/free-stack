@@ -17,6 +17,57 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    billing: free
+    description: 10K free emails, unlimited mobile push, 10K web push
+    features:
+      - 10,000/mo email sends
+      - Unlimited mobile push
+      - Journey workflows
+      - GDPR compliance
+      - A/B testing
+    cta_url: https://dashboard.onesignal.com/signup?plan=free
+  - name: Growth
+    price: 19
+    unit: /month
+    billing: monthly
+    description: Platform fee + usage costs by channel
+    features:
+      - 20,000/mo email sends
+      - Advanced in-app messaging
+      - Journey branching
+      - Intelligent delivery
+      - Mobile push $0.012/MAU
+      - Web push $0.004/subscriber
+    cta_url: https://dashboard.onesignal.com/signup?plan=growth
+  - name: Professional
+    price: Custom
+    billing: annual
+    description: Volume-based discounting with per-channel pricing
+    features:
+      - 24/7 prioritized support
+      - CSV exports
+      - Advanced journeys
+      - Advanced personalization
+      - Custom outcome tracking
+    cta_url: https://onesignal.com/contact
+  - name: Enterprise
+    price: Custom
+    billing: annual
+    description: Tailored contract with volume discounting
+    features:
+      - Frequency capping
+      - Full live activities access
+      - Security/legal package + SLA
+      - Dedicated success manager
+      - Advanced user permissions
+    cta_url: https://onesignal.com/contact
+
+paid_tier_highlights:
+  - Unified platform - push, email, SMS/RCS, in-app messaging
+  - Growth charges by send volume for email/SMS, MAU for push
+  - Professional/Enterprise offer volume-based discounting
+  - Enterprise tier includes 24/7 prioritized SRE on-call support
+  - Advanced analytics and custom tracking at higher tiers
 
 tags: []
 

@@ -16,6 +16,61 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    description: 100 emails/mo for integration testing
+    features:
+      - 100 emails/month (no overages)
+      - REST API and SMTP access
+      - Sandbox mode
+      - Up to 10 servers
+      - Up to 5 custom sending domains
+    cta_url: https://account.postmarkapp.com/sign_up
+    billing: free
+  - name: Basic
+    price: 15
+    unit: /month
+    description: Starting at 10K emails/mo for solo devs and small teams
+    features:
+      - 10,000 emails/month starting
+      - 45-day data retention
+      - 5 custom sending domains
+      - Unlimited emails/day
+      - Event webhooks
+      - DKIM, SPF, DMARC authentication
+    cta_url: https://account.postmarkapp.com/sign_up
+    billing: monthly
+  - name: Pro
+    price: 16.50
+    unit: /month
+    description: 10K emails/mo with inbound and custom retention
+    features:
+      - 10,000 emails/month starting
+      - Customizable retention up to 365 days
+      - 10 custom sending domains
+      - Detailed analytics
+      - Inbound email processing
+      - Up to 6 users
+    cta_url: https://account.postmarkapp.com/sign_up
+    billing: monthly
+  - name: Platform
+    price: 18
+    unit: /month
+    description: Agencies and larger teams; unlimited domains and users
+    features:
+      - 10,000 emails/month starting
+      - Customizable retention up to 365 days
+      - Unlimited custom sending domains
+      - Inbound email processing
+      - Unlimited users
+      - Detailed analytics and insights
+    cta_url: https://account.postmarkapp.com/sign_up
+    billing: monthly
+
+paid_tier_highlights:
+  - Free Developer plan limited to 100 emails/mo (no overages)
+  - Basic $15/mo for 10K emails with 45-day retention
+  - Pro $16.50/mo adds inbound processing and 365-day retention
+  - Platform $18/mo unlocks unlimited domains and users
+  - All paid tiers scale by monthly volume tier above 10K
 
 tags: []
 
@@ -24,4 +79,4 @@ pricing_url: https://postmarkapp.com/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

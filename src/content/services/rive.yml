@@ -16,7 +16,58 @@ free_tier:
 pricing:
   - name: Free
     price: 0
-    unit: /month
+    unit: /seat/month
+    billing: free
+    description: Learn to design, animate, and code in Rive Editor
+    features:
+      - 3 collaborative files
+      - 1 project
+      - Agent with limits
+      - 10 MB per asset import
+      - Community support
+    cta_url: https://rive.app/pricing
+  - name: Cadet
+    price: 9
+    unit: /seat/month
+    billing: monthly
+    description: Ship to apps, products, vehicles, and games
+    features:
+      - Unlimited files
+      - Export .riv files
+      - Agent with limits
+      - 100 MB per asset import
+      - Unlimited team members (3 seat max)
+    cta_url: https://rive.app/pricing
+  - name: Voyager
+    price: 32
+    unit: /seat/month
+    billing: monthly
+    description: Build with Libraries and scale collaboration
+    features:
+      - Libraries support
+      - Embed URL hosting
+      - Advanced Agent models
+      - $20/seat monthly Agent credits
+      - Unlimited revision history (25 seat max)
+    cta_url: https://rive.app/pricing
+  - name: Enterprise
+    price: 120
+    unit: /seat/month
+    billing: annual
+    description: For large orgs (requires $10M+ annual revenue)
+    features:
+      - Subteam workspaces
+      - Custom S3 bucket integration
+      - $40/seat monthly Agent credits
+      - Dedicated Slack channel
+      - SSO and SOC2 Type II
+    cta_url: https://rive.app/pricing
+
+paid_tier_highlights:
+  - Cadet ($9/seat) unlocks unlimited files and .riv export
+  - Voyager ($32/seat) adds Libraries and $20 Agent credits
+  - Enterprise ($120/seat) brings SSO, SOC2, custom S3
+  - Higher tiers include increased asset import limits
 
 tags: []
 

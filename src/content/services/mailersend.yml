@@ -16,6 +16,68 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    billing: free
+    description: For occasional email testing and sending
+    features:
+      - 500 emails/month
+      - 10 email verification credits
+      - Drag and drop email builder
+      - Email threads support
+      - 1 domain
+    cta_url: https://app.mailersend.com/signup
+  - name: Hobby
+    price: 5.6
+    unit: /month
+    billing: monthly
+    description: For personal projects and side hustles
+    features:
+      - 5,000 emails/month
+      - Email API and SMTP relay
+      - Bulk emailing capability
+      - 5 user seats
+      - 3 templates
+    cta_url: https://www.mailersend.com/pricing
+  - name: Starter
+    price: 25
+    unit: /month
+    billing: monthly
+    description: For growing startups and small businesses
+    features:
+      - 50,000 emails/month + 100 SMS/month
+      - Sender identities
+      - Remove MailerSend logo
+      - SMS API (US/Canada)
+      - 10 domains, 250 templates, 5 seats
+    cta_url: https://www.mailersend.com/pricing
+  - name: Professional
+    price: Custom
+    billing: monthly
+    description: For agencies and white-label resellers
+    features:
+      - 50,000+ emails/month + 100 SMS/month
+      - Dedicated account manager
+      - 7-day API logs retention
+      - Unlimited domains, templates, users
+      - Deliverability consultation
+    cta_url: https://www.mailersend.com/pricing
+  - name: Enterprise
+    price: Custom
+    billing: annual
+    description: High-volume senders with custom SLAs
+    features:
+      - Custom email volumes
+      - Dedicated IP
+      - Priority support
+      - Custom SLA
+      - Compliance and SSO
+    cta_url: https://www.mailersend.com/contact
+
+paid_tier_highlights:
+  - Hobby at $5.60/mo unlocks 5,000 emails and bulk sending
+  - Starter at $25/mo adds 50K emails, SMS, and logo removal
+  - Professional offers dedicated account manager and unlimited domains
+  - 10% annual discount on Hobby and Starter plans
+  - Enterprise scales further with SLAs and SSO
 
 tags: []
 

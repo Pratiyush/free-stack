@@ -14,9 +14,45 @@ free_tier:
   - 'Event-driven metering up to 15K events/sec, supports flat-rate + usage-based + tiered + volume + package pricing models, no revenue share on self-hosted'
 
 pricing:
-  - name: Free
+  - name: Open Source (Self-Hosted)
     price: 0
-    unit: /month
+    billing: free
+    description: AGPLv3 self-hosted Lago for full feature parity
+    features:
+      - Full core billing engine
+      - Event-driven metering up to 15K events/sec
+      - Flat, usage, tiered, volume, package pricing
+      - Community support via Slack and GitHub
+      - No vendor lock-in or revenue share
+    cta_url: https://github.com/getlago/lago
+  - name: Business
+    price: Custom
+    billing: annual
+    description: For established businesses with business-critical needs
+    features:
+      - Hosted Lago Cloud
+      - Data pipeline integration
+      - Lifetime usage calculation
+      - Business hours support
+      - Dedicated Slack channel
+    cta_url: https://www.getlago.com/contact-us
+  - name: Enterprise
+    price: Custom
+    billing: annual
+    description: For high-volume orgs needing customization and 24/7 support
+    features:
+      - Everything in Business
+      - 24/7 premium support
+      - Assigned solutions engineer
+      - Implementation check-ins
+      - Self-hosted Enterprise deployment option
+    cta_url: https://www.getlago.com/contact-us
+
+paid_tier_highlights:
+  - Business plan adds hosted Cloud and dedicated Slack support
+  - Enterprise adds 24/7 support and assigned solutions engineer
+  - Self-hosted Open Source remains AGPLv3 with full feature set
+  - Custom pricing is volume-based on metered events
 
 tags: []
 
@@ -25,4 +61,4 @@ pricing_url: https://getlago.com/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

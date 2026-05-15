@@ -16,6 +16,58 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    billing: free
+    description: Build campaigns and learn about your customers
+    features:
+      - Up to 250 contacts
+      - Up to 500 emails/month or 250/day
+      - Basic popup forms
+      - Single user account
+      - Limited reporting
+    cta_url: https://login.mailchimp.com/signup/
+  - name: Essentials
+    price: 11
+    unit: /month
+    billing: monthly
+    description: Schedule and test campaigns at optimal times
+    features:
+      - Up to 100,000 contacts
+      - 10x contact send multiplier
+      - A/B testing
+      - 3 audience lists
+      - 24/7 email and chat support
+    cta_url: https://mailchimp.com/pricing/marketing/
+  - name: Standard
+    price: 17
+    unit: /month
+    billing: monthly
+    description: Drive sales via personalization and automation
+    features:
+      - Up to 150,000 contacts
+      - 12x contact send multiplier
+      - Advanced automation flows (200 points)
+      - Dynamic content support
+      - 5 audience lists
+    cta_url: https://mailchimp.com/pricing/marketing/
+  - name: Premium
+    price: 301
+    unit: /month
+    billing: monthly
+    description: Expert-supported platform for growth
+    features:
+      - Unlimited contacts
+      - 15x contact send multiplier
+      - Priority phone support
+      - Custom-coded templates
+      - Multivariate A/B testing
+    cta_url: https://mailchimp.com/pricing/marketing/
+
+paid_tier_highlights:
+  - Essentials starts at $11/mo for 100K contacts and A/B testing
+  - Standard at $17/mo adds advanced automation and dynamic content
+  - Premium at $301/mo unlocks unlimited contacts and phone support
+  - Annual billing offers 20% discount on paid tiers
+  - 15% discount on plans with 10,000+ contacts
 
 tags: []
 

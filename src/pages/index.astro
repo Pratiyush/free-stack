@@ -18,8 +18,8 @@ const recentlyVerified = [...services]
   )
   .slice(0, 6);
 
-/* Periodic-table preview wall — pick ~48 services with real brand_color (not placeholder)
- * and a logo file, spread across categories. Sorted by date_added (newest first). */
+/* Periodic-table wall — 48 services with real brand_color, 6-col grid below.
+ * Sorted by date_added (newest first) so the wall feels fresh each release. */
 const wallServices = services
   .filter(
     (s) =>
@@ -30,74 +30,93 @@ const wallServices = services
   .sort((a, b) => new Date(b.data.date_added).getTime() - new Date(a.data.date_added).getTime())
   .slice(0, 48);
 
-/* Editorial issue number — derived from project version, hand-bumped at release time.
- * v0.5.0 = Issue №005. Update this string when tagging a new release. */
-const issueNumber = '005';
+/* Editorial Issue №. v0.8.0 = Issue №008. Bumped at tag time. */
+const issueNumber = '008';
 const issueMonth = new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
-const verifiedToday = new Date().toLocaleDateString('en-US', {
-  year: 'numeric',
-  month: 'short',
-  day: '2-digit',
-}).toUpperCase().replace(',', '');
+const verifiedToday = new Date()
+  .toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: '2-digit',
+  })
+  .toUpperCase()
+  .replace(',', '');
 ---
 
 <BaseLayout
   title="free-stack"
   description={`${services.length} verified free tiers for developers. No ads, no affiliate links — just the free tier you can actually use.`}
 >
-  <section class="masthead-bar container">
-    <span class="issue">Issue №{issueNumber} <span class="dot" aria-hidden="true">·</span> {issueMonth}</span>
-    <span class="verified-line">VERIFIED {verifiedToday}</span>
-  </section>
+  <section class="hero">
+    <div class="container hero-inner">
+      {/* Masthead — Issue № + dateline now lives ABOVE the h1 inside the hero, not as a separate bar. */}
+      <p class="masthead">
+        <span class="issue">Issue №{issueNumber}</span>
+        <span class="dot" aria-hidden="true">·</span>
+        <span class="month">{issueMonth}</span>
+        <span class="rule" aria-hidden="true"></span>
+        <span class="verified-line">VERIFIED {verifiedToday}</span>
+      </p>
 
-  <section class="hero container">
-    <div class="hero-grid">
-      <div class="hero-text">
-        <h1>
-          One <em>honest</em> directory of free tiers<br />
-          that <em>actually</em> stay free.
-        </h1>
-        <p class="lede">
-          {services.length} developer services with real free tiers — permanent, not 14-day trials.
-          Every entry verified against the official pricing page. No ads. No affiliate links. No
-          paid placement.
-        </p>
-        <div class="cta-row">
-          <a class="cta-primary" href="/catalog">Browse {services.length} services →</a>
-          <a class="cta-secondary" href="/methodology">How we verify</a>
+      <div class="hero-grid">
+        <div class="hero-text">
+          <h1 class="hero-h1">
+            One <em>honest</em> directory of free tiers<br />
+            that <em>actually</em> stay free.
+          </h1>
+          <p class="lede">
+            {services.length} developer services with real free tiers — permanent, not 14-day trials.
+            Every entry verified against the official pricing page. No ads. No affiliate links. No
+            paid placement.
+          </p>
+          <div class="cta-row">
+            <a class="cta-primary" href="/catalog">Browse {services.length} services →</a>
+            <a class="cta-secondary" href="/methodology">How we verify</a>
+          </div>
         </div>
+
+        <aside class="hero-side">
+          {/* Sidebar pull-quote — drawn from ref/docs/CONVERSATION.md:18. */}
+          <figure class="pull-quote">
+            <blockquote>
+              <p>
+                A wall of crisp, monochrome logos that <em>lights up in color</em> as you hover —
+                like a periodic table of the free internet.
+              </p>
+            </blockquote>
+            <figcaption>— design intent, 2026</figcaption>
+          </figure>
+
+          <dl class="hero-stats" aria-label="Site stats">
+            <div class="stat">
+              <dt>Services</dt>
+              <dd>{services.length}</dd>
+            </div>
+            <div class="stat">
+              <dt>Categories</dt>
+              <dd>{categories.length}</dd>
+            </div>
+            <div class="stat">
+              <dt>Affiliate links</dt>
+              <dd>0</dd>
+            </div>
+            <div class="stat">
+              <dt>Ads / trackers</dt>
+              <dd>0</dd>
+            </div>
+          </dl>
+        </aside>
       </div>
-      <aside class="hero-stats" aria-label="Site stats">
-        <dl>
-          <div class="stat">
-            <dt>Services</dt>
-            <dd>{services.length}</dd>
-          </div>
-          <div class="stat">
-            <dt>Categories</dt>
-            <dd>{categories.length}</dd>
-          </div>
-          <div class="stat">
-            <dt>Affiliate links</dt>
-            <dd>0</dd>
-          </div>
-          <div class="stat">
-            <dt>Ads / trackers</dt>
-            <dd>0</dd>
-          </div>
-        </dl>
-      </aside>
     </div>
   </section>
 
-  {/* Periodic table — wall of brand-colored logos. Hover lights up the tile. */}
+  {/* Periodic table — 6-col wall of brand-colored logos with names visible by default. */}
   <section class="wall-section container">
     <header class="section-head">
       <p class="rom-eyebrow"><span class="rom">i.</span> The periodic table</p>
       <h2>{wallServices.length} services, at a glance.</h2>
       <p class="section-blurb">
-        Every tile is a service we've verified this month. Hover to reveal the name; click for the
-        full pricing breakdown.
+        Every tile is a service we've verified this month. Click any to open its pricing breakdown.
       </p>
     </header>
     <div class="wall" role="list">
@@ -109,8 +128,9 @@ const verifiedToday = new Date().toLocaleDateString('en-US', {
             href={`/service/${s.data.slug}`}
             style={`--tile-accent: ${s.data.brand_color};`}
             aria-label={s.data.name}
+            transition:name={`card-${s.data.slug}`}
           >
-            <img src={s.data.logo} alt="" loading="lazy" width="32" height="32" />
+            <img src={s.data.logo} alt="" loading="lazy" width="36" height="36" />
             <span class="tile-name">{s.data.name}</span>
           </a>
         ))
@@ -164,46 +184,67 @@ const verifiedToday = new Date().toLocaleDateString('en-US', {
   </section>
 
   <style>
-    /* Masthead bar — Issue № · Month / VERIFIED date. Mono, ink-faint, rule above + below. */
-    .masthead-bar {
+    /* Hero with paper-cream base + soft radial coral tints + radial brand wash. */
+    .hero {
+      background:
+        radial-gradient(
+          ellipse at 0% 0%,
+          color-mix(in srgb, var(--color-coral) 8%, transparent),
+          transparent 50%
+        ),
+        radial-gradient(
+          ellipse at 100% 100%,
+          color-mix(in srgb, var(--color-coral) 5%, transparent),
+          transparent 60%
+        ),
+        var(--color-paper);
+      border-bottom: 1px solid var(--color-rule);
+    }
+    .hero-inner {
+      padding: var(--space-lg) var(--space-md) var(--space-2xl);
+    }
+
+    /* Masthead — sits ABOVE the h1 now, inside the hero. */
+    .masthead {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      gap: 0.6em;
       font-family: var(--font-mono);
       font-size: 0.72rem;
       letter-spacing: 0.16em;
       color: var(--color-ink-faint);
-      padding: 0.5rem var(--space-md);
-      border-top: 1px solid var(--color-rule);
+      margin: 0 0 var(--space-lg);
+      padding-bottom: var(--space-sm);
       border-bottom: 1px solid var(--color-rule);
-      background: var(--color-paper-warm);
+      flex-wrap: wrap;
     }
-    .masthead-bar .issue {
-      text-transform: none;
-      letter-spacing: 0.12em;
+    .masthead .issue {
+      color: var(--color-coral);
+      font-weight: 500;
     }
-    .masthead-bar .verified-line {
+    .masthead .month {
+      color: var(--color-ink-soft);
+    }
+    .masthead .verified-line {
       color: var(--color-ink-soft);
       font-weight: 500;
     }
-    .masthead-bar .dot {
+    .masthead .dot {
       color: var(--color-rule);
     }
-
-    /* Hero — paper-cream base with soft radial tints. */
-    .hero {
-      position: relative;
-      padding: var(--space-2xl) var(--space-md) var(--space-xl);
-      background:
-        radial-gradient(ellipse at 0% 0%, color-mix(in srgb, var(--color-coral) 8%, transparent), transparent 50%),
-        radial-gradient(ellipse at 100% 100%, color-mix(in srgb, var(--color-coral) 5%, transparent), transparent 60%),
-        var(--color-paper);
+    .masthead .rule {
+      flex: 1;
+      height: 1px;
+      background: var(--color-rule);
+      min-width: 1em;
     }
+
+    /* 3:2 grid — h1+lede left, pull-quote+stats right. */
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.4fr 1fr;
+      grid-template-columns: 1.5fr 1fr;
       gap: var(--space-2xl);
-      align-items: end;
+      align-items: start;
     }
     @media (max-width: 880px) {
       .hero-grid {
@@ -211,28 +252,48 @@ const verifiedToday = new Date().toLocaleDateString('en-US', {
       }
     }
 
-    .hero h1 {
+    /* The big h1 — bigger than v0.8.0 (was 4.4rem cap, now 5.5rem). */
+    .hero-h1 {
       font-family: var(--font-display);
-      font-size: clamp(2.6rem, 6vw, 4.4rem);
-      line-height: 1.05;
-      letter-spacing: -0.018em;
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      line-height: 1.02;
+      letter-spacing: -0.02em;
       font-weight: 350;
       margin: 0;
+      font-feature-settings: 'ss01';
     }
-    .hero h1 em {
+    .hero-h1 em {
       font-style: italic;
       color: var(--color-coral);
       font-weight: 400;
     }
+    /* Fade-in on first paint via @starting-style; respects reduce-motion. */
+    @media (prefers-reduced-motion: no-preference) {
+      .hero-h1 {
+        opacity: 1;
+        transform: translateY(0);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s cubic-bezier(0.2, 0, 0, 1);
+      }
+      @starting-style {
+        .hero-h1 {
+          opacity: 0;
+          transform: translateY(8px);
+        }
+      }
+    }
+
     .lede {
       font-family: var(--font-display);
-      font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+      font-size: clamp(1.1rem, 1.8vw, 1.25rem);
       color: var(--color-ink);
       line-height: 1.55;
       margin: var(--space-lg) 0 0;
-      max-width: 56ch;
+      max-width: 58ch;
       font-weight: 350;
     }
+
     .cta-row {
       display: flex;
       gap: var(--space-md);
@@ -265,8 +326,45 @@ const verifiedToday = new Date().toLocaleDateString('en-US', {
       border-color: var(--color-ink);
     }
 
-    /* Stats as definition list — editorial reference voice. */
-    .hero-stats dl {
+    /* Sidebar — pull-quote + stats stacked. */
+    .hero-side {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xl);
+    }
+    .pull-quote {
+      margin: 0;
+      padding: var(--space-md) var(--space-md) var(--space-md) var(--space-lg);
+      border-left: 3px solid var(--color-coral);
+      background: var(--color-paper-warm);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
+    .pull-quote blockquote {
+      margin: 0;
+    }
+    .pull-quote p {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 1.05rem;
+      line-height: 1.5;
+      color: var(--color-ink);
+      margin: 0;
+      font-weight: 350;
+    }
+    .pull-quote em {
+      color: var(--color-coral);
+      font-style: italic;
+    }
+    .pull-quote figcaption {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-ink-faint);
+      margin-top: var(--space-sm);
+    }
+
+    .hero-stats {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: var(--space-md) var(--space-lg);
@@ -274,7 +372,7 @@ const verifiedToday = new Date().toLocaleDateString('en-US', {
     }
     .hero-stats .stat dt {
       font-family: var(--font-mono);
-      font-size: 0.7rem;
+      font-size: 0.68rem;
       text-transform: uppercase;
       letter-spacing: 0.1em;
       color: var(--color-ink-faint);
@@ -282,62 +380,81 @@ const verifiedToday = new Date().toLocaleDateString('en-US', {
     .hero-stats .stat dd {
       margin: 0.2rem 0 0;
       font-family: var(--font-display);
-      font-size: 2.2rem;
+      font-size: 1.9rem;
       font-weight: 400;
       color: var(--color-ink);
       line-height: 1;
       font-feature-settings: 'tnum';
     }
 
-    /* Periodic-table wall of logos. */
+    /* Periodic-table wall — 6-col fixed grid (responsive down). Names visible by default. */
     .wall-section {
       padding-top: var(--space-2xl);
     }
     .wall {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
-      gap: 4px;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1px;
       margin-top: var(--space-lg);
       background: var(--color-rule);
       border: 1px solid var(--color-rule);
       border-radius: var(--radius-md);
       overflow: hidden;
     }
+    @media (max-width: 1080px) {
+      .wall {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    @media (max-width: 640px) {
+      .wall {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    @media (max-width: 420px) {
+      .wall {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
     .wall-tile {
       position: relative;
       aspect-ratio: 1;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
+      gap: 0.4rem;
+      padding: var(--space-sm);
       text-decoration: none;
       background: color-mix(in srgb, var(--tile-accent) 6%, var(--color-paper));
-      transition: background 0.18s ease, transform 0.18s ease;
+      transition:
+        background 0.18s ease,
+        transform 0.18s ease;
     }
     .wall-tile img {
-      width: 32px;
-      height: 32px;
+      width: 36px;
+      height: 36px;
       object-fit: contain;
       transition: transform 0.18s ease;
-      filter: grayscale(0.4) opacity(0.85);
+      filter: grayscale(0.3) opacity(0.92);
     }
     .wall-tile .tile-name {
-      position: absolute;
-      bottom: 4px;
-      left: 0;
-      right: 0;
-      text-align: center;
       font-family: var(--font-mono);
-      font-size: 0.55rem;
-      color: var(--color-ink);
-      letter-spacing: 0.04em;
-      opacity: 0;
-      transition: opacity 0.18s ease;
-      pointer-events: none;
+      font-size: 0.62rem;
+      color: var(--color-ink-soft);
+      letter-spacing: 0.03em;
+      text-align: center;
+      line-height: 1.2;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
     .wall-tile:hover,
     .wall-tile:focus-visible {
-      background: color-mix(in srgb, var(--tile-accent) 22%, var(--color-paper));
-      transform: scale(1.04);
+      background: color-mix(in srgb, var(--tile-accent) 24%, var(--color-paper));
+      transform: scale(1.06);
       z-index: 2;
       outline: none;
     }
@@ -348,14 +465,13 @@ const verifiedToday = new Date().toLocaleDateString('en-US', {
     }
     .wall-tile:hover .tile-name,
     .wall-tile:focus-visible .tile-name {
-      opacity: 1;
+      color: var(--color-ink);
     }
     .wall-tile:focus-visible {
       outline: 2px solid var(--color-coral);
       outline-offset: -2px;
     }
 
-    /* Section heads — roman-numeral eyebrow + Fraunces h2. */
     .section-head {
       margin-bottom: var(--space-md);
     }

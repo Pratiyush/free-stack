@@ -14,9 +14,21 @@ free_tier:
   - 'Client-side rendered; same GitHub Pages limits (1GB site, 100GB bandwidth/mo)'
 
 pricing:
-  - name: Free
+  - name: Free (MIT open source)
     price: 0
     unit: /month
+    billing: free
+    description: MIT-licensed docs generator served free on GitHub Pages
+    features:
+      - Client-side rendered docs (no build step)
+      - Hosted free on GitHub Pages
+      - GitHub Pages limits 1 GB site, 100 GB bandwidth/month
+      - Themes and plugins ecosystem
+      - Voluntary Open Collective sponsorship only
+    cta_url: https://docsify.js.org/
+
+paid_tier_highlights:
+  - This service is always-free; no paid tiers exist
 
 tags: []
 

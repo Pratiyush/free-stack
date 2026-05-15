@@ -16,7 +16,48 @@ free_tier:
 pricing:
   - name: Free
     price: 0
-    unit: /month
+    unit: /committer/month
+    description: Free for OSS and teams up to 5 committers
+    billing: free
+    features:
+      - Up to 5 repo committers
+      - Up to 5M test spans/month
+      - Data encryption in transit and at rest
+      - US data residency
+      - SOC 2 Type 2 compliance
+      - CLI and VS Code integration
+    cta_url: https://app.trunk.io/signup
+  - name: Team
+    price: Custom
+    description: Unlimited committers + merge queue + Slack
+    billing: monthly
+    features:
+      - Unlimited committers
+      - 1M test spans per committer
+      - Merge queue with GitHub + multi-CI
+      - Slack notifications (channel + DM)
+      - Admin tools + advanced auth
+      - Onboarding support included
+    cta_url: https://trunk.io/contact
+  - name: Enterprise
+    price: Custom
+    description: SSO, on-prem, dedicated support
+    billing: annual
+    features:
+      - Volume discounts on test spans
+      - SAML authentication
+      - On-premise deployment
+      - Custom billing and payment terms
+      - Feature prioritization
+      - Custom integrations
+    cta_url: https://trunk.io/contact
+
+paid_tier_highlights:
+  - Team unlocks unlimited committers + merge queue + Slack notifications
+  - 1M test spans per committer on Team plan
+  - Enterprise adds SAML SSO + on-premise deployment
+  - Volume discounts on test spans for large orgs
+  - Free plan capped at 5 committers + 5M test spans/mo
 
 tags: []
 
@@ -25,4 +66,4 @@ pricing_url: https://trunk.io/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

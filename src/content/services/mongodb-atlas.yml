@@ -16,13 +16,96 @@ free_tier:
   - 32 MB sort memory
 
 pricing:
-  - name: Free
+  - name: Free (M0)
     price: 0
     unit: /month
-  - name: Dedicated
-    description: Production workloads
+    billing: free
+    description: For learning and exploring MongoDB in the cloud
+    features:
+      - 512 MB storage
+      - Shared RAM and vCPU
+      - 100 ops/sec rate limit
+      - 32 MB sort memory
+      - 1 free cluster per project
+    cta_url: https://account.mongodb.com/account/register
+  - name: Flex
+    price: 8
+    unit: /month
+    billing: usage-based
+    description: App dev/testing with burst capacity (~$8-$30/mo)
+    features:
+      - 5 GB storage
+      - Shared RAM and vCPU
+      - 0-500 ops/sec tier range
+      - $0.011/hour billing
+      - Some feature limitations
+    cta_url: https://www.mongodb.com/pricing
+  - name: M2 (Shared)
+    price: 9
+    unit: /month
+    billing: monthly
+    description: Mid-tier between free and dedicated
+    features:
+      - 2 GB storage
+      - Shared resources
+      - Cost-effective for small apps
+      - Auto-backup available
+      - All Atlas core features
+    cta_url: https://www.mongodb.com/pricing
+  - name: M5 (Shared)
+    price: 25
+    unit: /month
+    billing: monthly
+    description: Larger shared tier for small workloads
+    features:
+      - 5 GB storage
+      - Shared resources
+      - Auto-backup available
+      - Cost-effective scaling
+      - All Atlas core features
+    cta_url: https://www.mongodb.com/pricing
+  - name: Dedicated (M10)
     price: 57
     unit: /month
+    billing: usage-based
+    description: Production workloads starting at $0.08/hour
+    features:
+      - 10-128 GB storage
+      - 2 GB dedicated RAM
+      - 2 dedicated vCPUs
+      - Full Atlas feature access
+      - Replica sets
+    cta_url: https://www.mongodb.com/pricing
+  - name: Dedicated (M30+)
+    price: 389
+    unit: /month
+    billing: usage-based
+    description: Larger production tiers up to M700; sharded clusters
+    features:
+      - 40 GB to 4 TB storage
+      - 8-768 GB dedicated RAM
+      - 2-96 vCPUs
+      - Sharded clusters (M30+)
+      - Full Atlas features
+    cta_url: https://www.mongodb.com/pricing
+  - name: Enterprise
+    price: Custom
+    billing: annual
+    description: Custom contracts with volume pricing and add-ons
+    features:
+      - Custom volume pricing
+      - Atlas Search and Vector Search
+      - Stream Processing and Charts
+      - Data Federation
+      - Premium support
+    cta_url: https://www.mongodb.com/contact
+
+paid_tier_highlights:
+  - Flex from ~$8/mo unlocks 5 GB storage with burst capacity
+  - M10 Dedicated at ~$57/mo provides dedicated 2 vCPU and 2 GB RAM
+  - Sharded clusters available from M30+ (~$389/mo)
+  - Atlas Search, Vector Search, and Charts billed separately
+  - Data transfer egress and backups incur additional costs
 
 tags: [nosql, mongodb, document-database, cloud, managed-database]
 

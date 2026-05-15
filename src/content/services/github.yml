@@ -17,6 +17,48 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    billing: free
+    description: Unlimited public and private repos for individuals
+    cta_url: https://github.com/pricing
+    features:
+      - Unlimited public and private repos
+      - 2,000 CI/CD minutes/mo
+      - 500 MB packages storage
+      - Dependabot security updates
+      - Issues and Projects
+      - Community support
+  - name: Team
+    price: 4
+    unit: /user/month
+    billing: monthly
+    description: Advanced collaboration for orgs
+    cta_url: https://github.com/pricing
+    features:
+      - 3,000 CI/CD minutes/mo
+      - 2 GB packages storage
+      - Codespaces access
+      - Required reviewers and code owners
+      - Repository rules
+      - Web-based support
+  - name: Enterprise
+    price: 21
+    unit: /user/month
+    billing: monthly
+    description: Security, compliance, and flexible deployment
+    cta_url: https://github.com/pricing
+    features:
+      - 50,000 CI/CD minutes/mo
+      - 50 GB packages storage
+      - SAML SSO and audit log
+      - Enterprise Managed Users
+      - Premium support 30-min SLA
+      - SOC 2 / FedRAMP compliance
+
+paid_tier_highlights:
+  - Team at $4/user/mo expands CI/CD and packages quota, adds reviewers
+  - Enterprise at $21/user/mo includes SAML SSO and compliance certifications
+  - Both paid tiers add Codespaces and advanced auditing
+  - Public repos remain unlimited and free on every tier
 
 tags: []
 
@@ -25,4 +67,4 @@ pricing_url: https://github.com/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

@@ -14,9 +14,35 @@ free_tier:
   - 'N/A -- self-hosted'
 
 pricing:
-  - name: Free
+  - name: Self-hosted (AGPLv3)
     price: 0
-    unit: /month
+    billing: free
+    description: Fully open source; self-host on your own infrastructure
+    features:
+      - AGPLv3 license
+      - All features included
+      - Read every line of code
+      - No vendor lock-in
+      - Community support
+    cta_url: https://vikunja.io/docs/installing/
+  - name: Vikunja Cloud
+    price: Usage
+    billing: monthly
+    description: Managed hosted instances with auto updates and backups
+    features:
+      - Fully managed instances
+      - Automatic updates
+      - Backup services
+      - Zero maintenance required
+      - Pricing on cloud signup
+    cta_url: https://app.vikunja.cloud/
+
+paid_tier_highlights:
+  - Self-hosted is fully free under AGPLv3
+  - Vikunja Cloud handles managed hosting, updates, and backups
+  - Cloud pricing shown on signup at app.vikunja.cloud
+  - Same feature set in cloud and self-hosted
+  - Zero-maintenance option for teams that don't want to self-host
 
 tags: []
 
@@ -25,4 +51,4 @@ pricing_url: https://vikunja.io/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

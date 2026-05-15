@@ -14,9 +14,63 @@ free_tier:
   - '30-day version history, no shared libraries, no advanced permissions, deleted files count toward limit for 30 days'
 
 pricing:
-  - name: Free
+  - name: Starter
     price: 0
-    unit: /month
+    unit: /user/month
+    billing: free
+    description: Free limited access with drafts and UI kits
+    features:
+      - Unlimited drafts
+      - UI kits and templates
+      - 150 AI credits/day, up to 500/month
+      - 30-day version history
+      - Deleted files count toward limit for 30 days
+    cta_url: https://www.figma.com/signup
+  - name: Professional
+    price: 16
+    unit: /full-seat/month
+    billing: monthly
+    description: Pros and small teams with unlimited files and Dev Mode
+    features:
+      - Unlimited files and projects
+      - Team-wide design libraries
+      - Advanced Dev Mode and MCP Server
+      - 3,000 AI credits/mo on Full seat
+      - Interactive prototypes
+      - $12/mo Dev seat, $3/mo Collab seat
+    cta_url: https://www.figma.com/purchase-professional
+  - name: Organization
+    price: 55
+    unit: /full-seat/month
+    billing: annual
+    description: Cross-department teams with shared libraries and admin tools
+    features:
+      - Unlimited teams
+      - Shared libraries and fonts
+      - Centralized admin tools
+      - 3,500 AI credits/mo on Full seat
+      - Custom workspaces
+      - $25/mo Dev seat, $5/mo Collab seat
+    cta_url: https://www.figma.com/purchase-organization
+  - name: Enterprise
+    price: 90
+    unit: /full-seat/month
+    billing: annual
+    description: Advanced security, theming, and governance for large orgs
+    features:
+      - Design system theming and APIs
+      - SCIM seat management
+      - 4,250 AI credits/mo on Full seat
+      - Single sign-on (SSO)
+      - Activity logs and governance
+      - $35/mo Dev seat, $5/mo Collab seat
+    cta_url: https://www.figma.com/contact/
+
+paid_tier_highlights:
+  - Professional at $16/full-seat/mo unlocks unlimited files and Dev Mode
+  - Organization at $55/full-seat/mo adds shared libraries and admin tools
+  - Enterprise at $90/full-seat/mo adds SSO, SCIM, and theming APIs
+  - AI credits grow from 500/mo on Free to 4,250/mo on Enterprise
 
 tags: []
 
@@ -25,4 +79,4 @@ pricing_url: https://www.figma.com/pricing/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

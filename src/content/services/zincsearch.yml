@@ -14,9 +14,20 @@ free_tier:
   - 'No managed cloud; self-host only'
 
 pricing:
-  - name: Free
+  - name: Self-hosted (Apache 2.0)
     price: 0
-    unit: /month
+    billing: free
+    description: Open source single binary search engine
+    features:
+      - Apache 2.0 license
+      - Single binary, multiple platforms
+      - Lightweight Elasticsearch alternative
+      - Built in Go on bluge index
+      - Docker and Kubernetes configs
+    cta_url: https://github.com/zincsearch/zincsearch
+
+paid_tier_highlights:
+  - This service is always-free; no paid tiers exist
 
 tags: []
 
@@ -25,4 +36,4 @@ pricing_url: https://github.com/zincsearch/zincsearch
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

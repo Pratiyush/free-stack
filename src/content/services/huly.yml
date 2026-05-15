@@ -14,9 +14,71 @@ free_tier:
   - No documented rate limits
 
 pricing:
-  - name: Free
+  - name: Common
     price: 0
     unit: /month
+    billing: free
+    description: For individuals and teams getting started with Huly
+    features:
+      - Unlimited users
+      - Unlimited Huly Objects
+      - 10 GB storage per workspace
+      - 10 GB video/audio traffic
+      - AI features included
+    cta_url: https://huly.io/signup
+  - name: Rare
+    price: 19.99
+    unit: /month
+    billing: monthly
+    description: For solo creatives, contractors, and small agencies
+    features:
+      - Unlimited users
+      - 100 GB storage capacity
+      - 100 GB video/audio traffic
+      - AI features included
+      - Email support
+    cta_url: https://huly.io/signup
+  - name: Epic
+    price: 99.99
+    unit: /month
+    billing: monthly
+    description: For professional creative companies and small businesses
+    features:
+      - Unlimited users
+      - 1 TB storage
+      - 500 GB video/audio traffic
+      - AI features included
+      - Priority support
+    cta_url: https://huly.io/signup
+  - name: Legendary
+    price: 399.99
+    unit: /month
+    billing: monthly
+    description: For multi-team organizations needing maximum capacity
+    features:
+      - Unlimited users
+      - 10 TB storage
+      - 2 TB video/audio traffic
+      - AI features included
+      - Dedicated support
+    cta_url: https://huly.io/signup
+  - name: Custom
+    price: Custom
+    billing: annual
+    description: Personalized pricing for specialized requirements
+    features:
+      - Custom storage and bandwidth limits
+      - Enterprise security controls
+      - Enhanced support SLAs
+      - Self-hosted option available
+      - Custom contracts
+    cta_url: https://huly.io/contact
+
+paid_tier_highlights:
+  - Rare at $19.99/mo lifts free 10 GB storage to 100 GB
+  - Epic at $99.99/mo includes 1 TB storage and 500 GB AV traffic
+  - Legendary at $399.99/mo scales to 10 TB storage and 2 TB AV
+  - Custom plan negotiated for enterprise SLAs and self-hosting
 
 tags: []
 
@@ -25,4 +87,4 @@ pricing_url: https://huly.io/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

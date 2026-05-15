@@ -17,12 +17,58 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    description: Linting, coverage, and CLI for any contributor count
+    features:
+      - Linting & auto-formatting
+      - Code coverage tracking
+      - Maintainability & duplication metrics
+      - Open Rust CLI
+      - Unlimited contributors (private/public)
+      - 1,000 analysis minutes/month
+      - 100 AI autofixes/month
+    cta_url: https://docs.qlty.sh/cli/quickstart
+    billing: free
+  - name: Pro
+    price: 20
+    unit: /contributor/month
+    description: AI-powered code health platform for teams
+    features:
+      - Everything in Free
+      - Shared configurations
+      - Trends and hotspots
+      - 1 year of history
+      - Accelerated analysis
+      - 20,000 analysis minutes/month
+      - 5,000 AI autofixes/month
+    cta_url: https://docs.qlty.sh/cli/quickstart
+    billing: monthly
+  - name: Enterprise
+    price: 30
+    unit: /contributor/month
+    description: Advanced capabilities for large organizations
+    features:
+      - Everything in Pro
+      - Advanced analytics
+      - Organization policies
+      - Priority support with SLA
+      - Manual invoicing
+      - Named account manager
+      - 75,000 analysis minutes/month
+    cta_url: https://docs.qlty.sh/cli/quickstart
+    billing: monthly
+
+paid_tier_highlights:
+  - Free plan keeps lint, format, coverage with unlimited contributors
+  - Free includes 1K analysis minutes and 100 AI autofixes per month
+  - Pro $20/contributor/mo unlocks 20K minutes, 5K AI autofixes, history
+  - Enterprise $30/contributor/mo adds SLA, org policies, named manager
+  - Brand migrated from Code Climate to Qlty in 2024 (codeclimate.com 301s)
 
 tags: []
 
-official_url: https://codeclimate.com/
-pricing_url: https://codeclimate.com/quality/pricing
+official_url: https://qlty.sh/
+pricing_url: https://qlty.sh/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

@@ -14,9 +14,91 @@ free_tier:
   - 'Trial only -- not suitable for permanent free usage'
 
 pricing:
-  - name: Free
+  - name: 14-day trial
     price: 0
     unit: /month
+    description: 14-day free trial; no permanent free tier
+    features:
+      - 14-day evaluation across all plans
+      - No credit card required for trial
+      - 24/7 customer support during trial
+    cta_url: https://eu.phrase.com/idm-ui/signup
+    billing: free
+  - name: Freelancer
+    price: 27
+    unit: /month
+    description: Single TMS seat for independent translators (annual)
+    features:
+      - 1 TMS seat
+      - 150 Strings seats
+      - 200K Strings managed words
+      - 650K TMS processed words/year
+      - Unlimited projects and languages
+    cta_url: https://eu.phrase.com/idm-ui/signup?button_id=pricing_page_LSP_freelancer
+    billing: annual
+  - name: Software UI/UX
+    price: 525
+    unit: /month
+    description: For dev/design teams managing UI copy (annual)
+    features:
+      - 15 Strings seats
+      - 1M Strings managed words
+      - 500K TMS processed words/year
+      - 1M MT units/year
+      - Unlimited languages
+    cta_url: https://eu.phrase.com/idm-ui/signup?button_id=pricing_page_software_ui_ux
+    billing: annual
+  - name: Professional (LSP)
+    price: 525
+    unit: /month
+    description: Unlimited TMS seats for language service providers
+    features:
+      - Unlimited TMS seats
+      - 150 Strings seats
+      - 300K Strings managed words
+      - 4M TMS processed words/year
+      - Unlimited projects and languages
+    cta_url: https://eu.phrase.com/idm-ui/signup
+    billing: annual
+  - name: Team
+    price: 1245
+    unit: /month
+    description: Unlimited TMS seats, all Phrase products (annual)
+    features:
+      - 20 Strings seats
+      - 1.2M Strings managed words
+      - 2.5M TMS processed words/year
+      - 12M MT units/year
+      - All Phrase products included
+    cta_url: https://phrase.com/pricing-demo/?button_id=pricing_page_direct_team
+    billing: annual
+  - name: Business
+    price: Custom
+    description: 150 Strings seats with high-capacity features
+    features:
+      - 150 Strings seats
+      - 3M Strings managed words
+      - 12M TMS processed words/year
+      - 50M MT units/year
+    cta_url: https://phrase.com/pricing-demo/?button_id=pricing_page_direct_business
+    billing: annual
+  - name: Enterprise
+    price: Custom
+    description: Customized capacities and premium support
+    features:
+      - 150+ Strings seats
+      - Custom managed/processed word capacities
+      - Premium support and all integrations
+      - Custom MT units
+    cta_url: https://phrase.com/pricing-demo/?button_id=pricing_page_direct_enterprise
+    billing: annual
+
+paid_tier_highlights:
+  - No permanent free tier; only a 14-day trial
+  - Freelancer plan starts at $27/mo (annual) with 1 TMS seat
+  - Software UI/UX and Professional LSP at $525/mo
+  - Team $1,245/mo bundles all Phrase products
+  - Business and Enterprise priced on request (custom capacities)
 
 tags: []
 

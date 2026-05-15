@@ -15,14 +15,45 @@ free_tier:
   - All advanced features included
   - $1/mo minimum across Bunny services
 
+paid_tier_highlights:
+  - Standard queries beyond 20M billed at $0.10/M (no hidden fees)
+  - Smart (scriptable) queries free up to 1M, then $0.30/M
+  - $1/mo minimum across all Bunny services
+  - All advanced features available at every tier
+  - Pay-per-query — no setup fees, no plan tiers
+
 pricing:
   - name: Free tier
-    description: First 20M queries
+    description: First 20M standard queries free
     price: 0
-    unit: /month
-  - name: Overages
-    description: $0.10/M standard, $0.30/M smart
-    price: 'Usage'
+    billing: free
+    features:
+      - 20M free standard queries/mo
+      - 1M free smart (scriptable) queries/mo
+      - Scriptable DNS records
+      - Built-in monitoring
+      - All advanced features included
+    cta_url: https://dash.bunny.net/account/register
+  - name: Standard query overage
+    description: Pay-per-query after 20M free
+    price: 0.10
+    unit: /M queries
+    billing: usage-based
+    features:
+      - Same advanced features as free tier
+      - Per-query pricing
+      - No setup fees
+      - Scales with usage
+  - name: Smart (scriptable) overage
+    description: Premium scriptable DNS after 1M free
+    price: 0.30
+    unit: /M queries
+    billing: usage-based
+    features:
+      - Advanced query scripting
+      - Per-usage billing
+      - Enterprise capabilities
+      - Scales on demand
 
 tags: [dns, cdn, monitoring, scriptable, ddos]
 

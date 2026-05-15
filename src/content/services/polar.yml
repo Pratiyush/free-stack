@@ -14,14 +14,84 @@ free_tier:
   - "Stripe's 2.9%+30c included in the 4% rate, +1.5% international card fee passed through at cost, +0.5% for subscription payments"
 
 pricing:
-  - name: Free
+  - name: Free (account)
     price: 0
     unit: /month
+    description: No monthly fee; Merchant of Record service
+    features:
+      - No monthly account fee
+      - Pay only on successful transactions
+      - Merchant of Record handles tax/VAT
+      - Refunds and chargebacks managed in dashboard
+    cta_url: https://polar.sh/signup
+    billing: free
+  - name: Transaction fee
+    price: '4% + $0.40'
+    unit: /transaction
+    description: Base fee on entire transaction amount
+    features:
+      - Includes Stripe processing fees
+      - Applied to total transaction value
+      - Covers Merchant of Record service
+    cta_url: https://polar.sh/docs/merchant-of-record/fees
+    billing: usage-based
+  - name: International cards add-on
+    price: '+1.5%'
+    unit: /transaction
+    description: Surcharge on non-US payment cards
+    features:
+      - Applied on top of base 4% + $0.40
+      - Passed through at cost
+    cta_url: https://polar.sh/docs/merchant-of-record/fees
+    billing: usage-based
+  - name: Subscription add-on
+    price: '+0.5%'
+    unit: /transaction
+    description: Extra fee on recurring subscription payments
+    features:
+      - Stacks with base and international fees
+      - Covers subscription billing infra
+    cta_url: https://polar.sh/docs/merchant-of-record/fees
+    billing: usage-based
+  - name: Dispute fee
+    price: 15
+    unit: /dispute
+    description: Per-chargeback fee regardless of outcome
+    features:
+      - $15 per dispute deducted from balance
+      - Polar monitors and may suspend high-chargeback accounts
+    cta_url: https://polar.sh/docs/merchant-of-record/fees
+    billing: usage-based
+  - name: Payout fee
+    price: '0.25% + $0.25'
+    unit: /payout
+    description: Stripe payout passthrough, no Polar markup
+    features:
+      - $2/mo of active payouts
+      - 0.25% + $0.25 per payout
+      - Currency conversion 0.25% (EU) or 1% (other)
+    cta_url: https://polar.sh/docs/merchant-of-record/fees
+    billing: usage-based
+  - name: Volume / Enterprise
+    price: Custom
+    description: Custom rates for large or fast-growing merchants
+    features:
+      - Negotiated transaction rates
+      - Available upon request
+    cta_url: https://polar.sh/
+    billing: annual
+
+paid_tier_highlights:
+  - No monthly account fee; pay per-transaction only
+  - Base fee 4% + $0.40 per transaction includes Stripe processing
+  - International cards +1.5%; subscription payments +0.5%
+  - Dispute/chargeback fee $15 per case
+  - Payouts at Stripe passthrough rates (0.25% + $0.25)
 
 tags: []
 
 official_url: https://polar.sh/
-pricing_url: https://polar.sh/resources/pricing
+pricing_url: https://polar.sh/docs/merchant-of-record/fees
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'

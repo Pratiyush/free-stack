@@ -13,10 +13,58 @@ free_tier:
   - Free (500 min/mo)
   - Single user; no free Linux/Windows minutes; resets monthly; $0.10/min overage on Mac
 
+paid_tier_highlights:
+  - Pay-as-you-go from $0.045/min (Linux) up to $0.114/min (M4)
+  - Additional concurrency at $49/concurrency
+  - Fixed annual plans from $3,990 with unlimited build minutes
+  - Enterprise from $12,000/yr adds SLAs, SSO, dedicated servers
+  - 60-day artifact storage on pay-as-you-go; 1-year on fixed
+
 pricing:
   - name: Free
     price: 0
     unit: /month
+    description: Single-user plan for individuals getting started with CI/CD
+    features:
+      - Unlimited applications
+      - 500 free macOS M2 minutes/month
+      - 1 max parallel build
+      - Community support
+      - 30-day build history
+    billing: free
+  - name: Pay As You Go
+    price: '$0.045–$0.114/min'
+    unit: per minute
+    description: Flexible consumption billed monthly for actual usage
+    features:
+      - $0.095/min Mac mini M2
+      - $0.114/min Mac mini M4
+      - $0.045/min Linux X2 and Windows
+      - Additional concurrency $49/concurrency
+      - 60-day build artifact storage
+    billing: usage-based
+  - name: Fixed Price
+    price: '$3,990–$9,000/yr'
+    unit: /year
+    description: Unlimited usage and fixed costs for established teams
+    features:
+      - Unlimited build minutes for chosen machines
+      - 3 concurrent builds included
+      - Additional concurrency $1,500–$3,000/yr
+      - 1-year build history retention
+      - Burstable concurrency options
+    billing: annual
+  - name: Enterprise
+    price: '$12,000+/yr'
+    unit: /year
+    description: Tailored solutions for large organizations
+    features:
+      - Priority support and dedicated manager
+      - Signed SLAs, NDAs, DPAs
+      - SSO/SAML authentication
+      - Custom regions and dedicated servers
+      - Vendor security assessment assistance
+    billing: annual
 
 tags: []
 
@@ -25,4 +73,4 @@ pricing_url: https://codemagic.io/pricing/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

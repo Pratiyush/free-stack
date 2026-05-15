@@ -17,6 +17,58 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    billing: free
+    description: A simpler way to chat and collaborate
+    features:
+      - 90 days of message history
+      - Up to 10 app integrations
+      - 1:1 Huddles meetings
+      - 1:1 external messages
+      - Basic AI (summaries, daily recaps)
+      - SAML-based SSO
+    cta_url: https://slack.com/pricing
+  - name: Pro
+    price: 8.25
+    unit: EUR/user/month
+    billing: monthly
+    description: Drive productivity in one place; EUR 6.75 annual
+    features:
+      - Unlimited message history
+      - Unlimited app integrations
+      - Group meetings and external messages
+      - Basic AI capabilities
+      - SAML-based SSO
+      - SCIM user management
+    cta_url: https://slack.com/pricing
+  - name: Business+
+    price: 18
+    unit: EUR/user/month
+    billing: monthly
+    description: Scale with AI-powered work; EUR 15 annual
+    features:
+      - Advanced AI with Slackbot agent
+      - AI workflow generation and search
+      - Enterprise-grade security
+      - Native data loss prevention
+      - Admin-created templates
+    cta_url: https://slack.com/pricing
+  - name: Enterprise+
+    price: Custom
+    billing: annual
+    description: Maximize performance on the most comprehensive work OS
+    features:
+      - Unlimited workspaces
+      - Enterprise-grade AI
+      - Multiple SAML configurations
+      - Information barriers and legal holds
+      - 24/7 priority support (4hr SLA)
+    cta_url: https://slack.com/pricing
+
+paid_tier_highlights:
+  - Pro (EUR 8.25/user) unlocks unlimited history and apps
+  - Business+ (EUR 18/user) adds advanced AI and DLP
+  - Business+ brings AI workflow generation
+  - Enterprise+ provides unlimited workspaces and 24/7 priority support
 
 tags: []
 
@@ -25,4 +77,4 @@ pricing_url: https://slack.com/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

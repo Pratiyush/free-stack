@@ -13,10 +13,47 @@ free_tier:
   - Starter plan (no credit card required)
   - 'Perpetual free tier, no project pausing, pay-as-you-go beyond limits'
 
+paid_tier_highlights:
+  - Professional ($25/dev/mo) lifts to 50 GB DB, 25M function calls
+  - Daily backups, log streaming, custom domains in Professional
+  - Business/Enterprise starts at $2,500/mo with custom resources
+  - SAML/SSO, service SLAs, dedicated deployments at Enterprise
+  - White-glove onboarding and Slack Connect on Enterprise
+
 pricing:
-  - name: Free
+  - name: Free & Starter
     price: 0
     unit: /month
+    description: Personal projects and prototypes (pay-as-you-go optional)
+    features:
+      - 1-6 developers
+      - 0.5 GB database, 1 GB file storage
+      - 1 GB monthly DB I/O, 1M function calls/mo
+      - Text and vector search, crons, webhooks
+      - Auth and Node.js actions included
+    billing: free
+  - name: Professional
+    price: 25
+    unit: /developer/month
+    description: Startups moving from prototype to production
+    features:
+      - 1-20 developers
+      - 50 GB database, 100 GB file storage
+      - 50 GB monthly DB I/O, 25M function calls/mo
+      - Log streaming, exception reporting, daily backups
+      - Custom domains, email support, management API
+    billing: monthly
+  - name: Business & Enterprise
+    price: '$2,500+/mo'
+    unit: /month minimum
+    description: Teams scaling rapidly with custom solutions
+    features:
+      - 50+ developers
+      - Unlimited deployments and custom resource allocation
+      - SAML/SSO, service SLAs, dedicated deployments
+      - Slack Connect support, white-glove onboarding
+      - Fine-grained permissions, audit logs, fast backup/restore
+    billing: annual
 
 tags: []
 
@@ -25,4 +62,4 @@ pricing_url: https://www.convex.dev/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

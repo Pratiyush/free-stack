@@ -17,9 +17,21 @@ free_tier:
 
 pricing:
   - name: Free
-    description: Community-funded nonprofit
+    description: Community-funded dynamic DNS service hosted on AWS
     price: 0
     unit: /month
+    billing: free
+    features:
+      - 5 subdomains per account
+      - IPv4 and IPv6 support
+      - HTTPS support
+      - API-based update endpoints
+      - No ads or paid upgrades
+      - Optional Patreon/Bitcoin donations only
+    cta_url: https://www.duckdns.org/
+
+paid_tier_highlights:
+  - This service is always-free; no paid tiers exist
 
 tags: [dynamic-dns, dns, home-lab, iot, subdomains]
 

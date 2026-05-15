@@ -14,9 +14,21 @@ free_tier:
   - 'Self-hosted; integrates with any CI (GitHub Actions, etc.)'
 
 pricing:
-  - name: Free
+  - name: Free (MIT open source)
     price: 0
     unit: /month
+    billing: free
+    description: MIT-licensed automation toolchain for iOS and Android
+    features:
+      - Open-source CLI (700+ contributors)
+      - Run on any CI (GitHub Actions, etc.)
+      - Beta deployment, screenshots, code signing
+      - Stewarded by the Mobile Native Foundation
+      - No license fees
+    cta_url: https://fastlane.tools/
+
+paid_tier_highlights:
+  - This service is always-free; no paid tiers exist
 
 tags: []
 
@@ -25,4 +37,4 @@ pricing_url: https://fastlane.tools/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

@@ -14,9 +14,73 @@ free_tier:
   - '**Trial only** -- no permanent free tier; pay-as-you-go after credit consumed'
 
 pricing:
-  - name: Free
+  - name: Free trial
     price: 0
+    unit: trial credit
+    billing: free
+    description: Sign-up trial credit, no credit card required
+    features:
+      - Test SMS, Voice, WhatsApp, Verify
+      - Restricted to verified phone numbers
+      - Sandbox API keys
+      - No long-term contract
+      - Upgrade to PAYG anytime
+    cta_url: https://www.twilio.com/try-twilio
+  - name: SMS (US)
+    price: 0.0083
+    unit: per message
+    billing: usage-based
+    description: Pay-as-you-go SMS send/receive in US
+    features:
+      - Bidirectional SMS
+      - MMS support
+      - RCS capability
+      - Per-message billing
+      - Volume discounts at scale
+    cta_url: https://www.twilio.com/en-us/sms/pricing
+  - name: Voice
+    price: 0.014
+    unit: per minute outbound
+    billing: usage-based
+    description: Programmable Voice pay-as-you-go
+    features:
+      - $0.0085/min inbound
+      - $0.014/min outbound origination
+      - Global PSTN reach
+      - Voice TwiML control
+      - SIP trunking add-on
+    cta_url: https://www.twilio.com/en-us/voice/pricing
+  - name: Verify
+    price: 0.05
+    unit: per verification
+    billing: usage-based
+    description: Phone/email verification API
+    features:
+      - SMS, voice, email OTP
+      - Silent network auth
+      - Fraud detection included
+      - Per-verification billing
+      - Global coverage
+    cta_url: https://www.twilio.com/en-us/user-authentication-identity/pricing
+  - name: SendGrid Email
+    price: 19.95
     unit: /month
+    billing: monthly
+    description: Email API; free 100 emails/day or paid plans from $19.95/mo
+    features:
+      - 100 free emails/day available
+      - Marketing & transactional email
+      - Deliverability tools
+      - Templates and analytics
+      - SMTP and HTTP APIs
+    cta_url: https://sendgrid.com/en-us/pricing
+
+paid_tier_highlights:
+  - SMS pay-as-you-go from $0.0083/message in the US
+  - Voice from $0.0085/min inbound, $0.014/min outbound
+  - Verify API at $0.05 per verification with global coverage
+  - SendGrid email plans from $19.95/mo with 100 free emails/day
+  - 'Twilio Flex contact center: 5,000 free hours then $1/active-hour or $150/seat'
 
 tags: []
 
@@ -25,4 +89,4 @@ pricing_url: https://www.twilio.com/en-us/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

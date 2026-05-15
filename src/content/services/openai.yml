@@ -14,9 +14,48 @@ free_tier:
   - 'Free trial credits discontinued mid-2025; only GPT-3.5 at 3 RPM; payment method likely required'
 
 pricing:
-  - name: Free
+  - name: Free (limited)
     price: 0
     unit: /month
+    billing: free
+    description: Limited free access - mid-2025 free credits discontinued
+    features:
+      - GPT-3.5 Turbo only
+      - 3 RPM rate limit
+      - Payment method likely required
+      - No persistent free credits since mid-2025
+    cta_url: https://platform.openai.com/signup
+  - name: Pay-as-you-go
+    price: Usage
+    billing: usage-based
+    description: Token-based pricing across all OpenAI models
+    features:
+      - Per-1M-token pricing (input/output)
+      - GPT-4o, GPT-4 Turbo, o1, o3 models
+      - DALL-E, Whisper, TTS, embeddings
+      - Tiered rate limits by spend
+      - Batch API 50% discount
+      - Prompt caching discount
+    cta_url: https://platform.openai.com/signup
+  - name: Enterprise
+    price: Custom
+    billing: annual
+    description: Volume discounts, SLA, data residency
+    features:
+      - Volume pricing
+      - 99.9% SLA
+      - Dedicated capacity
+      - Data residency options
+      - Priority support
+      - SOC 2 / HIPAA BAA
+    cta_url: https://openai.com/enterprise
+
+paid_tier_highlights:
+  - All advanced models (GPT-4o, o1, o3) require pay-as-you-go credits
+  - Rate limits scale with monthly spend (Tier 1-5)
+  - Batch API offers 50% discount for async workloads
+  - Prompt caching reduces input token costs by up to 50%
+  - Enterprise adds SLA, dedicated capacity, and compliance
 
 tags: []
 

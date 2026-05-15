@@ -12,11 +12,51 @@ tier_type: free-plan
 free_tier:
   - '30,000 credits/mo (~6,000 build mins on Linux/Docker)'
   - Credits expire monthly; no rollover
+  - Up to 5 active users
+  - 30x job concurrency
+  - All execution environments (Docker, Windows, Linux, Arm, macOS)
+
+paid_tier_highlights:
+  - Performance ($15/mo+) is usage-based with 30K credits included
+  - 80x job concurrency + larger resource classes on Performance
+  - Additional users $15/mo each above the 5 included
+  - Optional 8x5 support add-on on Performance
+  - Scale tier offers GPU access, SSO, config policies, 24/7 support
 
 pricing:
   - name: Free
+    description: All premium features, no credit card required
     price: 0
-    unit: /month
+    billing: free
+    features:
+      - 6,000 build minutes/mo (30K credits)
+      - 5 active users max
+      - Docker, Windows, Linux, Arm, macOS
+      - 30x job concurrency
+      - Community support
+    cta_url: https://circleci.com/signup/
+  - name: Performance
+    description: Flexible pay-as-you-use plan
+    price: 15
+    unit: /mo (starts at)
+    billing: usage-based
+    features:
+      - 30K free credits/mo included
+      - 5 users included ($15 each more)
+      - Larger resource classes
+      - 80x job concurrency
+      - Docker layer caching
+      - Optional 8x5 support add-on
+  - name: Scale
+    description: Enterprise-level power for unlimited scale
+    price: 'Contact sales'
+    billing: annual
+    features:
+      - Customizable credit allocations
+      - Enterprise security controls
+      - Largest resource classes + GPU
+      - SSO + config policies
+      - Optional 24/7 support add-on
 
 tags: []
 
@@ -25,4 +65,4 @@ pricing_url: https://circleci.com/pricing/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

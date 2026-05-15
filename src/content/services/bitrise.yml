@@ -13,10 +13,57 @@ free_tier:
   - Hobby plan (free)
   - '90-min build timeout; 1 credit = 1 min Linux or 30 sec macOS; no credit card required'
 
+paid_tier_highlights:
+  - Starter ($89/mo annual) adds 3 concurrent builds and 10 team members
+  - Pro ($200/mo annual) unlocks unlimited team and M2 Pro / Linux Large
+  - Pay-As-You-Go scaling option available on Pro
+  - Add-ons available — Build Cache, Release Management, CodePush
+  - Enterprise tier includes dedicated CSM, custom SLA, private cloud
+
 pricing:
-  - name: Free
+  - name: Hobby
+    description: Build and distribute passion projects at no cost
     price: 0
-    unit: /month
+    billing: free
+    features:
+      - Single team member access
+      - Monthly build credits for small projects
+      - Community Slack/forum support
+      - 1 private app
+      - 90-minute build timeout
+    cta_url: https://app.bitrise.io/users/sign_up
+  - name: Starter
+    description: For indie devs and small teams getting started
+    price: 89
+    unit: /mo (annual)
+    billing: annual
+    features:
+      - Up to 10 team members
+      - 3 concurrent builds
+      - 2 private apps
+      - macOS/Linux Medium infrastructure
+      - Unlimited builds with plan
+  - name: Pro
+    description: Growing teams needing increased collaboration
+    price: 200
+    unit: /mo (annual)
+    billing: annual
+    features:
+      - Unlimited team members
+      - Up to 10 concurrent macOS builds
+      - M2 Pro Large + Linux Large machines
+      - Pay-As-You-Go scaling option
+      - 210-minute build timeout
+  - name: Enterprise
+    description: Custom flexibility for advanced mobile orgs
+    price: 'Contact sales'
+    billing: annual
+    features:
+      - Dedicated CSM support
+      - Custom SLA
+      - Dedicated/private cloud options
+      - X Large machine access
+      - Self-hosted AWS agent capability
 
 tags: []
 
@@ -25,4 +72,4 @@ pricing_url: https://bitrise.io/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

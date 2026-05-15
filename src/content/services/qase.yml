@@ -16,7 +16,60 @@ free_tier:
 pricing:
   - name: Free
     price: 0
-    unit: /month
+    unit: /user/month
+    description: For students/hobbyists; 3 users, 2 projects
+    features:
+      - 3 users, 2 projects
+      - 500 MB storage
+      - 30-day test history
+      - 25K/mo API results
+      - MCP Server
+    cta_url: https://app.qase.io/signup?plan=free
+    billing: free
+  - name: Startup
+    price: 24
+    unit: /user/month
+    description: Up to 20 users; custom reports, integrations
+    features:
+      - Up to 20 users, unlimited projects
+      - 100 GB storage
+      - 90-day test history
+      - 1,000 AIDEN credits/mo
+      - 35+ integrations
+      - Dashboards and custom fields
+    cta_url: https://app.qase.io/signup?plan=startup
+    billing: monthly
+  - name: Business
+    price: 30
+    unit: /user/month
+    description: Up to 100 users; RBAC and review workflows
+    features:
+      - Up to 100 users, unlimited projects
+      - Unlimited storage
+      - 1-year test history
+      - 2,000 AIDEN credits/mo
+      - Role-based access control
+      - Test case review and traceability
+    cta_url: https://app.qase.io/signup?plan=business
+    billing: monthly
+  - name: Enterprise
+    price: Custom
+    description: 20+ users; SSO/SCIM, dedicated cluster, SLA
+    features:
+      - Unlimited users and projects
+      - Unlimited storage and history
+      - 4,000 AIDEN credits/mo
+      - SSO with SCIM provisioning
+      - Dedicated cluster
+      - Success manager and SLA
+    cta_url: https://qase.io/get-demo/
+    billing: annual
+
+paid_tier_highlights:
+  - Free plan caps at 3 users, 2 projects, 500 MB storage
+  - Startup $24/user/mo unlocks 20 users, 100 GB, 35+ integrations
+  - Business $30/user/mo adds RBAC, traceability, premium support
+  - Enterprise (custom) adds SSO/SCIM, dedicated cluster, SLA
 
 tags: []
 
@@ -25,4 +78,4 @@ pricing_url: https://qase.io/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

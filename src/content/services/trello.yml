@@ -17,6 +17,65 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    description: For up to 10 collaborators
+    billing: free
+    features:
+      - Unlimited cards
+      - Up to 10 boards per Workspace
+      - Quick capture from email, Slack, Teams
+      - Inbox functionality
+      - Unlimited Power-Ups per board
+      - 2-factor authentication
+    cta_url: https://trello.com/signup
+  - name: Standard
+    price: 5
+    unit: /user/month (annual)
+    description: Unlimited boards + card mirroring ($6 monthly)
+    billing: annual
+    features:
+      - Unlimited boards
+      - AI-powered quick capture
+      - Planner with full access
+      - Card mirroring across boards
+      - Custom Fields
+      - 1,000 Workspace command runs/mo
+      - Single board guests
+    cta_url: https://trello.com/signup
+  - name: Premium
+    price: 10
+    unit: /user/month (annual)
+    description: AI + multiple views ($12.50 monthly)
+    billing: annual
+    features:
+      - AI-powered content generation
+      - Multiple views (Calendar, Timeline, Table, Dashboard, Map)
+      - Workspace-level templates
+      - Unlimited command runs
+      - Admin and security features
+      - Collections and Observers
+      - Simple data export
+    cta_url: https://trello.com/premium
+  - name: Enterprise
+    price: 17.50
+    unit: /user/month (annual)
+    description: Atlassian Guard + 24/7 admin support
+    billing: annual
+    features:
+      - Unlimited Workspaces
+      - Organization-wide permissions
+      - Organization-visible boards
+      - Multi-board guests
+      - Power-Up administration
+      - Free SSO + user provisioning
+      - 24/7 enterprise admin support
+    cta_url: https://trello.com/enterprise
+
+paid_tier_highlights:
+  - Standard at $5/user/mo unlocks unlimited boards + card mirroring
+  - Premium at $10/user/mo adds AI + Calendar/Timeline/Dashboard views
+  - Enterprise at $17.50/user/mo includes Atlassian Guard Standard + SSO
+  - Free is limited to 10 collaborators per Workspace
+  - 1,000 Workspace commands on Standard; unlimited on Premium+
 
 tags: []
 
@@ -25,4 +84,4 @@ pricing_url: https://trello.com/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

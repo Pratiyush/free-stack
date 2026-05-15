@@ -17,19 +17,53 @@ free_tier:
 
 pricing:
   - name: Free trial
-    description: One-time 720 hr
     price: 0
-    unit: /month
-  - name: Growth
-    price: 79
-    unit: /month
+    unit: lifetime
+    billing: free
+    description: One-time 720-hour trial cluster (~30 days)
+    features:
+      - 720 hours cluster time (lifetime)
+      - 10 GB bandwidth (lifetime)
+      - No credit card required
+      - Full typo-tolerant search API
+      - Dedicated cluster
+    cta_url: https://cloud.typesense.org/
+  - name: Dedicated Cluster (configurator)
+    price: Usage
+    billing: usage-based
+    description: Configure RAM, vCPUs, HA, SDN; hourly rates per cluster
+    features:
+      - 0.5 GB – 1,024 GB RAM range
+      - From 2 vCPUs with burst capacity
+      - Optional GPU acceleration
+      - Optional High Availability
+      - No limits on records or operations
+    cta_url: https://cloud.typesense.org/
+  - name: Self-hosted (OSS)
+    price: 0
+    billing: free
+    description: Run Typesense yourself; open source under GPLv3
+    features:
+      - Self-host on any infra
+      - Full Typesense feature set
+      - Community support
+      - Docker images & binaries
+      - No vendor limits
+    cta_url: https://typesense.org/downloads/
+
+paid_tier_highlights:
+  - Configurable dedicated clusters with no record or operation limits
+  - GPU acceleration and high-availability add-ons
+  - Search Delivery Network (SDN) option for global edge replication
+  - Algolia migration program with free consulting for $1k+/mo spenders
+  - Free critical production support included on cloud clusters
 
 tags: [search, typo-tolerance, full-text-search, api, open-source]
 
 official_url: https://typesense.org/
 pricing_url: https://cloud.typesense.org/pricing
 
-maintainer_notes: 'Pricing page is JS-rendered (configurator widget); curl text does not surface the 720-hour free trial bullet. Cloud landing still advertises "Free credits, no credit card" on signup. Needs JS verifier (Sprint 4) to confirm 720 h figure.'
+maintainer_notes: 'Pricing page is a configurator (no fixed tiers). 720-hour trial confirmed at signup. Dedicated cluster cost depends on RAM/vCPU/HA selection.'
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'

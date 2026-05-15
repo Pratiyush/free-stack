@@ -17,6 +17,58 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    billing: free
+    description: Entry option with limited files and unlimited viewers
+    features:
+      - Limited file creation
+      - Unlimited viewers
+      - Web exports (with watermark)
+      - Access to Spline Templates
+      - Limited 2D editor files
+    cta_url: https://spline.design/pricing
+  - name: Starter
+    price: 15
+    unit: /seat/month
+    billing: monthly
+    description: Everything on Free plus unlimited files; $12 annual
+    features:
+      - Unlimited 3D and 2D files
+      - Video upload capability
+      - Watermark-free web exports
+      - Higher-res image exports
+      - Material and audio libraries
+    cta_url: https://spline.design/pricing
+  - name: Professional
+    price: 25
+    unit: /seat/month
+    billing: monthly
+    description: Most popular; $20 annual
+    features:
+      - Unlimited folders and projects
+      - Video export functionality
+      - Apple and Android exports
+      - Audio upload and code exports
+      - Unlimited variables, APIs, webhooks
+      - Watermark-free web embeds
+    cta_url: https://spline.design/pricing
+  - name: Enterprise
+    price: Custom
+    billing: annual
+    description: Team features and dedicated support
+    features:
+      - Centralized licensing and billing
+      - Multiple teams with privacy
+      - SAML SSO
+      - Self-hosted exports and version history
+      - Priority support and security onboarding
+      - Optional custom AI credits
+    cta_url: https://spline.design/pricing
+
+paid_tier_highlights:
+  - Starter ($15, $12 annual) unlocks unlimited files and video upload
+  - Professional ($25, $20 annual) adds mobile and code exports
+  - Professional brings unlimited APIs/webhooks
+  - Enterprise provides SAML SSO and self-hosted exports
 
 tags: []
 
@@ -25,4 +77,4 @@ pricing_url: https://spline.design/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

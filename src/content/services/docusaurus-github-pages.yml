@@ -14,9 +14,21 @@ free_tier:
   - 'Static site generator -- deploy free on GitHub Pages (1GB site, 100GB bandwidth/mo) or Cloudflare Pages (unlimited)'
 
 pricing:
-  - name: Free
+  - name: Free (MIT open source)
     price: 0
     unit: /month
+    billing: free
+    description: React static-site docs generator deployed free on GitHub Pages
+    features:
+      - MIT-licensed open-source codebase (Meta)
+      - MDX and React component support
+      - Internationalization and versioning built in
+      - Free hosting on GitHub Pages or Cloudflare Pages
+      - GitHub Pages limits 1 GB site, 100 GB bandwidth/month
+    cta_url: https://docusaurus.io/
+
+paid_tier_highlights:
+  - This service is always-free; no paid tiers exist
 
 tags: []
 

@@ -16,10 +16,21 @@ free_tier:
   - All features included
 
 pricing:
-  - name: Free
-    description: MIT open source
+  - name: Free (MIT open source)
     price: 0
     unit: /month
+    description: Fully open-source E2E test framework with no limits
+    features:
+      - No limits on runs
+      - Chromium, Firefox, WebKit support
+      - Local or CI execution
+      - All features included
+      - Free under MIT license
+    cta_url: https://playwright.dev/docs/intro
+    billing: free
+
+paid_tier_highlights:
+  - This service is always-free; no paid tiers exist
 
 tags: [testing, e2e, automation, open-source, framework]
 

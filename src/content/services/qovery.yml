@@ -14,9 +14,62 @@ free_tier:
   - 'Deploys to **your own** AWS/GCP/Azure account (you pay cloud infra costs); Qovery layer is free'
 
 pricing:
-  - name: Free
+  - name: Starter
     price: 0
     unit: /month
+    description: Free BYOC tier; deploy to your own AWS/GCP/Azure
+    features:
+      - Deploy on your own cloud
+      - Up to 3 users + 3 AI agent seats
+      - 1 managed cluster
+      - Up to 50 environments
+      - 500 deployment minutes
+      - Community support
+    cta_url: https://console.qovery.com
+    billing: free
+  - name: Team
+    price: 899
+    unit: /month
+    description: Expanded collaboration for product teams
+    features:
+      - Deploy on your own cloud
+      - 10 users + 10 AI agent seats
+      - 2 managed clusters
+      - Up to 100 environments
+      - 5,000 deployment minutes
+      - Business hours support
+    cta_url: https://console.qovery.com
+    billing: monthly
+  - name: Business
+    price: 1999
+    unit: /month
+    description: Scaling teams; SSO and policy-as-code
+    features:
+      - Deploy on your own cloud
+      - 30 users + 30 AI agent seats with SSO
+      - 3 managed clusters
+      - Up to 250 environments
+      - 10,000 deployment minutes
+      - 99.9% SLA + policy as code
+    cta_url: https://console.qovery.com
+    billing: monthly
+  - name: Enterprise
+    price: Custom
+    description: Tailored on-premise or self-hosted; 24/7 support
+    features:
+      - On-premise or self-hosted options
+      - Unlimited users + AI agent seats
+      - Custom managed clusters and environments
+      - Custom deployment minutes
+      - 24/7 support and dedicated CSM
+    cta_url: https://qovery.com/book-a-demo
+    billing: annual
+
+paid_tier_highlights:
+  - Starter (free) deploys to your AWS/GCP/Azure with 3 users and 50 envs
+  - Team $899/mo for 10 users, 2 clusters, 5K deploy minutes
+  - Business $1,999/mo adds SSO, 3 clusters, 99.9% SLA
+  - Enterprise (custom) for on-prem/self-host with 24/7 support
 
 tags: []
 
@@ -25,4 +78,4 @@ pricing_url: https://www.qovery.com/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

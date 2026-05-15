@@ -17,6 +17,45 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    billing: free
+    description: Unlimited usage with community support
+    features:
+      - Self-hosted with 1 seat
+      - Unlimited usage
+      - Community support
+      - No credit card required
+      - Self-host on own infrastructure
+    cta_url: https://www.stormkit.io/
+  - name: Premium
+    price: 20
+    unit: /seat/month
+    billing: monthly
+    description: Popular cloud tier with team features
+    features:
+      - Unlimited usage
+      - Built-in analytics
+      - Audit logs
+      - Approval mode for user management
+      - Teams and insights
+    cta_url: https://www.stormkit.io/
+  - name: Ultimate
+    price: 100
+    unit: /seat/month
+    billing: monthly
+    description: Premium features plus dedicated support
+    features:
+      - All Premium features
+      - Premium support via Slack/Discord/Teams
+      - Priority response
+      - Audit logs
+      - Built-in analytics
+    cta_url: https://www.stormkit.io/
+
+paid_tier_highlights:
+  - Premium ($20/seat) adds analytics, audit logs, teams
+  - Premium unlocks approval mode for user management
+  - Ultimate ($100/seat) adds Slack/Discord/Teams support
+  - Cloud tiers replace self-hosted single-seat limitation
 
 tags: []
 
@@ -25,4 +64,4 @@ pricing_url: https://www.stormkit.io/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

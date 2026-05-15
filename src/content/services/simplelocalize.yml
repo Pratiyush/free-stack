@@ -14,9 +14,62 @@ free_tier:
   - All features included on every plan; paid starts at EUR 12/mo (Developer)
 
 pricing:
-  - name: Free
+  - name: Community
     price: 0
     unit: /month
+    billing: free
+    description: Individuals and small projects starting with i18n
+    features:
+      - 250 translation keys
+      - 10 projects and languages
+      - 1 team member
+      - 30-day activity log
+      - 25 customer-specific translations
+      - 150K characters auto-translation
+    cta_url: https://simplelocalize.io/pricing/
+  - name: Developer
+    price: 12
+    unit: EUR/month
+    billing: monthly
+    description: Individual developers; unlimited project/language scaling
+    features:
+      - 1,000 translation keys
+      - Unlimited projects and languages
+      - 5 team members
+      - 90-day activity log
+      - 300K characters auto-translation
+      - REST API and developer tools
+    cta_url: https://simplelocalize.io/pricing/
+  - name: Team
+    price: 35
+    unit: EUR/month
+    billing: monthly
+    description: Collaborative teams with enhanced workflow features
+    features:
+      - 4,000 translation keys
+      - 25 team members
+      - 180-day activity log
+      - 500K characters auto-translation
+      - QA checks and automations
+    cta_url: https://simplelocalize.io/pricing/
+  - name: Business
+    price: 99
+    unit: EUR/month
+    billing: monthly
+    description: Enterprise capacity and advanced security
+    features:
+      - 12,000 translation keys
+      - 100 team members
+      - Full year activity log
+      - SAML SSO and audit logs
+      - Custom hosting and environments
+    cta_url: https://simplelocalize.io/pricing/
+
+paid_tier_highlights:
+  - Developer (EUR 12) unlocks REST API and unlimited projects
+  - Team (EUR 35) adds 25 members and QA automations
+  - Business (EUR 99) brings SAML SSO and audit logs
+  - Auto-translation quota scales with each tier
 
 tags: []
 
@@ -25,4 +78,4 @@ pricing_url: https://simplelocalize.io/pricing/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

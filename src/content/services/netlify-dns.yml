@@ -17,6 +17,55 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    billing: free
+    description: DNS bundled with Netlify hosting free tier
+    features:
+      - Managed DNS for custom domains
+      - Free SSL via Let's Encrypt
+      - 300 monthly credits (Netlify hosting)
+      - Deploy from AI, Git, or API
+      - Global CDN
+    cta_url: https://app.netlify.com/signup
+  - name: Personal
+    price: 9
+    unit: /month
+    billing: monthly
+    description: Enhanced individual plan with observability
+    features:
+      - 1,000 monthly credits
+      - Smart secret detection
+      - 1-day observability window
+      - Priority email support
+    cta_url: https://app.netlify.com/signup
+  - name: Pro
+    price: 20
+    unit: /month
+    billing: monthly
+    description: Team plan with private repos and concurrent builds
+    features:
+      - 3,000 monthly credits
+      - Private organization repositories
+      - 3+ concurrent builds
+      - 30-day analytics
+    cta_url: https://app.netlify.com/signup
+  - name: Enterprise
+    price: Custom
+    billing: monthly
+    description: Unlimited credits and dedicated support for large teams
+    features:
+      - Unlimited credits
+      - 99.99% SLA
+      - SSO and SCIM
+      - 24/7 dedicated support
+      - Log drains
+    cta_url: https://www.netlify.com/enterprise/
+
+paid_tier_highlights:
+  - DNS itself is bundled free with any Netlify plan
+  - Personal adds observability, secret detection, priority support
+  - Pro adds private repos, concurrent builds, 30-day analytics
+  - Enterprise provides unlimited credits and SLA guarantees
+  - SSO/SCIM only on Enterprise
 
 tags: []
 

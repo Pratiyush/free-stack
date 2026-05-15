@@ -2,7 +2,9 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import ServiceCard from '~/components/ui/ServiceCard.astro';
+import ServiceTable from '~/components/ui/ServiceTable.astro';
 import SearchBox from '~/components/ui/SearchBox.astro';
+import ViewToggle from '~/components/ui/ViewToggle.astro';
 import { TIER_LABELS } from '~/lib/labels';
 
 const services = (await getCollection('services')).sort((a, b) =>
@@ -56,15 +58,22 @@ const tierTypes = ['always-free', 'free-plan', 'trial-credit', 'pay-as-you-go'] 
       </fieldset>
     </div>
 
-    <p class="result-count" data-result-count>{services.length} services</p>
+    <div class="result-row">
+      <p class="result-count" data-result-count>{services.length} services</p>
+      <ViewToggle />
+    </div>
 
-    <div class="grid" data-grid>
+    <div class="grid" data-view="grid" data-grid>
       {
         services.map((s) => {
           const cat = categories.find((c) => c.id === s.data.category);
           return <ServiceCard service={s} categoryName={cat?.data.name} />;
         })
       }
+    </div>
+
+    <div data-view="table" hidden>
+      <ServiceTable services={services} />
     </div>
   </section>
 
@@ -74,6 +83,19 @@ const tierTypes = ['always-free', 'free-plan', 'trial-credit', 'pay-as-you-go'] 
     const catSelect = document.querySelector<HTMLSelectElement>('[data-filter-category]');
     const resultCount = document.querySelector<HTMLElement>('[data-result-count]');
     const cards = Array.from(grid?.querySelectorAll<HTMLElement>('.service-card') ?? []);
+    // Table rows share data-slug / data-tier / data-category with cards.
+    const tableRows = Array.from(
+      document.querySelectorAll<HTMLElement>('[data-view="table"] .row[data-slug]'),
+    );
+    // Tag table rows with the same data-tier / data-category as cards.
+    tableRows.forEach((row) => {
+      const slug = row.dataset.slug;
+      const matchingCard = cards.find((c) => c.dataset.slug === slug);
+      if (matchingCard) {
+        row.dataset.tier = matchingCard.dataset.tier ?? '';
+        row.dataset.category = matchingCard.dataset.category ?? '';
+      }
+    });
 
     function applyFilters() {
       const tier = document.querySelector<HTMLButtonElement>('[data-filter-tier].active')?.dataset
@@ -86,6 +108,16 @@ const tierTypes = ['always-free', 'free-plan', 'trial-credit', 'pay-as-you-go'] 
         const show = matchTier && matchCat;
         card.style.display = show ? '' : 'none';
         if (show) visible++;
+      });
+      // Table rows: hide both the row AND its detail row when filtered out.
+      tableRows.forEach((row) => {
+        const matchTier = !tier || row.dataset.tier === tier;
+        const matchCat = !cat || row.dataset.category === cat;
+        const show = matchTier && matchCat;
+        row.style.display = show ? '' : 'none';
+        const detailId = row.getAttribute('aria-controls');
+        const detail = detailId ? document.getElementById(detailId) : null;
+        if (detail) detail.style.display = show ? '' : 'none';
       });
       if (resultCount) resultCount.textContent = `${visible} service${visible === 1 ? '' : 's'}`;
     }
@@ -217,11 +249,19 @@ const tierTypes = ['always-free', 'free-plan', 'trial-credit', 'pay-as-you-go'] 
       background: var(--color-paper);
       color: var(--color-ink);
     }
+    .result-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--space-md);
+      margin-bottom: var(--space-md);
+      flex-wrap: wrap;
+    }
     .result-count {
       font-family: var(--font-mono);
       font-size: 0.85rem;
       color: var(--color-ink-soft);
-      margin-bottom: var(--space-md);
+      margin: 0;
     }
     .grid {
       display: grid;

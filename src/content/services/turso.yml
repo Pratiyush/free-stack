@@ -19,10 +19,66 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    description: 100 databases, 5 GB storage, no credit card
+    billing: free
+    features:
+      - 100 databases
+      - 5 GB total storage
+      - 500M monthly rows read
+      - 10M monthly rows written
+      - 3 GB monthly syncs
+      - 1-day point-in-time restore
+      - Community support
+    cta_url: https://app.turso.tech/signup
   - name: Developer
-    description: Unlimited databases; overage $0.75/GB storage, $1/B reads
     price: 4.99
     unit: /month
+    description: Individual devs and small projects
+    billing: monthly
+    features:
+      - Unlimited databases
+      - 9 GB storage + $0.75/GB overage
+      - 2.5B monthly rows read + $1/B overage
+      - 25M rows written + $1/M overage
+      - 10 GB monthly syncs + $0.35/GB overage
+      - 10-day point-in-time restore
+    cta_url: https://app.turso.tech/signup
+  - name: Scaler
+    price: 24.92
+    unit: /month
+    description: Growing apps with team features
+    billing: monthly
+    features:
+      - Unlimited databases
+      - 24 GB storage + $0.50/GB overage
+      - 100B rows read + $0.80/B overage
+      - 100M rows written + $0.80/M overage
+      - Teams & DPA support
+      - 30-day point-in-time restore
+      - 14-day audit log retention
+    cta_url: https://app.turso.tech/signup
+  - name: Pro
+    price: 416.58
+    unit: /month
+    description: Enterprise-grade security and compliance
+    billing: monthly
+    features:
+      - Unlimited databases
+      - 50 GB storage + $0.45/GB overage
+      - 250B rows read + $0.75/B overage
+      - 250M rows written + $0.75/M overage
+      - SSO, BYOK encryption
+      - HIPAA + SOC2 compliance
+      - 90-day point-in-time restore
+      - Priority email + Slack support
+    cta_url: https://app.turso.tech/signup
+
+paid_tier_highlights:
+  - Developer at $4.99/mo unlocks unlimited databases + 9 GB storage
+  - Scaler at $24.92/mo adds 24 GB storage + teams + audit log
+  - Pro at $416.58/mo includes SSO + HIPAA + SOC2 + BYOK
+  - 'Point-in-time restore scales: 1d (Free) -> 10d -> 30d -> 90d'
+  - 'Read overage drops with scale: $1/B -> $0.80/B -> $0.75/B'
 
 tags: [sqlite, libsql, database, edge-computing, serverless]
 

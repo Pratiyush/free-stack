@@ -14,9 +14,35 @@ free_tier:
   - '100 simultaneous connections, hard cap (no overage)'
 
 pricing:
-  - name: Free
+  - name: Spark (Free)
     price: 0
     unit: /month
+    billing: free
+    description: Free Realtime DB on the Spark plan
+    features:
+      - 100 simultaneous connections
+      - 1 GB storage
+      - 10 GB/month downloads
+      - Hard cap with no overage billing
+      - Single default DB instance
+    cta_url: https://console.firebase.google.com/
+  - name: Blaze (Pay-as-you-go)
+    price: Usage-based
+    billing: usage-based
+    description: Higher Realtime DB scale with metered billing
+    features:
+      - $5 per GB stored
+      - $1 per GB downloaded
+      - Up to 200K simultaneous connections per DB
+      - Multiple DB instances per project
+      - Keeps Spark free thresholds
+    cta_url: https://console.firebase.google.com/
+
+paid_tier_highlights:
+  - Blaze lifts the 100-connection Spark cap to 200K per database
+  - Pay per GB stored and downloaded above free quotas
+  - Multiple Realtime DB instances per project on Blaze
+  - Required for production-scale realtime workloads
 
 tags: []
 
@@ -25,4 +51,4 @@ pricing_url: https://firebase.google.com/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

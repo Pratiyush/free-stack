@@ -12,11 +12,55 @@ tier_type: free-plan
 free_tier:
   - Free plan
   - 'API: 1,000 req/hr'
+  - Up to 5 users
+  - Unlimited public and private repos
+  - 50 Pipelines build minutes/mo
+
+paid_tier_highlights:
+  - Standard ($3.65/user/mo) raises team caps and unlocks LFS/Pipelines
+  - Premium ($7.25/user/mo) adds merge checks, IP allowlist, SOC controls
+  - Smart mirroring and granular admin auditing on Premium
+  - Shared build minutes/storage across the workspace
+  - 24/7 premium support on paid tiers
 
 pricing:
   - name: Free
+    description: Free forever for up to 5 users
     price: 0
-    unit: /month
+    billing: free
+    features:
+      - Up to 5 users
+      - Unlimited public and private repos
+      - 1 GB LFS storage
+      - 50 Pipelines build minutes/mo
+      - Shared minutes and storage across workspace
+    cta_url: https://www.atlassian.com/try/cloud/signup?bundle=bitbucket&edition=free&signupSource=pricing
+  - name: Standard
+    description: For growing teams collaborating on code and CI/CD
+    price: 3.65
+    unit: /user/mo
+    billing: monthly
+    features:
+      - Everything in Free
+      - Git LFS included
+      - Bitbucket Pipelines CI/CD
+      - Code collaboration tools
+      - Shared build minutes and storage
+    cta_url: https://www.atlassian.com/try/cloud/signup?bundle=bitbucket&edition=standard&signupSource=pricing
+  - name: Premium
+    description: Accelerate velocity with AI and automation
+    price: 7.25
+    unit: /user/mo
+    billing: monthly
+    features:
+      - Everything in Standard
+      - Merge checks
+      - IP allowlisting
+      - Deployment permissions
+      - Required two-step verification
+      - Smart mirroring
+      - Granular admin auditing
+    cta_url: https://www.atlassian.com/try/cloud/signup?bundle=bitbucket&edition=premium&signupSource=pricing
 
 tags: []
 
@@ -25,4 +69,4 @@ pricing_url: https://www.atlassian.com/software/bitbucket/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

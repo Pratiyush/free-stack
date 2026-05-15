@@ -20,9 +20,57 @@ pricing:
   - name: Free
     price: 0
     unit: /month
-  - name: Paid
-    description: Per 1M input tokens
-    price: '$0.14 – $0.81'
+    billing: free
+    description: Personal AI assistant via Le Chat (free experiment tier)
+    features:
+      - Chat, search, and create with Le Chat
+      - Access to all Mistral models
+      - Up to 500 memories (beta)
+      - Image generation capabilities
+      - 40+ enterprise connectors
+    cta_url: https://chat.mistral.ai/login
+  - name: Pro
+    price: 14.99
+    unit: /month
+    billing: monthly
+    description: Enhanced productivity with higher limits and Mistral Vibe
+    features:
+      - Increased message and web search allowances
+      - Extended thinking and deep research reports
+      - Up to 15GB document storage
+      - Mistral Vibe for coding support
+      - Chat and email support
+    cta_url: https://mistral.ai/pricing
+  - name: Team
+    price: 24.99
+    unit: /user/month
+    billing: monthly
+    description: Collaborative workspace for team AI development
+    features:
+      - Up to 30GB storage per user
+      - Domain name verification
+      - Data export functionality
+      - Admin API access
+      - Audit logs
+    cta_url: https://mistral.ai/pricing
+  - name: Enterprise
+    price: Custom
+    billing: annual
+    description: Private deployments with custom models and tools
+    features:
+      - Fully customizable solutions
+      - White-label options
+      - SAML SSO integration
+      - Dedicated support
+      - Custom deployment infrastructure
+    cta_url: https://mistral.ai/contact
+
+paid_tier_highlights:
+  - Pro at $14.99/mo unlocks deep research and 15GB storage
+  - Team at $24.99/user/mo adds admin API and audit logs
+  - Mistral Vibe coding assistant included on Pro and above
+  - Enterprise adds SAML SSO and white-label deployments
+  - API access available separately via La Plateforme (per-token pricing)
 
 tags: [llm, ai, api, mistral, models]
 

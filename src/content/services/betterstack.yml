@@ -9,12 +9,65 @@ summary: BetterStack — free tier; see the pricing page for details.
 tier_type: free-plan
 
 free_tier:
-  - Free tier
+  - Telemetry access with Slack and email alerts
+  - 10 monitors and heartbeats
+  - 3-day log retention
+  - Branded status page (1K subscribers)
+
+paid_tier_highlights:
+  - Responder seat at $29-$34/user/mo unlocks Uptime + Telemetry
+  - Telemetry log/trace/metric bundles from $30/mo (Nano) up to Tera
+  - 100K error-tracking exceptions and 5K session replays included paid
+  - 90-day retention on error tracking and session replay
+  - 'Enterprise add-ons: SSO, audit logs, white-label status pages'
 
 pricing:
-  - name: Free
+  - name: Team Member (Free)
+    description: Telemetry-only seat with alerting basics
     price: 0
-    unit: /month
+    billing: free
+    features:
+      - Telemetry access
+      - Slack and e-mail alerts
+      - 10 monitors and heartbeats
+      - Community support
+  - name: Responder
+    description: Full Uptime + Telemetry with on-call
+    price: 29
+    unit: /user/mo (annual)
+    billing: annual
+    features:
+      - Everything in Team Member
+      - On-call scheduling (iOS/Android)
+      - Unlimited alerts and escalations
+      - Branded status page
+  - name: Telemetry Nano
+    description: Starter log/metric/trace bundle
+    price: 30
+    unit: /mo (starts at)
+    billing: monthly
+    features:
+      - 40 GB logs / metrics / traces
+      - SQL querying
+      - 30-day retention
+  - name: Telemetry Mega
+    description: Production-scale telemetry bundle
+    price: 250
+    unit: /mo (starts at)
+    billing: monthly
+    features:
+      - 340 GB each logs / metrics / traces
+      - Error tracking + session replay
+      - 90-day retention
+  - name: Enterprise
+    description: SSO, audit logs, white-label, custom SLAs
+    price: 'Contact sales'
+    billing: annual
+    features:
+      - SSO via Azure/Okta
+      - Audit logs
+      - White-label status pages
+      - SLA/SLI/MTTR reporting
 
 tags: []
 

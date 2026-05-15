@@ -13,10 +13,50 @@ free_tier:
   - Free plan
   - 'Single project only, very limited storage, free forever for teachers/students/nonprofits'
 
+paid_tier_highlights:
+  - Plus unlocks unlimited projects + 500 GB storage at $15/user/mo
+  - Pro Unlimited removes user/project caps for a flat $299/mo
+  - Pro adds Timesheet, Admin Pro Pack, and priority 24/7 support
+  - Free clients/contractors included on Plus and Pro Unlimited
+  - 60-day extended trial available on Pro Unlimited
+
 pricing:
   - name: Free
+    description: Run one project at a time with up to 20 users
     price: 0
-    unit: /month
+    billing: free
+    features:
+      - One project only
+      - Up to 20 users
+      - 1 GB storage
+      - All core features (Message Boards, To-dos, Schedules)
+      - Free forever for teachers/students/nonprofits
+    cta_url: https://3.basecamp.com/signup/account/new?plan=free_v1
+  - name: Plus
+    description: For freelancers, startups, and smaller teams
+    price: 15
+    unit: /user/mo
+    billing: monthly
+    features:
+      - Unlimited projects
+      - 500 GB storage
+      - Optional Timesheet and Admin Pro Pack
+      - 24/7/365 customer support
+      - Clients and contractors added free
+    cta_url: https://3.basecamp.com/signup/account/new?plan=per_user_v3
+  - name: Pro Unlimited
+    description: Flat-rate plan with unlimited everything
+    price: 299
+    unit: /mo billed annually
+    billing: annual
+    features:
+      - Unlimited projects and users
+      - 5 TB storage
+      - Timesheet + Admin Pro Pack included
+      - Priority 24/7/365 support
+      - Personal onboarding from 37signals
+      - 60-day extended free trial
+    cta_url: https://3.basecamp.com/signup/account/new?plan=pro_unlimited_yearly_v1
 
 tags: []
 

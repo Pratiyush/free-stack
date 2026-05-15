@@ -17,6 +17,69 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    billing: free
+    description: Forever free for individuals and small teams
+    features:
+      - Up to 2 seats
+      - Up to 3 boards
+      - Up to 3 Docs
+      - 200+ templates
+      - iOS and Android apps
+    cta_url: https://auth.monday.com/users/sign_up_new
+  - name: Basic
+    price: 9
+    unit: /seat/month
+    billing: annual
+    description: AI agent workforce, meeting notetaker, Sidekick, Vibe builder
+    features:
+      - 1,000 AI credits monthly
+      - Unlimited free viewers
+      - Unlimited items
+      - 5 GB file storage
+      - Includes Free plan features
+    cta_url: https://monday.com/pricing
+  - name: Standard
+    price: 12
+    unit: /seat/month
+    billing: annual
+    description: Adds automation and integrations for growing teams
+    features:
+      - 2,000 AI credits monthly
+      - 250 automation actions/month
+      - 250 integration actions/month
+      - Gantt and calendar views
+      - Guest access
+    cta_url: https://monday.com/pricing
+  - name: Pro
+    price: 19
+    unit: /seat/month
+    billing: annual
+    description: Orchestrate workflows with agents and AI
+    features:
+      - 3,000 AI credits monthly
+      - 25,000 automation actions/month
+      - Private boards and docs
+      - Advanced board views
+      - Time tracking
+    cta_url: https://monday.com/pricing
+  - name: Enterprise
+    price: Custom
+    billing: annual
+    description: Premium support and advanced governance
+    features:
+      - 20,000+ AI credits to start
+      - 250,000 automation/integration actions
+      - Portfolio and resource management
+      - Enterprise-grade security
+      - 24/7 dedicated support
+    cta_url: https://monday.com/contact-sales
+
+paid_tier_highlights:
+  - Basic at $9/seat/mo unlocks unlimited items and 1K AI credits
+  - Standard at $12/seat/mo adds 250 automations and guest access
+  - Pro at $19/seat/mo provides 25K automations and time tracking
+  - Enterprise adds portfolio management and 24/7 support
+  - 18% annual discount on all paid tiers
 
 tags: []
 
@@ -25,4 +88,4 @@ pricing_url: https://monday.com/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

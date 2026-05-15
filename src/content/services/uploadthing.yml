@@ -16,12 +16,49 @@ free_tier:
   - ~10 file upload burst limit
 
 pricing:
-  - name: Free
+  - name: Free (2GB App)
     price: 0
     unit: /month
-  - name: Pro
-    price: 29
+    billing: free
+    description: Starter plan with essential upload functionality
+    features:
+      - 2 GB shared storage across apps
+      - Unlimited uploads and downloads
+      - 7-day audit log
+      - Public file management
+      - Free forever
+    cta_url: https://uploadthing.com/
+  - name: 100GB App
+    price: 10
     unit: /month
+    billing: monthly
+    description: Mid-tier plan for teams and growing file needs
+    features:
+      - 100 GB dedicated storage
+      - 30-day audit log
+      - Multi-region support
+      - Private file management
+      - Unlimited uploads/downloads
+    cta_url: https://uploadthing.com/pricing
+  - name: Usage Based
+    price: 25
+    unit: /month base
+    billing: usage-based
+    description: 250 GB included plus $0.08/GB overages
+    features:
+      - 250 GB included monthly storage
+      - $0.08/GB overage pricing
+      - 30-day audit log
+      - Multi-region support
+      - Private file management
+    cta_url: https://uploadthing.com/pricing
+
+paid_tier_highlights:
+  - 100GB App at $10/mo with multi-region and private files
+  - Usage-Based plan ($25/mo base + $0.08/GB) for high-volume apps
+  - 30-day audit log on all paid tiers
+  - Multi-region storage on both paid tiers
+  - Private file management on paid tiers
 
 tags: [file-upload, api, file-storage, serverless, typescript]
 

@@ -14,9 +14,60 @@ free_tier:
   - 'No credit card required; open-source server can be self-hosted for unlimited free usage'
 
 pricing:
-  - name: Free
+  - name: Build
     price: 0
     unit: /month
+    billing: free
+    description: Starter plan for AI voice/video agents; no credit card
+    features:
+      - 1,000 agent session minutes included
+      - 5 concurrent agent sessions
+      - 1 free US local phone number
+      - Community support
+      - No credit card required
+    cta_url: https://cloud.livekit.io/signup
+  - name: Ship
+    price: 50
+    unit: /month
+    billing: monthly
+    description: Production-ready plan for launching to real users
+    features:
+      - 5,000 agent session minutes included
+      - 20 concurrent agent sessions
+      - 2 agent deployments
+      - Team collaboration and custom voices
+      - Email support
+    cta_url: https://livekit.com/pricing
+  - name: Scale
+    price: 500
+    unit: /month
+    billing: monthly
+    description: Global reach and enterprise features for scaling apps
+    features:
+      - 50,000 agent session minutes included
+      - Up to 600 concurrent agent sessions
+      - 4 agent deployments
+      - Role-based access and metrics export APIs
+      - Region pinning and security reports
+    cta_url: https://livekit.com/pricing
+  - name: Enterprise
+    price: Custom
+    billing: annual
+    description: White-glove service with SLA and HIPAA
+    features:
+      - Volume pricing for all services
+      - Dedicated Slack channel and SSO
+      - Custom concurrency limits and deployments
+      - Support SLA with guaranteed response
+      - HIPAA compliance with signed BAA
+    cta_url: https://livekit.com/contact
+
+paid_tier_highlights:
+  - Ship at $50/mo unlocks 5,000 minutes and 20 concurrent sessions
+  - Scale at $500/mo adds 50,000 minutes and 600 concurrent sessions
+  - Enterprise adds SSO, HIPAA BAA, and dedicated Slack support
+  - Open-source LiveKit server can be self-hosted for unlimited use
+  - All paid tiers include team collaboration and custom voices
 
 tags: []
 
@@ -25,4 +76,4 @@ pricing_url: https://livekit.com/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

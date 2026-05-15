@@ -13,10 +13,36 @@ free_tier:
   - 'Free (open-source, self-hosted)'
   - 'Requires your own server (e.g. $5/mo VPS), no managed free cloud'
 
+paid_tier_highlights:
+  - Cloud plan from $5/mo (2 servers) + $3/mo per extra server
+  - Limitless deployments per connected server
+  - Email alerts and limited email support
+  - Custom domain option for managed dashboard
+  - Founder-tested updates on cloud
+
 pricing:
-  - name: Free
+  - name: Self-hosted
     price: 0
-    unit: /month
+    description: Deploy Coolify on your infrastructure with full feature access
+    features:
+      - Full access to all capabilities
+      - Unlimited servers and team members
+      - No feature limitations
+      - Community support
+      - Self-managed or automated updates
+    billing: free
+  - name: Cloud
+    price: 5
+    unit: /month base (2 servers) + $3/server
+    description: Managed infrastructure connecting to your own servers
+    features:
+      - Unlimited server connections
+      - Limitless deployments per server
+      - Complimentary email alerts
+      - Community + limited email support
+      - Founder-tested updates
+      - Custom domain for dashboard
+    billing: monthly
 
 tags: []
 
@@ -25,4 +51,4 @@ pricing_url: https://coolify.io/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

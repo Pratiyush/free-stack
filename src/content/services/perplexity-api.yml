@@ -14,9 +14,74 @@ free_tier:
   - Must add payment method to generate API key; Pro subscribers get $5/mo credit only
 
 pricing:
-  - name: Free
+  - name: API access (no free tier)
     price: 0
     unit: /month
+    description: API key requires payment method; no free credits
+    features:
+      - Must add payment method to generate API key
+      - Pro subscribers get $5/mo API credit
+      - Token-based usage pricing across all models
+    cta_url: https://www.perplexity.ai/settings/api
+    billing: free
+  - name: Sonar
+    price: 1
+    unit: per 1M input tokens
+    description: Base Sonar model; $1/M in, $1/M out, $5-12 per 1K req
+    features:
+      - $1 per 1M input tokens
+      - $1 per 1M output tokens
+      - $5-$12 per 1K requests (context-dependent)
+    cta_url: https://docs.perplexity.ai/getting-started/pricing
+    billing: usage-based
+  - name: Sonar Pro
+    price: 3
+    unit: per 1M input tokens
+    description: Higher-quality answers; $3/M in, $15/M out
+    features:
+      - $3 per 1M input tokens
+      - $15 per 1M output tokens
+      - $6-$14 per 1K requests
+      - Pro Search add-on $14-$22 per 1K req
+    cta_url: https://docs.perplexity.ai/getting-started/pricing
+    billing: usage-based
+  - name: Sonar Reasoning Pro
+    price: 2
+    unit: per 1M input tokens
+    description: Reasoning model; $2/M in, $8/M out
+    features:
+      - $2 per 1M input tokens
+      - $8 per 1M output tokens
+      - $6-$14 per 1K requests
+    cta_url: https://docs.perplexity.ai/getting-started/pricing
+    billing: usage-based
+  - name: Sonar Deep Research
+    price: 2
+    unit: per 1M input tokens
+    description: Deep research; charges citations + reasoning + search
+    features:
+      - $2 per 1M input tokens
+      - $8 per 1M output tokens
+      - +$2/M citation, +$3/M reasoning
+      - +$5/1K search queries
+    cta_url: https://docs.perplexity.ai/getting-started/pricing
+    billing: usage-based
+  - name: Search API
+    price: 5
+    unit: per 1K requests
+    description: Standalone search API, no token charges
+    features:
+      - $5 per 1K search requests
+      - No token-based fees
+    cta_url: https://docs.perplexity.ai/getting-started/pricing
+    billing: usage-based
+
+paid_tier_highlights:
+  - No free tier; API key generation requires payment method
+  - Pro ($20/mo consumer) subscribers receive $5/mo API credit
+  - Sonar from $1/M in / $1/M out; Sonar Pro $3/M in / $15/M out
+  - Search API $5 per 1K requests with no token charges
+  - Tool calls (web_search, people_search, finance_search) $0.005 each
 
 tags: []
 

@@ -20,10 +20,57 @@ pricing:
   - name: Starter
     price: 0
     unit: /month
+    billing: free
+    description: For exploring what's possible
+    features:
+      - Complimentary daily Agent credits
+      - Built-in database for full-stack apps
+      - Create slides, videos, animations
+      - Deploy up to 1 project
+      - Private/password-protected deploy options
+    cta_url: https://replit.com/pricing
   - name: Core
-    description: $25 of monthly credits, 5 collaborators
     price: 25
     unit: /month
+    billing: monthly
+    description: Individual projects and apps; $20/mo annual
+    features:
+      - $25 monthly credits included
+      - Collaborate with up to 5 people
+      - Run 2 agents in parallel
+      - Multi-region publishing
+      - Unlimited workspaces, no branding badge
+    cta_url: https://replit.com/pricing
+  - name: Pro
+    price: 100
+    unit: /month
+    billing: monthly
+    description: Commercial and professional builds; $95/mo annual
+    features:
+      - $100 monthly credits
+      - Up to 15 collaborators, 50 viewers
+      - 10 agents in parallel
+      - Premium AI models
+      - 28-day database recovery
+      - Priority support
+    cta_url: https://replit.com/pricing
+  - name: Enterprise
+    price: Custom
+    billing: annual
+    description: Enterprise-grade security and controls
+    features:
+      - SSO/SAML authentication
+      - Adjustable seat limits
+      - Advanced privacy protections
+      - Data warehouse integrations
+      - Dedicated account management
+    cta_url: https://replit.com/pricing
+
+paid_tier_highlights:
+  - Core ($25/mo) adds $25 credits and 5 collaborators
+  - Pro ($100/mo) brings $100 credits and 10 parallel agents
+  - Pro unlocks premium AI models and priority support
+  - Enterprise adds SSO/SAML, dedicated account management
 
 tags: [ide, dev-environment, agents, hosting, collaboration]
 

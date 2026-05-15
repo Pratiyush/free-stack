@@ -17,6 +17,44 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    billing: free
+    description: Free tier with 3-day retention, no credit card required
+    features:
+      - Up to 3 GB/month storage
+      - 3-day data retention
+      - 1 user maximum
+      - No payment info required
+      - 14-day Starter trial included
+    cta_url: https://www.hyperdx.io/signup
+  - name: Starter
+    price: 20
+    unit: /month
+    billing: monthly
+    description: For small teams; data-volume based pricing only
+    features:
+      - 50 GB/month storage included
+      - $0.40 per additional GB
+      - 30-day data retention
+      - Unlimited users at flat rate
+      - $0.40 per 100 metrics (1 DPM)
+    cta_url: https://www.hyperdx.io/signup
+  - name: Enterprise
+    price: Custom
+    billing: annual
+    description: Scales with expanding business requirements
+    features:
+      - Custom data retention periods
+      - SAML SSO authentication
+      - Volume discounts available
+      - Custom contract terms
+      - Direct support
+    cta_url: https://www.hyperdx.io/contact
+
+paid_tier_highlights:
+  - Starter at $20/mo includes 50 GB storage with $0.40/GB overage
+  - 30-day retention requires Starter or higher tier
+  - Enterprise unlocks SAML SSO and custom retention
+  - Billing is volume-based; no per-seat or per-host fees
 
 tags: []
 
@@ -25,4 +63,4 @@ pricing_url: https://www.hyperdx.io/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

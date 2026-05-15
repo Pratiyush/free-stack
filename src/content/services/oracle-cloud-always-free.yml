@@ -14,9 +14,49 @@ free_tier:
   - ARM instances may face capacity constraints in popular regions due to high demand
 
 pricing:
-  - name: Free
+  - name: Always Free
     price: 0
     unit: /month
+    billing: free
+    description: Permanent free tier - most generous on the market
+    features:
+      - 4 OCPU Ampere A1 Arm (24 GB RAM)
+      - 2 AMD VM.Standard.E2.1.Micro instances
+      - 200 GB Block Volume storage
+      - 20 GB Object Storage + 50K API requests
+      - 2 Oracle Autonomous Databases (20 GB each)
+      - 10 TB/month outbound data transfer
+      - 1 Flexible Load Balancer (10 Mbps)
+    cta_url: https://www.oracle.com/cloud/free/
+  - name: 30-Day Free Trial
+    price: 0
+    unit: one-time
+    billing: free
+    description: $300 in credits valid for 30 days
+    features:
+      - $300 in free credits
+      - Access to all OCI services
+      - All paid-tier features available
+      - Always Free continues after trial ends
+    cta_url: https://www.oracle.com/cloud/free/
+  - name: Pay-As-You-Go
+    price: Usage
+    billing: usage-based
+    description: Standard Oracle Cloud pricing
+    features:
+      - Per-second billing for compute
+      - 50%+ less than other major clouds
+      - All OCI services available
+      - Universal Credits commitment options
+      - Enterprise support tiers
+    cta_url: https://www.oracle.com/cloud/sign-in.html
+
+paid_tier_highlights:
+  - Always Free is permanent and stacks with PAYG accounts
+  - ARM Ampere A1 may face capacity constraints in popular regions
+  - 30-day trial adds $300 in credits to explore paid services
+  - PAYG unlocks unlimited compute, storage, and global regions
+  - Oracle claims 50%+ price advantage vs AWS/Azure/GCP
 
 tags: []
 

@@ -14,9 +14,83 @@ free_tier:
   - 'Credit-based after trial'
 
 pricing:
-  - name: Free
+  - name: Free Trial
     price: 0
+    description: First 100 builds free (trial only)
+    billing: free
+    features:
+      - 100 Linux build credits for trial
+      - All standard VMs available
+      - Credit-based after trial expires
+      - No long-term free plan
+    cta_url: https://app.travis-ci.com/signup
+  - name: Usage Based (Monthly)
+    price: 15
     unit: /month
+    description: 35K Linux build credits + 80 concurrent jobs
+    billing: monthly
+    features:
+      - 35,000 Linux build credits/mo
+      - 80 concurrent jobs
+      - Premium VMs available
+      - Linux customized images add-on
+      - Unlimited network and storage
+      - Ask Travis AI support
+    cta_url: https://app.travis-ci.com/signup?selectedPlanId=monthly_usage_plan_35k_credits
+  - name: Usage Based (Annual)
+    price: 13.75
+    unit: /month (8% off annual)
+    description: 420K Linux build credits annually
+    billing: annual
+    features:
+      - 420,000 Linux build credits/year
+      - 80 concurrent jobs
+      - Premium VMs available
+      - Customized Linux images add-on
+      - Unlimited network and storage
+    cta_url: https://app.travis-ci.com/signup?selectedPlanId=annual_usage_plan_420k_credits
+  - name: Unlimited (Monthly)
+    price: 78
+    unit: /month (from)
+    description: Unlimited credits + users + repos
+    billing: monthly
+    features:
+      - Unlimited build credits (standard VMs)
+      - 1-300 concurrent jobs
+      - Unlimited users and repositories
+      - Premium VMs available
+      - Shared build configuration
+    cta_url: https://app.travis-ci.com/signup?selectedPlanId=monthly_hybrid_one_concurrent_plan
+  - name: Unlimited (Annual)
+    price: 72
+    unit: /month (from, 8% off)
+    description: Annual unlimited plan
+    billing: annual
+    features:
+      - Unlimited build credits
+      - 1-300 concurrent jobs
+      - Unlimited users and repositories
+      - Premium VMs available
+    cta_url: https://app.travis-ci.com/signup?selectedPlanId=annual_hybrid_one_concurrent_plan
+  - name: Server
+    price: 34
+    unit: /month
+    description: On-prem or private-cloud CI/CD
+    billing: monthly
+    features:
+      - On-premise or private cloud
+      - Perforce and Subversion support
+      - Custom configuration
+      - Premium support options
+      - Linux/FreeBSD/Windows standard VMs
+    cta_url: https://www.travis-ci.com/talk-to-sales/
+
+paid_tier_highlights:
+  - Usage-based plan starts at $15/mo for 35K credits + 80 concurrent jobs
+  - Annual usage plan $13.75/mo (8% off) for 420K credits/yr
+  - Unlimited monthly plan $78/mo unlocks unlimited builds + users + repos
+  - Server (on-prem) $34/mo adds Perforce/SVN + custom configuration
+  - Free tier is one-time trial only; credit-based after 100 builds
 
 tags: []
 
@@ -25,4 +99,4 @@ pricing_url: https://www.travis-ci.com/pricing/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

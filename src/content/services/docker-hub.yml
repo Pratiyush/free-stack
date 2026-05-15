@@ -14,9 +14,63 @@ free_tier:
   - '200 pulls per 6-hour window (unauthenticated: 100/6hr); HTTP 429 when exceeded'
 
 pricing:
-  - name: Free
+  - name: Personal
     price: 0
     unit: /month
+    billing: free
+    description: Essential tools for individual developers building containers
+    features:
+      - Docker Desktop, Engine, and Hub
+      - Docker Scout (1 enabled repo)
+      - Docker Debug
+      - 200 image pulls per 6-hour window
+      - 1 user account
+    cta_url: https://app.docker.com/signup
+  - name: Pro
+    price: 9
+    unit: /user/month
+    billing: annual
+    description: Advanced features and unlimited pulls for individual pros
+    features:
+      - Docker Build Cloud and Testcontainers Cloud
+      - Synchronized File Shares
+      - Docker Scout health scores
+      - Unlimited Docker Hub pull rate
+      - 200 Build Cloud minutes/month
+      - 5-business-day support
+    cta_url: https://app.docker.com/billing/_/subscribe/?tier=pro
+  - name: Team
+    price: 15
+    unit: /user/month
+    billing: annual
+    description: Collaboration features for small teams
+    features:
+      - Bulk user management up to 100 seats
+      - Audit logs and RBAC for Docker Hub
+      - Unlimited Scout-enabled repos
+      - Unlimited Docker Hub pull rate
+      - 500 Build Cloud minutes/month
+      - 1 Docker Hub organization
+    cta_url: https://app.docker.com/billing/_/subscribe/?tier=team
+  - name: Business
+    price: 24
+    unit: /user/month
+    billing: monthly
+    description: Security, compliance, and SSO for enterprises
+    features:
+      - Hardened Docker Desktop
+      - Single Sign-On (SSO) and SCIM
+      - Image and Registry Access Management
+      - Enhanced Container Isolation
+      - Unlimited users
+      - 1,500 Build Cloud minutes/month
+    cta_url: https://app.docker.com/billing/_/subscribe/?tier=business
+
+paid_tier_highlights:
+  - Pro at $9/user/mo removes pull-rate limits and adds Build Cloud
+  - Team at $15/user/mo adds RBAC, audit logs, and 500 build minutes
+  - Business at $24/user/mo adds SSO, SCIM, and hardened Desktop
+  - Higher build-minute quotas scale with each paid tier
 
 tags: []
 
@@ -25,4 +79,4 @@ pricing_url: https://www.docker.com/pricing/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

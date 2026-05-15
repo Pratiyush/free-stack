@@ -15,9 +15,70 @@ free_tier:
   - High rate limits
 
 pricing:
-  - name: Free
+  - name: Starter credit
     price: 0
-    unit: /month
+    description: $1 in free credits on signup to try serverless inference
+    billing: free
+    features:
+      - $1 free starter credit
+      - 50+ open models
+      - Postpaid serverless billing
+      - High rate limits
+      - No cold-start latency
+    cta_url: https://fireworks.ai/signup
+  - name: Serverless Inference
+    price: Per-token
+    billing: usage-based
+    description: Pay-per-token inference with zero setup
+    features:
+      - Per-token pricing across text, vision, embeddings
+      - 50% discount on cached input tokens
+      - 50% discount on batch inference
+      - Postpaid billing with high rate limits
+      - No cold starts
+    cta_url: https://fireworks.ai/signup
+  - name: Fine Tuning
+    price: 0.50
+    unit: /1M training tokens
+    billing: usage-based
+    description: Customize open models from $0.50/M training tokens
+    features:
+      - $0.50 to $40 per 1M training tokens
+      - SFT and DPO methods
+      - LoRA and full-parameter training
+      - Models up to 300B+ parameters
+      - VLM image fine-tuning
+      - Serve at base model pricing
+    cta_url: https://fireworks.ai/signup
+  - name: On-Demand Deployments
+    price: 7
+    unit: /GPU/hour
+    billing: usage-based
+    description: Dedicated GPUs billed per second for higher throughput
+    features:
+      - H100/H200 at $7/hour
+      - B200 at $10/hour
+      - B300 at $12/hour
+      - Per-second billing
+      - ~250% higher throughput vs OSS engines
+      - ~50% faster inference
+    cta_url: https://fireworks.ai/contact-reserved
+  - name: Enterprise
+    price: Custom
+    description: Custom rate limits, SLAs, and volume discounts
+    features:
+      - Custom rate limit configurations
+      - Dedicated support and onboarding
+      - Volume discounts
+      - SLA guarantees
+      - Custom deployment options
+    cta_url: https://fireworks.ai/contact-reserved
+
+paid_tier_highlights:
+  - Serverless inference billed per token after $1 starter credit
+  - Fine-tuning priced from $0.50/M training tokens
+  - On-Demand GPU deployments from $7/hour with per-second billing
+  - Enterprise offers SLA, volume discounts, and dedicated support
 
 tags: []
 
@@ -26,4 +87,4 @@ pricing_url: https://fireworks.ai/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

@@ -19,10 +19,58 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    billing: free
+    description: Test the Mailgun platform with limited sending
+    features:
+      - 100 emails per day
+      - 1 custom sending domain
+      - Ticket support
+      - Basic tracking and webhooks
+      - 1 day log retention
+    cta_url: https://signup.mailgun.com/new/signup
+  - name: Basic
+    price: 15
+    unit: /month
+    billing: monthly
+    description: Entry-level plan with no daily sending limits
+    features:
+      - 10,000 emails/month included
+      - No daily email limit
+      - RESTful APIs and SMTP relay
+      - 1 custom sending domain
+      - 5 inbound routes
+    cta_url: https://www.mailgun.com/pricing/
   - name: Foundation
-    description: 50K emails/mo included; free for first month
     price: 35
     unit: /month
+    billing: monthly
+    description: Mid-tier offering; free first month
+    features:
+      - 50,000 emails/month included
+      - 1,000 custom sending domains
+      - Email template builder
+      - 5 days log retention
+      - Full inbound routing access
+    cta_url: https://www.mailgun.com/pricing/
+  - name: Scale
+    price: 90
+    unit: /month
+    billing: monthly
+    description: High-volume senders with premium support
+    features:
+      - 100,000 emails/month included
+      - SAML SSO and dedicated IP pools
+      - Phone and chat support
+      - 30 days log retention
+      - Send time optimization
+    cta_url: https://www.mailgun.com/pricing/
+
+paid_tier_highlights:
+  - Basic at $15/mo unlocks 10K emails and removes daily limit
+  - Foundation at $35/mo includes 50K emails and 1,000 domains
+  - Scale at $90/mo adds SAML SSO, dedicated IP pools, and phone support
+  - 30-day log retention on Scale tier (vs 1 day free)
+  - First month free on Foundation and Scale plans
 
 tags: [email, transactional-email, api, smtp, email-validation]
 

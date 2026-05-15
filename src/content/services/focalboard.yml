@@ -14,9 +14,21 @@ free_tier:
   - 'N/A -- self-hosted'
 
 pricing:
-  - name: Free
+  - name: Free (AGPL open source, self-hosted)
     price: 0
     unit: /month
+    billing: free
+    description: AGPL-licensed boards app, free Personal Desktop and Server
+    features:
+      - Personal Desktop for macOS, Windows, Linux
+      - Personal Server multi-user edition
+      - Self-hosted only (no managed cloud)
+      - Repository currently unmaintained (looking for maintainers)
+      - Ongoing development in mattermost-plugin-boards
+    cta_url: https://github.com/mattermost-community/focalboard
+
+paid_tier_highlights:
+  - This service is always-free; no paid tiers exist
 
 tags: []
 

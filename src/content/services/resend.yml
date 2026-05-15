@@ -19,9 +19,57 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    billing: free
+    description: Entry plan for transactional and marketing email
+    features:
+      - 3,000 transactional emails/month
+      - 100 emails/day limit
+      - 1,000 marketing contacts/month
+      - 10K automation runs/month
+      - 1 domain, 5 AI credits/month
+      - Ticket support
+    cta_url: https://resend.com/pricing
   - name: Pro
     price: 20
     unit: /month
+    billing: monthly
+    description: 50K-100K transactional emails/month; up to $35/mo
+    features:
+      - 50K-100K transactional emails/month
+      - No daily sending limit
+      - 10 domains
+      - 100 AI credits/month
+      - $0.90 per 1K overage emails
+    cta_url: https://resend.com/pricing
+  - name: Scale
+    price: 90
+    unit: /month
+    billing: monthly
+    description: High volume from 100K to 2.5M emails; up to $1,150/mo
+    features:
+      - 100K-2.5M transactional emails/month
+      - 1,000 domains
+      - 500 AI credits/month
+      - Slack and ticket support
+      - Dedicated IP add-on ($30/mo)
+    cta_url: https://resend.com/pricing
+  - name: Enterprise
+    price: Custom
+    billing: annual
+    description: Volume-based pricing for 3M+ emails/month
+    features:
+      - Custom email volume and contacts
+      - Priority support with SLA
+      - Dedicated IPs included
+      - Flexible AI credits and retention
+      - SSO access
+    cta_url: https://resend.com/pricing
+
+paid_tier_highlights:
+  - Pro (from $20/mo) removes daily limit and adds 10 domains
+  - Scale (from $90/mo) handles up to 2.5M emails/month
+  - Scale tier adds Slack support and dedicated IP add-on
+  - Enterprise brings SSO, dedicated IPs, and SLA support
 
 tags: [email, transactional-email, api, smtp, react-email]
 

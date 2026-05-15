@@ -17,6 +17,61 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    billing: free
+    description: Individual tier with 300 credit limit
+    features:
+      - 300 monthly credits
+      - Deploy from AI, Git, or API
+      - Unlimited deploy previews
+      - Custom domains with SSL
+      - Functions & AI models
+      - Netlify Database & Blob storage
+      - Global CDN
+    cta_url: https://app.netlify.com/signup
+  - name: Personal
+    price: 9
+    unit: /month
+    billing: monthly
+    description: Enhanced individual plan with observability
+    features:
+      - 1,000 monthly credits
+      - Smart secret detection
+      - 1-day observability window
+      - Priority email support
+      - Firewall Traffic Rules
+      - Basic rate limiting
+    cta_url: https://app.netlify.com/signup
+  - name: Pro
+    price: 20
+    unit: /month
+    billing: monthly
+    description: Team plan with private repos and concurrent builds
+    features:
+      - 3,000 monthly credits
+      - Private organization repositories
+      - Shared environment variables
+      - 3+ concurrent builds
+      - 30-day analytics & metrics
+    cta_url: https://app.netlify.com/signup
+  - name: Enterprise
+    price: Custom
+    billing: monthly
+    description: Unlimited credits and dedicated support
+    features:
+      - Unlimited credits
+      - 99.99% SLA guarantee
+      - High-performance builds
+      - SSO & SCIM integration
+      - Log drains
+      - 24/7 dedicated support
+    cta_url: https://www.netlify.com/enterprise/
+
+paid_tier_highlights:
+  - Personal adds observability, secret detection, priority support
+  - Pro enables team collaboration with private repos and concurrent builds
+  - Enterprise delivers unlimited credits and SLA guarantees
+  - SSO and SCIM only available on Enterprise
+  - Credit-based model since Sep 2025; free is hard-capped
 
 tags: []
 
@@ -25,4 +80,4 @@ pricing_url: https://www.netlify.com/pricing/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

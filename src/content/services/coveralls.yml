@@ -13,10 +13,106 @@ free_tier:
   - 'Free for open-source (public) repos'
   - No documented rate limits
 
+paid_tier_highlights:
+  - Cloud plans scale from $10/mo (Starter) to $400/mo (Unlimited)
+  - Org/Org+/Pro plans range $50–$200/mo for 10–40 private repos
+  - Cloud Premium ($800/mo) adds SLA, multi-org billing
+  - Enterprise Cloud ($1,200/mo) for unlimited orgs and dedicated infra
+  - On-Premise at $25/user/mo for isolated deployments
+
 pricing:
-  - name: Free
+  - name: Open Source
     price: 0
+    description: Always free for open source projects
+    features:
+      - Unlimited users
+      - Test coverage tracking
+      - Public repository support
+      - Community access
+    billing: free
+  - name: Starter
+    price: 10
     unit: /month
+    description: 1 private repo with 30-day free trial
+    features:
+      - 1 private repo
+      - Unlimited users
+      - Coverage history tracking
+      - Basic reporting
+    billing: monthly
+  - name: Org
+    price: 50
+    unit: /month
+    description: 10 private repos for growing teams
+    features:
+      - 10 private repos
+      - Unlimited users
+      - Coverage statistics
+      - Repository history
+      - GitHub/Bitbucket integration
+    billing: monthly
+  - name: Org+
+    price: 100
+    unit: /month
+    description: 20 private repos for larger teams
+    features:
+      - 20 private repos
+      - Unlimited users
+      - Enhanced coverage metrics
+      - Multi-repo management
+    billing: monthly
+  - name: Pro
+    price: 200
+    unit: /month
+    description: 40 private repos with advanced analytics
+    features:
+      - 40 private repos
+      - Unlimited users
+      - Advanced analytics
+      - Comprehensive reporting
+      - Scalable infrastructure
+    billing: monthly
+  - name: Unlimited
+    price: 400
+    unit: /month
+    description: Unlimited private repos and full platform access
+    features:
+      - Unlimited private repos
+      - Unlimited users
+      - Full platform access
+      - Priority infrastructure
+    billing: monthly
+  - name: Cloud Premium
+    price: 800
+    unit: /month
+    description: Premium support with priority response
+    features:
+      - Unlimited repos and users
+      - Premium support, priority response
+      - Custom SLA terms
+      - Multi-organization billing
+      - Dedicated account management
+    billing: monthly
+  - name: Enterprise Cloud
+    price: 1200
+    unit: /month
+    description: Secure private infrastructure with guaranteed performance
+    features:
+      - Unlimited organizations, repos, users
+      - Secure private infrastructure
+      - Guaranteed performance
+      - Premium support included
+    billing: monthly
+  - name: Enterprise On-Premise
+    price: 25
+    unit: /user/month
+    description: Self-hosted single-tenant deployment
+    features:
+      - Deploy on your infrastructure
+      - Single-tenant isolated architecture
+      - Unlimited repos and users
+      - Performance SLA
+    billing: monthly
 
 tags: []
 
@@ -25,4 +121,4 @@ pricing_url: https://coveralls.io/pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

@@ -12,11 +12,34 @@ tier_type: free-plan
 free_tier:
   - Fully free and open source (MIT/Apache 2.0)
   - 'N/A -- local tool, no API'
+  - Optional commercial support available
+
+paid_tier_highlights:
+  - Optional commercial support contracts via Biome contributors
+  - No paywalled features in the toolchain itself
+  - Enterprise inquiries handled through biomejs.dev/enterprise
 
 pricing:
-  - name: Free
+  - name: Open Source
+    description: Free, MIT/Apache 2.0 dual-licensed toolchain
     price: 0
-    unit: /month
+    billing: free
+    features:
+      - Linter and formatter for JS/TS/JSX
+      - Single fast Rust binary
+      - VS Code, Zed, IntelliJ integrations
+      - No telemetry, no signup, no quotas
+      - GitHub Actions and CI examples
+    cta_url: https://biomejs.dev/
+  - name: Commercial Support
+    description: Optional enterprise support from contributors
+    price: 'Contact sales'
+    billing: annual
+    features:
+      - Direct support contract
+      - Priority bug fixes and feature requests
+      - For organizations with adoption/compliance needs
+    cta_url: https://biomejs.dev/
 
 tags: []
 
@@ -25,4 +48,4 @@ pricing_url: https://github.com/biomejs/biome
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

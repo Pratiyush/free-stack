@@ -15,13 +15,59 @@ free_tier:
   - 20 GB bandwidth
   - 300K total assets
 
+paid_tier_highlights:
+  - Plus ($99/mo) raises to 225 credits/mo and adds S3 backup
+  - Advanced ($249/mo) adds custom domain, HTTPS, 600 credits
+  - Enterprise unlocks multi-CDN, SSO, dedicated CSM
+  - DAM product tier shares storage with media APIs
+  - Annual billing reduces price ($89/mo on Plus)
+
 pricing:
   - name: Free
     price: 0
     unit: /month
+    description: Start exploring Image and Video APIs
+    features:
+      - 25 monthly credits
+      - Upload widget, API, and search
+      - Image and video transformations
+      - Video transcoding and adaptive streaming
+      - CDN delivery
+      - 3 users / 1 account
+    billing: free
   - name: Plus
     price: 99
     unit: /month
+    description: Extend team's digital media capabilities (Most Popular)
+    features:
+      - 225 monthly credits
+      - S3 bucket backup
+      - Auto-tagging search and expedited support
+      - Allowlist/Blocklist asset access
+      - Role-based multi-user administration
+      - 3 users / 2 accounts
+    billing: monthly
+  - name: Advanced
+    price: 249
+    unit: /month
+    description: Advanced features and visual experiences at scale
+    features:
+      - 600 monthly credits
+      - Custom domain (CNAME) support
+      - Optional HTTPS SSL certificate
+      - Authentication options
+      - 5 users / 3 accounts
+    billing: monthly
+  - name: Enterprise
+    price: Custom
+    description: Digital media at scale with SLAs and dedicated support
+    features:
+      - Multi-CDN infrastructure
+      - Enterprise SLAs and support
+      - Designated customer success manager
+      - Custom contracts and invoicing
+      - SSO and provisioning API
+    billing: annual
 
 tags: [image-transformation, video-transformation, cdn, file-storage, api]
 

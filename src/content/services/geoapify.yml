@@ -17,6 +17,94 @@ pricing:
   - name: Free
     price: 0
     unit: /month
+    billing: free
+    description: 3,000 credits/day, limited commercial use, no card required
+    cta_url: https://www.geoapify.com/pricing/
+    features:
+      - 3,000 credits/day
+      - Multiple API keys
+      - Up to 5 req/sec
+      - Isochrones up to 15 min
+      - Isodistances up to 10 km
+      - Best-effort support
+  - name: API 10
+    price: 59
+    unit: /month
+    billing: monthly
+    description: 10,000 credits/day, small-scale commercial use
+    cta_url: https://www.geoapify.com/pricing/
+    features:
+      - 10,000 credits/day
+      - Commercial use
+      - Up to 12 req/sec
+      - Isochrones up to 30 min
+      - Email support
+  - name: API 25
+    price: 109
+    unit: /month
+    billing: monthly
+    description: 25,000 credits/day for growing applications
+    cta_url: https://www.geoapify.com/pricing/
+    features:
+      - 25,000 credits/day
+      - Commercial use
+      - Up to 15 req/sec
+      - Isochrones up to 30 min
+      - Email support
+  - name: API 50
+    price: 179
+    unit: /month
+    billing: monthly
+    description: 50,000 credits/day with priority support
+    cta_url: https://www.geoapify.com/pricing/
+    features:
+      - 50,000 credits/day
+      - Up to 20 req/sec
+      - Isochrones up to 60 min
+      - Isodistances up to 60 km
+      - Priority support
+  - name: API 100
+    price: 299
+    unit: /month
+    billing: monthly
+    description: 100,000 credits/day high-volume tier
+    cta_url: https://www.geoapify.com/pricing/
+    features:
+      - 100,000 credits/day
+      - Up to 25 req/sec
+      - Isochrones up to 60 min
+      - Isodistances up to 60 km
+      - Priority support
+  - name: API 250
+    price: 609
+    unit: /month
+    billing: monthly
+    description: 250,000 credits/day enterprise-grade plan
+    cta_url: https://www.geoapify.com/pricing/
+    features:
+      - 250,000 credits/day
+      - Up to 30 req/sec
+      - Isochrones up to 60 min
+      - Isodistances up to 60 km
+      - Priority support
+  - name: Custom
+    price: 860
+    unit: /month
+    billing: monthly
+    description: Unmetered credits, dedicated infrastructure
+    cta_url: https://www.geoapify.com/pricing/
+    features:
+      - Unmetered API requests
+      - Isochrones up to 120 min
+      - Isodistances up to 200 km
+      - Dedicated endpoint
+      - Dedicated servers
+
+paid_tier_highlights:
+  - API 10 at $59/mo for 10K credits/day commercial use
+  - API 25 at $109/mo, API 50 at $179/mo with priority support
+  - API 100 at $299/mo and API 250 at $609/mo for high volume
+  - Custom from $860/mo for unmetered credits and dedicated servers
 
 tags: []
 
@@ -25,4 +113,4 @@ pricing_url: https://www.geoapify.com/pricing/
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

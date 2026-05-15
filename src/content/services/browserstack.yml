@@ -13,10 +13,109 @@ free_tier:
   - Free for Percy (5K screenshots) + Test Management only
   - '30-min Live + 100-min Automate trial only'
 
+paid_tier_highlights:
+  - Live Desktop starts at $29/mo for 3,000+ browser combos
+  - Automate from $59/mo per parallel test on Chrome
+  - Real iOS + Android devices on Desktop & Mobile tiers
+  - Team Pro adds 4 simultaneous devices, accessibility testing
+  - Team Ultimate bundles 15 products (Bug Capture, Requestly Pro, AI)
+
 pricing:
-  - name: Free
+  - name: Free (trial / Percy / Test Mgmt)
+    description: Free Percy snapshots + Test Management; 30-min Live trial
     price: 0
-    unit: /month
+    billing: free
+    features:
+      - 5K Percy screenshots/mo
+      - Test Management (free tier)
+      - 30-min Live trial
+      - 100-min Automate trial
+      - No credit card to start
+    cta_url: https://www.browserstack.com/users/sign_up
+  - name: Live - Desktop
+    description: 3,000+ desktop browser combos for manual testing
+    price: 29
+    unit: /mo (annual)
+    billing: annual
+    features:
+      - 3,000+ desktop browser combinations
+      - Unlimited testing minutes
+      - Localhost and staging access
+      - SpeedLab performance insights
+      - All Windows + Mac OS since 2008
+  - name: Live - Desktop & Mobile
+    description: Desktop plus 30K real iOS/Android devices
+    price: 39
+    unit: /mo (annual)
+    billing: annual
+    features:
+      - 30K+ real iOS and Android devices
+      - Network logs and performance inspector
+      - 21 data centers in 13 locations
+      - Localhost across devices
+      - Latest browsers on real mobile
+  - name: Live - Team (5 users)
+    description: Multi-user manual testing pack
+    price: 150
+    unit: /mo (annual)
+    billing: annual
+    features:
+      - 5 users included
+      - Multi-device testing (2 devices)
+      - Jira/Slack/GitHub integrations
+      - Network simulation
+      - Geolocation from 100+ countries
+  - name: Live - Team Pro (5 users)
+    description: Pro manual testing with payments/SIM features
+    price: 249
+    unit: /mo (annual)
+    billing: annual
+    features:
+      - 4 simultaneous synced devices
+      - Apple Pay + Google Pay testing
+      - SIM-enabled OTP/2FA
+      - Screenreader testing (VoiceOver, JAWS)
+      - File upload, QR-code scanning
+  - name: Freelancer
+    description: Solo testers on a tight budget
+    price: 12.5
+    unit: /mo (annual)
+    billing: annual
+    features:
+      - 100 testing minutes/mo
+      - Desktop + mobile browsers
+      - Single user account
+  - name: Automate - Chrome
+    description: Automated Chrome testing, 1 parallel
+    price: 59
+    unit: /mo (annual)
+    billing: annual
+    features:
+      - Unlimited Automate users + minutes
+      - Chrome across Windows
+      - Localhost + staging support
+      - Java/Node/Python/PHP/C# SDKs
+      - 10-run history
+  - name: Automate - Desktop & Mobile
+    description: Automate desktop and real mobile devices
+    price: 175
+    unit: /mo (annual)
+    billing: annual
+    features:
+      - 30K+ real iOS + Android devices
+      - Appium across all versions
+      - Mobile debugging tools
+      - Network throttling
+      - Geolocation from 100+ countries
+  - name: Volume / Enterprise
+    description: Volume discounts for whole-org rollout
+    price: 'Contact sales'
+    billing: annual
+    features:
+      - Custom volume pricing
+      - Team Pro features for all users
+      - Seamless access management
+      - Multi-device testing
 
 tags: []
 

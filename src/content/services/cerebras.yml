@@ -16,14 +16,64 @@ free_tier:
   - Ultra-fast inference (~2,600 tok/sec)
   - Rate-limited free tier
 
+paid_tier_highlights:
+  - Developer tier starts at $10 with 10x higher rate limits
+  - Enterprise offers dedicated queue priority and custom weights
+  - Cerebras Code Pro at $50/mo gives up to 24M tokens/day
+  - Cerebras Code Max at $200/mo gives up to 120M tokens/day
+  - Fine-tuning + training services on Enterprise
+
 pricing:
   - name: Free
+    description: 1M tokens/day on all Cerebras-powered models
     price: 0
-    unit: /month
+    billing: free
+    features:
+      - 1M tokens/day free
+      - Access to all Cerebras-powered models
+      - 20x faster inference than OpenAI/Anthropic
+      - Llama 3.1 8B, Qwen 3 32B/235B
+      - Community Discord support
+    cta_url: https://cloud.cerebras.ai/
   - name: Developer
-    description: 10x higher rate limits
-    price: 25
-    unit: /month
+    description: Self-serve paid tier, 10x higher rate limits
+    price: 10
+    unit: /mo (starts at)
+    billing: usage-based
+    features:
+      - Everything in Free
+      - 10x higher rate limits
+      - Higher priority processing
+      - Pay-as-you-go scaling
+  - name: Cerebras Code Pro
+    description: Coding-focused token plan for indie devs
+    price: 50
+    unit: /mo
+    billing: monthly
+    features:
+      - Up to 24M tokens/day
+      - Top open source model access
+      - Fast, high-context completions
+      - Indie + weekend project focus
+  - name: Cerebras Code Max
+    description: Heavy-duty coding workflows
+    price: 200
+    unit: /mo
+    billing: monthly
+    features:
+      - Up to 120M tokens/day
+      - Multi-agent system support
+      - Full-time development use
+  - name: Enterprise
+    description: Dedicated capacity + custom model support
+    price: 'Contact sales'
+    billing: annual
+    features:
+      - Highest rate limits
+      - Lowest latency dedicated queue
+      - Custom model weights
+      - Fine-tuning + training services
+      - Guaranteed response times
 
 tags: [llm, ai, inference, api, fast]
 

@@ -15,14 +15,40 @@ free_tier:
   - 20K files per site
   - 20 min build timeout
 
+paid_tier_highlights:
+  - Workers Paid ($5/mo) unlocks 10M requests/mo on Pages Functions
+  - 30M CPU-ms included on Paid; usage-based overages after
+  - KV reads/writes scale into millions on Paid
+  - 200K Workers Logs events/day free, 20M/mo on Paid
+  - Hyperdrive unlimited DB queries on Paid
+
 pricing:
   - name: Free
+    description: Static + dynamic site hosting at no cost
     price: 0
-    unit: /month
+    billing: free
+    features:
+      - Unlimited bandwidth and requests
+      - 500 builds/mo
+      - 20K files per site
+      - 20-minute build timeout
+      - 100K Worker requests/day
+      - 10ms CPU time per invocation
+      - 100K KV reads/day
+    cta_url: https://dash.cloudflare.com/sign-up/workers-and-pages
   - name: Workers Paid
-    description: Higher Workers limits
+    description: Production tier with monthly allowances
     price: 5
-    unit: /month
+    unit: /mo (starts at)
+    billing: monthly
+    features:
+      - 10M requests/mo ($0.30/M after)
+      - 30M CPU-ms/mo included ($0.02/M after)
+      - 10M KV reads ($0.50/M after)
+      - 1M KV writes ($5/M after)
+      - 1 GB KV storage ($0.50/GB-mo after)
+      - 20M Workers Logs events/mo
+      - Unlimited Hyperdrive queries
 
 tags: [static-hosting, cdn, deployment, edge-computing, serverless]
 

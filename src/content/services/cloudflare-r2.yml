@@ -15,13 +15,48 @@ free_tier:
   - 10M Class B (read) operations/mo
   - No per-request rate limit
 
+paid_tier_highlights:
+  - Standard storage $0.015/GB-mo after 10 GB free
+  - Class A ops $4.50/M, Class B ops $0.36/M after free tier
+  - Infrequent Access storage at $0.01/GB-mo for cold data
+  - Zero egress fees via Workers/S3 API/r2.dev
+  - 30-day minimum retention applies to Infrequent Access
+
 pricing:
   - name: Free
+    description: 10 GB-month free storage with no egress fees
     price: 0
-    unit: /month
-  - name: Pay-as-you-go
-    description: $0.015/GB/mo after free tier
-    price: 'Usage'
+    billing: free
+    features:
+      - 10 GB storage/mo
+      - 1M Class A operations/mo
+      - 10M Class B operations/mo
+      - Zero egress fees
+      - S3-compatible API
+    cta_url: https://dash.cloudflare.com/sign-up/workers-and-pages
+  - name: Standard Storage
+    description: Pay-as-you-go for frequently accessed data
+    price: 0.015
+    unit: /GB-mo
+    billing: usage-based
+    features:
+      - $0.015/GB-month storage
+      - $4.50/M Class A (write) operations
+      - $0.36/M Class B (read) operations
+      - No minimum storage duration
+      - Free egress via Workers/S3/r2.dev
+  - name: Infrequent Access
+    description: Lower-cost cold storage with retrieval fees
+    price: 0.01
+    unit: /GB-mo
+    billing: usage-based
+    features:
+      - $0.01/GB-month storage
+      - 30-day minimum storage duration
+      - $9.00/M Class A operations
+      - $0.90/M Class B operations
+      - $0.01/GB data retrieval
+      - Free egress bandwidth
 
 tags: [object-storage, s3-compatible, cdn, file-storage, cloud-storage]
 

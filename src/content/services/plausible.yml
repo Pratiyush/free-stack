@@ -12,15 +12,77 @@ free_tier:
   - No free cloud tier
 
 pricing:
-  - name: Free
+  - name: Self-hosted (Community Edition)
     price: 0
+    description: Open-source AGPL self-host option; no cloud free tier
+    features:
+      - AGPL-3.0 open source
+      - Run on your own infrastructure
+      - No external account or pricing limits
+      - Community support
+    cta_url: https://github.com/plausible/community-edition
+    billing: free
+  - name: Starter
+    price: 9
     unit: /month
+    description: Simple analytics for solo sites; up to 10K pageviews
+    features:
+      - 1 site
+      - 3 years data retention
+      - Email/Slack reports
+      - Google Analytics import
+      - Goals, custom events, saved segments
+    cta_url: https://plausible.io/register
+    billing: monthly
+  - name: Growth
+    price: 14
+    unit: /month
+    description: Expanded plan for growing teams with multiple sites
+    features:
+      - Everything in Starter
+      - Up to 3 sites
+      - Up to 3 team members
+      - Team management
+      - Shared links and embedded dashboards
+    cta_url: https://plausible.io/register
+    billing: monthly
+  - name: Business
+    price: 19
+    unit: /month
+    description: Advanced analytics with API access and long retention
+    features:
+      - Everything in Growth
+      - Up to 10 sites
+      - Up to 10 team members
+      - 5 years data retention
+      - Stats API (600 req/hr)
+      - Looker Studio connector
+    cta_url: https://plausible.io/register
+    billing: monthly
+  - name: Enterprise
+    price: Custom
+    description: Priority support with SSO and Sites API
+    features:
+      - Everything in Business
+      - 10+ sites and team members
+      - Sites API access
+      - SSO support
+      - Custom Stats API rate
+    cta_url: https://plausible.io/contact
+    billing: annual
+
+paid_tier_highlights:
+  - No free cloud tier; only the AGPL self-hosted Community Edition
+  - Starter $9/mo (10K pageviews, 1 site, 3 years retention)
+  - Growth $14/mo for up to 3 sites and 3 team members
+  - Business $19/mo unlocks 10 sites, 5-year retention, Stats API
+  - Enterprise adds SSO, Sites API, custom API rate limits
 
 tags: []
 
 official_url: https://plausible.io/
-pricing_url: https://plausible.io/
+pricing_url: https://plausible.io/#pricing
 
 date_added: 2026-05-15
 date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_verified: 2026-05-15

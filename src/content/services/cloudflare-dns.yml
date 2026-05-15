@@ -15,13 +15,60 @@ free_tier:
   - Proxied traffic and DDoS protection
   - 'API: 1,200 req/5min'
 
+paid_tier_highlights:
+  - Pro ($20/mo) adds WAF managed rulesets and image optimization
+  - Business ($200/mo) brings 100% uptime SLA + custom SSL + PCI
+  - Enterprise unlocks advanced WAF, bot management, premium routing
+  - Unmetered DDoS protection at every tier
+  - DNS query quota is unlimited at every tier
+
 pricing:
   - name: Free
+    description: DNS, CDN, SSL, and DDoS protection at no cost
     price: 0
-    unit: /month
+    billing: free
+    features:
+      - Unlimited zones
+      - 200 DNS records/zone
+      - Unlimited DNS queries
+      - Unmetered DDoS mitigation
+      - Universal SSL
+      - 'API: 1,200 req/5min'
+    cta_url: https://dash.cloudflare.com/sign-up
   - name: Pro
+    description: For pro sites with security and performance
     price: 20
-    unit: /month
+    unit: /mo
+    billing: monthly
+    features:
+      - Everything in Free
+      - WAF managed rulesets
+      - Image optimization (Polish)
+      - Mobile optimization
+      - Lossless image optimization
+      - Email support
+  - name: Business
+    description: Small ecommerce and business sites
+    price: 200
+    unit: /mo
+    billing: monthly
+    features:
+      - Everything in Pro
+      - 100% uptime SLA
+      - Custom SSL certificate upload
+      - PCI compliance support
+      - 24/7 chat support
+      - Advanced DDoS alerts
+  - name: Enterprise
+    description: Mission-critical apps with custom SLAs
+    price: 'Contact sales'
+    billing: annual
+    features:
+      - Custom SLA + premium support
+      - Advanced WAF + bot management
+      - Premium routing (Argo)
+      - Dedicated solutions engineer
+      - Advanced certificate manager
 
 tags: [dns, domain, ddos-protection, cdn, security]
 

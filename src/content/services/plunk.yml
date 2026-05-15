@@ -16,12 +16,47 @@ free_tier:
   - Open source (AGPL-3.0); self-host on AWS SES
 
 pricing:
-  - name: Free
+  - name: Free Forever
     price: 0
     unit: /month
-  - name: Pay as you grow
-    description: $0.001/email, unlimited, no base fee
-    price: 'Usage'
+    description: 1,000 emails/mo, unlimited contacts, no credit card
+    features:
+      - 1,000 emails/month
+      - Transactional via API and SMTP
+      - Workflow automation with delays/conditions
+      - Campaign broadcasts to lists or segments
+      - Unlimited contacts; click & open tracking
+      - Custom domains with auto DKIM/SPF/DMARC
+      - Plunk branding on emails
+    cta_url: https://next-app.useplunk.com/auth/signup
+    billing: free
+  - name: Pay as You Grow
+    price: 0.001
+    unit: /email
+    description: $0.001/email, unlimited, no base fee, branding removed
+    features:
+      - Unlimited email volume
+      - Branding removed from outgoing messages
+      - Monthly spend cap control
+      - REST API with Node.js and Python SDKs
+      - Audience segmentation and analytics
+    cta_url: https://next-app.useplunk.com/auth/signup
+    billing: usage-based
+  - name: Self-Hosted
+    price: 0
+    description: AGPL-3.0 open source; free Docker deployment
+    features:
+      - AGPL-3.0 licensed
+      - Docker Compose deployment
+      - Full data ownership
+      - GDPR-friendly self-host
+    cta_url: https://github.com/useplunk/plunk
+    billing: free
+
+paid_tier_highlights:
+  - Free Forever 1K emails/mo with unlimited contacts and tracking
+  - Pay as You Grow $0.001/email, no base fee, branding removed
+  - Self-hosted Docker option under AGPL-3.0 for full data ownership
 
 tags: [email, transactional-email, open-source, self-hosted, api]
 

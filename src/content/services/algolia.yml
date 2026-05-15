@@ -9,19 +9,68 @@ summary: Search-as-a-service with 10K searches/mo, 1M records, 10 indices, and a
 tier_type: always-free
 
 free_tier:
-  - 10K search requests/mo
+  - 10K search requests/month
   - 1M records
   - 10 indices
+  - 10K AI Recommendation requests/month
   - Highest 3 record-count days excluded from billing
-  - API rate limited
+  - API rate limited; full feature suite for testing
+
+paid_tier_highlights:
+  - 'Grow: pay-as-you-go from $0.50/1k extra searches with keyword search'
+  - 'Grow Plus: $1.75/1k extra searches adds AI Synonyms, AI Ranking, Personalization'
+  - 'Elevate: enterprise contract adds NeuralSearch, AI Collections, 99.999% SLA, SSO'
+  - 'Higher tiers extend rules-per-index and analytics retention (30 -> 90+ days)'
 
 pricing:
-  - name: Free
+  - name: Build
     price: 0
-    unit: /month
-  - name: Growth
-    price: 150
-    unit: /month
+    billing: free
+    description: Free for development and small projects
+    features:
+      - 10K search requests/month
+      - 1M records included
+      - 10K AI Recommendation requests/month
+      - Full feature suite for testing
+      - Personalization and AI Dynamic Re-ranking
+    cta_url: https://dashboard.algolia.com/users/sign_up/
+  - name: Grow
+    price: 0.50
+    unit: /1k additional searches
+    billing: usage-based
+    description: Keyword search with foundational relevance tools
+    features:
+      - 10K free search requests/month
+      - 100K records included
+      - $0.50 per 1k extra searches
+      - Query Suggestions and manual synonyms
+      - 10 Rules per index
+      - 30-day analytics retention
+    cta_url: https://dashboard.algolia.com/users/sign_up/
+  - name: Grow Plus
+    price: 1.75
+    unit: /1k additional searches
+    billing: usage-based
+    description: Keyword search with AI capabilities
+    features:
+      - 10K free search requests/month
+      - $1.75 per 1k extra searches
+      - 10,000 Rules per index
+      - AI Synonyms and AI Ranking
+      - Advanced Personalization
+      - 90-day analytics retention
+    cta_url: https://dashboard.algolia.com/users/sign_up/
+  - name: Elevate
+    price: Contact sales
+    billing: annual
+    description: Enterprise-scale AI search with full governance
+    features:
+      - NeuralSearch and AI Collections
+      - Smart Groups and real-time personalization
+      - 99.999% availability SLA
+      - SSO and enterprise support
+      - Professional services available
+    cta_url: https://www.algolia.com/lp/pricing-request
 
 tags: [search, full-text-search, api, saas, indexing]
 
