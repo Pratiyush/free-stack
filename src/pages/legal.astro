@@ -1,0 +1,223 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+
+const updated = '2026-05-15';
+---
+
+<BaseLayout
+  title="Legal & takedown"
+  description="Trademark policy, removal requests, and how free-stack handles legal questions about listed services."
+  canonical="https://freestack.is-a.dev/legal"
+>
+  <article class="legal-page container-narrow">
+    <p class="rom-eyebrow">
+      <span class="rom">§</span> LEGAL
+      <span class="dot" aria-hidden="true">·</span>
+      Updated <time datetime={updated}>{updated}</time>
+    </p>
+
+    <h1>Legal &amp; takedown</h1>
+
+    <p class="lede">
+      free-stack is an independent, open-source catalog. We have no commercial relationship with any
+      service we list, and we don't accept paid placement. This page covers trademarks, takedown
+      requests, and the limits of our editorial responsibility.
+    </p>
+
+    <section class="block">
+      <h2><span class="rom">i.</span> Trademarks</h2>
+      <p>
+        Every service name, logo, and brand color shown on this site is the property of its
+        respective owner. We use them under fair-use principles for editorial commentary,
+        comparison, and identification only. <strong
+          >free-stack is not affiliated with, endorsed by, or sponsored by</strong
+        > any service listed in the catalog.
+      </p>
+      <p>
+        Logos are sourced from <a href="https://simpleicons.org" rel="noopener noreferrer"
+          >simpleicons.org</a
+        >
+        (CC0), <a href="https://lobehub.com/icons" rel="noopener noreferrer">lobe-icons</a> (MIT), and
+        other open-license libraries. Where we couldn't source a free-license version, we use a brand-colored
+        placeholder. The full provenance is documented in
+        <code>docs/logo-coverage.md</code> in the repository.
+      </p>
+    </section>
+
+    <section class="block">
+      <h2><span class="rom">ii.</span> Takedown requests</h2>
+      <p>
+        If you represent a service we list and want us to remove or correct its entry, email
+        <a href="mailto:removals@freestack.is-a.dev">removals@freestack.is-a.dev</a>. Please
+        include:
+      </p>
+      <ul class="legal-list">
+        <li>The service name + URL of the entry on free-stack</li>
+        <li>What you'd like removed or corrected (logo, name, free-tier description, etc.)</li>
+        <li>Confirmation that you're authorized to make the request on the service's behalf</li>
+      </ul>
+      <p>
+        We aim to respond within <strong>48 hours</strong> on business days. Most requests resolve within
+        a week. If a service has been wholly retired or its free tier shut down, we move the entry to
+        "Services we don't include" rather than delete the record outright — the history helps future
+        contributors avoid re-listing.
+      </p>
+    </section>
+
+    <section class="block">
+      <h2><span class="rom">iii.</span> Pricing & free-tier accuracy</h2>
+      <p>
+        Every entry has a <code>date_verified</code> field showing when we last checked the service's
+        pricing page against what we claim. Pricing pages change; we re-verify monthly and accept community
+        correction reports via
+        <a
+          href="https://github.com/Pratiyush/free-stack/issues/new?template=02-pricing-change.yml"
+          rel="noopener noreferrer">GitHub issues</a
+        >.
+      </p>
+      <p>
+        We don't warrant accuracy beyond best-effort verification. Always confirm the service's live
+        pricing before relying on a specific quota.
+      </p>
+    </section>
+
+    <section class="block">
+      <h2><span class="rom">iv.</span> Privacy</h2>
+      <p>
+        free-stack runs as a static site with no cookies, no trackers, and no analytics that
+        identify you. Outbound links go directly to the listed service's own URL without affiliate
+        parameters or referral tags.
+      </p>
+      <p>
+        If we ever add opt-in analytics (Cloudflare Web Analytics, no PII, no cookies — currently
+        deferred), it will be documented here and on
+        <a href="/methodology">/methodology</a>.
+      </p>
+    </section>
+
+    <section class="block">
+      <h2><span class="rom">v.</span> Licensing</h2>
+      <p>
+        The free-stack source code is MIT-licensed. The catalog data (service YAMLs under
+        <code>src/content/services/</code>) is published under
+        <a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="noopener noreferrer"
+          >CC0 1.0</a
+        > — public domain, free to use without attribution. We'd appreciate a link back, but it isn't
+        required.
+      </p>
+    </section>
+
+    <section class="block">
+      <h2><span class="rom">vi.</span> Contact</h2>
+      <ul class="legal-list">
+        <li>
+          <strong>Takedowns / corrections:</strong>
+          <a href="mailto:removals@freestack.is-a.dev">removals@freestack.is-a.dev</a>
+        </li>
+        <li>
+          <strong>Editorial questions:</strong>
+          file a
+          <a
+            href="https://github.com/Pratiyush/free-stack/issues/new/choose"
+            rel="noopener noreferrer">GitHub issue</a
+          >
+        </li>
+        <li>
+          <strong>Security disclosures:</strong>
+          email the maintainer at <a href="mailto:pratiyush1@gmail.com">pratiyush1@gmail.com</a> with
+          subject prefix <code>[security]</code>
+        </li>
+      </ul>
+    </section>
+  </article>
+
+  <style>
+    .legal-page {
+      padding-top: var(--space-xl);
+      padding-bottom: var(--space-2xl);
+    }
+    .rom-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      color: var(--color-ink-faint);
+      margin: 0 0 var(--space-sm);
+      display: flex;
+      align-items: baseline;
+      gap: 0.5em;
+    }
+    .rom {
+      color: var(--color-coral);
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 1.1em;
+    }
+    .dot {
+      color: var(--color-rule);
+    }
+    .legal-page h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 400;
+      font-style: italic;
+      letter-spacing: -0.015em;
+      margin: 0 0 var(--space-md);
+      line-height: 1.1;
+    }
+    .lede {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 350;
+      color: var(--color-ink);
+      line-height: 1.55;
+      margin: 0 0 var(--space-xl);
+      max-width: 58ch;
+    }
+    .block {
+      padding: var(--space-lg) 0;
+      border-top: var(--border-rule);
+      max-width: 65ch;
+    }
+    .block h2 {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 500;
+      margin: 0 0 var(--space-md);
+      display: flex;
+      align-items: baseline;
+      gap: 0.5em;
+    }
+    .block p {
+      line-height: 1.65;
+      margin-bottom: var(--space-md);
+      color: var(--color-ink);
+    }
+    .block a {
+      color: var(--color-ink);
+      text-decoration: underline;
+      text-decoration-color: var(--color-coral);
+    }
+    .legal-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 var(--space-md);
+    }
+    .legal-list li {
+      padding-left: 1.4em;
+      text-indent: -1.4em;
+      line-height: 1.55;
+      margin-bottom: 0.4rem;
+    }
+    .legal-list li::before {
+      content: '— ';
+      color: var(--color-coral);
+    }
+    code {
+      font-family: var(--font-mono);
+      font-size: 0.88em;
+      padding: 0.1rem 0.3rem;
+      background: var(--color-paper-warm);
+      border-radius: 3px;
+    }
+  </style>
+</BaseLayout>
