@@ -2,12 +2,15 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches: [master]
     paths:
-      - 'categories/**'
       - 'docs/**'
       - 'README.md'
   workflow_dispatch:
+# NOTE: `main` was a short-lived rename-experiment branch; `master` is the
+# canonical legacy branch that still hosts docs/index.html. This workflow
+# deploys the v1.0.0 MD-era site at freestack.is-a.dev until the production
+# cutover lands in story 5.14, at which point this workflow is retired.
 
 permissions:
   contents: read

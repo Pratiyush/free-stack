@@ -75,12 +75,21 @@ const tierTypes = ['always-free', 'free-plan', 'trial-credit', 'pay-as-you-go'] 
     <div data-view="table" hidden>
       <ServiceTable services={services} />
     </div>
+
+    <div class="no-results" data-no-results hidden role="status" aria-live="polite">
+      <p class="no-results-title">No services match these filters.</p>
+      <p class="no-results-hint">
+        Try a different search term, clear the category filter, or
+        <a href="/catalog">reset filters</a>.
+      </p>
+    </div>
   </section>
 
   <script>
     const grid = document.querySelector<HTMLElement>('[data-grid]');
     const tierBtns = document.querySelectorAll<HTMLButtonElement>('[data-filter-tier]');
     const catSelect = document.querySelector<HTMLSelectElement>('[data-filter-category]');
+    const searchInput = document.querySelector<HTMLInputElement>('#catalog-search');
     const resultCount = document.querySelector<HTMLElement>('[data-result-count]');
     const cards = Array.from(grid?.querySelectorAll<HTMLElement>('.service-card') ?? []);
     // Table rows share data-slug / data-tier / data-category with cards.
@@ -88,12 +97,20 @@ const tierTypes = ['always-free', 'free-plan', 'trial-credit', 'pay-as-you-go'] 
       document.querySelectorAll<HTMLElement>('[data-view="table"] .row[data-slug]'),
     );
     // Tag table rows with the same data-tier / data-category as cards.
+    // Also stash a lowercase search-text per card + row (name + slug + category).
+    cards.forEach((card) => {
+      const slug = card.dataset.slug ?? '';
+      const name = card.querySelector('.card-name')?.textContent ?? '';
+      const cat = card.dataset.category ?? '';
+      card.dataset.searchText = `${name} ${slug} ${cat}`.toLowerCase();
+    });
     tableRows.forEach((row) => {
       const slug = row.dataset.slug;
       const matchingCard = cards.find((c) => c.dataset.slug === slug);
       if (matchingCard) {
         row.dataset.tier = matchingCard.dataset.tier ?? '';
         row.dataset.category = matchingCard.dataset.category ?? '';
+        row.dataset.searchText = matchingCard.dataset.searchText ?? '';
       }
     });
 
@@ -101,11 +118,13 @@ const tierTypes = ['always-free', 'free-plan', 'trial-credit', 'pay-as-you-go'] 
       const tier = document.querySelector<HTMLButtonElement>('[data-filter-tier].active')?.dataset
         .filterTier;
       const cat = catSelect?.value;
+      const q = (searchInput?.value ?? '').trim().toLowerCase();
       let visible = 0;
       cards.forEach((card) => {
         const matchTier = !tier || card.dataset.tier === tier;
         const matchCat = !cat || card.dataset.category === cat;
-        const show = matchTier && matchCat;
+        const matchQ = !q || (card.dataset.searchText ?? '').includes(q);
+        const show = matchTier && matchCat && matchQ;
         card.style.display = show ? '' : 'none';
         if (show) visible++;
       });
@@ -113,13 +132,17 @@ const tierTypes = ['always-free', 'free-plan', 'trial-credit', 'pay-as-you-go'] 
       tableRows.forEach((row) => {
         const matchTier = !tier || row.dataset.tier === tier;
         const matchCat = !cat || row.dataset.category === cat;
-        const show = matchTier && matchCat;
+        const matchQ = !q || (row.dataset.searchText ?? '').includes(q);
+        const show = matchTier && matchCat && matchQ;
         row.style.display = show ? '' : 'none';
         const detailId = row.getAttribute('aria-controls');
         const detail = detailId ? document.getElementById(detailId) : null;
         if (detail) detail.style.display = show ? '' : 'none';
       });
       if (resultCount) resultCount.textContent = `${visible} service${visible === 1 ? '' : 's'}`;
+      // Toggle a zero-state message when nothing matches.
+      const empty = document.querySelector<HTMLElement>('[data-no-results]');
+      if (empty) empty.toggleAttribute('hidden', visible !== 0);
     }
 
     tierBtns.forEach((btn) => {
@@ -130,6 +153,12 @@ const tierTypes = ['always-free', 'free-plan', 'trial-credit', 'pay-as-you-go'] 
       });
     });
     catSelect?.addEventListener('change', applyFilters);
+    // Debounced search-input handler.
+    let searchTimer: ReturnType<typeof setTimeout> | null = null;
+    searchInput?.addEventListener('input', () => {
+      if (searchTimer) clearTimeout(searchTimer);
+      searchTimer = setTimeout(applyFilters, 80);
+    });
 
     /* Sticky filter bar — apply shadow when the bar is stuck to the viewport top.
        Pattern adapted from ref/design-experiments/combined-v2.html (sentinel). */
@@ -267,6 +296,28 @@ const tierTypes = ['always-free', 'free-plan', 'trial-credit', 'pay-as-you-go'] 
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
       gap: var(--space-md);
+    }
+    .no-results {
+      padding: var(--space-2xl) var(--space-lg);
+      text-align: center;
+      border: 1px dashed var(--color-rule);
+      border-radius: var(--radius-md);
+      background: var(--color-paper-warm);
+    }
+    .no-results-title {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      color: var(--color-ink);
+      margin: 0 0 var(--space-sm);
+    }
+    .no-results-hint {
+      color: var(--color-ink-soft);
+      font-size: 0.95rem;
+      margin: 0;
+    }
+    .no-results-hint a {
+      color: var(--color-coral);
+      text-decoration: underline;
     }
   </style>
 </BaseLayout>

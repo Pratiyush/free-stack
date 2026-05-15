@@ -10,10 +10,11 @@
   --color-paper-deep: #ebe6d9;
   --color-ink: #1a1a1a;
   --color-ink-softer: #2a241e; /* softer ink for masthead bands on paper-warm */
-  --color-ink-soft: #5a5550;
-  --color-ink-faint: #8a8580; /* faintest ink — for serials, dateline metadata */
+  --color-ink-soft: #4a443e; /* WCAG AA: 7.5:1 on paper (was #5a5550 at 6.4:1) */
+  --color-ink-faint: #6b6460; /* WCAG AA: 5.5:1 on paper (was #8a8580 at 3.2:1 — failed) */
   --color-rule: #d8d2c2;
-  --color-coral: #d94c2a; /* selection state + primary CTA only */
+  --color-coral: #b73d22; /* WCAG AA: 5.8:1 on paper (was #d94c2a at 3.7:1 — failed for text) */
+  --color-coral-accent: #d94c2a; /* original coral — for non-text decorative use (borders, dots) */
   --color-sponsor: #5a4fcf; /* ONLY in /sponsors and footer support link */
 
   /* Tier-type badge colors */
@@ -56,10 +57,11 @@
   --color-paper-deep: #ebe6d9;
   --color-ink: #1a1a1a;
   --color-ink-softer: #2a241e;
-  --color-ink-soft: #5a5550;
-  --color-ink-faint: #8a8580;
+  --color-ink-soft: #4a443e;
+  --color-ink-faint: #6b6460;
   --color-rule: #d8d2c2;
-  --color-coral: #d94c2a;
+  --color-coral: #b73d22;
+  --color-coral-accent: #d94c2a;
   --color-sponsor: #5a4fcf;
 
   --font-display: 'Fraunces Variable', ui-serif, Georgia, serif;
