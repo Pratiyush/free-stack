@@ -2,7 +2,7 @@ name: Meta Llama API
 slug: meta-llama-api
 category: ai-apis
 subcategory: limited
-brand_color: '#888888'
+brand_color: '#0467DF'
 logo: /logos/meta-llama-api.svg
 
 summary: 'Limited preview, no confirmed free tier — Official API at llama.com in limited preview; use Groq/Together/OpenRouter for free Llama access instead'

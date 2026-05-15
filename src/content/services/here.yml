@@ -2,7 +2,7 @@ name: HERE
 slug: here
 category: maps
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#00AFAA'
 logo: /logos/here.svg
 
 summary: '1,000 requests/day (Limited plan, no card); 30K requests/mo (Base plan with card); 250K/mo (Freemium)'

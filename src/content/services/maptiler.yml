@@ -2,7 +2,7 @@ name: MapTiler
 slug: maptiler
 category: maps
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#323357'
 logo: /logos/maptiler.svg
 
 summary: 'Free cloud plan for non-commercial/R&D use'

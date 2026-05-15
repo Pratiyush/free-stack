@@ -2,7 +2,7 @@ name: SonarCloud (SonarQube Cloud)
 slug: sonarcloud-sonarqube-cloud
 category: code-quality
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#126ED3'
 logo: /logos/sonarcloud-sonarqube-cloud.svg
 
 summary: Free for open source; 50K LoC for private repos

@@ -11,7 +11,7 @@ tier_type: free-plan
 
 free_tier:
   - 'No monthly fee, Merchant of Record'
-  - 'Stripe''s 2.9%+30c included in the 4% rate, +1.5% international card fee passed through at cost, +0.5% for subscription payments'
+  - "Stripe's 2.9%+30c included in the 4% rate, +1.5% international card fee passed through at cost, +0.5% for subscription payments"
 
 pricing:
   - name: Free

@@ -2,7 +2,7 @@ name: CircleCI
 slug: circleci
 category: testing
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#343434'
 logo: /logos/circleci.svg
 
 summary: '30,000 credits/mo (~6,000 build mins on Linux/Docker)'

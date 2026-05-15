@@ -2,7 +2,7 @@ name: PayPal
 slug: paypal
 category: payments
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#002991'
 logo: /logos/paypal.svg
 
 summary: No monthly fee (standard)

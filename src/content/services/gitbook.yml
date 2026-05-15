@@ -2,7 +2,7 @@ name: GitBook
 slug: gitbook
 category: documentation
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#BBDDE5'
 logo: /logos/gitbook.svg
 
 summary: 'Free for individuals & OSS'

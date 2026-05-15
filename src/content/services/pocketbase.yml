@@ -2,7 +2,7 @@ name: '**PocketBase**'
 slug: pocketbase
 category: baas
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#B8DBE4'
 logo: /logos/pocketbase.svg
 
 summary: 'Free (open-source, self-hosted)'

@@ -2,7 +2,7 @@ name: Deno KV
 slug: deno-kv
 category: databases
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#70FFAF'
 logo: /logos/deno-kv.svg
 
 summary: 'Free with Deno Deploy (key-value)'

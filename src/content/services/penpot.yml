@@ -2,7 +2,7 @@ name: Penpot
 slug: penpot
 category: design
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#000000'
 logo: /logos/penpot.svg
 
 summary: 'Free plan (open-source)'

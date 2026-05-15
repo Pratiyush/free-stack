@@ -2,7 +2,7 @@ name: '**DigitalOcean App Platform**'
 slug: digitalocean-app-platform
 category: paas
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#0080FF'
 logo: /logos/digitalocean-app-platform.svg
 
 summary: '**DigitalOcean App Platform** — free tier; see the pricing page for details.'

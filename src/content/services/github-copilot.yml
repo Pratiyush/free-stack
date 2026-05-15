@@ -2,7 +2,7 @@ name: '**GitHub Copilot**'
 slug: github-copilot
 category: dev-tools
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#000000'
 logo: /logos/github-copilot.svg
 
 summary: '**GitHub Copilot** — free tier; see the pricing page for details.'

@@ -2,7 +2,7 @@ name: Grafana Cloud (Loki)
 slug: grafana-cloud-loki
 category: logs
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#F46800'
 logo: /logos/grafana-cloud-loki.svg
 
 summary: Free forever plan

@@ -2,7 +2,7 @@ name: Discord
 slug: discord
 category: collaboration
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#5865F2'
 logo: /logos/discord.svg
 
 summary: Free (no paid requirement)

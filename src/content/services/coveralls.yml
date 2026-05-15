@@ -2,7 +2,7 @@ name: Coveralls
 slug: coveralls
 category: code-quality
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#3F5767'
 logo: /logos/coveralls.svg
 
 summary: 'Free for open-source (public) repos'

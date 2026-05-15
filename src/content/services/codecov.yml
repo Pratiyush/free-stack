@@ -2,7 +2,7 @@ name: Codecov
 slug: codecov
 category: code-quality
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#F01F7A'
 logo: /logos/codecov.svg
 
 summary: Free for up to 5 users; unlimited public repos

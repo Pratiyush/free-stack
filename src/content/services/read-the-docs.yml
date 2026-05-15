@@ -2,7 +2,7 @@ name: Read the Docs
 slug: read-the-docs
 category: documentation
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#8CA1AF'
 logo: /logos/read-the-docs.svg
 
 summary: 'Free for open-source (community)'

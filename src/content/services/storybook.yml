@@ -2,7 +2,7 @@ name: Storybook
 slug: storybook
 category: design
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#FF4785'
 logo: /logos/storybook.svg
 
 summary: 'Free (open-source)'

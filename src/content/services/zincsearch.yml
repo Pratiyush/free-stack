@@ -2,7 +2,7 @@ name: '**ZincSearch**'
 slug: zincsearch
 category: search
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#5BA37F'
 logo: /logos/zincsearch.svg
 
 summary: 'Open-source (Apache 2.0)'

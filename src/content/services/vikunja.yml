@@ -2,7 +2,7 @@ name: Vikunja
 slug: vikunja
 category: project-management
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#196AFF'
 logo: /logos/vikunja.svg
 
 summary: 'Fully free and open source (AGPLv3); self-hosted'

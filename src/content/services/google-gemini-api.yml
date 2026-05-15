@@ -2,7 +2,7 @@ name: Google Gemini API
 slug: google-gemini-api
 category: ai-apis
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#4285F4'
 logo: /logos/google-gemini-api.svg
 
 summary: 'Free tier, multiple models — 2.5 Pro: 100 RPD; Flash: 250 RPD; Flash-Lite: 1,000 RPD; all share 250K TPM, 1M context'

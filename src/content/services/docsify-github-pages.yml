@@ -2,7 +2,7 @@ name: Docsify + GitHub Pages
 slug: docsify-github-pages
 category: documentation
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#2ECE53'
 logo: /logos/docsify-github-pages.svg
 
 summary: Fully free (OSS + free hosting)

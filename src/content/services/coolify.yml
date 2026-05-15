@@ -2,7 +2,7 @@ name: '**Coolify**'
 slug: coolify
 category: paas
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#6B16ED'
 logo: /logos/coolify.svg
 
 summary: 'Free (open-source, self-hosted)'

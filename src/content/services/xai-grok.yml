@@ -2,7 +2,7 @@ name: xAI (Grok)
 slug: xai-grok
 category: ai-apis
 subcategory: expiring-credits
-brand_color: '#888888'
+brand_color: '#000000'
 logo: /logos/xai-grok.svg
 
 summary: '$25 free credits + up to $150/mo via data sharing — Grok 4, 4.1 Fast; 2M context window'

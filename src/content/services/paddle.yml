@@ -2,7 +2,7 @@ name: Paddle
 slug: paddle
 category: payments
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#FDDD35'
 logo: /logos/paddle.svg
 
 summary: 'No monthly fee, Merchant of Record'

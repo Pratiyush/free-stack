@@ -2,7 +2,7 @@ name: Cloudflare D1
 slug: cloudflare-d1
 category: databases
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#F38020'
 logo: /logos/cloudflare-d1.svg
 
 summary: Workers Free plan (SQLite at edge)

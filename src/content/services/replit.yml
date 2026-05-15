@@ -2,7 +2,7 @@ name: '**Replit**'
 slug: replit
 category: dev-tools
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#F26207'
 logo: /logos/replit.svg
 
 summary: Starter plan (free)

@@ -2,7 +2,7 @@ name: GitHub Codespaces
 slug: github-codespaces
 category: containers
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#181717'
 logo: /logos/github-codespaces.svg
 
 summary: Free for personal accounts

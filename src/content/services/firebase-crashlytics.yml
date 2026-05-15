@@ -2,7 +2,7 @@ name: '**Firebase (Crashlytics)**'
 slug: firebase-crashlytics
 category: mobile
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#DD2C00'
 logo: /logos/firebase-crashlytics.svg
 
 summary: Free (Spark plan)

@@ -2,7 +2,7 @@ name: Mapbox
 slug: mapbox
 category: maps
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#000000'
 logo: /logos/mapbox.svg
 
 summary: 50K web map loads/mo; 100K geocoding requests/mo; 25K mobile MAUs

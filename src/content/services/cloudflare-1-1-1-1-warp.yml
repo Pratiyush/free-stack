@@ -2,7 +2,7 @@ name: '**Cloudflare 1.1.1.1 + WARP**'
 slug: cloudflare-1-1-1-1-warp
 category: dns
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#F38020'
 logo: /logos/cloudflare-1-1-1-1-warp.svg
 
 summary: Free (resolver + VPN)

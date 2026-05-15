@@ -2,7 +2,7 @@ name: GitLab CI
 slug: gitlab-ci
 category: testing
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#FC6D26'
 logo: /logos/gitlab-ci.svg
 
 summary: 400 compute mins/mo

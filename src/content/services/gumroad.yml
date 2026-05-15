@@ -2,7 +2,7 @@ name: Gumroad
 slug: gumroad
 category: payments
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#FF90E8'
 logo: /logos/gumroad.svg
 
 summary: No monthly fee

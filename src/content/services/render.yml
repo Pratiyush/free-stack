@@ -2,7 +2,7 @@ name: Render
 slug: render
 category: hosting
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#000000'
 logo: /logos/render.svg
 
 summary: Render — free tier; see the pricing page for details.

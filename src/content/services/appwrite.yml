@@ -2,7 +2,7 @@ name: '**Appwrite**'
 slug: appwrite
 category: baas
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#FD366E'
 logo: /logos/appwrite.svg
 
 summary: '**Appwrite** — free tier; see the pricing page for details.'

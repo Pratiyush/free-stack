@@ -2,7 +2,7 @@ name: Nominatim (OpenStreetMap)
 slug: nominatim-openstreetmap
 category: maps
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#7EBC6F'
 logo: /logos/nominatim-openstreetmap.svg
 
 summary: 'Fully free and open source; self-hostable'

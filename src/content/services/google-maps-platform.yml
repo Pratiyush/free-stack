@@ -2,7 +2,7 @@ name: Google Maps Platform
 slug: google-maps-platform
 category: maps
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#4285F4'
 logo: /logos/google-maps-platform.svg
 
 summary: 'Per-SKU free thresholds: Essentials 10K/mo, Pro 5K/mo, Enterprise 1K/mo; Map Tiles 100K/mo'

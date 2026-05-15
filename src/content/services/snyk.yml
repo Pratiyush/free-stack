@@ -2,7 +2,7 @@ name: '**Snyk**'
 slug: snyk
 category: security
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#4C4A73'
 logo: /logos/snyk.svg
 
 summary: '**Snyk** — free tier; see the pricing page for details.'
@@ -11,7 +11,7 @@ tier_type: free-plan
 
 free_tier:
   - Free plan
-  - 'IDE scans don''t count toward limits; suitable for 1-3 private repos'
+  - "IDE scans don't count toward limits; suitable for 1-3 private repos"
 
 pricing:
   - name: Free

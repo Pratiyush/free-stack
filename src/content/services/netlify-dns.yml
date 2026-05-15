@@ -2,7 +2,7 @@ name: '**Netlify DNS**'
 slug: netlify-dns
 category: dns
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#00C7B7'
 logo: /logos/netlify-dns.svg
 
 summary: '**Netlify DNS** — free tier; see the pricing page for details.'

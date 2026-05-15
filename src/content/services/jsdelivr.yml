@@ -2,7 +2,7 @@ name: jsDelivr
 slug: jsdelivr
 category: storage
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#E84D3D'
 logo: /logos/jsdelivr.svg
 
 summary: 'Unlimited bandwidth, fully free public CDN'

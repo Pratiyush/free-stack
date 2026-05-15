@@ -2,7 +2,7 @@ name: '**Vercel DNS**'
 slug: vercel-dns
 category: dns
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#000000'
 logo: /logos/vercel-dns.svg
 
 summary: Free (Hobby plan)

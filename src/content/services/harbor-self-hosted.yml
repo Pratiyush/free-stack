@@ -2,7 +2,7 @@ name: 'Harbor (self-hosted)'
 slug: harbor-self-hosted
 category: containers
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#60B932'
 logo: /logos/harbor-self-hosted.svg
 
 summary: 'Open-source, fully free'

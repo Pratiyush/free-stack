@@ -2,7 +2,7 @@ name: '**Nhost**'
 slug: nhost
 category: baas
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#0052CD'
 logo: /logos/nhost.svg
 
 summary: Starter plan (free forever)

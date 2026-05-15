@@ -2,7 +2,7 @@ name: '**Postman**'
 slug: postman
 category: dev-tools
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#FF6C37'
 logo: /logos/postman.svg
 
 summary: '**Postman** — free tier; see the pricing page for details.'

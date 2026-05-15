@@ -2,7 +2,7 @@ name: Docusaurus + GitHub Pages
 slug: docusaurus-github-pages
 category: documentation
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#3ECC5F'
 logo: /logos/docusaurus-github-pages.svg
 
 summary: Fully free (OSS + free hosting)

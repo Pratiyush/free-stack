@@ -2,7 +2,7 @@ name: '**Insomnia**'
 slug: insomnia
 category: dev-tools
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#4000BF'
 logo: /logos/insomnia.svg
 
 summary: 'Free plan (open source, MIT)'

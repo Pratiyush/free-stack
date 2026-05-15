@@ -2,7 +2,7 @@ name: '**Elasticsearch**'
 slug: elasticsearch
 category: search
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#005571'
 logo: /logos/elasticsearch.svg
 
 summary: 'Open-source (self-hosted)'

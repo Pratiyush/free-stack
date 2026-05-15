@@ -2,7 +2,7 @@ name: GitLab Container Registry
 slug: gitlab-container-registry
 category: containers
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#FC6D26'
 logo: /logos/gitlab-container-registry.svg
 
 summary: Free tier (included with GitLab Free)

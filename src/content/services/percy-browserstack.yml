@@ -2,7 +2,7 @@ name: Percy (BrowserStack)
 slug: percy-browserstack
 category: testing
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#9E66BF'
 logo: /logos/percy-browserstack.svg
 
 summary: '5,000 screenshots/mo'

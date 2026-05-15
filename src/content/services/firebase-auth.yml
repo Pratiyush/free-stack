@@ -2,7 +2,7 @@ name: Firebase Auth
 slug: firebase-auth
 category: auth
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#DD2C00'
 logo: /logos/firebase-auth.svg
 
 summary: Spark plan (free)

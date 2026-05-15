@@ -2,7 +2,7 @@ name: '**Trivy (Aqua Security)**'
 slug: trivy-aqua-security
 category: security
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#1904DA'
 logo: /logos/trivy-aqua-security.svg
 
 summary: 'Open-source (Apache 2.0)'

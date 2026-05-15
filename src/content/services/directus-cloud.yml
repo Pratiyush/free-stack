@@ -2,7 +2,7 @@ name: '**Directus Cloud**'
 slug: directus-cloud
 category: baas
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#263238'
 logo: /logos/directus-cloud.svg
 
 summary: Community Cloud (free)

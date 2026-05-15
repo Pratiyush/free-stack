@@ -2,7 +2,7 @@ name: Stripe
 slug: stripe
 category: payments
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#635BFF'
 logo: /logos/stripe.svg
 
 summary: 'No monthly fee, pay-per-transaction'

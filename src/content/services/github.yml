@@ -2,7 +2,7 @@ name: '**GitHub**'
 slug: github
 category: dev-tools
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#181717'
 logo: /logos/github.svg
 
 summary: '**GitHub** — free tier; see the pricing page for details.'

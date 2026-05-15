@@ -2,7 +2,7 @@ name: Biome
 slug: biome
 category: code-quality
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#60A5FA'
 logo: /logos/biome.svg
 
 summary: Fully free and open source (MIT/Apache 2.0)

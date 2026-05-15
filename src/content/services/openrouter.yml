@@ -2,7 +2,7 @@ name: OpenRouter
 slug: openrouter
 category: ai-apis
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#94A3B8'
 logo: /logos/openrouter.svg
 
 summary: '29+ free models — DeepSeek V3/R1, Llama, Qwen3 Coder 480B, and more; 50 RPD free'

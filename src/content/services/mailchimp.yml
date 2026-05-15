@@ -1,7 +1,7 @@
 name: Mailchimp
 slug: mailchimp
 category: email
-brand_color: '#888888'
+brand_color: '#FFE01B'
 logo: /logos/mailchimp.svg
 
 summary: Free forever (heavily restricted)

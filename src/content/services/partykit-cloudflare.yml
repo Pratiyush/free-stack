@@ -2,7 +2,7 @@ name: PartyKit (Cloudflare)
 slug: partykit-cloudflare
 category: communication
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#F38020'
 logo: /logos/partykit-cloudflare.svg
 
 summary: Free tier (included with Cloudflare Workers free)

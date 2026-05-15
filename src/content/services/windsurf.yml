@@ -2,7 +2,7 @@ name: '**Windsurf**'
 slug: windsurf
 category: dev-tools
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#0B100F'
 logo: /logos/windsurf.svg
 
 summary: '**Windsurf** — free tier; see the pricing page for details.'

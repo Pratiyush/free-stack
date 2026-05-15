@@ -2,7 +2,7 @@ name: Google Artifact Registry
 slug: google-artifact-registry
 category: containers
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#4285F4'
 logo: /logos/google-artifact-registry.svg
 
 summary: Free tier (permanent)

@@ -2,7 +2,7 @@ name: Gitpod
 slug: gitpod
 category: containers
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#FFAE33'
 logo: /logos/gitpod.svg
 
 summary: Free tier (permanent)

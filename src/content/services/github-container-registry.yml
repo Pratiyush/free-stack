@@ -2,7 +2,7 @@ name: GitHub Container Registry
 slug: github-container-registry
 category: containers
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#181717'
 logo: /logos/github-container-registry.svg
 
 summary: Free for public images (currently free)

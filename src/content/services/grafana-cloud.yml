@@ -1,7 +1,7 @@
 name: Grafana Cloud
 slug: grafana-cloud
 category: analytics
-brand_color: '#888888'
+brand_color: '#F46800'
 logo: /logos/grafana-cloud.svg
 
 summary: Grafana Cloud — free tier; see the pricing page for details.

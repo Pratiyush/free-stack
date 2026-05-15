@@ -11,7 +11,7 @@ tier_type: free-plan
 
 free_tier:
   - Starter plan (free)
-  - 'Plans paused when free limits exceeded; first-day sessions don''t count toward MAU billing'
+  - "Plans paused when free limits exceeded; first-day sessions don't count toward MAU billing"
 
 pricing:
   - name: Free

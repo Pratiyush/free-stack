@@ -2,7 +2,7 @@ name: Crowdin
 slug: crowdin
 category: translation
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#2E3340'
 logo: /logos/crowdin.svg
 
 summary: Free plan (permanent)

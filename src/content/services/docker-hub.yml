@@ -2,7 +2,7 @@ name: Docker Hub
 slug: docker-hub
 category: containers
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#2496ED'
 logo: /logos/docker-hub.svg
 
 summary: Docker Personal (free forever)

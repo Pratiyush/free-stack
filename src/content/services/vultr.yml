@@ -2,7 +2,7 @@ name: Vultr
 slug: vultr
 category: iaas
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#007BFC'
 logo: /logos/vultr.svg
 
 summary: Trial credits only (not permanent)

@@ -2,7 +2,7 @@ name: Codacy
 slug: codacy
 category: code-quality
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#222F29'
 logo: /logos/codacy.svg
 
 summary: 'Free for open-source repos (full Pro features); Starter plan free for up to 2 committers'

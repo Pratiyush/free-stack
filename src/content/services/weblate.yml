@@ -2,7 +2,7 @@ name: Weblate
 slug: weblate
 category: translation
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#2ECCAA'
 logo: /logos/weblate.svg
 
 summary: 'Free for libre/open-source projects (hosted); free self-hosted'

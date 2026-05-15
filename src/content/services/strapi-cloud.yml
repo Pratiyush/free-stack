@@ -2,7 +2,7 @@ name: '**Strapi Cloud**'
 slug: strapi-cloud
 category: baas
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#4945FF'
 logo: /logos/strapi-cloud.svg
 
 summary: Free plan (no credit card required)

@@ -2,7 +2,7 @@ name: Hetzner
 slug: hetzner
 category: iaas
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#D50C2D'
 logo: /logos/hetzner.svg
 
 summary: No free tier

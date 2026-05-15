@@ -2,7 +2,7 @@ name: CodeRabbit
 slug: coderabbit
 category: code-quality
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#FF570A'
 logo: /logos/coderabbit.svg
 
 summary: Free for public and private repos; unlimited repos and team members

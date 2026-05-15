@@ -2,7 +2,7 @@ name: Mistral AI
 slug: mistral-ai
 category: ai-apis
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#FA520F'
 logo: /logos/mistral-ai.svg
 
 summary: 'Free Experiment tier — All models incl. Mistral Large & Codestral; ~1B tokens/month'

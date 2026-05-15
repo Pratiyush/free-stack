@@ -2,7 +2,7 @@ name: '**Codemagic**'
 slug: codemagic
 category: mobile
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#F45E3F'
 logo: /logos/codemagic.svg
 
 summary: Free (500 min/mo)

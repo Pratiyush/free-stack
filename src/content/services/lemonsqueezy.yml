@@ -2,7 +2,7 @@ name: LemonSqueezy
 slug: lemonsqueezy
 category: payments
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#FFC233'
 logo: /logos/lemonsqueezy.svg
 
 summary: 'No monthly fee, Merchant of Record'

@@ -2,7 +2,7 @@ name: Hugging Face Inference
 slug: hugging-face-inference
 category: ai-apis
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#FFD21E'
 logo: /logos/hugging-face-inference.svg
 
 summary: 'Free monthly credits — ~100K characters/month; 1,000s of models (text, image, audio)'

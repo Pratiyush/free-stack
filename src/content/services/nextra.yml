@@ -2,7 +2,7 @@ name: Nextra
 slug: nextra
 category: documentation
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#000000'
 logo: /logos/nextra.svg
 
 summary: 'Fully free (OSS, MIT license)'

@@ -2,7 +2,7 @@ name: '**Fastlane**'
 slug: fastlane
 category: mobile
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#00F200'
 logo: /logos/fastlane.svg
 
 summary: 'Open-source (MIT)'

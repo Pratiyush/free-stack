@@ -2,7 +2,7 @@ name: Transifex
 slug: transifex
 category: translation
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#0064AB'
 logo: /logos/transifex.svg
 
 summary: 'Free for qualifying open-source only'

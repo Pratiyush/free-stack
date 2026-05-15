@@ -1,8 +1,8 @@
-name: '**Let''s Encrypt**'
+name: "**Let's Encrypt**"
 slug: let-s-encrypt
 category: security
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#003A70'
 logo: /logos/let-s-encrypt.svg
 
 summary: Free forever

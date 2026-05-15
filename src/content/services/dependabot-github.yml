@@ -2,7 +2,7 @@ name: '**Dependabot (GitHub)**'
 slug: dependabot-github
 category: security
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#025E8C'
 logo: /logos/dependabot-github.svg
 
 summary: Free for all repos

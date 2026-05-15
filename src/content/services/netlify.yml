@@ -2,7 +2,7 @@ name: Netlify
 slug: netlify
 category: hosting
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#00C7B7'
 logo: /logos/netlify.svg
 
 summary: 'Free plan (credit-based since Sep 2025)'

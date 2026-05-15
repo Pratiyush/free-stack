@@ -2,7 +2,7 @@ name: GCP Always Free
 slug: gcp-always-free
 category: iaas
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#4285F4'
 logo: /logos/gcp-always-free.svg
 
 summary: Permanent free tier

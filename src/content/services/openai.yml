@@ -2,7 +2,7 @@ name: OpenAI
 slug: openai
 category: ai-apis
 subcategory: limited
-brand_color: '#888888'
+brand_color: '#412991'
 logo: /logos/openai.svg
 
 summary: 'GPT-3.5 Turbo only, 3 RPM — Free trial credits discontinued mid-2025; only GPT-3.5 at 3 RPM; payment method likely required'

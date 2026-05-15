@@ -2,7 +2,7 @@ name: '**HashiCorp Vault**'
 slug: hashicorp-vault
 category: security
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#000000'
 logo: /logos/hashicorp-vault.svg
 
 summary: 'Community Edition (self-hosted)'

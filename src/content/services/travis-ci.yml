@@ -2,7 +2,7 @@ name: Travis CI
 slug: travis-ci
 category: testing
 subcategory: permanent
-brand_color: '#888888'
+brand_color: '#3EAAAF'
 logo: /logos/travis-ci.svg
 
 summary: First 100 builds free (trial only)
