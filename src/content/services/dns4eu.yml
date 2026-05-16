@@ -51,6 +51,8 @@ tags:
 official_url: https://www.joindns4.eu/
 pricing_url: https://www.joindns4.eu/for-public
 facets: {}
-date_added: 2026-05-15
+date_added: '2026-05-15'
 date_updated: '2026-05-16'
 date_verified: '2026-05-16'
+signup_friction:
+  requires_cc: false

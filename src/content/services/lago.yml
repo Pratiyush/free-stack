@@ -8,7 +8,9 @@ summary: Free (open-source, self-hosted) / Cloud Starter $0/mo
 tier_type: free-plan
 free_tier:
   - Free (open-source, self-hosted) / Cloud Starter $0/mo
-  - Event-driven metering up to 15K events/sec, supports flat-rate + usage-based + tiered + volume + package pricing models, no revenue share on self-hosted
+  - >-
+    Event-driven metering up to 15K events/sec, supports flat-rate + usage-based + tiered + volume + package pricing
+    models, no revenue share on self-hosted
 paid_tier_highlights:
   - Business plan adds hosted Cloud and dedicated Slack support
   - Enterprise adds 24/7 support and assigned solutions engineer
@@ -59,6 +61,8 @@ pricing_url: https://getlago.com/pricing
 facets:
   oss: true
   self_host: true
-date_added: 2026-05-15
+date_added: '2026-05-15'
 date_updated: '2026-05-16'
 date_verified: '2026-05-16'
+signup_friction:
+  requires_cc: false

@@ -78,8 +78,10 @@ tags:
 official_url: https://docs.github.com/
 pricing_url: https://docs.github.com/en/billing/concepts/product-billing/github-packages
 facets: {}
-date_added: 2026-05-15T00:00:00.000Z
+date_added: '2026-05-15'
 date_updated: '2026-05-16'
 date_verified: '2026-05-16'
 tos_red_flags:
   - fair-use clause
+signup_friction:
+  requires_cc: false

@@ -88,11 +88,17 @@ const { services, categoryName } = Astro.props;
                 <td class="cell-quotas hide-mobile">{quotaText}</td>
                 <td class="cell-cc hide-mobile">
                   {f.cc_required === true ? (
-                    <span class="cc-yes">CC</span>
+                    <span class="cc-yes" aria-label="Credit card required">
+                      <span aria-hidden="true">✗</span> CC required
+                    </span>
                   ) : f.cc_required === false ? (
-                    <span class="cc-no">no</span>
+                    <span class="cc-no" aria-label="No credit card required">
+                      <span aria-hidden="true">✓</span> no CC
+                    </span>
                   ) : (
-                    <span class="cc-unk">—</span>
+                    <span class="cc-unk" aria-label="Credit-card requirement unknown">
+                      —
+                    </span>
                   )}
                 </td>
                 <td class="cell-action">

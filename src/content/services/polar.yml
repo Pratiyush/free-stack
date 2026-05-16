@@ -8,7 +8,9 @@ summary: No monthly fee, Merchant of Record
 tier_type: free-plan
 free_tier:
   - No monthly fee, Merchant of Record
-  - Stripe's 2.9%+30c included in the 4% rate, +1.5% international card fee passed through at cost, +0.5% for subscription payments
+  - >-
+    Stripe's 2.9%+30c included in the 4% rate, +1.5% international card fee passed through at cost, +0.5% for
+    subscription payments
 paid_tier_highlights:
   - No monthly account fee; pay per-transaction only
   - Base fee 4% + $0.40 per transaction includes Stripe processing
@@ -89,6 +91,8 @@ tags:
 official_url: https://polar.sh/
 pricing_url: https://polar.sh/docs/merchant-of-record/fees
 facets: {}
-date_added: 2026-05-15
+date_added: '2026-05-15'
 date_updated: '2026-05-16'
 date_verified: '2026-05-16'
+signup_friction:
+  requires_cc: false

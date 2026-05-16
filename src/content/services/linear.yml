@@ -8,7 +8,9 @@ summary: Linear — free tier; see the pricing page for details.
 tier_type: free-plan
 free_tier:
   - Free plan
-  - New issue creation blocked at 250 issues until archive/upgrade, no priority support, upgrade to Basic ($8/user/mo) for 5 teams + unlimited issues
+  - >-
+    New issue creation blocked at 250 issues until archive/upgrade, no priority support, upgrade to Basic ($8/user/mo)
+    for 5 teams + unlimited issues
 paid_tier_highlights:
   - Basic at $10/user/mo unlocks 5 teams and unlimited issues
   - Business at $16/user/mo adds Triage/Code Intelligence and Insights
@@ -70,6 +72,8 @@ tags:
 official_url: https://linear.app/
 pricing_url: https://linear.app/pricing
 facets: {}
-date_added: 2026-05-15
+date_added: '2026-05-15'
 date_updated: '2026-05-16'
 date_verified: '2026-05-16'
+signup_friction:
+  requires_cc: false

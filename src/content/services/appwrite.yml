@@ -66,8 +66,10 @@ pricing_url: https://appwrite.io/pricing
 facets:
   storage_gb: 2
   bandwidth_gb_month: 5
-date_added: 2026-05-15T00:00:00.000Z
+date_added: '2026-05-15'
 date_updated: '2026-05-16'
 date_verified: '2026-05-16'
 inactive_account_policy:
   days_until_deletion: 7
+signup_friction:
+  requires_cc: false

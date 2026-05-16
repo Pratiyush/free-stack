@@ -76,6 +76,8 @@ tags:
 official_url: https://www.algolia.com/
 pricing_url: https://www.algolia.com/pricing
 facets: {}
-date_added: 2026-05-15
+date_added: '2026-05-15'
 date_updated: '2026-05-16'
 date_verified: '2026-05-16'
+signup_friction:
+  requires_cc: false

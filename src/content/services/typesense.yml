@@ -63,7 +63,11 @@ official_url: https://typesense.org/
 pricing_url: https://cloud.typesense.org/pricing
 facets:
   bandwidth_gb_month: 10
-date_added: 2026-05-15
+date_added: '2026-05-15'
 date_updated: '2026-05-16'
 date_verified: '2026-05-16'
-maintainer_notes: Pricing page is a configurator (no fixed tiers). 720-hour trial confirmed at signup. Dedicated cluster cost depends on RAM/vCPU/HA selection.
+maintainer_notes: >-
+  Pricing page is a configurator (no fixed tiers). 720-hour trial confirmed at signup. Dedicated cluster cost depends on
+  RAM/vCPU/HA selection.
+signup_friction:
+  requires_cc: false

@@ -60,8 +60,10 @@ tags:
 official_url: https://gitpod.io/
 pricing_url: https://gitpod.io/pricing
 facets: {}
-date_added: 2026-05-15T00:00:00.000Z
+date_added: '2026-05-15'
 date_updated: '2026-05-16'
 date_verified: '2026-05-16'
 inactive_account_policy:
   days_until_deletion: 3
+signup_friction:
+  requires_cc: false

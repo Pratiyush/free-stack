@@ -21,7 +21,9 @@ official_url: https://www.jetbrains.com/
 pricing_url: https://www.jetbrains.com/youtrack/buy/
 facets:
   team_seats: 10
-date_added: 2026-05-15
+date_added: '2026-05-15'
 date_updated: '2026-05-16'
 date_verified: '2026-05-16'
 maintainer_notes: Pricing page is JS-rendered (curl returns ~67 chars). Needs JS verifier (Sprint 4).
+signup_friction:
+  requires_cc: false

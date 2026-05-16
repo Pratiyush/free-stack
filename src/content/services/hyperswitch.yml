@@ -8,7 +8,9 @@ summary: Free (open-source, self-hosted)
 tier_type: free-plan
 free_tier:
   - Free (open-source, self-hosted)
-  - 'Self-hosted: free with no transaction fees, fully managed cloud available from Juspay with enterprise SLAs, supports cards/wallets/BNPL/UPI/Pay-by-Bank globally'
+  - >-
+    Self-hosted: free with no transaction fees, fully managed cloud available from Juspay with enterprise SLAs, supports
+    cards/wallets/BNPL/UPI/Pay-by-Bank globally
 paid_tier_highlights:
   - Self-Host Enterprise adds SLA support and dedicated account manager
   - Hyperswitch Cloud adds 99.999% uptime and 210+ integrations
@@ -59,6 +61,8 @@ pricing_url: https://hyperswitch.io/pricing
 facets:
   oss: true
   self_host: true
-date_added: 2026-05-15
+date_added: '2026-05-15'
 date_updated: '2026-05-16'
 date_verified: '2026-05-16'
+signup_friction:
+  requires_cc: false

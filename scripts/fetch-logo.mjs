@@ -52,11 +52,29 @@ if (existsSync(target) && !force) {
   process.exit(1);
 }
 
+// v4.0 — AbortController-wrapped fetch with 10s timeout, mirrors the pattern
+// in scripts/audit-services.mjs + identify-js-rendered-services.mjs.
+async function fetchWithTimeout(url, ms = 10000) {
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), ms);
+  try {
+    return await fetch(url, { signal: ctrl.signal });
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
 async function fetchSimpleicons(name) {
   const apiUrl = `https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/${name}.svg`;
   const metaUrl = `https://cdn.jsdelivr.net/npm/simple-icons@latest/_data/simple-icons.json`;
 
-  const svgRes = await fetch(apiUrl);
+  let svgRes;
+  try {
+    svgRes = await fetchWithTimeout(apiUrl);
+  } catch (err) {
+    console.error(`fetch ${apiUrl} failed: ${err.message}`);
+    return null;
+  }
   if (!svgRes.ok) return null;
   let svg = await svgRes.text();
 
@@ -64,7 +82,7 @@ async function fetchSimpleicons(name) {
   let hex = brandHexArg?.replace(/^#/, '');
   if (!hex) {
     try {
-      const metaRes = await fetch(metaUrl);
+      const metaRes = await fetchWithTimeout(metaUrl);
       if (metaRes.ok) {
         const meta = await metaRes.json();
         const entry = meta.icons?.find((i) => i.slug === name || i.title.toLowerCase() === name);

@@ -4,13 +4,46 @@ import BaseLayout from '~/layouts/BaseLayout.astro';
 const issueNumber = '009';
 const verifiedDateline = 'VERIFIED MAY 2026 · INAUGURAL EDITION';
 const updated = '2026-05-15';
+
+// v4.0 — Article + BreadcrumbList JSON-LD for annual-report SEO
+const siteUrl = 'https://opentier.dev';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'State of Free Tiers 2026 — opentier annual report',
+      description:
+        'Year in review of free-tier developer services: most-improved, biggest cuts, dead services, methodology.',
+      datePublished: updated,
+      dateModified: updated,
+      author: { '@type': 'Person', name: 'Pratiyush Kumar Singh' },
+      publisher: { '@type': 'Organization', name: 'opentier', url: siteUrl },
+      url: `${siteUrl}/state-of-free-tiers/2026`,
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'opentier', item: siteUrl },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'State of Free Tiers 2026',
+          item: `${siteUrl}/state-of-free-tiers/2026`,
+        },
+      ],
+    },
+  ],
+};
 ---
 
 <BaseLayout
   title="State of Free Tiers 2026"
   description="Year in review of free-tier developer services: most-improved, biggest cuts, dead services, methodology."
   canonical="https://opentier.dev/state-of-free-tiers/2026"
+  ogType="article"
 >
+  <script slot="head" type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)} />
   <article class="annual-report container-narrow">
     {/* Masthead — Issue №009 dateline, mono uppercase, ink-faint. Matches the index hero bar. */}
     <p class="masthead">

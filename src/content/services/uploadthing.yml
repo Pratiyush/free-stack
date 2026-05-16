@@ -66,6 +66,8 @@ official_url: https://uploadthing.com/
 pricing_url: https://uploadthing.com/pricing
 facets:
   storage_gb: 2
-date_added: 2026-05-15
+date_added: '2026-05-15'
 date_updated: '2026-05-16'
 date_verified: '2026-05-16'
+signup_friction:
+  requires_cc: false

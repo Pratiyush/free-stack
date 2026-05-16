@@ -8,7 +8,9 @@ summary: Render — free tier; see the pricing page for details.
 tier_type: free-plan
 free_tier:
   - Free plan
-  - Services spin down after 15 min idle (~1 min cold start). Free Postgres deleted 44 days after creation if not upgraded
+  - >-
+    Services spin down after 15 min idle (~1 min cold start). Free Postgres deleted 44 days after creation if not
+    upgraded
 pricing:
   - name: Free
     price: 0
@@ -20,6 +22,8 @@ tags:
 official_url: https://render.com/
 pricing_url: https://render.com/pricing
 facets: {}
-date_added: 2026-05-15
+date_added: '2026-05-15'
 date_updated: '2026-05-16'
 date_verified: '2026-05-16'
+signup_friction:
+  requires_cc: false

@@ -64,6 +64,8 @@ official_url: https://www.cloudflare.com/products/r2/
 pricing_url: https://developers.cloudflare.com/r2/pricing/
 facets:
   storage_gb: 10
-date_added: 2026-05-15
+date_added: '2026-05-15'
 date_updated: '2026-05-16'
 date_verified: '2026-05-16'
+signup_friction:
+  requires_cc: false

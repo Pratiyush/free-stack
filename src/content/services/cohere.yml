@@ -91,6 +91,8 @@ official_url: https://cohere.com/
 pricing_url: https://cohere.com/pricing
 facets:
   requests_per_month: 1000
-date_added: 2026-05-15
+date_added: '2026-05-15'
 date_updated: '2026-05-16'
 date_verified: '2026-05-16'
+signup_friction:
+  requires_cc: false

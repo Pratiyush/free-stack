@@ -86,6 +86,8 @@ tags:
 official_url: https://docs.perplexity.ai/
 pricing_url: https://docs.perplexity.ai/docs/getting-started/pricing
 facets: {}
-date_added: 2026-05-15
+date_added: '2026-05-15'
 date_updated: '2026-05-16'
 date_verified: '2026-05-16'
+signup_friction:
+  requires_cc: false

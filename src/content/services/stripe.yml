@@ -8,7 +8,9 @@ summary: No monthly fee, pay-per-transaction
 tier_type: free-plan
 free_tier:
   - No monthly fee, pay-per-transaction
-  - +1.5% for international cards, +1% for currency conversion, ACH debit 0.8% capped at $5, Radar fraud protection included
+  - >-
+    +1.5% for international cards, +1% for currency conversion, ACH debit 0.8% capped at $5, Radar fraud protection
+    included
 paid_tier_highlights:
   - Standard Payments runs at 2.9% + $0.30 per US card charge
   - Billing add-on at 0.7% of recurring revenue (pay-as-you-go)
@@ -79,6 +81,8 @@ tags:
 official_url: https://stripe.com/
 pricing_url: https://stripe.com/pricing
 facets: {}
-date_added: 2026-05-15
+date_added: '2026-05-15'
 date_updated: '2026-05-16'
 date_verified: '2026-05-16'
+signup_friction:
+  requires_cc: false

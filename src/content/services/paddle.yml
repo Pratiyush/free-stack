@@ -8,7 +8,9 @@ summary: No monthly fee, Merchant of Record
 tier_type: free-plan
 free_tier:
   - No monthly fee, Merchant of Record
-  - MoR model (Paddle is seller of record), handles all tax remittance, effective rate can be higher with 2-3% currency conversion margin on cross-currency payouts
+  - >-
+    MoR model (Paddle is seller of record), handles all tax remittance, effective rate can be higher with 2-3% currency
+    conversion margin on cross-currency payouts
 paid_tier_highlights:
   - All-inclusive model - tax, compliance, billing, churn tools included
   - Automatic cross-border sales tax handling (MoR)
@@ -50,6 +52,8 @@ tags:
 official_url: https://www.paddle.com/
 pricing_url: https://www.paddle.com/pricing
 facets: {}
-date_added: 2026-05-15
+date_added: '2026-05-15'
 date_updated: '2026-05-16'
 date_verified: '2026-05-16'
+signup_friction:
+  requires_cc: false

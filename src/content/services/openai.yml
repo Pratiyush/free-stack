@@ -4,7 +4,9 @@ category: ai-apis
 subcategory: limited
 brand_color: '#412991'
 logo: /logos/openai.svg
-summary: GPT-3.5 Turbo only, 3 RPM — Free trial credits discontinued mid-2025; only GPT-3.5 at 3 RPM; payment method likely required
+summary: >-
+  GPT-3.5 Turbo only, 3 RPM — Free trial credits discontinued mid-2025; only GPT-3.5 at 3 RPM; payment method likely
+  required
 tier_type: free-plan
 free_tier:
   - GPT-3.5 Turbo only, 3 RPM
@@ -60,6 +62,8 @@ tags:
 official_url: https://openai.com/
 pricing_url: https://openai.com/api/pricing/
 facets: {}
-date_added: 2026-05-15
+date_added: '2026-05-15'
 date_updated: '2026-05-16'
 date_verified: '2026-05-16'
+signup_friction:
+  requires_cc: false

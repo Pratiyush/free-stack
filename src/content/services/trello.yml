@@ -8,7 +8,9 @@ summary: Trello — free tier; see the pricing page for details.
 tier_type: free-plan
 free_tier:
   - Free plan
-  - 250 automation (Butler) command runs/mo shared across all boards, no advanced checklists, no custom fields beyond basics
+  - >-
+    250 automation (Butler) command runs/mo shared across all boards, no advanced checklists, no custom fields beyond
+    basics
 paid_tier_highlights:
   - Standard at $5/user/mo unlocks unlimited boards + card mirroring
   - Premium at $10/user/mo adds AI + Calendar/Timeline/Dashboard views
@@ -78,6 +80,8 @@ tags:
 official_url: https://trello.com/
 pricing_url: https://trello.com/pricing
 facets: {}
-date_added: 2026-05-15
+date_added: '2026-05-15'
 date_updated: '2026-05-16'
 date_verified: '2026-05-16'
+signup_friction:
+  requires_cc: false
