@@ -44,23 +44,43 @@ jobs:
             echo "name=${{ github.event.release.tag_name }}" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Ensure release exists, then upload assets
+      - name: Ensure release exists, then upload missing assets
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           TAG="${{ steps.tag.outputs.name }}"
-          # Self-heal: if the GitHub Release wasn't created (e.g. tag pushed
-          # before `gh release create`), create it from release-notes/<tag>.md
-          # when that file exists. Falls back to auto-generated notes.
+          # Self-heal: create the release with assets attached atomically when
+          # it doesn't exist yet. Atomic create works around the repo's
+          # "immutable releases" rule — assets attached at creation time are OK,
+          # but uploading later (even with --clobber) is blocked.
           if ! gh release view "$TAG" >/dev/null 2>&1; then
             NOTES_FILE="release-notes/$TAG.md"
             if [ -f "$NOTES_FILE" ]; then
-              gh release create "$TAG" --notes-file "$NOTES_FILE" --title "$TAG"
+              gh release create "$TAG" \
+                --notes-file "$NOTES_FILE" \
+                --title "$TAG" \
+                dist-assets/index.json \
+                dist-assets/services.md
             else
-              gh release create "$TAG" --generate-notes --title "$TAG"
+              gh release create "$TAG" \
+                --generate-notes \
+                --title "$TAG" \
+                dist-assets/index.json \
+                dist-assets/services.md
             fi
+            exit 0
           fi
+          # Release already exists. Check whether assets are already attached.
+          # If they are, the immutable-release rule means we cannot replace
+          # them — succeed silently (assets are present, that's the goal).
+          ASSETS=$(gh release view "$TAG" --json assets --jq '.assets[].name' || echo '')
+          if echo "$ASSETS" | grep -q '^index.json$' && \
+             echo "$ASSETS" | grep -q '^services.md$'; then
+            echo "Assets already attached to $TAG (immutable). Nothing to do."
+            exit 0
+          fi
+          # Some assets are missing — try to upload (works only if the release
+          # isn't yet immutable, e.g. draft state).
           gh release upload "$TAG" \
             dist-assets/index.json \
-            dist-assets/services.md \
-            --clobber
+            dist-assets/services.md
