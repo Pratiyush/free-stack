@@ -173,7 +173,11 @@ function day4() {
     ['1', '300 typed YAMLs', 'src/content/services/*.yml · Zod-validated'],
     ['2', 'Monthly verification cron', '> 60-day stale → auto-issue · GitHub Actions'],
     ['3', 'Playwright drift verifier', 'Weekly · bot-blocked pricing pages · auto-labelled issue'],
-    ['4', '10 capture-everything blocks', 'signup_friction · tos_red_flags · inactive_account_policy …'],
+    [
+      '4',
+      '10 capture-everything blocks',
+      'signup_friction · tos_red_flags · inactive_account_policy …',
+    ],
     ['5', 'CC0 data export', 'index.json + services.md attached to every release'],
   ];
   let body = '';
@@ -275,9 +279,13 @@ async function main() {
     const png = resvg.render().asPng();
     const out = path.join(OUT_DIR, `day-${d.day}-${d.slug}.png`);
     await writeFile(out, png);
-    console.log(`✓ day ${d.day} → ${path.relative(process.cwd(), out)} (${(png.length / 1024).toFixed(0)} KB)`);
+    console.log(
+      `✓ day ${d.day} → ${path.relative(process.cwd(), out)} (${(png.length / 1024).toFixed(0)} KB)`,
+    );
   }
-  console.log(`\nGenerated ${selected.length} infographic${selected.length === 1 ? '' : 's'} in ${path.relative(process.cwd(), OUT_DIR)}/`);
+  console.log(
+    `\nGenerated ${selected.length} infographic${selected.length === 1 ? '' : 's'} in ${path.relative(process.cwd(), OUT_DIR)}/`,
+  );
 }
 
 main().catch((err) => {

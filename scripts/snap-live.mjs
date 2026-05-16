@@ -20,7 +20,10 @@ const PAGES = [
   ['about', '/about'],
   ['submit', '/submit'],
 ];
-const VIEWPORTS = [['desktop', 1440, 900], ['mobile', 390, 844]];
+const VIEWPORTS = [
+  ['desktop', 1440, 900],
+  ['mobile', 390, 844],
+];
 await mkdir(OUT, { recursive: true });
 const browser = await chromium.launch({ headless: true });
 for (const [vTag, w, h] of VIEWPORTS) {
@@ -31,7 +34,10 @@ for (const [vTag, w, h] of VIEWPORTS) {
       const r = await page.goto(BASE + url, { waitUntil: 'networkidle', timeout: 25000 });
       const status = r ? r.status() : 'no-response';
       await page.screenshot({ path: path.join(OUT, `${slug}.${vTag}.png`), fullPage: true });
-      const dim = await page.evaluate(() => ({ h: document.documentElement.scrollHeight, dom: document.querySelectorAll('*').length }));
+      const dim = await page.evaluate(() => ({
+        h: document.documentElement.scrollHeight,
+        dom: document.querySelectorAll('*').length,
+      }));
       console.log(`${vTag.padEnd(7)} ${slug.padEnd(22)} ${status} h=${dim.h}px dom=${dim.dom}`);
     } catch (e) {
       console.log(`${vTag.padEnd(7)} ${slug.padEnd(22)} ERR ${e.message}`);

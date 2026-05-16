@@ -65,8 +65,7 @@ const {
 } = service.data;
 
 // Compose helpers — only render sections where there's actual data.
-const hasFriction =
-  signup_friction && Object.values(signup_friction).some((v) => v !== undefined);
+const hasFriction = signup_friction && Object.values(signup_friction).some((v) => v !== undefined);
 const hasLimits = free_tier_limits && Object.values(free_tier_limits).some((v) => v !== undefined);
 const hasRedFlags = Array.isArray(tos_red_flags) && tos_red_flags.length > 0;
 const hasInactive =
@@ -261,11 +260,13 @@ const footnotes = collectSources(sources);
             </h2>
             <ul class="friction-row">
               <li>
-                Credit card: <strong>{signup_friction!.requires_cc ? 'required' : 'not required'}</strong>
+                Credit card:{' '}
+                <strong>{signup_friction!.requires_cc ? 'required' : 'not required'}</strong>
               </li>
               {signup_friction!.phone_verification !== undefined && (
                 <li>
-                  Phone verification: <strong>{signup_friction!.phone_verification ? 'required' : 'no'}</strong>
+                  Phone verification:{' '}
+                  <strong>{signup_friction!.phone_verification ? 'required' : 'no'}</strong>
                 </li>
               )}
               {signup_friction!.github_gate !== undefined && (
@@ -275,7 +276,8 @@ const footnotes = collectSources(sources);
               )}
               {signup_friction!.email_confirmation !== undefined && (
                 <li>
-                  Email confirmation: <strong>{signup_friction!.email_confirmation ? 'required' : 'no'}</strong>
+                  Email confirmation:{' '}
+                  <strong>{signup_friction!.email_confirmation ? 'required' : 'no'}</strong>
                 </li>
               )}
             </ul>
@@ -292,7 +294,8 @@ const footnotes = collectSources(sources);
             <ul class="limits-list">
               {free_tier_limits!.auto_pause_threshold_days !== undefined && (
                 <li>
-                  Auto-pause after <strong>{free_tier_limits!.auto_pause_threshold_days} days</strong> of inactivity.
+                  Auto-pause after{' '}
+                  <strong>{free_tier_limits!.auto_pause_threshold_days} days</strong> of inactivity.
                 </li>
               )}
               {free_tier_limits!.cold_start_latency_ms !== undefined && (
@@ -305,11 +308,13 @@ const footnotes = collectSources(sources);
                   Account-age gate: <strong>{free_tier_limits!.account_age_gate_days} days</strong>.
                 </li>
               )}
-              {free_tier_limits!.geographic_regions && free_tier_limits!.geographic_regions.length > 0 && (
-                <li>
-                  Available in: <strong>{free_tier_limits!.geographic_regions.join(', ')}</strong>.
-                </li>
-              )}
+              {free_tier_limits!.geographic_regions &&
+                free_tier_limits!.geographic_regions.length > 0 && (
+                  <li>
+                    Available in: <strong>{free_tier_limits!.geographic_regions.join(', ')}</strong>
+                    .
+                  </li>
+                )}
             </ul>
           </section>
         )
@@ -322,8 +327,7 @@ const footnotes = collectSources(sources);
               <span class="rom">{nextRoman()}</span> Watch for
             </h2>
             <ul class="warn-list">
-              {hasRedFlags &&
-                tos_red_flags!.map((flag: string) => <li class="warn">{flag}.</li>)}
+              {hasRedFlags && tos_red_flags!.map((flag: string) => <li class="warn">{flag}.</li>)}
               {hasInactive && inactive_account_policy!.days_until_deletion !== undefined && (
                 <li class="warn">
                   Inactive accounts deleted after{' '}
