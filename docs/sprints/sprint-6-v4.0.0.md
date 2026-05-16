@@ -1,6 +1,6 @@
-# Sprint 6 → v3.0.0 — opentier
+# Sprint 6 → v4.0.0 — opentier
 
-Source of truth for the v3.0.0 work. Built from page-by-page audit of the live v2.0.1 deploy at `https://pratiyush.github.io/opentier/` (rebranded, base=`/opentier`, all internal links prefixed, screenshots in `dist-assets/snapshots/v3.0-live/`).
+Source of truth for the v4.0.0 work. Built from page-by-page audit of the live v2.0.1 deploy at `https://pratiyush.github.io/opentier/` (rebranded, base=`/opentier`, all internal links prefixed, screenshots in `dist-assets/snapshots/v4.0-live/`).
 
 **Theme:** opentier rebrand + production polish + measurable end-to-end quality. We're moving from "shipped + livedo" to "shipped + maintained + measured."
 
@@ -21,7 +21,7 @@ Source of truth for the v3.0.0 work. Built from page-by-page audit of the live v
 | Live URL after DNS | `opentier.dev/` (apex, no subpath) |
 | `base` config | `PUBLIC_SITE_BASE` env, defaults to `/opentier` |
 | Internal-link prefixing | postbuild script `prefix-internal-links.mjs` (runs after `astro build`) |
-| Immutable releases | user disabling in repo settings → v3.0.0 ships clean |
+| Immutable releases | user disabling in repo settings → v4.0.0 ships clean |
 | Public launch day | Day 5 (not Day 1 as in the v2.0.0 plan) |
 | Mirror hosting | GitLab Pages as backup |
 
@@ -79,7 +79,7 @@ When the user types in the search input, no autocomplete or live filtering shows
 
 ### 6. Sponsor meter is hand-edited JSON, not API-backed
 
-Data file `data/sponsor-progress.json` is `0/100` until the user manually edits after sponsorship comes in. Per the original plan, API integration was deferred to v2.1+ but never queued. Putting on the v3.0.0 list because the launch post (Day 5) will direct people to the meter.
+Data file `data/sponsor-progress.json` is `0/100` until the user manually edits after sponsorship comes in. Per the original plan, API integration was deferred to v2.1+ but never queued. Putting on the v4.0.0 list because the launch post (Day 5) will direct people to the meter.
 
 **Fix:** GitHub Sponsors GraphQL query + Buy Me a Coffee scraper → `data/sponsor-progress.json` regenerated daily via cron. Or: simpler, just GitHub Sponsors API since BMC has no public API.
 
@@ -109,7 +109,7 @@ When a user is scrolling the catalog and at the 50th service, there's no indicat
 
 ---
 
-## v3.0.0 sprint plan (Day-by-day)
+## v4.0.0 sprint plan (Day-by-day)
 
 ### Day 3 (today, May 16) — Build foundations
 
@@ -127,18 +127,18 @@ When a user is scrolling the catalog and at the 50th service, there's no indicat
 - [ ] #86 — 5 LinkedIn-style infographic PNGs (one per day, marketing-with-images)
 - [ ] Critical finding #2 — Catalog virtualisation OR pagination
 - [ ] Critical finding #9 — Per-page descriptions
-- [ ] #90 — Re-run Lighthouse against the v3.0.0-rebranded site
+- [ ] #90 — Re-run Lighthouse against the v4.0.0-rebranded site
 
 ### Day 5 (May 18) — Public launch day
 
 - [ ] #88 — opentier.dev CNAME + DNS verification (if domain is purchased)
-- [ ] #87 — GitLab Pages mirror live (or document as v3.1 follow-up)
+- [ ] #87 — GitLab Pages mirror live (or document as v4.1 follow-up)
 - [ ] #91 — Day-5 launch posts (one post per platform with the infographic attached)
 - [ ] Critical finding #5 — Compare picker wired to Pagefind
 - [ ] Critical finding #7 — View Transitions on wall-of-logos
-- [ ] Tag v3.0.0 (this time with immutable-releases disabled, clean ship)
+- [ ] Tag v4.0.0 (this time with immutable-releases disabled, clean ship)
 
-### Deferred to v3.1 (not blocking Day 5)
+### Deferred to v4.1 (not blocking Day 5)
 
 - Critical finding #4 (anchor links within long pages) — low value
 - Critical finding #6 (live sponsor API) — manual JSON edit works for a month or two
@@ -156,7 +156,7 @@ When a user is scrolling the catalog and at the 50th service, there's no indicat
 - `scripts/prefix-internal-links.mjs` — already done; lives as postbuild
 - `.github/workflows/deploy-pages.yml` — already env-wired
 
-### v3.0 source changes
+### v4.0 source changes
 
 - `src/pages/index.astro` — mobile periodic-table grid CSS; wall-tile `transition:name` (findings #1, #7)
 - `src/pages/service/[slug].astro` — render 3 new sections from schema (finding #3)
@@ -167,19 +167,19 @@ When a user is scrolling the catalog and at the 50th service, there's no indicat
 - `src/pages/sponsors.astro` — optional API wiring (deferred)
 - `src/utils/rss.ts` (or equivalent) — sort change (finding #8 — deferred)
 
-### v3.0 testing
+### v4.0 testing
 
 - `tests/pricing-drift.spec.ts` — already scaffolded, needs real assertions (#84)
 - `tests/e2e.spec.ts` — NEW (#85)
 - `playwright.config.ts` — add `baseURL` for the live deploy
 
-### v3.0 marketing
+### v4.0 marketing
 
 - `marketing/drafts/day-*-opentier.md` — rewrites with opentier brand (#91)
 - `marketing/launch-kit.md` — already opentier-branded by sed sweep
 - `marketing/drafts/images/day-1.png` through `day-5.png` — NEW (#86)
 
-### v3.0 hosting
+### v4.0 hosting
 
 - `.gitlab-ci.yml` — NEW for GitLab Pages mirror (#87)
 - `public/CNAME` — NEW with `opentier.dev` content once domain is purchased (#88)
@@ -201,5 +201,5 @@ When a user is scrolling the catalog and at the 50th service, there's no indicat
 
 1. **GitLab Pages — mirror only, or primary?** If mirror: GitHub Pages stays canonical. If primary: we need to repoint DNS and learn GitLab Pages auth. **Default assumption: mirror only.**
 2. **opentier.dev domain — bought today / Day 4 / Day 5?** If Day 5: we ship the launch posts pointing to `pratiyush.github.io/opentier/` (less professional). If today: we can finalize the DNS PR and Day 5 posts both point to the apex domain.
-3. **Sponsor live API for v3.0 or v3.1?** Per ranking it's v3.1, but the launch is harder to land with a `$0/$100` static meter than a `$X/$100` real one.
+3. **Sponsor live API for v4.0 or v4.1?** Per ranking it's v4.1, but the launch is harder to land with a `$0/$100` static meter than a `$X/$100` real one.
 4. **OG cards regenerate per-page or only the default + service?** Today only service detail pages get a unique OG card. Other surfaces (sponsors, state-of-free-tiers, category, legal) use the default. Worth $20 more work to give each top-level page its own card?

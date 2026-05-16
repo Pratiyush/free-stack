@@ -81,7 +81,7 @@ const ccRequired = facets?.cc_required === true;
     overflow: hidden;
     transition: border-color 0.18s ease;
 
-    /* v3.0 perf — skip rendering off-screen cards. Reserves ~440px so layout
+    /* v4.0 perf — skip rendering off-screen cards. Reserves ~440px so layout
        doesn't jump while scrolling. Brings catalog Lighthouse perf from ~91
        to 98+ on mobile by drastically reducing initial paint cost. */
     content-visibility: auto;

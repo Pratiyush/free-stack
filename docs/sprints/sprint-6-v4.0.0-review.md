@@ -2,7 +2,7 @@
 
 Run on 2026-05-16 against rebuild/astro at commit `397fa97` deployed to `https://pratiyush.github.io/opentier/`.
 
-All 10 agents read-only. Findings deduped + triaged by severity. Day-4 action column = `fix` (ship today) / `defer` (v3.1) / `gated` (waiting on user).
+All 10 agents read-only. Findings deduped + triaged by severity. Day-4 action column = `fix` (ship today) / `defer` (v4.1) / `gated` (waiting on user).
 
 ---
 
@@ -20,7 +20,7 @@ All 10 agents read-only. Findings deduped + triaged by severity. Day-4 action co
 
 ---
 
-## HIGH (ship today if scope allows, else v3.1)
+## HIGH (ship today if scope allows, else v4.1)
 
 | Finding | Source | File | Day-4 |
 |---|---|---|---|
@@ -29,13 +29,13 @@ All 10 agents read-only. Findings deduped + triaged by severity. Day-4 action co
 | Hardcoded `#fff` for logo frame should be a token | Agent 1 | `src/pages/service/[slug].astro:523` | **fix** |
 | `fetch-logo.mjs` missing AbortController timeout — network hangs | Agent 3 | `scripts/fetch-logo.mjs:59,67` | defer (not in production hot path) |
 | BaseLayout hardcoded `href="/"` and `href="/catalog"` bypass `u()` helper (post-build prefixer covers, but inconsistent) | Agent 3 | `src/layouts/BaseLayout.astro:145, 150-153, 174-176` | defer (works via post-build) |
-| Inline `<style>` @font-face block IS the home perf regression (100→91→93). Render-blocking + duplicate of Fontsource bundle | Agent 5 | `src/layouts/BaseLayout.astro:99-126` | defer (v3.1 — needs proper async-CSS strategy) |
+| Inline `<style>` @font-face block IS the home perf regression (100→91→93). Render-blocking + duplicate of Fontsource bundle | Agent 5 | `src/layouts/BaseLayout.astro:99-126` | defer (v4.1 — needs proper async-CSS strategy) |
 | 8.5MB total in `public/og/*.png` — fine for serving, but inflates repo + CI artifact | Agent 5 | `public/og/` | defer |
 | No Content-Security-Policy header | Agent 6 | n/a | **fix** (via meta) — same as BLOCKER above |
 | `pratiyush1@gmail.com` exposed on `/legal` (spam vector) | Agent 6 | `src/pages/legal.astro` | defer (intentional — known contact email) |
-| 10 pages missing JSON-LD entirely (catalog, submit, changelog, methodology, about, sponsors, compare, legal, components-preview, state-of-free-tiers) | Agent 7 | various | defer (catalog + state-of-free-tiers worth doing v3.1) |
+| 10 pages missing JSON-LD entirely (catalog, submit, changelog, methodology, about, sponsors, compare, legal, components-preview, state-of-free-tiers) | Agent 7 | various | defer (catalog + state-of-free-tiers worth doing v4.1) |
 | 40 pages share identical meta descriptions (mostly category-derived defaults like "Free plan (permanent)") | Agent 7 | service pages | defer (real fix = better summary in each YAML) |
-| `signup_friction` field at 3% adoption (10/300) but 238 services are `free-plan` tier_type — biggest content gap | Agent 4 | YAMLs | defer (v3.1 catalog-sprint) |
+| `signup_friction` field at 3% adoption (10/300) but 238 services are `free-plan` tier_type — biggest content gap | Agent 4 | YAMLs | defer (v4.1 catalog-sprint) |
 | Day-2-pain receipt URLs are placeholders (`mixpanel.com/pricing-update-2026` doesn't exist) — must verify before posting | Agent 9 | `marketing/drafts/day-2-pain.md:30-44` | **fix** (mark draft as "URLs need verification" + add to Day-5 checklist) |
 | HN submission at 09:45 ET on Monday May 18 — Monday is HN's lowest-traffic day | Agent 9 | `marketing/drafts/day-5-launch.md:17` | **fix** (move HN to Tue May 19 morning if domain DNS allows) |
 
@@ -43,7 +43,7 @@ All 10 agents read-only. Findings deduped + triaged by severity. Day-4 action co
 
 ## MED / LOW
 
-These don't block Day-5 launch but cluster well as a v3.1 polish sweep. Listed grouped by category:
+These don't block Day-5 launch but cluster well as a v4.1 polish sweep. Listed grouped by category:
 
 **Tokens / consistency (Agent 1):**
 - CTA button padding drift across index/sponsors/404
@@ -69,7 +69,7 @@ These don't block Day-5 launch but cluster well as a v3.1 polish sweep. Listed g
 - Audit script missing validation for `tos_red_flags`, `compliance_certifications`, `inactive_account_policy`, `facets` newer fields
 
 **Perf (Agent 5):**
-- Pagefind index 2.2 MB loaded on every page (only used on catalog) — defer lazy-load to v3.1
+- Pagefind index 2.2 MB loaded on every page (only used on catalog) — defer lazy-load to v4.1
 - Latin-only font subset would save ~30% (current loads Cyrillic, Greek unicode-ranges we don't need)
 - 3 synchronous `<link rel="stylesheet">` (BaseLayout + ServiceCard + index) — can inline critical CSS later
 
@@ -77,7 +77,7 @@ These don't block Day-5 launch but cluster well as a v3.1 polish sweep. Listed g
 - 8 workflows pin actions to major versions (`@v4`, etc.) not SHAs — supply-chain best-practice miss, low risk
 
 **SEO (Agent 7):**
-- 40 service pages duplicate descriptions — fix via better YAML `summary` content (v3.1 catalog-sprint)
+- 40 service pages duplicate descriptions — fix via better YAML `summary` content (v4.1 catalog-sprint)
 
 **Content (Agent 8):**
 - `ably`, `motherduck` have `#888888` placeholder + generic summaries
@@ -114,10 +114,10 @@ Total: **~70 LoC across 11 files** for the Day-4 commit batch. Verifiable via th
 
 ## Net read
 
-**State of v3.0:** Strong. Site is fully functional, fully styled, deployed at the GH Pages preview URL, with E2E tests, drift verifier, sponsor meter, OG cards, font preload — all the v2.0/2.1 work paid off. The audit surfaced **no BLOCKERS in deployed functionality** — every BLOCKER above is a meta/SEO/CSP issue, not a "site is broken" issue.
+**State of v4.0:** Strong. Site is fully functional, fully styled, deployed at the GH Pages preview URL, with E2E tests, drift verifier, sponsor meter, OG cards, font preload — all the v2.0/2.1 work paid off. The audit surfaced **no BLOCKERS in deployed functionality** — every BLOCKER above is a meta/SEO/CSP issue, not a "site is broken" issue.
 
-**Biggest content gap:** `signup_friction` at 3%. v3.1 catalog-sprint should fix this — and the agent's "11 zero-usage schema fields" finding (after the `notes` false-positive caveat) is the same story: the schema has more fields than the content fills.
+**Biggest content gap:** `signup_friction` at 3%. v4.1 catalog-sprint should fix this — and the agent's "11 zero-usage schema fields" finding (after the `notes` false-positive caveat) is the same story: the schema has more fields than the content fills.
 
-**Biggest perf gap:** the inline `@font-face` block in BaseLayout. Already known (lighthouse-baseline.md noted it). Defers cleanly to v3.1 because the fix needs careful async-CSS strategy and the v3.0 catalog perf is already 98 mobile.
+**Biggest perf gap:** the inline `@font-face` block in BaseLayout. Already known (lighthouse-baseline.md noted it). Defers cleanly to v4.1 because the fix needs careful async-CSS strategy and the v4.0 catalog perf is already 98 mobile.
 
 **Day 5 is shippable** with the Day-4 fix batch above. The marketing-draft issues (receipt URLs, HN timing) become the launch-day pre-flight checklist.

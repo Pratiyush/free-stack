@@ -294,7 +294,7 @@ const { services, categoryName } = Astro.props;
     border-bottom: 1px solid var(--color-rule);
     transition: background 0.15s ease;
     position: relative;
-    /* v3.0 perf — skip rendering off-screen rows. Same trick as ServiceCard.
+    /* v4.0 perf — skip rendering off-screen rows. Same trick as ServiceCard.
        Reserves 56px so the scroll bar doesn't jitter as rows resolve. */
     content-visibility: auto;
     contain-intrinsic-size: 0 56px;

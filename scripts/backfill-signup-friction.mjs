@@ -22,17 +22,18 @@ import { join } from 'path';
 import yaml from 'js-yaml';
 
 const TODAY = '2026-05-16';
-const SERVICES_DIR = '/Users/deepshikhasingh/Desktop/2026/production/free-stack/src/content/services';
+const SERVICES_DIR =
+  '/Users/deepshikhasingh/Desktop/2026/production/free-stack/src/content/services';
 
 // ── Pattern constants ──────────────────────────────────────────────────────────
 // IMPORTANT: must match "credit card required" but NOT "no credit card required".
 // Use negative lookbehind to exclude "no " before the phrase.
-const CC_REQUIRED_PATTERN   = /(?<!no )(credit card required|cc required)/i;
+const CC_REQUIRED_PATTERN = /(?<!no )(credit card required|cc required)/i;
 const CC_NOT_REQUIRED_PATTERN = /no credit card|no cc required/i;
-const PHONE_PATTERN          = /phone verification|sms verification|phone number required/i;
-const GITHUB_GATE_PATTERN    = /github login|github oauth|github only|sign in with github/i;
-const GITHUB_NOT_REQUIRED    = /no github required|no signup required/i;
-const EMAIL_CONFIRM_PATTERN  = /email confirmation|verify.*email|confirm.*email/i;
+const PHONE_PATTERN = /phone verification|sms verification|phone number required/i;
+const GITHUB_GATE_PATTERN = /github login|github oauth|github only|sign in with github/i;
+const GITHUB_NOT_REQUIRED = /no github required|no signup required/i;
+const EMAIL_CONFIRM_PATTERN = /email confirmation|verify.*email|confirm.*email/i;
 
 // Tier types that qualify for the default fill (rule 5)
 const DEFAULT_FILL_TIERS = new Set(['free-plan', 'always-free']);
@@ -56,7 +57,7 @@ function deriveSignupFriction(doc) {
   const derived = {};
   const rulesFired = [];
 
-  const notesText    = doc.notes || '';
+  const notesText = doc.notes || '';
   const combinedText = collectText(doc);
 
   // ── Rule 1: requires_cc ──────────────────────────────────────────────────────
@@ -153,7 +154,7 @@ function dumpYaml(doc) {
 // ── Main ───────────────────────────────────────────────────────────────────────
 
 const files = readdirSync(SERVICES_DIR)
-  .filter(f => f.endsWith('.yml') || f.endsWith('.yaml'))
+  .filter((f) => f.endsWith('.yml') || f.endsWith('.yaml'))
   .sort();
 
 const stats = {
@@ -207,12 +208,12 @@ for (const file of files) {
 
   // Apply changes
   doc.signup_friction = merged;
-  doc.date_verified   = TODAY;
+  doc.date_verified = TODAY;
   if (!doc.date_updated) doc.date_updated = TODAY;
   else doc.date_updated = TODAY;
 
   // Update distribution stats
-  const isDefault = rulesFired.some(r => r.includes('default fill'));
+  const isDefault = rulesFired.some((r) => r.includes('default fill'));
   if (isDefault) stats.distribution.default_fill++;
   if ('requires_cc' in merged) {
     if (merged.requires_cc) stats.distribution.requires_cc_true++;
@@ -226,7 +227,7 @@ for (const file of files) {
   if (merged.email_confirmation === true) stats.distribution.email_confirmation_true++;
 
   // Track non-trivial examples (any rule other than just default fill)
-  const isNonTrivial = rulesFired.some(r => !r.includes('default fill'));
+  const isNonTrivial = rulesFired.some((r) => !r.includes('default fill'));
   if (isNonTrivial && stats.nontrivialExamples.length < 10) {
     stats.nontrivialExamples.push({ file, rules: rulesFired, merged });
   }

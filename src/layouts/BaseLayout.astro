@@ -23,7 +23,7 @@ const {
 const fullTitle = title === 'opentier' ? title : `${title} — opentier`;
 const siteUrl = 'https://opentier.dev';
 
-// v3.0 review F2+F3 — canonical and absoluteOgImage point at the APEX domain
+// v4.0 review F2+F3 — canonical and absoluteOgImage point at the APEX domain
 // without the Pages base prefix. Astro.url.href includes the base (`/opentier/...`),
 // so strip it; we want consumers (search engines, social cards) to discover the
 // final opentier.dev URL, not the temporary GH Pages subpath.
@@ -45,7 +45,7 @@ const cfAnalyticsToken = import.meta.env.PUBLIC_CF_ANALYTICS_TOKEN;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     {
-      /* v3.0 review F5 — minimal CSP. Allows self + the CF Web Analytics beacon
+      /* v4.0 review F5 — minimal CSP. Allows self + the CF Web Analytics beacon
         (env-gated; if PUBLIC_CF_ANALYTICS_TOKEN unset, the script doesn't render).
         Inline styles + inline scripts allowed because Astro inlines critical CSS
         and JSON-LD blocks. img-src allows the per-service OG cards. data: for
