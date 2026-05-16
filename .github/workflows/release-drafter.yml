@@ -1,7 +1,10 @@
 name: Release Drafter
+# release-drafter reads its config from the DEFAULT BRANCH only. We're on
+# rebuild/astro; .github/release-drafter.yml hasn't yet been merged to master.
+# Only run on master pushes + PRs until the cutover lands.
 on:
   push:
-    branches: [rebuild/astro, master]
+    branches: [master]
   pull_request:
     types: [opened, reopened, synchronize]
 permissions:

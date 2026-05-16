@@ -61,9 +61,7 @@ function deriveFacets(svc) {
   const allText = bullets.join(' ');
   const summaryLower = (svc.summary || '').toLowerCase();
   const notesLower = (svc.notes || '').toLowerCase();
-  const freeTierText = Array.isArray(svc.free_tier)
-    ? svc.free_tier.join(' ').toLowerCase()
-    : '';
+  const freeTierText = Array.isArray(svc.free_tier) ? svc.free_tier.join(' ').toLowerCase() : '';
 
   // --- cc_required -------------------------------------------------------
   // Positive signal: "credit card required" / "CC required" / "requires CC"
@@ -174,10 +172,7 @@ function deriveFacets(svc) {
   // --- trial_days -------------------------------------------------------
   // Only for trial-credit tier_type
   if (svc.tier_type === 'trial-credit') {
-    const trialMatch = extractFirst(
-      bullets,
-      /(\d+)\s*[- ]?day\s*(?:free\s*)?trial\b/i,
-    );
+    const trialMatch = extractFirst(bullets, /(\d+)\s*[- ]?day\s*(?:free\s*)?trial\b/i);
     if (trialMatch !== null) {
       derived.trial_days = parseInt(trialMatch, 10);
     }
@@ -242,9 +237,7 @@ function deriveTags(svc, derivedFacets) {
   const tags = new Set();
   const allText = collectBullets(svc).join(' ');
   const summaryLower = (svc.summary || '').toLowerCase();
-  const freeTierLower = Array.isArray(svc.free_tier)
-    ? svc.free_tier.join(' ').toLowerCase()
-    : '';
+  const freeTierLower = Array.isArray(svc.free_tier) ? svc.free_tier.join(' ').toLowerCase() : '';
 
   // 1. Category as tag
   if (svc.category) tags.add(svc.category);
@@ -447,8 +440,7 @@ async function main() {
 
     // 2. Merge facets
     const mergedFacets = mergeFacets(svc.facets, derivedFacets);
-    const newFacetKeys =
-      Object.keys(mergedFacets).length - Object.keys(svc.facets || {}).length;
+    const newFacetKeys = Object.keys(mergedFacets).length - Object.keys(svc.facets || {}).length;
 
     // 3. Merge tags
     const mergedTags = mergeTags(svc.tags, derivedTags);
@@ -461,8 +453,7 @@ async function main() {
     }
 
     // 5. Detect actual changes
-    const facetsChanged =
-      JSON.stringify(mergedFacets) !== JSON.stringify(svc.facets || {});
+    const facetsChanged = JSON.stringify(mergedFacets) !== JSON.stringify(svc.facets || {});
     const tagsChanged = JSON.stringify(mergedTags) !== JSON.stringify(svc.tags || []);
     const changed = facetsChanged || tagsChanged;
 
@@ -514,9 +505,7 @@ async function main() {
       console.log(`  - ${slug}`);
     }
   } else if (emptyFacetSlugs.length > 30) {
-    console.log(
-      `\n(${emptyFacetSlugs.length} slugs with empty facets — list omitted for brevity)`,
-    );
+    console.log(`\n(${emptyFacetSlugs.length} slugs with empty facets — list omitted for brevity)`);
   }
 
   if (errors.length > 0) {

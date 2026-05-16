@@ -44,11 +44,23 @@ jobs:
             echo "name=${{ github.event.release.tag_name }}" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Upload assets to release
+      - name: Ensure release exists, then upload assets
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh release upload "${{ steps.tag.outputs.name }}" \
+          TAG="${{ steps.tag.outputs.name }}"
+          # Self-heal: if the GitHub Release wasn't created (e.g. tag pushed
+          # before `gh release create`), create it from release-notes/<tag>.md
+          # when that file exists. Falls back to auto-generated notes.
+          if ! gh release view "$TAG" >/dev/null 2>&1; then
+            NOTES_FILE="release-notes/$TAG.md"
+            if [ -f "$NOTES_FILE" ]; then
+              gh release create "$TAG" --notes-file "$NOTES_FILE" --title "$TAG"
+            else
+              gh release create "$TAG" --generate-notes --title "$TAG"
+            fi
+          fi
+          gh release upload "$TAG" \
             dist-assets/index.json \
             dist-assets/services.md \
             --clobber

@@ -37,7 +37,9 @@ try {
         await page.goto(url, { waitUntil: 'networkidle', timeout: 20000 });
         const out = path.join(OUT, `${p.slug}.${v.tag}.png`);
         await page.screenshot({ path: out, fullPage: true });
-        console.log(`✓ ${v.tag.padEnd(7)} ${p.slug.padEnd(22)} → ${path.relative(process.cwd(), out)}`);
+        console.log(
+          `✓ ${v.tag.padEnd(7)} ${p.slug.padEnd(22)} → ${path.relative(process.cwd(), out)}`,
+        );
       } catch (err) {
         console.error(`✗ ${v.tag} ${p.slug}: ${err.message}`);
       }
