@@ -1,16 +1,38 @@
 name: Deploy to GitHub Pages
 
+# Story 5.14 — production cutover (configurable).
+#
+# Two deployable sources:
+#   - `astro`  : the v2.0.0+ Astro build from `rebuild/astro` (default going forward)
+#   - `legacy` : the v1.0.0 MD-era site in `docs/` on `master` (pre-cutover)
+#
+# Auto-detect by branch:
+#   push to rebuild/astro → builds + deploys the Astro site
+#   push to master        → deploys docs/ unchanged (no Astro build)
+#
+# Manual override via workflow_dispatch: pick a source from a dropdown.
+# To revert to the MD site without touching code, run "Deploy to GitHub Pages"
+# from the Actions tab with source=legacy.
+
 on:
   push:
-    branches: [master]
-    paths:
-      - 'docs/**'
-      - 'README.md'
+    branches: [master, rebuild/astro]
+    paths-ignore:
+      - 'marketing/**'
+      - 'local/**'
+      - 'docs/sprints/**'
+      - 'release-notes/**'
+      - '*.md'
   workflow_dispatch:
-# NOTE: `main` was a short-lived rename-experiment branch; `master` is the
-# canonical legacy branch that still hosts docs/index.html. This workflow
-# deploys the v1.0.0 MD-era site at freestack.is-a.dev until the production
-# cutover lands in story 5.14, at which point this workflow is retired.
+    inputs:
+      source:
+        description: 'Which source to deploy'
+        required: true
+        type: choice
+        default: astro
+        options:
+          - astro
+          - legacy
 
 permissions:
   contents: read
@@ -30,10 +52,50 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Resolve deploy source
+        id: source
+        run: |
+          # Priority: explicit workflow_dispatch input → branch heuristic
+          if [ -n "${{ inputs.source }}" ]; then
+            SOURCE="${{ inputs.source }}"
+          elif [ "${{ github.ref }}" = "refs/heads/rebuild/astro" ]; then
+            SOURCE="astro"
+          else
+            SOURCE="legacy"
+          fi
+          echo "source=$SOURCE" >> "$GITHUB_OUTPUT"
+          echo "Selected deploy source: $SOURCE"
+
+      - name: Setup pnpm
+        if: steps.source.outputs.source == 'astro'
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js
+        if: steps.source.outputs.source == 'astro'
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'pnpm'
+
+      - name: Install dependencies (Astro source)
+        if: steps.source.outputs.source == 'astro'
+        run: pnpm install --frozen-lockfile
+
+      - name: Build Astro site
+        if: steps.source.outputs.source == 'astro'
+        run: pnpm build
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload artifact
+      - name: Upload Astro artifact
+        if: steps.source.outputs.source == 'astro'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+      - name: Upload legacy artifact
+        if: steps.source.outputs.source == 'legacy'
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs
