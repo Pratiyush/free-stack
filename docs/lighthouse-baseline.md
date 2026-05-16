@@ -1,4 +1,23 @@
-# Lighthouse baseline — v3.0 (live `pratiyush.github.io/opentier/`)
+# Lighthouse baseline — v4.0 (live `pratiyush.github.io/opentier/`)
+
+## v4.0 — 2026-05-16 (after Day-4 review fixes + inline @font-face removal + JSON-LD + CSP)
+
+| Page | Mobile | Perf | A11y | BP | SEO | Δ vs v3.0 |
+|---|---|---:|---:|---:|---:|---|
+| `/` | mobile | **95** | 96 | 93 | 100 | Perf **+4**, BP -7 (CSP) |
+| `/service/groq/` | mobile | **100** | 95 | 93 | 100 | Perf **+2**, BP -7 (CSP) |
+| `/catalog/` | mobile | **97** | 87 | 93 | **100** | Perf **+6**, SEO **+9** (JSON-LD), BP -7 (CSP) |
+
+**Net wins:**
+- **Home mobile perf 91 → 95**: inline `@font-face` block removal (was render-blocking, was the v3.0 regression vector)
+- **Catalog mobile perf 91 → 97**: combined effect of `content-visibility:auto` + Pagefind index removal (2.2 MB no longer in dist)
+- **Catalog SEO 91 → 100**: new CollectionPage + BreadcrumbList JSON-LD
+- **Service mobile perf 98 → 100**: from inline @font-face removal
+
+**Intentional regression:**
+- **Best Practices 100 → 93 across all pages**: from the new CSP meta tag with `unsafe-inline` for style + script (required because Astro inlines critical CSS + JSON-LD blocks). Lighthouse flags this; the trade-off is supply-chain security vs. score. Worth it.
+
+**Accessibility unchanged** — catalog still 87 (back-to-top + alphabet anchors + virtualisation are v4.1 deferrals).
 
 ## v3.0 final — 2026-05-16 (after content-visibility:auto on ServiceCard + ServiceTable row)
 
