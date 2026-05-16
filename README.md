@@ -1,21 +1,24 @@
-# free-stack
+# opentier
 
-> **300 free-tier services across 27 categories — every record a typed YAML, validated by Zod.**
+> **300 verified developer free tiers across 27 categories — every record a typed YAML, validated by Zod, re-checked on a monthly cron.**
 
-Browse the catalog: **[freestack.is-a.dev](https://freestack.is-a.dev)**
+Browse the catalog: **[opentier.dev](https://opentier.dev)** *(once DNS lands — preview at [pratiyush.github.io/opentier](https://pratiyush.github.io/opentier))*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
+[![Data: CC0](https://img.shields.io/badge/data-CC0-cc0?style=flat-square)](#license)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](CONTRIBUTING.md)
 [![Categories](https://img.shields.io/badge/categories-27-blue?style=flat-square)](#categories)
 [![Services](https://img.shields.io/badge/services-300-green?style=flat-square)](#categories)
 [![Verified](https://img.shields.io/badge/verified-May%202026-orange?style=flat-square)](#methodology)
 [![Built with Astro](https://img.shields.io/badge/built%20with-Astro%206-ff5d01?style=flat-square)](https://astro.build)
 
+> **A note on history.** opentier was previously called "free-stack" and lived at `freestack.is-a.dev`. The data, the verification cron, and the takedown SLA carry over unchanged. Old release notes still mention the previous name — intentional, the history is the record.
+
 ---
 
-## Why free-stack?
+## Why opentier?
 
-Most "free-for-dev" lists are abandoned, vague, or stuck in a single giant Markdown file. free-stack is a structured catalog:
+Most "free-for-dev" lists are abandoned, vague, or stuck in a single giant Markdown file. opentier is a structured catalog:
 
 - **One typed YAML per service** in `src/content/services/<slug>.yml`, schema-checked at build time.
 - **Specific free-tier limits** — quotas, rate limits, CC-required flags, trial windows — captured as machine-readable fields, not buzzwords.
@@ -68,13 +71,13 @@ Optional `facets` (typed quotas/capabilities) and `sources` (where each fact was
 
 The full taxonomy lives in [`docs/category-taxonomy.md`](docs/category-taxonomy.md) and as YAML in [`src/content/categories/`](src/content/categories). The 27 categories cover hosting, databases, auth, AI/ML APIs, email & messaging, storage, search, mobile, testing/CI, dev tools, DNS, documentation, security, communication, PaaS, BaaS, design, payments, collaboration, code quality, project management, maps, containers, logs, translation, IaaS, and analytics.
 
-Browse them on the site at **[freestack.is-a.dev/catalog](https://freestack.is-a.dev/catalog)** or open any category page directly (e.g. `/category/storage`).
+Browse them on the site at **[opentier.dev/catalog](https://opentier.dev/catalog)** or open any category page directly (e.g. `/category/storage`).
 
 ---
 
 ## Methodology
 
-The full inclusion/exclusion rules are documented on the site at **[freestack.is-a.dev/methodology](https://freestack.is-a.dev/methodology)** (source: [`src/pages/methodology.astro`](src/pages/methodology.astro)).
+The full inclusion/exclusion rules are documented on the site at **[opentier.dev/methodology](https://opentier.dev/methodology)** (source: [`src/pages/methodology.astro`](src/pages/methodology.astro)).
 
 In short:
 

@@ -1,8 +1,11 @@
 import { chromium } from '@playwright/test';
 import { mkdir } from 'node:fs/promises';
 import path from 'node:path';
-const OUT = '/Users/deepshikhasingh/Desktop/2026/production/opentier/dist-assets/snapshots/v2.0.1-live';
-const BASE = 'https://pratiyush.github.io/opentier.dev';
+// Resolve relative to this script regardless of the project's working-dir
+// name. The folder is still locally called "free-stack" even after the
+// brand rename to opentier.
+const OUT = new URL('../dist-assets/snapshots/v3.0-live', import.meta.url).pathname;
+const BASE = 'https://pratiyush.github.io/opentier';
 const PAGES = [
   ['index', '/'],
   ['catalog', '/catalog'],

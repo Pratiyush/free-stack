@@ -54,7 +54,28 @@ const {
   date_added,
   date_verified,
   sources,
+  // v3.0 — capture-everything blocks now rendered on the detail page when present.
+  signup_friction,
+  free_tier_limits,
+  tos_red_flags,
+  inactive_account_policy,
+  support_sla,
+  rate_limits,
+  compliance_certifications,
 } = service.data;
+
+// Compose helpers — only render sections where there's actual data.
+const hasFriction =
+  signup_friction && Object.values(signup_friction).some((v) => v !== undefined);
+const hasLimits = free_tier_limits && Object.values(free_tier_limits).some((v) => v !== undefined);
+const hasRedFlags = Array.isArray(tos_red_flags) && tos_red_flags.length > 0;
+const hasInactive =
+  inactive_account_policy && Object.values(inactive_account_policy).some((v) => v !== undefined);
+const hasOps =
+  (support_sla && Object.values(support_sla).some((v) => v !== undefined)) ||
+  (rate_limits && Object.values(rate_limits).some((v) => v !== undefined)) ||
+  (Array.isArray(compliance_certifications) && compliance_certifications.length > 0);
+const hasWatchFor = hasRedFlags || hasInactive;
 
 const categoryEntry = await getEntry('categories', category);
 const accent = brand_color ?? FALLBACK_BRAND_COLOR;
@@ -115,7 +136,11 @@ const categoryUpper = (categoryEntry?.data.name ?? category).toUpperCase();
 const serialStr = String(serial).padStart(3, '0');
 
 // Roman-numeral section sequence — editorial almanac voice.
-const roman = ['i.', 'ii.', 'iii.', 'iv.', 'v.', 'vi.'];
+const roman = ['i.', 'ii.', 'iii.', 'iv.', 'v.', 'vi.', 'vii.', 'viii.', 'ix.', 'x.'];
+// Each conditional section consumes the next roman numeral. Counter starts at
+// 2 because i. = "Free tier" and ii. = "Pricing" are always present.
+let romanIdx = 2;
+const nextRoman = () => roman[romanIdx++];
 
 // Sources / footnotes — flatten into a numbered list if present.
 type Source = { url: string; verified?: string; label?: string };
@@ -221,15 +246,141 @@ const footnotes = collectSources(sources);
         notes && (
           <section class="block">
             <h2>
-              <span class="rom">{roman[2]}</span> Limits & notes
+              <span class="rom">{nextRoman()}</span> Limits & notes
             </h2>
             <p class="notes-body">{notes}</p>
           </section>
         )
       }
 
+      {
+        hasFriction && (
+          <section class="block">
+            <h2>
+              <span class="rom">{nextRoman()}</span> Signup friction
+            </h2>
+            <ul class="friction-row">
+              <li>
+                Credit card: <strong>{signup_friction!.requires_cc ? 'required' : 'not required'}</strong>
+              </li>
+              {signup_friction!.phone_verification !== undefined && (
+                <li>
+                  Phone verification: <strong>{signup_friction!.phone_verification ? 'required' : 'no'}</strong>
+                </li>
+              )}
+              {signup_friction!.github_gate !== undefined && (
+                <li>
+                  GitHub-only signup: <strong>{signup_friction!.github_gate ? 'yes' : 'no'}</strong>
+                </li>
+              )}
+              {signup_friction!.email_confirmation !== undefined && (
+                <li>
+                  Email confirmation: <strong>{signup_friction!.email_confirmation ? 'required' : 'no'}</strong>
+                </li>
+              )}
+            </ul>
+          </section>
+        )
+      }
+
+      {
+        hasLimits && (
+          <section class="block">
+            <h2>
+              <span class="rom">{nextRoman()}</span> Free-tier limits
+            </h2>
+            <ul class="limits-list">
+              {free_tier_limits!.auto_pause_threshold_days !== undefined && (
+                <li>
+                  Auto-pause after <strong>{free_tier_limits!.auto_pause_threshold_days} days</strong> of inactivity.
+                </li>
+              )}
+              {free_tier_limits!.cold_start_latency_ms !== undefined && (
+                <li>
+                  Cold-start latency ~<strong>{free_tier_limits!.cold_start_latency_ms} ms</strong>.
+                </li>
+              )}
+              {free_tier_limits!.account_age_gate_days !== undefined && (
+                <li>
+                  Account-age gate: <strong>{free_tier_limits!.account_age_gate_days} days</strong>.
+                </li>
+              )}
+              {free_tier_limits!.geographic_regions && free_tier_limits!.geographic_regions.length > 0 && (
+                <li>
+                  Available in: <strong>{free_tier_limits!.geographic_regions.join(', ')}</strong>.
+                </li>
+              )}
+            </ul>
+          </section>
+        )
+      }
+
+      {
+        hasWatchFor && (
+          <section class="block watch-for">
+            <h2>
+              <span class="rom">{nextRoman()}</span> Watch for
+            </h2>
+            <ul class="warn-list">
+              {hasRedFlags &&
+                tos_red_flags!.map((flag: string) => <li class="warn">{flag}.</li>)}
+              {hasInactive && inactive_account_policy!.days_until_deletion !== undefined && (
+                <li class="warn">
+                  Inactive accounts deleted after{' '}
+                  <strong>{inactive_account_policy!.days_until_deletion} days</strong>
+                  {inactive_account_policy!.warning_days !== undefined &&
+                    ` (warning ${inactive_account_policy!.warning_days} days prior)`}
+                  {inactive_account_policy!.data_recovery_possible === false &&
+                    ' — no data recovery'}
+                  .
+                </li>
+              )}
+            </ul>
+          </section>
+        )
+      }
+
+      {
+        hasOps && (
+          <section class="block">
+            <h2>
+              <span class="rom">{nextRoman()}</span> Operational
+            </h2>
+            <dl class="ops-dl">
+              {support_sla?.tier && (
+                <>
+                  <dt>Support tier</dt>
+                  <dd>
+                    {support_sla.tier}
+                    {support_sla.availability && ` · ${support_sla.availability}`}
+                    {support_sla.response_time_hours !== undefined &&
+                      ` · ${support_sla.response_time_hours}h response`}
+                  </dd>
+                </>
+              )}
+              {rate_limits?.requests_per_second !== undefined && (
+                <>
+                  <dt>Rate limit</dt>
+                  <dd>
+                    {rate_limits.requests_per_second} req/sec
+                    {rate_limits.concurrent_connections !== undefined &&
+                      ` · ${rate_limits.concurrent_connections} concurrent`}
+                  </dd>
+                </>
+              )}
+              {Array.isArray(compliance_certifications) && compliance_certifications.length > 0 && (
+                <>
+                  <dt>Compliance</dt>
+                  <dd>{compliance_certifications.join(' · ')}</dd>
+                </>
+              )}
+            </dl>
+          </section>
+        )
+      }
+
       <section class="block links">
-        <h2><span class="rom">{roman[notes ? 3 : 2]}</span> Links</h2>
+        <h2><span class="rom">{nextRoman()}</span> Links</h2>
         <ul class="link-list">
           <li>
             <a href={official_url} rel="noopener noreferrer" target="_blank">Official site →</a>
@@ -259,7 +410,7 @@ const footnotes = collectSources(sources);
         tags.length > 0 && (
           <section class="block">
             <h2>
-              <span class="rom">{roman[notes ? 4 : 3]}</span> Tags
+              <span class="rom">{nextRoman()}</span> Tags
             </h2>
             <div class="tag-row">
               {tags.map((t: string) => (
@@ -274,7 +425,7 @@ const footnotes = collectSources(sources);
         footnotes.length > 0 && (
           <section class="block sources">
             <h2>
-              <span class="rom">{roman[notes ? 5 : 4]}</span> Sources
+              <span class="rom">{nextRoman()}</span> Sources
             </h2>
             <ol class="footnotes">
               {footnotes.map((f) => (
@@ -540,6 +691,54 @@ const footnotes = collectSources(sources);
     .tag {
       font-family: var(--font-mono);
       font-size: 0.82rem;
+      color: var(--color-ink-soft);
+    }
+
+    /* v3.0 — capture-everything rendering. Plain prose, hanging em-dashes,
+       no heavy chrome. Matches the almanac voice. */
+    .friction-row,
+    .limits-list,
+    .warn-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      font-size: 0.92rem;
+      color: var(--color-ink-soft);
+    }
+    .friction-row li::before,
+    .limits-list li::before,
+    .warn-list li::before {
+      content: '—  ';
+      color: var(--accent);
+    }
+    .warn-list .warn {
+      color: var(--color-ink);
+    }
+    .watch-for {
+      background: color-mix(in srgb, var(--color-coral) 4%, transparent);
+      padding: var(--space-md);
+      border-left: 3px solid var(--color-coral);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    }
+    .ops-dl {
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      gap: 0.4rem var(--space-md);
+      font-size: 0.9rem;
+    }
+    .ops-dl dt {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-ink-faint);
+      align-self: baseline;
+    }
+    .ops-dl dd {
+      margin: 0;
       color: var(--color-ink-soft);
     }
 
