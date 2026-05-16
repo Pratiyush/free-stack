@@ -1,4 +1,22 @@
-# Lighthouse baseline — v2.0.1
+# Lighthouse baseline — v3.0 (live `pratiyush.github.io/opentier/`)
+
+## v3.0 — 2026-05-16 (after rebrand + mobile compression + service-detail schema rendering)
+
+| Page | Viewport | Perf | A11y | BP | SEO | Δ vs v2.0.1 |
+|---|---|---:|---:|---:|---:|---|
+| `/` | mobile | 91 | 96 | 100 | 100 | Perf -9, BP +4 |
+| `/` | desktop | 100 | 96 | 100 | 100 | BP +4 |
+| `/service/groq/` | mobile | 98 | 95 | 100 | 100 | Perf -2, BP +4 |
+| `/service/groq/` | desktop | 100 | 95 | 100 | 100 | BP +4 |
+| `/catalog/` | mobile | 91 | 87 | 100 | 91 | Perf +3, BP +4 |
+| `/catalog/` | desktop | 99 | 87 | 100 | 91 | BP +4 |
+
+**Wins:** Best Practices hit 100 across the board (was 96). Catalog mobile perf +3.
+**Regression to investigate:** home mobile perf 100 → 91 — most likely the inline `<style>` `@font-face` block in BaseLayout (render-blocking). v3.1 follow-up: extract back to a stylesheet served with `media="print" onload="..."` or use Speculation Rules.
+
+---
+
+## v2.0.1 — 2026-05-16 (pre-rebrand)
 
 Story 5.1d. Run on the live deploy at `https://pratiyush.github.io/free-stack/` immediately after the v2.0.1 cutover (2026-05-16). Mobile preset = default Lighthouse mobile (Moto G4 emulation, slow 4G). Desktop preset = `--preset=desktop`.
 
