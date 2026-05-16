@@ -1,7 +1,12 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import pagefind from 'astro-pagefind';
 import tailwindcss from '@tailwindcss/vite';
+
+// v4.0 task #106 — astro-pagefind dropped. The integration was generating a
+// 2.2 MB index in dist/pagefind/ that no page actually loaded (the catalog
+// search uses an in-page JS filter, not Pagefind). Removing saves 2.2 MB per
+// deploy + a build step. If real-search is wanted later, wire Pagefind only
+// on /catalog with a manual <script> tag.
 
 // v3.0.0 rebrand — opentier.dev replaces opentier / opentier.dev.
 //
@@ -20,7 +25,7 @@ export default defineConfig({
   base: BASE,
   output: 'static',
   trailingSlash: 'never',
-  integrations: [sitemap(), pagefind()],
+  integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()],
   },

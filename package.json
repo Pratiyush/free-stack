@@ -35,8 +35,6 @@
     "@fontsource-variable/jetbrains-mono": "^5.2.5",
     "@tailwindcss/vite": "^4.3.0",
     "astro": "^6.3.3",
-    "astro-pagefind": "^2.0.0",
-    "pagefind": "^1.4.0",
     "tailwindcss": "^4.3.0",
     "zod": "^3.25.0"
   },
