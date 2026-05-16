@@ -4,15 +4,16 @@ category: maps
 subcategory: permanent
 brand_color: '#888888'
 logo: /logos/protomaps.svg
-
-summary: 'Fully free and open source (BSD/CC-BY); self-hosted'
-
+summary: Fully free and open source (BSD/CC-BY); self-hosted
 tier_type: free-plan
-
 free_tier:
-  - 'Fully free and open source (BSD/CC-BY); self-hosted'
-  - 'N/A -- self-hosted; limited by your CDN'
-
+  - Fully free and open source (BSD/CC-BY); self-hosted
+  - N/A -- self-hosted; limited by your CDN
+paid_tier_highlights:
+  - Software (BSD) and tiles (CC-BY) are fully open source
+  - Self-host PMTiles as a single static file with no ongoing fees
+  - Noncommercial use of the hosted API is free
+  - Commercial use of the hosted API requires GitHub Sponsorship
 pricing:
   - name: Free / self-host (open source)
     price: 0
@@ -34,18 +35,18 @@ pricing:
       - Supports project maintenance
     cta_url: https://github.com/sponsors/protomaps
     billing: monthly
-
-paid_tier_highlights:
-  - Software (BSD) and tiles (CC-BY) are fully open source
-  - Self-host PMTiles as a single static file with no ongoing fees
-  - Noncommercial use of the hosted API is free
-  - Commercial use of the hosted API requires GitHub Sponsorship
-
-tags: []
-
+tags:
+  - maps
+  - permanent
+  - free-plan
+  - geolocation
+  - open-source
+  - self-host
 official_url: https://protomaps.com/
 pricing_url: https://protomaps.com/
-
+facets:
+  oss: true
+  self_host: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

@@ -4,15 +4,13 @@ category: project-management
 subcategory: permanent
 brand_color: '#5A67D8'
 logo: /logos/focalboard.svg
-
-summary: 'Fully free and open source; self-hosted only'
-
+summary: Fully free and open source; self-hosted only
 tier_type: free-plan
-
 free_tier:
-  - 'Fully free and open source; self-hosted only'
-  - 'N/A -- self-hosted'
-
+  - Fully free and open source; self-hosted only
+  - N/A -- self-hosted
+paid_tier_highlights:
+  - This service is always-free; no paid tiers exist
 pricing:
   - name: Free (AGPL open source, self-hosted)
     price: 0
@@ -26,15 +24,17 @@ pricing:
       - Repository currently unmaintained (looking for maintainers)
       - Ongoing development in mattermost-plugin-boards
     cta_url: https://github.com/mattermost-community/focalboard
-
-paid_tier_highlights:
-  - This service is always-free; no paid tiers exist
-
-tags: []
-
+tags:
+  - project-management
+  - permanent
+  - free-plan
+  - open-source
+  - self-host
 official_url: https://www.focalboard.com/
 pricing_url: https://www.focalboard.com/
-
+facets:
+  oss: true
+  self_host: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

@@ -3,25 +3,22 @@ slug: argos-ci
 category: testing
 brand_color: '#16A34A'
 logo: /logos/argos-ci.svg
-
-summary: Open-source visual regression tool with 5K free screenshots/mo on the Hobby plan, unlimited projects, no credit card.
-
+summary: >-
+  Open-source visual regression tool with 5K free screenshots/mo on the Hobby plan, unlimited projects, no
+  credit card.
 tier_type: always-free
-
 free_tier:
   - 5,000 screenshots/month (Hobby plan)
   - Unlimited Playwright traces
   - Unlimited projects
   - GitHub and GitLab integration
   - Community support
-
 paid_tier_highlights:
   - 'Pro from $100/mo: 35,000 screenshots and team review tools'
   - 'Pro: extra screenshots $0.004 each ($0.0015 for Storybook)'
   - 'Pro: Slack notifications, optional GitHub SSO ($50/mo)'
-  - 'Enterprise adds SAML SSO, fine-grained ACL, 99.99% SLA'
-  - 'Pro Support and dedicated CSM on Enterprise'
-
+  - Enterprise adds SAML SSO, fine-grained ACL, 99.99% SLA
+  - Pro Support and dedicated CSM on Enterprise
 pricing:
   - name: Hobby
     price: 0
@@ -58,12 +55,21 @@ pricing:
       - Dedicated support
       - 99.99% uptime SLA
     cta_url: mailto:contact@argos-ci.com
-
-tags: [visual-testing, regression, open-source, ci-cd, screenshots]
-
+tags:
+  - visual-testing
+  - regression
+  - open-source
+  - ci-cd
+  - screenshots
+  - testing
+  - always-free
 official_url: https://argos-ci.com/
 pricing_url: https://argos-ci.com/pricing
-
-date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+facets:
+  cc_required: false
+  oss: true
+date_added: 2026-05-15T00:00:00.000Z
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'
+signup_friction:
+  requires_cc: false

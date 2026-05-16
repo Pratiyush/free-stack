@@ -4,16 +4,17 @@ category: ai-apis
 subcategory: expiring-credits
 brand_color: '#5019C5'
 logo: /logos/fireworks-ai.svg
-
-summary: '$1 free starter credits — 50+ models, fast inference'
-
+summary: $1 free starter credits — 50+ models, fast inference
 tier_type: trial-credit
-
 free_tier:
   - $1 free starter credits
-  - '50+ models, fast inference'
+  - 50+ models, fast inference
   - High rate limits
-
+paid_tier_highlights:
+  - Serverless inference billed per token after $1 starter credit
+  - Fine-tuning priced from $0.50/M training tokens
+  - On-Demand GPU deployments from $7/hour with per-second billing
+  - Enterprise offers SLA, volume discounts, and dedicated support
 pricing:
   - name: Starter credit
     price: 0
@@ -38,7 +39,7 @@ pricing:
       - No cold starts
     cta_url: https://fireworks.ai/signup
   - name: Fine Tuning
-    price: 0.50
+    price: 0.5
     unit: /1M training tokens
     billing: usage-based
     description: Customize open models from $0.50/M training tokens
@@ -73,18 +74,15 @@ pricing:
       - SLA guarantees
       - Custom deployment options
     cta_url: https://fireworks.ai/contact-reserved
-
-paid_tier_highlights:
-  - Serverless inference billed per token after $1 starter credit
-  - Fine-tuning priced from $0.50/M training tokens
-  - On-Demand GPU deployments from $7/hour with per-second billing
-  - Enterprise offers SLA, volume discounts, and dedicated support
-
-tags: []
-
+tags:
+  - ai-apis
+  - expiring-credits
+  - trial-credit
+  - ai
+  - api
 official_url: https://fireworks.ai/
 pricing_url: https://fireworks.ai/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

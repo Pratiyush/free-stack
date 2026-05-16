@@ -4,11 +4,8 @@ category: baas
 subcategory: permanent
 brand_color: '#888888'
 logo: /logos/back4app.svg
-
 summary: Free plan (no credit card required)
-
 tier_type: free-plan
-
 free_tier:
   - 25K monthly requests
   - 250 MB database
@@ -16,14 +13,12 @@ free_tier:
   - 1 GB file storage
   - Parse Server compatible
   - No credit card required
-
 paid_tier_highlights:
   - 'MVP $15/app/mo (annual): 500K requests, 1 GB DB, daily backups'
   - 'Pay-As-You-Go $80/app/mo: 5M requests, 3 GB DB, 1 TB transfer'
   - 'Dedicated $400/app/mo: unlimited requests on 10 CPU / 14 GB cluster'
-  - 'Dedicated tier is HIPAA-eligible with point-in-time restore'
+  - Dedicated tier is HIPAA-eligible with point-in-time restore
   - 'Enterprise: custom resources, multi-region, SLA'
-
 pricing:
   - name: Free
     price: 0
@@ -87,12 +82,16 @@ pricing:
       - Dedicated support
       - SLA included
     cta_url: https://www.back4app.com/contact
-
-tags: []
-
+tags:
+  - baas
+  - permanent
+  - free-plan
+  - backend-as-a-service
 official_url: https://www.back4app.com/
 pricing_url: https://www.back4app.com/pricing/backend-as-a-service
-
-date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+facets:
+  storage_gb: 1
+  bandwidth_gb_month: 1
+date_added: '2026-05-15'
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

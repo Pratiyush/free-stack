@@ -4,15 +4,16 @@ category: payments
 subcategory: permanent
 brand_color: '#888888'
 logo: /logos/hyperswitch.svg
-
-summary: 'Free (open-source, self-hosted)'
-
+summary: Free (open-source, self-hosted)
 tier_type: free-plan
-
 free_tier:
-  - 'Free (open-source, self-hosted)'
+  - Free (open-source, self-hosted)
   - 'Self-hosted: free with no transaction fees, fully managed cloud available from Juspay with enterprise SLAs, supports cards/wallets/BNPL/UPI/Pay-by-Bank globally'
-
+paid_tier_highlights:
+  - Self-Host Enterprise adds SLA support and dedicated account manager
+  - Hyperswitch Cloud adds 99.999% uptime and 210+ integrations
+  - PCI-DSS 4.0 and ISO 27001 compliance live on Cloud only
+  - Community Edition remains 100% free and self-hosted
 pricing:
   - name: Self-Host Community Edition
     price: 0
@@ -47,18 +48,17 @@ pricing:
       - Revenue Recovery and Cost Observability
       - Hosting and reconciliation included
     cta_url: https://hyperswitch.io/contact-us
-
-paid_tier_highlights:
-  - Self-Host Enterprise adds SLA support and dedicated account manager
-  - Hyperswitch Cloud adds 99.999% uptime and 210+ integrations
-  - PCI-DSS 4.0 and ISO 27001 compliance live on Cloud only
-  - Community Edition remains 100% free and self-hosted
-
-tags: []
-
+tags:
+  - payments
+  - permanent
+  - free-plan
+  - open-source
+  - self-host
 official_url: https://hyperswitch.io/
 pricing_url: https://hyperswitch.io/pricing
-
+facets:
+  oss: true
+  self_host: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

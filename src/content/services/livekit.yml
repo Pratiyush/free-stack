@@ -4,15 +4,17 @@ category: communication
 subcategory: permanent
 brand_color: '#FFFFFF'
 logo: /logos/livekit.svg
-
 summary: Build plan (free)
-
 tier_type: free-plan
-
 free_tier:
   - Build plan (free)
-  - 'No credit card required; open-source server can be self-hosted for unlimited free usage'
-
+  - No credit card required; open-source server can be self-hosted for unlimited free usage
+paid_tier_highlights:
+  - Ship at $50/mo unlocks 5,000 minutes and 20 concurrent sessions
+  - Scale at $500/mo adds 50,000 minutes and 600 concurrent sessions
+  - Enterprise adds SSO, HIPAA BAA, and dedicated Slack support
+  - Open-source LiveKit server can be self-hosted for unlimited use
+  - All paid tiers include team collaboration and custom voices
 pricing:
   - name: Build
     price: 0
@@ -61,19 +63,17 @@ pricing:
       - Support SLA with guaranteed response
       - HIPAA compliance with signed BAA
     cta_url: https://livekit.com/contact
-
-paid_tier_highlights:
-  - Ship at $50/mo unlocks 5,000 minutes and 20 concurrent sessions
-  - Scale at $500/mo adds 50,000 minutes and 600 concurrent sessions
-  - Enterprise adds SSO, HIPAA BAA, and dedicated Slack support
-  - Open-source LiveKit server can be self-hosted for unlimited use
-  - All paid tiers include team collaboration and custom voices
-
-tags: []
-
+tags:
+  - communication
+  - permanent
+  - free-plan
+  - open-source
+  - self-host
 official_url: https://livekit.com/
 pricing_url: https://livekit.com/pricing
-
+facets:
+  oss: true
+  self_host: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

@@ -4,15 +4,17 @@ category: logs
 subcategory: permanent
 brand_color: '#888888'
 logo: /logos/logflare.svg
-
 summary: Free metered plan
-
 tier_type: free-plan
-
 free_tier:
   - Free metered plan
-  - '5 events/sec avg over 60s, 90-day retention; no SMS alerts on free'
-
+  - 5 events/sec avg over 60s, 90-day retention; no SMS alerts on free
+paid_tier_highlights:
+  - Metered at $15/M events unlocks 500 fields and 90-day retention
+  - Metered BYOB at $10/M events provides unlimited BigQuery retention
+  - 1-minute alerts and Google Data Studio on all paid tiers
+  - Enterprise adds custom pricing and dedicated infrastructure
+  - 1M events/month included free on metered plans
 pricing:
   - name: Project (Free)
     price: 0
@@ -61,19 +63,15 @@ pricing:
       - SLA available
       - Custom integrations
     cta_url: https://logflare.app/pricing
-
-paid_tier_highlights:
-  - Metered at $15/M events unlocks 500 fields and 90-day retention
-  - Metered BYOB at $10/M events provides unlimited BigQuery retention
-  - 1-minute alerts and Google Data Studio on all paid tiers
-  - Enterprise adds custom pricing and dedicated infrastructure
-  - 1M events/month included free on metered plans
-
-tags: []
-
+tags:
+  - logs
+  - permanent
+  - free-plan
+  - logging
+  - observability
 official_url: https://logflare.app/
 pricing_url: https://logflare.app/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

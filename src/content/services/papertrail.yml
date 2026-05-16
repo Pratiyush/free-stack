@@ -4,25 +4,24 @@ category: logs
 subcategory: permanent
 brand_color: '#888888'
 logo: /logos/papertrail.svg
-
 summary: Papertrail — free tier; see the pricing page for details.
-
 tier_type: free-plan
-
 free_tier:
   - Free plan
-  - '48-hour searchable retention, 7-day archive; no saved searches on free'
-
+  - 48-hour searchable retention, 7-day archive; no saved searches on free
 pricing:
   - name: Free
     price: 0
     unit: /month
-
-tags: []
-
+tags:
+  - logs
+  - permanent
+  - free-plan
+  - logging
+  - observability
 official_url: https://www.papertrail.com/
 pricing_url: https://www.papertrail.com/plans/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

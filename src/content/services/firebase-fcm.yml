@@ -4,15 +4,13 @@ category: mobile
 subcategory: permanent
 brand_color: '#DD2C00'
 logo: /logos/firebase-fcm.svg
-
 summary: Free (Spark plan)
-
 tier_type: free-plan
-
 free_tier:
   - Free (Spark plan)
   - No usage limits on FCM; fully free on Spark and Blaze plans
-
+paid_tier_highlights:
+  - This service is always-free; no paid tiers exist
 pricing:
   - name: Free (Spark and Blaze)
     price: 0
@@ -26,15 +24,13 @@ pricing:
       - Analytics integration
       - No usage limits on Spark or Blaze
     cta_url: https://console.firebase.google.com/
-
-paid_tier_highlights:
-  - This service is always-free; no paid tiers exist
-
-tags: []
-
+tags:
+  - mobile
+  - permanent
+  - free-plan
 official_url: https://firebase.google.com/
 pricing_url: https://firebase.google.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

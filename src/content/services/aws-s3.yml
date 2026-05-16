@@ -4,26 +4,21 @@ category: storage
 subcategory: permanent
 brand_color: '#569A31'
 logo: /logos/aws-s3.svg
-
 summary: 5 GB Standard storage (12 months only)
-
 tier_type: free-plan
-
 free_tier:
   - 5 GB S3 Standard storage (12 months only)
   - 20,000 GET requests/month
   - 2,000 PUT/COPY/POST/LIST requests/month
   - 100 GB data transfer out/month
-  - 'Expires after 12 months -- NOT a permanent free tier'
-  - 'New post-Jul 2025 accounts get $200 credits via AWS Free Plan instead'
-
+  - Expires after 12 months -- NOT a permanent free tier
+  - New post-Jul 2025 accounts get $200 credits via AWS Free Plan instead
 paid_tier_highlights:
   - 'S3 Standard: $0.023/GB-month (first 50 TB) in us-east-1'
-  - 'S3 Intelligent-Tiering auto-moves data between tiers to save 30-40%'
-  - 'Standard-IA $0.0125/GB; One Zone-IA $0.01/GB for infrequent access'
-  - 'Glacier Instant $0.004/GB-month; Deep Archive $0.00099/GB-month'
+  - S3 Intelligent-Tiering auto-moves data between tiers to save 30-40%
+  - Standard-IA $0.0125/GB; One Zone-IA $0.01/GB for infrequent access
+  - Glacier Instant $0.004/GB-month; Deep Archive $0.00099/GB-month
   - 'Egress: first 100 GB/mo free, then $0.09/GB to internet'
-
 pricing:
   - name: Free Tier (12 months)
     price: 0
@@ -96,12 +91,15 @@ pricing:
       - 180-day minimum storage duration
       - For compliance/regulatory archives
     cta_url: https://aws.amazon.com/s3/storage-classes/glacier/
-
-tags: []
-
+tags:
+  - storage
+  - permanent
+  - free-plan
 official_url: https://aws.amazon.com/s3/
 pricing_url: https://aws.amazon.com/s3/pricing/
-
+facets:
+  storage_gb: 5
+  bandwidth_gb_month: 100
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

@@ -4,15 +4,16 @@ category: search
 subcategory: permanent
 brand_color: '#005571'
 logo: /logos/elasticsearch.svg
-
-summary: 'Open-source (self-hosted)'
-
+summary: Open-source (self-hosted)
 tier_type: free-plan
-
 free_tier:
-  - 'Open-source (self-hosted)'
+  - Open-source (self-hosted)
   - 'Elastic Cloud: 14-day trial only, no permanent free tier; paid starts ~$16.40/mo'
-
+paid_tier_highlights:
+  - Elastic Cloud Serverless offers usage-based managed search
+  - Elastic Cloud Hosted gives full cluster control across 60+ regions
+  - Platinum/Enterprise tiers ship 99.95% uptime SLAs
+  - 14-day free trial available before billing begins
 pricing:
   - name: Self-Managed (Open Source)
     price: 0
@@ -55,18 +56,17 @@ pricing:
       - Monthly pay-as-you-go or prepaid
       - 99.95% SLA on Platinum/Enterprise tiers
     cta_url: https://cloud.elastic.co/registration
-
-paid_tier_highlights:
-  - Elastic Cloud Serverless offers usage-based managed search
-  - Elastic Cloud Hosted gives full cluster control across 60+ regions
-  - Platinum/Enterprise tiers ship 99.95% uptime SLAs
-  - 14-day free trial available before billing begins
-
-tags: []
-
+tags:
+  - search
+  - permanent
+  - free-plan
+  - open-source
+  - self-host
 official_url: https://www.elastic.co/
 pricing_url: https://www.elastic.co/pricing
-
+facets:
+  oss: true
+  self_host: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

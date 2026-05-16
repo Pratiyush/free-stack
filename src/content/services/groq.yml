@@ -4,18 +4,19 @@ category: ai-apis
 subcategory: permanent
 brand_color: '#F55036'
 logo: /logos/groq.svg
-
 summary: Ultra-fast LLM inference with Llama, Gemma, and Whisper models, 14.4K RPD, no credit card required.
-
 tier_type: always-free
-
 free_tier:
   - 14.4K requests/day (varies by model)
   - 500K tokens/day for some models
   - 30 RPM per model (varies)
   - All models available
   - No credit card required
-
+paid_tier_highlights:
+  - Pay-as-you-go starts at $0.05 in / $0.08 out per 1M (Llama 3.1 8B)
+  - Prompt caching gives 50% discount on cached input tokens
+  - Batch API offers 50% cost reduction
+  - Enterprise tier available for volume pricing and SLA
 pricing:
   - name: Free
     price: 0
@@ -51,23 +52,21 @@ pricing:
       - SLA-backed support
       - Higher security guarantees
       - Volume discounts
-
-paid_tier_highlights:
-  - Pay-as-you-go starts at $0.05 in / $0.08 out per 1M (Llama 3.1 8B)
-  - Prompt caching gives 50% discount on cached input tokens
-  - Batch API offers 50% cost reduction
-  - Enterprise tier available for volume pricing and SLA
-
-tags: [llm, ai, inference, api, fast]
-
+tags:
+  - llm
+  - ai
+  - inference
+  - api
+  - fast
+  - ai-apis
+  - permanent
+  - always-free
 official_url: https://groq.com/
 pricing_url: https://console.groq.com/docs/rate-limits
-
 facets:
   requests_per_day: 14400
   api_access: true
   cc_required: false
-
 sources:
   pricing:
     url: https://console.groq.com/docs/rate-limits
@@ -77,7 +76,8 @@ sources:
     url: https://simpleicons.org/icons/groq
     type: simpleicons
     verified: '2026-05-15'
-
-date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_added: 2026-05-15T00:00:00.000Z
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'
+signup_friction:
+  requires_cc: false

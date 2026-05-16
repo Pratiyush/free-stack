@@ -3,18 +3,20 @@ slug: turso
 category: databases
 brand_color: '#4FF900'
 logo: /logos/turso.svg
-
 summary: LibSQL (SQLite fork) with 100 free databases, 5 GB storage, and 500M rows read/mo.
-
 tier_type: free-plan
-
 free_tier:
   - 100 databases
   - 5 GB total storage
   - 500M row-reads/mo
   - 10M row-writes/mo
   - 3 GB sync bandwidth/mo
-
+paid_tier_highlights:
+  - Developer at $4.99/mo unlocks unlimited databases + 9 GB storage
+  - Scaler at $24.92/mo adds 24 GB storage + teams + audit log
+  - Pro at $416.58/mo includes SSO + HIPAA + SOC2 + BYOK
+  - 'Point-in-time restore scales: 1d (Free) -> 10d -> 30d -> 90d'
+  - 'Read overage drops with scale: $1/B -> $0.80/B -> $0.75/B'
 pricing:
   - name: Free
     price: 0
@@ -72,19 +74,18 @@ pricing:
       - 90-day point-in-time restore
       - Priority email + Slack support
     cta_url: https://app.turso.tech/signup
-
-paid_tier_highlights:
-  - Developer at $4.99/mo unlocks unlimited databases + 9 GB storage
-  - Scaler at $24.92/mo adds 24 GB storage + teams + audit log
-  - Pro at $416.58/mo includes SSO + HIPAA + SOC2 + BYOK
-  - 'Point-in-time restore scales: 1d (Free) -> 10d -> 30d -> 90d'
-  - 'Read overage drops with scale: $1/B -> $0.80/B -> $0.75/B'
-
-tags: [sqlite, libsql, database, edge-computing, serverless]
-
+tags:
+  - sqlite
+  - libsql
+  - database
+  - edge-computing
+  - serverless
+  - databases
+  - free-plan
 official_url: https://turso.tech/
 pricing_url: https://turso.tech/pricing
-
+facets:
+  storage_gb: 5
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

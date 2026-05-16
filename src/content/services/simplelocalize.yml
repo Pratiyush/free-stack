@@ -4,15 +4,16 @@ category: translation
 subcategory: permanent
 brand_color: '#222B33'
 logo: /logos/simplelocalize.svg
-
 summary: Community plan (free forever)
-
 tier_type: free-plan
-
 free_tier:
   - Community plan (free forever)
   - All features included on every plan; paid starts at EUR 12/mo (Developer)
-
+paid_tier_highlights:
+  - Developer (EUR 12) unlocks REST API and unlimited projects
+  - Team (EUR 35) adds 25 members and QA automations
+  - Business (EUR 99) brings SAML SSO and audit logs
+  - Auto-translation quota scales with each tier
 pricing:
   - name: Community
     price: 0
@@ -64,18 +65,14 @@ pricing:
       - SAML SSO and audit logs
       - Custom hosting and environments
     cta_url: https://simplelocalize.io/pricing/
-
-paid_tier_highlights:
-  - Developer (EUR 12) unlocks REST API and unlimited projects
-  - Team (EUR 35) adds 25 members and QA automations
-  - Business (EUR 99) brings SAML SSO and audit logs
-  - Auto-translation quota scales with each tier
-
-tags: []
-
+tags:
+  - translation
+  - permanent
+  - free-plan
+  - i18n
 official_url: https://simplelocalize.io/
 pricing_url: https://simplelocalize.io/pricing/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

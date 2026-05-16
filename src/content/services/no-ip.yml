@@ -4,15 +4,17 @@ category: dns
 subcategory: permanent
 brand_color: '#888888'
 logo: /logos/no-ip.svg
-
 summary: Free Dynamic DNS
-
 tier_type: free-plan
-
 free_tier:
   - Free Dynamic DNS
-  - '1 hostname; 30-day renewal'
-
+  - 1 hostname; 30-day renewal
+paid_tier_highlights:
+  - Hostnames never expire on paid plans (free requires 30-day renewal)
+  - Custom domain support on Pro and above
+  - RESTful API access on Premium Managed DNS
+  - Priority phone support and SLA guarantees
+  - SSL certificates bundled with paid tiers
 pricing:
   - name: Free Dynamic DNS
     price: 0
@@ -85,19 +87,13 @@ pricing:
       - Custom domain management
       - End-customer support included
     cta_url: https://www.noip.com/solutions/chat-with-an-expert
-
-paid_tier_highlights:
-  - Hostnames never expire on paid plans (free requires 30-day renewal)
-  - Custom domain support on Pro and above
-  - RESTful API access on Premium Managed DNS
-  - Priority phone support and SLA guarantees
-  - SSL certificates bundled with paid tiers
-
-tags: []
-
+tags:
+  - dns
+  - permanent
+  - free-plan
 official_url: https://www.noip.com/
 pricing_url: https://www.noip.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

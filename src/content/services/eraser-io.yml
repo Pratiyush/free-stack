@@ -4,15 +4,16 @@ category: design
 subcategory: permanent
 brand_color: '#EC2C40'
 logo: /logos/eraser-io.svg
-
 summary: Eraser.io — free tier; see the pricing page for details.
-
 tier_type: free-plan
-
 free_tier:
   - Free plan
-  - 'Limited AI generations/mo, single user, community support only'
-
+  - Limited AI generations/mo, single user, community support only
+paid_tier_highlights:
+  - Starter at $15/member/mo unlocks unlimited files and 40 AI diagrams
+  - Business at $45/member/mo adds SAML SSO and unlimited history
+  - Enterprise tier offers flexible deployment and dedicated CSM
+  - AI diagram budgets grow at every paid tier
 pricing:
   - name: Free
     price: 0
@@ -64,18 +65,13 @@ pricing:
       - ACH and wire transfer billing
       - Usage reporting
     cta_url: https://cal.com/shin-kim/eraser-enterprise-plan
-
-paid_tier_highlights:
-  - Starter at $15/member/mo unlocks unlimited files and 40 AI diagrams
-  - Business at $45/member/mo adds SAML SSO and unlimited history
-  - Enterprise tier offers flexible deployment and dedicated CSM
-  - AI diagram budgets grow at every paid tier
-
-tags: []
-
+tags:
+  - design
+  - permanent
+  - free-plan
 official_url: https://www.eraser.io/
 pricing_url: https://www.eraser.io/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

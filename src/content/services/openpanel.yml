@@ -3,14 +3,16 @@ slug: openpanel
 category: analytics
 brand_color: '#5C61F2'
 logo: /logos/openpanel.svg
-
 summary: Free cloud tier
-
 tier_type: free-plan
-
 free_tier:
   - Free cloud tier
-
+paid_tier_highlights:
+  - Progressive scaling - only pay for event volume
+  - Yearly billing offers 2 months free
+  - Custom plans available for usage exceeding 50M monthly events
+  - Open-source self-hosting available with completely unlimited events
+  - All features included at every tier - only event volume scales
 pricing:
   - name: Free Trial / Self-Hosted
     price: 0
@@ -25,7 +27,7 @@ pricing:
       - Unlimited tracked profiles
     cta_url: https://dashboard.openpanel.dev/onboarding
   - name: 5K events
-    price: 2.50
+    price: 2.5
     unit: /month
     billing: monthly
     description: Entry-level tracking for small projects
@@ -68,19 +70,12 @@ pricing:
       - Custom plans available
       - Yearly $3,500-$9,000
     cta_url: https://dashboard.openpanel.dev/onboarding
-
-paid_tier_highlights:
-  - Progressive scaling - only pay for event volume
-  - Yearly billing offers 2 months free
-  - Custom plans available for usage exceeding 50M monthly events
-  - Open-source self-hosting available with completely unlimited events
-  - All features included at every tier - only event volume scales
-
-tags: []
-
+tags:
+  - analytics
+  - free-plan
 official_url: https://openpanel.dev/
 pricing_url: https://openpanel.dev/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

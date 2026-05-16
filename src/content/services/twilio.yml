@@ -4,15 +4,17 @@ category: communication
 subcategory: permanent
 brand_color: '#F22F46'
 logo: /logos/twilio.svg
-
 summary: Trial credit only (not permanent)
-
 tier_type: free-plan
-
 free_tier:
   - Trial credit only (not permanent)
   - '**Trial only** -- no permanent free tier; pay-as-you-go after credit consumed'
-
+paid_tier_highlights:
+  - SMS pay-as-you-go from $0.0083/message in the US
+  - Voice from $0.0085/min inbound, $0.014/min outbound
+  - Verify API at $0.05 per verification with global coverage
+  - SendGrid email plans from $19.95/mo with 100 free emails/day
+  - 'Twilio Flex contact center: 5,000 free hours then $1/active-hour or $150/seat'
 pricing:
   - name: Free trial
     price: 0
@@ -74,19 +76,13 @@ pricing:
       - Templates and analytics
       - SMTP and HTTP APIs
     cta_url: https://sendgrid.com/en-us/pricing
-
-paid_tier_highlights:
-  - SMS pay-as-you-go from $0.0083/message in the US
-  - Voice from $0.0085/min inbound, $0.014/min outbound
-  - Verify API at $0.05 per verification with global coverage
-  - SendGrid email plans from $19.95/mo with 100 free emails/day
-  - 'Twilio Flex contact center: 5,000 free hours then $1/active-hour or $150/seat'
-
-tags: []
-
+tags:
+  - communication
+  - permanent
+  - free-plan
 official_url: https://www.twilio.com/
 pricing_url: https://www.twilio.com/en-us/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

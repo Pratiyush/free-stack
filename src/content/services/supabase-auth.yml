@@ -3,18 +3,19 @@ slug: supabase-auth
 category: auth
 brand_color: '#25B700'
 logo: /logos/supabase-auth.svg
-
 summary: Postgres-native auth with 50K free MAU, unlimited API requests, and social login included.
-
 tier_type: free-plan
-
 free_tier:
   - 50K monthly active users
   - 2 projects
   - Unlimited API requests
   - Social login included
   - Hard MAU ceiling (no overage option)
-
+paid_tier_highlights:
+  - Pro at $25/mo unlocks 100K MAU + email support
+  - Team at $599/mo adds SOC2/ISO 27001 + priority SLAs
+  - SAML SSO and HIPAA available as paid add-ons
+  - Enterprise offers BYOC + custom SLAs
 pricing:
   - name: Free
     price: 0
@@ -62,18 +63,17 @@ pricing:
       - Bring-your-own-cloud (BYOC)
       - 90-day log retention
     cta_url: https://supabase.com/contact/enterprise
-
-paid_tier_highlights:
-  - Pro at $25/mo unlocks 100K MAU + email support
-  - Team at $599/mo adds SOC2/ISO 27001 + priority SLAs
-  - SAML SSO and HIPAA available as paid add-ons
-  - Enterprise offers BYOC + custom SLAs
-
-tags: [authentication, postgres, identity, api, sql]
-
+tags:
+  - authentication
+  - postgres
+  - identity
+  - api
+  - sql
+  - auth
+  - free-plan
 official_url: https://supabase.com/
 pricing_url: https://supabase.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

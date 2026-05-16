@@ -4,15 +4,16 @@ category: logs
 subcategory: permanent
 brand_color: '#50FA7B'
 logo: /logos/hyperdx.svg
-
 summary: Free tier (no credit card)
-
 tier_type: free-plan
-
 free_tier:
   - Free tier (no credit card)
-  - '3-day retention, 1 user; open-source self-host option available'
-
+  - 3-day retention, 1 user; open-source self-host option available
+paid_tier_highlights:
+  - Starter at $20/mo includes 50 GB storage with $0.40/GB overage
+  - 30-day retention requires Starter or higher tier
+  - Enterprise unlocks SAML SSO and custom retention
+  - Billing is volume-based; no per-seat or per-host fees
 pricing:
   - name: Free
     price: 0
@@ -49,18 +50,22 @@ pricing:
       - Custom contract terms
       - Direct support
     cta_url: https://www.hyperdx.io/contact
-
-paid_tier_highlights:
-  - Starter at $20/mo includes 50 GB storage with $0.40/GB overage
-  - 30-day retention requires Starter or higher tier
-  - Enterprise unlocks SAML SSO and custom retention
-  - Billing is volume-based; no per-seat or per-host fees
-
-tags: []
-
+tags:
+  - logs
+  - permanent
+  - free-plan
+  - logging
+  - observability
+  - open-source
+  - self-host
 official_url: https://www.hyperdx.io/
 pricing_url: https://www.hyperdx.io/pricing
-
-date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+facets:
+  cc_required: false
+  oss: true
+  self_host: true
+date_added: 2026-05-15T00:00:00.000Z
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'
+signup_friction:
+  requires_cc: false

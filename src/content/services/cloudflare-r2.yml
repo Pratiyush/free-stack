@@ -3,25 +3,20 @@ slug: cloudflare-r2
 category: storage
 brand_color: '#F38020'
 logo: /logos/cloudflare-r2.svg
-
 summary: S3-compatible object storage with 10 GB free storage and zero egress fees permanently.
-
 tier_type: always-free
-
 free_tier:
   - 10 GB storage
   - Zero egress fees
   - 1M Class A (write) operations/mo
   - 10M Class B (read) operations/mo
   - No per-request rate limit
-
 paid_tier_highlights:
   - Standard storage $0.015/GB-mo after 10 GB free
   - Class A ops $4.50/M, Class B ops $0.36/M after free tier
   - Infrequent Access storage at $0.01/GB-mo for cold data
   - Zero egress fees via Workers/S3 API/r2.dev
   - 30-day minimum retention applies to Infrequent Access
-
 pricing:
   - name: Free
     description: 10 GB-month free storage with no egress fees
@@ -57,12 +52,18 @@ pricing:
       - $0.90/M Class B operations
       - $0.01/GB data retrieval
       - Free egress bandwidth
-
-tags: [object-storage, s3-compatible, cdn, file-storage, cloud-storage]
-
+tags:
+  - object-storage
+  - s3-compatible
+  - cdn
+  - file-storage
+  - cloud-storage
+  - storage
+  - always-free
 official_url: https://www.cloudflare.com/products/r2/
 pricing_url: https://developers.cloudflare.com/r2/pricing/
-
+facets:
+  storage_gb: 10
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

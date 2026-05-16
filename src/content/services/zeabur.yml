@@ -4,15 +4,17 @@ category: hosting
 subcategory: permanent
 brand_color: '#6300FF'
 logo: /logos/zeabur.svg
-
 summary: Serverless plan (free)
-
 tier_type: always-free
-
 free_tier:
   - Serverless plan (free)
-  - 'Auto-sleep after inactivity (cold-start latency). Services suspended when credits exhausted until next month reset'
-
+  - Auto-sleep after inactivity (cold-start latency). Services suspended when credits exhausted until next month reset
+paid_tier_highlights:
+  - Dev at $5/mo unlocks up to 3 servers and 7-day logs
+  - Pro at $19/mo offers 10 servers, 4C8G CI, advanced logs
+  - Team at $79/mo includes 3 seats and unlimited servers
+  - 14-day free trial on Dev and Pro plans
+  - Enterprise tier for custom contracts and SLAs
 pricing:
   - name: Free
     price: 0
@@ -73,19 +75,14 @@ pricing:
       - Priority support
       - SLA available
     cta_url: https://zeabur.com/contact
-
-paid_tier_highlights:
-  - Dev at $5/mo unlocks up to 3 servers and 7-day logs
-  - Pro at $19/mo offers 10 servers, 4C8G CI, advanced logs
-  - Team at $79/mo includes 3 seats and unlimited servers
-  - 14-day free trial on Dev and Pro plans
-  - Enterprise tier for custom contracts and SLAs
-
-tags: []
-
+tags:
+  - hosting
+  - permanent
+  - always-free
+  - serverless
 official_url: https://zeabur.com/
 pricing_url: https://zeabur.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

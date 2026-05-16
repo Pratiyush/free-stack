@@ -4,15 +4,16 @@ category: search
 subcategory: permanent
 brand_color: '#888888'
 logo: /logos/tantivy.svg
-
-summary: 'Open-source (MIT)'
-
+summary: Open-source (MIT)
 tier_type: free-plan
-
 free_tier:
-  - 'Open-source (MIT)'
-  - 'Library only, no managed service; embed in your app'
-
+  - Open-source (MIT)
+  - Library only, no managed service; embed in your app
+paid_tier_highlights:
+  - This service is always-free; no paid tiers exist
+  - Tantivy is a Rust library (MIT) with no managed service
+  - Embed directly in your app; you operate your own hosting
+  - Commercial use permitted under MIT license
 pricing:
   - name: MIT License (Library)
     price: 0
@@ -27,18 +28,15 @@ pricing:
       - SIMD integer compression
       - Faceted search and aggregation collectors
     cta_url: https://github.com/quickwit-oss/tantivy
-
-paid_tier_highlights:
-  - This service is always-free; no paid tiers exist
-  - Tantivy is a Rust library (MIT) with no managed service
-  - Embed directly in your app; you operate your own hosting
-  - Commercial use permitted under MIT license
-
-tags: []
-
+tags:
+  - search
+  - permanent
+  - free-plan
+  - open-source
 official_url: https://github.com/
 pricing_url: https://github.com/quickwit-oss/tantivy
-
+facets:
+  oss: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

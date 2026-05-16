@@ -4,15 +4,16 @@ category: design
 subcategory: permanent
 brand_color: '#6965DB'
 logo: /logos/excalidraw.svg
-
-summary: 'Free (open-source)'
-
+summary: Free (open-source)
 tier_type: free-plan
-
 free_tier:
-  - 'Free (open-source)'
-  - 'No account required, fully free, end-to-end encrypted collaboration'
-
+  - Free (open-source)
+  - No account required, fully free, end-to-end encrypted collaboration
+paid_tier_highlights:
+  - Plus at $6/user/mo adds unlimited cloud-saved scenes and folders
+  - Plus unlocks team management and access controls
+  - Voice hangouts and screen sharing ship on the paid tier
+  - 14-day Plus trial available before billing
 pricing:
   - name: Free (Excalidraw open source)
     price: 0
@@ -41,18 +42,15 @@ pricing:
       - Teams management and collaboration
       - 14-day free trial
     cta_url: https://app.excalidraw.com/sign-up
-
-paid_tier_highlights:
-  - Plus at $6/user/mo adds unlimited cloud-saved scenes and folders
-  - Plus unlocks team management and access controls
-  - Voice hangouts and screen sharing ship on the paid tier
-  - 14-day Plus trial available before billing
-
-tags: []
-
+tags:
+  - design
+  - permanent
+  - free-plan
+  - open-source
 official_url: https://plus.excalidraw.com/
 pricing_url: https://plus.excalidraw.com/pricing
-
+facets:
+  oss: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

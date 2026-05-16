@@ -4,22 +4,17 @@ category: code-quality
 subcategory: permanent
 brand_color: '#F01F7A'
 logo: /logos/codecov.svg
-
 summary: Free for up to 5 users; unlimited public repos
-
 tier_type: free-plan
-
 free_tier:
   - Free for up to 5 users; unlimited public repos
   - No documented rate limits
-
 paid_tier_highlights:
   - Team ($5/user/mo) scales to 10 users, 2,500 monthly uploads
   - Pro ($12/user/mo) gives unlimited uploads and flaky-test detection
   - Bundle analysis with size detection across all paid tiers
   - Enterprise adds dedicated cloud, OKTA, IP allowlisting
   - Sentry integration support starts in Team plan
-
 pricing:
   - name: Developer
     price: 0
@@ -64,12 +59,15 @@ pricing:
       - OKTA login and IP allowlisting
       - Sr. Solutions Architect access
     billing: annual
-
-tags: []
-
+tags:
+  - code-quality
+  - permanent
+  - free-plan
+  - ci-cd
 official_url: https://about.codecov.io/
 pricing_url: https://about.codecov.io/pricing/
-
+facets:
+  team_seats: 5
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

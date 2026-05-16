@@ -4,15 +4,17 @@ category: collaboration
 subcategory: permanent
 brand_color: '#0052CC'
 logo: /logos/trello.svg
-
 summary: Trello — free tier; see the pricing page for details.
-
 tier_type: free-plan
-
 free_tier:
   - Free plan
-  - '250 automation (Butler) command runs/mo shared across all boards, no advanced checklists, no custom fields beyond basics'
-
+  - 250 automation (Butler) command runs/mo shared across all boards, no advanced checklists, no custom fields beyond basics
+paid_tier_highlights:
+  - Standard at $5/user/mo unlocks unlimited boards + card mirroring
+  - Premium at $10/user/mo adds AI + Calendar/Timeline/Dashboard views
+  - Enterprise at $17.50/user/mo includes Atlassian Guard Standard + SSO
+  - Free is limited to 10 collaborators per Workspace
+  - 1,000 Workspace commands on Standard; unlimited on Premium+
 pricing:
   - name: Free
     price: 0
@@ -56,7 +58,7 @@ pricing:
       - Simple data export
     cta_url: https://trello.com/premium
   - name: Enterprise
-    price: 17.50
+    price: 17.5
     unit: /user/month (annual)
     description: Atlassian Guard + 24/7 admin support
     billing: annual
@@ -69,19 +71,13 @@ pricing:
       - Free SSO + user provisioning
       - 24/7 enterprise admin support
     cta_url: https://trello.com/enterprise
-
-paid_tier_highlights:
-  - Standard at $5/user/mo unlocks unlimited boards + card mirroring
-  - Premium at $10/user/mo adds AI + Calendar/Timeline/Dashboard views
-  - Enterprise at $17.50/user/mo includes Atlassian Guard Standard + SSO
-  - Free is limited to 10 collaborators per Workspace
-  - 1,000 Workspace commands on Standard; unlimited on Premium+
-
-tags: []
-
+tags:
+  - collaboration
+  - permanent
+  - free-plan
 official_url: https://trello.com/
 pricing_url: https://trello.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

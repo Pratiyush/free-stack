@@ -4,15 +4,17 @@ category: translation
 subcategory: permanent
 brand_color: '#888888'
 logo: /logos/phrase.svg
-
-summary: '14-day trial only (not permanent)'
-
+summary: 14-day trial only (not permanent)
 tier_type: free-plan
-
 free_tier:
-  - '14-day trial only (not permanent)'
-  - 'Trial only -- not suitable for permanent free usage'
-
+  - 14-day trial only (not permanent)
+  - Trial only -- not suitable for permanent free usage
+paid_tier_highlights:
+  - No permanent free tier; only a 14-day trial
+  - Freelancer plan starts at $27/mo (annual) with 1 TMS seat
+  - Software UI/UX and Professional LSP at $525/mo
+  - Team $1,245/mo bundles all Phrase products
+  - Business and Enterprise priced on request (custom capacities)
 pricing:
   - name: 14-day trial
     price: 0
@@ -92,19 +94,14 @@ pricing:
       - Custom MT units
     cta_url: https://phrase.com/pricing-demo/?button_id=pricing_page_direct_enterprise
     billing: annual
-
-paid_tier_highlights:
-  - No permanent free tier; only a 14-day trial
-  - Freelancer plan starts at $27/mo (annual) with 1 TMS seat
-  - Software UI/UX and Professional LSP at $525/mo
-  - Team $1,245/mo bundles all Phrase products
-  - Business and Enterprise priced on request (custom capacities)
-
-tags: []
-
+tags:
+  - translation
+  - permanent
+  - free-plan
+  - i18n
 official_url: https://phrase.com/
 pricing_url: https://phrase.com/pricing/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

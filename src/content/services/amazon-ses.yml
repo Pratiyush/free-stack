@@ -3,24 +3,19 @@ slug: amazon-ses
 category: email
 brand_color: '#DD344C'
 logo: /logos/amazon-ses.svg
-
 summary: 'Free for 12 months (pre-Jul 2025 accounts: 3,000/month); new accounts get $200 AWS credits'
-
 tier_type: free-plan
-
 free_tier:
   - 'Free for 12 months: 3,000 message charges/month'
-  - 'Applies to outbound, inbound, and Virtual Deliverability Manager'
-  - 'New post-Jul 2025 accounts get $200 AWS credits via Free Plan'
+  - Applies to outbound, inbound, and Virtual Deliverability Manager
+  - New post-Jul 2025 accounts get $200 AWS credits via Free Plan
   - Standard AWS limits and sandbox approval needed for production sending
-
 paid_tier_highlights:
   - 'Outbound email: $0.10 per 1,000 messages after free tier'
   - 'Inbound email: $0.10 per 1,000 emails received'
   - 'Dedicated IP: $24.95/mo (standard) or $15/mo + tiered (managed)'
   - 'Virtual Deliverability Manager: $0.07 per 1k (drops to $0.02 at 100M+)'
-  - 'Mail Manager add-on for ingress, archiving, and routing'
-
+  - Mail Manager add-on for ingress, archiving, and routing
 pricing:
   - name: Free Tier
     price: 0
@@ -34,7 +29,7 @@ pricing:
       - $200 AWS credits for new accounts via Free Plan
     cta_url: https://aws.amazon.com/ses/
   - name: Outbound Email
-    price: 0.10
+    price: 0.1
     unit: /1,000 emails
     billing: usage-based
     description: Standard outbound email sending after free tier
@@ -46,7 +41,7 @@ pricing:
       - Email Validation auto $0.01 per 1,000 validations
     cta_url: https://aws.amazon.com/ses/
   - name: Inbound Email
-    price: 0.10
+    price: 0.1
     unit: /1,000 emails
     billing: usage-based
     description: Receiving emails via SES inbound endpoints
@@ -88,12 +83,12 @@ pricing:
       - $0.10 per 1k recipients sent to internet
       - $2 per GB archived; $0.19 per GB-month storage
     cta_url: https://aws.amazon.com/ses/
-
-tags: []
-
+tags:
+  - email
+  - free-plan
 official_url: https://aws.amazon.com/ses/
 pricing_url: https://aws.amazon.com/ses/pricing/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

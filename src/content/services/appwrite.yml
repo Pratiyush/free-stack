@@ -4,25 +4,20 @@ category: baas
 subcategory: permanent
 brand_color: '#FD366E'
 logo: /logos/appwrite.svg
-
 summary: '**Appwrite** — free tier; see the pricing page for details.'
-
 tier_type: free-plan
-
 free_tier:
   - 5 GB bandwidth and 2 GB storage per month
   - 750K function executions and 75K MAU
   - 1 database, 1 bucket, 2 functions per project
   - 15-minute build timeouts
-  - 'Projects pause after 7 days of inactivity (policy updated Feb 2026)'
-
+  - Projects pause after 7 days of inactivity (policy updated Feb 2026)
 paid_tier_highlights:
   - 'Pro from $25/mo: 2 TB bandwidth, 150 GB storage, 200K MAU'
   - 'Pro: unlimited databases/buckets/functions and email support'
   - 'Pro: daily backups (7-day retention), 45-min build timeouts'
-  - 'Enterprise adds SOC-2/HIPAA, SSO, 24/7 support, 90-day log retention'
-  - 'Add-ons available for additional bandwidth, storage, executions'
-
+  - Enterprise adds SOC-2/HIPAA, SSO, 24/7 support, 90-day log retention
+  - Add-ons available for additional bandwidth, storage, executions
 pricing:
   - name: Free
     price: 0
@@ -61,12 +56,18 @@ pricing:
       - Custom backup policies, 90-day log retention
       - SSO and custom org roles
     cta_url: https://cloud.appwrite.io/contact-us/enterprise
-
-tags: []
-
+tags:
+  - baas
+  - permanent
+  - free-plan
+  - backend-as-a-service
 official_url: https://appwrite.io/
 pricing_url: https://appwrite.io/pricing
-
-date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+facets:
+  storage_gb: 2
+  bandwidth_gb_month: 5
+date_added: 2026-05-15T00:00:00.000Z
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'
+inactive_account_policy:
+  days_until_deletion: 7

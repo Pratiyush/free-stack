@@ -4,15 +4,13 @@ category: baas
 subcategory: permanent
 brand_color: '#B8DBE4'
 logo: /logos/pocketbase.svg
-
-summary: 'Free (open-source, self-hosted)'
-
+summary: Free (open-source, self-hosted)
 tier_type: free-plan
-
 free_tier:
-  - 'Free (open-source, self-hosted)'
-  - 'Self-hosted only (no managed free cloud), runs on any $5/mo VPS'
-
+  - Free (open-source, self-hosted)
+  - Self-hosted only (no managed free cloud), runs on any $5/mo VPS
+paid_tier_highlights:
+  - This service is always-free; no paid tiers exist
 pricing:
   - name: Free (open source, self-hosted)
     price: 0
@@ -25,15 +23,18 @@ pricing:
       - No managed cloud or paid plans
     cta_url: https://github.com/pocketbase/pocketbase
     billing: free
-
-paid_tier_highlights:
-  - This service is always-free; no paid tiers exist
-
-tags: []
-
+tags:
+  - baas
+  - permanent
+  - free-plan
+  - backend-as-a-service
+  - open-source
+  - self-host
 official_url: https://pocketbase.io/
 pricing_url: https://pocketbase.io/
-
+facets:
+  oss: true
+  self_host: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

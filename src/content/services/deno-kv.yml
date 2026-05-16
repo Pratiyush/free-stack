@@ -4,22 +4,17 @@ category: databases
 subcategory: permanent
 brand_color: '#70FFAF'
 logo: /logos/deno-kv.svg
-
-summary: 'Free with Deno Deploy (key-value)'
-
+summary: Free with Deno Deploy (key-value)
 tier_type: always-free
-
 free_tier:
-  - 'Free with Deno Deploy (key-value)'
-  - 'Shared with Deno Deploy free tier (15 CPU-hours/mo)'
-
+  - Free with Deno Deploy (key-value)
+  - Shared with Deno Deploy free tier (15 CPU-hours/mo)
 paid_tier_highlights:
   - Pro at $20/mo lifts to 5GB KV with 1.3M reads / 900K writes
   - Builder at $200/mo includes 10 GiB KV with 5M reads / 3M writes
   - Overage at $0.75/GiB storage, $1/M reads, $2.50/M writes
   - Enterprise tier offers custom allocations
   - KV is automatically global, low-latency, ACID-compliant
-
 pricing:
   - name: Free
     price: 0
@@ -60,12 +55,14 @@ pricing:
       - 99.95% reliability SLA
       - Dedicated support
     billing: annual
-
-tags: []
-
+tags:
+  - databases
+  - permanent
+  - always-free
+  - database
 official_url: https://deno.com/
 pricing_url: https://deno.com/deploy/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

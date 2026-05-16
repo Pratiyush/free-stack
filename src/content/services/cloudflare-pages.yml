@@ -3,25 +3,20 @@ slug: cloudflare-pages
 category: hosting
 brand_color: '#F38020'
 logo: /logos/cloudflare-pages.svg
-
 summary: Static and dynamic site deployment with unlimited bandwidth and commercial use allowed at no cost.
-
 tier_type: always-free
-
 free_tier:
   - Unlimited bandwidth
   - Unlimited requests
   - 500 builds/mo
   - 20K files per site
   - 20 min build timeout
-
 paid_tier_highlights:
   - Workers Paid ($5/mo) unlocks 10M requests/mo on Pages Functions
   - 30M CPU-ms included on Paid; usage-based overages after
   - KV reads/writes scale into millions on Paid
   - 200K Workers Logs events/day free, 20M/mo on Paid
   - Hyperdrive unlimited DB queries on Paid
-
 pricing:
   - name: Free
     description: Static + dynamic site hosting at no cost
@@ -49,12 +44,17 @@ pricing:
       - 1 GB KV storage ($0.50/GB-mo after)
       - 20M Workers Logs events/mo
       - Unlimited Hyperdrive queries
-
-tags: [static-hosting, cdn, deployment, edge-computing, serverless]
-
+tags:
+  - static-hosting
+  - cdn
+  - deployment
+  - edge-computing
+  - serverless
+  - hosting
+  - always-free
 official_url: https://pages.cloudflare.com/
 pricing_url: https://www.cloudflare.com/plans/developer-platform/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

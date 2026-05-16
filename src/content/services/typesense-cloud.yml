@@ -4,15 +4,17 @@ category: search
 subcategory: permanent
 brand_color: '#0E2030'
 logo: /logos/typesense-cloud.svg
-
-summary: 'One-time free trial'
-
+summary: One-time free trial
 tier_type: free-plan
-
 free_tier:
-  - 'One-time free trial'
+  - One-time free trial
   - ~30 days continuous use; no monthly replenishment
-
+paid_tier_highlights:
+  - Pay only for cluster size; no record or query limits
+  - Add HA, GPU acceleration, or SDN per cluster
+  - Free critical production support included
+  - Algolia migration program for high-spend customers
+  - Bandwidth charged separately for outbound transfer
 pricing:
   - name: Free trial
     price: 0
@@ -48,19 +50,13 @@ pricing:
       - Benchmarking and advisory board access
       - Dedicated migration help
     cta_url: https://typesense.org/algolia-alternative/
-
-paid_tier_highlights:
-  - Pay only for cluster size; no record or query limits
-  - Add HA, GPU acceleration, or SDN per cluster
-  - Free critical production support included
-  - Algolia migration program for high-spend customers
-  - Bandwidth charged separately for outbound transfer
-
-tags: []
-
+tags:
+  - search
+  - permanent
+  - free-plan
 official_url: https://cloud.typesense.org/
 pricing_url: https://cloud.typesense.org/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

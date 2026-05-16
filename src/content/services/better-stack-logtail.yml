@@ -4,22 +4,17 @@ category: logs
 subcategory: permanent
 brand_color: '#000000'
 logo: /logos/better-stack-logtail.svg
-
 summary: Better Stack (Logtail) — free tier; see the pricing page for details.
-
 tier_type: free-plan
-
 free_tier:
   - Free plan
-  - '3-day log retention; paid starts at $24/mo for 30GB + 30-day retention'
-
+  - 3-day log retention; paid starts at $24/mo for 30GB + 30-day retention
 paid_tier_highlights:
   - Responder seat unlocks Uptime + Telemetry at $29-$34/user/mo
   - Telemetry bundles scale 40 GB to 700 GB across logs/metrics/traces
   - AI SRE root-cause analysis billed per-token usage
   - Additional status pages, audit logs, SSO available as add-ons
   - 60-day money-back guarantee on all paid plans
-
 pricing:
   - name: Team Member (Free)
     description: Telemetry-only seat with Slack and email alerts
@@ -64,19 +59,22 @@ pricing:
       - 90-day error retention
   - name: Enterprise add-ons
     description: SSO, audit logs, white-label, custom reporting
-    price: 'Contact sales'
+    price: Contact sales
     billing: annual
     features:
       - SSO (Azure/Okta) at $5/user/mo
       - Audit logs at $250/mo
       - White-label status pages
       - SLA/SLI reporting
-
-tags: []
-
+tags:
+  - logs
+  - permanent
+  - free-plan
+  - logging
+  - observability
 official_url: https://betterstack.com/
 pricing_url: https://betterstack.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

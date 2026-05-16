@@ -4,15 +4,16 @@ category: containers
 subcategory: permanent
 brand_color: '#181717'
 logo: /logos/github-container-registry.svg
-
 summary: Free for public images (currently free)
-
 tier_type: free-plan
-
 free_tier:
   - Free for public images (currently free)
-  - 'No rate limit on public images; Actions pulls always free; fair-use policy on excessive egress'
-
+  - No rate limit on public images; Actions pulls always free; fair-use policy on excessive egress
+paid_tier_highlights:
+  - Pro/Team at $4/user/mo lifts quota to 2 GB storage and 10 GB transfer
+  - Enterprise at $21/user/mo includes 50 GB storage and 100 GB transfer
+  - Public container images are always free, regardless of plan
+  - Inbound data transfer is free; only egress counts toward quota
 pricing:
   - name: Free
     price: 0
@@ -69,18 +70,16 @@ pricing:
       - Data transfer per-GB
       - Pricing calculator available
       - Public images and inbound always free
-
-paid_tier_highlights:
-  - Pro/Team at $4/user/mo lifts quota to 2 GB storage and 10 GB transfer
-  - Enterprise at $21/user/mo includes 50 GB storage and 100 GB transfer
-  - Public container images are always free, regardless of plan
-  - Inbound data transfer is free; only egress counts toward quota
-
-tags: []
-
+tags:
+  - containers
+  - permanent
+  - free-plan
+  - docker
 official_url: https://docs.github.com/
 pricing_url: https://docs.github.com/en/billing/concepts/product-billing/github-packages
-
-date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+facets: {}
+date_added: 2026-05-15T00:00:00.000Z
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'
+tos_red_flags:
+  - fair-use clause

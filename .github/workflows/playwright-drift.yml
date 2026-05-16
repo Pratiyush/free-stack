@@ -1,0 +1,106 @@
+name: Playwright pricing-drift
+
+on:
+  schedule:
+    # 09:00 UTC every Monday.
+    - cron: '0 9 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  drift:
+    name: Run Playwright drift verifier
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Build report stamp
+        id: stamp
+        run: echo "stamp=$(date -u +%Y%m%d)" >> "$GITHUB_OUTPUT"
+
+      - name: Ensure data directory
+        run: mkdir -p data
+
+      - name: Run drift verifier
+        id: drift
+        run: |
+          set +e
+          pnpm playwright test tests/pricing-drift.spec.ts --reporter=list,json 2>&1 | tee "data/drift-${{ steps.stamp.outputs.stamp }}.log"
+          exit_code=${PIPESTATUS[0]}
+          echo "exit_code=${exit_code}" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Build issue body on failure
+        if: steps.drift.outputs.exit_code != '0'
+        id: issue
+        run: |
+          {
+            echo "# Pricing drift detected (Playwright)"
+            echo ""
+            echo "The weekly Playwright pricing-drift verifier (story 5.8) found mismatches between the live pricing pages and \`src/content/services/*.yml\`."
+            echo ""
+            echo "## Run details"
+            echo ""
+            echo "- Workflow: \`${{ github.workflow }}\`"
+            echo "- Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            echo "- Stamp: ${{ steps.stamp.outputs.stamp }}"
+            echo ""
+            echo "## Failing services"
+            echo ""
+            echo "Each block lists the slug, expected price, and pricing URL from the YAML — the price string wasn't found in the rendered HTML."
+            echo ""
+            echo '```'
+            grep -E "(Pricing drift detected for|URL:|expected price)" "data/drift-${{ steps.stamp.outputs.stamp }}.log" || cat "data/drift-${{ steps.stamp.outputs.stamp }}.log"
+            echo '```'
+            echo ""
+            echo "## Next steps"
+            echo ""
+            echo "1. Open each failing pricing URL and confirm the live price."
+            echo "2. Update the YAML at \`src/content/services/<slug>.yml\` to match."
+            echo "3. Bump \`date_verified\` to today's date."
+            echo "4. Reference this issue in the PR title."
+            echo ""
+            echo "See \`docs/playwright-verifier.md\` for the full triage runbook."
+          } > "data/drift-issue-${{ steps.stamp.outputs.stamp }}.md"
+          echo "path=data/drift-issue-${{ steps.stamp.outputs.stamp }}.md" >> "$GITHUB_OUTPUT"
+
+      - name: Upload drift logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-drift-${{ steps.stamp.outputs.stamp }}
+          path: |
+            data/drift-${{ steps.stamp.outputs.stamp }}.log
+            playwright-report/
+          if-no-files-found: warn
+
+      - name: Open issue on drift
+        if: steps.drift.outputs.exit_code != '0'
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: 'Pricing drift detected (Playwright) — ${{ steps.stamp.outputs.stamp }}'
+          content-filepath: ${{ steps.issue.outputs.path }}
+          labels: pricing-drift
+
+      - name: Fail the run if drift was detected
+        if: steps.drift.outputs.exit_code != '0'
+        run: exit 1

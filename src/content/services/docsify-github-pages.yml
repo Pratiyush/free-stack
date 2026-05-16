@@ -4,15 +4,13 @@ category: documentation
 subcategory: permanent
 brand_color: '#2ECE53'
 logo: /logos/docsify-github-pages.svg
-
 summary: Fully free (OSS + free hosting)
-
 tier_type: free-plan
-
 free_tier:
   - Fully free (OSS + free hosting)
-  - 'Client-side rendered; same GitHub Pages limits (1GB site, 100GB bandwidth/mo)'
-
+  - Client-side rendered; same GitHub Pages limits (1GB site, 100GB bandwidth/mo)
+paid_tier_highlights:
+  - This service is always-free; no paid tiers exist
 pricing:
   - name: Free (MIT open source)
     price: 0
@@ -26,15 +24,15 @@ pricing:
       - Themes and plugins ecosystem
       - Voluntary Open Collective sponsorship only
     cta_url: https://docsify.js.org/
-
-paid_tier_highlights:
-  - This service is always-free; no paid tiers exist
-
-tags: []
-
+tags:
+  - documentation
+  - permanent
+  - free-plan
+  - docs
 official_url: https://docsify.js.org/
 pricing_url: https://docsify.js.org/
-
+facets:
+  bandwidth_gb_month: 100
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

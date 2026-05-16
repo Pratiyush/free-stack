@@ -4,18 +4,19 @@ category: dev-tools
 subcategory: permanent
 brand_color: '#F26207'
 logo: /logos/replit.svg
-
 summary: Starter plan with free daily Agent credits, built-in database, and up to 1 published project.
-
 tier_type: free-plan
-
 free_tier:
   - Free daily Agent credits
   - Built-in database for full-stack apps
   - Create slides, videos, animations
   - Publish up to 1 project
   - Compute caps enforced (paused on inactivity)
-
+paid_tier_highlights:
+  - Core ($25/mo) adds $25 credits and 5 collaborators
+  - Pro ($100/mo) brings $100 credits and 10 parallel agents
+  - Pro unlocks premium AI models and priority support
+  - Enterprise adds SSO/SAML, dedicated account management
 pricing:
   - name: Starter
     price: 0
@@ -65,18 +66,18 @@ pricing:
       - Data warehouse integrations
       - Dedicated account management
     cta_url: https://replit.com/pricing
-
-paid_tier_highlights:
-  - Core ($25/mo) adds $25 credits and 5 collaborators
-  - Pro ($100/mo) brings $100 credits and 10 parallel agents
-  - Pro unlocks premium AI models and priority support
-  - Enterprise adds SSO/SAML, dedicated account management
-
-tags: [ide, dev-environment, agents, hosting, collaboration]
-
+tags:
+  - ide
+  - dev-environment
+  - agents
+  - hosting
+  - collaboration
+  - dev-tools
+  - permanent
+  - free-plan
 official_url: https://replit.com/
 pricing_url: https://replit.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

@@ -4,15 +4,16 @@ category: maps
 subcategory: permanent
 brand_color: '#00AFAA'
 logo: /logos/here.svg
-
-summary: '1,000 requests/day (Limited plan, no card); 30K requests/mo (Base plan with card); 250K/mo (Freemium)'
-
+summary: 1,000 requests/day (Limited plan, no card); 30K requests/mo (Base plan with card); 250K/mo (Freemium)
 tier_type: free-plan
-
 free_tier:
-  - '1,000 requests/day (Limited plan, no card); 30K requests/mo (Base plan with card); 250K/mo (Freemium)'
+  - 1,000 requests/day (Limited plan, no card); 30K requests/mo (Base plan with card); 250K/mo (Freemium)
   - 5 req/sec on Limited; higher on Base/Freemium
-
+paid_tier_highlights:
+  - Base plan adds pay-as-you-go past 30K free monthly transactions
+  - Pro/Custom plans negotiate volume discounts and SLAs with HERE sales
+  - Free Limited tier has no credit card requirement; capped at 1K/day
+  - Higher request-per-second rates require Base or above
 pricing:
   - name: Limited
     price: 0
@@ -49,18 +50,15 @@ pricing:
       - Premium developer support
       - Bulk geocoding and routing
     cta_url: https://www.here.com/contact
-
-paid_tier_highlights:
-  - Base plan adds pay-as-you-go past 30K free monthly transactions
-  - Pro/Custom plans negotiate volume discounts and SLAs with HERE sales
-  - Free Limited tier has no credit card requirement; capped at 1K/day
-  - Higher request-per-second rates require Base or above
-
-tags: []
-
+tags:
+  - maps
+  - permanent
+  - free-plan
+  - geolocation
 official_url: https://www.here.com/
 pricing_url: https://www.here.com/get-started/pricing
-
+facets:
+  requests_per_day: 1000
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

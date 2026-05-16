@@ -4,15 +4,13 @@ category: design
 subcategory: permanent
 brand_color: '#FF4785'
 logo: /logos/storybook.svg
-
-summary: 'Free (open-source)'
-
+summary: Free (open-source)
 tier_type: free-plan
-
 free_tier:
-  - 'Free (open-source)'
-  - 'Self-hosted, no usage limits, MIT license'
-
+  - Free (open-source)
+  - Self-hosted, no usage limits, MIT license
+paid_tier_highlights:
+  - This service is always-free; no paid tiers exist
 pricing:
   - name: Open Source (MIT)
     price: 0
@@ -26,15 +24,17 @@ pricing:
       - Visual testing addon support
       - Cross-framework support (React, Vue, etc.)
     cta_url: https://storybook.js.org/
-
-paid_tier_highlights:
-  - This service is always-free; no paid tiers exist
-
-tags: []
-
+tags:
+  - design
+  - permanent
+  - free-plan
+  - open-source
+  - self-host
 official_url: https://storybook.js.org/
 pricing_url: https://storybook.js.org/
-
+facets:
+  oss: true
+  self_host: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

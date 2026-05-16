@@ -4,15 +4,17 @@ category: code-quality
 subcategory: permanent
 brand_color: '#0E1112'
 logo: /logos/qlty-formerly-codeclimate.svg
-
 summary: Free CLI for all use (no contributor limits); Qlty Cloud free for unlimited private contributors
-
 tier_type: free-plan
-
 free_tier:
   - Free CLI for all use (no contributor limits); Qlty Cloud free for unlimited private contributors
   - No documented rate limits
-
+paid_tier_highlights:
+  - Free plan keeps lint, format, coverage with unlimited contributors
+  - Free includes 1K analysis minutes and 100 AI autofixes per month
+  - Pro $20/contributor/mo unlocks 20K minutes, 5K AI autofixes, history
+  - Enterprise $30/contributor/mo adds SLA, org policies, named manager
+  - Brand migrated from Code Climate to Qlty in 2024 (codeclimate.com 301s)
 pricing:
   - name: Free
     price: 0
@@ -56,19 +58,14 @@ pricing:
       - 75,000 analysis minutes/month
     cta_url: https://docs.qlty.sh/cli/quickstart
     billing: monthly
-
-paid_tier_highlights:
-  - Free plan keeps lint, format, coverage with unlimited contributors
-  - Free includes 1K analysis minutes and 100 AI autofixes per month
-  - Pro $20/contributor/mo unlocks 20K minutes, 5K AI autofixes, history
-  - Enterprise $30/contributor/mo adds SLA, org policies, named manager
-  - Brand migrated from Code Climate to Qlty in 2024 (codeclimate.com 301s)
-
-tags: []
-
+tags:
+  - code-quality
+  - permanent
+  - free-plan
+  - ci-cd
 official_url: https://qlty.sh/
 pricing_url: https://qlty.sh/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

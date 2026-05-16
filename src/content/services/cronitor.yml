@@ -3,22 +3,17 @@ slug: cronitor
 category: analytics
 brand_color: '#888888'
 logo: /logos/cronitor.svg
-
 summary: Hacker (free)
-
 tier_type: free-plan
-
 free_tier:
   - Hacker (free)
   - 5 monitors, email + Slack alerts, basic status page
-
 paid_tier_highlights:
   - Business at $2/mo per monitor + $5/mo per extra user
   - Unlimited API requests, 12-month data retention
   - 10 alert integrations and automatic email reports
   - SAML SSO add-on at +$5/user/mo on Business
   - Enterprise from $6,000/yr with dedicated engineer
-
 pricing:
   - name: Hacker
     price: 0
@@ -32,7 +27,7 @@ pricing:
       - No premium integrations
     billing: free
   - name: Business
-    price: '$2/monitor + $5/user'
+    price: $2/monitor + $5/user
     unit: /month
     description: Pay-as-you-go with 14-day free trial, volume discounts
     features:
@@ -44,7 +39,7 @@ pricing:
       - SAML SSO available (+$5/user/mo)
     billing: monthly
   - name: Enterprise
-    price: '$6,000+/yr'
+    price: $6,000+/yr
     unit: /year
     description: Enterprise-grade service and support
     features:
@@ -55,12 +50,12 @@ pricing:
       - Flexible invoice billing
       - SCIM access controls
     billing: annual
-
-tags: []
-
+tags:
+  - analytics
+  - free-plan
 official_url: https://cronitor.io/
 pricing_url: https://cronitor.io/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

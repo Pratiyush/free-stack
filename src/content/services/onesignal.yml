@@ -4,15 +4,17 @@ category: mobile
 subcategory: permanent
 brand_color: '#E04F2A'
 logo: /logos/onesignal.svg
-
 summary: '**OneSignal** — free tier; see the pricing page for details.'
-
 tier_type: free-plan
-
 free_tier:
   - Free plan
-  - '1 Journey (2 steps), 6 segments, 2 data tags; 18-month inactive subscriber retention'
-
+  - 1 Journey (2 steps), 6 segments, 2 data tags; 18-month inactive subscriber retention
+paid_tier_highlights:
+  - Unified platform - push, email, SMS/RCS, in-app messaging
+  - Growth charges by send volume for email/SMS, MAU for push
+  - Professional/Enterprise offer volume-based discounting
+  - Enterprise tier includes 24/7 prioritized SRE on-call support
+  - Advanced analytics and custom tracking at higher tiers
 pricing:
   - name: Free
     price: 0
@@ -61,19 +63,13 @@ pricing:
       - Dedicated success manager
       - Advanced user permissions
     cta_url: https://onesignal.com/contact
-
-paid_tier_highlights:
-  - Unified platform - push, email, SMS/RCS, in-app messaging
-  - Growth charges by send volume for email/SMS, MAU for push
-  - Professional/Enterprise offer volume-based discounting
-  - Enterprise tier includes 24/7 prioritized SRE on-call support
-  - Advanced analytics and custom tracking at higher tiers
-
-tags: []
-
+tags:
+  - mobile
+  - permanent
+  - free-plan
 official_url: https://onesignal.com/
 pricing_url: https://onesignal.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

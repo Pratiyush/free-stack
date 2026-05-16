@@ -4,15 +4,16 @@ category: containers
 subcategory: permanent
 brand_color: '#FFAE33'
 logo: /logos/gitpod.svg
-
 summary: Free tier (permanent)
-
 tier_type: free-plan
-
 free_tier:
   - Free tier (permanent)
-  - 'Up to 3 parallel environments; auto-delete after 3 days of inactivity; paid starts at $9/mo'
-
+  - Up to 3 parallel environments; auto-delete after 3 days of inactivity; paid starts at $9/mo
+paid_tier_highlights:
+  - Core from $20/mo lifts cap to 100 team members and 32-core machines
+  - Core adds prebuilds, GPU support, RBAC
+  - Enterprise offers VPC deployment with SSO, audit, dedicated support
+  - Free is one-time $10 credit (not recurring) — Gitpod rebranded to Ona
 pricing:
   - name: Free
     price: 0
@@ -51,18 +52,16 @@ pricing:
       - Dedicated account manager
       - Custom environment policies
       - Warm pools for instant starts
-
-paid_tier_highlights:
-  - Core from $20/mo lifts cap to 100 team members and 32-core machines
-  - Core adds prebuilds, GPU support, RBAC
-  - Enterprise offers VPC deployment with SSO, audit, dedicated support
-  - Free is one-time $10 credit (not recurring) — Gitpod rebranded to Ona
-
-tags: []
-
+tags:
+  - containers
+  - permanent
+  - free-plan
+  - docker
 official_url: https://gitpod.io/
 pricing_url: https://gitpod.io/pricing
-
-date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+facets: {}
+date_added: 2026-05-15T00:00:00.000Z
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'
+inactive_account_policy:
+  days_until_deletion: 3

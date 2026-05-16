@@ -4,15 +4,16 @@ category: collaboration
 subcategory: permanent
 brand_color: '#4A154B'
 logo: /logos/slack.svg
-
 summary: Slack — free tier; see the pricing page for details.
-
 tier_type: free-plan
-
 free_tier:
   - Free plan
-  - 'No group video calls, no shared channels, no workflow builder, history hidden (not deleted) after 90 days'
-
+  - No group video calls, no shared channels, no workflow builder, history hidden (not deleted) after 90 days
+paid_tier_highlights:
+  - Pro (EUR 8.25/user) unlocks unlimited history and apps
+  - Business+ (EUR 18/user) adds advanced AI and DLP
+  - Business+ brings AI workflow generation
+  - Enterprise+ provides unlimited workspaces and 24/7 priority support
 pricing:
   - name: Free
     price: 0
@@ -63,18 +64,13 @@ pricing:
       - Information barriers and legal holds
       - 24/7 priority support (4hr SLA)
     cta_url: https://slack.com/pricing
-
-paid_tier_highlights:
-  - Pro (EUR 8.25/user) unlocks unlimited history and apps
-  - Business+ (EUR 18/user) adds advanced AI and DLP
-  - Business+ brings AI workflow generation
-  - Enterprise+ provides unlimited workspaces and 24/7 priority support
-
-tags: []
-
+tags:
+  - collaboration
+  - permanent
+  - free-plan
 official_url: https://slack.com/
 pricing_url: https://slack.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

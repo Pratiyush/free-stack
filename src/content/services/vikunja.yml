@@ -4,15 +4,17 @@ category: project-management
 subcategory: permanent
 brand_color: '#196AFF'
 logo: /logos/vikunja.svg
-
-summary: 'Fully free and open source (AGPLv3); self-hosted'
-
+summary: Fully free and open source (AGPLv3); self-hosted
 tier_type: free-plan
-
 free_tier:
-  - 'Fully free and open source (AGPLv3); self-hosted'
-  - 'N/A -- self-hosted'
-
+  - Fully free and open source (AGPLv3); self-hosted
+  - N/A -- self-hosted
+paid_tier_highlights:
+  - Self-hosted is fully free under AGPLv3
+  - Vikunja Cloud handles managed hosting, updates, and backups
+  - Cloud pricing shown on signup at app.vikunja.cloud
+  - Same feature set in cloud and self-hosted
+  - Zero-maintenance option for teams that don't want to self-host
 pricing:
   - name: Self-hosted (AGPLv3)
     price: 0
@@ -36,19 +38,17 @@ pricing:
       - Zero maintenance required
       - Pricing on cloud signup
     cta_url: https://app.vikunja.cloud/
-
-paid_tier_highlights:
-  - Self-hosted is fully free under AGPLv3
-  - Vikunja Cloud handles managed hosting, updates, and backups
-  - Cloud pricing shown on signup at app.vikunja.cloud
-  - Same feature set in cloud and self-hosted
-  - Zero-maintenance option for teams that don't want to self-host
-
-tags: []
-
+tags:
+  - project-management
+  - permanent
+  - free-plan
+  - open-source
+  - self-host
 official_url: https://vikunja.io/
 pricing_url: https://vikunja.io/
-
+facets:
+  oss: true
+  self_host: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

@@ -9,8 +9,10 @@
   },
   "scripts": {
     "dev": "astro dev",
+    "prebuild": "node scripts/generate-og-cards.mjs",
     "build": "astro build",
     "preview": "astro preview",
+    "og": "node scripts/generate-og-cards.mjs",
     "astro": "astro",
     "lint": "prettier --check .",
     "lint:fix": "prettier --write .",
@@ -19,7 +21,9 @@
     "new:service": "node scripts/new-service.mjs",
     "migrate-md": "node scripts/migrate-md-to-yaml.mjs",
     "audit-services": "node scripts/audit-services.mjs",
-    "bulk-fetch-logos": "node scripts/bulk-fetch-logos.mjs"
+    "bulk-fetch-logos": "node scripts/bulk-fetch-logos.mjs",
+    "drift": "playwright test tests/pricing-drift.spec.ts",
+    "drift:identify": "node scripts/identify-js-rendered-services.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.12",
@@ -35,6 +39,8 @@
     "zod": "^3.25.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@resvg/resvg-js": "^2.6.2",
     "@types/node": "^22.10.0",
     "js-yaml": "^4.1.0",
     "prettier": "^3.5.0",

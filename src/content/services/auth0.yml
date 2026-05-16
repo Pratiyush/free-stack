@@ -3,11 +3,8 @@ slug: auth0
 category: auth
 brand_color: '#EB5424'
 logo: /logos/auth0.svg
-
 summary: Identity platform with 25K free MAU, custom domains, social/enterprise SSO, and RBAC included.
-
 tier_type: free-plan
-
 free_tier:
   - 25K monthly active users (B2C and B2B)
   - Unlimited social connections, 1 Enterprise Connection
@@ -15,14 +12,12 @@ free_tier:
   - Custom domains and 5 Organizations
   - Self-Service SSO (B2B) and basic attack protection
   - Community support; no credit card
-
 paid_tier_highlights:
-  - 'B2C Essentials from $35/mo adds pro MFA, 10 Orgs, audit log streaming'
-  - 'B2C Professional from $240/mo adds custom DB, enterprise MFA, Security Center'
-  - 'B2B Essentials from $150/mo adds unlimited Orgs and 3 SSO connections'
-  - 'B2B Professional from $800/mo adds custom token exchange, 5 SSO conns'
-  - 'Enterprise tiers add 99.99% SLA, private deployment, custom limits'
-
+  - B2C Essentials from $35/mo adds pro MFA, 10 Orgs, audit log streaming
+  - B2C Professional from $240/mo adds custom DB, enterprise MFA, Security Center
+  - B2B Essentials from $150/mo adds unlimited Orgs and 3 SSO connections
+  - B2B Professional from $800/mo adds custom token exchange, 5 SSO conns
+  - Enterprise tiers add 99.99% SLA, private deployment, custom limits
 pricing:
   - name: Free
     price: 0
@@ -100,12 +95,20 @@ pricing:
       - Enterprise administration and support
       - Advanced security features
     cta_url: https://auth0.com/contact-us/sales
-
-tags: [authentication, sso, identity, mfa, enterprise]
-
+tags:
+  - authentication
+  - sso
+  - identity
+  - mfa
+  - enterprise
+  - auth
+  - free-plan
 official_url: https://auth0.com/
 pricing_url: https://auth0.com/pricing
-
-date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+facets:
+  cc_required: false
+date_added: 2026-05-15T00:00:00.000Z
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'
+signup_friction:
+  requires_cc: false

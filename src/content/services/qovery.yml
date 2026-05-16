@@ -4,15 +4,16 @@ category: paas
 subcategory: permanent
 brand_color: '#888888'
 logo: /logos/qovery.svg
-
-summary: 'Free plan (BYOC -- bring your own cloud)'
-
+summary: Free plan (BYOC -- bring your own cloud)
 tier_type: free-plan
-
 free_tier:
-  - 'Free plan (BYOC -- bring your own cloud)'
-  - 'Deploys to **your own** AWS/GCP/Azure account (you pay cloud infra costs); Qovery layer is free'
-
+  - Free plan (BYOC -- bring your own cloud)
+  - Deploys to **your own** AWS/GCP/Azure account (you pay cloud infra costs); Qovery layer is free
+paid_tier_highlights:
+  - Starter (free) deploys to your AWS/GCP/Azure with 3 users and 50 envs
+  - Team $899/mo for 10 users, 2 clusters, 5K deploy minutes
+  - Business $1,999/mo adds SSO, 3 clusters, 99.9% SLA
+  - Enterprise (custom) for on-prem/self-host with 24/7 support
 pricing:
   - name: Starter
     price: 0
@@ -64,18 +65,14 @@ pricing:
       - 24/7 support and dedicated CSM
     cta_url: https://qovery.com/book-a-demo
     billing: annual
-
-paid_tier_highlights:
-  - Starter (free) deploys to your AWS/GCP/Azure with 3 users and 50 envs
-  - Team $899/mo for 10 users, 2 clusters, 5K deploy minutes
-  - Business $1,999/mo adds SSO, 3 clusters, 99.9% SLA
-  - Enterprise (custom) for on-prem/self-host with 24/7 support
-
-tags: []
-
+tags:
+  - paas
+  - permanent
+  - free-plan
+  - platform
 official_url: https://www.qovery.com/
 pricing_url: https://www.qovery.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

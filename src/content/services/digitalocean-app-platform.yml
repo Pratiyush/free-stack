@@ -4,23 +4,18 @@ category: paas
 subcategory: permanent
 brand_color: '#0080FF'
 logo: /logos/digitalocean-app-platform.svg
-
 summary: '**DigitalOcean App Platform** — free tier; see the pricing page for details.'
-
 tier_type: free-plan
-
 free_tier:
   - Free plan
-  - 'Static sites only on free tier, no dynamic apps; additional static apps $3/mo'
+  - Static sites only on free tier, no dynamic apps; additional static apps $3/mo
   - Up to 3 static-site apps with 1 GiB transfer each
-
 paid_tier_highlights:
   - Paid container instances start at $5/mo
   - Container sizes range $5–$50/mo based on vCPU/memory
   - Horizontal, vertical, and CPU-based autoscaling
   - Managed databases (Development and Production)
   - Up to 10 deploy revisions for rollbacks
-
 pricing:
   - name: Free
     price: 0
@@ -47,12 +42,14 @@ pricing:
       - Log forwarding, dedicated egress IP
       - Up to 10 revisions for rollbacks
     billing: monthly
-
-tags: []
-
+tags:
+  - paas
+  - permanent
+  - free-plan
+  - platform
 official_url: https://www.digitalocean.com/
 pricing_url: https://www.digitalocean.com/pricing/app-platform
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

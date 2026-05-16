@@ -22,6 +22,13 @@ export const SUBCATEGORIES = ['permanent', 'expiring-credits', 'limited'];
 
 export const BILLING_TYPES = ['monthly', 'annual', 'one-time', 'usage-based', 'free'];
 
+// v2.0.0 — "capture every piece of data" expansion. Optional blocks the catalog
+// can fill in over time without re-touching every YAML. Renderers may surface
+// subsets; the goal is to model what *exists* so future features have data.
+export const COMPLIANCE_CERTS = ['SOC2', 'HIPAA', 'GDPR', 'ISO27001', 'PCI-DSS', 'CCPA'];
+export const SUPPORT_SLA_TIERS = ['free', 'basic', 'premium'];
+export const SUPPORT_AVAILABILITY = ['business-hours', '24x7'];
+
 export const pricingTier = z.object({
   name: z.string(),
   description: z.string().optional(),
@@ -91,6 +98,78 @@ export const serviceSchema = z.object({
       // Operational
       support_channels: z.array(z.enum(['community', 'email', 'chat', 'phone'])).optional(),
       data_retention_days: z.number().int().nonnegative().nullable().optional(),
+    })
+    .partial()
+    .optional(),
+  // v2.0.0 — capture-everything expansion. Each block is optional and partial;
+  // a service may fill any subset. Renderers should null-check every key.
+  signup_friction: z
+    .object({
+      requires_cc: z.boolean().optional(),
+      phone_verification: z.boolean().optional(),
+      github_gate: z.boolean().optional(),
+      email_confirmation: z.boolean().optional(),
+    })
+    .partial()
+    .optional(),
+  free_tier_limits: z
+    .object({
+      auto_pause_threshold_days: z.number().int().nonnegative().optional(),
+      cold_start_latency_ms: z.number().int().nonnegative().optional(),
+      geographic_regions: z.array(z.string()).optional(),
+      account_age_gate_days: z.number().int().nonnegative().optional(),
+    })
+    .partial()
+    .optional(),
+  regional_pricing: z
+    .array(
+      z.object({
+        region: z.string(),
+        price: z.number(),
+        currency: z.string().length(3),
+        notes: z.string().optional(),
+      }),
+    )
+    .optional(),
+  tos_red_flags: z.array(z.string().min(3)).optional(),
+  refund_policy: z
+    .object({
+      days: z.number().int().nonnegative().optional(),
+      percentage: z.number().nonnegative().max(100).optional(),
+      notes: z.string().optional(),
+    })
+    .partial()
+    .optional(),
+  support_sla: z
+    .object({
+      tier: z.enum(SUPPORT_SLA_TIERS).optional(),
+      response_time_hours: z.number().nonnegative().optional(),
+      availability: z.enum(SUPPORT_AVAILABILITY).optional(),
+    })
+    .partial()
+    .optional(),
+  compliance_certifications: z.array(z.enum(COMPLIANCE_CERTS)).optional(),
+  inactive_account_policy: z
+    .object({
+      days_until_deletion: z.number().int().nonnegative().optional(),
+      warning_days: z.number().int().nonnegative().optional(),
+      data_recovery_possible: z.boolean().optional(),
+    })
+    .partial()
+    .optional(),
+  rate_limits: z
+    .object({
+      requests_per_second: z.number().int().nonnegative().optional(),
+      concurrent_connections: z.number().int().nonnegative().optional(),
+      burst_allowance: z.number().int().nonnegative().optional(),
+    })
+    .partial()
+    .optional(),
+  contract_terms: z
+    .object({
+      min_commitment_months: z.number().int().nonnegative().optional(),
+      auto_renewal: z.boolean().optional(),
+      cancellation_notice_days: z.number().int().nonnegative().optional(),
     })
     .partial()
     .optional(),

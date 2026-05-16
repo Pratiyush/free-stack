@@ -4,15 +4,16 @@ category: security
 subcategory: permanent
 brand_color: '#4C4A73'
 logo: /logos/snyk.svg
-
 summary: '**Snyk** — free tier; see the pricing page for details.'
-
 tier_type: free-plan
-
 free_tier:
   - Free plan
-  - "IDE scans don't count toward limits; suitable for 1-3 private repos"
-
+  - IDE scans don't count toward limits; suitable for 1-3 private repos
+paid_tier_highlights:
+  - Team (from $25/dev) adds Jira and 1K tests/month
+  - Ignite ($1,260/dev/yr) brings advanced risk factors
+  - Ignite includes SCA, SAST, IaC, Container scanning
+  - Enterprise adds FedRAMP and multi-org support
 pricing:
   - name: Free
     price: 0
@@ -63,18 +64,13 @@ pricing:
       - Snyk Learning Management add-on
       - FedRAMP compliance available
     cta_url: https://snyk.io/plans/
-
-paid_tier_highlights:
-  - Team (from $25/dev) adds Jira and 1K tests/month
-  - Ignite ($1,260/dev/yr) brings advanced risk factors
-  - Ignite includes SCA, SAST, IaC, Container scanning
-  - Enterprise adds FedRAMP and multi-org support
-
-tags: []
-
+tags:
+  - security
+  - permanent
+  - free-plan
 official_url: https://snyk.io/
 pricing_url: https://snyk.io/plans/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

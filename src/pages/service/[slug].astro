@@ -139,6 +139,8 @@ const footnotes = collectSources(sources);
   title={name}
   description={summary}
   canonical={`https://freestack.is-a.dev/service/${service.id}`}
+  ogImage={`/og/${service.id}.png`}
+  ogType="article"
 >
   <script slot="head" type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)} />
   <article class="service-page" style={`--accent: ${accent};`}>

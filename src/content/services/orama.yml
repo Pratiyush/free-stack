@@ -3,18 +3,20 @@ slug: orama
 category: search
 brand_color: '#000000'
 logo: /logos/orama.svg
-
 summary: Full-text, vector, and hybrid search with 100K docs per index, 3 indexes, and unlimited queries.
-
 tier_type: always-free
-
 free_tier:
   - 3 indexes
   - 100K docs per index
   - Unlimited search queries (full-text, vector, hybrid)
   - 5 user segments
   - 3 triggers per index
-
+paid_tier_highlights:
+  - Project capacity scales from 2 to unlimited
+  - Document limits grow from 500 to 100,000+ per project
+  - AI sessions scale from 500 to 50,000+ included
+  - Analytics retention extends from 60 days to unlimited
+  - Support upgrades from community to mail/Slack/phone
 pricing:
   - name: Base (Free)
     price: 0
@@ -63,19 +65,16 @@ pricing:
       - Unlimited AI sessions
       - Mail/Slack/phone support
     cta_url: mailto:info@oramasearch.com
-
-paid_tier_highlights:
-  - Project capacity scales from 2 to unlimited
-  - Document limits grow from 500 to 100,000+ per project
-  - AI sessions scale from 500 to 50,000+ included
-  - Analytics retention extends from 60 days to unlimited
-  - Support upgrades from community to mail/Slack/phone
-
-tags: [search, full-text-search, vector-search, hybrid-search, api]
-
+tags:
+  - search
+  - full-text-search
+  - vector-search
+  - hybrid-search
+  - api
+  - always-free
 official_url: https://orama.com/
 pricing_url: https://orama.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

@@ -4,14 +4,16 @@ category: auth
 subcategory: permanent
 brand_color: '#F73B5A'
 logo: /logos/supertokens.svg
-
 summary: 'Free (self-hosted: unlimited; cloud: 5K MAU)'
-
 tier_type: free-plan
-
 free_tier:
   - 'Free (self-hosted: unlimited; cloud: 5K MAU)'
-
+paid_tier_highlights:
+  - Cloud at $0.02/MAU after free 5,000 MAU
+  - MFA add-on $0.01/MAU (min $100/mo)
+  - Account Linking $0.005/MAU (min $100/mo)
+  - Dashboard Users $20/user/mo (3 free)
+  - Attack Protection Suite available at custom pricing
 pricing:
   - name: Self-Hosted (Open Source)
     price: 0
@@ -27,7 +29,7 @@ pricing:
       - Session management + RBAC
     cta_url: https://supertokens.com/docs/quick-setup/overview
   - name: Cloud (Managed)
-    price: '$0.02'
+    price: $0.02
     unit: per MAU after 5K
     description: Free under 5,000 MAU; usage-based after
     billing: usage-based
@@ -40,7 +42,7 @@ pricing:
       - Overrides (hooks & custom actions)
     cta_url: https://supertokens.com/auth
   - name: Premium Add-ons
-    price: 'Variable'
+    price: Variable
     description: MFA, account linking, dashboard users, multi-tenancy
     billing: usage-based
     features:
@@ -51,19 +53,16 @@ pricing:
       - Machine-to-machine auth (custom)
       - Attack Protection Suite (custom)
     cta_url: https://supertokens.com/pricing
-
-paid_tier_highlights:
-  - Cloud at $0.02/MAU after free 5,000 MAU
-  - MFA add-on $0.01/MAU (min $100/mo)
-  - Account Linking $0.005/MAU (min $100/mo)
-  - Dashboard Users $20/user/mo (3 free)
-  - Attack Protection Suite available at custom pricing
-
-tags: []
-
+tags:
+  - auth
+  - permanent
+  - free-plan
+  - identity
+  - self-host
 official_url: https://supertokens.com/
 pricing_url: https://supertokens.com/pricing
-
+facets:
+  self_host: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

@@ -4,15 +4,16 @@ category: project-management
 subcategory: permanent
 brand_color: '#888888'
 logo: /logos/huly.svg
-
 summary: Free cloud tier with unlimited users
-
 tier_type: free-plan
-
 free_tier:
   - Free cloud tier with unlimited users
   - No documented rate limits
-
+paid_tier_highlights:
+  - Rare at $19.99/mo lifts free 10 GB storage to 100 GB
+  - Epic at $99.99/mo includes 1 TB storage and 500 GB AV traffic
+  - Legendary at $399.99/mo scales to 10 TB storage and 2 TB AV
+  - Custom plan negotiated for enterprise SLAs and self-hosting
 pricing:
   - name: Common
     price: 0
@@ -73,18 +74,13 @@ pricing:
       - Self-hosted option available
       - Custom contracts
     cta_url: https://huly.io/contact
-
-paid_tier_highlights:
-  - Rare at $19.99/mo lifts free 10 GB storage to 100 GB
-  - Epic at $99.99/mo includes 1 TB storage and 500 GB AV traffic
-  - Legendary at $399.99/mo scales to 10 TB storage and 2 TB AV
-  - Custom plan negotiated for enterprise SLAs and self-hosting
-
-tags: []
-
+tags:
+  - project-management
+  - permanent
+  - free-plan
 official_url: https://huly.io/
 pricing_url: https://huly.io/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

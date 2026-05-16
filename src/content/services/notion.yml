@@ -4,15 +4,17 @@ category: collaboration
 subcategory: permanent
 brand_color: '#000000'
 logo: /logos/notion.svg
-
 summary: Notion — free tier; see the pricing page for details.
-
 tier_type: free-plan
-
 free_tier:
   - Free plan
-  - 'Multi-member workspaces capped at 1,000 blocks on free plan, 5 MB file upload limit, no admin tools, no SAML SSO'
-
+  - Multi-member workspaces capped at 1,000 blocks on free plan, 5 MB file upload limit, no admin tools, no SAML SSO
+paid_tier_highlights:
+  - Plus removes 1,000 block cap and adds unlimited file uploads
+  - Business adds SAML SSO and private teamspaces
+  - Enterprise adds SCIM provisioning and audit logs
+  - Notion AI add-on available on all plans
+  - Guest collaborator limits scale with tier
 pricing:
   - name: Free
     price: 0
@@ -64,19 +66,13 @@ pricing:
       - Workspace analytics
       - Unlimited page history
     cta_url: https://www.notion.so/contact-sales
-
-paid_tier_highlights:
-  - Plus removes 1,000 block cap and adds unlimited file uploads
-  - Business adds SAML SSO and private teamspaces
-  - Enterprise adds SCIM provisioning and audit logs
-  - Notion AI add-on available on all plans
-  - Guest collaborator limits scale with tier
-
-tags: []
-
+tags:
+  - collaboration
+  - permanent
+  - free-plan
 official_url: https://www.notion.so/
 pricing_url: https://www.notion.so/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

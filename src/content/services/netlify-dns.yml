@@ -4,15 +4,17 @@ category: dns
 subcategory: permanent
 brand_color: '#00C7B7'
 logo: /logos/netlify-dns.svg
-
 summary: '**Netlify DNS** — free tier; see the pricing page for details.'
-
 tier_type: free-plan
-
 free_tier:
   - Free plan
   - 100 GB bandwidth/mo included
-
+paid_tier_highlights:
+  - DNS itself is bundled free with any Netlify plan
+  - Personal adds observability, secret detection, priority support
+  - Pro adds private repos, concurrent builds, 30-day analytics
+  - Enterprise provides unlimited credits and SLA guarantees
+  - SSO/SCIM only on Enterprise
 pricing:
   - name: Free
     price: 0
@@ -59,19 +61,14 @@ pricing:
       - 24/7 dedicated support
       - Log drains
     cta_url: https://www.netlify.com/enterprise/
-
-paid_tier_highlights:
-  - DNS itself is bundled free with any Netlify plan
-  - Personal adds observability, secret detection, priority support
-  - Pro adds private repos, concurrent builds, 30-day analytics
-  - Enterprise provides unlimited credits and SLA guarantees
-  - SSO/SCIM only on Enterprise
-
-tags: []
-
+tags:
+  - dns
+  - permanent
+  - free-plan
 official_url: https://www.netlify.com/
 pricing_url: https://www.netlify.com/pricing/
-
+facets:
+  bandwidth_gb_month: 100
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

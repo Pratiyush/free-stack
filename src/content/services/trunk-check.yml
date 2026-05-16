@@ -4,15 +4,17 @@ category: code-quality
 subcategory: permanent
 brand_color: '#888888'
 logo: /logos/trunk-check.svg
-
 summary: Free for public repos + private repos with up to 5 active committers
-
 tier_type: free-plan
-
 free_tier:
   - Free for public repos + private repos with up to 5 active committers
   - No documented rate limits
-
+paid_tier_highlights:
+  - Team unlocks unlimited committers + merge queue + Slack notifications
+  - 1M test spans per committer on Team plan
+  - Enterprise adds SAML SSO + on-premise deployment
+  - Volume discounts on test spans for large orgs
+  - Free plan capped at 5 committers + 5M test spans/mo
 pricing:
   - name: Free
     price: 0
@@ -51,19 +53,14 @@ pricing:
       - Feature prioritization
       - Custom integrations
     cta_url: https://trunk.io/contact
-
-paid_tier_highlights:
-  - Team unlocks unlimited committers + merge queue + Slack notifications
-  - 1M test spans per committer on Team plan
-  - Enterprise adds SAML SSO + on-premise deployment
-  - Volume discounts on test spans for large orgs
-  - Free plan capped at 5 committers + 5M test spans/mo
-
-tags: []
-
+tags:
+  - code-quality
+  - permanent
+  - free-plan
+  - ci-cd
 official_url: https://trunk.io/
 pricing_url: https://trunk.io/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

@@ -4,15 +4,17 @@ category: maps
 subcategory: permanent
 brand_color: '#323357'
 logo: /logos/maptiler.svg
-
-summary: 'Free cloud plan for non-commercial/R&D use'
-
+summary: Free cloud plan for non-commercial/R&D use
 tier_type: free-plan
-
 free_tier:
-  - 'Free cloud plan for non-commercial/R&D use'
-  - 'No documented per-second limits'
-
+  - Free cloud plan for non-commercial/R&D use
+  - No documented per-second limits
+paid_tier_highlights:
+  - Flex at $25/mo unlocks commercial use and 500K requests
+  - Unlimited at $295/mo provides 5M requests with 99.9% SLA
+  - 100 GB tile hosting included on Unlimited tier
+  - Custom plans support volume discounts and unlimited hosting
+  - All paid tiers include the static maps API
 pricing:
   - name: Free
     price: 0
@@ -61,19 +63,14 @@ pricing:
       - Soft-limit overuse model
       - Custom SLAs
     cta_url: https://www.maptiler.com/contacts/
-
-paid_tier_highlights:
-  - Flex at $25/mo unlocks commercial use and 500K requests
-  - Unlimited at $295/mo provides 5M requests with 99.9% SLA
-  - 100 GB tile hosting included on Unlimited tier
-  - Custom plans support volume discounts and unlimited hosting
-  - All paid tiers include the static maps API
-
-tags: []
-
+tags:
+  - maps
+  - permanent
+  - free-plan
+  - geolocation
 official_url: https://www.maptiler.com/
 pricing_url: https://www.maptiler.com/cloud/pricing/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

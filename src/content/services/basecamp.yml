@@ -4,22 +4,17 @@ category: collaboration
 subcategory: permanent
 brand_color: '#1D2D35'
 logo: /logos/basecamp.svg
-
 summary: Basecamp — free tier; see the pricing page for details.
-
 tier_type: free-plan
-
 free_tier:
   - Free plan
-  - 'Single project only, very limited storage, free forever for teachers/students/nonprofits'
-
+  - Single project only, very limited storage, free forever for teachers/students/nonprofits
 paid_tier_highlights:
   - Plus unlocks unlimited projects + 500 GB storage at $15/user/mo
   - Pro Unlimited removes user/project caps for a flat $299/mo
   - Pro adds Timesheet, Admin Pro Pack, and priority 24/7 support
   - Free clients/contractors included on Plus and Pro Unlimited
   - 60-day extended trial available on Pro Unlimited
-
 pricing:
   - name: Free
     description: Run one project at a time with up to 20 users
@@ -57,12 +52,13 @@ pricing:
       - Personal onboarding from 37signals
       - 60-day extended free trial
     cta_url: https://3.basecamp.com/signup/account/new?plan=pro_unlimited_yearly_v1
-
-tags: []
-
+tags:
+  - collaboration
+  - permanent
+  - free-plan
 official_url: https://basecamp.com/
 pricing_url: https://basecamp.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

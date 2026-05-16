@@ -117,6 +117,52 @@ async function auditOne(file) {
     findings.push({ level: 'error', msg: `summary is ${data.summary.length} chars (>180)` });
   }
 
+  // v2.0.0 capture-everything domain warnings (do not fail the audit).
+  // These surface what's missing from the optional capture-everything blocks so
+  // future contributors and content agents know what's worth filling in next.
+  if (data?.tier_type === 'free-plan' && !data?.signup_friction) {
+    findings.push({
+      level: 'warn',
+      msg: 'tier_type=free-plan but signup_friction is missing — capture cc/phone/github gates',
+    });
+  }
+  if (
+    Array.isArray(data?.pricing) &&
+    data.pricing.some((p) => /enterprise/i.test(p?.name ?? '')) &&
+    !data?.support_sla
+  ) {
+    findings.push({
+      level: 'warn',
+      msg: 'pricing has an Enterprise tier but support_sla is missing',
+    });
+  }
+  if (Array.isArray(data?.regional_pricing)) {
+    const ISO_4217 = new Set([
+      'USD',
+      'EUR',
+      'GBP',
+      'INR',
+      'JPY',
+      'CAD',
+      'AUD',
+      'CNY',
+      'BRL',
+      'MXN',
+      'SGD',
+      'CHF',
+      'KRW',
+      'ZAR',
+    ]);
+    for (const row of data.regional_pricing) {
+      if (row?.currency && !ISO_4217.has(row.currency.toUpperCase())) {
+        findings.push({
+          level: 'warn',
+          msg: `regional_pricing currency '${row.currency}' is not in the recognised ISO-4217 short-list`,
+        });
+      }
+    }
+  }
+
   // Pricing URL liveness.
   if (!NO_HTTP && data?.pricing_url) {
     const r = await checkUrl(data.pricing_url);

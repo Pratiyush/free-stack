@@ -4,15 +4,17 @@ category: maps
 subcategory: permanent
 brand_color: '#888888'
 logo: /logos/locationiq.svg
-
-summary: '5,000 requests/day (~150K/mo)'
-
+summary: 5,000 requests/day (~150K/mo)
 tier_type: free-plan
-
 free_tier:
-  - '5,000 requests/day (~150K/mo)'
-  - '2 requests/sec; 48-hr cache allowed'
-
+  - 5,000 requests/day (~150K/mo)
+  - 2 requests/sec; 48-hr cache allowed
+paid_tier_highlights:
+  - Maps Lite at $45/mo unlocks 15 rps and commercial use
+  - Developer at $100/mo provides 25K requests/day across all APIs
+  - Startup at $200/mo delivers 60K/day plus priority support
+  - Business Plus at $950/mo includes 30M requests and AWS endpoints
+  - Enterprise scales up to 10 billion requests/day with custom SLAs
 pricing:
   - name: Free
     price: 0
@@ -97,19 +99,15 @@ pricing:
       - Custom contracts and SLAs
       - 24/7 support
     cta_url: https://locationiq.com/contact
-
-paid_tier_highlights:
-  - Maps Lite at $45/mo unlocks 15 rps and commercial use
-  - Developer at $100/mo provides 25K requests/day across all APIs
-  - Startup at $200/mo delivers 60K/day plus priority support
-  - Business Plus at $950/mo includes 30M requests and AWS endpoints
-  - Enterprise scales up to 10 billion requests/day with custom SLAs
-
-tags: []
-
+tags:
+  - maps
+  - permanent
+  - free-plan
+  - geolocation
 official_url: https://locationiq.com/
 pricing_url: https://locationiq.com/pricing
-
+facets:
+  requests_per_day: 5000
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

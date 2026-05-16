@@ -4,15 +4,17 @@ category: maps
 subcategory: permanent
 brand_color: '#000000'
 logo: /logos/mapbox.svg
-
 summary: 50K web map loads/mo; 100K geocoding requests/mo; 25K mobile MAUs
-
 tier_type: free-plan
-
 free_tier:
   - 50K web map loads/mo; 100K geocoding requests/mo; 25K mobile MAUs
-  - '1,000 geocoding requests/min (adjustable)'
-
+  - 1,000 geocoding requests/min (adjustable)
+paid_tier_highlights:
+  - GL JS loads at $5 per 1K beyond 50K free monthly loads
+  - Mobile MAUs at $4 per 1K beyond 25K free monthly users
+  - Geocoding at $0.75 per 1K and Directions at $2 per 1K after free
+  - Individual Support at $50/mo; Business 10% of spend (min $500)
+  - Premium Support adds dedicated engineer and 30-min response
 pricing:
   - name: Free Tier
     price: 0
@@ -109,19 +111,14 @@ pricing:
       - Phone/video support
       - Strategic partnership
     cta_url: https://www.mapbox.com/contact
-
-paid_tier_highlights:
-  - GL JS loads at $5 per 1K beyond 50K free monthly loads
-  - Mobile MAUs at $4 per 1K beyond 25K free monthly users
-  - Geocoding at $0.75 per 1K and Directions at $2 per 1K after free
-  - Individual Support at $50/mo; Business 10% of spend (min $500)
-  - Premium Support adds dedicated engineer and 30-min response
-
-tags: []
-
+tags:
+  - maps
+  - permanent
+  - free-plan
+  - geolocation
 official_url: https://www.mapbox.com/
 pricing_url: https://www.mapbox.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

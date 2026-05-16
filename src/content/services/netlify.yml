@@ -4,15 +4,17 @@ category: hosting
 subcategory: permanent
 brand_color: '#00C7B7'
 logo: /logos/netlify.svg
-
-summary: 'Free plan (credit-based since Sep 2025)'
-
+summary: Free plan (credit-based since Sep 2025)
 tier_type: always-free
-
 free_tier:
-  - 'Free plan (credit-based since Sep 2025)'
+  - Free plan (credit-based since Sep 2025)
   - Hard caps; site suspended for remainder of month if exceeded. 1 team member only
-
+paid_tier_highlights:
+  - Personal adds observability, secret detection, priority support
+  - Pro enables team collaboration with private repos and concurrent builds
+  - Enterprise delivers unlimited credits and SLA guarantees
+  - SSO and SCIM only available on Enterprise
+  - Credit-based model since Sep 2025; free is hard-capped
 pricing:
   - name: Free
     price: 0
@@ -65,19 +67,13 @@ pricing:
       - Log drains
       - 24/7 dedicated support
     cta_url: https://www.netlify.com/enterprise/
-
-paid_tier_highlights:
-  - Personal adds observability, secret detection, priority support
-  - Pro enables team collaboration with private repos and concurrent builds
-  - Enterprise delivers unlimited credits and SLA guarantees
-  - SSO and SCIM only available on Enterprise
-  - Credit-based model since Sep 2025; free is hard-capped
-
-tags: []
-
+tags:
+  - hosting
+  - permanent
+  - always-free
 official_url: https://www.netlify.com/
 pricing_url: https://www.netlify.com/pricing/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

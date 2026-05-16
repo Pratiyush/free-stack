@@ -3,11 +3,8 @@ slug: algolia
 category: search
 brand_color: '#003DFF'
 logo: /logos/algolia.svg
-
 summary: Search-as-a-service with 10K searches/mo, 1M records, 10 indices, and app deletion after 60 days inactivity.
-
 tier_type: always-free
-
 free_tier:
   - 10K search requests/month
   - 1M records
@@ -15,13 +12,11 @@ free_tier:
   - 10K AI Recommendation requests/month
   - Highest 3 record-count days excluded from billing
   - API rate limited; full feature suite for testing
-
 paid_tier_highlights:
   - 'Grow: pay-as-you-go from $0.50/1k extra searches with keyword search'
   - 'Grow Plus: $1.75/1k extra searches adds AI Synonyms, AI Ranking, Personalization'
   - 'Elevate: enterprise contract adds NeuralSearch, AI Collections, 99.999% SLA, SSO'
-  - 'Higher tiers extend rules-per-index and analytics retention (30 -> 90+ days)'
-
+  - Higher tiers extend rules-per-index and analytics retention (30 -> 90+ days)
 pricing:
   - name: Build
     price: 0
@@ -35,7 +30,7 @@ pricing:
       - Personalization and AI Dynamic Re-ranking
     cta_url: https://dashboard.algolia.com/users/sign_up/
   - name: Grow
-    price: 0.50
+    price: 0.5
     unit: /1k additional searches
     billing: usage-based
     description: Keyword search with foundational relevance tools
@@ -71,12 +66,16 @@ pricing:
       - SSO and enterprise support
       - Professional services available
     cta_url: https://www.algolia.com/lp/pricing-request
-
-tags: [search, full-text-search, api, saas, indexing]
-
+tags:
+  - search
+  - full-text-search
+  - api
+  - saas
+  - indexing
+  - always-free
 official_url: https://www.algolia.com/
 pricing_url: https://www.algolia.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

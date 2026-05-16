@@ -4,15 +4,17 @@ category: translation
 subcategory: permanent
 brand_color: '#2ECCAA'
 logo: /logos/weblate.svg
-
-summary: 'Free for libre/open-source projects (hosted); free self-hosted'
-
+summary: Free for libre/open-source projects (hosted); free self-hosted
 tier_type: free-plan
-
 free_tier:
-  - 'Free for libre/open-source projects (hosted); free self-hosted'
+  - Free for libre/open-source projects (hosted); free self-hosted
   - Paid hosted plans start at EUR 19/month for proprietary projects
-
+paid_tier_highlights:
+  - Hosted plans from EUR 47/mo (10k strings) up to EUR 616/mo (10M strings)
+  - Custom unlimited plan available for enterprise
+  - 20% discount when billed annually
+  - 14-day free trial on every paid hosted plan
+  - Self-hosted is fully free under copyleft license
 pricing:
   - name: Libre
     price: 0
@@ -74,19 +76,18 @@ pricing:
       - 14-day gratis trial
       - 20% off on annual billing
     cta_url: https://weblate.org/en/hosting/
-
-paid_tier_highlights:
-  - Hosted plans from EUR 47/mo (10k strings) up to EUR 616/mo (10M strings)
-  - Custom unlimited plan available for enterprise
-  - 20% discount when billed annually
-  - 14-day free trial on every paid hosted plan
-  - Self-hosted is fully free under copyleft license
-
-tags: []
-
+tags:
+  - translation
+  - permanent
+  - free-plan
+  - i18n
+  - open-source
+  - self-host
 official_url: https://weblate.org/
 pricing_url: https://weblate.org/en/hosting/
-
+facets:
+  oss: true
+  self_host: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

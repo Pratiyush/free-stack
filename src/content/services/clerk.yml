@@ -3,25 +3,20 @@ slug: clerk
 category: auth
 brand_color: '#6C47FF'
 logo: /logos/clerk.svg
-
 summary: Passwordless and social auth for 50K monthly retained users with no credit card required.
-
 tier_type: free-plan
-
 free_tier:
   - 50K monthly retained users
   - 100 monthly retained organizations
   - Social login (Google, GitHub, Facebook, etc.)
   - No credit card required
   - All core features included
-
 paid_tier_highlights:
   - Pro ($20/mo annual) removes branding and adds MFA, 7-day logs
   - 1 Enterprise SSO connection included on Pro
   - Business ($250/mo annual) bundles SOC2 + priority support
   - Enterprise SSO across workspace + HIPAA available
   - 99.99% uptime SLA on Enterprise plans
-
 pricing:
   - name: Hobby
     description: Everything you need to start building, free
@@ -60,7 +55,7 @@ pricing:
       - 30-day log retention
   - name: Enterprise
     description: Tailored solutions with SLA + HIPAA
-    price: 'Contact sales'
+    price: Contact sales
     billing: annual
     features:
       - 99.99% uptime SLA
@@ -68,12 +63,17 @@ pricing:
       - Dedicated Slack support
       - HIPAA available with BAA
       - Custom log retention
-
-tags: [authentication, passwordless, social-login, identity, users]
-
+tags:
+  - authentication
+  - passwordless
+  - social-login
+  - identity
+  - users
+  - auth
+  - free-plan
 official_url: https://clerk.com/
 pricing_url: https://clerk.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

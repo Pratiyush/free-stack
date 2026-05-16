@@ -4,16 +4,17 @@ category: ai-apis
 subcategory: permanent
 brand_color: '#FFD21E'
 logo: /logos/hugging-face-inference.svg
-
-summary: 'Free monthly credits — ~100K characters/month; 1,000s of models (text, image, audio)'
-
+summary: Free monthly credits — ~100K characters/month; 1,000s of models (text, image, audio)
 tier_type: always-free
-
 free_tier:
   - Free monthly credits
-  - '~100K characters/month; 1,000s of models (text, image, audio)'
+  - ~100K characters/month; 1,000s of models (text, image, audio)
   - 60 RPM
-
+paid_tier_highlights:
+  - PRO at $9/mo unlocks 20× inference credits and ZeroGPU priority
+  - Team at $20/user/mo adds SSO, audit logs, and resource groups
+  - Enterprise from $50/user/mo adds SCIM and dedicated support
+  - Inference Endpoints billed hourly from $0.033 (CPU) to $74 (B200)
 pricing:
   - name: Free Hub
     price: 0
@@ -64,7 +65,7 @@ pricing:
       - Dedicated support and compliance review
     cta_url: https://huggingface.co/enterprise
   - name: Inference Endpoints
-    price: 'From $0.033'
+    price: From $0.033
     unit: /hour
     billing: usage-based
     description: Dedicated autoscaling inference infrastructure
@@ -75,18 +76,15 @@ pricing:
       - Multi-GPU configurations up to 8x
       - Production-grade autoscaling
     cta_url: https://ui.endpoints.huggingface.co/
-
-paid_tier_highlights:
-  - PRO at $9/mo unlocks 20× inference credits and ZeroGPU priority
-  - Team at $20/user/mo adds SSO, audit logs, and resource groups
-  - Enterprise from $50/user/mo adds SCIM and dedicated support
-  - Inference Endpoints billed hourly from $0.033 (CPU) to $74 (B200)
-
-tags: []
-
+tags:
+  - ai-apis
+  - permanent
+  - always-free
+  - ai
+  - api
 official_url: https://huggingface.co/
 pricing_url: https://huggingface.co/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

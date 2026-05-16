@@ -4,27 +4,24 @@ category: code-quality
 subcategory: permanent
 brand_color: '#000000'
 logo: /logos/qodana-jetbrains.svg
-
 summary: 'Community tier: free forever; 4 free Community linters (JVM, Python, .NET, Clang)'
-
 tier_type: free-plan
-
 free_tier:
   - 'Community tier: free forever; 4 free Community linters (JVM, Python, .NET, Clang)'
   - No documented rate limits
-
 pricing:
   - name: Free
     price: 0
     unit: /month
-
-tags: []
-
+tags:
+  - code-quality
+  - permanent
+  - free-plan
+  - ci-cd
 official_url: https://www.jetbrains.com/
 pricing_url: https://www.jetbrains.com/qodana/buy/
-
-maintainer_notes: 'Pricing page is JS-rendered (curl returns ~45 chars). Needs JS verifier (Sprint 4).'
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'
+maintainer_notes: Pricing page is JS-rendered (curl returns ~45 chars). Needs JS verifier (Sprint 4).

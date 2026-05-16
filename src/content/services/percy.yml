@@ -3,18 +3,19 @@ slug: percy
 category: testing
 brand_color: '#9E66BF'
 logo: /logos/percy.svg
-
 summary: Visual regression testing with 5K screenshots/mo, cross-browser support, and 30-day build history.
-
 tier_type: always-free
-
 free_tier:
   - 5K screenshots/mo
   - Unlimited users and projects
   - Cross-browser testing
   - 30-day build history
   - Screenshots reset monthly
-
+paid_tier_highlights:
+  - Free 5K screenshots/mo with unlimited users and projects
+  - Unlimited paid tier $269/mo removes screenshot cap
+  - Cross-browser visual testing on Chromium, Firefox, WebKit
+  - Pricing page is JS-rendered; figures sourced from prior YAML (pricing_url returned 404 during verify)
 pricing:
   - name: Free
     price: 0
@@ -38,18 +39,16 @@ pricing:
       - Extended build history
     cta_url: https://percy.io/signup
     billing: monthly
-
-paid_tier_highlights:
-  - Free 5K screenshots/mo with unlimited users and projects
-  - Unlimited paid tier $269/mo removes screenshot cap
-  - Cross-browser visual testing on Chromium, Firefox, WebKit
-  - Pricing page is JS-rendered; figures sourced from prior YAML (pricing_url returned 404 during verify)
-
-tags: [visual-testing, regression, screenshots, testing, browserstack]
-
+tags:
+  - visual-testing
+  - regression
+  - screenshots
+  - testing
+  - browserstack
+  - always-free
 official_url: https://percy.io/
 pricing_url: https://percy.io/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

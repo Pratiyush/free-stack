@@ -4,23 +4,18 @@ category: ai-apis
 subcategory: permanent
 brand_color: '#39594D'
 logo: /logos/cohere.svg
-
-summary: 'Trial key (free forever) — 1,000 API calls/month; Command R+, R7B, Embed 4, Rerank 3.5'
-
+summary: Trial key (free forever) — 1,000 API calls/month; Command R+, R7B, Embed 4, Rerank 3.5
 tier_type: always-free
-
 free_tier:
   - Trial key (free forever)
-  - '1,000 API calls/month; Command R+, R7B, Embed 4, Rerank 3.5'
-  - 'Chat 20 RPM, Embed 5 RPM'
-
+  - 1,000 API calls/month; Command R+, R7B, Embed 4, Rerank 3.5
+  - Chat 20 RPM, Embed 5 RPM
 paid_tier_highlights:
   - Production Command R+ at $2.50/$10 per 1M input/output tokens
   - Command R at $0.50/$1.50 per 1M input/output tokens
   - Embed 4 at $0.10/$0.10 per 1M tokens (input/output)
   - Model Vault dedicated instances from $2,500/mo
   - North and Compass workplace systems via enterprise sales
-
 pricing:
   - name: Trial API Key
     price: 0
@@ -33,7 +28,7 @@ pricing:
       - No billing required
     billing: free
   - name: Command R+ (Production)
-    price: '$2.50 input / $10 output per 1M tokens'
+    price: $2.50 input / $10 output per 1M tokens
     unit: per 1M tokens
     description: Latest Command R+ model for production workloads
     features:
@@ -44,7 +39,7 @@ pricing:
       - Enterprise-grade performance
     billing: usage-based
   - name: Command R (Production)
-    price: '$0.50 input / $1.50 output per 1M tokens'
+    price: $0.50 input / $1.50 output per 1M tokens
     unit: per 1M tokens
     description: Cost-effective Command R model for production
     features:
@@ -55,7 +50,7 @@ pricing:
       - Established model stability
     billing: usage-based
   - name: Embed 4 (Production)
-    price: '$0.10 per 1M tokens'
+    price: $0.10 per 1M tokens
     unit: per 1M tokens
     description: Multimodal embedding and retrieval model
     features:
@@ -66,7 +61,7 @@ pricing:
       - Production-grade performance
     billing: usage-based
   - name: Model Vault
-    price: '$2,500–$6,500/mo'
+    price: $2,500–$6,500/mo
     unit: /instance
     description: Dedicated managed deployment instances
     features:
@@ -86,12 +81,16 @@ pricing:
       - AI agents for workflows
       - Contact sales for pricing
     billing: annual
-
-tags: []
-
+tags:
+  - ai-apis
+  - permanent
+  - always-free
+  - ai
+  - api
 official_url: https://cohere.com/
 pricing_url: https://cohere.com/pricing
-
+facets:
+  requests_per_month: 1000
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

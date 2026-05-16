@@ -4,18 +4,20 @@ category: ai-apis
 subcategory: permanent
 brand_color: '#FA520F'
 logo: /logos/mistral.svg
-
 summary: French LLM provider with free experiment tier, all models (Mistral Large, Codestral), and ~1B tokens/mo.
-
 tier_type: always-free
-
 free_tier:
   - ~1B tokens/month
   - All models available (Mistral Large, Codestral)
   - Phone verification required
   - ~1 RPS limit
   - 500K TPM
-
+paid_tier_highlights:
+  - Pro at $14.99/mo unlocks deep research and 15GB storage
+  - Team at $24.99/user/mo adds admin API and audit logs
+  - Mistral Vibe coding assistant included on Pro and above
+  - Enterprise adds SAML SSO and white-label deployments
+  - API access available separately via La Plateforme (per-token pricing)
 pricing:
   - name: Free
     price: 0
@@ -64,19 +66,18 @@ pricing:
       - Dedicated support
       - Custom deployment infrastructure
     cta_url: https://mistral.ai/contact
-
-paid_tier_highlights:
-  - Pro at $14.99/mo unlocks deep research and 15GB storage
-  - Team at $24.99/user/mo adds admin API and audit logs
-  - Mistral Vibe coding assistant included on Pro and above
-  - Enterprise adds SAML SSO and white-label deployments
-  - API access available separately via La Plateforme (per-token pricing)
-
-tags: [llm, ai, api, mistral, models]
-
+tags:
+  - llm
+  - ai
+  - api
+  - mistral
+  - models
+  - ai-apis
+  - permanent
+  - always-free
 official_url: https://mistral.ai/
 pricing_url: https://mistral.ai/pricing/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

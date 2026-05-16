@@ -4,15 +4,13 @@ category: mobile
 subcategory: permanent
 brand_color: '#00F200'
 logo: /logos/fastlane.svg
-
-summary: 'Open-source (MIT)'
-
+summary: Open-source (MIT)
 tier_type: free-plan
-
 free_tier:
-  - 'Open-source (MIT)'
-  - 'Self-hosted; integrates with any CI (GitHub Actions, etc.)'
-
+  - Open-source (MIT)
+  - Self-hosted; integrates with any CI (GitHub Actions, etc.)
+paid_tier_highlights:
+  - This service is always-free; no paid tiers exist
 pricing:
   - name: Free (MIT open source)
     price: 0
@@ -26,15 +24,17 @@ pricing:
       - Stewarded by the Mobile Native Foundation
       - No license fees
     cta_url: https://fastlane.tools/
-
-paid_tier_highlights:
-  - This service is always-free; no paid tiers exist
-
-tags: []
-
+tags:
+  - mobile
+  - permanent
+  - free-plan
+  - open-source
+  - self-host
 official_url: https://fastlane.tools/
 pricing_url: https://fastlane.tools/
-
+facets:
+  oss: true
+  self_host: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

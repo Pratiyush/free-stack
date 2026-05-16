@@ -4,24 +4,19 @@ category: databases
 subcategory: permanent
 brand_color: '#888888'
 logo: /logos/aiven.svg
-
 summary: Free plan (Postgres + Kafka)
-
 tier_type: always-free
-
 free_tier:
   - Free plan (Postgres + Kafka + MySQL)
   - 'Postgres/MySQL: 1 CPU, 1 GB RAM, 1 GB disk on a single node'
   - 'Kafka: 250 KiB/s throughput, 3-day retention, 5 topics x 2 partitions'
   - Powers off after 24h inactivity
-
 paid_tier_highlights:
-  - 'Developer Kafka from $35/mo lifts throughput to 1 MB/s and 20 topics'
-  - 'Startup tier from $200/mo gives 3 dedicated VMs with HA failover'
-  - 'Business from $500/mo scales to 18 TB storage with Kafka Connect'
-  - 'Premium from $1,900/mo gives up to 30 VMs and 184 TB storage'
+  - Developer Kafka from $35/mo lifts throughput to 1 MB/s and 20 topics
+  - Startup tier from $200/mo gives 3 dedicated VMs with HA failover
+  - Business from $500/mo scales to 18 TB storage with Kafka Connect
+  - Premium from $1,900/mo gives up to 30 VMs and 184 TB storage
   - 'Enterprise add-ons: tiered storage, PrivateLink, BYOC, premium support'
-
 pricing:
   - name: Free
     price: 0
@@ -92,12 +87,15 @@ pricing:
       - Dedicated technical account manager
       - SOC2/HIPAA/PCI compliance
     cta_url: https://aiven.io/contact
-
-tags: []
-
+tags:
+  - databases
+  - permanent
+  - always-free
+  - database
 official_url: https://aiven.io/
 pricing_url: https://aiven.io/pricing
-
+facets:
+  storage_gb: 1
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

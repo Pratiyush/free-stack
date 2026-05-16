@@ -4,15 +4,16 @@ category: testing
 subcategory: permanent
 brand_color: '#4F46DC'
 logo: /logos/qase.svg
-
-summary: 'Free for up to 3 users, 2 projects'
-
+summary: Free for up to 3 users, 2 projects
 tier_type: free-plan
-
 free_tier:
-  - 'Free for up to 3 users, 2 projects'
+  - Free for up to 3 users, 2 projects
   - No documented rate limits
-
+paid_tier_highlights:
+  - Free plan caps at 3 users, 2 projects, 500 MB storage
+  - Startup $24/user/mo unlocks 20 users, 100 GB, 35+ integrations
+  - Business $30/user/mo adds RBAC, traceability, premium support
+  - Enterprise (custom) adds SSO/SCIM, dedicated cluster, SLA
 pricing:
   - name: Free
     price: 0
@@ -64,18 +65,14 @@ pricing:
       - Success manager and SLA
     cta_url: https://qase.io/get-demo/
     billing: annual
-
-paid_tier_highlights:
-  - Free plan caps at 3 users, 2 projects, 500 MB storage
-  - Startup $24/user/mo unlocks 20 users, 100 GB, 35+ integrations
-  - Business $30/user/mo adds RBAC, traceability, premium support
-  - Enterprise (custom) adds SSO/SCIM, dedicated cluster, SLA
-
-tags: []
-
+tags:
+  - testing
+  - permanent
+  - free-plan
 official_url: https://qase.io/
 pricing_url: https://qase.io/pricing
-
+facets:
+  team_seats: 3
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

@@ -3,18 +3,19 @@ slug: github-actions
 category: testing
 brand_color: '#2088FF'
 logo: /logos/github-actions.svg
-
 summary: CI/CD with 2K mins/mo for private repos, unlimited for public repos, 500 MB storage, and no credit card.
-
 tier_type: always-free
-
 free_tier:
   - 2K mins/mo for private repos
   - Unlimited for public repos
   - 500 MB packages storage
   - 10 concurrent jobs
   - 6 hr max job runtime
-
+paid_tier_highlights:
+  - Team at $4/user/mo includes 3K CI/CD mins and 2 GB packages
+  - Enterprise at $21/user/mo includes 50K CI/CD mins and 50 GB packages
+  - Extra minutes billed per-minute (Linux $0.008/min, Windows $0.016, macOS $0.08)
+  - Public repos always get unlimited minutes on every tier
 pricing:
   - name: Free
     price: 0
@@ -53,18 +54,19 @@ pricing:
       - 180 concurrent jobs
       - SAML SSO and audit log
       - Premium 24/7 support
-
-paid_tier_highlights:
-  - Team at $4/user/mo includes 3K CI/CD mins and 2 GB packages
-  - Enterprise at $21/user/mo includes 50K CI/CD mins and 50 GB packages
-  - Extra minutes billed per-minute (Linux $0.008/min, Windows $0.016, macOS $0.08)
-  - Public repos always get unlimited minutes on every tier
-
-tags: [ci-cd, testing, automation, workflows, github]
-
+tags:
+  - ci-cd
+  - testing
+  - automation
+  - workflows
+  - github
+  - always-free
 official_url: https://github.com/features/actions
 pricing_url: https://github.com/pricing
-
-date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+facets:
+  cc_required: false
+date_added: 2026-05-15T00:00:00.000Z
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'
+signup_friction:
+  requires_cc: false

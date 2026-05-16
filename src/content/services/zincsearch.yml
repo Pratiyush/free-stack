@@ -4,15 +4,13 @@ category: search
 subcategory: permanent
 brand_color: '#5BA37F'
 logo: /logos/zincsearch.svg
-
-summary: 'Open-source (Apache 2.0)'
-
+summary: Open-source (Apache 2.0)
 tier_type: free-plan
-
 free_tier:
-  - 'Open-source (Apache 2.0)'
-  - 'No managed cloud; self-host only'
-
+  - Open-source (Apache 2.0)
+  - No managed cloud; self-host only
+paid_tier_highlights:
+  - This service is always-free; no paid tiers exist
 pricing:
   - name: Self-hosted (Apache 2.0)
     price: 0
@@ -25,15 +23,17 @@ pricing:
       - Built in Go on bluge index
       - Docker and Kubernetes configs
     cta_url: https://github.com/zincsearch/zincsearch
-
-paid_tier_highlights:
-  - This service is always-free; no paid tiers exist
-
-tags: []
-
+tags:
+  - search
+  - permanent
+  - free-plan
+  - open-source
+  - self-host
 official_url: https://github.com/
 pricing_url: https://github.com/zincsearch/zincsearch
-
+facets:
+  oss: true
+  self_host: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

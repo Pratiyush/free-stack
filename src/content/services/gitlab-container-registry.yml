@@ -4,15 +4,16 @@ category: containers
 subcategory: permanent
 brand_color: '#FC6D26'
 logo: /logos/gitlab-container-registry.svg
-
 summary: Free tier (included with GitLab Free)
-
 tier_type: free-plan
-
 free_tier:
   - Free tier (included with GitLab Free)
-  - '5 users per namespace, CI/CD 400 min/mo (shared)'
-
+  - 5 users per namespace, CI/CD 400 min/mo (shared)
+paid_tier_highlights:
+  - Premium at $29/user/mo lifts storage from 10 GiB to 500 GiB
+  - Ultimate adds container scanning and vulnerability management
+  - Compute minutes scale 400 → 10K → 50K across tiers
+  - Public registries always free regardless of tier
 pricing:
   - name: Free
     price: 0
@@ -48,18 +49,15 @@ pricing:
       - Vulnerability management
       - Software supply chain security
       - Compliance and governance
-
-paid_tier_highlights:
-  - Premium at $29/user/mo lifts storage from 10 GiB to 500 GiB
-  - Ultimate adds container scanning and vulnerability management
-  - Compute minutes scale 400 → 10K → 50K across tiers
-  - Public registries always free regardless of tier
-
-tags: []
-
+tags:
+  - containers
+  - permanent
+  - free-plan
+  - docker
 official_url: https://about.gitlab.com/
 pricing_url: https://about.gitlab.com/pricing/
-
+facets:
+  team_seats: 5
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

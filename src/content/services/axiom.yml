@@ -4,11 +4,8 @@ category: logs
 subcategory: permanent
 brand_color: '#1A1A1A'
 logo: /logos/axiom.svg
-
 summary: Always Free tier (no credit card)
-
 tier_type: free-plan
-
 free_tier:
   - 500 GB/month data ingest (Personal plan, no CC)
   - 10 GB-hours/month query compute
@@ -16,13 +13,11 @@ free_tier:
   - 30-day data retention
   - 2 datasets, 256 fields per dataset
   - Email support
-
 paid_tier_highlights:
   - 'Axiom Cloud from $25/mo: 1 TB ingest, 100 GB storage, 100 datasets'
-  - 'Automatic volume discounts as usage grows; configurable retention'
+  - Automatic volume discounts as usage grows; configurable retention
   - 'Add-ons: SSO ($100/mo), Directory Sync ($100/mo), RBAC ($50/mo), Audit Log ($50/mo)'
-  - 'No artificial limits; self-serve enterprise via console'
-
+  - No artificial limits; self-serve enterprise via console
 pricing:
   - name: Personal
     price: 0
@@ -61,12 +56,19 @@ pricing:
       - Audit Log $50/mo
       - Self-serve via console
     cta_url: https://app.axiom.co/
-
-tags: []
-
+tags:
+  - logs
+  - permanent
+  - free-plan
+  - logging
+  - observability
 official_url: https://axiom.co/
 pricing_url: https://axiom.co/pricing
-
-date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+facets:
+  cc_required: false
+  storage_gb: 25
+date_added: 2026-05-15T00:00:00.000Z
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'
+signup_friction:
+  requires_cc: false

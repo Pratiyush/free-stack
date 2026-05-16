@@ -4,15 +4,17 @@ category: design
 subcategory: permanent
 brand_color: '#FDBD39'
 logo: /logos/zeplin.svg
-
 summary: Zeplin — free tier; see the pricing page for details.
-
 tier_type: free-plan
-
 free_tier:
   - Free plan
-  - '30-day version history, only owner can upload designs on free plan'
-
+  - 30-day version history, only owner can upload designs on free plan
+paid_tier_highlights:
+  - Basic from $13.75/mo (annual) per project, no seat fees
+  - Advanced at $12/seat/mo for 50 projects + granular roles
+  - Permanent version history on Advanced and above
+  - Enterprise adds SSO, MFA, SCIM, and 24-hour priority SLA
+  - All paid plans extend version history beyond Free's 30 days
 pricing:
   - name: Free
     price: 0
@@ -61,19 +63,13 @@ pricing:
       - Activity logging, success manager
       - 24-hour priority support SLA
     cta_url: https://zeplin.io/contact-sales/
-
-paid_tier_highlights:
-  - Basic from $13.75/mo (annual) per project, no seat fees
-  - Advanced at $12/seat/mo for 50 projects + granular roles
-  - Permanent version history on Advanced and above
-  - Enterprise adds SSO, MFA, SCIM, and 24-hour priority SLA
-  - All paid plans extend version history beyond Free's 30 days
-
-tags: []
-
+tags:
+  - design
+  - permanent
+  - free-plan
 official_url: https://zeplin.io/
 pricing_url: https://zeplin.io/pricing/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

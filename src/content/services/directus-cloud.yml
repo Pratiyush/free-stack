@@ -4,15 +4,16 @@ category: baas
 subcategory: permanent
 brand_color: '#263238'
 logo: /logos/directus-cloud.svg
-
 summary: Community Cloud (free)
-
 tier_type: free-plan
-
 free_tier:
   - Community Cloud (free)
   - No quota limits on usage; 24/7 system monitoring; BSL license (free for orgs under $5M revenue)
-
+paid_tier_highlights:
+  - Professional plan at $99/mo (annual) for staging and early production
+  - Enterprise plan with custom pricing, dedicated infrastructure, and SLAs
+  - 20+ region availability on Enterprise
+  - Premium support tiers available on paid plans
 pricing:
   - name: Community / Self-Hosted
     price: 0
@@ -49,18 +50,14 @@ pricing:
       - 20+ region availability
       - Dedicated infrastructure
     cta_url: https://directus.io/demo
-
-paid_tier_highlights:
-  - Professional plan at $99/mo (annual) for staging and early production
-  - Enterprise plan with custom pricing, dedicated infrastructure, and SLAs
-  - 20+ region availability on Enterprise
-  - Premium support tiers available on paid plans
-
-tags: []
-
+tags:
+  - baas
+  - permanent
+  - free-plan
+  - backend-as-a-service
 official_url: https://directus.io/
 pricing_url: https://directus.io/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

@@ -4,25 +4,24 @@ category: iaas
 subcategory: permanent
 brand_color: '#054ADA'
 logo: /logos/ibm-cloud.svg
-
-summary: 'Lite plan (permanent, 40+ services)'
-
+summary: Lite plan (permanent, 40+ services)
 tier_type: free-plan
-
 free_tier:
-  - 'Lite plan (permanent, 40+ services)'
-  - 'Quota resets monthly; hitting quota suspends service for remainder of month. $200 credit for 30 days on new Pay-as-you-go accounts'
-
+  - Lite plan (permanent, 40+ services)
+  - Quota resets monthly; hitting quota suspends service for remainder of month. $200 credit for 30 days on new Pay-as-you-go accounts
 pricing:
   - name: Free
     price: 0
     unit: /month
-
-tags: []
-
+tags:
+  - iaas
+  - permanent
+  - free-plan
+  - cloud
+  - infrastructure
 official_url: https://www.ibm.com/
 pricing_url: https://www.ibm.com/products/cloud/free
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

@@ -4,16 +4,18 @@ category: ai-apis
 subcategory: permanent
 brand_color: '#FA520F'
 logo: /logos/mistral-ai.svg
-
-summary: 'Free Experiment tier — All models incl. Mistral Large & Codestral; ~1B tokens/month'
-
+summary: Free Experiment tier — All models incl. Mistral Large & Codestral; ~1B tokens/month
 tier_type: always-free
-
 free_tier:
   - Free Experiment tier
-  - 'All models incl. Mistral Large & Codestral; ~1B tokens/month'
-  - '~1 RPS, 500K TPM'
-
+  - All models incl. Mistral Large & Codestral; ~1B tokens/month
+  - ~1 RPS, 500K TPM
+paid_tier_highlights:
+  - Pro at $14.99/mo unlocks deep research and 15GB storage
+  - Team at $24.99/user/mo adds admin API and audit logs
+  - Mistral Vibe coding assistant included on Pro and above
+  - Enterprise adds SAML SSO and white-label deployments
+  - API access available separately via La Plateforme
 pricing:
   - name: Free
     price: 0
@@ -62,19 +64,15 @@ pricing:
       - Dedicated support
       - Custom deployment infrastructure
     cta_url: https://mistral.ai/contact
-
-paid_tier_highlights:
-  - Pro at $14.99/mo unlocks deep research and 15GB storage
-  - Team at $24.99/user/mo adds admin API and audit logs
-  - Mistral Vibe coding assistant included on Pro and above
-  - Enterprise adds SAML SSO and white-label deployments
-  - API access available separately via La Plateforme
-
-tags: []
-
+tags:
+  - ai-apis
+  - permanent
+  - always-free
+  - ai
+  - api
 official_url: https://mistral.ai/
 pricing_url: https://mistral.ai/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

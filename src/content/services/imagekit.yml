@@ -4,15 +4,16 @@ category: storage
 subcategory: permanent
 brand_color: '#888888'
 logo: /logos/imagekit.svg
-
 summary: 20 GB bandwidth/mo
-
 tier_type: free-plan
-
 free_tier:
   - 20 GB bandwidth/mo
-  - 'Functionality pauses mid-month if limits exceeded'
-
+  - Functionality pauses mid-month if limits exceeded
+paid_tier_highlights:
+  - Lite at $9/mo unlocks pay-as-you-go bandwidth and storage overages
+  - Pro at $89/mo includes 225 GB bandwidth and 225 GB storage
+  - Enterprise adds SSO, dedicated CSM, and custom limits
+  - Standalone DAM Pro at $89/mo for asset-only workflows
 pricing:
   - name: Forever Free
     price: 0
@@ -61,18 +62,14 @@ pricing:
       - Advanced security features
       - Custom processing limits
     cta_url: https://imagekit.io/contact
-
-paid_tier_highlights:
-  - Lite at $9/mo unlocks pay-as-you-go bandwidth and storage overages
-  - Pro at $89/mo includes 225 GB bandwidth and 225 GB storage
-  - Enterprise adds SSO, dedicated CSM, and custom limits
-  - Standalone DAM Pro at $89/mo for asset-only workflows
-
-tags: []
-
+tags:
+  - storage
+  - permanent
+  - free-plan
 official_url: https://imagekit.io/
 pricing_url: https://imagekit.io/plans/
-
+facets:
+  bandwidth_gb_month: 20
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

@@ -4,15 +4,16 @@ category: design
 subcategory: permanent
 brand_color: '#1D1D1D'
 logo: /logos/rive.svg
-
 summary: Rive — free tier; see the pricing page for details.
-
 tier_type: free-plan
-
 free_tier:
   - Free plan
-  - 'No runtime fees (exports work forever), community features only, no tags/folders, no CDN hosting, no libraries'
-
+  - No runtime fees (exports work forever), community features only, no tags/folders, no CDN hosting, no libraries
+paid_tier_highlights:
+  - Cadet ($9/seat) unlocks unlimited files and .riv export
+  - Voyager ($32/seat) adds Libraries and $20 Agent credits
+  - Enterprise ($120/seat) brings SSO, SOC2, custom S3
+  - Higher tiers include increased asset import limits
 pricing:
   - name: Free
     price: 0
@@ -62,18 +63,13 @@ pricing:
       - Dedicated Slack channel
       - SSO and SOC2 Type II
     cta_url: https://rive.app/pricing
-
-paid_tier_highlights:
-  - Cadet ($9/seat) unlocks unlimited files and .riv export
-  - Voyager ($32/seat) adds Libraries and $20 Agent credits
-  - Enterprise ($120/seat) brings SSO, SOC2, custom S3
-  - Higher tiers include increased asset import limits
-
-tags: []
-
+tags:
+  - design
+  - permanent
+  - free-plan
 official_url: https://rive.app/
 pricing_url: https://rive.app/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

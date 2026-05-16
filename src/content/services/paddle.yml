@@ -4,15 +4,17 @@ category: payments
 subcategory: permanent
 brand_color: '#FDDD35'
 logo: /logos/paddle.svg
-
-summary: 'No monthly fee, Merchant of Record'
-
+summary: No monthly fee, Merchant of Record
 tier_type: free-plan
-
 free_tier:
-  - 'No monthly fee, Merchant of Record'
-  - 'MoR model (Paddle is seller of record), handles all tax remittance, effective rate can be higher with 2-3% currency conversion margin on cross-currency payouts'
-
+  - No monthly fee, Merchant of Record
+  - MoR model (Paddle is seller of record), handles all tax remittance, effective rate can be higher with 2-3% currency conversion margin on cross-currency payouts
+paid_tier_highlights:
+  - All-inclusive model - tax, compliance, billing, churn tools included
+  - Automatic cross-border sales tax handling (MoR)
+  - Built-in dunning management to recover failed payments
+  - Migration support for existing subscriber base
+  - Products under $10 or invoicing require custom pricing
 pricing:
   - name: Pay-as-You-Go
     price: 5
@@ -41,19 +43,13 @@ pricing:
       - Advisory services
       - Invoicing capabilities
     cta_url: https://paddle.com/demo
-
-paid_tier_highlights:
-  - All-inclusive model - tax, compliance, billing, churn tools included
-  - Automatic cross-border sales tax handling (MoR)
-  - Built-in dunning management to recover failed payments
-  - Migration support for existing subscriber base
-  - Products under $10 or invoicing require custom pricing
-
-tags: []
-
+tags:
+  - payments
+  - permanent
+  - free-plan
 official_url: https://www.paddle.com/
 pricing_url: https://www.paddle.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

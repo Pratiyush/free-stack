@@ -4,14 +4,16 @@ category: auth
 subcategory: permanent
 brand_color: '#6363F1'
 logo: /logos/workos-authkit.svg
-
 summary: Free up to 1M MAU
-
 tier_type: free-plan
-
 free_tier:
   - Free up to 1M MAU
-
+paid_tier_highlights:
+  - Free up to 1M MAU for AuthKit
+  - Enterprise SSO from $125/connection/mo with volume discounts to $50
+  - Directory Sync (SCIM) at same volume tiers as SSO
+  - Audit Logs from $99-$125/mo for streaming/retention
+  - Custom Domain at $99/mo for branded auth
 pricing:
   - name: Free (AuthKit)
     price: 0
@@ -60,19 +62,14 @@ pricing:
       - Custom 201+ pricing
       - Multi-IdP support
     cta_url: https://workos.com/pricing
-
-paid_tier_highlights:
-  - Free up to 1M MAU for AuthKit
-  - Enterprise SSO from $125/connection/mo with volume discounts to $50
-  - Directory Sync (SCIM) at same volume tiers as SSO
-  - Audit Logs from $99-$125/mo for streaming/retention
-  - Custom Domain at $99/mo for branded auth
-
-tags: []
-
+tags:
+  - auth
+  - permanent
+  - free-plan
+  - identity
 official_url: https://workos.com/
 pricing_url: https://workos.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

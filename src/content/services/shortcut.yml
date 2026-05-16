@@ -4,15 +4,16 @@ category: project-management
 subcategory: permanent
 brand_color: '#58B1E4'
 logo: /logos/shortcut.svg
-
 summary: Free for up to 10 users
-
 tier_type: free-plan
-
 free_tier:
   - Free for up to 10 users
   - No documented rate limits
-
+paid_tier_highlights:
+  - Team ($10/user, $8.50 yearly) adds WIP limits and automations
+  - Business ($16/user, $12 yearly) unlocks OKRs and custom fields
+  - Business removes feature caps with unlimited everything
+  - Enterprise brings SSO/SCIM and premier support SLAs
 pricing:
   - name: Free
     price: 0
@@ -63,18 +64,14 @@ pricing:
       - Dedicated Slack channel
       - Onboarding support
     cta_url: https://www.shortcut.com/pricing
-
-paid_tier_highlights:
-  - Team ($10/user, $8.50 yearly) adds WIP limits and automations
-  - Business ($16/user, $12 yearly) unlocks OKRs and custom fields
-  - Business removes feature caps with unlimited everything
-  - Enterprise brings SSO/SCIM and premier support SLAs
-
-tags: []
-
+tags:
+  - project-management
+  - permanent
+  - free-plan
 official_url: https://www.shortcut.com/
 pricing_url: https://www.shortcut.com/pricing
-
+facets:
+  team_seats: 10
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

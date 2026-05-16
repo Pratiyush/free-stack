@@ -1,0 +1,147 @@
+---
+import progress from '../../../data/sponsor-progress.json';
+
+interface Props {
+  variant?: 'page' | 'footer';
+}
+
+const { variant = 'page' } = Astro.props;
+
+const raised = Math.max(0, progress.raised_usd ?? 0);
+const target = Math.max(1, progress.target_usd ?? 100);
+const pct = Math.min(100, Math.round((raised / target) * 100));
+const monthLabel = new Date(`${progress.month}-01`).toLocaleDateString('en-US', {
+  month: 'long',
+  year: 'numeric',
+});
+---
+
+{
+  variant === 'page' && (
+    <div class="meter-page" role="figure" aria-label={`Sponsorship progress for ${monthLabel}`}>
+      <div class="meter-head">
+        <div class="meter-label">
+          <span class="meter-mono">{monthLabel.toUpperCase()}</span>
+          <span class="meter-dash">·</span>
+          <span class="meter-mono">SPONSORSHIP</span>
+        </div>
+        <div class="meter-amounts">
+          <span class="meter-raised">${raised}</span>
+          <span class="meter-target">/ ${target}</span>
+        </div>
+      </div>
+      <div class="meter-track" aria-hidden="true">
+        <div class="meter-fill" style={`width: ${pct}%`} />
+      </div>
+      <div class="meter-foot">
+        <span class="meter-pct">{pct}% to monthly target</span>
+        <span class="meter-mono meter-sponsor-count">
+          {progress.sponsors.length} sponsor{progress.sponsors.length === 1 ? '' : 's'}
+        </span>
+      </div>
+    </div>
+  )
+}
+
+{
+  variant === 'footer' && (
+    <a
+      class="meter-footer"
+      href="/sponsors"
+      aria-label={`Sponsorship: $${raised} of $${target} for ${monthLabel}`}
+    >
+      Sponsor · ${raised} / ${target}
+    </a>
+  )
+}
+
+<style>
+  /* Page variant — full bar on /sponsors */
+  .meter-page {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: var(--space-lg);
+    background: var(--color-paper-warm);
+    border: 1px solid var(--color-rule);
+    border-radius: var(--radius-md);
+  }
+  .meter-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+  }
+  .meter-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--color-ink-faint);
+  }
+  .meter-mono {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .meter-dash {
+    color: var(--color-ink-faint);
+  }
+  .meter-amounts {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.3rem;
+    font-family: var(--font-display);
+  }
+  .meter-raised {
+    font-size: 2.4rem;
+    line-height: 1;
+    font-weight: 400;
+    color: var(--color-ink);
+  }
+  .meter-target {
+    font-size: 1.2rem;
+    color: var(--color-ink-faint);
+  }
+  .meter-track {
+    height: 10px;
+    background: var(--color-paper);
+    border: 1px solid var(--color-rule);
+    border-radius: 999px;
+    overflow: hidden;
+  }
+  .meter-fill {
+    height: 100%;
+    background: var(--color-coral);
+    transition: width 0.3s ease;
+  }
+  .meter-foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-ink-soft);
+    font-size: 0.85rem;
+  }
+  .meter-pct {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+  }
+  .meter-sponsor-count {
+    color: var(--color-ink-faint);
+  }
+
+  /* Footer variant — single inline link */
+  .meter-footer {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--color-ink-soft);
+    text-decoration: none;
+    border-bottom: 1px dashed transparent;
+    transition: border-color 0.15s ease;
+  }
+  .meter-footer:hover {
+    color: var(--color-coral);
+    border-bottom-color: var(--color-coral);
+  }
+</style>

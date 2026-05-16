@@ -4,15 +4,17 @@ category: search
 subcategory: permanent
 brand_color: '#888888'
 logo: /logos/paradedb.svg
-
-summary: 'Open-source (Apache 2.0)'
-
+summary: Open-source (Apache 2.0)
 tier_type: free-plan
-
 free_tier:
-  - 'Open-source (Apache 2.0)'
+  - Open-source (Apache 2.0)
   - 'Managed: BYOC on AWS/GCP (paid); Ubicloud managed (paid); no permanent free cloud tier'
-
+paid_tier_highlights:
+  - Enterprise removes AGPL copyleft requirements
+  - Managed BYOC deployments on AWS and GCP
+  - Ubicloud-managed hosting option
+  - Priority support with response SLAs
+  - No permanent free managed cloud tier
 pricing:
   - name: Community (Self-Hosted)
     price: 0
@@ -39,19 +41,15 @@ pricing:
       - Enterprise features
       - Email - sales@paradedb.com
     cta_url: mailto:sales@paradedb.com
-
-paid_tier_highlights:
-  - Enterprise removes AGPL copyleft requirements
-  - Managed BYOC deployments on AWS and GCP
-  - Ubicloud-managed hosting option
-  - Priority support with response SLAs
-  - No permanent free managed cloud tier
-
-tags: []
-
+tags:
+  - search
+  - permanent
+  - free-plan
+  - open-source
 official_url: https://www.paradedb.com/
 pricing_url: https://www.paradedb.com/pricing
-
+facets:
+  oss: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

@@ -3,18 +3,19 @@ slug: posthog
 category: analytics
 brand_color: '#1D4AFF'
 logo: /logos/posthog.svg
-
 summary: All-in-one product analytics with 1M events/mo, 5K session recordings, and an open-source self-host option.
-
 tier_type: always-free
-
 free_tier:
   - 1M events/mo
   - 5K session recordings/mo
   - Unlimited team members
   - 1 project
   - 1-year data retention
-
+paid_tier_highlights:
+  - Free tier covers 1M events, 5K recordings, 1M flag requests, 100K exceptions
+  - Pay-as-you-go uses same free tier and bills only overage per-product
+  - Self-hosted open-source option for unlimited use
+  - 6 projects and 7-year retention unlocked when on paid plan
 pricing:
   - name: Free
     price: 0
@@ -51,18 +52,19 @@ pricing:
       - Community support
     cta_url: https://github.com/PostHog/posthog
     billing: free
-
-paid_tier_highlights:
-  - Free tier covers 1M events, 5K recordings, 1M flag requests, 100K exceptions
-  - Pay-as-you-go uses same free tier and bills only overage per-product
-  - Self-hosted open-source option for unlimited use
-  - 6 projects and 7-year retention unlocked when on paid plan
-
-tags: [analytics, product-analytics, session-replay, open-source, feature-flags]
-
+tags:
+  - analytics
+  - product-analytics
+  - session-replay
+  - open-source
+  - feature-flags
+  - always-free
+  - self-host
 official_url: https://posthog.com/
 pricing_url: https://posthog.com/pricing
-
+facets:
+  oss: true
+  self_host: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

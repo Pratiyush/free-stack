@@ -4,15 +4,16 @@ category: dev-tools
 subcategory: permanent
 brand_color: '#000000'
 logo: /logos/github-copilot.svg
-
 summary: '**GitHub Copilot** — free tier; see the pricing page for details.'
-
 tier_type: free-plan
-
 free_tier:
   - Free plan
   - Completions + chat reset monthly; no credit card required
-
+paid_tier_highlights:
+  - Pro at $10/user/mo unlocks unlimited completions and 300 premium requests
+  - Pro+ at $39/user/mo raises to 1,500 premium requests and Claude Opus
+  - Business at $19/user/mo adds org policy, audit log, IP indemnity
+  - Enterprise at $39/user/mo includes fine-tuned models on private code
 pricing:
   - name: Free
     price: 0
@@ -76,18 +77,13 @@ pricing:
       - Advanced policy controls
       - Premium support
       - Knowledge bases
-
-paid_tier_highlights:
-  - Pro at $10/user/mo unlocks unlimited completions and 300 premium requests
-  - Pro+ at $39/user/mo raises to 1,500 premium requests and Claude Opus
-  - Business at $19/user/mo adds org policy, audit log, IP indemnity
-  - Enterprise at $39/user/mo includes fine-tuned models on private code
-
-tags: []
-
+tags:
+  - dev-tools
+  - permanent
+  - free-plan
 official_url: https://github.com/
 pricing_url: https://github.com/features/copilot
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

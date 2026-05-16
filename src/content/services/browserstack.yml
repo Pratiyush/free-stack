@@ -4,22 +4,17 @@ category: testing
 subcategory: permanent
 brand_color: '#F26B3A'
 logo: /logos/browserstack.svg
-
 summary: Free for Percy (5K screenshots) + Test Management only
-
 tier_type: free-plan
-
 free_tier:
   - Free for Percy (5K screenshots) + Test Management only
-  - '30-min Live + 100-min Automate trial only'
-
+  - 30-min Live + 100-min Automate trial only
 paid_tier_highlights:
   - Live Desktop starts at $29/mo for 3,000+ browser combos
   - Automate from $59/mo per parallel test on Chrome
   - Real iOS + Android devices on Desktop & Mobile tiers
   - Team Pro adds 4 simultaneous devices, accessibility testing
   - Team Ultimate bundles 15 products (Bug Capture, Requestly Pro, AI)
-
 pricing:
   - name: Free (trial / Percy / Test Mgmt)
     description: Free Percy snapshots + Test Management; 30-min Live trial
@@ -109,19 +104,21 @@ pricing:
       - Geolocation from 100+ countries
   - name: Volume / Enterprise
     description: Volume discounts for whole-org rollout
-    price: 'Contact sales'
+    price: Contact sales
     billing: annual
     features:
       - Custom volume pricing
       - Team Pro features for all users
       - Seamless access management
       - Multi-device testing
-
-tags: []
-
+tags:
+  - testing
+  - permanent
+  - free-plan
+  - realtime
 official_url: https://www.browserstack.com/
 pricing_url: https://www.browserstack.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

@@ -10,3 +10,6 @@ ref/
 release-notes/
 data/
 .claude/
+test-results/
+playwright-report/
+playwright/.cache/

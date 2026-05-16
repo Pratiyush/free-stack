@@ -4,14 +4,15 @@ category: auth
 subcategory: permanent
 brand_color: '#DD2C00'
 logo: /logos/firebase-auth.svg
-
 summary: Spark plan (free)
-
 tier_type: free-plan
-
 free_tier:
   - Spark plan (free)
-
+paid_tier_highlights:
+  - Blaze enables Identity Platform features like SAML and OIDC SSO
+  - Multi-factor auth via SMS or TOTP requires Blaze
+  - Pay per MAU above 50K free monthly active users
+  - SMS-based phone auth billed per message on Blaze
 pricing:
   - name: Spark (Free)
     price: 0
@@ -37,18 +38,14 @@ pricing:
       - Higher MAU limits
       - SMS billed per message
     cta_url: https://console.firebase.google.com/
-
-paid_tier_highlights:
-  - Blaze enables Identity Platform features like SAML and OIDC SSO
-  - Multi-factor auth via SMS or TOTP requires Blaze
-  - Pay per MAU above 50K free monthly active users
-  - SMS-based phone auth billed per message on Blaze
-
-tags: []
-
+tags:
+  - auth
+  - permanent
+  - free-plan
+  - identity
 official_url: https://firebase.google.com/
 pricing_url: https://firebase.google.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

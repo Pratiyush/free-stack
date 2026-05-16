@@ -4,15 +4,16 @@ category: dev-tools
 subcategory: permanent
 brand_color: '#4000BF'
 logo: /logos/insomnia.svg
-
-summary: 'Free plan (open source, MIT)'
-
+summary: Free plan (open source, MIT)
 tier_type: free-plan
-
 free_tier:
-  - 'Free plan (open source, MIT)'
-  - 'Local only, no sync'
-
+  - Free plan (open source, MIT)
+  - Local only, no sync
+paid_tier_highlights:
+  - Pro at $12/user/mo lifts the 3-user Git Sync cap and adds RBAC
+  - Enterprise at $45/user/mo adds SSO/SCIM and native vault integration
+  - Annual billing saves 15% on Pro tier
+  - Mock server request quota scales from 1K to unlimited across tiers
 pricing:
   - name: Essentials
     price: 0
@@ -50,18 +51,15 @@ pricing:
       - Native vault integrations (AWS, GCP, HashiCorp, Azure)
       - Unlimited mock server requests
     cta_url: https://insomnia.rest/pricing
-
-paid_tier_highlights:
-  - Pro at $12/user/mo lifts the 3-user Git Sync cap and adds RBAC
-  - Enterprise at $45/user/mo adds SSO/SCIM and native vault integration
-  - Annual billing saves 15% on Pro tier
-  - Mock server request quota scales from 1K to unlimited across tiers
-
-tags: []
-
+tags:
+  - dev-tools
+  - permanent
+  - free-plan
+  - open-source
 official_url: https://insomnia.rest/
 pricing_url: https://insomnia.rest/pricing
-
+facets:
+  oss: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

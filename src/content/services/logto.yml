@@ -4,14 +4,16 @@ category: auth
 subcategory: permanent
 brand_color: '#5D34F2'
 logo: /logos/logto.svg
-
 summary: Logto — free tier; see the pricing page for details.
-
 tier_type: free-plan
-
 free_tier:
   - Free plan
-
+paid_tier_highlights:
+  - Pro at $24/mo unlocks RBAC, MFA, and SAML/OIDC SSO
+  - Pro adds multi-tenancy (Organizations) for B2B SaaS
+  - Token usage billed at $0.08 per 100 beyond 50K free
+  - Enterprise adds Private Cloud, SLA, and dedicated migration
+  - Free tier supports up to 50K monthly active users
 pricing:
   - name: Free
     price: 0
@@ -48,19 +50,14 @@ pricing:
       - Premium priority support
       - Dedicated migration assistance
     cta_url: https://logto.io/contact
-
-paid_tier_highlights:
-  - Pro at $24/mo unlocks RBAC, MFA, and SAML/OIDC SSO
-  - Pro adds multi-tenancy (Organizations) for B2B SaaS
-  - Token usage billed at $0.08 per 100 beyond 50K free
-  - Enterprise adds Private Cloud, SLA, and dedicated migration
-  - Free tier supports up to 50K monthly active users
-
-tags: []
-
+tags:
+  - auth
+  - permanent
+  - free-plan
+  - identity
 official_url: https://logto.io/
 pricing_url: https://logto.io/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

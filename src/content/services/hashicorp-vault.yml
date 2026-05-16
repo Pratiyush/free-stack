@@ -4,15 +4,16 @@ category: security
 subcategory: permanent
 brand_color: '#000000'
 logo: /logos/hashicorp-vault.svg
-
-summary: 'Community Edition (self-hosted)'
-
+summary: Community Edition (self-hosted)
 tier_type: free-plan
-
 free_tier:
-  - 'Community Edition (self-hosted)'
+  - Community Edition (self-hosted)
   - HCP Vault Secrets free tier EOL July 2026; use Community Edition
-
+paid_tier_highlights:
+  - HCP Vault Dedicated bills hourly for managed clusters
+  - Enterprise adds DR/performance replication and HSM unseal
+  - Namespaces and FIPS builds are Enterprise-only
+  - HCP Vault Secrets free tier was retired in July 2026
 pricing:
   - name: Community Edition
     price: 0
@@ -48,18 +49,15 @@ pricing:
       - Premium support and SLAs
       - Compliance reporting (SOC 2, HIPAA)
     cta_url: https://www.hashicorp.com/contact-sales
-
-paid_tier_highlights:
-  - HCP Vault Dedicated bills hourly for managed clusters
-  - Enterprise adds DR/performance replication and HSM unseal
-  - Namespaces and FIPS builds are Enterprise-only
-  - HCP Vault Secrets free tier was retired in July 2026
-
-tags: []
-
+tags:
+  - security
+  - permanent
+  - free-plan
+  - self-host
 official_url: https://www.hashicorp.com/
 pricing_url: https://www.hashicorp.com/en/lp/vault-p
-
+facets:
+  self_host: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

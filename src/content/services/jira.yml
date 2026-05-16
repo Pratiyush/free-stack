@@ -4,15 +4,16 @@ category: project-management
 subcategory: permanent
 brand_color: '#0052CC'
 logo: /logos/jira.svg
-
 summary: Free for up to 10 users
-
 tier_type: free-plan
-
 free_tier:
   - Free for up to 10 users
   - Community support only
-
+paid_tier_highlights:
+  - Standard at $7.53/user/mo lifts 10-user cap to 50K and adds roles
+  - Premium at $13.53/user/mo adds advanced roadmaps and 99.9% SLA
+  - Enterprise adds SAML SSO, SCIM, and 99.95% uptime guarantee
+  - 24/7 support requires Premium or above
 pricing:
   - name: Free
     price: 0
@@ -61,18 +62,14 @@ pricing:
       - 24/7 Enterprise support
       - Atlassian Access included
     cta_url: https://www.atlassian.com/enterprise
-
-paid_tier_highlights:
-  - Standard at $7.53/user/mo lifts 10-user cap to 50K and adds roles
-  - Premium at $13.53/user/mo adds advanced roadmaps and 99.9% SLA
-  - Enterprise adds SAML SSO, SCIM, and 99.95% uptime guarantee
-  - 24/7 support requires Premium or above
-
-tags: []
-
+tags:
+  - project-management
+  - permanent
+  - free-plan
 official_url: https://www.atlassian.com/
 pricing_url: https://www.atlassian.com/software/jira/pricing
-
+facets:
+  team_seats: 10
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

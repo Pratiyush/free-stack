@@ -4,22 +4,17 @@ category: security
 subcategory: permanent
 brand_color: '#025E8C'
 logo: /logos/dependabot-github.svg
-
 summary: Free for all repos
-
 tier_type: free-plan
-
 free_tier:
   - Free for all repos
   - 'Default: 5 open PRs at a time; custom auto-triage rules free on public repos only'
-
 paid_tier_highlights:
   - Dependabot core remains free for public and private repos
   - GitHub Secret Protection at $19/active-committer/mo
   - GitHub Code Security at $30/active-committer/mo
   - Advanced auto-triage rules require Code Security
   - Add-ons unlock advanced SAST and secret-leak prevention
-
 pricing:
   - name: Dependabot (Free)
     price: 0
@@ -53,12 +48,13 @@ pricing:
       - SBOM exports
       - Custom auto-triage rules on private repos
     billing: monthly
-
-tags: []
-
+tags:
+  - security
+  - permanent
+  - free-plan
 official_url: https://docs.github.com/
 pricing_url: https://docs.github.com/en/code-security/dependabot
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

@@ -4,15 +4,19 @@ category: iaas
 subcategory: permanent
 brand_color: '#007BFC'
 logo: /logos/vultr.svg
-
 summary: Trial credits only (not permanent)
-
 tier_type: free-plan
-
 free_tier:
   - Trial credits only (not permanent)
-  - '**Trial only** -- credit card required, credits expire after 12 months. Cheapest plan: $2.50/mo (1 vCPU, 512MB)'
-
+  - >-
+    **Trial only** -- credit card required, credits expire after 12 months. Cheapest plan: $2.50/mo (1 vCPU,
+    512MB)
+paid_tier_highlights:
+  - Regular Performance from $2.50/mo for entry workloads
+  - High Frequency from $6/mo with NVMe + 3 GHz+ Xeon
+  - General Purpose from $30/mo, Memory Optimized from $40/mo
+  - VX1 Cloud Compute claims up to 33% better cost per vCPU
+  - Bare metal, GPU, and Kubernetes products billed separately
 pricing:
   - name: Free trial credit
     price: 0
@@ -26,7 +30,7 @@ pricing:
       - No permanent free tier
     cta_url: https://www.vultr.com/register/
   - name: Regular Performance
-    price: 2.50
+    price: 2.5
     unit: /month
     billing: monthly
     description: Entry-level plan, prev-gen Intel + SSD
@@ -50,7 +54,7 @@ pricing:
       - Hourly billing option
     cta_url: https://www.vultr.com/pricing/
   - name: VX1 Cloud Compute
-    price: 43.80
+    price: 43.8
     unit: /month
     billing: monthly
     description: Up to 33% more cost-effective per vCPU
@@ -61,19 +65,18 @@ pricing:
       - Multiple regions
       - Hourly billing
     cta_url: https://www.vultr.com/pricing/
-
-paid_tier_highlights:
-  - Regular Performance from $2.50/mo for entry workloads
-  - High Frequency from $6/mo with NVMe + 3 GHz+ Xeon
-  - General Purpose from $30/mo, Memory Optimized from $40/mo
-  - VX1 Cloud Compute claims up to 33% better cost per vCPU
-  - Bare metal, GPU, and Kubernetes products billed separately
-
-tags: []
-
+tags:
+  - iaas
+  - permanent
+  - free-plan
+  - cloud
+  - infrastructure
 official_url: https://www.vultr.com/
 pricing_url: https://www.vultr.com/pricing/
-
-date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+facets:
+  cc_required: true
+date_added: 2026-05-15T00:00:00.000Z
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'
+signup_friction:
+  requires_cc: true

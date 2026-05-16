@@ -4,15 +4,17 @@ category: communication
 subcategory: permanent
 brand_color: '#888888'
 logo: /logos/liveblocks.svg
-
 summary: Starter plan (free)
-
 tier_type: free-plan
-
 free_tier:
   - Starter plan (free)
-  - "Plans paused when free limits exceeded; first-day sessions don't count toward MAU billing"
-
+  - Plans paused when free limits exceeded; first-day sessions don't count toward MAU billing
+paid_tier_highlights:
+  - Pro at $30/mo unlocks 8 GB realtime storage and branding removal
+  - Team at $600/mo adds SAML SSO, SOC 2/HIPAA, and 10 seats
+  - Overage at $0.03 per monthly active room beyond 500 included
+  - Enterprise adds multi-region hosting, SCIM, and volume discounts
+  - All paid tiers include usage-based overage billing
 pricing:
   - name: Free
     price: 0
@@ -61,19 +63,13 @@ pricing:
       - Advanced permissions and volume discounts
       - 100 max simultaneous connections per room
     cta_url: https://liveblocks.io/contact/sales
-
-paid_tier_highlights:
-  - Pro at $30/mo unlocks 8 GB realtime storage and branding removal
-  - Team at $600/mo adds SAML SSO, SOC 2/HIPAA, and 10 seats
-  - Overage at $0.03 per monthly active room beyond 500 included
-  - Enterprise adds multi-region hosting, SCIM, and volume discounts
-  - All paid tiers include usage-based overage billing
-
-tags: []
-
+tags:
+  - communication
+  - permanent
+  - free-plan
 official_url: https://liveblocks.io/
 pricing_url: https://liveblocks.io/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

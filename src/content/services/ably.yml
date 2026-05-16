@@ -4,22 +4,17 @@ category: communication
 subcategory: permanent
 brand_color: '#888888'
 logo: /logos/ably.svg
-
 summary: Free plan (permanent)
-
 tier_type: free-plan
-
 free_tier:
   - Free plan (permanent)
   - No time limit on free tier; messages counted by publish + delivery
   - 6M messages/month, 200 concurrent connections, 500 msgs/sec peak
-
 paid_tier_highlights:
-  - 'Standard ($29/mo + usage) lifts to 10k connections and 2.5k msgs/sec'
-  - 'Pro ($399/mo + usage) scales to 50k connections and 10k msgs/sec'
-  - 'Paid tiers add uptime SLOs and email-support SLAs (1 day / 4 hour)'
-  - 'Enterprise adds 99.999% SLA, HIPAA BAA, SSO/SCIM, 24/7 support'
-
+  - Standard ($29/mo + usage) lifts to 10k connections and 2.5k msgs/sec
+  - Pro ($399/mo + usage) scales to 50k connections and 10k msgs/sec
+  - Paid tiers add uptime SLOs and email-support SLAs (1 day / 4 hour)
+  - Enterprise adds 99.999% SLA, HIPAA BAA, SSO/SCIM, 24/7 support
 pricing:
   - name: Free
     price: 0
@@ -67,12 +62,14 @@ pricing:
       - HIPAA BAA, SSO, SCIM, dedicated infra
       - Committed-use discounts available
     cta_url: https://ably.com/contact
-
-tags: []
-
+tags:
+  - communication
+  - permanent
+  - free-plan
 official_url: https://ably.com/
 pricing_url: https://ably.com/pricing
-
+facets:
+  requests_per_month: 6000000
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

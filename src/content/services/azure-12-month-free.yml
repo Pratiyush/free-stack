@@ -1,31 +1,26 @@
-name: 'Azure 12-Month Free'
+name: Azure 12-Month Free
 slug: azure-12-month-free
 category: iaas
 subcategory: permanent
 brand_color: '#0078D4'
 logo: /logos/azure-12-month-free.svg
-
-summary: '12-month trial (new accounts)'
-
+summary: 12-month trial (new accounts)
 tier_type: free-plan
-
 free_tier:
-  - '12-month free for new accounts'
+  - 12-month free for new accounts
   - 750 hours B1S Linux VM and 750 hours B1S Windows VM
   - 64 GB SSD-managed disk (P6) x2
   - 5 GB LRS-hot Blob storage
   - 250 GB SQL Database (S0)
   - 15 GB inbound + 15 GB outbound bandwidth
-  - '$200 credit for first 30 days'
-  - 'Expires after 12 months -- auto-converts to PAYG unless deprovisioned'
-
+  - $200 credit for first 30 days
+  - Expires after 12 months -- auto-converts to PAYG unless deprovisioned
 paid_tier_highlights:
-  - 'After 12 months, services bill at pay-as-you-go rates'
-  - 'Reserved instances and savings plans for up to 72% discount'
-  - '55+ Always-Free services continue at no charge'
-  - 'Spot VMs available for non-critical compute up to 90% off'
-  - 'Enterprise Agreement and CSP options for volume discounts'
-
+  - After 12 months, services bill at pay-as-you-go rates
+  - Reserved instances and savings plans for up to 72% discount
+  - 55+ Always-Free services continue at no charge
+  - Spot VMs available for non-critical compute up to 90% off
+  - Enterprise Agreement and CSP options for volume discounts
 pricing:
   - name: 12-Month Free Services
     price: 0
@@ -61,12 +56,16 @@ pricing:
       - Spot VM up to 90% off
       - Always-Free quotas still apply
     cta_url: https://azure.microsoft.com/en-us/pricing/
-
-tags: []
-
+tags:
+  - iaas
+  - permanent
+  - free-plan
+  - cloud
+  - infrastructure
 official_url: https://azure.microsoft.com/
 pricing_url: https://azure.microsoft.com/en-us/pricing/free-services
-
-date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+facets:
+  storage_gb: 5
+date_added: '2026-05-15'
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

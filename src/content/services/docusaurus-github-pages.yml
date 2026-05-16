@@ -4,15 +4,13 @@ category: documentation
 subcategory: permanent
 brand_color: '#3ECC5F'
 logo: /logos/docusaurus-github-pages.svg
-
 summary: Fully free (OSS + free hosting)
-
 tier_type: free-plan
-
 free_tier:
   - Fully free (OSS + free hosting)
-  - 'Static site generator -- deploy free on GitHub Pages (1GB site, 100GB bandwidth/mo) or Cloudflare Pages (unlimited)'
-
+  - Static site generator -- deploy free on GitHub Pages (1GB site, 100GB bandwidth/mo) or Cloudflare Pages (unlimited)
+paid_tier_highlights:
+  - This service is always-free; no paid tiers exist
 pricing:
   - name: Free (MIT open source)
     price: 0
@@ -26,15 +24,15 @@ pricing:
       - Free hosting on GitHub Pages or Cloudflare Pages
       - GitHub Pages limits 1 GB site, 100 GB bandwidth/month
     cta_url: https://docusaurus.io/
-
-paid_tier_highlights:
-  - This service is always-free; no paid tiers exist
-
-tags: []
-
+tags:
+  - documentation
+  - permanent
+  - free-plan
+  - docs
 official_url: https://docusaurus.io/
 pricing_url: https://docusaurus.io/
-
+facets:
+  bandwidth_gb_month: 100
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

@@ -4,15 +4,16 @@ category: maps
 subcategory: permanent
 brand_color: '#CD2640'
 logo: /logos/stadia-maps.svg
-
-summary: '2,500 free credits/mo'
-
+summary: 2,500 free credits/mo
 tier_type: free-plan
-
 free_tier:
-  - '2,500 free credits/mo'
-  - 'No documented per-second limits'
-
+  - 2,500 free credits/mo
+  - No documented per-second limits
+paid_tier_highlights:
+  - Starter ($20/mo) unlocks commercial use and 1M credits
+  - Standard ($80/mo) adds satellite basemaps and 7.5M credits
+  - Professional ($250/mo) provides all basemaps and 25M credits
+  - Overage rates decrease as tier scales ($0.015 vs $0.030 per 1K)
 pricing:
   - name: Free
     price: 0
@@ -62,18 +63,14 @@ pricing:
       - Full API access
       - Elevated rate limits
     cta_url: https://stadiamaps.com/pricing/
-
-paid_tier_highlights:
-  - Starter ($20/mo) unlocks commercial use and 1M credits
-  - Standard ($80/mo) adds satellite basemaps and 7.5M credits
-  - Professional ($250/mo) provides all basemaps and 25M credits
-  - Overage rates decrease as tier scales ($0.015 vs $0.030 per 1K)
-
-tags: []
-
+tags:
+  - maps
+  - permanent
+  - free-plan
+  - geolocation
 official_url: https://stadiamaps.com/
 pricing_url: https://stadiamaps.com/pricing/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

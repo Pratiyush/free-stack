@@ -3,25 +3,20 @@ slug: cloudflare-dns
 category: dns
 brand_color: '#F38020'
 logo: /logos/cloudflare-dns.svg
-
 summary: DNS hosting with unlimited zones, 200 records/zone, unlimited queries, and DDoS protection included.
-
 tier_type: always-free
-
 free_tier:
   - Unlimited zones
   - 200 DNS records/zone
   - Unlimited DNS queries
   - Proxied traffic and DDoS protection
   - 'API: 1,200 req/5min'
-
 paid_tier_highlights:
   - Pro ($20/mo) adds WAF managed rulesets and image optimization
   - Business ($200/mo) brings 100% uptime SLA + custom SSL + PCI
   - Enterprise unlocks advanced WAF, bot management, premium routing
   - Unmetered DDoS protection at every tier
   - DNS query quota is unlimited at every tier
-
 pricing:
   - name: Free
     description: DNS, CDN, SSL, and DDoS protection at no cost
@@ -61,7 +56,7 @@ pricing:
       - Advanced DDoS alerts
   - name: Enterprise
     description: Mission-critical apps with custom SLAs
-    price: 'Contact sales'
+    price: Contact sales
     billing: annual
     features:
       - Custom SLA + premium support
@@ -69,12 +64,17 @@ pricing:
       - Premium routing (Argo)
       - Dedicated solutions engineer
       - Advanced certificate manager
-
-tags: [dns, domain, ddos-protection, cdn, security]
-
+tags:
+  - dns
+  - domain
+  - ddos-protection
+  - cdn
+  - security
+  - always-free
+  - api
 official_url: https://www.cloudflare.com/
 pricing_url: https://www.cloudflare.com/plans/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

@@ -4,15 +4,16 @@ category: iaas
 subcategory: permanent
 brand_color: '#4285F4'
 logo: /logos/gcp-always-free.svg
-
 summary: Permanent free tier
-
 tier_type: free-plan
-
 free_tier:
   - Permanent free tier
   - Billing account required but no charges within limits; limits shared across all projects per billing account
-
+paid_tier_highlights:
+  - $300 Free Trial credits valid for 90 days for new accounts
+  - Pay-as-you-go billing with sustained-use discounts
+  - Committed-use discounts for reserved capacity
+  - Enterprise support and SLAs available
 pricing:
   - name: Always Free
     price: 0
@@ -49,18 +50,15 @@ pricing:
       - Committed-use discounts
       - Enterprise SLA available
       - Full production support
-
-paid_tier_highlights:
-  - $300 Free Trial credits valid for 90 days for new accounts
-  - Pay-as-you-go billing with sustained-use discounts
-  - Committed-use discounts for reserved capacity
-  - Enterprise support and SLAs available
-
-tags: []
-
+tags:
+  - iaas
+  - permanent
+  - free-plan
+  - cloud
+  - infrastructure
 official_url: https://cloud.google.com/
 pricing_url: https://cloud.google.com/free
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

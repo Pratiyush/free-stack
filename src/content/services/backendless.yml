@@ -4,26 +4,21 @@ category: baas
 subcategory: permanent
 brand_color: '#1D77BD'
 logo: /logos/backendless.svg
-
 summary: Free plan (no credit card required)
-
 tier_type: free-plan
-
 free_tier:
   - Free Cloud plan (no credit card required)
   - 50 API requests/minute
   - 20 database tables, 15,000 objects per table
   - 1 GB file storage
-  - 'Fixed limits; no SSL, daily backups, or team permissions'
+  - Fixed limits; no SSL, daily backups, or team permissions
   - 30-day grace period on overages
-
 paid_tier_highlights:
   - 'Cloud Scale from $15/mo: unlimited API requests, 10 GB storage'
-  - 'Scale plan adds free SSL, daily backups, team permissions'
-  - 'Function Packs $5-$399/mo for storage, real-time, security extras'
+  - Scale plan adds free SSL, daily backups, team permissions
+  - Function Packs $5-$399/mo for storage, real-time, security extras
   - 'Backendless Pro: free on-premise self-host with no functional limits'
   - 'Managed Backendless: paid 24x7x365 ops for Pro installations'
-
 pricing:
   - name: Cloud Free
     price: 0
@@ -80,12 +75,16 @@ pricing:
       - Proactive issue resolution
       - Managed environment
     cta_url: https://backendless.com/pricing/managed-backendless/
-
-tags: []
-
+tags:
+  - baas
+  - permanent
+  - free-plan
+  - backend-as-a-service
+  - api
 official_url: https://backendless.com/
 pricing_url: https://backendless.com/pricing/
-
-date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+facets:
+  storage_gb: 1
+date_added: '2026-05-15'
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

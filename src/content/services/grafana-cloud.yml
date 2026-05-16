@@ -3,14 +3,15 @@ slug: grafana-cloud
 category: analytics
 brand_color: '#F46800'
 logo: /logos/grafana-cloud.svg
-
 summary: Grafana Cloud — free tier; see the pricing page for details.
-
 tier_type: free-plan
-
 free_tier:
   - Free tier
-
+paid_tier_highlights:
+  - Pro from $19/mo unlocks usage-based scaling and longer retention
+  - Pro lifts metric retention from 14 days to 13 months
+  - Enterprise from $25K/yr adds 24/7 support and BYOC deployment
+  - Volume discounts available at enterprise scale
 pricing:
   - name: Free
     price: 0
@@ -50,18 +51,12 @@ pricing:
       - Dedicated Observability Architect
       - Volume-based pricing with discounts
       - Advanced security and compliance
-
-paid_tier_highlights:
-  - Pro from $19/mo unlocks usage-based scaling and longer retention
-  - Pro lifts metric retention from 14 days to 13 months
-  - Enterprise from $25K/yr adds 24/7 support and BYOC deployment
-  - Volume discounts available at enterprise scale
-
-tags: []
-
+tags:
+  - analytics
+  - free-plan
 official_url: https://grafana.com/
 pricing_url: https://grafana.com/pricing/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

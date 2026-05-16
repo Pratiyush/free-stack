@@ -4,25 +4,27 @@ category: iaas
 subcategory: permanent
 brand_color: '#00A95C'
 logo: /logos/linode-akamai.svg
-
 summary: Trial credits only (not permanent)
-
 tier_type: free-plan
-
 free_tier:
   - Trial credits only (not permanent)
   - '**Trial only** -- credit card required, unused credits expire. GPU plans excluded from trial'
-
 pricing:
   - name: Free
     price: 0
     unit: /month
-
-tags: []
-
+tags:
+  - iaas
+  - permanent
+  - free-plan
+  - cloud
+  - infrastructure
 official_url: https://www.linode.com/
 pricing_url: https://www.linode.com/pricing/
-
-date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+facets:
+  cc_required: true
+date_added: 2026-05-15T00:00:00.000Z
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'
+signup_friction:
+  requires_cc: true

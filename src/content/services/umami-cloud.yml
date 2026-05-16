@@ -3,24 +3,20 @@ slug: umami-cloud
 category: analytics
 brand_color: '#000000'
 logo: /logos/umami-cloud.svg
-
 summary: Umami Cloud — free tier; see the pricing page for details.
-
 tier_type: free-plan
-
 free_tier:
   - Free tier
-
 pricing:
   - name: Free
     price: 0
     unit: /month
-
-tags: []
-
+tags:
+  - analytics
+  - free-plan
 official_url: https://umami.is/
 pricing_url: https://umami.is/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

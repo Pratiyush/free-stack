@@ -4,15 +4,15 @@ category: documentation
 subcategory: permanent
 brand_color: '#2962FF'
 logo: /logos/hashnode.svg
-
 summary: Free forever (all users)
-
 tier_type: free-plan
-
 free_tier:
   - Free forever (all users)
-  - 'Single-author blog; team features require Startup plan ($199/mo)'
-
+  - Single-author blog; team features require Startup plan ($199/mo)
+paid_tier_highlights:
+  - Hashnode personal blogs remain free forever for all users
+  - Team/multi-author features previously offered have been folded into the free product
+  - No published paid SaaS tier on the public pricing page
 pricing:
   - name: Free
     price: 0
@@ -26,17 +26,14 @@ pricing:
       - Comments, reactions, analytics dashboard
       - Map your own domain free of charge
     cta_url: https://hashnode.com/signup
-
-paid_tier_highlights:
-  - Hashnode personal blogs remain free forever for all users
-  - Team/multi-author features previously offered have been folded into the free product
-  - No published paid SaaS tier on the public pricing page
-
-tags: []
-
+tags:
+  - documentation
+  - permanent
+  - free-plan
+  - docs
 official_url: https://hashnode.com/
 pricing_url: https://hashnode.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

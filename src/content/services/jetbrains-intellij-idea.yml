@@ -4,15 +4,16 @@ category: dev-tools
 subcategory: permanent
 brand_color: '#000000'
 logo: /logos/jetbrains-intellij-idea.svg
-
-summary: 'Community Edition (free, permanent)'
-
+summary: Community Edition (free, permanent)
 tier_type: free-plan
-
 free_tier:
-  - 'Community Edition (free, permanent)'
-  - 'Local IDE, no usage limits'
-
+  - Community Edition (free, permanent)
+  - Local IDE, no usage limits
+paid_tier_highlights:
+  - Ultimate Individual at $16.90/mo adds web, database, enterprise tools
+  - Ultimate Business at $24.90/user/mo for commercial team use
+  - All Products Pack at $28.90/mo bundles every JetBrains IDE
+  - Annual billing offers ~20% discount vs monthly
 pricing:
   - name: Community Edition
     price: 0
@@ -27,7 +28,7 @@ pricing:
       - Free for commercial and personal use
     cta_url: https://www.jetbrains.com/idea/download/
   - name: Ultimate Individual
-    price: 16.90
+    price: 16.9
     unit: /month
     billing: monthly
     description: Full IDE for individuals; web, enterprise, database tooling
@@ -39,7 +40,7 @@ pricing:
       - Profiler, code coverage, remote development
     cta_url: https://www.jetbrains.com/idea/buy/
   - name: Ultimate Business
-    price: 24.90
+    price: 24.9
     unit: /user/month
     billing: monthly
     description: Per-user commercial license for organizations
@@ -51,7 +52,7 @@ pricing:
       - Volume-discounted pricing
     cta_url: https://www.jetbrains.com/idea/buy/
   - name: All Products Pack
-    price: 28.90
+    price: 28.9
     unit: /user/month
     billing: monthly
     description: Bundle including IntelliJ IDEA Ultimate plus all IDEs
@@ -62,18 +63,13 @@ pricing:
       - Discounted vs buying individually
       - Available for Individual and Business
     cta_url: https://www.jetbrains.com/store/
-
-paid_tier_highlights:
-  - Ultimate Individual at $16.90/mo adds web, database, enterprise tools
-  - Ultimate Business at $24.90/user/mo for commercial team use
-  - All Products Pack at $28.90/mo bundles every JetBrains IDE
-  - Annual billing offers ~20% discount vs monthly
-
-tags: []
-
+tags:
+  - dev-tools
+  - permanent
+  - free-plan
 official_url: https://www.jetbrains.com/
 pricing_url: https://www.jetbrains.com/idea/buy/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

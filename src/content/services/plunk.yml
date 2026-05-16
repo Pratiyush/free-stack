@@ -3,18 +3,18 @@ slug: plunk
 category: email
 brand_color: '#FF6363'
 logo: /logos/plunk.svg
-
 summary: Open-source transactional email with 1K emails/mo free, unlimited contacts, custom domains, and self-host option.
-
 tier_type: always-free
-
 free_tier:
   - 1,000 emails/month (free forever)
   - Unlimited contacts
   - Custom domains, click & open tracking
   - Plunk branding on emails (removed on paid)
   - Open source (AGPL-3.0); self-host on AWS SES
-
+paid_tier_highlights:
+  - Free Forever 1K emails/mo with unlimited contacts and tracking
+  - Pay as You Grow $0.001/email, no base fee, branding removed
+  - Self-hosted Docker option under AGPL-3.0 for full data ownership
 pricing:
   - name: Free Forever
     price: 0
@@ -52,17 +52,19 @@ pricing:
       - GDPR-friendly self-host
     cta_url: https://github.com/useplunk/plunk
     billing: free
-
-paid_tier_highlights:
-  - Free Forever 1K emails/mo with unlimited contacts and tracking
-  - Pay as You Grow $0.001/email, no base fee, branding removed
-  - Self-hosted Docker option under AGPL-3.0 for full data ownership
-
-tags: [email, transactional-email, open-source, self-hosted, api]
-
+tags:
+  - email
+  - transactional-email
+  - open-source
+  - self-hosted
+  - api
+  - always-free
+  - self-host
 official_url: https://www.useplunk.com/
 pricing_url: https://www.useplunk.com/pricing
-
+facets:
+  oss: true
+  self_host: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

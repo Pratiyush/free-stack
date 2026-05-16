@@ -4,15 +4,16 @@ category: project-management
 subcategory: permanent
 brand_color: '#3F76FF'
 logo: /logos/plane.svg
-
-summary: 'Free forever (cloud); open-source self-hosted'
-
+summary: Free forever (cloud); open-source self-hosted
 tier_type: free-plan
-
 free_tier:
-  - 'Free forever (cloud); open-source self-hosted'
+  - Free forever (cloud); open-source self-hosted
   - No documented rate limits
-
+paid_tier_highlights:
+  - Free plan supports up to 12 users with 500 AI credits per seat
+  - Pro $6/user/mo adds workspace wiki, time tracking, templates
+  - Business $13/user/mo unlocks recurring items, nested pages, intake forms
+  - Enterprise Grid offers private deployments, LDAP, audit logs (custom price)
 pricing:
   - name: Free
     price: 0
@@ -62,18 +63,17 @@ pricing:
       - Migration and implementation services
     cta_url: https://app.plane.so/talk-to-sales
     billing: annual
-
-paid_tier_highlights:
-  - Free plan supports up to 12 users with 500 AI credits per seat
-  - Pro $6/user/mo adds workspace wiki, time tracking, templates
-  - Business $13/user/mo unlocks recurring items, nested pages, intake forms
-  - Enterprise Grid offers private deployments, LDAP, audit logs (custom price)
-
-tags: []
-
+tags:
+  - project-management
+  - permanent
+  - free-plan
+  - open-source
+  - self-host
 official_url: https://plane.so/
 pricing_url: https://plane.so/pricing
-
+facets:
+  oss: true
+  self_host: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

@@ -3,18 +3,20 @@ slug: workos
 category: auth
 brand_color: '#6363F1'
 logo: /logos/workos.svg
-
 summary: Enterprise-grade auth with 1M free monthly active users, SSO, and MFA included at all tiers.
-
 tier_type: free-plan
-
 free_tier:
   - 1M monthly active users
   - MFA included at all tiers
   - Social login included
   - All core auth features
   - No credit card required
-
+paid_tier_highlights:
+  - Enterprise SSO from $125/connection/mo, volume discounts to $50
+  - Directory Sync (SCIM) at $125/connection/mo with same volume tiers
+  - Audit Logs from $99/mo for retention, $125/mo for streaming
+  - Custom Domain at $99/mo for branded auth
+  - Radar bot/fraud protection free for 1k checks, then $100/50K checks
 pricing:
   - name: Free (AuthKit)
     price: 0
@@ -75,19 +77,17 @@ pricing:
       - Compliance docs
       - $125/mo for streaming, $99/mo for retention
     cta_url: https://workos.com/pricing
-
-paid_tier_highlights:
-  - Enterprise SSO from $125/connection/mo, volume discounts to $50
-  - Directory Sync (SCIM) at $125/connection/mo with same volume tiers
-  - Audit Logs from $99/mo for retention, $125/mo for streaming
-  - Custom Domain at $99/mo for branded auth
-  - Radar bot/fraud protection free for 1k checks, then $100/50K checks
-
-tags: [authentication, sso, mfa, identity, enterprise]
-
+tags:
+  - authentication
+  - sso
+  - mfa
+  - identity
+  - enterprise
+  - auth
+  - free-plan
 official_url: https://workos.com/
 pricing_url: https://workos.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

@@ -4,15 +4,13 @@ category: documentation
 subcategory: permanent
 brand_color: '#000000'
 logo: /logos/nextra.svg
-
-summary: 'Fully free (OSS, MIT license)'
-
+summary: Fully free (OSS, MIT license)
 tier_type: free-plan
-
 free_tier:
-  - 'Fully free (OSS, MIT license)'
-  - 'Static site generator -- deploy on Vercel/Cloudflare/Netlify free tiers. Used by Next.js, React, Tailwind docs'
-
+  - Fully free (OSS, MIT license)
+  - Static site generator -- deploy on Vercel/Cloudflare/Netlify free tiers. Used by Next.js, React, Tailwind docs
+paid_tier_highlights:
+  - This service is always-free; no paid tiers exist
 pricing:
   - name: Free (OSS)
     price: 0
@@ -27,15 +25,16 @@ pricing:
       - Deploy to Vercel/Cloudflare/Netlify free tiers
       - Used by Next.js, React, Tailwind docs
     cta_url: https://nextra.site/docs
-
-paid_tier_highlights:
-  - This service is always-free; no paid tiers exist
-
-tags: []
-
+tags:
+  - documentation
+  - permanent
+  - free-plan
+  - docs
+  - open-source
 official_url: https://nextra.site/
 pricing_url: https://nextra.site/
-
+facets:
+  oss: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

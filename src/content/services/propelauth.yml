@@ -4,14 +4,15 @@ category: auth
 subcategory: permanent
 brand_color: '#888888'
 logo: /logos/propelauth.svg
-
 summary: PropelAuth — free tier; see the pricing page for details.
-
 tier_type: free-plan
-
 free_tier:
   - Free plan
-
+paid_tier_highlights:
+  - Free plan ships with 10K MAU, RBAC, 2FA, SSO/social login
+  - Growth $150/mo adds SAML, impersonation, staging, M2M auth
+  - Growth Plus $500/mo unlocks SCIM directory sync and 90-day audit logs
+  - Additional MAU billed at $0.05 each on paid plans
 pricing:
   - name: Free
     price: 0
@@ -52,18 +53,14 @@ pricing:
       - 90-day audit log retention
     cta_url: https://auth.propelauth.com/en/signup
     billing: monthly
-
-paid_tier_highlights:
-  - Free plan ships with 10K MAU, RBAC, 2FA, SSO/social login
-  - Growth $150/mo adds SAML, impersonation, staging, M2M auth
-  - Growth Plus $500/mo unlocks SCIM directory sync and 90-day audit logs
-  - Additional MAU billed at $0.05 each on paid plans
-
-tags: []
-
+tags:
+  - auth
+  - permanent
+  - free-plan
+  - identity
 official_url: https://www.propelauth.com/
 pricing_url: https://www.propelauth.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

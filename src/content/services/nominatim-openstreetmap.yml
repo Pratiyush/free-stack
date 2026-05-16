@@ -4,15 +4,13 @@ category: maps
 subcategory: permanent
 brand_color: '#7EBC6F'
 logo: /logos/nominatim-openstreetmap.svg
-
-summary: 'Fully free and open source; self-hostable'
-
+summary: Fully free and open source; self-hostable
 tier_type: free-plan
-
 free_tier:
-  - 'Fully free and open source; self-hostable'
+  - Fully free and open source; self-hostable
   - 1 request/sec on public instance
-
+paid_tier_highlights:
+  - This service is always-free; no paid tiers exist
 pricing:
   - name: Public API
     price: 0
@@ -39,15 +37,18 @@ pricing:
       - Docker image available
       - Heavy use friendly
     cta_url: https://nominatim.org/release-docs/latest/admin/Installation/
-
-paid_tier_highlights:
-  - This service is always-free; no paid tiers exist
-
-tags: []
-
+tags:
+  - maps
+  - permanent
+  - free-plan
+  - geolocation
+  - open-source
+  - self-host
 official_url: https://operations.osmfoundation.org/
 pricing_url: https://operations.osmfoundation.org/policies/nominatim/
-
+facets:
+  oss: true
+  self_host: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

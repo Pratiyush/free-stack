@@ -4,15 +4,16 @@ category: logs
 subcategory: permanent
 brand_color: '#F46800'
 logo: /logos/grafana-cloud-loki.svg
-
 summary: Free forever plan
-
 tier_type: free-plan
-
 free_tier:
   - Free forever plan
-  - '14-day log retention on free tier; no credit card required'
-
+  - 14-day log retention on free tier; no credit card required
+paid_tier_highlights:
+  - Pro from $19/mo extends Loki retention from 14 to 30 days
+  - Enterprise from $25K/yr unlocks custom retention and 24/7 support
+  - Pay-as-you-go billing on logs beyond included quota
+  - BYOC and Federal Cloud deployment available on Enterprise
 pricing:
   - name: Free
     price: 0
@@ -50,18 +51,15 @@ pricing:
       - BYOC / Federal Cloud deployment
       - Dedicated Observability Architect
       - Compliance and SOC certifications
-
-paid_tier_highlights:
-  - Pro from $19/mo extends Loki retention from 14 to 30 days
-  - Enterprise from $25K/yr unlocks custom retention and 24/7 support
-  - Pay-as-you-go billing on logs beyond included quota
-  - BYOC and Federal Cloud deployment available on Enterprise
-
-tags: []
-
+tags:
+  - logs
+  - permanent
+  - free-plan
+  - logging
+  - observability
 official_url: https://grafana.com/
 pricing_url: https://grafana.com/pricing/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

@@ -4,15 +4,17 @@ category: databases
 subcategory: permanent
 brand_color: '#888888'
 logo: /logos/motherduck.svg
-
 summary: Free plan (cloud DuckDB)
-
 tier_type: always-free
-
 free_tier:
   - Free plan (cloud DuckDB)
   - Hard cap on storage and compute; no overage on free plan
-
+paid_tier_highlights:
+  - Multiple compute instance types for scalable workloads
+  - SSO, SCIM, SOC 2 Type II, GDPR, optional HIPAA BAA
+  - Database sharing, Dives visualizations, FixIt error resolution
+  - Expert support with guaranteed response SLAs
+  - 90-day snapshot retention vs 1-day on Free
 pricing:
   - name: Lite
     price: 0
@@ -51,19 +53,14 @@ pricing:
       - All Business plan features
       - Customizable SLA
     cta_url: https://motherduck.com/contact-us/product-expert/
-
-paid_tier_highlights:
-  - Multiple compute instance types for scalable workloads
-  - SSO, SCIM, SOC 2 Type II, GDPR, optional HIPAA BAA
-  - Database sharing, Dives visualizations, FixIt error resolution
-  - Expert support with guaranteed response SLAs
-  - 90-day snapshot retention vs 1-day on Free
-
-tags: []
-
+tags:
+  - databases
+  - permanent
+  - always-free
+  - database
 official_url: https://motherduck.com/
 pricing_url: https://motherduck.com/product/pricing/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

@@ -4,15 +4,16 @@ category: containers
 subcategory: permanent
 brand_color: '#2496ED'
 logo: /logos/docker-hub.svg
-
 summary: Docker Personal (free forever)
-
 tier_type: free-plan
-
 free_tier:
   - Docker Personal (free forever)
   - '200 pulls per 6-hour window (unauthenticated: 100/6hr); HTTP 429 when exceeded'
-
+paid_tier_highlights:
+  - Pro at $9/user/mo removes pull-rate limits and adds Build Cloud
+  - Team at $15/user/mo adds RBAC, audit logs, and 500 build minutes
+  - Business at $24/user/mo adds SSO, SCIM, and hardened Desktop
+  - Higher build-minute quotas scale with each paid tier
 pricing:
   - name: Personal
     price: 0
@@ -65,18 +66,14 @@ pricing:
       - Unlimited users
       - 1,500 Build Cloud minutes/month
     cta_url: https://app.docker.com/billing/_/subscribe/?tier=business
-
-paid_tier_highlights:
-  - Pro at $9/user/mo removes pull-rate limits and adds Build Cloud
-  - Team at $15/user/mo adds RBAC, audit logs, and 500 build minutes
-  - Business at $24/user/mo adds SSO, SCIM, and hardened Desktop
-  - Higher build-minute quotas scale with each paid tier
-
-tags: []
-
+tags:
+  - containers
+  - permanent
+  - free-plan
+  - docker
 official_url: https://www.docker.com/
 pricing_url: https://www.docker.com/pricing/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

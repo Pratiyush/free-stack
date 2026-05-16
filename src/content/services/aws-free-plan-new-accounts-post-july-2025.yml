@@ -1,28 +1,23 @@
-name: 'AWS Free Plan (new accounts, post-July 2025)'
+name: AWS Free Plan (new accounts, post-July 2025)
 slug: aws-free-plan-new-accounts-post-july-2025
 category: iaas
 subcategory: permanent
 brand_color: '#FF9900'
 logo: /logos/aws-free-plan-new-accounts-post-july-2025.svg
-
-summary: 'Credit-based free plan (6 months)'
-
+summary: Credit-based free plan (6 months)
 tier_type: free-plan
-
 free_tier:
   - Up to $200 USD in AWS credits ($100 signup + up to $100 in milestones)
   - 6-month no-commitment window
   - Access to 30+ Always-Free services
   - No CC charge unless you upgrade to Paid Plan
-  - 'Replaces 12-month trial for accounts created after July 15, 2025'
-
+  - Replaces 12-month trial for accounts created after July 15, 2025
 paid_tier_highlights:
-  - 'Convert to Paid Plan to unlock 150+ AWS services'
-  - 'Retain up to $200 in credits when upgrading'
-  - 'Pay-as-you-go pricing across all AWS services'
-  - 'Always-Free quotas still apply on Paid Plan'
-  - 'Reserved Instances and Savings Plans available for discounts'
-
+  - Convert to Paid Plan to unlock 150+ AWS services
+  - Retain up to $200 in credits when upgrading
+  - Pay-as-you-go pricing across all AWS services
+  - Always-Free quotas still apply on Paid Plan
+  - Reserved Instances and Savings Plans available for discounts
 pricing:
   - name: Free Plan
     price: 0
@@ -47,12 +42,18 @@ pricing:
       - Always-Free quotas apply
       - Reserved Instances and Savings Plans
     cta_url: https://aws.amazon.com/pricing/
-
-tags: []
-
+tags:
+  - iaas
+  - permanent
+  - free-plan
+  - cloud
+  - infrastructure
 official_url: https://aws.amazon.com/
 pricing_url: https://aws.amazon.com/free/
-
-date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+facets:
+  cc_required: false
+date_added: 2026-05-15T00:00:00.000Z
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'
+signup_friction:
+  requires_cc: false

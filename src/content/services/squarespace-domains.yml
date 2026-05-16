@@ -4,15 +4,16 @@ category: dns
 subcategory: permanent
 brand_color: '#000000'
 logo: /logos/squarespace-domains.svg
-
 summary: DNS included with domain purchase
-
 tier_type: free-plan
-
 free_tier:
   - DNS included with domain purchase
   - No free tier without domain purchase
-
+paid_tier_highlights:
+  - Domain pricing is all-inclusive (DNS, SSL, WHOIS, email forwarding)
+  - First domain free with annual Squarespace plan subscription
+  - No separate DNS tier - included with every domain registration
+  - 24/7 customer support included on all domains
 pricing:
   - name: Domain Registration (includes free DNS)
     price: Variable
@@ -39,18 +40,13 @@ pricing:
       - Bundled with site builder subscription
       - WHOIS privacy included
     cta_url: https://domains.squarespace.com/
-
-paid_tier_highlights:
-  - Domain pricing is all-inclusive (DNS, SSL, WHOIS, email forwarding)
-  - First domain free with annual Squarespace plan subscription
-  - No separate DNS tier - included with every domain registration
-  - 24/7 customer support included on all domains
-
-tags: []
-
+tags:
+  - dns
+  - permanent
+  - free-plan
 official_url: https://domains.squarespace.com/
 pricing_url: https://domains.squarespace.com/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

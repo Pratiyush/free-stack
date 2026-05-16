@@ -3,18 +3,20 @@ slug: new-relic
 category: analytics
 brand_color: '#1CE783'
 logo: /logos/new-relic.svg
-
 summary: Observability platform with 100 GB ingest/mo, 1 full-platform user, plus APM, infrastructure, logs, and synthetics.
-
 tier_type: always-free
-
 free_tier:
   - 100 GB data ingest/mo
   - 1 full-platform user
   - Unlimited basic users
   - All 50+ capabilities included
   - Ingestion stops at limit
-
+paid_tier_highlights:
+  - Standard caps at 5 users; Pro/Enterprise offer unlimited platform access
+  - Pro provides 2-hour response SLA; Enterprise guarantees 1-hour critical
+  - Enterprise adds FedRAMP Moderate and HIPAA eligibility
+  - Data Plus option adds 90-day retention and advanced obfuscation
+  - Pro/Enterprise enable commitment and consumption-based pricing
 pricing:
   - name: Free
     price: 0
@@ -65,19 +67,17 @@ pricing:
       - 1-hour critical support response SLA
       - Data Plus included
     cta_url: https://newrelic.com/request-pricing-enterprise
-
-paid_tier_highlights:
-  - Standard caps at 5 users; Pro/Enterprise offer unlimited platform access
-  - Pro provides 2-hour response SLA; Enterprise guarantees 1-hour critical
-  - Enterprise adds FedRAMP Moderate and HIPAA eligibility
-  - Data Plus option adds 90-day retention and advanced obfuscation
-  - Pro/Enterprise enable commitment and consumption-based pricing
-
-tags: [observability, apm, monitoring, logs, infrastructure]
-
+tags:
+  - observability
+  - apm
+  - monitoring
+  - logs
+  - infrastructure
+  - analytics
+  - always-free
 official_url: https://newrelic.com/
 pricing_url: https://newrelic.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

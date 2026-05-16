@@ -4,15 +4,16 @@ category: project-management
 subcategory: permanent
 brand_color: '#888888'
 logo: /logos/height.svg
-
 summary: Free for up to 10 members
-
 tier_type: free-plan
-
 free_tier:
   - Free for up to 10 members
   - No documented rate limits
-
+paid_tier_highlights:
+  - Team at $6.99/user/mo lifts the 10-member cap and adds automations
+  - Business at $11.99/user/mo adds audit log, API, and SSO
+  - Enterprise adds SAML SSO, SCIM, and compliance reports
+  - Free plan covers up to 10 members with unlimited projects
 pricing:
   - name: Free
     price: 0
@@ -61,18 +62,13 @@ pricing:
       - SOC 2 Type II reports
       - Custom contract and DPA
     cta_url: https://height.app/contact
-
-paid_tier_highlights:
-  - Team at $6.99/user/mo lifts the 10-member cap and adds automations
-  - Business at $11.99/user/mo adds audit log, API, and SSO
-  - Enterprise adds SAML SSO, SCIM, and compliance reports
-  - Free plan covers up to 10 members with unlimited projects
-
-tags: []
-
+tags:
+  - project-management
+  - permanent
+  - free-plan
 official_url: https://height.app/
 pricing_url: https://height.app/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

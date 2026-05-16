@@ -3,18 +3,20 @@ slug: trieve
 category: search
 brand_color: '#A33EB5'
 logo: /logos/trieve.svg
-
 summary: Search and vector database with 1 GB free ingestion, 1M searches/mo, and 5-year analytics retention.
-
 tier_type: always-free
-
 free_tier:
   - First 1 GB ingested free
   - First 1M searches/mo free
   - First 1M messages/mo free
   - 5-year analytics retention
   - Usage-based after free tier
-
+paid_tier_highlights:
+  - Pay-as-you-go $5/mo platform fee + metered usage
+  - Chunk storage $132 per 1M ($12.07/GB)
+  - Write/search tokens $0.028 per 1M
+  - OCR $0.01/page, crawl $0.00086/page
+  - Enterprise unlocks dedicated cloud + bulk discounts
 pricing:
   - name: Free Tier
     price: 0
@@ -54,19 +56,16 @@ pricing:
       - Bulk discounts for large scale
       - Priority support
     cta_url: https://www.trieve.ai/contact
-
-paid_tier_highlights:
-  - Pay-as-you-go $5/mo platform fee + metered usage
-  - Chunk storage $132 per 1M ($12.07/GB)
-  - Write/search tokens $0.028 per 1M
-  - OCR $0.01/page, crawl $0.00086/page
-  - Enterprise unlocks dedicated cloud + bulk discounts
-
-tags: [search, vector-search, api, embeddings, database]
-
+tags:
+  - search
+  - vector-search
+  - api
+  - embeddings
+  - database
+  - always-free
 official_url: https://www.trieve.ai/
 pricing_url: https://www.trieve.ai/blog/usage-based-pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

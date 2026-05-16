@@ -3,15 +3,17 @@ slug: postmark
 category: email
 brand_color: '#888888'
 logo: /logos/postmark.svg
-
 summary: Free forever (Developer)
-
 tier_type: free-plan
-
 free_tier:
   - Free forever (Developer)
   - Standard API limits
-
+paid_tier_highlights:
+  - Free Developer plan limited to 100 emails/mo (no overages)
+  - Basic $15/mo for 10K emails with 45-day retention
+  - Pro $16.50/mo adds inbound processing and 365-day retention
+  - Platform $18/mo unlocks unlimited domains and users
+  - All paid tiers scale by monthly volume tier above 10K
 pricing:
   - name: Free
     price: 0
@@ -39,7 +41,7 @@ pricing:
     cta_url: https://account.postmarkapp.com/sign_up
     billing: monthly
   - name: Pro
-    price: 16.50
+    price: 16.5
     unit: /month
     description: 10K emails/mo with inbound and custom retention
     features:
@@ -64,19 +66,13 @@ pricing:
       - Detailed analytics and insights
     cta_url: https://account.postmarkapp.com/sign_up
     billing: monthly
-
-paid_tier_highlights:
-  - Free Developer plan limited to 100 emails/mo (no overages)
-  - Basic $15/mo for 10K emails with 45-day retention
-  - Pro $16.50/mo adds inbound processing and 365-day retention
-  - Platform $18/mo unlocks unlimited domains and users
-  - All paid tiers scale by monthly volume tier above 10K
-
-tags: []
-
+tags:
+  - email
+  - free-plan
+  - api
 official_url: https://postmarkapp.com/
 pricing_url: https://postmarkapp.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

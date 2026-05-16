@@ -3,25 +3,20 @@ slug: checkly
 category: analytics
 brand_color: '#888888'
 logo: /logos/checkly.svg
-
 summary: Hobby (free)
-
 tier_type: free-plan
-
 free_tier:
   - Hobby (free)
   - 10 uptime monitors
   - 1,000 browser/Playwright checks/mo
   - 10,000 API checks/mo
   - 6 global locations
-
 paid_tier_highlights:
   - Starter ($24/mo) raises caps to 50 monitors, 3K browser checks
   - Team ($64/mo) unlocks 22 global locations + visual regression
   - 1-minute check frequency on Starter, 30-second on Team
   - SMS + webhook alerting on Starter and above
   - Enterprise offers 1-second checks, parallel scheduling, SLAs
-
 pricing:
   - name: Hobby
     description: Free for personal projects and learning
@@ -61,7 +56,7 @@ pricing:
       - Visual regression testing
   - name: Enterprise
     description: Custom solutions for large organizations
-    price: 'Contact sales'
+    price: Contact sales
     billing: annual
     features:
       - Custom monitors/check runs
@@ -69,12 +64,13 @@ pricing:
       - Parallel scheduling
       - Dedicated support
       - Enhanced security
-
-tags: []
-
+tags:
+  - analytics
+  - free-plan
+  - api
 official_url: https://www.checklyhq.com/
 pricing_url: https://www.checklyhq.com/pricing/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

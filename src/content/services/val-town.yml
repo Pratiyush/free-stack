@@ -4,15 +4,17 @@ category: dev-tools
 subcategory: permanent
 brand_color: '#888888'
 logo: /logos/val-town.svg
-
 summary: '**Val Town** — free tier; see the pricing page for details.'
-
 tier_type: free-plan
-
 free_tier:
   - Free plan
   - Runs reset daily
-
+paid_tier_highlights:
+  - Pro at $8.33/mo (annual) for unlimited private vals
+  - Teams at $166.67/mo enables 5M runs/day and team accounts
+  - $5–$100 monthly Townie AI credit included with paid plans
+  - 1-minute cron intervals and 10-minute wall clock on Pro+
+  - Enterprise tier offers SOC 2 compliance and log export
 pricing:
   - name: Free
     price: 0
@@ -61,19 +63,13 @@ pricing:
       - SOC 2 compliance
       - Custom support
     cta_url: https://www.val.town/pricing
-
-paid_tier_highlights:
-  - Pro at $8.33/mo (annual) for unlimited private vals
-  - Teams at $166.67/mo enables 5M runs/day and team accounts
-  - $5–$100 monthly Townie AI credit included with paid plans
-  - 1-minute cron intervals and 10-minute wall clock on Pro+
-  - Enterprise tier offers SOC 2 compliance and log export
-
-tags: []
-
+tags:
+  - dev-tools
+  - permanent
+  - free-plan
 official_url: https://www.val.town/
 pricing_url: https://www.val.town/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

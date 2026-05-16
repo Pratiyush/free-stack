@@ -4,25 +4,20 @@ category: dns
 subcategory: permanent
 brand_color: '#F38020'
 logo: /logos/cloudflare-1-1-1-1-warp.svg
-
 summary: Free (resolver + VPN)
-
 tier_type: free-plan
-
 free_tier:
   - Free (resolver + VPN)
   - No bandwidth cap on free WARP
   - Available on iOS/Android/macOS/Windows/Linux
   - DNS-over-HTTPS and DNS-over-TLS
   - No account required
-
 paid_tier_highlights:
   - WARP+ subscription unlocks Cloudflare's premium routing network
   - Lower latency + faster routing on WARP+
   - Cloudflare One / Zero Trust packages WARP for orgs
   - Device-posture and Gateway policies via Cloudflare One
   - Free tier for first 50 users on Cloudflare Zero Trust
-
 pricing:
   - name: Free
     description: Personal DNS resolver + WARP VPN at no cost
@@ -48,7 +43,7 @@ pricing:
       - Premium throughput
   - name: Cloudflare One (Zero Trust)
     description: Org-managed WARP + Gateway + access policies
-    price: 'Contact sales'
+    price: Contact sales
     billing: annual
     features:
       - Free for up to 50 users
@@ -56,12 +51,13 @@ pricing:
       - Gateway DNS + HTTP filtering
       - Threat protection
       - Custom team management
-
-tags: []
-
+tags:
+  - dns
+  - permanent
+  - free-plan
 official_url: https://1.1.1.1/
 pricing_url: https://1.1.1.1/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

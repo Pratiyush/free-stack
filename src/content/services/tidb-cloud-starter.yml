@@ -4,15 +4,16 @@ category: databases
 subcategory: permanent
 brand_color: '#E62D2D'
 logo: /logos/tidb-cloud-starter.svg
-
-summary: 'Free quota (MySQL-compatible)'
-
+summary: Free quota (MySQL-compatible)
 tier_type: always-free
-
 free_tier:
-  - 'Free quota (MySQL-compatible)'
+  - Free quota (MySQL-compatible)
   - Denies new connections when quota exhausted; resets monthly
-
+paid_tier_highlights:
+  - Essential (~$20/day) adds 30-day PITR + 99.99% SLA
+  - Premium from $1,800/mo unlocks CMEK + PrivateLink + VPC peering
+  - Dedicated from $0.22/hr provides PCI-DSS + SOC 2 Type II
+  - 'Storage overage on Starter: $0.20/GiB and $0.10/1M RUs'
 pricing:
   - name: TiDB Cloud Starter
     price: 0
@@ -28,7 +29,7 @@ pricing:
       - Auto-scales down to zero
     cta_url: https://tidbcloud.com/free-trial
   - name: TiDB Cloud Essential (Preview)
-    price: '~$20'
+    price: ~$20
     unit: /day (typical small production)
     description: Production DBaaS without infrastructure complexity
     billing: usage-based
@@ -51,7 +52,7 @@ pricing:
       - Enterprise-grade security
     cta_url: https://tidbcloud.com/free-trial
   - name: TiDB Cloud Dedicated
-    price: '$0.22'
+    price: $0.22
     unit: /hour (from)
     description: Predictable traffic with dedicated infrastructure
     billing: usage-based
@@ -61,18 +62,14 @@ pricing:
       - AWS, Google Cloud, Azure availability
       - Dedicated cluster infrastructure
     cta_url: https://tidbcloud.com/signup/
-
-paid_tier_highlights:
-  - Essential (~$20/day) adds 30-day PITR + 99.99% SLA
-  - Premium from $1,800/mo unlocks CMEK + PrivateLink + VPC peering
-  - Dedicated from $0.22/hr provides PCI-DSS + SOC 2 Type II
-  - 'Storage overage on Starter: $0.20/GiB and $0.10/1M RUs'
-
-tags: []
-
+tags:
+  - databases
+  - permanent
+  - always-free
+  - database
 official_url: https://www.pingcap.com/
 pricing_url: https://www.pingcap.com/pricing/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

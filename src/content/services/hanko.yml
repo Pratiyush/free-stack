@@ -4,14 +4,15 @@ category: auth
 subcategory: permanent
 brand_color: '#0F172A'
 logo: /logos/hanko.svg
-
 summary: Hanko — free tier; see the pricing page for details.
-
 tier_type: free-plan
-
 free_tier:
   - Free plan
-
+paid_tier_highlights:
+  - Pro at $29/mo adds 5 projects, SAML SSO add-on, and Admin API
+  - $0.01 per MAU over the 10K bundled allotment
+  - SAML SSO connections priced at $49/mo each on Pro
+  - Enterprise unlocks unlimited projects and 99.99% SLA
 pricing:
   - name: Starter
     price: 0
@@ -48,18 +49,14 @@ pricing:
       - Extended audit log retention
       - Commercial license for private cloud deployment
     cta_url: https://www.hanko.io/contact
-
-paid_tier_highlights:
-  - Pro at $29/mo adds 5 projects, SAML SSO add-on, and Admin API
-  - $0.01 per MAU over the 10K bundled allotment
-  - SAML SSO connections priced at $49/mo each on Pro
-  - Enterprise unlocks unlimited projects and 99.99% SLA
-
-tags: []
-
+tags:
+  - auth
+  - permanent
+  - free-plan
+  - identity
 official_url: https://www.hanko.io/
 pricing_url: https://www.hanko.io/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

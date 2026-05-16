@@ -4,25 +4,20 @@ category: containers
 subcategory: permanent
 brand_color: '#FF9900'
 logo: /logos/aws-ecr-public.svg
-
 summary: Free permanently (public repos)
-
 tier_type: free-plan
-
 free_tier:
   - Free permanently for public repos
   - 50 GB/month always-free public-repo storage
   - 500 GB/month anonymous data transfer
   - 5 TB/month authenticated data transfer
   - Unlimited same-region AWS compute pulls
-
 paid_tier_highlights:
   - 'Public-repo overages: pull cost is billed to the downloading AWS account'
   - 'Private ECR: $0.10/GB-month storage after 500 MB/12-month free tier'
   - 'Cross-region transfers from private repos: $0.09/GB'
-  - 'Within-region transfers from ECR to EC2/Lambda/Fargate are free'
-  - 'No additional charges for IAM-controlled access to public repos'
-
+  - Within-region transfers from ECR to EC2/Lambda/Fargate are free
+  - No additional charges for IAM-controlled access to public repos
 pricing:
   - name: Public Registry Free
     price: 0
@@ -46,7 +41,7 @@ pricing:
       - IAM-controlled access
     cta_url: https://aws.amazon.com/ecr/
   - name: Private Registry (Pay-as-you-go)
-    price: 0.10
+    price: 0.1
     unit: /GB-month
     billing: usage-based
     description: Pay-as-you-go for private repository storage
@@ -57,12 +52,15 @@ pricing:
       - Image scanning included
       - Lifecycle policies for cleanup
     cta_url: https://aws.amazon.com/ecr/pricing/
-
-tags: []
-
+tags:
+  - containers
+  - permanent
+  - free-plan
+  - docker
 official_url: https://aws.amazon.com/ecr/
 pricing_url: https://aws.amazon.com/ecr/pricing/
-
-date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+facets:
+  storage_gb: 50
+date_added: '2026-05-15'
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

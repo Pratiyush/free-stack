@@ -4,25 +4,20 @@ category: paas
 subcategory: permanent
 brand_color: '#888888'
 logo: /logos/back4app-containers.svg
-
 summary: Free plan (no credit card required)
-
 tier_type: free-plan
-
 free_tier:
   - Free plan (no credit card required)
   - 0.25 shared CPU and 256 MB RAM
   - 100 GB transfer/month
   - GitHub deployment and custom Docker containers
-  - 'USA region only; community support; containers sleep on inactivity'
-
+  - USA region only; community support; containers sleep on inactivity
 paid_tier_highlights:
-  - 'Shared from $5/mo (0.5 CPU, 512 MB) for MVPs with daily backups + CDN'
-  - 'Shared 2/3 scale up to 1 CPU + 2 GB RAM and 200 GB transfer'
+  - Shared from $5/mo (0.5 CPU, 512 MB) for MVPs with daily backups + CDN
+  - Shared 2/3 scale up to 1 CPU + 2 GB RAM and 200 GB transfer
   - 'Dedicated from $50/mo: 2 dedicated CPU, premium support'
   - 'Dedicated 3 $200/mo: 4 CPU, 8 GB RAM, 1 TB transfer'
-  - 'Enterprise adds bespoke plans and on-premise options'
-
+  - Enterprise adds bespoke plans and on-premise options
 pricing:
   - name: Free
     price: 0
@@ -114,12 +109,14 @@ pricing:
       - Dedicated support
       - SLA available
     cta_url: https://www.back4app.com/contact
-
-tags: []
-
+tags:
+  - paas
+  - permanent
+  - free-plan
+  - platform
 official_url: https://www.back4app.com/
 pricing_url: https://www.back4app.com/pricing/container-as-a-service
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

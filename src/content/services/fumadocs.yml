@@ -4,15 +4,13 @@ category: documentation
 subcategory: permanent
 brand_color: '#FF6B35'
 logo: /logos/fumadocs.svg
-
-summary: 'Fully free (OSS, MIT license)'
-
+summary: Fully free (OSS, MIT license)
 tier_type: free-plan
-
 free_tier:
-  - 'Fully free (OSS, MIT license)'
-  - 'Supports Next.js, Tanstack Start, React Router, Waku. ~150K downloads/mo and growing fast'
-
+  - Fully free (OSS, MIT license)
+  - Supports Next.js, Tanstack Start, React Router, Waku. ~150K downloads/mo and growing fast
+paid_tier_highlights:
+  - This service is always-free; no paid tiers exist
 pricing:
   - name: Free
     price: 0
@@ -26,15 +24,16 @@ pricing:
       - Built-in search and theming
       - MDX content support
       - Active maintenance and community
-
-paid_tier_highlights:
-  - This service is always-free; no paid tiers exist
-
-tags: []
-
+tags:
+  - documentation
+  - permanent
+  - free-plan
+  - docs
+  - open-source
 official_url: https://www.fumadocs.dev/
 pricing_url: https://www.fumadocs.dev/
-
+facets:
+  oss: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

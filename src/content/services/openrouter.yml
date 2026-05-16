@@ -4,16 +4,18 @@ category: ai-apis
 subcategory: permanent
 brand_color: '#94A3B8'
 logo: /logos/openrouter.svg
-
-summary: '29+ free models — DeepSeek V3/R1, Llama, Qwen3 Coder 480B, and more; 50 RPD free'
-
+summary: 29+ free models — DeepSeek V3/R1, Llama, Qwen3 Coder 480B, and more; 50 RPD free
 tier_type: always-free
-
 free_tier:
   - 29+ free models
-  - 'DeepSeek V3/R1, Llama, Qwen3 Coder 480B, and more; 50 RPD free'
+  - DeepSeek V3/R1, Llama, Qwen3 Coder 480B, and more; 50 RPD free
   - 20 RPM
-
+paid_tier_highlights:
+  - Pay-as-you-go credits unlock 400+ premium models
+  - No subscription - only pay for what you use
+  - OpenAI SDK works out of the box
+  - Higher daily free model quota for users with $10+ in credits
+  - Credit-based system works across any model or provider
 pricing:
   - name: Free models
     price: 0
@@ -39,19 +41,15 @@ pricing:
       - Credits work across all models
       - Minimum $10 credit purchase
     cta_url: https://openrouter.ai/credits
-
-paid_tier_highlights:
-  - Pay-as-you-go credits unlock 400+ premium models
-  - No subscription - only pay for what you use
-  - OpenAI SDK works out of the box
-  - Higher daily free model quota for users with $10+ in credits
-  - Credit-based system works across any model or provider
-
-tags: []
-
+tags:
+  - ai-apis
+  - permanent
+  - always-free
+  - ai
+  - api
 official_url: https://openrouter.ai/
 pricing_url: https://openrouter.ai/collections/free-models
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

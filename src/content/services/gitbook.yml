@@ -4,15 +4,16 @@ category: documentation
 subcategory: permanent
 brand_color: '#BBDDE5'
 logo: /logos/gitbook.svg
-
-summary: 'Free for individuals & OSS'
-
+summary: Free for individuals & OSS
 tier_type: free-plan
-
 free_tier:
-  - 'Free for individuals & OSS'
-  - '1 user only, no team collaboration, no custom domain on free (custom domain requires $65/mo+)'
-
+  - Free for individuals & OSS
+  - 1 user only, no team collaboration, no custom domain on free (custom domain requires $65/mo+)
+paid_tier_highlights:
+  - Premium at $65/site/mo unlocks team collaboration and custom domain
+  - Ultimate at $249/site/mo adds AI Assistant, agent, and adaptive content
+  - All paid tiers add $12/user/mo for collaborators
+  - Enterprise offers SAML SSO and dedicated migration support
 pricing:
   - name: Free
     price: 0
@@ -63,18 +64,14 @@ pricing:
       - Custom integrations
       - Dedicated support and training
       - Unlimited adaptive content
-
-paid_tier_highlights:
-  - Premium at $65/site/mo unlocks team collaboration and custom domain
-  - Ultimate at $249/site/mo adds AI Assistant, agent, and adaptive content
-  - All paid tiers add $12/user/mo for collaborators
-  - Enterprise offers SAML SSO and dedicated migration support
-
-tags: []
-
+tags:
+  - documentation
+  - permanent
+  - free-plan
+  - docs
 official_url: https://www.gitbook.com/
 pricing_url: https://www.gitbook.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

@@ -3,18 +3,19 @@ slug: github-pages
 category: hosting
 brand_color: '#181717'
 logo: /logos/github-pages.svg
-
 summary: Static site hosting with 1 GB size limit and 100 GB bandwidth/mo, no credit card required.
-
 tier_type: always-free
-
 free_tier:
   - 1 GB site size recommended
   - 100 GB bandwidth/mo (soft limit)
   - 10 builds/hr (soft limit)
   - Static sites only
   - Public repos only
-
+paid_tier_highlights:
+  - GitHub Pro at $4/user/mo unlocks private-repo Pages
+  - GitHub Team at $4/user/mo brings same for organizations
+  - GitHub Enterprise at $21/user/mo adds SAML SSO and SLA
+  - Bandwidth limits are soft and identical across all tiers
 pricing:
   - name: Free
     price: 0
@@ -61,18 +62,17 @@ pricing:
       - SAML SSO
       - Premium support with 30-min SLA
       - SOC 2 / FedRAMP compliance
-
-paid_tier_highlights:
-  - GitHub Pro at $4/user/mo unlocks private-repo Pages
-  - GitHub Team at $4/user/mo brings same for organizations
-  - GitHub Enterprise at $21/user/mo adds SAML SSO and SLA
-  - Bandwidth limits are soft and identical across all tiers
-
-tags: [static-hosting, deployment, git, open-source]
-
+tags:
+  - static-hosting
+  - deployment
+  - git
+  - open-source
+  - hosting
+  - always-free
 official_url: https://pages.github.com/
 pricing_url: https://github.com/pricing
-
+facets:
+  bandwidth_gb_month: 100
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

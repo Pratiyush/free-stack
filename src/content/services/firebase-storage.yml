@@ -4,15 +4,16 @@ category: storage
 subcategory: permanent
 brand_color: '#DD2C00'
 logo: /logos/firebase-storage.svg
-
 summary: 5 GB stored (Blaze plan required since Feb 2026)
-
 tier_type: free-plan
-
 free_tier:
   - 5 GB stored (Blaze plan required since Feb 2026)
-  - 'Blaze plan mandatory; no-cost usage preserved on *.appspot.com buckets'
-
+  - Blaze plan mandatory; no-cost usage preserved on *.appspot.com buckets
+paid_tier_highlights:
+  - Blaze plan mandatory for Cloud Storage as of Feb 2026
+  - Storage billed at $0.026/GB-month above free tier
+  - Egress billed at $0.12/GB downloaded
+  - Multiple buckets per project on Blaze
 pricing:
   - name: Spark (Legacy free quotas on Blaze)
     price: 0
@@ -38,18 +39,13 @@ pricing:
       - Multiple buckets per project
       - Required for any Cloud Storage usage
     cta_url: https://console.firebase.google.com/
-
-paid_tier_highlights:
-  - Blaze plan mandatory for Cloud Storage as of Feb 2026
-  - Storage billed at $0.026/GB-month above free tier
-  - Egress billed at $0.12/GB downloaded
-  - Multiple buckets per project on Blaze
-
-tags: []
-
+tags:
+  - storage
+  - permanent
+  - free-plan
 official_url: https://firebase.google.com/
 pricing_url: https://firebase.google.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

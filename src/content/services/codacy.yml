@@ -4,22 +4,17 @@ category: code-quality
 subcategory: permanent
 brand_color: '#222F29'
 logo: /logos/codacy.svg
-
-summary: 'Free for open-source repos (full Pro features); Starter plan free for up to 2 committers'
-
+summary: Free for open-source repos (full Pro features); Starter plan free for up to 2 committers
 tier_type: free-plan
-
 free_tier:
-  - 'Free for open-source repos (full Pro features); Starter plan free for up to 2 committers'
-  - 'Per-committer seat model'
-
+  - Free for open-source repos (full Pro features); Starter plan free for up to 2 committers
+  - Per-committer seat model
 paid_tier_highlights:
   - Team plan from $18/dev/mo adds 100 private repos and PR feedback
   - Sharable security and coding standards across IDEs
   - 49-language SAST, secret, dependency scans
   - Business adds AI Inventory, AI Risk Hub, DAST, container scans
   - Daily SCA and malicious-package re-scans on Business
-
 pricing:
   - name: Developer
     price: 0
@@ -55,12 +50,16 @@ pricing:
       - DAST and container image scanning
       - Dedicated CSM and premium support
     billing: annual
-
-tags: []
-
+tags:
+  - code-quality
+  - permanent
+  - free-plan
+  - ci-cd
+  - open-source
 official_url: https://www.codacy.com/
 pricing_url: https://www.codacy.com/pricing
-
+facets:
+  oss: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

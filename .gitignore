@@ -31,6 +31,9 @@ dist-assets/
 # Pagefind output
 public/pagefind/
 
+# Generated OG cards (story 5.1b) — regenerated on prebuild
+public/og/
+
 # Logs
 *.log
 npm-debug.log*
@@ -38,3 +41,8 @@ pnpm-debug.log*
 
 # Reference / design materials (kept local — not committed)
 ref/
+
+# Playwright (story 5.8 — pricing-drift verifier)
+test-results/
+playwright-report/
+playwright/.cache/

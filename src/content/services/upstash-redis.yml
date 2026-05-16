@@ -3,18 +3,20 @@ slug: upstash-redis
 category: databases
 brand_color: '#00C98D'
 logo: /logos/upstash-redis.svg
-
 summary: Serverless Redis with 256 MB data, 10 databases, and 500K commands/mo on the free plan.
-
 tier_type: free-plan
-
 free_tier:
   - 256 MB data size
   - 10 databases
   - 500K commands/mo
   - 200 GB bandwidth/mo
   - Serverless pricing
-
+paid_tier_highlights:
+  - Pay-as-you-go at $0.2 per 100K commands, scales to 100 GB
+  - Fixed Pro plans from $10/mo with predictable costs
+  - Multi-zone HA and primary-replica on Fixed plans
+  - Enterprise tier offers dedicated resources & HIPAA compliance
+  - Unlimited bandwidth on PAYG and Enterprise
 pricing:
   - name: Free
     price: 0
@@ -63,19 +65,18 @@ pricing:
       - HIPAA compliance
       - Professional support with SLA
     cta_url: https://upstash.com/enterprise
-
-paid_tier_highlights:
-  - Pay-as-you-go at $0.2 per 100K commands, scales to 100 GB
-  - Fixed Pro plans from $10/mo with predictable costs
-  - Multi-zone HA and primary-replica on Fixed plans
-  - Enterprise tier offers dedicated resources & HIPAA compliance
-  - Unlimited bandwidth on PAYG and Enterprise
-
-tags: [redis, cache, serverless, key-value-store, database]
-
+tags:
+  - redis
+  - cache
+  - serverless
+  - key-value-store
+  - database
+  - databases
+  - free-plan
 official_url: https://upstash.com/
 pricing_url: https://upstash.com/pricing/redis
-
+facets:
+  bandwidth_gb_month: 200
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

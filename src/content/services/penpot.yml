@@ -4,15 +4,16 @@ category: design
 subcategory: permanent
 brand_color: '#000000'
 logo: /logos/penpot.svg
-
-summary: 'Free plan (open-source)'
-
+summary: Free plan (open-source)
 tier_type: free-plan
-
 free_tier:
-  - 'Free plan (open-source)'
-  - 'No per-editor pricing, fully featured free tier with no paywalls, plugins supported on all plans'
-
+  - Free plan (open-source)
+  - No per-editor pricing, fully featured free tier with no paywalls, plugins supported on all plans
+paid_tier_highlights:
+  - Free Professional plan stays fully featured with no editor paywalls
+  - Unlimited $7/user/mo unlocks 25 GB storage and 30-day history (capped at $175/mo)
+  - Enterprise $950/mo flat for unlimited storage and 90-day history
+  - Private Server $50K/year for dedicated infra, SSO, SCIM, region choice
 pricing:
   - name: Professional
     price: 0
@@ -61,18 +62,15 @@ pricing:
       - Choice of hosting region
     cta_url: https://penpot.app/talk-to-us
     billing: annual
-
-paid_tier_highlights:
-  - Free Professional plan stays fully featured with no editor paywalls
-  - Unlimited $7/user/mo unlocks 25 GB storage and 30-day history (capped at $175/mo)
-  - Enterprise $950/mo flat for unlimited storage and 90-day history
-  - Private Server $50K/year for dedicated infra, SSO, SCIM, region choice
-
-tags: []
-
+tags:
+  - design
+  - permanent
+  - free-plan
+  - open-source
 official_url: https://penpot.app/
 pricing_url: https://penpot.app/pricing
-
+facets:
+  oss: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

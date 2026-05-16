@@ -4,16 +4,17 @@ category: ai-apis
 subcategory: expiring-credits
 brand_color: '#000000'
 logo: /logos/replicate.svg
-
-summary: 'Limited free runs (select models) — "Try for Free" collection; limited runs then billing required'
-
+summary: Limited free runs (select models) — "Try for Free" collection; limited runs then billing required
 tier_type: trial-credit
-
 free_tier:
   - Limited free runs (select models)
   - '"Try for Free" collection; limited runs then billing required'
   - Varies by model
-
+paid_tier_highlights:
+  - Pay-as-you-go billing by compute time or tokens
+  - Hardware rates span CPU ($0.09/hr) to 8xH100 ($43.92/hr)
+  - Private dedicated models with auto-scaling
+  - Enterprise tier offers SLAs and volume discounts
 pricing:
   - name: Try for Free
     price: 0
@@ -59,18 +60,15 @@ pricing:
       - Volume discounts
       - Performance SLAs
     cta_url: https://replicate.com/pricing
-
-paid_tier_highlights:
-  - Pay-as-you-go billing by compute time or tokens
-  - Hardware rates span CPU ($0.09/hr) to 8xH100 ($43.92/hr)
-  - Private dedicated models with auto-scaling
-  - Enterprise tier offers SLAs and volume discounts
-
-tags: []
-
+tags:
+  - ai-apis
+  - expiring-credits
+  - trial-credit
+  - ai
+  - api
 official_url: https://replicate.com/
 pricing_url: https://replicate.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

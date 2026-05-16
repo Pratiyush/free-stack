@@ -4,15 +4,17 @@ category: translation
 subcategory: permanent
 brand_color: '#888888'
 logo: /logos/lokalise.svg
-
 summary: Free plan (permanent)
-
 tier_type: free-plan
-
 free_tier:
   - Free plan (permanent)
-  - '14-day trial with Enterprise features; free plan for individuals/small projects only'
-
+  - 14-day trial with Enterprise features; free plan for individuals/small projects only
+paid_tier_highlights:
+  - Explorer at $144/mo unlocks glossary, spellcheck, and task management
+  - Growth at $499/mo adds automation triggers and workflow templates
+  - Advanced at $999/mo adds custom AI/RAG profiles and audit
+  - Enterprise adds solutions engineer and private channel support
+  - 14-day Enterprise trial available for evaluation
 pricing:
   - name: Free
     price: 0
@@ -73,19 +75,14 @@ pricing:
       - Regular business reviews
       - Private communication channel
     cta_url: https://lokalise.com/contact-us/
-
-paid_tier_highlights:
-  - Explorer at $144/mo unlocks glossary, spellcheck, and task management
-  - Growth at $499/mo adds automation triggers and workflow templates
-  - Advanced at $999/mo adds custom AI/RAG profiles and audit
-  - Enterprise adds solutions engineer and private channel support
-  - 14-day Enterprise trial available for evaluation
-
-tags: []
-
+tags:
+  - translation
+  - permanent
+  - free-plan
+  - i18n
 official_url: https://lokalise.com/
 pricing_url: https://lokalise.com/pricing/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

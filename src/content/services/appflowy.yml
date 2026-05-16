@@ -4,25 +4,20 @@ category: project-management
 subcategory: permanent
 brand_color: '#9333EA'
 logo: /logos/appflowy.svg
-
-summary: 'Free cloud tier (Basic plan); open-source self-hosted'
-
+summary: Free cloud tier (Basic plan); open-source self-hosted
 tier_type: free-plan
-
 free_tier:
-  - 'Free cloud tier (Basic plan); open-source self-hosted'
+  - Free cloud tier (Basic plan); open-source self-hosted
   - 1 collaborative workspace, up to 2 members
   - Unlimited pages and blocks
   - 5 GB storage
   - Intelligent search and real-time collaboration
-
 paid_tier_highlights:
-  - 'Pro $10/user/mo (annual) adds unlimited storage and 50 members'
-  - 'Pro adds 100 guest editors, unlimited AI responses, 50 AI images/mo'
-  - 'AI MAX $8/user/mo adds GPT-5, Gemini 2.5 Pro, Claude 3.7 access'
-  - 'Vault Workspace $6/user/mo runs AI locally for full privacy'
-  - 'Self-hosting available free under AGPL'
-
+  - Pro $10/user/mo (annual) adds unlimited storage and 50 members
+  - Pro adds 100 guest editors, unlimited AI responses, 50 AI images/mo
+  - AI MAX $8/user/mo adds GPT-5, Gemini 2.5 Pro, Claude 3.7 access
+  - Vault Workspace $6/user/mo runs AI locally for full privacy
+  - Self-hosting available free under AGPL
 pricing:
   - name: Free
     price: 0
@@ -72,12 +67,19 @@ pricing:
       - Unlimited file size for AI Chat
       - Ultimate privacy protection
     cta_url: https://appflowy.com/download
-
-tags: []
-
+tags:
+  - project-management
+  - permanent
+  - free-plan
+  - open-source
+  - self-host
+  - realtime
 official_url: https://appflowy.com/
 pricing_url: https://appflowy.com/pricing
-
+facets:
+  oss: true
+  self_host: true
+  storage_gb: 5
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

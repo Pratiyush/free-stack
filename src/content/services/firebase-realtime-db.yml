@@ -4,15 +4,16 @@ category: databases
 subcategory: permanent
 brand_color: '#DD2C00'
 logo: /logos/firebase-realtime-db.svg
-
 summary: Spark plan (free)
-
 tier_type: always-free
-
 free_tier:
   - Spark plan (free)
-  - '100 simultaneous connections, hard cap (no overage)'
-
+  - 100 simultaneous connections, hard cap (no overage)
+paid_tier_highlights:
+  - Blaze lifts the 100-connection Spark cap to 200K per database
+  - Pay per GB stored and downloaded above free quotas
+  - Multiple Realtime DB instances per project on Blaze
+  - Required for production-scale realtime workloads
 pricing:
   - name: Spark (Free)
     price: 0
@@ -37,18 +38,14 @@ pricing:
       - Multiple DB instances per project
       - Keeps Spark free thresholds
     cta_url: https://console.firebase.google.com/
-
-paid_tier_highlights:
-  - Blaze lifts the 100-connection Spark cap to 200K per database
-  - Pay per GB stored and downloaded above free quotas
-  - Multiple Realtime DB instances per project on Blaze
-  - Required for production-scale realtime workloads
-
-tags: []
-
+tags:
+  - databases
+  - permanent
+  - always-free
+  - database
 official_url: https://firebase.google.com/
 pricing_url: https://firebase.google.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

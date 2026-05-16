@@ -4,15 +4,16 @@ category: hosting
 subcategory: permanent
 brand_color: '#0066FF'
 logo: /logos/stormkit.svg
-
-summary: 'Self-hosted free tier (1 seat)'
-
+summary: Self-hosted free tier (1 seat)
 tier_type: always-free
-
 free_tier:
-  - 'Self-hosted free tier (1 seat)'
-  - 'Cloud version starts at $20/mo (no free cloud tier). Self-hosted only'
-
+  - Self-hosted free tier (1 seat)
+  - Cloud version starts at $20/mo (no free cloud tier). Self-hosted only
+paid_tier_highlights:
+  - Premium ($20/seat) adds analytics, audit logs, teams
+  - Premium unlocks approval mode for user management
+  - Ultimate ($100/seat) adds Slack/Discord/Teams support
+  - Cloud tiers replace self-hosted single-seat limitation
 pricing:
   - name: Free
     price: 0
@@ -50,18 +51,15 @@ pricing:
       - Audit logs
       - Built-in analytics
     cta_url: https://www.stormkit.io/
-
-paid_tier_highlights:
-  - Premium ($20/seat) adds analytics, audit logs, teams
-  - Premium unlocks approval mode for user management
-  - Ultimate ($100/seat) adds Slack/Discord/Teams support
-  - Cloud tiers replace self-hosted single-seat limitation
-
-tags: []
-
+tags:
+  - hosting
+  - permanent
+  - always-free
+  - self-host
 official_url: https://www.stormkit.io/
 pricing_url: https://www.stormkit.io/
-
+facets:
+  self_host: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

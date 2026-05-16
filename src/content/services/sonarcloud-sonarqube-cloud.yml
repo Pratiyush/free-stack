@@ -4,15 +4,16 @@ category: code-quality
 subcategory: permanent
 brand_color: '#126ED3'
 logo: /logos/sonarcloud-sonarqube-cloud.svg
-
 summary: Free for open source; 50K LoC for private repos
-
 tier_type: free-plan
-
 free_tier:
   - Free for open source; 50K LoC for private repos
   - No documented rate limits
-
+paid_tier_highlights:
+  - Team (from $32/mo) removes 50K LoC cap, unlimited users
+  - Team adds AI CodeFix and improved secrets detection
+  - Enterprise unlocks SSO/SCIM and portfolio management
+  - Enterprise adds CMK/BYOK encryption and MISRA compliance
 pricing:
   - name: Free
     price: 0
@@ -51,18 +52,16 @@ pricing:
       - MISRA C++:2023 compliance
       - Dedicated Enterprise SLA
     cta_url: https://www.sonarsource.com/plans-and-pricing/
-
-paid_tier_highlights:
-  - Team (from $32/mo) removes 50K LoC cap, unlimited users
-  - Team adds AI CodeFix and improved secrets detection
-  - Enterprise unlocks SSO/SCIM and portfolio management
-  - Enterprise adds CMK/BYOK encryption and MISRA compliance
-
-tags: []
-
+tags:
+  - code-quality
+  - permanent
+  - free-plan
+  - ci-cd
+  - open-source
 official_url: https://www.sonarsource.com/
 pricing_url: https://www.sonarsource.com/plans-and-pricing/
-
+facets:
+  oss: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

@@ -4,23 +4,18 @@ category: ai-apis
 subcategory: expiring-credits
 brand_color: '#4D6BFE'
 logo: /logos/deepseek.svg
-
-summary: '5M free tokens (30-day expiry) — DeepSeek V3/V4, R1; no rate limits on API; chat is free unlimited'
-
+summary: 5M free tokens (30-day expiry) — DeepSeek V3/V4, R1; no rate limits on API; chat is free unlimited
 tier_type: trial-credit
-
 free_tier:
-  - '5M free tokens (30-day expiry)'
-  - 'DeepSeek V3/V4, R1; no rate limits on API; chat is free unlimited'
+  - 5M free tokens (30-day expiry)
+  - DeepSeek V3/V4, R1; no rate limits on API; chat is free unlimited
   - No hard rate limits
-
 paid_tier_highlights:
   - V4-Flash at $0.14 input / $0.28 output per 1M tokens
   - Cache-hit input as low as $0.0028 per 1M tokens
   - V4-Pro at $0.435 input / $0.87 output per 1M tokens
   - 75% discount on V4-Pro through May 31, 2026
   - 1M-token context with 384K max output
-
 pricing:
   - name: Trial Credits
     price: 0
@@ -33,7 +28,7 @@ pricing:
       - No credit card required
     billing: free
   - name: DeepSeek-V4-Flash
-    price: '$0.14 input / $0.28 output per 1M'
+    price: $0.14 input / $0.28 output per 1M
     unit: per 1M tokens
     description: Pay-as-you-go fast model with JSON and tool calls
     features:
@@ -44,7 +39,7 @@ pricing:
       - JSON output, tool calls, FIM completion
     billing: usage-based
   - name: DeepSeek-V4-Pro
-    price: '$0.435 input / $0.87 output per 1M'
+    price: $0.435 input / $0.87 output per 1M
     unit: per 1M tokens
     description: Reasoning-grade model with 75% promo discount
     features:
@@ -54,12 +49,15 @@ pricing:
       - 1M-token context, 384K max output
       - Discount through May 31, 2026
     billing: usage-based
-
-tags: []
-
+tags:
+  - ai-apis
+  - expiring-credits
+  - trial-credit
+  - ai
+  - api
 official_url: https://api-docs.deepseek.com/
 pricing_url: https://api-docs.deepseek.com/quick_start/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

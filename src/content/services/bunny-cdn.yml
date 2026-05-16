@@ -4,23 +4,18 @@ category: storage
 subcategory: permanent
 brand_color: '#FFAA49'
 logo: /logos/bunny-cdn.svg
-
-summary: '14-day free trial only'
-
+summary: 14-day free trial only
 tier_type: free-plan
-
 free_tier:
-  - '14-day free trial only'
+  - 14-day free trial only
   - No permanent free tier
   - $1/mo minimum across Bunny services
-
 paid_tier_highlights:
   - Standard Network bandwidth from $0.01/GB across 119 PoPs
   - Volume Network drops as low as $0.002/GB for 1-2 PB tier
   - No request fees on either tier — bandwidth-only billing
   - Region toggle and per-zone overage protection
   - Custom enterprise pricing above 2 PB/mo
-
 pricing:
   - name: 14-day Trial
     description: Free 14-day evaluation, $1/mo minimum after
@@ -92,19 +87,20 @@ pricing:
       - All premium features
   - name: Volume Network (2 PB+)
     description: Enterprise-level custom pricing
-    price: 'Contact sales'
+    price: Contact sales
     billing: annual
     features:
       - Negotiated custom rates
       - Dedicated account management
       - Custom SLA options
       - Priority support
-
-tags: []
-
+tags:
+  - storage
+  - permanent
+  - free-plan
 official_url: https://bunny.net/
 pricing_url: https://bunny.net/pricing/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

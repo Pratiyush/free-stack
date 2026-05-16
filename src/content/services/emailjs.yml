@@ -3,15 +3,16 @@ slug: emailjs
 category: email
 brand_color: '#888888'
 logo: /logos/emailjs.svg
-
 summary: Free forever
-
 tier_type: free-plan
-
 free_tier:
   - Free forever
   - Not published
-
+paid_tier_highlights:
+  - Personal at $9/mo lifts the cap to 2,000 requests with white-label
+  - Professional at $15/mo adds team seats and priority support
+  - Business at $40/mo scales to 200K requests and 30 MB attachments
+  - All paid tiers ship unlimited templates and contacts
 pricing:
   - name: Free
     price: 0
@@ -62,18 +63,12 @@ pricing:
       - Unlimited multi-user access
       - Priority support
     cta_url: https://dashboard.emailjs.com/sign-up
-
-paid_tier_highlights:
-  - Personal at $9/mo lifts the cap to 2,000 requests with white-label
-  - Professional at $15/mo adds team seats and priority support
-  - Business at $40/mo scales to 200K requests and 30 MB attachments
-  - All paid tiers ship unlimited templates and contacts
-
-tags: []
-
+tags:
+  - email
+  - free-plan
 official_url: https://www.emailjs.com/
 pricing_url: https://www.emailjs.com/pricing/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

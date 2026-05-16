@@ -3,14 +3,15 @@ slug: launchdarkly-observability
 category: analytics
 brand_color: '#405BFF'
 logo: /logos/launchdarkly-observability.svg
-
 summary: Developer (free)
-
 tier_type: free-plan
-
 free_tier:
   - Developer (free)
-
+paid_tier_highlights:
+  - Foundation at $12/service-connection/mo plus $10/1K client MAU
+  - Enterprise adds release automation, SAML, SCIM, custom roles
+  - Guardian add-on layers release monitoring and auto-rollback
+  - Free Developer tier includes 5K replays and 10M logs/traces
 pricing:
   - name: Developer
     price: 0
@@ -58,18 +59,12 @@ pricing:
       - Advanced Observability
       - Exposure Insights
     cta_url: https://launchdarkly.com/contact-sales
-
-paid_tier_highlights:
-  - Foundation at $12/service-connection/mo plus $10/1K client MAU
-  - Enterprise adds release automation, SAML, SCIM, custom roles
-  - Guardian add-on layers release monitoring and auto-rollback
-  - Free Developer tier includes 5K replays and 10M logs/traces
-
-tags: []
-
+tags:
+  - analytics
+  - free-plan
 official_url: https://launchdarkly.com/
 pricing_url: https://launchdarkly.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

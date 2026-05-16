@@ -4,15 +4,16 @@ category: containers
 subcategory: permanent
 brand_color: '#181717'
 logo: /logos/github-codespaces.svg
-
 summary: Free for personal accounts
-
 tier_type: free-plan
-
 free_tier:
   - Free for personal accounts
   - 'Compute: $0.18/hr after free quota; storage: $0.07/GB/mo after free quota'
-
+paid_tier_highlights:
+  - GitHub Pro at $4/user/mo unlocks 180 core-hrs and 20 GB-mo storage
+  - Compute overage starts at $0.18/hr for 2-core machine
+  - Storage overage is $0.07/GB-month after free quota
+  - Organizations pay-as-you-go from the first hour (no free quota)
 pricing:
   - name: GitHub Free
     price: 0
@@ -50,18 +51,14 @@ pricing:
       - $1.44/hr 16-core, $2.88/hr 32-core
       - $0.07/GB-month storage overage
       - Org spending controls
-
-paid_tier_highlights:
-  - GitHub Pro at $4/user/mo unlocks 180 core-hrs and 20 GB-mo storage
-  - Compute overage starts at $0.18/hr for 2-core machine
-  - Storage overage is $0.07/GB-month after free quota
-  - Organizations pay-as-you-go from the first hour (no free quota)
-
-tags: []
-
+tags:
+  - containers
+  - permanent
+  - free-plan
+  - docker
 official_url: https://github.com/
 pricing_url: https://github.com/features/codespaces
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

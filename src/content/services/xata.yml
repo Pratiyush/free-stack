@@ -4,15 +4,17 @@ category: databases
 subcategory: permanent
 brand_color: '#9F87FF'
 logo: /logos/xata.svg
-
 summary: Free plan (Postgres)
-
 tier_type: always-free
-
 free_tier:
   - Free plan (Postgres)
-  - '75 req/sec, 15 parallel connections; no cold starts, no inactivity pausing'
-
+  - 75 req/sec, 15 parallel connections; no cold starts, no inactivity pausing
+paid_tier_highlights:
+  - Standard plan starts at $0.012/hour compute + storage
+  - Storage from $0.17/GB/mo (general) to $0.30/GB/mo (premium NVMe)
+  - Enterprise offers Bring-Your-Own-Cloud deployments
+  - White-label option for platform providers on Enterprise
+  - Open Source edition for self-hosting on Kubernetes
 pricing:
   - name: Open Source
     price: 0
@@ -48,19 +50,14 @@ pricing:
       - Dedicated Solution Architect
       - Priority support
     cta_url: https://xata.io/contact
-
-paid_tier_highlights:
-  - Standard plan starts at $0.012/hour compute + storage
-  - Storage from $0.17/GB/mo (general) to $0.30/GB/mo (premium NVMe)
-  - Enterprise offers Bring-Your-Own-Cloud deployments
-  - White-label option for platform providers on Enterprise
-  - Open Source edition for self-hosting on Kubernetes
-
-tags: []
-
+tags:
+  - databases
+  - permanent
+  - always-free
+  - database
 official_url: https://xata.io/
 pricing_url: https://xata.io/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

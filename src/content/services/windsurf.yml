@@ -4,18 +4,20 @@ category: dev-tools
 subcategory: permanent
 brand_color: '#0B100F'
 logo: /logos/windsurf.svg
-
 summary: AI coding IDE (Cascade) with a free tier — light usage allowance that refreshes daily and weekly, no credit card.
-
 tier_type: free-plan
-
 free_tier:
   - Free plan ($0/month)
   - Light usage allowance refreshes daily and weekly
   - Tab previews and deploys
   - Access to premium models at "API price"
   - No credit card required
-
+paid_tier_highlights:
+  - Pro at $20/mo unlocks unlimited usage at API pricing
+  - Teams at $40/user/mo adds admin dashboard and centralized billing
+  - Max at $200/mo provides Devin Cloud agents and SWE-1.5 access
+  - Enterprise offers RBAC, SSO, and hybrid deployment
+  - All paid plans deliver unlimited extra usage at API price
 pricing:
   - name: Free
     price: 0
@@ -76,19 +78,18 @@ pricing:
       - Hybrid deployment option
       - Account management
     cta_url: https://windsurf.com/enterprise
-
-paid_tier_highlights:
-  - Pro at $20/mo unlocks unlimited usage at API pricing
-  - Teams at $40/user/mo adds admin dashboard and centralized billing
-  - Max at $200/mo provides Devin Cloud agents and SWE-1.5 access
-  - Enterprise offers RBAC, SSO, and hybrid deployment
-  - All paid plans deliver unlimited extra usage at API price
-
-tags: [ide, ai-coding, agents, code-assistant, cascade]
-
+tags:
+  - ide
+  - ai-coding
+  - agents
+  - code-assistant
+  - cascade
+  - dev-tools
+  - permanent
+  - free-plan
 official_url: https://windsurf.com/
 pricing_url: https://windsurf.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

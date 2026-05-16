@@ -1,43 +1,34 @@
 ---
 import BaseLayout from '~/layouts/BaseLayout.astro';
+import SponsorMeter from '~/components/ui/SponsorMeter.astro';
 ---
 
 <BaseLayout
   title="Sponsors"
-  description="free-stack is funded entirely by sponsorship. No ads, no affiliate links."
+  description="free-stack is funded entirely by sponsorship. $100/month minimum target. No ads, no affiliate links."
   canonical="https://freestack.is-a.dev/sponsors"
 >
   <section class="container-narrow sponsors-page">
     <header class="page-head">
-      <p class="eyebrow">Support</p>
-      <h1>Sponsors keep free-stack online.</h1>
+      <p class="eyebrow">Support · transparent ledger</p>
+      <h1>Keeping the lights on costs $100/month.</h1>
+      <p class="lede">
+        free-stack runs on sponsorship. No ads, no affiliate links, no newsletter wall — sponsors
+        cover the domain, the verifier compute, and the hour-a-week of human checking that keeps the
+        catalog honest.
+      </p>
     </header>
 
-    <div class="banner">
-      <p>
-        <strong>Sponsorship does not influence rankings or listings.</strong> The editorial bar is the
-        same for every service: a real free tier you can use today. Money pays for the domain and hosting,
-        nothing else.
-      </p>
-    </div>
+    <SponsorMeter variant="page" />
 
-    <section class="block">
-      <h2>The ledger</h2>
-      <p>
-        Annual costs for free-stack: roughly <strong>$12–15</strong> for the `.dev` domain (when we register
-        one — currently on `freestack.is-a.dev` for free) and <strong>$0</strong> for Cloudflare Pages
-        hosting (unlimited bandwidth free tier). Any surplus rolls into the following year.
-      </p>
-    </section>
-
-    <section class="block donate-row">
+    <div class="cta-row">
       <a
         class="donate sponsor-primary"
         href="https://github.com/sponsors/Pratiyush"
         rel="noopener noreferrer"
         target="_blank"
       >
-        Sponsor on GitHub
+        Sponsor on GitHub →
       </a>
       <a
         class="donate sponsor-secondary"
@@ -47,14 +38,128 @@ import BaseLayout from '~/layouts/BaseLayout.astro';
       >
         Buy Me a Coffee
       </a>
+    </div>
+
+    <section class="block">
+      <h2>i. The ledger</h2>
+      <p class="block-lede">
+        What $100/month actually covers. We publish this so you can audit the ask, not just trust
+        it.
+      </p>
+      <table class="ledger">
+        <thead>
+          <tr>
+            <th>Line item</th>
+            <th>Monthly</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Domain — <code>freestack.is-a.dev</code></td>
+            <td class="cost">$0</td>
+            <td
+              >Free via is-a.dev. We will buy a paid <code>.dev</code> at v3.0 (~$1.25/mo amortised).</td
+            >
+          </tr>
+          <tr>
+            <td>Hosting — GitHub Pages</td>
+            <td class="cost">$0</td>
+            <td>Free tier. 100 GB bandwidth/mo soft cap — well below our usage.</td>
+          </tr>
+          <tr>
+            <td>Email routing — <code>removals@</code></td>
+            <td class="cost">$0</td>
+            <td>Cloudflare Email Routing free tier; replaces a $5/mo Fastmail line.</td>
+          </tr>
+          <tr>
+            <td>Weekly Playwright verifier</td>
+            <td class="cost">$0</td>
+            <td>GitHub Actions free minutes. At-risk if usage grows; budget for $25/mo.</td>
+          </tr>
+          <tr>
+            <td>Human verification retainer</td>
+            <td class="cost">~$60</td>
+            <td>1 hr/week, fair rate. Walks the monthly cron's stale-services issue.</td>
+          </tr>
+          <tr>
+            <td>Buffer for the unexpected</td>
+            <td class="cost">~$15</td>
+            <td
+              >Domain renewal years, takedown legal review if it ever comes up, abuse-mitigation
+              tools.</td
+            >
+          </tr>
+          <tr class="ledger-total">
+            <td><strong>Monthly minimum</strong></td>
+            <td class="cost"><strong>$100</strong></td>
+            <td
+              >Honest target. Surplus rolls forward into next month, never into the maintainer's
+              pocket.</td
+            >
+          </tr>
+        </tbody>
+      </table>
     </section>
 
     <section class="block">
-      <h2>Why no ads?</h2>
+      <h2>ii. Tiers</h2>
+      <p class="block-lede">Pick what fits. Each tier sustains a piece of the operation.</p>
+      <div class="tier-grid">
+        <div class="tier">
+          <p class="tier-name">$5 / month</p>
+          <p class="tier-perk">Name in the next CHANGELOG.</p>
+          <p class="tier-impact">20 supporters at this tier = target hit.</p>
+        </div>
+        <div class="tier">
+          <p class="tier-name">$20 / month</p>
+          <p class="tier-perk">Link from <code>/sponsors</code> + name in CHANGELOG.</p>
+          <p class="tier-impact">5 supporters at this tier = target hit.</p>
+        </div>
+        <div class="tier">
+          <p class="tier-name">$50 / month</p>
+          <p class="tier-perk">Logo on <code>/sponsors</code> + link + CHANGELOG name.</p>
+          <p class="tier-impact">2 supporters at this tier = target hit.</p>
+        </div>
+        <div class="tier tier-top">
+          <p class="tier-name">$100 / month</p>
+          <p class="tier-perk">
+            Sponsor of the month — top of <code>/sponsors</code> page + everything above.
+          </p>
+          <p class="tier-impact">1 supporter at this tier = target hit, single-handed.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>iii. The honesty clause</h2>
+      <p>
+        If we don't reach $50/month by <strong>September 2026</strong>, the weekly Playwright
+        verifier moves to monthly. If we don't reach $100/month by <strong>December 2026</strong>,
+        the human verification retainer pauses and the catalog runs on automation only — which is
+        still useful, but worse than the current honest-list bar.
+      </p>
+      <p>
+        If we exceed $100/month, the next $200/month goes to: (a) a paid <code>.dev</code> domain, (b)
+        two human verifiers (handles maintainer burnout risk), (c) per-service OG card infrastructure
+        that's deferred to v2.1.
+      </p>
+      <p>
+        Past that, surplus rolls into the next year. Nothing flows to the maintainer's pocket.
+        Public dashboard at <a href="/sponsors">/sponsors</a> is the only ledger.
+      </p>
+    </section>
+
+    <section class="block">
+      <h2>iv. Why no ads</h2>
       <p>
         Affiliate links create an incentive to list services that pay best, not services that are
-        best. The cleanest way to avoid that bias is to not take affiliate money in the first place.
-        Read more on <a href="/methodology">our methodology</a>.
+        best. The cleanest way to avoid that bias is to refuse affiliate money — full stop. See
+        <a href="/methodology">methodology</a> for the editorial bar.
+      </p>
+      <p class="callout">
+        <strong>Sponsorship does not influence rankings or listings.</strong> Every service meets the
+        same bar: a real free tier you can use today, verified within the last 60 days.
       </p>
     </section>
   </section>
@@ -72,55 +177,139 @@ import BaseLayout from '~/layouts/BaseLayout.astro';
       font-size: 0.78rem;
       text-transform: uppercase;
       letter-spacing: 0.12em;
-      color: var(--color-sponsor);
+      color: var(--color-ink-faint);
       margin-bottom: var(--space-sm);
     }
-    .banner {
-      padding: var(--space-md);
-      background: color-mix(in srgb, var(--color-sponsor) 8%, transparent);
-      border-left: 3px solid var(--color-sponsor);
-      border-radius: var(--radius-sm);
-      margin-bottom: var(--space-xl);
+    h1 {
+      margin: 0 0 var(--space-md);
     }
-    .banner p {
-      margin: 0;
-      color: var(--color-ink);
+    .lede {
+      font-size: 1.1rem;
+      color: var(--color-ink-soft);
+      max-width: 60ch;
+      margin-bottom: var(--space-lg);
     }
-    .block {
-      padding: var(--space-lg) 0;
-      border-top: var(--border-rule);
-    }
-    .block h2 {
-      font-size: 1.35rem;
-      margin-bottom: var(--space-md);
-    }
-    .donate-row {
+    .cta-row {
       display: flex;
       gap: var(--space-md);
       flex-wrap: wrap;
+      margin: var(--space-lg) 0;
     }
     .donate {
       display: inline-block;
-      padding: 0.7rem 1.2rem;
+      padding: 0.75rem 1.3rem;
       border-radius: var(--radius-md);
       text-decoration: none;
       font-weight: 500;
+      font-size: 0.95rem;
     }
     .sponsor-primary {
-      background: var(--color-sponsor);
+      background: var(--color-ink);
       color: var(--color-paper);
     }
     .sponsor-primary:hover {
-      filter: brightness(1.1);
+      filter: brightness(1.15);
     }
     .sponsor-secondary {
       background: transparent;
-      color: var(--color-sponsor);
-      border: 1px solid var(--color-sponsor);
+      color: var(--color-ink);
+      border: 1px solid var(--color-rule);
     }
     .sponsor-secondary:hover {
-      background: var(--color-sponsor);
-      color: var(--color-paper);
+      border-color: var(--color-coral);
+      color: var(--color-coral);
+    }
+    .block {
+      padding: var(--space-xl) 0;
+      border-top: var(--border-rule);
+    }
+    .block h2 {
+      font-size: 1.5rem;
+      margin-bottom: var(--space-sm);
+      font-family: var(--font-display);
+      font-weight: 400;
+    }
+    .block-lede {
+      color: var(--color-ink-soft);
+      margin-bottom: var(--space-md);
+    }
+    .ledger {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+    .ledger th,
+    .ledger td {
+      padding: 0.7rem 0.8rem;
+      text-align: left;
+      border-bottom: 1px solid var(--color-rule);
+      vertical-align: top;
+    }
+    .ledger th {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-ink-faint);
+    }
+    .ledger .cost {
+      font-family: var(--font-mono);
+      white-space: nowrap;
+      color: var(--color-ink);
+    }
+    .ledger-total td {
+      border-bottom: none;
+      border-top: 2px solid var(--color-ink);
+      padding-top: 1rem;
+    }
+    .tier-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: var(--space-md);
+    }
+    .tier {
+      padding: var(--space-md);
+      border: 1px solid var(--color-rule);
+      border-radius: var(--radius-md);
+      background: var(--color-paper);
+    }
+    .tier-top {
+      background: var(--color-paper-warm);
+      border-color: var(--color-coral);
+    }
+    .tier-name {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      margin: 0 0 0.4rem;
+    }
+    .tier-perk {
+      font-size: 0.9rem;
+      color: var(--color-ink-soft);
+      margin: 0 0 0.6rem;
+    }
+    .tier-impact {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--color-ink-faint);
+      margin: 0;
+    }
+    .callout {
+      margin-top: var(--space-md);
+      padding: var(--space-md);
+      background: var(--color-paper-warm);
+      border-left: 3px solid var(--color-coral);
+      border-radius: var(--radius-sm);
+    }
+    .callout strong {
+      color: var(--color-ink);
+    }
+    p code,
+    td code {
+      font-family: var(--font-mono);
+      font-size: 0.85em;
+      padding: 0.1em 0.3em;
+      background: var(--color-paper-warm);
+      border-radius: 3px;
     }
   </style>
 </BaseLayout>

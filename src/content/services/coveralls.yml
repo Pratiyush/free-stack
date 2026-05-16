@@ -4,22 +4,17 @@ category: code-quality
 subcategory: permanent
 brand_color: '#3F5767'
 logo: /logos/coveralls.svg
-
-summary: 'Free for open-source (public) repos'
-
+summary: Free for open-source (public) repos
 tier_type: free-plan
-
 free_tier:
-  - 'Free for open-source (public) repos'
+  - Free for open-source (public) repos
   - No documented rate limits
-
 paid_tier_highlights:
   - Cloud plans scale from $10/mo (Starter) to $400/mo (Unlimited)
   - Org/Org+/Pro plans range $50–$200/mo for 10–40 private repos
   - Cloud Premium ($800/mo) adds SLA, multi-org billing
   - Enterprise Cloud ($1,200/mo) for unlimited orgs and dedicated infra
   - On-Premise at $25/user/mo for isolated deployments
-
 pricing:
   - name: Open Source
     price: 0
@@ -113,12 +108,16 @@ pricing:
       - Unlimited repos and users
       - Performance SLA
     billing: monthly
-
-tags: []
-
+tags:
+  - code-quality
+  - permanent
+  - free-plan
+  - ci-cd
+  - open-source
 official_url: https://coveralls.io/
 pricing_url: https://coveralls.io/pricing
-
+facets:
+  oss: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

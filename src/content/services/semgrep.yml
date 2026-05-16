@@ -4,15 +4,16 @@ category: security
 subcategory: permanent
 brand_color: '#888888'
 logo: /logos/semgrep.svg
-
-summary: 'Community Edition (open-source) + AppSec Platform free tier'
-
+summary: Community Edition (open-source) + AppSec Platform free tier
 tier_type: free-plan
-
 free_tier:
-  - 'Community Edition (open-source) + AppSec Platform free tier'
+  - Community Edition (open-source) + AppSec Platform free tier
   - Team plan $35/contributor/mo beyond free tier
-
+paid_tier_highlights:
+  - Teams ($30/contributor) adds SSO and 500 private repos
+  - Teams unlocks role-based access control
+  - Enterprise brings on-prem SCM and dedicated infra
+  - Enterprise removes contributor and repo caps
 pricing:
   - name: Free
     price: 0
@@ -51,18 +52,15 @@ pricing:
       - Dedicated account manager
       - Tailored onboarding
     cta_url: https://semgrep.dev/pricing/
-
-paid_tier_highlights:
-  - Teams ($30/contributor) adds SSO and 500 private repos
-  - Teams unlocks role-based access control
-  - Enterprise brings on-prem SCM and dedicated infra
-  - Enterprise removes contributor and repo caps
-
-tags: []
-
+tags:
+  - security
+  - permanent
+  - free-plan
+  - open-source
 official_url: https://semgrep.dev/
 pricing_url: https://semgrep.dev/pricing/
-
+facets:
+  oss: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

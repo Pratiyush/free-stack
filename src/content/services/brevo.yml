@@ -3,18 +3,14 @@ slug: brevo
 category: email
 brand_color: '#0B996E'
 logo: /logos/brevo.svg
-
 summary: Transactional and marketing email with 300 emails/day, 100K contacts, and Brevo branding included.
-
 tier_type: always-free
-
 free_tier:
   - 300 emails/day
   - 100K contacts
   - Brevo branding
   - Transactional and marketing
   - Automation support
-
 pricing:
   - name: Free
     price: 0
@@ -22,12 +18,16 @@ pricing:
   - name: Starter
     price: 9
     unit: /month
-
-tags: [email, transactional-email, marketing-email, automation, smtp]
-
+tags:
+  - email
+  - transactional-email
+  - marketing-email
+  - automation
+  - smtp
+  - always-free
 official_url: https://www.brevo.com/
 pricing_url: https://www.brevo.com/pricing/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

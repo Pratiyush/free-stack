@@ -4,15 +4,16 @@ category: payments
 subcategory: permanent
 brand_color: '#FF90E8'
 logo: /logos/gumroad.svg
-
 summary: No monthly fee
-
 tier_type: free-plan
-
 free_tier:
   - No monthly fee
-  - 'Higher rate but simplest setup, no code required, instant storefront'
-
+  - Higher rate but simplest setup, no code required, instant storefront
+paid_tier_highlights:
+  - Direct-link sales charged 10% plus $0.50 per transaction
+  - Discover marketplace sales charged 30% for new-customer attribution
+  - Merchant of Record model includes global tax compliance
+  - No monthly subscription fee on any tier
 pricing:
   - name: Free
     price: 0
@@ -27,7 +28,7 @@ pricing:
       - Instant storefront, no code required
     cta_url: https://gumroad.com/signup
   - name: Direct Sales Fee
-    price: '10% + $0.50'
+    price: 10% + $0.50
     unit: /transaction
     billing: usage-based
     description: Fee for sales via creator profile or direct customer links
@@ -37,7 +38,7 @@ pricing:
       - No monthly minimums
     cta_url: https://gumroad.com/signup
   - name: Marketplace Sales Fee
-    price: '30%'
+    price: 30%
     unit: /transaction
     billing: usage-based
     description: Fee for new customers via Gumroad Discover marketplace
@@ -46,18 +47,13 @@ pricing:
       - Drops to direct-sales fee on repeat purchases
       - Exposure via Gumroad's discovery channels
     cta_url: https://gumroad.com/signup
-
-paid_tier_highlights:
-  - Direct-link sales charged 10% plus $0.50 per transaction
-  - Discover marketplace sales charged 30% for new-customer attribution
-  - Merchant of Record model includes global tax compliance
-  - No monthly subscription fee on any tier
-
-tags: []
-
+tags:
+  - payments
+  - permanent
+  - free-plan
 official_url: https://gumroad.com/
 pricing_url: https://gumroad.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

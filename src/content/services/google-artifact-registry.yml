@@ -4,15 +4,16 @@ category: containers
 subcategory: permanent
 brand_color: '#4285F4'
 logo: /logos/google-artifact-registry.svg
-
 summary: Free tier (permanent)
-
 tier_type: free-plan
-
 free_tier:
   - Free tier (permanent)
   - Inbound transfer free; outbound charged at Premium tier rates beyond free quota
-
+paid_tier_highlights:
+  - $0.10/GB-month storage after free 0.5 GB allowance
+  - Inbound transfer and same-location reads always free
+  - Cross-region egress starts at $0.01/GB (US) and tops at $0.15/GB (Oceania)
+  - Vulnerability scanning billed separately via Artifact Analysis
 pricing:
   - name: Free Tier
     price: 0
@@ -27,7 +28,7 @@ pricing:
       - Inbound to Google Cloud always free
       - Applies to standard, remote, gcr.io repos
   - name: Storage Overage
-    price: 0.10
+    price: 0.1
     unit: /GB/month
     billing: usage-based
     description: $0.10/GB-month after the free 0.5 GB allowance
@@ -49,18 +50,14 @@ pricing:
       - Cross-continent $0.08/GB
       - Oceania $0.15/GB
       - Internet egress at Premium tier rates
-
-paid_tier_highlights:
-  - $0.10/GB-month storage after free 0.5 GB allowance
-  - Inbound transfer and same-location reads always free
-  - Cross-region egress starts at $0.01/GB (US) and tops at $0.15/GB (Oceania)
-  - Vulnerability scanning billed separately via Artifact Analysis
-
-tags: []
-
+tags:
+  - containers
+  - permanent
+  - free-plan
+  - docker
 official_url: https://cloud.google.com/
 pricing_url: https://cloud.google.com/artifact-registry/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

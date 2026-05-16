@@ -4,15 +4,16 @@ category: dev-tools
 subcategory: permanent
 brand_color: '#242424'
 logo: /logos/tailscale.svg
-
 summary: Personal plan
-
 tier_type: free-plan
-
 free_tier:
   - Personal plan
   - No published rate limit
-
+paid_tier_highlights:
+  - Standard at $8/user/mo unlocks SCIM + MDM integrations
+  - Premium at $18/user/mo adds JIT access + network flow logs
+  - 10,000 mins/mo ephemeral resources on Premium
+  - Enterprise unlocks custom MSAs, SLAs, and dedicated support
 pricing:
   - name: Personal
     price: 0
@@ -64,18 +65,13 @@ pricing:
       - Premium dedicated support
       - Pay-by-invoice option
     cta_url: https://tailscale.com/contact/sales
-
-paid_tier_highlights:
-  - Standard at $8/user/mo unlocks SCIM + MDM integrations
-  - Premium at $18/user/mo adds JIT access + network flow logs
-  - 10,000 mins/mo ephemeral resources on Premium
-  - Enterprise unlocks custom MSAs, SLAs, and dedicated support
-
-tags: []
-
+tags:
+  - dev-tools
+  - permanent
+  - free-plan
 official_url: https://tailscale.com/
 pricing_url: https://tailscale.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

@@ -4,15 +4,13 @@ category: mobile
 subcategory: permanent
 brand_color: '#DD2C00'
 logo: /logos/firebase-app-distribution.svg
-
 summary: '**Firebase (App Distribution)** — free tier; see the pricing page for details.'
-
 tier_type: free-plan
-
 free_tier:
   - Free
   - No usage limits; free service for beta distribution
-
+paid_tier_highlights:
+  - This service is always-free; no paid tiers exist
 pricing:
   - name: Free (Spark and Blaze)
     price: 0
@@ -26,15 +24,13 @@ pricing:
       - In-app tester feedback and screenshots
       - No usage limits on Spark or Blaze
     cta_url: https://console.firebase.google.com/
-
-paid_tier_highlights:
-  - This service is always-free; no paid tiers exist
-
-tags: []
-
+tags:
+  - mobile
+  - permanent
+  - free-plan
 official_url: https://firebase.google.com/
 pricing_url: https://firebase.google.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

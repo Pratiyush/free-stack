@@ -3,25 +3,20 @@ slug: bunny-dns
 category: dns
 brand_color: '#FF7A00'
 logo: /logos/bunny-dns.svg
-
 summary: DNS service with 20M free queries/mo, scriptable records, and monitoring included (requires $1/mo Bunny minimum).
-
 tier_type: pay-as-you-go
-
 free_tier:
   - First 20M standard queries/mo free
   - Scriptable DNS records
   - Built-in monitoring
   - All advanced features included
   - $1/mo minimum across Bunny services
-
 paid_tier_highlights:
   - Standard queries beyond 20M billed at $0.10/M (no hidden fees)
   - Smart (scriptable) queries free up to 1M, then $0.30/M
   - $1/mo minimum across all Bunny services
   - All advanced features available at every tier
   - Pay-per-query — no setup fees, no plan tiers
-
 pricing:
   - name: Free tier
     description: First 20M standard queries free
@@ -36,7 +31,7 @@ pricing:
     cta_url: https://dash.bunny.net/account/register
   - name: Standard query overage
     description: Pay-per-query after 20M free
-    price: 0.10
+    price: 0.1
     unit: /M queries
     billing: usage-based
     features:
@@ -46,7 +41,7 @@ pricing:
       - Scales with usage
   - name: Smart (scriptable) overage
     description: Premium scriptable DNS after 1M free
-    price: 0.30
+    price: 0.3
     unit: /M queries
     billing: usage-based
     features:
@@ -54,12 +49,16 @@ pricing:
       - Per-usage billing
       - Enterprise capabilities
       - Scales on demand
-
-tags: [dns, cdn, monitoring, scriptable, ddos]
-
+tags:
+  - dns
+  - cdn
+  - monitoring
+  - scriptable
+  - ddos
+  - pay-as-you-go
 official_url: https://bunny.net/
 pricing_url: https://bunny.net/pricing/dns/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

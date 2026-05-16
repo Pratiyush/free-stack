@@ -4,26 +4,21 @@ category: iaas
 subcategory: permanent
 brand_color: '#FF9900'
 logo: /logos/aws-always-free.svg
-
 summary: Permanent free tier (30+ services)
-
 tier_type: free-plan
-
 free_tier:
   - Permanent free tier across 30+ services
   - 'Lambda: 1M requests + 400K GB-sec compute per month'
   - 'DynamoDB: 25 GB storage + 25 read/write capacity units'
   - 'CloudFront: 1 TB egress and 10M requests/month'
   - 'CloudWatch: 10 custom metrics, 1M API requests'
-  - 'No free compute (EC2) on Always Free; EC2 free is 12-month trial only'
-
+  - No free compute (EC2) on Always Free; EC2 free is 12-month trial only
 paid_tier_highlights:
-  - 'Pay-as-you-go pricing applies after Always Free quotas exceeded'
-  - 'New AWS accounts (post-Jul 2025) get $200 Free Plan credits for 6 months'
-  - '12-month free tier separately covers EC2 t2.micro, RDS, S3 5 GB'
-  - 'Paid Plan unlocks 150+ AWS services beyond the always-free 30+'
-  - 'Enterprise Support adds dedicated TAM, infrastructure event management'
-
+  - Pay-as-you-go pricing applies after Always Free quotas exceeded
+  - New AWS accounts (post-Jul 2025) get $200 Free Plan credits for 6 months
+  - 12-month free tier separately covers EC2 t2.micro, RDS, S3 5 GB
+  - Paid Plan unlocks 150+ AWS services beyond the always-free 30+
+  - Enterprise Support adds dedicated TAM, infrastructure event management
 pricing:
   - name: Always Free
     price: 0
@@ -59,12 +54,20 @@ pricing:
       - Volume discounts at scale
       - Always Free quotas still apply
     cta_url: https://aws.amazon.com/pricing/
-
-tags: []
-
+tags:
+  - iaas
+  - permanent
+  - free-plan
+  - cloud
+  - infrastructure
+  - serverless
+  - api
 official_url: https://aws.amazon.com/
 pricing_url: https://aws.amazon.com/free/
-
-date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+facets:
+  storage_gb: 25
+  requests_per_month: 10000000
+  bandwidth_gb_month: 1
+date_added: '2026-05-15'
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

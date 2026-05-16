@@ -4,15 +4,16 @@ category: storage
 subcategory: permanent
 brand_color: '#E84D3D'
 logo: /logos/jsdelivr.svg
-
-summary: 'Unlimited bandwidth, fully free public CDN'
-
+summary: Unlimited bandwidth, fully free public CDN
 tier_type: free-plan
-
 free_tier:
-  - 'Unlimited bandwidth, fully free public CDN'
+  - Unlimited bandwidth, fully free public CDN
   - No documented rate limits; serves 150B+ requests/mo
-
+paid_tier_highlights:
+  - This service is always-free; no paid tiers exist
+  - Operating costs covered by corporate infrastructure sponsors
+  - Sponsorship tier exists for companies wanting to support jsDelivr
+  - No SLA or commercial support offering
 pricing:
   - name: Free Public CDN
     price: 0
@@ -26,18 +27,13 @@ pricing:
       - Optimized for JS, ESM, web fonts
       - 150B+ requests/month served
     cta_url: https://www.jsdelivr.com/
-
-paid_tier_highlights:
-  - This service is always-free; no paid tiers exist
-  - Operating costs covered by corporate infrastructure sponsors
-  - Sponsorship tier exists for companies wanting to support jsDelivr
-  - No SLA or commercial support offering
-
-tags: []
-
+tags:
+  - storage
+  - permanent
+  - free-plan
 official_url: https://www.jsdelivr.com/
 pricing_url: https://www.jsdelivr.com/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

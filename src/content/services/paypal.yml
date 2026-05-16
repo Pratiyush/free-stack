@@ -4,15 +4,17 @@ category: payments
 subcategory: permanent
 brand_color: '#002991'
 logo: /logos/paypal.svg
-
 summary: No monthly fee (standard)
-
 tier_type: free-plan
-
 free_tier:
   - No monthly fee (standard)
-  - '+1.5% for international transactions, dispute fees apply, widely recognized checkout'
-
+  - +1.5% for international transactions, dispute fees apply, widely recognized checkout
+paid_tier_highlights:
+  - No monthly account fee; pay only per-transaction
+  - PayPal Checkout 2.99% + $0.49; Expanded Checkout 2.89% + $0.29
+  - In-person (Card Present / Tap to Pay) 2.29% + $0.09
+  - Invoices 3.49% + $0.49; Pay Later invoices 4.99% + $0.49
+  - High-volume enterprise on custom interchange-plus pricing
 pricing:
   - name: Free (account)
     price: 0
@@ -26,7 +28,7 @@ pricing:
     cta_url: https://www.paypal.com/us/business
     billing: free
   - name: PayPal Checkout
-    price: '2.99% + $0.49'
+    price: 2.99% + $0.49
     unit: /transaction
     description: Standard online checkout with cards, PayPal, Venmo
     features:
@@ -37,7 +39,7 @@ pricing:
     cta_url: https://www.paypal.com/unifiedonboarding/entry?products=checkout
     billing: usage-based
   - name: Expanded Checkout
-    price: '2.89% + $0.29'
+    price: 2.89% + $0.29
     unit: /transaction
     description: Cards, Apple Pay, Google Pay with custom risk controls
     features:
@@ -48,7 +50,7 @@ pricing:
     cta_url: https://www.paypal.com/unifiedonboarding/entry?products=checkout
     billing: usage-based
   - name: In-Person (Card Present / Tap to Pay)
-    price: '2.29% + $0.09'
+    price: 2.29% + $0.09
     unit: /transaction
     description: POS card reader, terminal, or phone Tap to Pay
     features:
@@ -58,7 +60,7 @@ pricing:
     cta_url: https://www.paypal.com/unifiedonboarding/entry?products=ZETTLE
     billing: usage-based
   - name: PayPal/Venmo Invoices
-    price: '3.49% + $0.49'
+    price: 3.49% + $0.49
     unit: /transaction
     description: Send invoices payable by PayPal/Venmo
     features:
@@ -76,19 +78,13 @@ pricing:
       - Dedicated support
     cta_url: https://www.paypal.com/us/business/contact-sales
     billing: usage-based
-
-paid_tier_highlights:
-  - No monthly account fee; pay only per-transaction
-  - PayPal Checkout 2.99% + $0.49; Expanded Checkout 2.89% + $0.29
-  - In-person (Card Present / Tap to Pay) 2.29% + $0.09
-  - Invoices 3.49% + $0.49; Pay Later invoices 4.99% + $0.49
-  - High-volume enterprise on custom interchange-plus pricing
-
-tags: []
-
+tags:
+  - payments
+  - permanent
+  - free-plan
 official_url: https://www.paypal.com/
 pricing_url: https://www.paypal.com/us/business/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

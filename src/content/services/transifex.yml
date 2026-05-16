@@ -4,15 +4,16 @@ category: translation
 subcategory: permanent
 brand_color: '#0064AB'
 logo: /logos/transifex.svg
-
-summary: 'Free for qualifying open-source only'
-
+summary: Free for qualifying open-source only
 tier_type: free-plan
-
 free_tier:
-  - 'Free for qualifying open-source only'
-  - '15-day full-feature trial; open-source must have no funding/revenue/commercialization'
-
+  - Free for qualifying open-source only
+  - 15-day full-feature trial; open-source must have no funding/revenue/commercialization
+paid_tier_highlights:
+  - Starter from $135/mo (annual) unlocks integrations + Translation Memory
+  - Growth from $200/mo (annual) adds 60K AI words/year
+  - Enterprise+ includes 300K AI words/year + dedicated support
+  - Free tier restricted to qualifying open-source projects only
 pricing:
   - name: Open-Source / Free
     price: 0
@@ -65,18 +66,16 @@ pricing:
       - Enhanced security
       - Extended support + business reviews
     cta_url: https://www.transifex.com/talk-to-sales
-
-paid_tier_highlights:
-  - Starter from $135/mo (annual) unlocks integrations + Translation Memory
-  - Growth from $200/mo (annual) adds 60K AI words/year
-  - Enterprise+ includes 300K AI words/year + dedicated support
-  - Free tier restricted to qualifying open-source projects only
-
-tags: []
-
+tags:
+  - translation
+  - permanent
+  - free-plan
+  - i18n
+  - open-source
 official_url: https://www.transifex.com/
 pricing_url: https://www.transifex.com/pricing
-
+facets:
+  oss: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

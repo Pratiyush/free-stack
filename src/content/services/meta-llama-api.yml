@@ -4,25 +4,24 @@ category: ai-apis
 subcategory: limited
 brand_color: '#0467DF'
 logo: /logos/meta-llama-api.svg
-
-summary: 'Limited preview, no confirmed free tier — Official API at llama.com in limited preview; use Groq/Together/OpenRouter for free Llama access instead'
-
+summary: Limited preview, no confirmed free tier — Official API at llama.com in limited preview; use Groq/Together/OpenRouter for free Llama access instead
 tier_type: free-plan
-
 free_tier:
-  - 'Limited preview, no confirmed free tier'
+  - Limited preview, no confirmed free tier
   - Official API at llama.com in limited preview; use Groq/Together/OpenRouter for free Llama access instead
-
 pricing:
   - name: Free
     price: 0
     unit: /month
-
-tags: []
-
+tags:
+  - ai-apis
+  - limited
+  - free-plan
+  - ai
+  - api
 official_url: https://www.llama.com/
 pricing_url: https://www.llama.com/products/llama-api/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

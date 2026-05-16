@@ -4,15 +4,17 @@ category: communication
 subcategory: permanent
 brand_color: '#F38020'
 logo: /logos/partykit-cloudflare.svg
-
 summary: Free tier (included with Cloudflare Workers free)
-
 tier_type: free-plan
-
 free_tier:
   - Free tier (included with Cloudflare Workers free)
   - Acquired by Cloudflare (2024); uses Workers free tier (100K requests/day). Hibernation API reduces memory usage
-
+paid_tier_highlights:
+  - PartyKit itself has no paid subscription tiers
+  - Commercial deployment uses your own Cloudflare account costs
+  - Cloudflare Workers free tier covers 100K requests/day
+  - Durable Objects pricing applies via Cloudflare account
+  - Hibernation API minimizes Cloudflare usage costs
 pricing:
   - name: Individual (Free)
     price: 0
@@ -39,19 +41,15 @@ pricing:
       - Durable Objects backend
       - Persistent storage on paid Cloudflare
     cta_url: https://www.partykit.io/
-
-paid_tier_highlights:
-  - PartyKit itself has no paid subscription tiers
-  - Commercial deployment uses your own Cloudflare account costs
-  - Cloudflare Workers free tier covers 100K requests/day
-  - Durable Objects pricing applies via Cloudflare account
-  - Hibernation API minimizes Cloudflare usage costs
-
-tags: []
-
+tags:
+  - communication
+  - permanent
+  - free-plan
+  - api
 official_url: https://www.partykit.io/
 pricing_url: https://www.partykit.io/
-
+facets:
+  requests_per_day: 100000
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

@@ -4,25 +4,20 @@ category: collaboration
 subcategory: permanent
 brand_color: '#F06A6A'
 logo: /logos/asana.svg
-
 summary: Personal plan (free)
-
 tier_type: free-plan
-
 free_tier:
   - Personal plan (free forever, up to 2 users / 10 seats)
   - Unlimited tasks and projects
   - List, board, and calendar views
   - Unlimited storage (100 MB max per file)
   - 100+ integrations
-  - 'No timeline/Gantt, custom fields, forms, or reporting dashboards'
-
+  - No timeline/Gantt, custom fields, forms, or reporting dashboards
 paid_tier_highlights:
-  - 'Starter from $10.99/user/mo adds Timeline/Gantt, forms, custom fields'
-  - 'Advanced from $24.99/user/mo adds portfolios, goals, approvals, time tracking'
-  - 'Enterprise adds SAML, SCIM, capacity planning, AI Studio (200K credits)'
-  - 'Enterprise+ adds SIEM, eDiscovery, DLP, data residency, EKM'
-
+  - Starter from $10.99/user/mo adds Timeline/Gantt, forms, custom fields
+  - Advanced from $24.99/user/mo adds portfolios, goals, approvals, time tracking
+  - Enterprise adds SAML, SCIM, capacity planning, AI Studio (200K credits)
+  - Enterprise+ adds SIEM, eDiscovery, DLP, data residency, EKM
 pricing:
   - name: Personal
     price: 0
@@ -86,12 +81,14 @@ pricing:
       - Data residency options
       - Enterprise Key Management
     cta_url: https://asana.com/sales
-
-tags: []
-
+tags:
+  - collaboration
+  - permanent
+  - free-plan
 official_url: https://asana.com/
 pricing_url: https://asana.com/pricing
-
+facets:
+  team_seats: 2
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

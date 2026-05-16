@@ -4,22 +4,17 @@ category: baas
 subcategory: permanent
 brand_color: '#F26522'
 logo: /logos/convex.svg
-
 summary: Starter plan (no credit card required)
-
 tier_type: free-plan
-
 free_tier:
   - Starter plan (no credit card required)
-  - 'Perpetual free tier, no project pausing, pay-as-you-go beyond limits'
-
+  - Perpetual free tier, no project pausing, pay-as-you-go beyond limits
 paid_tier_highlights:
   - Professional ($25/dev/mo) lifts to 50 GB DB, 25M function calls
   - Daily backups, log streaming, custom domains in Professional
   - Business/Enterprise starts at $2,500/mo with custom resources
   - SAML/SSO, service SLAs, dedicated deployments at Enterprise
   - White-glove onboarding and Slack Connect on Enterprise
-
 pricing:
   - name: Free & Starter
     price: 0
@@ -44,7 +39,7 @@ pricing:
       - Custom domains, email support, management API
     billing: monthly
   - name: Business & Enterprise
-    price: '$2,500+/mo'
+    price: $2,500+/mo
     unit: /month minimum
     description: Teams scaling rapidly with custom solutions
     features:
@@ -54,12 +49,14 @@ pricing:
       - Slack Connect support, white-glove onboarding
       - Fine-grained permissions, audit logs, fast backup/restore
     billing: annual
-
-tags: []
-
+tags:
+  - baas
+  - permanent
+  - free-plan
+  - backend-as-a-service
 official_url: https://www.convex.dev/
 pricing_url: https://www.convex.dev/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

@@ -4,25 +4,22 @@ category: communication
 subcategory: permanent
 brand_color: '#000000'
 logo: /logos/vonage.svg
-
 summary: Trial credit only (not permanent)
-
 tier_type: free-plan
-
 free_tier:
   - Trial credit only (not permanent)
   - '**Trial only** -- no permanent free tier; usage-based pricing after credit consumed'
-
 pricing:
   - name: Free
     price: 0
     unit: /month
-
-tags: []
-
+tags:
+  - communication
+  - permanent
+  - free-plan
 official_url: https://www.vonage.com/
 pricing_url: https://www.vonage.com/communications-apis/pricing/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

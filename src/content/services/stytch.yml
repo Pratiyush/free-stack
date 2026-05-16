@@ -3,18 +3,20 @@ slug: stytch
 category: auth
 brand_color: '#0B2157'
 logo: /logos/stytch.svg
-
 summary: Platform-agnostic auth with 10K free MAU, all auth methods (MFA, SSO, RBAC), and no feature gates.
-
 tier_type: free-plan
-
 free_tier:
   - 10K monthly active users
   - All auth methods included
   - MFA, SSO, RBAC included
   - 5 SSO/SCIM connections
   - Overage billing at usage rates
-
+paid_tier_highlights:
+  - Pay-as-you-go after 10K MAU — no fixed monthly minimum
+  - Add-on email customization + brand removal $99/mo
+  - Fraud & risk prevention $0.005 per fingerprint (10K free)
+  - Additional SSO/SCIM connections $125/connection
+  - Enterprise unlocks 99.99% SLA + HIPAA/BAA
 pricing:
   - name: Pay as You Go
     price: 0
@@ -41,19 +43,17 @@ pricing:
       - HIPAA/BAA compliance available
       - Migration support
     cta_url: https://stytch.com/contact/sales
-
-paid_tier_highlights:
-  - Pay-as-you-go after 10K MAU — no fixed monthly minimum
-  - Add-on email customization + brand removal $99/mo
-  - Fraud & risk prevention $0.005 per fingerprint (10K free)
-  - Additional SSO/SCIM connections $125/connection
-  - Enterprise unlocks 99.99% SLA + HIPAA/BAA
-
-tags: [authentication, mfa, sso, identity, passwordless]
-
+tags:
+  - authentication
+  - mfa
+  - sso
+  - identity
+  - passwordless
+  - auth
+  - free-plan
 official_url: https://stytch.com/
 pricing_url: https://stytch.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

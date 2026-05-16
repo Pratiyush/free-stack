@@ -4,15 +4,17 @@ category: communication
 subcategory: permanent
 brand_color: '#300D4F'
 logo: /logos/pusher-channels.svg
-
 summary: Sandbox plan (permanent)
-
 tier_type: free-plan
-
 free_tier:
   - Sandbox plan (permanent)
   - Daily message cap resets at midnight UTC; not suited for production workloads
-
+paid_tier_highlights:
+  - Sandbox free with 200K msgs/day and 100 connections (dev/test only)
+  - Startup $49/mo (1M msgs, 500 conn); Pro $99/mo (4M msgs, 2K conn)
+  - Business $299/mo and Premium $499/mo add premium support and SLAs
+  - Growth/Plus/Growth Plus scale to 90M msgs/day at $1,199/mo
+  - Enterprise tier handles 100B msgs/day with custom SLA and pricing
 pricing:
   - name: Sandbox
     price: 0
@@ -116,19 +118,13 @@ pricing:
       - Dedicated support team and account management
     cta_url: https://pusher.com/contact?origin=channels
     billing: annual
-
-paid_tier_highlights:
-  - Sandbox free with 200K msgs/day and 100 connections (dev/test only)
-  - Startup $49/mo (1M msgs, 500 conn); Pro $99/mo (4M msgs, 2K conn)
-  - Business $299/mo and Premium $499/mo add premium support and SLAs
-  - Growth/Plus/Growth Plus scale to 90M msgs/day at $1,199/mo
-  - Enterprise tier handles 100B msgs/day with custom SLA and pricing
-
-tags: []
-
+tags:
+  - communication
+  - permanent
+  - free-plan
 official_url: https://pusher.com/
 pricing_url: https://pusher.com/channels/pricing/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

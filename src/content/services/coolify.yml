@@ -4,22 +4,17 @@ category: paas
 subcategory: permanent
 brand_color: '#6B16ED'
 logo: /logos/coolify.svg
-
-summary: 'Free (open-source, self-hosted)'
-
+summary: Free (open-source, self-hosted)
 tier_type: free-plan
-
 free_tier:
-  - 'Free (open-source, self-hosted)'
-  - 'Requires your own server (e.g. $5/mo VPS), no managed free cloud'
-
+  - Free (open-source, self-hosted)
+  - Requires your own server (e.g. $5/mo VPS), no managed free cloud
 paid_tier_highlights:
   - Cloud plan from $5/mo (2 servers) + $3/mo per extra server
   - Limitless deployments per connected server
   - Email alerts and limited email support
   - Custom domain option for managed dashboard
   - Founder-tested updates on cloud
-
 pricing:
   - name: Self-hosted
     price: 0
@@ -43,12 +38,18 @@ pricing:
       - Founder-tested updates
       - Custom domain for dashboard
     billing: monthly
-
-tags: []
-
+tags:
+  - paas
+  - permanent
+  - free-plan
+  - platform
+  - open-source
+  - self-host
 official_url: https://coolify.io/
 pricing_url: https://coolify.io/pricing
-
+facets:
+  oss: true
+  self_host: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

@@ -4,27 +4,22 @@ category: dns
 subcategory: permanent
 brand_color: '#FF9900'
 logo: /logos/aws-route-53.svg
-
 summary: Pay-per-use DNS; alias queries to AWS services free; first 50 health checks free
-
 tier_type: free-plan
-
 free_tier:
   - No general free tier; pay-per-use
   - Alias queries to AWS services (ELB, CloudFront, S3, API GW) are free
   - First 50 basic AWS-endpoint health checks free
-  - 'Eligible for AWS Free Plan ($200 credit) for new accounts'
-
+  - Eligible for AWS Free Plan ($200 credit) for new accounts
 paid_tier_highlights:
-  - 'Hosted zones $0.50/mo (first 25), $0.10/mo each thereafter'
-  - 'Standard queries $0.40 per million, halved over 1B/month'
-  - 'Latency/Geo/IP-based routing add $0.20-$0.40 per million'
-  - 'Health checks $0.50-$0.75/mo + $1-$2/mo per optional feature'
-  - 'Resolver endpoints $0.125 per ENI-hour + per-query charges'
-
+  - Hosted zones $0.50/mo (first 25), $0.10/mo each thereafter
+  - Standard queries $0.40 per million, halved over 1B/month
+  - Latency/Geo/IP-based routing add $0.20-$0.40 per million
+  - Health checks $0.50-$0.75/mo + $1-$2/mo per optional feature
+  - Resolver endpoints $0.125 per ENI-hour + per-query charges
 pricing:
   - name: Hosted Zones
-    price: 0.50
+    price: 0.5
     unit: /zone/month (first 25)
     billing: usage-based
     description: DNS hosted zones billed per month
@@ -35,7 +30,7 @@ pricing:
       - Free alias records to AWS services
     cta_url: https://console.aws.amazon.com/route53/
   - name: Standard DNS Queries
-    price: 0.40
+    price: 0.4
     unit: /million queries
     billing: usage-based
     description: Standard query routing
@@ -45,7 +40,7 @@ pricing:
       - Free for alias queries to AWS services
     cta_url: https://aws.amazon.com/route53/pricing/
   - name: Latency-Based Routing
-    price: 0.60
+    price: 0.6
     unit: /million queries
     billing: usage-based
     description: Latency-based query routing
@@ -55,7 +50,7 @@ pricing:
       - Routes users to lowest-latency region
     cta_url: https://aws.amazon.com/route53/pricing/
   - name: Geo / Geoproximity Routing
-    price: 0.70
+    price: 0.7
     unit: /million queries
     billing: usage-based
     description: Geolocation/geoproximity routing
@@ -65,7 +60,7 @@ pricing:
       - Continent, country, or subdivision routing
     cta_url: https://aws.amazon.com/route53/pricing/
   - name: Health Checks
-    price: 0.50
+    price: 0.5
     unit: /check/month (AWS endpoints)
     billing: usage-based
     description: Endpoint monitoring with optional features
@@ -87,12 +82,14 @@ pricing:
       - $0.20/M recursive queries (over 1B/mo)
       - Inbound and outbound endpoints
     cta_url: https://aws.amazon.com/route53/pricing/
-
-tags: []
-
+tags:
+  - dns
+  - permanent
+  - free-plan
+  - api
 official_url: https://aws.amazon.com/route53/
 pricing_url: https://aws.amazon.com/route53/pricing/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

@@ -3,15 +3,16 @@ slug: smtp2go
 category: email
 brand_color: '#888888'
 logo: /logos/smtp2go.svg
-
 summary: Free forever
-
 tier_type: free-plan
-
 free_tier:
   - Free forever
   - Hourly limit removed after domain verification
-
+paid_tier_highlights:
+  - Starter ($10/mo) jumps to 10K emails and full support
+  - Professional ($75/mo) adds dedicated IP and 100K emails
+  - Professional unlocks unlimited API keys and testing tools
+  - Premier supports 3M+ emails with priority support
 pricing:
   - name: Free
     price: 0
@@ -62,18 +63,12 @@ pricing:
       - Custom setup and assistance
       - Email testing tools
     cta_url: https://www.smtp2go.com/pricing/
-
-paid_tier_highlights:
-  - Starter ($10/mo) jumps to 10K emails and full support
-  - Professional ($75/mo) adds dedicated IP and 100K emails
-  - Professional unlocks unlimited API keys and testing tools
-  - Premier supports 3M+ emails with priority support
-
-tags: []
-
+tags:
+  - email
+  - free-plan
 official_url: https://www.smtp2go.com/
 pricing_url: https://www.smtp2go.com/pricing/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

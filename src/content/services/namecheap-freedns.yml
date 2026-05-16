@@ -3,18 +3,19 @@ slug: namecheap-freedns
 category: dns
 brand_color: '#DE3723'
 logo: /logos/namecheap-freedns.svg
-
 summary: Free DNS hosting with full record types, dynamic DNS, and email forwarding included regardless of registrar.
-
 tier_type: always-free
-
 free_tier:
   - A/AAAA/CNAME/NS/MX/TXT/SRV records
   - Dynamic DNS support
   - Email forwarding
   - URL forwarding
   - Works with any registrar
-
+paid_tier_highlights:
+  - FreeDNS itself remains free; paid offering is domain registration
+  - Domain registration starts at $0.98/year for select TLDs
+  - Free WhoisGuard privacy included with registered domains
+  - Premium DNS upgrade adds DDoS protection and SLA
 pricing:
   - name: FreeDNS
     price: 0
@@ -39,18 +40,16 @@ pricing:
       - Free email forwarding
       - DNSSEC supported
     cta_url: https://www.namecheap.com/domains/
-
-paid_tier_highlights:
-  - FreeDNS itself remains free; paid offering is domain registration
-  - Domain registration starts at $0.98/year for select TLDs
-  - Free WhoisGuard privacy included with registered domains
-  - Premium DNS upgrade adds DDoS protection and SLA
-
-tags: [dns, domain, email-forwarding, url-forwarding, registrar]
-
+tags:
+  - dns
+  - domain
+  - email-forwarding
+  - url-forwarding
+  - registrar
+  - always-free
 official_url: https://www.namecheap.com/
 pricing_url: https://www.namecheap.com/domains/freedns/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

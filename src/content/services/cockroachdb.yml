@@ -4,22 +4,17 @@ category: databases
 subcategory: permanent
 brand_color: '#6933FF'
 logo: /logos/cockroachdb.svg
-
-summary: 'Free monthly allowance (Postgres-compatible)'
-
+summary: Free monthly allowance (Postgres-compatible)
 tier_type: always-free
-
 free_tier:
-  - 'Free monthly allowance (Postgres-compatible)'
+  - Free monthly allowance (Postgres-compatible)
   - Clusters throttled after credits expire without payment method
-
 paid_tier_highlights:
   - Basic adds usage above 50M RUs / 10 GiB at metered rates
   - Standard provisioned compute from $0.18/hr per 2 vCPUs
   - Advanced unlocks Azure, 99.999% SLA, PCI/HIPAA controls
   - CMEK, private connectivity, and DataDog export at Advanced
   - All tiers Postgres-compatible with multi-region support
-
 pricing:
   - name: Basic
     price: 0
@@ -33,7 +28,7 @@ pricing:
       - Vector data integrated with transactional data
     billing: usage-based
   - name: Standard
-    price: '$0.18/hr per 2 vCPUs'
+    price: $0.18/hr per 2 vCPUs
     unit: per vCPU-hour
     description: Steady workloads at scale, up to 200 vCPUs
     features:
@@ -44,7 +39,7 @@ pricing:
       - 99.99% availability
     billing: usage-based
   - name: Advanced
-    price: '$0.60/hr per 4 vCPUs'
+    price: $0.60/hr per 4 vCPUs
     unit: per vCPU-hour
     description: High-scale apps with advanced security and compliance
     features:
@@ -54,12 +49,14 @@ pricing:
       - CMEK and PCI/HIPAA compliance controls
       - Private connectivity and DataDog export
     billing: usage-based
-
-tags: []
-
+tags:
+  - databases
+  - permanent
+  - always-free
+  - database
 official_url: https://www.cockroachlabs.com/
 pricing_url: https://www.cockroachlabs.com/pricing/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

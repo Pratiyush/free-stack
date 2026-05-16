@@ -4,22 +4,17 @@ category: code-quality
 subcategory: permanent
 brand_color: '#888888'
 logo: /logos/deepsource.svg
-
 summary: 'Free: 1 private repo, 3 team members, 500 analysis runs/mo, 50 Autofix runs/mo; unlimited public repos'
-
 tier_type: free-plan
-
 free_tier:
   - 'Free: 1 private repo, 3 team members, 500 analysis runs/mo, 50 Autofix runs/mo; unlimited public repos'
   - 500 analysis runs/mo on free tier
-
 paid_tier_highlights:
   - Team at $24/user/mo (yearly) unlocks unlimited private repos
   - $100/yr AI Review credit per user on Team
   - Unlimited Autofix and code formatting on Team
   - Monorepo support, API/Webhooks, priority support
   - Enterprise adds self-hosted, BYOK AI, SSO, IP restrictions
-
 pricing:
   - name: Open Source
     price: 0
@@ -55,12 +50,15 @@ pricing:
       - Dedicated account manager with SLA
       - Migration assistance, manual invoicing
     billing: annual
-
-tags: []
-
+tags:
+  - code-quality
+  - permanent
+  - free-plan
+  - ci-cd
 official_url: https://deepsource.com/
 pricing_url: https://deepsource.com/pricing
-
+facets:
+  team_seats: 3
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

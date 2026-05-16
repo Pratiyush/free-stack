@@ -3,14 +3,14 @@ slug: goatcounter
 category: analytics
 brand_color: '#9A1F1F'
 logo: /logos/goatcounter.svg
-
 summary: Free (personal use)
-
 tier_type: free-plan
-
 free_tier:
   - Free (personal use)
-
+paid_tier_highlights:
+  - This service is always-free; no paid tiers exist
+  - High-volume users (millions of pageviews) are asked to self-host
+  - Optional GitHub Sponsors donations support server costs
 pricing:
   - name: Free
     price: 0
@@ -37,17 +37,12 @@ pricing:
       - Same privacy-preserving design
       - Drop-in JavaScript integration
       - SQLite or PostgreSQL backend
-
-paid_tier_highlights:
-  - This service is always-free; no paid tiers exist
-  - High-volume users (millions of pageviews) are asked to self-host
-  - Optional GitHub Sponsors donations support server costs
-
-tags: []
-
+tags:
+  - analytics
+  - free-plan
 official_url: https://www.goatcounter.com/
 pricing_url: https://www.goatcounter.com/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

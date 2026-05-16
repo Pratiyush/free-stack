@@ -4,25 +4,22 @@ category: payments
 subcategory: permanent
 brand_color: '#FFC233'
 logo: /logos/lemonsqueezy.svg
-
-summary: 'No monthly fee, Merchant of Record'
-
+summary: No monthly fee, Merchant of Record
 tier_type: free-plan
-
 free_tier:
-  - 'No monthly fee, Merchant of Record'
+  - No monthly fee, Merchant of Record
   - '+1.5% for international (non-US) transactions, MoR model means LemonSqueezy handles all tax filing, 2026: integrating Stripe Managed Payments for improved infrastructure'
-
 pricing:
   - name: Free
     price: 0
     unit: /month
-
-tags: []
-
+tags:
+  - payments
+  - permanent
+  - free-plan
 official_url: https://www.lemonsqueezy.com/
 pricing_url: https://www.lemonsqueezy.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

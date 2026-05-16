@@ -4,22 +4,17 @@ category: dev-tools
 subcategory: permanent
 brand_color: '#000000'
 logo: /logos/cursor.svg
-
 summary: Hobby plan (free)
-
 tier_type: free-plan
-
 free_tier:
   - Hobby plan (free)
   - Completions reset monthly
-
 paid_tier_highlights:
   - Pro at $20/mo includes $20 API usage and Bugbot/Cloud Agents
   - Pro Plus at $60/mo includes $70 API usage for daily agent users
   - Ultra at $200/mo includes $400 API usage for power users
   - Teams at $40/user/mo adds SSO, admin dashboard, central billing
   - Enterprise unlocks SCIM, pooled usage, invoice billing
-
 pricing:
   - name: Hobby
     price: 0
@@ -83,12 +78,13 @@ pricing:
       - SCIM provisioning
       - Advanced security controls
     billing: annual
-
-tags: []
-
+tags:
+  - dev-tools
+  - permanent
+  - free-plan
 official_url: https://cursor.com/
 pricing_url: https://cursor.com/docs/models-and-pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

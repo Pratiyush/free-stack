@@ -1,6 +1,7 @@
 ---
 import '~/styles/global.css';
 import { ClientRouter } from 'astro:transitions';
+import SponsorMeter from '~/components/ui/SponsorMeter.astro';
 
 interface Props {
   title: string;
@@ -14,13 +15,18 @@ const {
   title,
   description = '300 verified free tiers for developers across 27 categories. No ads, no affiliate links.',
   canonical = Astro.url.href,
-  ogImage = '/favicon.svg', // TODO Sprint 5: generate 1200x630 PNG OG cards per-service
+  ogImage = '/og/default.png',
   ogType = 'website',
 } = Astro.props;
 
 const fullTitle = title === 'free-stack' ? title : `${title} — free-stack`;
 const siteUrl = 'https://freestack.is-a.dev';
 const absoluteOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
+
+// 5.12 Opt-in Cloudflare Web Analytics. No cookies, no PII. Set the token in
+// the deploy environment as PUBLIC_CF_ANALYTICS_TOKEN to enable. Local dev and
+// non-production builds skip the beacon entirely.
+const cfAnalyticsToken = import.meta.env.PUBLIC_CF_ANALYTICS_TOKEN;
 ---
 
 <!doctype html>
@@ -56,14 +62,40 @@ const absoluteOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogIm
       href="/rss.xml"
     />
 
+    {/* Mobile chrome theme color matches the paper-warm background. */}
+    <meta name="theme-color" content="#fdfaf2" />
+    <meta name="color-scheme" content="light" />
+
     {
-      /* Preconnect to font origin + preload critical body font.
-        Inter Tight is the most-used; Fraunces + JBM can load progressively. */
+      /* Story 5.1c — preload the two LCP fonts so the browser starts fetching
+        during HTML parse, not after CSS resolves. Italic loads progressively. */
     }
-    <link rel="preconnect" href="https://freestack.is-a.dev" crossorigin />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/fonts/fraunces-latin-wght-normal.woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/fonts/inter-tight-latin-wght-normal.woff2"
+      crossorigin
+    />
 
     <meta name="generator" content={Astro.generator} />
     <ClientRouter />
+    {
+      cfAnalyticsToken && (
+        <script
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon={`{"token": "${cfAnalyticsToken}"}`}
+        />
+      )
+    }
     <slot name="head" />
   </head>
   <body>
@@ -98,7 +130,7 @@ const absoluteOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogIm
             </p>
           </div>
           <nav aria-label="Footer">
-            <a href="/sponsors">Sponsors</a>
+            <SponsorMeter variant="footer" />
             <a href="/methodology">Methodology</a>
             <a href="/legal">Legal</a>
             <a href="/changelog">Changelog</a>

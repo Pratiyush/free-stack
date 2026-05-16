@@ -3,25 +3,20 @@ slug: deno-deploy
 category: hosting
 brand_color: '#000000'
 logo: /logos/deno-deploy.svg
-
 summary: Edge computing platform for Deno with 1M requests/mo, 100 GB egress, and commercial use allowed at no cost.
-
 tier_type: always-free
-
 free_tier:
   - 1M requests/mo
   - 100 GB egress/mo
   - 1 GiB KV storage
   - Commercial use allowed
   - Hard caps on requests and egress
-
 paid_tier_highlights:
   - Pro at $20/mo lifts to 5M requests, 200GB egress, 5GB KV
   - Builder at $200/mo for Subhosting (20M req, 100K deployments)
   - Overage pricing $2/M requests, $0.50/GB egress on Pro
   - Enterprise tier offers custom allocations and 99.95% SLA
   - All tiers include KV reads/writes and edge runtime
-
 pricing:
   - name: Free
     price: 0
@@ -68,12 +63,18 @@ pricing:
       - 99.95% reliability SLA
       - Dedicated support and security review
     billing: annual
-
-tags: [edge-computing, serverless, deno, javascript, typescript]
-
+tags:
+  - edge-computing
+  - serverless
+  - deno
+  - javascript
+  - typescript
+  - hosting
+  - always-free
 official_url: https://deno.com/deploy
 pricing_url: https://deno.com/deploy/pricing
-
-date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+facets:
+  bandwidth_gb_month: 100
+date_added: '2026-05-15'
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

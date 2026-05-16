@@ -4,15 +4,16 @@ category: mobile
 subcategory: permanent
 brand_color: '#F2545B'
 logo: /logos/revenuecat.svg
-
 summary: Free under $2.5K MTR
-
 tier_type: free-plan
-
 free_tier:
   - Free under $2.5K MTR
-  - 'Free until $2,500/mo tracked revenue (gross, before store cut); then 1% of MTR'
-
+  - Free until $2,500/mo tracked revenue (gross, before store cut); then 1% of MTR
+paid_tier_highlights:
+  - Pro tier free under $2,500 MTR; 1% of tracked revenue beyond
+  - Growth Tools charged at 1% of MTR on conversions only
+  - Enterprise adds volume discounts and dedicated support
+  - All tiers include paywall editor and A/B testing
 pricing:
   - name: Pro
     price: 0
@@ -50,18 +51,13 @@ pricing:
       - Custom SLAs
       - Custom integrations
     cta_url: https://www.revenuecat.com/pricing/
-
-paid_tier_highlights:
-  - Pro tier free under $2,500 MTR; 1% of tracked revenue beyond
-  - Growth Tools charged at 1% of MTR on conversions only
-  - Enterprise adds volume discounts and dedicated support
-  - All tiers include paywall editor and A/B testing
-
-tags: []
-
+tags:
+  - mobile
+  - permanent
+  - free-plan
 official_url: https://www.revenuecat.com/
 pricing_url: https://www.revenuecat.com/pricing/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

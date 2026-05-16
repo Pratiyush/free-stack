@@ -4,24 +4,19 @@ category: auth
 subcategory: permanent
 brand_color: '#888888'
 logo: /logos/descope.svg
-
 summary: Free Forever plan
-
 tier_type: free-plan
-
 free_tier:
   - Free Forever plan
   - 7,500 MAUs, 10 monthly active tenants
   - 3 SSO connections and 1 federated OIDC app
   - All authentication methods, RBAC and MFA included
-
 paid_tier_highlights:
   - Pro from $249/mo (annual) raises MAUs to 10K and 99.99% SLA
   - Growth from $799/mo includes SCIM, bot protection, 25K MAUs
   - HIPAA BAA and multi-region data residency on Growth
   - Enterprise unlocks unlimited MAUs, tenants, SAML/OIDC apps
   - Dedicated customer success engineer on Enterprise
-
 pricing:
   - name: Free Forever
     price: 0
@@ -70,12 +65,14 @@ pricing:
       - Custom deployments
       - Unlimited test and anonymous users
     billing: annual
-
-tags: []
-
+tags:
+  - auth
+  - permanent
+  - free-plan
+  - identity
 official_url: https://www.descope.com/
 pricing_url: https://www.descope.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

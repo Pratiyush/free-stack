@@ -4,15 +4,17 @@ category: iaas
 subcategory: permanent
 brand_color: '#C74634'
 logo: /logos/oracle-cloud-always-free.svg
-
 summary: Permanent free tier (most generous)
-
 tier_type: free-plan
-
 free_tier:
   - Permanent free tier (most generous)
   - ARM instances may face capacity constraints in popular regions due to high demand
-
+paid_tier_highlights:
+  - Always Free is permanent and stacks with PAYG accounts
+  - ARM Ampere A1 may face capacity constraints in popular regions
+  - 30-day trial adds $300 in credits to explore paid services
+  - PAYG unlocks unlimited compute, storage, and global regions
+  - Oracle claims 50%+ price advantage vs AWS/Azure/GCP
 pricing:
   - name: Always Free
     price: 0
@@ -50,19 +52,15 @@ pricing:
       - Universal Credits commitment options
       - Enterprise support tiers
     cta_url: https://www.oracle.com/cloud/sign-in.html
-
-paid_tier_highlights:
-  - Always Free is permanent and stacks with PAYG accounts
-  - ARM Ampere A1 may face capacity constraints in popular regions
-  - 30-day trial adds $300 in credits to explore paid services
-  - PAYG unlocks unlimited compute, storage, and global regions
-  - Oracle claims 50%+ price advantage vs AWS/Azure/GCP
-
-tags: []
-
+tags:
+  - iaas
+  - permanent
+  - free-plan
+  - cloud
+  - infrastructure
 official_url: https://www.oracle.com/
 pricing_url: https://www.oracle.com/cloud/free/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

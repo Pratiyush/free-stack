@@ -4,15 +4,16 @@ category: design
 subcategory: permanent
 brand_color: '#0055FF'
 logo: /logos/framer.svg
-
 summary: Framer — free tier; see the pricing page for details.
-
 tier_type: free-plan
-
 free_tier:
   - Free plan
-  - 'Framer subdomain only (no custom domain), "Made in Framer" badge, 100 MB/mo bandwidth, 1,000 visitors/mo, non-commercial use only'
-
+  - Framer subdomain only (no custom domain), "Made in Framer" badge, 100 MB/mo bandwidth, 1,000 visitors/mo, non-commercial use only
+paid_tier_highlights:
+  - Basic at $10/site/mo unlocks custom domain and 10 GB bandwidth
+  - Pro at $30/site/mo adds staging, RBAC, relational CMS
+  - Scale at $100/site/mo enables events, funnels, priority support
+  - Enterprise offers custom limits and dedicated support
 pricing:
   - name: Free
     price: 0
@@ -73,18 +74,13 @@ pricing:
       - Dedicated support
       - SLA available
       - SSO
-
-paid_tier_highlights:
-  - Basic at $10/site/mo unlocks custom domain and 10 GB bandwidth
-  - Pro at $30/site/mo adds staging, RBAC, relational CMS
-  - Scale at $100/site/mo enables events, funnels, priority support
-  - Enterprise offers custom limits and dedicated support
-
-tags: []
-
+tags:
+  - design
+  - permanent
+  - free-plan
 official_url: https://www.framer.com/
 pricing_url: https://www.framer.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

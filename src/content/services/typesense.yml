@@ -3,18 +3,20 @@ slug: typesense
 category: search
 brand_color: '#DA4167'
 logo: /logos/typesense.svg
-
 summary: Typo-tolerant search with a one-time 720-hour free trial (30 days continuous), no credit card required.
-
 tier_type: free-plan
-
 free_tier:
   - 720 hours cluster time (lifetime)
   - 10 GB bandwidth (lifetime)
   - One-time non-recurring allowance
   - No credit card required
   - ~30 days continuous use
-
+paid_tier_highlights:
+  - Configurable dedicated clusters with no record or operation limits
+  - GPU acceleration and high-availability add-ons
+  - Search Delivery Network (SDN) option for global edge replication
+  - Algolia migration program with free consulting for $1k+/mo spenders
+  - Free critical production support included on cloud clusters
 pricing:
   - name: Free trial
     price: 0
@@ -50,21 +52,18 @@ pricing:
       - Docker images & binaries
       - No vendor limits
     cta_url: https://typesense.org/downloads/
-
-paid_tier_highlights:
-  - Configurable dedicated clusters with no record or operation limits
-  - GPU acceleration and high-availability add-ons
-  - Search Delivery Network (SDN) option for global edge replication
-  - Algolia migration program with free consulting for $1k+/mo spenders
-  - Free critical production support included on cloud clusters
-
-tags: [search, typo-tolerance, full-text-search, api, open-source]
-
+tags:
+  - search
+  - typo-tolerance
+  - full-text-search
+  - api
+  - open-source
+  - free-plan
 official_url: https://typesense.org/
 pricing_url: https://cloud.typesense.org/pricing
-
-maintainer_notes: 'Pricing page is a configurator (no fixed tiers). 720-hour trial confirmed at signup. Dedicated cluster cost depends on RAM/vCPU/HA selection.'
-
+facets:
+  bandwidth_gb_month: 10
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'
+maintainer_notes: Pricing page is a configurator (no fixed tiers). 720-hour trial confirmed at signup. Dedicated cluster cost depends on RAM/vCPU/HA selection.

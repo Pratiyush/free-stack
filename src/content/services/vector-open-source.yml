@@ -1,18 +1,16 @@
-name: 'Vector (open-source)'
+name: Vector (open-source)
 slug: vector-open-source
 category: logs
 subcategory: permanent
 brand_color: '#10E7DC'
 logo: /logos/vector-open-source.svg
-
-summary: 'Fully free (open-source, Apache 2.0)'
-
+summary: Fully free (open-source, Apache 2.0)
 tier_type: free-plan
-
 free_tier:
-  - 'Fully free (open-source, Apache 2.0)'
-  - 'Self-hosted; no vendor limits. Written in Rust, very low resource usage vs Logstash/Fluentd'
-
+  - Fully free (open-source, Apache 2.0)
+  - Self-hosted; no vendor limits. Written in Rust, very low resource usage vs Logstash/Fluentd
+paid_tier_highlights:
+  - This service is always-free; no paid tiers exist
 pricing:
   - name: Free (open source)
     price: 0
@@ -25,15 +23,19 @@ pricing:
       - 300+ contributors
       - No vendor limits
     cta_url: https://vector.dev/docs/setup/installation/
-
-paid_tier_highlights:
-  - This service is always-free; no paid tiers exist
-
-tags: []
-
+tags:
+  - logs
+  - permanent
+  - free-plan
+  - logging
+  - observability
+  - open-source
+  - self-host
 official_url: https://vector.dev/
 pricing_url: https://vector.dev/
-
+facets:
+  oss: true
+  self_host: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

@@ -3,15 +3,17 @@ slug: loops
 category: email
 brand_color: '#1E90FF'
 logo: /logos/loops.svg
-
 summary: Free forever
-
 tier_type: free-plan
-
 free_tier:
   - Free forever
   - Not published
-
+paid_tier_highlights:
+  - Paid tier scales pricing with audience size beyond 1,000 contacts
+  - Removes "Powered by Loops" footer branding on paid plans
+  - Custom plans available via direct email contact
+  - All features included even on the free tier
+  - 4,000 sends and 1,000 contacts on the free plan
 pricing:
   - name: Early Stage (Free)
     price: 0
@@ -47,19 +49,12 @@ pricing:
       - Custom contracts available
       - Dedicated success contact
     cta_url: https://loops.so/pricing
-
-paid_tier_highlights:
-  - Paid tier scales pricing with audience size beyond 1,000 contacts
-  - Removes "Powered by Loops" footer branding on paid plans
-  - Custom plans available via direct email contact
-  - All features included even on the free tier
-  - 4,000 sends and 1,000 contacts on the free plan
-
-tags: []
-
+tags:
+  - email
+  - free-plan
 official_url: https://loops.so/
 pricing_url: https://loops.so/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

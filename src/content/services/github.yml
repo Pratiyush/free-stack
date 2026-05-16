@@ -4,15 +4,16 @@ category: dev-tools
 subcategory: permanent
 brand_color: '#181717'
 logo: /logos/github.svg
-
 summary: '**GitHub** — free tier; see the pricing page for details.'
-
 tier_type: free-plan
-
 free_tier:
   - Free plan
-  - '5,000 API requests/hr (authenticated)'
-
+  - 5,000 API requests/hr (authenticated)
+paid_tier_highlights:
+  - Team at $4/user/mo expands CI/CD and packages quota, adds reviewers
+  - Enterprise at $21/user/mo includes SAML SSO and compliance certifications
+  - Both paid tiers add Codespaces and advanced auditing
+  - Public repos remain unlimited and free on every tier
 pricing:
   - name: Free
     price: 0
@@ -53,18 +54,14 @@ pricing:
       - Enterprise Managed Users
       - Premium support 30-min SLA
       - SOC 2 / FedRAMP compliance
-
-paid_tier_highlights:
-  - Team at $4/user/mo expands CI/CD and packages quota, adds reviewers
-  - Enterprise at $21/user/mo includes SAML SSO and compliance certifications
-  - Both paid tiers add Codespaces and advanced auditing
-  - Public repos remain unlimited and free on every tier
-
-tags: []
-
+tags:
+  - dev-tools
+  - permanent
+  - free-plan
+  - api
 official_url: https://github.com/
 pricing_url: https://github.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

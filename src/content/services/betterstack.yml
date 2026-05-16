@@ -3,24 +3,19 @@ slug: betterstack
 category: analytics
 brand_color: '#000000'
 logo: /logos/betterstack.svg
-
 summary: BetterStack — free tier; see the pricing page for details.
-
 tier_type: free-plan
-
 free_tier:
   - Telemetry access with Slack and email alerts
   - 10 monitors and heartbeats
   - 3-day log retention
   - Branded status page (1K subscribers)
-
 paid_tier_highlights:
   - Responder seat at $29-$34/user/mo unlocks Uptime + Telemetry
   - Telemetry log/trace/metric bundles from $30/mo (Nano) up to Tera
   - 100K error-tracking exceptions and 5K session replays included paid
   - 90-day retention on error tracking and session replay
   - 'Enterprise add-ons: SSO, audit logs, white-label status pages'
-
 pricing:
   - name: Team Member (Free)
     description: Telemetry-only seat with alerting basics
@@ -61,19 +56,19 @@ pricing:
       - 90-day retention
   - name: Enterprise
     description: SSO, audit logs, white-label, custom SLAs
-    price: 'Contact sales'
+    price: Contact sales
     billing: annual
     features:
       - SSO via Azure/Okta
       - Audit logs
       - White-label status pages
       - SLA/SLI/MTTR reporting
-
-tags: []
-
+tags:
+  - analytics
+  - free-plan
 official_url: https://betterstack.com/
 pricing_url: https://betterstack.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

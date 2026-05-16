@@ -4,25 +4,20 @@ category: ai-apis
 subcategory: permanent
 brand_color: '#F38020'
 logo: /logos/cloudflare-workers-ai.svg
-
 summary: On-device AI with 10K Neurons/day free across all models, integrated with Cloudflare Workers.
-
 tier_type: always-free
-
 free_tier:
   - 10K Neurons/day
   - Resets 00:00 UTC daily
   - Many open-source models available
   - Per-model limits apply
   - Integrated with Workers
-
 paid_tier_highlights:
   - Workers Paid keeps the 10K free Neurons/day allowance
   - Overage billed at $0.011 per 1,000 Neurons
   - Full model catalog (LLMs, embeddings, image, audio)
   - Per-model pricing scales with input/output tokens
   - Usage monitoring via Cloudflare dashboard
-
 pricing:
   - name: Workers Free
     price: 0
@@ -46,12 +41,19 @@ pricing:
       - Per-model pricing varies by input/output tokens
       - Dashboard usage monitoring
     billing: usage-based
-
-tags: [ai, edge-computing, serverless, workers, on-device]
-
+tags:
+  - ai
+  - edge-computing
+  - serverless
+  - workers
+  - on-device
+  - ai-apis
+  - permanent
+  - always-free
 official_url: https://workers.cloudflare.com/
 pricing_url: https://developers.cloudflare.com/workers-ai/platform/pricing/
-
+facets:
+  oss: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

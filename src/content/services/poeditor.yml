@@ -4,17 +4,19 @@ category: translation
 subcategory: permanent
 brand_color: '#41B0EE'
 logo: /logos/poeditor.svg
-
 summary: Free plan (permanent) — up to 1,000 strings
-
 tier_type: free-plan
-
 free_tier:
   - Free plan (permanent)
-  - 'Up to 1,000 strings, unlimited projects, up to 5 contributors; no credit card required'
-  - '10-day free trial of paid features auto-enabled on first project (no credit card)'
+  - Up to 1,000 strings, unlimited projects, up to 5 contributors; no credit card required
+  - 10-day free trial of paid features auto-enabled on first project (no credit card)
   - 'OSI-licensed open-source projects: free with no limits (apply via project settings)'
-
+paid_tier_highlights:
+  - Free plan caps at 1,000 strings with unlimited projects and 5 contributors
+  - Start $20/mo for 3,000 strings; Plus $60/mo for 10,000 strings + AI translation
+  - Premium $160/mo unlocks SSO and 30,000 strings
+  - Enterprise $260/mo for 100,000 strings, custom integrations, SLAs
+  - OSI open-source projects are free with no limits (apply via project settings)
 pricing:
   - name: Free
     price: 0
@@ -77,19 +79,16 @@ pricing:
       - Custom SLAs
     cta_url: https://poeditor.com/contact/
     billing: monthly
-
-paid_tier_highlights:
-  - Free plan caps at 1,000 strings with unlimited projects and 5 contributors
-  - Start $20/mo for 3,000 strings; Plus $60/mo for 10,000 strings + AI translation
-  - Premium $160/mo unlocks SSO and 30,000 strings
-  - Enterprise $260/mo for 100,000 strings, custom integrations, SLAs
-  - OSI open-source projects are free with no limits (apply via project settings)
-
-tags: []
-
+tags:
+  - translation
+  - permanent
+  - free-plan
+  - i18n
+  - open-source
 official_url: https://poeditor.com/
 pricing_url: https://poeditor.com/pricing/
-
+facets:
+  oss: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

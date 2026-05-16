@@ -4,15 +4,16 @@ category: baas
 subcategory: permanent
 brand_color: '#DD2C00'
 logo: /logos/firebase.svg
-
 summary: Spark plan (no credit card required)
-
 tier_type: free-plan
-
 free_tier:
   - Spark plan (no credit card required)
-  - '100 simultaneous Realtime DB connections; Cloud Storage requires Blaze plan as of Feb 2026 (no-cost usage tier still applies on Blaze)'
-
+  - 100 simultaneous Realtime DB connections; Cloud Storage requires Blaze plan as of Feb 2026 (no-cost usage tier still applies on Blaze)
+paid_tier_highlights:
+  - Blaze unlocks Cloud Storage and higher service quotas
+  - Pay-as-you-go billing keeps Spark free thresholds intact
+  - New Blaze accounts can get $300 in Google Cloud credit
+  - Required for production scale across Firestore, Functions, Storage
 pricing:
   - name: Spark
     price: 0
@@ -40,18 +41,15 @@ pricing:
       - Multiple databases and buckets per project
       - Full Google Cloud integration
     cta_url: https://console.firebase.google.com/
-
-paid_tier_highlights:
-  - Blaze unlocks Cloud Storage and higher service quotas
-  - Pay-as-you-go billing keeps Spark free thresholds intact
-  - New Blaze accounts can get $300 in Google Cloud credit
-  - Required for production scale across Firestore, Functions, Storage
-
-tags: []
-
+tags:
+  - baas
+  - permanent
+  - free-plan
+  - backend-as-a-service
+  - realtime
 official_url: https://firebase.google.com/
 pricing_url: https://firebase.google.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

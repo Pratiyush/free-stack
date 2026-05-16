@@ -4,15 +4,17 @@ category: security
 subcategory: permanent
 brand_color: '#1904DA'
 logo: /logos/trivy-aqua-security.svg
-
-summary: 'Open-source (Apache 2.0)'
-
+summary: Open-source (Apache 2.0)
 tier_type: free-plan
-
 free_tier:
-  - 'Open-source (Apache 2.0)'
-  - 'Self-hosted only; Trivy Enterprise (paid) adds centralized management and compliance reporting'
-
+  - Open-source (Apache 2.0)
+  - Self-hosted only; Trivy Enterprise (paid) adds centralized management and compliance reporting
+paid_tier_highlights:
+  - Aqua Dev Security priced per code repository
+  - Aqua Cloud Security priced per workload (EC2, Fargate, Lambda)
+  - Centralized management + compliance reporting in paid tiers
+  - Dynamic Threat Analysis only in Aqua paid platform
+  - eBPF runtime threat detection in Aqua Cloud Security
 pricing:
   - name: Trivy (Open Source)
     price: 0
@@ -51,19 +53,17 @@ pricing:
       - Service identity segmentation
       - Audit trails + compliance reporting
     cta_url: https://www.aquasec.com/contact-sales/
-
-paid_tier_highlights:
-  - Aqua Dev Security priced per code repository
-  - Aqua Cloud Security priced per workload (EC2, Fargate, Lambda)
-  - Centralized management + compliance reporting in paid tiers
-  - Dynamic Threat Analysis only in Aqua paid platform
-  - eBPF runtime threat detection in Aqua Cloud Security
-
-tags: []
-
+tags:
+  - security
+  - permanent
+  - free-plan
+  - open-source
+  - self-host
 official_url: https://trivy.dev/
 pricing_url: https://trivy.dev/
-
+facets:
+  oss: true
+  self_host: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

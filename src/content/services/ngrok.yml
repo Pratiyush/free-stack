@@ -4,15 +4,17 @@ category: dev-tools
 subcategory: permanent
 brand_color: '#1F1E37'
 logo: /logos/ngrok.svg
-
 summary: '**ngrok** — free tier; see the pricing page for details.'
-
 tier_type: free-plan
-
 free_tier:
   - Free plan
   - Interstitial warning page on free plan
-
+paid_tier_highlights:
+  - Paid plans remove interstitial warning pages and add TCP/TLS
+  - Pay-as-you-go enables unlimited endpoints and team members
+  - Enterprise unlocks SSO/RBAC, custom domains, dedicated support
+  - Extended traffic inspector retention (72h vs 24h on free)
+  - HIPAA BAA and SOC 2 only on Enterprise
 pricing:
   - name: Free
     price: 0
@@ -65,19 +67,13 @@ pricing:
       - Dedicated support
       - Log exporting
     cta_url: https://ngrok.com/contact-sales
-
-paid_tier_highlights:
-  - Paid plans remove interstitial warning pages and add TCP/TLS
-  - Pay-as-you-go enables unlimited endpoints and team members
-  - Enterprise unlocks SSO/RBAC, custom domains, dedicated support
-  - Extended traffic inspector retention (72h vs 24h on free)
-  - HIPAA BAA and SOC 2 only on Enterprise
-
-tags: []
-
+tags:
+  - dev-tools
+  - permanent
+  - free-plan
 official_url: https://ngrok.com/
 pricing_url: https://ngrok.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

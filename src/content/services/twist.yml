@@ -4,15 +4,17 @@ category: collaboration
 subcategory: permanent
 brand_color: '#888888'
 logo: /logos/twist.svg
-
 summary: Twist — free tier; see the pricing page for details.
-
 tier_type: free-plan
-
 free_tier:
   - Free plan
-  - '1-month message history limit (older threads hidden), no advanced search, paid plan $5/user/mo for full history'
-
+  - 1-month message history limit (older threads hidden), no advanced search, paid plan $5/user/mo for full history
+paid_tier_highlights:
+  - Unlimited plan at EUR 6/user/month unlocks full message history
+  - Unlimited integrations and unlimited file storage on Unlimited
+  - Priority support on paid plans
+  - Enterprise tier (custom pricing) for 200+ employees
+  - All paid plans remove the 1-month history cap
 pricing:
   - name: Free
     price: 0
@@ -49,19 +51,13 @@ pricing:
       - Volume pricing
       - SLA support
     cta_url: mailto:support@twist.com
-
-paid_tier_highlights:
-  - Unlimited plan at EUR 6/user/month unlocks full message history
-  - Unlimited integrations and unlimited file storage on Unlimited
-  - Priority support on paid plans
-  - Enterprise tier (custom pricing) for 200+ employees
-  - All paid plans remove the 1-month history cap
-
-tags: []
-
+tags:
+  - collaboration
+  - permanent
+  - free-plan
 official_url: https://twist.com/
 pricing_url: https://twist.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

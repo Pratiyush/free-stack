@@ -3,18 +3,19 @@ slug: koyeb
 category: hosting
 brand_color: '#1C1F23'
 logo: /logos/koyeb.svg
-
 summary: Monthly free compute credit on the "Free 5h" instance (0.25 vCPU, 1 GB RAM, 1 GB storage); pay-per-use beyond.
-
 tier_type: free-plan
-
 free_tier:
   - Free 5h instance (5 hours/month included)
   - 0.25 vCPU, 1 GB RAM
   - 1 GB persistent storage
   - Scale-to-zero on inactivity
   - Pay-per-use after monthly free credit
-
+paid_tier_highlights:
+  - Pro at $29/mo adds $10 compute credit and team/support features
+  - Scale at $299/mo adds $100 credit, AWS regions, and 99.9% SLA
+  - Enterprise from $1,000/mo adds dedicated regions and 99.99% SLA
+  - All paid tiers include compute on top of subscription
 pricing:
   - name: Free
     description: 5 hours/month on Free 5h instance
@@ -30,7 +31,7 @@ pricing:
     cta_url: https://app.koyeb.com/auth/signup
   - name: Pay-as-you-go
     description: Small instance from $0.04/hr (~$29.76/mo always-on)
-    price: 'Usage'
+    price: Usage
     billing: usage-based
     features:
       - Compute billed per second
@@ -63,7 +64,7 @@ pricing:
       - 99.9% uptime SLA
     cta_url: https://www.koyeb.com/pricing
   - name: Enterprise
-    price: 'From 1000'
+    price: From 1000
     unit: /month
     billing: annual
     description: Private dedicated locations and enterprise security
@@ -74,18 +75,18 @@ pricing:
       - ISO27001 and SOC2 certifications
       - 99.99% uptime SLA, 24/7 support
     cta_url: https://www.koyeb.com/pricing
-
-paid_tier_highlights:
-  - Pro at $29/mo adds $10 compute credit and team/support features
-  - Scale at $299/mo adds $100 credit, AWS regions, and 99.9% SLA
-  - Enterprise from $1,000/mo adds dedicated regions and 99.99% SLA
-  - All paid tiers include compute on top of subscription
-
-tags: [serverless, deployment, paas, docker, containers]
-
+tags:
+  - serverless
+  - deployment
+  - paas
+  - docker
+  - containers
+  - hosting
+  - free-plan
 official_url: https://www.koyeb.com/
 pricing_url: https://www.koyeb.com/pricing
-
+facets:
+  storage_gb: 1
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

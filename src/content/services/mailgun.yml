@@ -3,18 +3,20 @@ slug: mailgun
 category: email
 brand_color: '#F06B66'
 logo: /logos/mailgun.svg
-
 summary: Email API with 100 emails/day (~3K/mo), 1 domain, 1-day retention, and no credit card required.
-
 tier_type: always-free
-
 free_tier:
   - 100 emails/day
   - 1 domain
   - 1-day log retention
   - No credit card required
   - Standard API limits
-
+paid_tier_highlights:
+  - Basic at $15/mo unlocks 10K emails and removes daily limit
+  - Foundation at $35/mo includes 50K emails and 1,000 domains
+  - Scale at $90/mo adds SAML SSO, dedicated IP pools, and phone support
+  - 30-day log retention on Scale tier (vs 1 day free)
+  - First month free on Foundation and Scale plans
 pricing:
   - name: Free
     price: 0
@@ -64,19 +66,16 @@ pricing:
       - 30 days log retention
       - Send time optimization
     cta_url: https://www.mailgun.com/pricing/
-
-paid_tier_highlights:
-  - Basic at $15/mo unlocks 10K emails and removes daily limit
-  - Foundation at $35/mo includes 50K emails and 1,000 domains
-  - Scale at $90/mo adds SAML SSO, dedicated IP pools, and phone support
-  - 30-day log retention on Scale tier (vs 1 day free)
-  - First month free on Foundation and Scale plans
-
-tags: [email, transactional-email, api, smtp, email-validation]
-
+tags:
+  - email
+  - transactional-email
+  - api
+  - smtp
+  - email-validation
+  - always-free
 official_url: https://www.mailgun.com/
 pricing_url: https://www.mailgun.com/pricing/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

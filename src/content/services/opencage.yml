@@ -4,15 +4,17 @@ category: maps
 subcategory: permanent
 brand_color: '#42B649'
 logo: /logos/opencage.svg
-
 summary: 'Free trial: 2,500 requests/day for testing'
-
 tier_type: free-plan
-
 free_tier:
   - 'Free trial: 2,500 requests/day for testing'
   - 1 request/sec on free trial
-
+paid_tier_highlights:
+  - No surge pricing - soft limits allow temporary overages
+  - Persistent data storage retained indefinitely
+  - IP and CORS restriction options on paid tiers
+  - Flexible scalability with no long-term contracts
+  - Priority support beyond best-effort on free
 pricing:
   - name: Free Trial
     price: 0
@@ -87,19 +89,15 @@ pricing:
       - Dedicated support
       - Custom data formats
     cta_url: https://opencagedata.com/enterprise
-
-paid_tier_highlights:
-  - No surge pricing - soft limits allow temporary overages
-  - Persistent data storage retained indefinitely
-  - IP and CORS restriction options on paid tiers
-  - Flexible scalability with no long-term contracts
-  - Priority support beyond best-effort on free
-
-tags: []
-
+tags:
+  - maps
+  - permanent
+  - free-plan
+  - geolocation
 official_url: https://opencagedata.com/
 pricing_url: https://opencagedata.com/pricing
-
+facets:
+  requests_per_day: 2500
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

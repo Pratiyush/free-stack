@@ -4,22 +4,17 @@ category: mobile
 subcategory: permanent
 brand_color: '#F45E3F'
 logo: /logos/codemagic.svg
-
 summary: Free (500 min/mo)
-
 tier_type: free-plan
-
 free_tier:
   - Free (500 min/mo)
   - Single user; no free Linux/Windows minutes; resets monthly; $0.10/min overage on Mac
-
 paid_tier_highlights:
   - Pay-as-you-go from $0.045/min (Linux) up to $0.114/min (M4)
   - Additional concurrency at $49/concurrency
   - Fixed annual plans from $3,990 with unlimited build minutes
   - Enterprise from $12,000/yr adds SLAs, SSO, dedicated servers
   - 60-day artifact storage on pay-as-you-go; 1-year on fixed
-
 pricing:
   - name: Free
     price: 0
@@ -33,7 +28,7 @@ pricing:
       - 30-day build history
     billing: free
   - name: Pay As You Go
-    price: '$0.045–$0.114/min'
+    price: $0.045–$0.114/min
     unit: per minute
     description: Flexible consumption billed monthly for actual usage
     features:
@@ -44,7 +39,7 @@ pricing:
       - 60-day build artifact storage
     billing: usage-based
   - name: Fixed Price
-    price: '$3,990–$9,000/yr'
+    price: $3,990–$9,000/yr
     unit: /year
     description: Unlimited usage and fixed costs for established teams
     features:
@@ -55,7 +50,7 @@ pricing:
       - Burstable concurrency options
     billing: annual
   - name: Enterprise
-    price: '$12,000+/yr'
+    price: $12,000+/yr
     unit: /year
     description: Tailored solutions for large organizations
     features:
@@ -65,12 +60,13 @@ pricing:
       - Custom regions and dedicated servers
       - Vendor security assessment assistance
     billing: annual
-
-tags: []
-
+tags:
+  - mobile
+  - permanent
+  - free-plan
 official_url: https://codemagic.io/
 pricing_url: https://codemagic.io/pricing/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

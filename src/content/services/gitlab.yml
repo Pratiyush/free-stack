@@ -4,15 +4,16 @@ category: dev-tools
 subcategory: permanent
 brand_color: '#FC6D26'
 logo: /logos/gitlab.svg
-
 summary: '**GitLab** — free tier; see the pricing page for details.'
-
 tier_type: free-plan
-
 free_tier:
   - Free tier
   - 10 req/sec per user
-
+paid_tier_highlights:
+  - Premium at $29/user/mo unlocks unlimited users and 10K compute mins
+  - Ultimate adds 50K compute mins plus security and supply-chain features
+  - GitLab Duo Agent Platform credits bundled at $12-24/user/mo
+  - All tiers include built-in CI/CD and container registry
 pricing:
   - name: Free
     price: 0
@@ -51,18 +52,13 @@ pricing:
       - Vulnerability management
       - Compliance and governance
       - Value stream management
-
-paid_tier_highlights:
-  - Premium at $29/user/mo unlocks unlimited users and 10K compute mins
-  - Ultimate adds 50K compute mins plus security and supply-chain features
-  - GitLab Duo Agent Platform credits bundled at $12-24/user/mo
-  - All tiers include built-in CI/CD and container registry
-
-tags: []
-
+tags:
+  - dev-tools
+  - permanent
+  - free-plan
 official_url: https://about.gitlab.com/
 pricing_url: https://about.gitlab.com/pricing/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

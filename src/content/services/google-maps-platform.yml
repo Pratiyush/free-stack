@@ -4,15 +4,16 @@ category: maps
 subcategory: permanent
 brand_color: '#4285F4'
 logo: /logos/google-maps-platform.svg
-
 summary: 'Per-SKU free thresholds: Essentials 10K/mo, Pro 5K/mo, Enterprise 1K/mo; Map Tiles 100K/mo'
-
 tier_type: free-plan
-
 free_tier:
   - 'Per-SKU free thresholds: Essentials 10K/mo, Pro 5K/mo, Enterprise 1K/mo; Map Tiles 100K/mo'
-  - 'Per-SKU rate limits apply'
-
+  - Per-SKU rate limits apply
+paid_tier_highlights:
+  - Starter from $100/mo bundles 50K calls (Dynamic Maps + Geocoding)
+  - Essentials $275/mo for 100K calls; Pro $1,200/mo for 250K calls
+  - Pro tier unlocks Address Validation Pro and Immersive Maps
+  - Per-SKU free thresholds (10K Essentials / 5K Pro / 1K Enterprise) on PAYG
 pricing:
   - name: Free (Pay-as-you-go)
     price: 0
@@ -69,18 +70,14 @@ pricing:
       - Most powerful features
       - Extensive customization
       - Dedicated account support
-
-paid_tier_highlights:
-  - Starter from $100/mo bundles 50K calls (Dynamic Maps + Geocoding)
-  - Essentials $275/mo for 100K calls; Pro $1,200/mo for 250K calls
-  - Pro tier unlocks Address Validation Pro and Immersive Maps
-  - Per-SKU free thresholds (10K Essentials / 5K Pro / 1K Enterprise) on PAYG
-
-tags: []
-
+tags:
+  - maps
+  - permanent
+  - free-plan
+  - geolocation
 official_url: https://mapsplatform.google.com/
 pricing_url: https://mapsplatform.google.com/pricing/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

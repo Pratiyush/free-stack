@@ -1,18 +1,19 @@
-name: 'Seq (self-hosted)'
+name: Seq (self-hosted)
 slug: seq-self-hosted
 category: logs
 subcategory: permanent
 brand_color: '#42AED1'
 logo: /logos/seq-self-hosted.svg
-
-summary: 'Individual license (free, single user)'
-
+summary: Individual license (free, single user)
 tier_type: free-plan
-
 free_tier:
-  - 'Individual license (free, single user)'
+  - Individual license (free, single user)
   - No ingestion rate limit; limited by your own infrastructure. No native SSL (use reverse proxy)
-
+paid_tier_highlights:
+  - Team ($790/yr) supports 10 users and 100 GB storage
+  - Standard ($2,290/yr) goes unlimited on users and storage
+  - Standard allows up to 3 server installs
+  - Datacenter ($7,990/yr) adds clustering and auditing
 pricing:
   - name: Individual
     price: 0
@@ -64,18 +65,15 @@ pricing:
       - Assisted onboarding
       - Priority email support
     cta_url: https://datalust.co/pricing
-
-paid_tier_highlights:
-  - Team ($790/yr) supports 10 users and 100 GB storage
-  - Standard ($2,290/yr) goes unlimited on users and storage
-  - Standard allows up to 3 server installs
-  - Datacenter ($7,990/yr) adds clustering and auditing
-
-tags: []
-
+tags:
+  - logs
+  - permanent
+  - free-plan
+  - logging
+  - observability
 official_url: https://datalust.co/
 pricing_url: https://datalust.co/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

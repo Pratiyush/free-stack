@@ -4,25 +4,22 @@ category: design
 subcategory: permanent
 brand_color: '#00C4CC'
 logo: /logos/canva.svg
-
 summary: Canva — free tier; see the pricing page for details.
-
 tier_type: free-plan
-
 free_tier:
   - Free plan
-  - '3 AI designs/day, 2 Magic Write prompts/project, 10 video renders/week, 5 background removals/mo, no custom fonts, no SVG/transparent PNG export, 5 MB file upload limit'
-
+  - 3 AI designs/day, 2 Magic Write prompts/project, 10 video renders/week, 5 background removals/mo, no custom fonts, no SVG/transparent PNG export, 5 MB file upload limit
 pricing:
   - name: Free
     price: 0
     unit: /month
-
-tags: []
-
+tags:
+  - design
+  - permanent
+  - free-plan
 official_url: https://www.canva.com/
 pricing_url: https://www.canva.com/pricing/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

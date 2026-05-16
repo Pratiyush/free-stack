@@ -4,15 +4,16 @@ category: payments
 subcategory: permanent
 brand_color: '#888888'
 logo: /logos/lago.svg
-
-summary: 'Free (open-source, self-hosted) / Cloud Starter $0/mo'
-
+summary: Free (open-source, self-hosted) / Cloud Starter $0/mo
 tier_type: free-plan
-
 free_tier:
-  - 'Free (open-source, self-hosted) / Cloud Starter $0/mo'
-  - 'Event-driven metering up to 15K events/sec, supports flat-rate + usage-based + tiered + volume + package pricing models, no revenue share on self-hosted'
-
+  - Free (open-source, self-hosted) / Cloud Starter $0/mo
+  - Event-driven metering up to 15K events/sec, supports flat-rate + usage-based + tiered + volume + package pricing models, no revenue share on self-hosted
+paid_tier_highlights:
+  - Business plan adds hosted Cloud and dedicated Slack support
+  - Enterprise adds 24/7 support and assigned solutions engineer
+  - Self-hosted Open Source remains AGPLv3 with full feature set
+  - Custom pricing is volume-based on metered events
 pricing:
   - name: Open Source (Self-Hosted)
     price: 0
@@ -47,18 +48,17 @@ pricing:
       - Implementation check-ins
       - Self-hosted Enterprise deployment option
     cta_url: https://www.getlago.com/contact-us
-
-paid_tier_highlights:
-  - Business plan adds hosted Cloud and dedicated Slack support
-  - Enterprise adds 24/7 support and assigned solutions engineer
-  - Self-hosted Open Source remains AGPLv3 with full feature set
-  - Custom pricing is volume-based on metered events
-
-tags: []
-
+tags:
+  - payments
+  - permanent
+  - free-plan
+  - open-source
+  - self-host
 official_url: https://getlago.com/
 pricing_url: https://getlago.com/pricing
-
+facets:
+  oss: true
+  self_host: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

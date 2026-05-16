@@ -4,15 +4,16 @@ category: mobile
 subcategory: permanent
 brand_color: '#1C2024'
 logo: /logos/expo-eas.svg
-
 summary: '**Expo (EAS)** — free tier; see the pricing page for details.'
-
 tier_type: free-plan
-
 free_tier:
   - Free plan
-  - 'Lower-priority builds on free tier; resets monthly'
-
+  - Lower-priority builds on free tier; resets monthly
+paid_tier_highlights:
+  - Starter at $19/mo adds $45 build credit and priority queue
+  - Production at $199/mo adds SSO and 50K MAU updates
+  - Enterprise scales to 1M+ MAUs with 99.9% SLA
+  - Build credit, concurrencies, and storage grow with each tier
 pricing:
   - name: Free
     price: 0
@@ -64,18 +65,13 @@ pricing:
       - 99.9% uptime SLA
       - Strategic and Slack support add-ons
     cta_url: https://expo.dev/contact
-
-paid_tier_highlights:
-  - Starter at $19/mo adds $45 build credit and priority queue
-  - Production at $199/mo adds SSO and 50K MAU updates
-  - Enterprise scales to 1M+ MAUs with 99.9% SLA
-  - Build credit, concurrencies, and storage grow with each tier
-
-tags: []
-
+tags:
+  - mobile
+  - permanent
+  - free-plan
 official_url: https://expo.dev/
 pricing_url: https://expo.dev/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

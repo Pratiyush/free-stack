@@ -4,15 +4,16 @@ category: security
 subcategory: permanent
 brand_color: '#888888'
 logo: /logos/gitguardian.svg
-
 summary: Starter (free)
-
 tier_type: free-plan
-
 free_tier:
   - Starter (free)
-  - '10K API calls/mo (rolling month); auto-trial starts if >25 devs'
-
+  - 10K API calls/mo (rolling month); auto-trial starts if >25 devs
+paid_tier_highlights:
+  - Business tier adds custom detectors, SAML SSO, secrets manager integrations
+  - Enterprise unlocks self-hosted deployment and NHI Governance
+  - Both paid tiers expand beyond 25-dev free cap
+  - Custom pricing — contact sales for quote
 pricing:
   - name: Free
     price: 0
@@ -48,18 +49,14 @@ pricing:
       - Unlimited teams, API calls, detectors
       - Dedicated support channel
       - Premium support add-on
-
-paid_tier_highlights:
-  - Business tier adds custom detectors, SAML SSO, secrets manager integrations
-  - Enterprise unlocks self-hosted deployment and NHI Governance
-  - Both paid tiers expand beyond 25-dev free cap
-  - Custom pricing — contact sales for quote
-
-tags: []
-
+tags:
+  - security
+  - permanent
+  - free-plan
+  - api
 official_url: https://www.gitguardian.com/
 pricing_url: https://www.gitguardian.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

@@ -4,25 +4,25 @@ category: translation
 subcategory: permanent
 brand_color: '#2E3340'
 logo: /logos/crowdin.svg
-
 summary: Free plan (permanent)
-
 tier_type: free-plan
-
 free_tier:
   - Free plan (permanent)
   - 'Open-source projects: apply for unlimited free plan (unlimited projects, strings, members)'
-
 pricing:
   - name: Free
     price: 0
     unit: /month
-
-tags: []
-
+tags:
+  - translation
+  - permanent
+  - free-plan
+  - i18n
+  - open-source
 official_url: https://crowdin.com/
 pricing_url: https://crowdin.com/pricing
-
+facets:
+  oss: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

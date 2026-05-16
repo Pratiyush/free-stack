@@ -4,22 +4,17 @@ category: code-quality
 subcategory: permanent
 brand_color: '#FF570A'
 logo: /logos/coderabbit.svg
-
 summary: Free for public and private repos; unlimited repos and team members
-
 tier_type: free-plan
-
 free_tier:
   - Free for public and private repos; unlimited repos and team members
-  - '200 files/hr; 4 PR reviews/hr; 3 back-to-back reviews then cooldown'
-
+  - 200 files/hr; 4 PR reviews/hr; 3 back-to-back reviews then cooldown
 paid_tier_highlights:
   - Pro at $24/user/mo (annual) adds full PR reviews and linters
   - Pro Plus at $48/user/mo unlocks custom pre-merge checks, UTG
   - Enterprise adds self-hosting, RBAC, SSO, audit logging
   - Linear and Jira integrations from Pro tier
   - 5–15 MCP connections depending on paid tier
-
 pricing:
   - name: Free
     price: 0
@@ -65,12 +60,14 @@ pricing:
       - Multi-org support and SLA support
       - Dedicated CSM, EU SaaS deployment
     billing: annual
-
-tags: []
-
+tags:
+  - code-quality
+  - permanent
+  - free-plan
+  - ci-cd
 official_url: https://www.coderabbit.ai/
 pricing_url: https://www.coderabbit.ai/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

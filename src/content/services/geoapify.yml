@@ -4,15 +4,16 @@ category: maps
 subcategory: permanent
 brand_color: '#888888'
 logo: /logos/geoapify.svg
-
-summary: '3,000 credits/day (~90K/mo)'
-
+summary: 3,000 credits/day (~90K/mo)
 tier_type: free-plan
-
 free_tier:
-  - '3,000 credits/day (~90K/mo)'
+  - 3,000 credits/day (~90K/mo)
   - Daily credit cap resets at midnight
-
+paid_tier_highlights:
+  - API 10 at $59/mo for 10K credits/day commercial use
+  - API 25 at $109/mo, API 50 at $179/mo with priority support
+  - API 100 at $299/mo and API 250 at $609/mo for high volume
+  - Custom from $860/mo for unmetered credits and dedicated servers
 pricing:
   - name: Free
     price: 0
@@ -99,18 +100,14 @@ pricing:
       - Isodistances up to 200 km
       - Dedicated endpoint
       - Dedicated servers
-
-paid_tier_highlights:
-  - API 10 at $59/mo for 10K credits/day commercial use
-  - API 25 at $109/mo, API 50 at $179/mo with priority support
-  - API 100 at $299/mo and API 250 at $609/mo for high volume
-  - Custom from $860/mo for unmetered credits and dedicated servers
-
-tags: []
-
+tags:
+  - maps
+  - permanent
+  - free-plan
+  - geolocation
 official_url: https://www.geoapify.com/
 pricing_url: https://www.geoapify.com/pricing/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

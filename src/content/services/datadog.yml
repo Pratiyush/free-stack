@@ -3,24 +3,19 @@ slug: datadog
 category: analytics
 brand_color: '#632CA6'
 logo: /logos/datadog.svg
-
 summary: Datadog — free tier; see the pricing page for details.
-
 tier_type: free-plan
-
 free_tier:
   - Free plan
   - Up to 5 hosts with 1-day metric retention
   - Core collection and visualization features
   - 1,000+ integrations on free tier
-
 paid_tier_highlights:
   - Pro at $15/host/mo (annual) adds 15-month retention
   - Pro includes unlimited users and alerting
   - Enterprise at $23/host/mo adds ML anomaly detection
   - Watchdog and Live Processes monitoring on Enterprise
   - Governance Console and SCIM on Enterprise
-
 pricing:
   - name: Free
     price: 0
@@ -57,12 +52,12 @@ pricing:
       - Watchdog automated insights
       - SCIM, multiple SAML providers
     billing: annual
-
-tags: []
-
+tags:
+  - analytics
+  - free-plan
 official_url: https://www.datadoghq.com/
 pricing_url: https://www.datadoghq.com/pricing/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

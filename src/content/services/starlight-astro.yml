@@ -4,15 +4,13 @@ category: documentation
 subcategory: permanent
 brand_color: '#888888'
 logo: /logos/starlight-astro.svg
-
-summary: 'Fully free (OSS, MIT license)'
-
+summary: Fully free (OSS, MIT license)
 tier_type: free-plan
-
 free_tier:
-  - 'Fully free (OSS, MIT license)'
+  - Fully free (OSS, MIT license)
   - 'Framework-agnostic: extend with React, Vue, Svelte, Solid. Deploy on any static host'
-
+paid_tier_highlights:
+  - This service is always-free; no paid tiers exist
 pricing:
   - name: Open Source (MIT)
     price: 0
@@ -26,15 +24,16 @@ pricing:
       - Full-text search
       - No usage limits
     cta_url: https://starlight.astro.build/
-
-paid_tier_highlights:
-  - This service is always-free; no paid tiers exist
-
-tags: []
-
+tags:
+  - documentation
+  - permanent
+  - free-plan
+  - docs
+  - open-source
 official_url: https://starlight.astro.build/
 pricing_url: https://starlight.astro.build/
-
+facets:
+  oss: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

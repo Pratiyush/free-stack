@@ -4,16 +4,18 @@ category: ai-apis
 subcategory: expiring-credits
 brand_color: '#0F6FFF'
 logo: /logos/together-ai.svg
-
-summary: '$25 free credits + 71 permanently free models — 200+ models; free models include Llama 3.1 405B, DeepSeek V3, Qwen'
-
+summary: $25 free credits + 71 permanently free models — 200+ models; free models include Llama 3.1 405B, DeepSeek V3, Qwen
 tier_type: trial-credit
-
 free_tier:
   - $25 free credits + 71 permanently free models
-  - '200+ models; free models include Llama 3.1 405B, DeepSeek V3, Qwen'
-  - '6,000 RPM, 2M TPM'
-
+  - 200+ models; free models include Llama 3.1 405B, DeepSeek V3, Qwen
+  - 6,000 RPM, 2M TPM
+paid_tier_highlights:
+  - Serverless inference at per-token rates (e.g. $0.88/1M for Llama 70B)
+  - Dedicated endpoints $6.49-$11.95/hr on H100/B200
+  - GPU clusters from $3.99/hr with reserved discounts up to 20%
+  - Fine-tuning from $0.48 per 1M training tokens
+  - Batch API offers 50% discount vs. serverless rates
 pricing:
   - name: Free Credits + Free Models
     price: 0
@@ -39,7 +41,7 @@ pricing:
       - Vision, image, audio, video, embeddings
     cta_url: https://api.together.ai/signup
   - name: Dedicated Inference
-    price: '$6.49–$11.95'
+    price: $6.49–$11.95
     unit: /hour
     description: Single-tenant GPU endpoints with guaranteed perf
     billing: usage-based
@@ -51,7 +53,7 @@ pricing:
       - Reserved capacity available
     cta_url: https://www.together.ai/contact-sales
   - name: GPU Clusters (On-Demand)
-    price: '$5.49–$9.95'
+    price: $5.49–$9.95
     unit: /hour
     description: NVIDIA HGX H100 / B200 hourly billing
     billing: usage-based
@@ -62,7 +64,7 @@ pricing:
       - Instant availability
     cta_url: https://www.together.ai/contact-sales
   - name: GPU Clusters (Reserved)
-    price: '$3.99–$9.65'
+    price: $3.99–$9.65
     unit: /hour
     description: 7-180+ day reservations; up to 20% off
     billing: annual
@@ -73,7 +75,7 @@ pricing:
       - Enterprise contact required for premium
     cta_url: https://www.together.ai/contact-sales
   - name: Fine-Tuning
-    price: '$0.48–$8.00'
+    price: $0.48–$8.00
     unit: per 1M training tokens
     description: LoRA and DPO fine-tuning; up to 100B params
     billing: usage-based
@@ -84,19 +86,16 @@ pricing:
       - Pricing on dataset tokens x epochs
       - Specialized models $3-$100 per 1M tokens
     cta_url: https://www.together.ai/products/fine-tuning
-
-paid_tier_highlights:
-  - Serverless inference at per-token rates (e.g. $0.88/1M for Llama 70B)
-  - Dedicated endpoints $6.49-$11.95/hr on H100/B200
-  - GPU clusters from $3.99/hr with reserved discounts up to 20%
-  - Fine-tuning from $0.48 per 1M training tokens
-  - Batch API offers 50% discount vs. serverless rates
-
-tags: []
-
+tags:
+  - ai-apis
+  - expiring-credits
+  - trial-credit
+  - ai
+  - api
 official_url: https://www.together.ai/
 pricing_url: https://www.together.ai/pricing
-
+facets:
+  credit_usd: 25
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

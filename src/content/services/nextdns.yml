@@ -3,18 +3,20 @@ slug: nextdns
 category: dns
 brand_color: '#0072FD'
 logo: /logos/nextdns.svg
-
 summary: Privacy-first DNS resolver with 300K queries/mo, ad blocking, tracker blocking, and parental controls included.
-
 tier_type: always-free
-
 free_tier:
   - 300K queries/month
   - Unlimited devices
   - Unlimited configurations
   - Access to all features (ad/tracker blocking, parental controls)
   - Community support
-
+paid_tier_highlights:
+  - Unlimited DNS queries vs 300K monthly cap on Free
+  - Email support access (Free is community only)
+  - Scalable Business/Education pricing models
+  - 17% annual savings with yearly commitment
+  - Pro is only €1.99/month for unlimited personal use
 pricing:
   - name: Free
     price: 0
@@ -43,7 +45,7 @@ pricing:
       - 17% off with annual (€19.90/yr)
     cta_url: https://nextdns.io/signup
   - name: Business
-    price: 19.90
+    price: 19.9
     unit: /50 employees/month
     billing: monthly
     description: For small and medium businesses
@@ -55,7 +57,7 @@ pricing:
       - Annual €199 (€199/yr per 50 employees)
     cta_url: https://nextdns.io/signup
   - name: Education
-    price: 19.90
+    price: 19.9
     unit: /250 students/month
     billing: monthly
     description: For schools and universities
@@ -65,19 +67,16 @@ pricing:
       - Email support
       - Annual pricing available
     cta_url: https://nextdns.io/signup
-
-paid_tier_highlights:
-  - Unlimited DNS queries vs 300K monthly cap on Free
-  - Email support access (Free is community only)
-  - Scalable Business/Education pricing models
-  - 17% annual savings with yearly commitment
-  - Pro is only €1.99/month for unlimited personal use
-
-tags: [dns, privacy, resolver, ad-blocking, security]
-
+tags:
+  - dns
+  - privacy
+  - resolver
+  - ad-blocking
+  - security
+  - always-free
 official_url: https://nextdns.io/
 pricing_url: https://nextdns.io/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

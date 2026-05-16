@@ -4,25 +4,20 @@ category: security
 subcategory: permanent
 brand_color: '#F38020'
 logo: /logos/cloudflare-ssl.svg
-
 summary: '**Cloudflare SSL** — free tier; see the pricing page for details.'
-
 tier_type: free-plan
-
 free_tier:
   - Free plan
-  - 'Unmetered DDoS; 5 firewall rules; community-only support'
+  - Unmetered DDoS; 5 firewall rules; community-only support
   - Universal SSL (TLS 1.3, auto-renewing)
   - Unlimited DNS queries
   - HTTP/3 and HTTP/2 support
-
 paid_tier_highlights:
   - Pro ($20/mo) adds WAF managed rulesets + image optimization
   - Business ($200/mo) supports custom SSL upload + PCI + 100% SLA
   - Enterprise has Advanced Certificate Manager + custom SLAs
   - Custom hostnames + SSL for SaaS available on Enterprise
   - 24/7 chat support on Business and above
-
 pricing:
   - name: Free
     description: Universal SSL + DDoS + DNS at no cost
@@ -61,7 +56,7 @@ pricing:
       - Bypass cache on cookie
   - name: Enterprise
     description: Premium routing, advanced WAF, custom SLA
-    price: 'Contact sales'
+    price: Contact sales
     billing: annual
     features:
       - Advanced Certificate Manager
@@ -69,12 +64,13 @@ pricing:
       - SSL for SaaS / custom hostnames
       - Advanced WAF + bot management
       - Dedicated solutions engineer
-
-tags: []
-
+tags:
+  - security
+  - permanent
+  - free-plan
 official_url: https://www.cloudflare.com/
 pricing_url: https://www.cloudflare.com/plans/free/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

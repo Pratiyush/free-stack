@@ -4,11 +4,8 @@ category: iaas
 subcategory: permanent
 brand_color: '#0078D4'
 logo: /logos/azure-always-free.svg
-
 summary: Permanent free tier (55+ services)
-
 tier_type: free-plan
-
 free_tier:
   - Permanent free tier across 55+ services
   - 'Azure Functions: 1M requests + 400K GB-sec/month'
@@ -16,16 +13,14 @@ free_tier:
   - 'App Service: 10 web, mobile, or API apps'
   - 'Azure DevOps: 5 free users, unlimited private Git'
   - 'Azure AD B2C: 50,000 MAU'
-  - 'No always-free VM; B1S is 12-month trial only'
-  - '$200 credit for first 30 days on new accounts'
-
+  - No always-free VM; B1S is 12-month trial only
+  - $200 credit for first 30 days on new accounts
 paid_tier_highlights:
-  - 'Always-Free quotas continue indefinitely; no expiration'
-  - 'Pay-as-you-go after free quotas exceeded'
-  - 'Reserved Instance discounts up to 72% on long-term commits'
-  - 'Azure Hybrid Benefit reuses on-prem Windows/SQL licenses'
-  - 'Spot VMs offer up to 90% off for interruptible workloads'
-
+  - Always-Free quotas continue indefinitely; no expiration
+  - Pay-as-you-go after free quotas exceeded
+  - Reserved Instance discounts up to 72% on long-term commits
+  - Azure Hybrid Benefit reuses on-prem Windows/SQL licenses
+  - Spot VMs offer up to 90% off for interruptible workloads
 pricing:
   - name: Always Free
     price: 0
@@ -61,12 +56,17 @@ pricing:
       - Always-Free quotas still apply
       - Azure Hybrid Benefit available
     cta_url: https://azure.microsoft.com/en-us/pricing/
-
-tags: []
-
+tags:
+  - iaas
+  - permanent
+  - free-plan
+  - cloud
+  - infrastructure
+  - api
 official_url: https://azure.microsoft.com/
 pricing_url: https://azure.microsoft.com/en-us/pricing/free-services
-
+facets:
+  storage_gb: 25
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

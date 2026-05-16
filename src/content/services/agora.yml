@@ -4,23 +4,18 @@ category: communication
 subcategory: permanent
 brand_color: '#099DFD'
 logo: /logos/agora.svg
-
-summary: '10,000 free minutes/month'
-
+summary: 10,000 free minutes/month
 tier_type: free-plan
-
 free_tier:
-  - '10,000 free minutes/month across most core products'
+  - 10,000 free minutes/month across most core products
   - Free minutes apply per account; does NOT apply to CDN live streaming or Signaling SDK
   - 'Signaling: 1M messages/month free; Chat: 500 MAU free; Conversational AI/STT: 300 min free'
-
 paid_tier_highlights:
-  - 'Voice Calling from $0.99 per 1k minutes after the 10k free monthly minutes'
-  - 'Video Calling from $3.99 per 1k minutes; Broadcast streaming from $0.59 per 1k'
-  - 'Signaling from $59/mo; Chat from $349/mo for higher MAU and message tiers'
-  - 'Conversational AI Engine $0.10/min after 300 free minutes'
-  - 'Enterprise plans add volume discounts, custom SLAs, and dedicated support'
-
+  - Voice Calling from $0.99 per 1k minutes after the 10k free monthly minutes
+  - Video Calling from $3.99 per 1k minutes; Broadcast streaming from $0.59 per 1k
+  - Signaling from $59/mo; Chat from $349/mo for higher MAU and message tiers
+  - Conversational AI Engine $0.10/min after 300 free minutes
+  - Enterprise plans add volume discounts, custom SLAs, and dedicated support
 pricing:
   - name: Free Quota
     price: 0
@@ -98,12 +93,15 @@ pricing:
       - Dedicated solution architects
       - Compliance options
     cta_url: https://www.agora.io/en/talk-to-us/
-
-tags: []
-
+tags:
+  - communication
+  - permanent
+  - free-plan
+  - realtime
 official_url: https://www.agora.io/
 pricing_url: https://www.agora.io/en/pricing/
-
+facets:
+  requests_per_month: 1000000
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

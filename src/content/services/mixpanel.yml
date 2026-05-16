@@ -3,18 +3,20 @@ slug: mixpanel
 category: analytics
 brand_color: '#7856FF'
 logo: /logos/mixpanel.svg
-
 summary: Event-based analytics with 1M events/mo on the free tier, 10K session replays, no credit card required.
-
 tier_type: always-free
-
 free_tier:
   - 1M events/month (free tier, capped)
   - 10K session replays/month
   - Unlimited reports
   - No group analytics or data export
   - Older accounts may be on legacy 20M plan
-
+paid_tier_highlights:
+  - Growth uses pay-as-you-go at $0.28 per 1K events past 1M free
+  - Growth unlocks unlimited reports and behavioral cohorts
+  - Spark AI queries available (60/mo Growth, 300/mo Enterprise)
+  - Enterprise adds HIPAA, SAML SSO, and 24/7 premium support
+  - Startup program offers first year free for qualifying companies
 pricing:
   - name: Free
     price: 0
@@ -50,19 +52,16 @@ pricing:
       - Dedicated account manager
       - 24/7 premium support
     cta_url: https://mixpanel.com/contact-us/sales/
-
-paid_tier_highlights:
-  - Growth uses pay-as-you-go at $0.28 per 1K events past 1M free
-  - Growth unlocks unlimited reports and behavioral cohorts
-  - Spark AI queries available (60/mo Growth, 300/mo Enterprise)
-  - Enterprise adds HIPAA, SAML SSO, and 24/7 premium support
-  - Startup program offers first year free for qualifying companies
-
-tags: [analytics, events, product-analytics, session-replay, cohorts]
-
+tags:
+  - analytics
+  - events
+  - product-analytics
+  - session-replay
+  - cohorts
+  - always-free
 official_url: https://mixpanel.com/
 pricing_url: https://mixpanel.com/pricing/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

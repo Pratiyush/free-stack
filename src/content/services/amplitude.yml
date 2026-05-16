@@ -3,24 +3,19 @@ slug: amplitude
 category: analytics
 brand_color: '#1A56DB'
 logo: /logos/amplitude.svg
-
 summary: Product analytics with 50K MAU free, 10M events/mo, 1K session replays, and 12-month retention.
-
 tier_type: always-free
-
 free_tier:
   - 10K MTUs and up to 2M events/month (Starter plan, 2026)
   - Out-of-the-box analytics and templates
   - Session Replay and Web Experimentation
   - Unlimited feature flags
   - AI Feedback and unlimited sources/destinations
-
 paid_tier_highlights:
-  - 'Plus from $49/mo lifts to 300K MTUs / 25M events with behavioral cohorts'
-  - 'Growth (custom) adds Feature Experimentation, causal insights, real-time syncs'
-  - 'Enterprise adds cross-product analysis, mutual exclusion groups, bandits'
-  - 'Higher tiers unlock advanced permissions, account manager, longer retention'
-
+  - Plus from $49/mo lifts to 300K MTUs / 25M events with behavioral cohorts
+  - Growth (custom) adds Feature Experimentation, causal insights, real-time syncs
+  - Enterprise adds cross-product analysis, mutual exclusion groups, bandits
+  - Higher tiers unlock advanced permissions, account manager, longer retention
 pricing:
   - name: Starter
     price: 0
@@ -71,12 +66,16 @@ pricing:
       - Multi-armed bandit experiments
       - Assigned account manager
     cta_url: https://amplitude.com/sales-contact
-
-tags: [analytics, product-analytics, events, feature-flags, session-replay]
-
+tags:
+  - analytics
+  - product-analytics
+  - events
+  - feature-flags
+  - session-replay
+  - always-free
 official_url: https://amplitude.com/
 pricing_url: https://amplitude.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

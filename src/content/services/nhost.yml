@@ -4,15 +4,17 @@ category: baas
 subcategory: permanent
 brand_color: '#0052CD'
 logo: /logos/nhost.svg
-
 summary: Starter plan (free forever)
-
 tier_type: free-plan
-
 free_tier:
   - Starter plan (free forever)
-  - '1 active project per org, pauses after 1 week of inactivity; reactivates instantly'
-
+  - 1 active project per org, pauses after 1 week of inactivity; reactivates instantly
+paid_tier_highlights:
+  - Automated daily backups and PITR on Pro+
+  - SOC 2 Type II compliance and SLAs on Team+
+  - Higher resource limits with pay-as-you-grow overages
+  - Managed Grafana metrics and alerting on Pro+
+  - Dedicated TAM and 24x7 support on Enterprise
 pricing:
   - name: Starter
     price: 0
@@ -63,19 +65,14 @@ pricing:
       - Custom infrastructure
       - 24x7x365 support
     cta_url: mailto:hello@nhost.io
-
-paid_tier_highlights:
-  - Automated daily backups and PITR on Pro+
-  - SOC 2 Type II compliance and SLAs on Team+
-  - Higher resource limits with pay-as-you-grow overages
-  - Managed Grafana metrics and alerting on Pro+
-  - Dedicated TAM and 24x7 support on Enterprise
-
-tags: []
-
+tags:
+  - baas
+  - permanent
+  - free-plan
+  - backend-as-a-service
 official_url: https://nhost.io/
 pricing_url: https://nhost.io/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

@@ -4,22 +4,17 @@ category: mobile
 subcategory: permanent
 brand_color: '#683D87'
 logo: /logos/bitrise.svg
-
 summary: Hobby plan (free)
-
 tier_type: free-plan
-
 free_tier:
   - Hobby plan (free)
-  - '90-min build timeout; 1 credit = 1 min Linux or 30 sec macOS; no credit card required'
-
+  - 90-min build timeout; 1 credit = 1 min Linux or 30 sec macOS; no credit card required
 paid_tier_highlights:
   - Starter ($89/mo annual) adds 3 concurrent builds and 10 team members
   - Pro ($200/mo annual) unlocks unlimited team and M2 Pro / Linux Large
   - Pay-As-You-Go scaling option available on Pro
   - Add-ons available — Build Cache, Release Management, CodePush
   - Enterprise tier includes dedicated CSM, custom SLA, private cloud
-
 pricing:
   - name: Hobby
     description: Build and distribute passion projects at no cost
@@ -56,7 +51,7 @@ pricing:
       - 210-minute build timeout
   - name: Enterprise
     description: Custom flexibility for advanced mobile orgs
-    price: 'Contact sales'
+    price: Contact sales
     billing: annual
     features:
       - Dedicated CSM support
@@ -64,12 +59,13 @@ pricing:
       - Dedicated/private cloud options
       - X Large machine access
       - Self-hosted AWS agent capability
-
-tags: []
-
+tags:
+  - mobile
+  - permanent
+  - free-plan
 official_url: https://bitrise.io/
 pricing_url: https://bitrise.io/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

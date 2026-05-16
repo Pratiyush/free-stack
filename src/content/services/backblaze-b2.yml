@@ -3,11 +3,8 @@ slug: backblaze-b2
 category: storage
 brand_color: '#E32636'
 logo: /logos/backblaze-b2.svg
-
 summary: Cloud storage with 10 GB free, 1 GB daily downloads, and S3-compatible API at no cost.
-
 tier_type: always-free
-
 free_tier:
   - 10 GB storage always free
   - 3x storage in free egress per month (e.g. 30 GB free if you store 10 GB)
@@ -15,14 +12,12 @@ free_tier:
   - 2,500 Class B and 2,500 Class C transactions/day
   - Class A operations free
   - S3-compatible API at no extra cost
-
 paid_tier_highlights:
   - 'Pay-as-you-go: $6.95/TB-month storage; $0.01/GB egress past 3x quota'
   - 'B2 Reserve: $19,500/year for 250 TB (~$6.50/TB-month)'
   - 'B2 Overdrive: $15/TB-month with unlimited free egress (multi-PB commit)'
-  - 'Free egress via Fastly, Cloudflare, bunny.net, CacheFly partners'
-  - 'No retrieval or API fees beyond the included quotas'
-
+  - Free egress via Fastly, Cloudflare, bunny.net, CacheFly partners
+  - No retrieval or API fees beyond the included quotas
 pricing:
   - name: Free
     price: 0
@@ -71,12 +66,19 @@ pricing:
       - Multi-petabyte commit required
       - High-throughput access
     cta_url: https://www.backblaze.com/contact-sales/b2-overdrive
-
-tags: [object-storage, s3-compatible, cloud-storage, backup, file-storage]
-
+tags:
+  - object-storage
+  - s3-compatible
+  - cloud-storage
+  - backup
+  - file-storage
+  - storage
+  - always-free
+  - api
 official_url: https://www.backblaze.com/
 pricing_url: https://www.backblaze.com/cloud-storage/pricing
-
+facets:
+  storage_gb: 10
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

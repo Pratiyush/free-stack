@@ -4,15 +4,16 @@ category: communication
 subcategory: permanent
 brand_color: '#888888'
 logo: /logos/stream.svg
-
-summary: 'Free for teams <5 members & <$10K revenue'
-
+summary: Free for teams <5 members & <$10K revenue
 tier_type: free-plan
-
 free_tier:
-  - 'Free for teams <5 members & <$10K revenue'
+  - Free for teams <5 members & <$10K revenue
   - Media transfer billed separately (~$0.12/GB); not intended for production on free tier
-
+paid_tier_highlights:
+  - Start ($399/mo annual) scales to 10K MAU + advanced moderation
+  - Elevate ($599/mo annual) adds multi-tenancy and HIPAA compliance
+  - Enterprise tier offers 99.999% SLA + dedicated servers
+  - 1M API calls included on Start; $0.09 per MAU overage
 pricing:
   - name: Build
     price: 0
@@ -61,18 +62,13 @@ pricing:
       - SAML/SSO security
       - Migration guarantee
     cta_url: https://getstream.io/contact/
-
-paid_tier_highlights:
-  - Start ($399/mo annual) scales to 10K MAU + advanced moderation
-  - Elevate ($599/mo annual) adds multi-tenancy and HIPAA compliance
-  - Enterprise tier offers 99.999% SLA + dedicated servers
-  - 1M API calls included on Start; $0.09 per MAU overage
-
-tags: []
-
+tags:
+  - communication
+  - permanent
+  - free-plan
 official_url: https://getstream.io/
 pricing_url: https://getstream.io/chat/pricing/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

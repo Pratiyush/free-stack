@@ -3,14 +3,16 @@ slug: plausible
 category: analytics
 brand_color: '#5850EC'
 logo: /logos/plausible.svg
-
 summary: No free cloud tier
-
 tier_type: free-plan
-
 free_tier:
   - No free cloud tier
-
+paid_tier_highlights:
+  - No free cloud tier; only the AGPL self-hosted Community Edition
+  - Starter $9/mo (10K pageviews, 1 site, 3 years retention)
+  - Growth $14/mo for up to 3 sites and 3 team members
+  - Business $19/mo unlocks 10 sites, 5-year retention, Stats API
+  - Enterprise adds SSO, Sites API, custom API rate limits
 pricing:
   - name: Self-hosted (Community Edition)
     price: 0
@@ -70,19 +72,12 @@ pricing:
       - Custom Stats API rate
     cta_url: https://plausible.io/contact
     billing: annual
-
-paid_tier_highlights:
-  - No free cloud tier; only the AGPL self-hosted Community Edition
-  - Starter $9/mo (10K pageviews, 1 site, 3 years retention)
-  - Growth $14/mo for up to 3 sites and 3 team members
-  - Business $19/mo unlocks 10 sites, 5-year retention, Stats API
-  - Enterprise adds SSO, Sites API, custom API rate limits
-
-tags: []
-
+tags:
+  - analytics
+  - free-plan
 official_url: https://plausible.io/
 pricing_url: https://plausible.io/#pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

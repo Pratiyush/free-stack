@@ -4,15 +4,16 @@ category: documentation
 subcategory: permanent
 brand_color: '#8CA1AF'
 logo: /logos/read-the-docs.svg
-
-summary: 'Free for open-source (community)'
-
+summary: Free for open-source (community)
 tier_type: free-plan
-
 free_tier:
-  - 'Free for open-source (community)'
-  - 'Public/open-source projects only, ad-supported (EthicalAds)'
-
+  - Free for open-source (community)
+  - Public/open-source projects only, ad-supported (EthicalAds)
+paid_tier_highlights:
+  - Basic ($50/mo) adds private docs with 2 concurrent builds
+  - Advanced ($150/mo) brings custom domains and 4 builds
+  - Pro ($250/mo) unlocks Google SSO and 15 custom domains
+  - Enterprise (from $10K/yr) adds SAML SSO and dedicated build resources
 pricing:
   - name: Community
     price: 0
@@ -73,18 +74,16 @@ pricing:
       - Support SLA
       - Tailored feature sets
     cta_url: https://about.readthedocs.com/pricing/
-
-paid_tier_highlights:
-  - Basic ($50/mo) adds private docs with 2 concurrent builds
-  - Advanced ($150/mo) brings custom domains and 4 builds
-  - Pro ($250/mo) unlocks Google SSO and 15 custom domains
-  - Enterprise (from $10K/yr) adds SAML SSO and dedicated build resources
-
-tags: []
-
+tags:
+  - documentation
+  - permanent
+  - free-plan
+  - docs
+  - open-source
 official_url: https://about.readthedocs.com/
 pricing_url: https://about.readthedocs.com/pricing/
-
+facets:
+  oss: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

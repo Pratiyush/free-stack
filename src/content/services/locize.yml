@@ -4,15 +4,17 @@ category: translation
 subcategory: permanent
 brand_color: '#888888'
 logo: /logos/locize.svg
-
 summary: Free plan (permanent)
-
 tier_type: free-plan
-
 free_tier:
   - Free plan (permanent)
   - Official i18next cloud platform; fixed pricing tiers above free (Starter/Professional/Enterprise)
-
+paid_tier_highlights:
+  - Starter at $7/mo unlocks 1M downloads and 5 languages
+  - Growth at $49/mo adds review workflow, glossary, and 10 users
+  - Professional at $99/mo includes unlimited users and SSO add-on
+  - Enterprise at $199/mo bundles audit log, SSO, and 150 languages
+  - Pay-as-you-go at $5/mo base removes all limits with usage billing
 pricing:
   - name: Free
     price: 0
@@ -110,19 +112,14 @@ pricing:
       - No user limits
       - No namespace limits
     cta_url: https://locize.com/pricing.html
-
-paid_tier_highlights:
-  - Starter at $7/mo unlocks 1M downloads and 5 languages
-  - Growth at $49/mo adds review workflow, glossary, and 10 users
-  - Professional at $99/mo includes unlimited users and SSO add-on
-  - Enterprise at $199/mo bundles audit log, SSO, and 150 languages
-  - Pay-as-you-go at $5/mo base removes all limits with usage billing
-
-tags: []
-
+tags:
+  - translation
+  - permanent
+  - free-plan
+  - i18n
 official_url: https://locize.com/
 pricing_url: https://locize.com/pricing.html
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

@@ -4,15 +4,17 @@ category: logs
 subcategory: permanent
 brand_color: '#000099'
 logo: /logos/sumo-logic.svg
-
 summary: Free forever account
-
 tier_type: free-plan
-
 free_tier:
   - Free forever account
-  - '7-day data retention, 20 credits/day for logs+metrics+traces'
-
+  - 7-day data retention, 20 credits/day for logs+metrics+traces
+paid_tier_highlights:
+  - Essentials adds AI-driven alerting + ML root-cause analysis
+  - Enterprise Suite includes cloud-native SIEM + MITRE ATT&CK
+  - Premium threat-intel feeds (CrowdStrike, Intel471) in Enterprise
+  - Flex Pricing offers unlimited ingest with scan-based costs
+  - 24/7 support with TAM included in Enterprise Suite
 pricing:
   - name: Free
     price: 0
@@ -62,19 +64,15 @@ pricing:
       - Multiple deployment regions
       - Profile-based pricing (500-2000 scans/GB)
     cta_url: https://www.sumologic.com/contact
-
-paid_tier_highlights:
-  - Essentials adds AI-driven alerting + ML root-cause analysis
-  - Enterprise Suite includes cloud-native SIEM + MITRE ATT&CK
-  - Premium threat-intel feeds (CrowdStrike, Intel471) in Enterprise
-  - Flex Pricing offers unlimited ingest with scan-based costs
-  - 24/7 support with TAM included in Enterprise Suite
-
-tags: []
-
+tags:
+  - logs
+  - permanent
+  - free-plan
+  - logging
+  - observability
 official_url: https://www.sumologic.com/
 pricing_url: https://www.sumologic.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

@@ -3,18 +3,20 @@ slug: uploadthing
 category: storage
 brand_color: '#E91515'
 logo: /logos/uploadthing.svg
-
 summary: File upload API with 2 GB free storage, unlimited uploads/downloads, and 7-day audit logs.
-
 tier_type: always-free
-
 free_tier:
   - 2 GB storage
   - Unlimited uploads and downloads
   - Shared across all apps
   - 7-day audit log
   - ~10 file upload burst limit
-
+paid_tier_highlights:
+  - 100GB App at $10/mo with multi-region and private files
+  - Usage-Based plan ($25/mo base + $0.08/GB) for high-volume apps
+  - 30-day audit log on all paid tiers
+  - Multi-region storage on both paid tiers
+  - Private file management on paid tiers
 pricing:
   - name: Free (2GB App)
     price: 0
@@ -52,19 +54,18 @@ pricing:
       - Multi-region support
       - Private file management
     cta_url: https://uploadthing.com/pricing
-
-paid_tier_highlights:
-  - 100GB App at $10/mo with multi-region and private files
-  - Usage-Based plan ($25/mo base + $0.08/GB) for high-volume apps
-  - 30-day audit log on all paid tiers
-  - Multi-region storage on both paid tiers
-  - Private file management on paid tiers
-
-tags: [file-upload, api, file-storage, serverless, typescript]
-
+tags:
+  - file-upload
+  - api
+  - file-storage
+  - serverless
+  - typescript
+  - storage
+  - always-free
 official_url: https://uploadthing.com/
 pricing_url: https://uploadthing.com/pricing
-
+facets:
+  storage_gb: 2
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

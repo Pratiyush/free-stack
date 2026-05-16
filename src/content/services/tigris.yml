@@ -4,15 +4,16 @@ category: storage
 subcategory: permanent
 brand_color: '#888888'
 logo: /logos/tigris.svg
-
-summary: '5 GB storage, zero egress fees'
-
+summary: 5 GB storage, zero egress fees
 tier_type: free-plan
-
 free_tier:
-  - '5 GB storage, zero egress fees'
-  - 'No per-request rate limit documented'
-
+  - 5 GB storage, zero egress fees
+  - No per-request rate limit documented
+paid_tier_highlights:
+  - Standard storage $0.02/GB/mo with free egress
+  - Infrequent Access $0.01/GB/mo + $0.01/GB retrieval
+  - Archive $0.004/GB/mo with 90-day minimum retention
+  - Zero egress fees across all paid tiers
 pricing:
   - name: Free Tier
     price: 0
@@ -27,7 +28,7 @@ pricing:
       - Global distribution
     cta_url: https://console.storage.dev/signup
   - name: Standard
-    price: '$0.02'
+    price: $0.02
     unit: /GB/month
     description: Primary tier; free egress, free retrieval
     billing: usage-based
@@ -39,7 +40,7 @@ pricing:
       - No minimum retention
     cta_url: https://console.storage.dev/signup
   - name: Infrequent Access
-    price: '$0.01'
+    price: $0.01
     unit: /GB/month
     description: Data accessed less than monthly
     billing: usage-based
@@ -51,7 +52,7 @@ pricing:
       - Free egress
     cta_url: https://console.storage.dev/signup
   - name: Archive
-    price: '$0.004'
+    price: $0.004
     unit: /GB/month
     description: Long-term cold storage
     billing: usage-based
@@ -62,7 +63,7 @@ pricing:
       - Zero egress fees
     cta_url: https://console.storage.dev/signup
   - name: Archive Instant Retrieval
-    price: '$0.004'
+    price: $0.004
     unit: /GB/month
     description: Archive option with immediate access
     billing: usage-based
@@ -73,18 +74,14 @@ pricing:
       - Instant data restoration
       - Free egress
     cta_url: https://console.storage.dev/signup
-
-paid_tier_highlights:
-  - Standard storage $0.02/GB/mo with free egress
-  - Infrequent Access $0.01/GB/mo + $0.01/GB retrieval
-  - Archive $0.004/GB/mo with 90-day minimum retention
-  - Zero egress fees across all paid tiers
-
-tags: []
-
+tags:
+  - storage
+  - permanent
+  - free-plan
 official_url: https://www.tigrisdata.com/
 pricing_url: https://www.tigrisdata.com/pricing/
-
+facets:
+  storage_gb: 5
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

@@ -4,15 +4,16 @@ category: dev-tools
 subcategory: permanent
 brand_color: '#FF6C37'
 logo: /logos/postman.svg
-
 summary: '**Postman** — free tier; see the pricing page for details.'
-
 tier_type: free-plan
-
 free_tier:
   - Free plan
   - 300 Postman API requests/min
-
+paid_tier_highlights:
+  - Free includes unlimited mock servers, 50 AI credits, 1K monitoring req/mo
+  - Solo $9/user/mo adds 400 AI credits and 10K monitoring req/mo (annual)
+  - Team $19/user/mo unlocks SDK generation and RBAC
+  - Enterprise $49/user/mo for API Catalog, audit logs, private runners
 pricing:
   - name: Free
     price: 0
@@ -66,18 +67,14 @@ pricing:
       - Private test and Flows runners
     cta_url: https://www.postman.com/company/contact-sales/
     billing: annual
-
-paid_tier_highlights:
-  - Free includes unlimited mock servers, 50 AI credits, 1K monitoring req/mo
-  - Solo $9/user/mo adds 400 AI credits and 10K monitoring req/mo (annual)
-  - Team $19/user/mo unlocks SDK generation and RBAC
-  - Enterprise $49/user/mo for API Catalog, audit logs, private runners
-
-tags: []
-
+tags:
+  - dev-tools
+  - permanent
+  - free-plan
+  - api
 official_url: https://www.postman.com/
 pricing_url: https://www.postman.com/pricing/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

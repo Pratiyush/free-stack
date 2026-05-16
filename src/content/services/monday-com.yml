@@ -4,15 +4,17 @@ category: collaboration
 subcategory: permanent
 brand_color: '#FF3D57'
 logo: /logos/monday-com.svg
-
 summary: Free Individual plan
-
 tier_type: free-plan
-
 free_tier:
   - Free Individual plan
-  - 'No guest access, no integrations, no automations, boards become read-only if limits exceeded'
-
+  - No guest access, no integrations, no automations, boards become read-only if limits exceeded
+paid_tier_highlights:
+  - Basic at $9/seat/mo unlocks unlimited items and 1K AI credits
+  - Standard at $12/seat/mo adds 250 automations and guest access
+  - Pro at $19/seat/mo provides 25K automations and time tracking
+  - Enterprise adds portfolio management and 24/7 support
+  - 18% annual discount on all paid tiers
 pricing:
   - name: Free
     price: 0
@@ -73,19 +75,15 @@ pricing:
       - Enterprise-grade security
       - 24/7 dedicated support
     cta_url: https://monday.com/contact-sales
-
-paid_tier_highlights:
-  - Basic at $9/seat/mo unlocks unlimited items and 1K AI credits
-  - Standard at $12/seat/mo adds 250 automations and guest access
-  - Pro at $19/seat/mo provides 25K automations and time tracking
-  - Enterprise adds portfolio management and 24/7 support
-  - 18% annual discount on all paid tiers
-
-tags: []
-
+tags:
+  - collaboration
+  - permanent
+  - free-plan
 official_url: https://monday.com/
 pricing_url: https://monday.com/pricing
-
-date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+facets: {}
+date_added: 2026-05-15T00:00:00.000Z
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'
+tos_red_flags:
+  - no automated agents

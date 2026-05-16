@@ -4,15 +4,16 @@ category: design
 subcategory: permanent
 brand_color: '#888888'
 logo: /logos/spline.svg
-
 summary: Spline — free tier; see the pricing page for details.
-
 tier_type: free-plan
-
 free_tier:
   - Free plan
-  - 'Spline logo watermark on exports, no code/mobile exports, no version history, no video imports, no asset library'
-
+  - Spline logo watermark on exports, no code/mobile exports, no version history, no video imports, no asset library
+paid_tier_highlights:
+  - Starter ($15, $12 annual) unlocks unlimited files and video upload
+  - Professional ($25, $20 annual) adds mobile and code exports
+  - Professional brings unlimited APIs/webhooks
+  - Enterprise provides SAML SSO and self-hosted exports
 pricing:
   - name: Free
     price: 0
@@ -63,18 +64,13 @@ pricing:
       - Priority support and security onboarding
       - Optional custom AI credits
     cta_url: https://spline.design/pricing
-
-paid_tier_highlights:
-  - Starter ($15, $12 annual) unlocks unlimited files and video upload
-  - Professional ($25, $20 annual) adds mobile and code exports
-  - Professional brings unlimited APIs/webhooks
-  - Enterprise provides SAML SSO and self-hosted exports
-
-tags: []
-
+tags:
+  - design
+  - permanent
+  - free-plan
 official_url: https://spline.design/
 pricing_url: https://spline.design/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

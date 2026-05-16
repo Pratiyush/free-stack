@@ -4,15 +4,13 @@ category: security
 subcategory: permanent
 brand_color: '#003A70'
 logo: /logos/let-s-encrypt.svg
-
 summary: Free forever
-
 tier_type: free-plan
-
 free_tier:
   - Free forever
   - 50 certs/registered domain/week; 300 new orders/3 hrs per account; renewals exempt from domain limit
-
+paid_tier_highlights:
+  - This service is always-free; no paid tiers exist
 pricing:
   - name: Free
     price: 0
@@ -26,15 +24,13 @@ pricing:
       - Staging environment for testing
       - HTTP-01, DNS-01, TLS-ALPN-01 validation methods
     cta_url: https://letsencrypt.org/getting-started/
-
-paid_tier_highlights:
-  - This service is always-free; no paid tiers exist
-
-tags: []
-
+tags:
+  - security
+  - permanent
+  - free-plan
 official_url: https://letsencrypt.org/
 pricing_url: https://letsencrypt.org/docs/rate-limits/
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

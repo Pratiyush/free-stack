@@ -4,21 +4,16 @@ category: code-quality
 subcategory: permanent
 brand_color: '#60A5FA'
 logo: /logos/biome.svg
-
 summary: Fully free and open source (MIT/Apache 2.0)
-
 tier_type: free-plan
-
 free_tier:
   - Fully free and open source (MIT/Apache 2.0)
-  - 'N/A -- local tool, no API'
+  - N/A -- local tool, no API
   - Optional commercial support available
-
 paid_tier_highlights:
   - Optional commercial support contracts via Biome contributors
   - No paywalled features in the toolchain itself
   - Enterprise inquiries handled through biomejs.dev/enterprise
-
 pricing:
   - name: Open Source
     description: Free, MIT/Apache 2.0 dual-licensed toolchain
@@ -33,19 +28,24 @@ pricing:
     cta_url: https://biomejs.dev/
   - name: Commercial Support
     description: Optional enterprise support from contributors
-    price: 'Contact sales'
+    price: Contact sales
     billing: annual
     features:
       - Direct support contract
       - Priority bug fixes and feature requests
       - For organizations with adoption/compliance needs
     cta_url: https://biomejs.dev/
-
-tags: []
-
+tags:
+  - code-quality
+  - permanent
+  - free-plan
+  - ci-cd
+  - open-source
+  - api
 official_url: https://github.com/
 pricing_url: https://github.com/biomejs/biome
-
+facets:
+  oss: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

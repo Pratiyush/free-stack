@@ -10,7 +10,83 @@ Maintainers: add entries under `## [Unreleased]` as PRs merge. At release time, 
 
 ## [Unreleased]
 
-Next: `v2.0.0` "Production Quality" (Sprint 5) — Lighthouse 98+ in CI, takedown policy + `/legal`, monthly verification cron, `/changelog` page, build assets attached to releases, opt-in Cloudflare Web Analytics, State of Free Tiers 2026 annual report, 2nd maintainer onboarding, Playwright pricing-drift verifier, **production cutover** to the Astro build, marketing launch.
+Next: 5-day storytelling launch sprint. Day 2 ships sponsor plumbing (`<SponsorMeter />`, `/sponsors` redesign, $100/month target). Day 3 expands the YAML schema with 10 new optional fields (signup_friction, free_tier_limits, regional_pricing, tos_red_flags, refund_policy, support_sla, compliance_certifications, inactive_account_policy, rate_limits, contract_terms) — additive, no migration. Day 4 backfills the new fields on top-20 services. Day 5 publishes the live Lighthouse audit + the sponsor pitch. v2.1 finishes 5.1b (per-service OG cards) + 5.1c (font subset).
+
+---
+
+## [2.0.0] - 2026-05-16 — Production Quality
+
+Sprint 5 ships. The site has the trust plumbing it needs to live in public: a takedown policy with a 48-hour SLA, monthly verification cron, Playwright drift verifier, WCAG AA contrast pass, full SEO essentials. The content layer gained structured `facets:` and `tags:` blocks on all 300 services. New annual report at `/state-of-free-tiers/2026`. Three pre-existing critical bugs caught and fixed (RSS, deploy branch, search wiring).
+
+### Added
+
+**Trust + legal**
+
+- `/legal` page + takedown policy (story 5.6). Removal mailto, 48-hour SLA, `removals@freestack.is-a.dev` via Cloudflare Email Routing. Footer link from every page.
+- SEO essentials (story 5.3): `og:image` + Twitter card meta on every page, BreadcrumbList JSON-LD on category + service pages, Organization + WebSite + SearchAction schema on home, `theme-color`, `color-scheme` meta.
+
+**Tooling**
+
+- `.github/workflows/monthly-verify.yml` (story 5.7) — 1st-of-month cron opens a GitHub issue listing services with `date_verified` > 60 days old. `scripts/stale-services.mjs` powers it.
+- `src/pages/changelog.astro` (story 5.7) — public `/changelog` page rendering this file with per-version anchors (`#200`, `#090`, etc.).
+- `.github/workflows/release-assets.yml` + `scripts/build-release-assets.mjs` (story 5.7) — on tag push, attaches `dist-assets/index.json` (225 KB, 300 services) + `dist-assets/services.md` (44 KB, 27-section flat Markdown) to the GitHub Release.
+- `tests/pricing-drift.spec.ts` (story 5.8) — Playwright drift verifier for ~20 JS-rendered / bot-blocked services. Weekly cron at Mondays 09:00 UTC; on failure opens a `pricing-drift`-labelled issue. `playwright.config.ts` + `scripts/identify-js-rendered-services.mjs` + `docs/playwright-verifier.md`.
+- Opt-in Cloudflare Web Analytics (story 5.12) — env-gated via `PUBLIC_CF_ANALYTICS_TOKEN`. No cookies, no PII, no JS unless the token is set. `.env.example` documents.
+
+**Process**
+
+- `.github/CODEOWNERS` (story 5.9) — routes `src/content/services/`, `src/content/categories/`, schema, docs, workflows, CLAUDE.md to `@Pratiyush`.
+- Five YAML issue forms (story 5.9): `01-submit-service.yml`, `02-pricing-change.yml`, `03-free-tier-removed.yml`, `04-suggest-category.yml`, `05-other.yml`, plus `config.yml` disabling blank issues. Replaces the 5 legacy `.md` templates.
+- `.github/release-drafter.yml` + `.github/workflows/release-drafter.yml` (story 5.9) — auto-categorises merged PRs into draft release notes by label.
+
+**Content**
+
+- `facets:` block populated on all 300 services (story 5.4). 109 services have at least one extracted facet across 10 typed keys (`storage_gb`, `bandwidth_gb_month`, `requests_per_day`, `requests_per_month`, `cc_required`, `oss`, `self_host`, `team_seats`, `credit_usd`, `api_access`). 191 services carry empty `facets: {}` — schema-valid, "not yet quantified."
+- `tags:` populated on all 300 services (story 5.5). 1,315 total tag entries, avg 4.4 per service, kebab-case, deduped. Tags derived from category + subcategory + tier_type + free_tier text + summary heuristics.
+- `src/pages/state-of-free-tiers/2026.astro` (story 5.13) — annual report, ~1,300 words across 8 roman-numeral sections (dateline, stat grid, most improved, biggest cuts, dead services, methodology, 2027 outlook, colophon). Datelined as Issue №009.
+
+**Code quality (story 5.10)**
+
+- `src/lib/schema.mjs` + `src/lib/schema.ts` — Zod schemas extracted from `src/content.config.ts` so both Node scripts (`audit-services.mjs`, `validate-services.mjs`) and Astro pages (`~/lib/schema`) share a single source of truth.
+- `src/lib/theme.ts` — `FALLBACK_BRAND_COLOR` + `PLACEHOLDER_BRAND_COLOR` exported, replacing scattered `#1a1a1a` + `#888888` literals.
+
+**Tools used to ship the catalog**
+
+- `scripts/backfill-facets-tags.mjs` (story 5.4 + 5.5) — pure-heuristic derivation from free_tier bullets + category + summary. No web fetches. Auto-protects existing values via merge. `--dry-run` flag for safe preview.
+- `scripts/visual-snap.mjs` (story 5.0d) — Playwright screenshot of 7 key pages × 2 viewports for design review.
+
+### Changed
+
+- WCAG AA contrast (story 5.2) — tokens bumped: `--color-ink-soft: #4a443e` (was `#5a5550`; 7.5:1 on paper), `--color-ink-faint: #6b6460` (was `#8a8580`; 5.5:1, was failing), `--color-coral: #b73d22` (was `#d94c2a`; 5.8:1, was failing). `--color-coral-accent: #d94c2a` kept for borders/dots only.
+- BaseLayout (story 5.2 + 5.3 + 5.6 + 5.12) — adds skip-to-main link, `:focus-visible` outline, og:image + Twitter card meta, `theme-color` + `color-scheme` meta, env-gated CF beacon, `/legal` footer link. Drops the useless same-origin `<link rel="preconnect">`.
+- `src/pages/service/[slug].astro` (story 5.3 + 5.10) — JSON-LD switched to `@graph` with SoftwareApplication + BreadcrumbList. Added `availability: https://schema.org/InStock`. Replaced `any` types with `ServiceEntry`, `PricingTier`, `Sources` from `~/lib/schema`. Switched `collectSources` from `Array.isArray(s.overrides)` to `Object.entries(s.overrides)` (latent bug fix).
+- `src/pages/category/[slug].astro` (story 5.3 + 5.11) — CollectionPage + BreadcrumbList JSON-LD. Empty state rebuilt as paper-warm dashed card matching `/catalog` style.
+- `src/pages/index.astro` (story 5.3 + 5.10) — Organization + WebSite + SearchAction JSON-LD via `@graph`. Imports brand-color constants from `~/lib/theme`. Bumped Issue № to 009.
+- `src/components/ui/ServiceTable.astro` (story 5.11) — `.hide-mobile` class on Category/Quotas/CC columns; drops `min-width` below 720px.
+- `src/pages/compare.astro` (story 5.11) — 6 quick-start chips (anthropic-claude, groq, supabase, vercel, neon, openai) visible when slugs count is 0.
+
+### Fixed
+
+- **`SearchBox` wired to Pagefind** (story 5.0c) — search input was a ghost feature; built index but never queried it. Now does what it says, debounced 80ms, with zero-state "No services match these filters" card.
+- **`deploy-pages.yml` branch reference** (story 5.0b) — was targeting non-existent `main`; corrected to `master` (canonical) + removed obsolete `categories/**` path filter.
+- **RSS audit false-positive** (story 5.0a) — auditor reported RSS truncated to 1 item; the feed is fine (50 `<item>` elements verified). Auditor was tripped by the minified one-line XML format.
+- Prettier auto-formatted 9 new files to keep CI green.
+
+### Deferred (split to v2.1)
+
+- **5.1b — Per-service OG cards** (1200×630 PNGs). Every page falls back to `favicon.svg` today. Tracked as task #72.
+- **5.1c — Self-host font subset + preload critical face**. Fontsource Variable doesn't ship per-subset; needs a one-off solution. Tracked as task #73.
+- **5.1d — Live Lighthouse audit baseline**. Measure on production domain, write `docs/lighthouse-baseline.md`. Tracked as task #74.
+
+### Deferred (upstream)
+
+- **5.14 — DNS cutover to `freestack.is-a.dev`** — upstream is-a.dev PR, not in our repo.
+
+### Stats
+
+- 339 pages built. 327 YAMLs valid (300 services + 27 categories). Pagefind indexed 339 pages. Sitemap: 336 URLs.
+- 1,315 tag entries. 109 services with extracted facets. 50 services with placeholder `brand_color: '#888888'` (logo cascade follow-up).
+- 16 Sprint-5 stories shipped. 3 deferred to v2.1. 1 deferred upstream.
 
 ---
 

@@ -4,18 +4,19 @@ category: payments
 subcategory: permanent
 brand_color: '#635BFF'
 logo: /logos/stripe.svg
-
-summary: 'No monthly fee, pay-per-transaction'
-
+summary: No monthly fee, pay-per-transaction
 tier_type: free-plan
-
 free_tier:
-  - 'No monthly fee, pay-per-transaction'
-  - '+1.5% for international cards, +1% for currency conversion, ACH debit 0.8% capped at $5, Radar fraud protection included'
-
+  - No monthly fee, pay-per-transaction
+  - +1.5% for international cards, +1% for currency conversion, ACH debit 0.8% capped at $5, Radar fraud protection included
+paid_tier_highlights:
+  - Standard Payments runs at 2.9% + $0.30 per US card charge
+  - Billing add-on at 0.7% of recurring revenue (pay-as-you-go)
+  - Radar for Fraud Teams at $0.02 per screened payment
+  - Enterprise unlocks IC+ pricing and volume discounts
 pricing:
   - name: Standard (Payments)
-    price: '2.9% + $0.30'
+    price: 2.9% + $0.30
     unit: /successful card charge
     description: Pay-per-transaction, no monthly fee
     billing: usage-based
@@ -28,7 +29,7 @@ pricing:
       - PCI compliance built-in
     cta_url: https://dashboard.stripe.com/register
   - name: Billing
-    price: '0.7%'
+    price: 0.7%
     unit: of recurring revenue (pay-as-you-go)
     description: Subscription management; $500+/yr monthly plan available
     billing: usage-based
@@ -39,7 +40,7 @@ pricing:
       - Customer portal included
     cta_url: https://stripe.com/billing
   - name: Connect
-    price: '0.25%'
+    price: 0.25%
     unit: per payout (Standard)
     description: Marketplaces & platforms (Standard, Express, Custom)
     billing: usage-based
@@ -50,7 +51,7 @@ pricing:
       - Multiparty payments
     cta_url: https://stripe.com/connect
   - name: Radar for Fraud Teams
-    price: '$0.02'
+    price: $0.02
     unit: per screened payment
     description: Advanced fraud rules and review tools
     billing: usage-based
@@ -71,18 +72,13 @@ pricing:
       - Custom SLAs
       - 24/7 priority support
     cta_url: https://stripe.com/contact/sales
-
-paid_tier_highlights:
-  - Standard Payments runs at 2.9% + $0.30 per US card charge
-  - Billing add-on at 0.7% of recurring revenue (pay-as-you-go)
-  - Radar for Fraud Teams at $0.02 per screened payment
-  - Enterprise unlocks IC+ pricing and volume discounts
-
-tags: []
-
+tags:
+  - payments
+  - permanent
+  - free-plan
 official_url: https://stripe.com/
 pricing_url: https://stripe.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

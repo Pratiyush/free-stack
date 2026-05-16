@@ -3,15 +3,17 @@ slug: mailersend
 category: email
 brand_color: '#888888'
 logo: /logos/mailersend.svg
-
 summary: Free forever
-
 tier_type: free-plan
-
 free_tier:
   - Free forever
   - Not published
-
+paid_tier_highlights:
+  - Hobby at $5.60/mo unlocks 5,000 emails and bulk sending
+  - Starter at $25/mo adds 50K emails, SMS, and logo removal
+  - Professional offers dedicated account manager and unlimited domains
+  - 10% annual discount on Hobby and Starter plans
+  - Enterprise scales further with SLAs and SSO
 pricing:
   - name: Free
     price: 0
@@ -71,19 +73,12 @@ pricing:
       - Custom SLA
       - Compliance and SSO
     cta_url: https://www.mailersend.com/contact
-
-paid_tier_highlights:
-  - Hobby at $5.60/mo unlocks 5,000 emails and bulk sending
-  - Starter at $25/mo adds 50K emails, SMS, and logo removal
-  - Professional offers dedicated account manager and unlimited domains
-  - 10% annual discount on Hobby and Starter plans
-  - Enterprise scales further with SLAs and SSO
-
-tags: []
-
+tags:
+  - email
+  - free-plan
 official_url: https://www.mailersend.com/
 pricing_url: https://www.mailersend.com/pricing
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

@@ -4,25 +4,23 @@ category: baas
 subcategory: permanent
 brand_color: '#4945FF'
 logo: /logos/strapi-cloud.svg
-
 summary: Free plan (no credit card required)
-
 tier_type: free-plan
-
 free_tier:
   - Free plan (no credit card required)
-  - 'Auto cold-start on inactivity; no overages (hard cap); personal/non-commercial use only'
-
+  - Auto cold-start on inactivity; no overages (hard cap); personal/non-commercial use only
 pricing:
   - name: Free
     price: 0
     unit: /month
-
-tags: []
-
+tags:
+  - baas
+  - permanent
+  - free-plan
+  - backend-as-a-service
 official_url: https://strapi.io/
 pricing_url: https://strapi.io/pricing-cloud
-
+facets: {}
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-01
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

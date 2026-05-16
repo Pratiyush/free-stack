@@ -4,25 +4,20 @@ category: dev-tools
 subcategory: permanent
 brand_color: '#0052CC'
 logo: /logos/bitbucket.svg
-
 summary: '**Bitbucket** — free tier; see the pricing page for details.'
-
 tier_type: free-plan
-
 free_tier:
   - Free plan
   - 'API: 1,000 req/hr'
   - Up to 5 users
   - Unlimited public and private repos
   - 50 Pipelines build minutes/mo
-
 paid_tier_highlights:
   - Standard ($3.65/user/mo) raises team caps and unlocks LFS/Pipelines
   - Premium ($7.25/user/mo) adds merge checks, IP allowlist, SOC controls
   - Smart mirroring and granular admin auditing on Premium
   - Shared build minutes/storage across the workspace
   - 24/7 premium support on paid tiers
-
 pricing:
   - name: Free
     description: Free forever for up to 5 users
@@ -61,12 +56,15 @@ pricing:
       - Smart mirroring
       - Granular admin auditing
     cta_url: https://www.atlassian.com/try/cloud/signup?bundle=bitbucket&edition=premium&signupSource=pricing
-
-tags: []
-
+tags:
+  - dev-tools
+  - permanent
+  - free-plan
+  - api
 official_url: https://www.atlassian.com/
 pricing_url: https://www.atlassian.com/software/bitbucket/pricing
-
+facets:
+  team_seats: 5
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

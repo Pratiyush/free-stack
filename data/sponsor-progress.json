@@ -1,0 +1,8 @@
+{
+  "month": "2026-05",
+  "raised_usd": 0,
+  "target_usd": 100,
+  "sponsors": [],
+  "last_updated": "2026-05-16",
+  "notes": "Hand-edited until v2.1 ships a live GitHub Sponsors API integration. Update raised_usd after pulling the GitHub Sponsors + Buy Me a Coffee dashboards (1st of each month)."
+}

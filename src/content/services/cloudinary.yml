@@ -3,25 +3,20 @@ slug: cloudinary
 category: storage
 brand_color: '#3448C5'
 logo: /logos/cloudinary.svg
-
 summary: Image and video transformation with 25 credits/mo (~25 GB bandwidth), 20K transforms/mo, and 10 GB storage.
-
 tier_type: free-plan
-
 free_tier:
   - 25 credits/mo
   - 20K transformations/mo
   - 10 GB storage
   - 20 GB bandwidth
   - 300K total assets
-
 paid_tier_highlights:
   - Plus ($99/mo) raises to 225 credits/mo and adds S3 backup
   - Advanced ($249/mo) adds custom domain, HTTPS, 600 credits
   - Enterprise unlocks multi-CDN, SSO, dedicated CSM
   - DAM product tier shares storage with media APIs
   - Annual billing reduces price ($89/mo on Plus)
-
 pricing:
   - name: Free
     price: 0
@@ -68,12 +63,19 @@ pricing:
       - Custom contracts and invoicing
       - SSO and provisioning API
     billing: annual
-
-tags: [image-transformation, video-transformation, cdn, file-storage, api]
-
+tags:
+  - image-transformation
+  - video-transformation
+  - cdn
+  - file-storage
+  - api
+  - storage
+  - free-plan
 official_url: https://cloudinary.com/
 pricing_url: https://cloudinary.com/pricing
-
+facets:
+  storage_gb: 10
+  bandwidth_gb_month: 20
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'

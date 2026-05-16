@@ -4,14 +4,16 @@ category: auth
 subcategory: permanent
 brand_color: '#592878'
 logo: /logos/ory-kratos.svg
-
 summary: 'Free (self-hosted: unlimited; cloud: free developer plan)'
-
 tier_type: free-plan
-
 free_tier:
   - 'Free (self-hosted: unlimited; cloud: free developer plan)'
-
+paid_tier_highlights:
+  - Production environments only on paid tiers (Free has 0 prod)
+  - Advanced analytics and historical data on Growth+
+  - B2B SSO, SAML, SCIM unlocked on paid plans
+  - Volume discounts on DAUs, M2M tokens, permission checks
+  - Premium support with response SLAs on paid tiers
 pricing:
   - name: Developer
     price: 0
@@ -74,19 +76,16 @@ pricing:
       - Community support
       - Self-managed deployment
     cta_url: https://github.com/ory/kratos
-
-paid_tier_highlights:
-  - Production environments only on paid tiers (Free has 0 prod)
-  - Advanced analytics and historical data on Growth+
-  - B2B SSO, SAML, SCIM unlocked on paid plans
-  - Volume discounts on DAUs, M2M tokens, permission checks
-  - Premium support with response SLAs on paid tiers
-
-tags: []
-
+tags:
+  - auth
+  - permanent
+  - free-plan
+  - identity
+  - self-host
 official_url: https://www.ory.com/
 pricing_url: https://www.ory.com/pricing
-
+facets:
+  self_host: true
 date_added: 2026-05-15
-date_updated: '2026-05-15'
-date_verified: 2026-05-15
+date_updated: '2026-05-16'
+date_verified: '2026-05-16'
