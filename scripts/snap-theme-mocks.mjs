@@ -13,6 +13,8 @@ const MOCKS = [
   { slug: '03-terminal', label: 'Terminal' },
   { slug: '04-dashboard', label: 'Dashboard SaaS' },
   { slug: '05-clean-white', label: 'Clean white' },
+  { slug: '06-saas-polished', label: 'SaaS polished' },
+  { slug: '07-magazine-editorial', label: 'Magazine editorial' },
 ];
 
 const MOCK_DIR = path.resolve('local/theme-mocks');

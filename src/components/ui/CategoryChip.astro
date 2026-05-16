@@ -42,9 +42,12 @@ const url = href ?? `/category/${slug}`;
       border-color 0.15s ease,
       background 0.15s ease;
   }
-  a.category-chip:hover {
+  a.category-chip:hover,
+  a.category-chip:focus-visible {
     border-color: var(--color-ink);
     background: var(--color-paper-deep);
+    outline: 2px solid var(--color-coral);
+    outline-offset: 2px;
   }
   .size-sm {
     font-size: 0.78rem;

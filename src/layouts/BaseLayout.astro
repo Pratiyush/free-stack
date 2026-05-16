@@ -2,6 +2,7 @@
 import '~/styles/global.css';
 import { ClientRouter } from 'astro:transitions';
 import SponsorMeter from '~/components/ui/SponsorMeter.astro';
+import { u } from '~/lib/url';
 
 interface Props {
   title: string;
@@ -14,19 +15,22 @@ interface Props {
 const {
   title,
   description = '300 verified free tiers for developers across 27 categories. No ads, no affiliate links.',
-  canonical = Astro.url.href,
+  canonical: canonicalProp,
   ogImage = '/og/default.png',
   ogType = 'website',
 } = Astro.props;
 
 const fullTitle = title === 'opentier' ? title : `${title} — opentier`;
 const siteUrl = 'https://opentier.dev';
-// v3.0.0 — use Astro's base URL prefix for static assets and internal links so
-// the site works at both the GH Pages subpath (/opentier/) and the future
-// custom-domain apex (/). `base` ends with no trailing slash.
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-const u = (p: string) => `${base}${p.startsWith('/') ? '' : '/'}${p}`;
-const absoluteOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${u(ogImage)}`;
+
+// v3.0 review F2+F3 — canonical and absoluteOgImage point at the APEX domain
+// without the Pages base prefix. Astro.url.href includes the base (`/opentier/...`),
+// so strip it; we want consumers (search engines, social cards) to discover the
+// final opentier.dev URL, not the temporary GH Pages subpath.
+const baseStripped = (import.meta.env.BASE_URL ?? '/').replace(/\/$/, '');
+const pathForCanonical = (Astro.url.pathname || '/').replace(baseStripped, '') || '/';
+const canonical = canonicalProp ?? `${siteUrl}${pathForCanonical}`;
+const absoluteOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
 
 // 5.12 Opt-in Cloudflare Web Analytics. No cookies, no PII. Set the token in
 // the deploy environment as PUBLIC_CF_ANALYTICS_TOKEN to enable. Local dev and
@@ -39,6 +43,19 @@ const cfAnalyticsToken = import.meta.env.PUBLIC_CF_ANALYTICS_TOKEN;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    {
+      /* v3.0 review F5 — minimal CSP. Allows self + the CF Web Analytics beacon
+        (env-gated; if PUBLIC_CF_ANALYTICS_TOKEN unset, the script doesn't render).
+        Inline styles + inline scripts allowed because Astro inlines critical CSS
+        and JSON-LD blocks. img-src allows the per-service OG cards. data: for
+        favicon. Tightens supply-chain trust without breaking the build. */
+    }
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://opentier.dev; font-src 'self'; connect-src 'self' https://cloudflareinsights.com; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+    />
+
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
@@ -252,8 +269,12 @@ const cfAnalyticsToken = import.meta.env.PUBLIC_CF_ANALYTICS_TOKEN;
         color: var(--color-ink-soft);
         transition: color 0.15s ease;
       }
-      .site-nav a:hover {
+      .site-nav a:hover,
+      .site-nav a:focus-visible {
         color: var(--color-ink);
+        outline: 2px solid var(--color-coral);
+        outline-offset: 4px;
+        border-radius: 2px;
       }
       main {
         min-height: 60vh;
@@ -283,8 +304,12 @@ const cfAnalyticsToken = import.meta.env.PUBLIC_CF_ANALYTICS_TOKEN;
         color: var(--color-ink-soft);
         text-decoration: none;
       }
-      .site-footer nav a:hover {
+      .site-footer nav a:hover,
+      .site-footer nav a:focus-visible {
         color: var(--color-ink);
+        outline: 2px solid var(--color-coral);
+        outline-offset: 3px;
+        border-radius: 2px;
       }
       .footer-fineprint,
       .footer-credit {

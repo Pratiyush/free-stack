@@ -140,8 +140,12 @@ const monthLabel = new Date(`${progress.month}-01`).toLocaleDateString('en-US', 
     border-bottom: 1px dashed transparent;
     transition: border-color 0.15s ease;
   }
-  .meter-footer:hover {
+  .meter-footer:hover,
+  .meter-footer:focus-visible {
     color: var(--color-coral);
     border-bottom-color: var(--color-coral);
+    outline: 2px solid var(--color-coral);
+    outline-offset: 3px;
+    border-radius: 2px;
   }
 </style>
