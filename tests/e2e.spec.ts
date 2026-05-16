@@ -114,6 +114,21 @@ test.describe('opentier — happy path', () => {
     await expect(page.locator('body')).toContainText('Supabase');
   });
 
+  test('compare picker — live filtering as user types', async ({ page }) => {
+    // v3.0 critical-finding #5 confirmed working — the picker live-filters
+    // the 300-service catalog as you type. Locks behavior with a regression test.
+    await page.goto(`${BASE}/compare`);
+    await page.fill('[data-picker-input]', 'supa');
+    await page.waitForTimeout(200);
+    const results = page.locator('[data-picker-results] [data-add]');
+    expect(await results.count()).toBeGreaterThan(0);
+    await expect(results.first()).toHaveAttribute('data-add', 'supabase');
+
+    // Click first result → URL gets the slug
+    await results.first().click();
+    await expect(page).toHaveURL(/slugs=supabase/);
+  });
+
   test('sponsors page — meter + ledger + tiers + honesty clause', async ({ page }) => {
     await page.goto(`${BASE}/sponsors`);
 
