@@ -13,6 +13,10 @@ export default defineConfig({
   timeout: 30_000,
   retries: 1,
   fullyParallel: false,
+  // v3.0 — single worker so we don't hammer external pricing-page hosts.
+  // Combined with no-serial in the spec, this means: tests run sequentially
+  // but each is independent — one failure doesn't cascade-skip the rest.
+  workers: 1,
   reporter: [['list'], ['html', { open: 'never' }]],
   use: {
     headless: true,

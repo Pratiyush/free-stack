@@ -1,0 +1,8062 @@
+{
+  "generated_at": "2026-05-16T16:54:39.625Z",
+  "threshold": 0.5,
+  "total": 300,
+  "candidates": 22,
+  "passed": 208,
+  "skipped": 70,
+  "slugs": [
+    "aws-s3",
+    "canva",
+    "cockroachdb",
+    "codemagic",
+    "cohere",
+    "coherence",
+    "cronitor",
+    "deepseek",
+    "focalboard",
+    "google-gemini-api",
+    "google-gemini",
+    "hashicorp-vault",
+    "height",
+    "hetzner",
+    "huly",
+    "jira",
+    "meta-llama-api",
+    "namecheap-freedns",
+    "nominatim-openstreetmap",
+    "paradedb",
+    "paypal",
+    "together-ai"
+  ],
+  "results": [
+    {
+      "file": "src/content/services/1password.yml",
+      "slug": "1password",
+      "name": "**1Password**",
+      "pricing_url": "https://1password.com/pricing",
+      "http_status": 200,
+      "total_prices": 5,
+      "matched_prices": 5,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free (Open Source)",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Individual",
+          "price": 2.99,
+          "matched": true,
+          "hit": "2.99"
+        },
+        {
+          "name": "Families",
+          "price": 4.99,
+          "matched": true,
+          "hit": "4.99"
+        },
+        {
+          "name": "Teams Starter Pack",
+          "price": 19.95,
+          "matched": true,
+          "hit": "19.95"
+        },
+        {
+          "name": "Business",
+          "price": 7.99,
+          "matched": true,
+          "hit": "7.99"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/ably.yml",
+      "slug": "ably",
+      "name": "Ably",
+      "pricing_url": "https://ably.com/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Standard",
+          "price": 29,
+          "matched": true,
+          "hit": "29"
+        },
+        {
+          "name": "Pro",
+          "price": 399,
+          "matched": true,
+          "hit": "399"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/agora.yml",
+      "slug": "agora",
+      "name": "Agora",
+      "pricing_url": "https://www.agora.io/en/pricing/",
+      "http_status": 200,
+      "total_prices": 6,
+      "matched_prices": 6,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free Quota",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Voice Calling",
+          "price": 0.99,
+          "matched": true,
+          "hit": "0.99"
+        },
+        {
+          "name": "Video Calling",
+          "price": 3.99,
+          "matched": true,
+          "hit": "3.99"
+        },
+        {
+          "name": "Interactive Live Streaming",
+          "price": 0.99,
+          "matched": true,
+          "hit": "0.99"
+        },
+        {
+          "name": "Signaling",
+          "price": 59,
+          "matched": true,
+          "hit": "59"
+        },
+        {
+          "name": "Chat",
+          "price": 349,
+          "matched": true,
+          "hit": "349"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/aiven.yml",
+      "slug": "aiven",
+      "name": "Aiven",
+      "pricing_url": "https://aiven.io/pricing",
+      "http_status": 200,
+      "total_prices": 5,
+      "matched_prices": 5,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Developer (Kafka)",
+          "price": 35,
+          "matched": true,
+          "hit": "35"
+        },
+        {
+          "name": "Startup",
+          "price": 200,
+          "matched": true,
+          "hit": "200"
+        },
+        {
+          "name": "Business",
+          "price": 500,
+          "matched": true,
+          "hit": "500"
+        },
+        {
+          "name": "Premium",
+          "price": 1900,
+          "matched": true,
+          "hit": "1900"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/algolia.yml",
+      "slug": "algolia",
+      "name": "Algolia",
+      "pricing_url": "https://www.algolia.com/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Build",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Grow",
+          "price": 0.5,
+          "matched": true,
+          "hit": "0.5"
+        },
+        {
+          "name": "Grow Plus",
+          "price": 1.75,
+          "matched": true,
+          "hit": "1.75"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/amazon-ses.yml",
+      "slug": "amazon-ses",
+      "name": "Amazon SES",
+      "pricing_url": "https://aws.amazon.com/ses/pricing/",
+      "http_status": 200,
+      "total_prices": 6,
+      "matched_prices": 6,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free Tier",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Outbound Email",
+          "price": 0.1,
+          "matched": true,
+          "hit": "0.1"
+        },
+        {
+          "name": "Inbound Email",
+          "price": 0.1,
+          "matched": true,
+          "hit": "0.1"
+        },
+        {
+          "name": "Dedicated IP",
+          "price": 24.95,
+          "matched": true,
+          "hit": "24.95"
+        },
+        {
+          "name": "Virtual Deliverability Manager",
+          "price": 0.07,
+          "matched": true,
+          "hit": "0.07"
+        },
+        {
+          "name": "Mail Manager",
+          "price": 50,
+          "matched": true,
+          "hit": "50"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/amplitude.yml",
+      "slug": "amplitude",
+      "name": "Amplitude",
+      "pricing_url": "https://amplitude.com/pricing",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Starter",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Plus",
+          "price": 49,
+          "matched": true,
+          "hit": "49"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/anthropic-claude.yml",
+      "slug": "anthropic-claude",
+      "name": "Anthropic (Claude)",
+      "pricing_url": "https://claude.com/pricing",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 4,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pro",
+          "price": 17,
+          "matched": true,
+          "hit": "17"
+        },
+        {
+          "name": "Max",
+          "price": 100,
+          "matched": true,
+          "hit": "100"
+        },
+        {
+          "name": "Team",
+          "price": 20,
+          "matched": true,
+          "hit": "20"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/appflowy.yml",
+      "slug": "appflowy",
+      "name": "AppFlowy",
+      "pricing_url": "https://appflowy.com/pricing",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 4,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pro",
+          "price": 10,
+          "matched": true,
+          "hit": "10"
+        },
+        {
+          "name": "AI MAX",
+          "price": 8,
+          "matched": true,
+          "hit": "8"
+        },
+        {
+          "name": "Vault Workspace",
+          "price": 6,
+          "matched": true,
+          "hit": "6"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/appwrite.yml",
+      "slug": "appwrite",
+      "name": "**Appwrite**",
+      "pricing_url": "https://appwrite.io/pricing",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pro",
+          "price": 25,
+          "matched": true,
+          "hit": "25"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/argos-ci.yml",
+      "slug": "argos-ci",
+      "name": "Argos CI",
+      "pricing_url": "https://argos-ci.com/pricing",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Hobby",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pro",
+          "price": 100,
+          "matched": true,
+          "hit": "100"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/asana.yml",
+      "slug": "asana",
+      "name": "Asana",
+      "pricing_url": "https://asana.com/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Personal",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Starter",
+          "price": 10.99,
+          "matched": true,
+          "hit": "10.99"
+        },
+        {
+          "name": "Advanced",
+          "price": 24.99,
+          "matched": true,
+          "hit": "24.99"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/auth0.yml",
+      "slug": "auth0",
+      "name": "Auth0",
+      "pricing_url": "https://auth0.com/pricing",
+      "http_status": 200,
+      "total_prices": 5,
+      "matched_prices": 5,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "B2C Essentials",
+          "price": 35,
+          "matched": true,
+          "hit": "35"
+        },
+        {
+          "name": "B2C Professional",
+          "price": 240,
+          "matched": true,
+          "hit": "240"
+        },
+        {
+          "name": "B2B Essentials",
+          "price": 150,
+          "matched": true,
+          "hit": "150"
+        },
+        {
+          "name": "B2B Professional",
+          "price": 800,
+          "matched": true,
+          "hit": "800"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/aws-always-free.yml",
+      "slug": "aws-always-free",
+      "name": "AWS Always Free",
+      "pricing_url": "https://aws.amazon.com/free/",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Always Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Free Plan (6 months)",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/aws-ecr-public.yml",
+      "slug": "aws-ecr-public",
+      "name": "AWS ECR Public",
+      "pricing_url": "https://aws.amazon.com/ecr/pricing/",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Public Registry Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Private Registry (Free Tier)",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Private Registry (Pay-as-you-go)",
+          "price": 0.1,
+          "matched": true,
+          "hit": "0.1"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/aws-free-plan-new-accounts-post-july-2025.yml",
+      "slug": "aws-free-plan-new-accounts-post-july-2025",
+      "name": "AWS Free Plan (new accounts, post-July 2025)",
+      "pricing_url": "https://aws.amazon.com/free/",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/aws-route-53.yml",
+      "slug": "aws-route-53",
+      "name": "**AWS Route 53**",
+      "pricing_url": "https://aws.amazon.com/route53/pricing/",
+      "http_status": 200,
+      "total_prices": 6,
+      "matched_prices": 6,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Hosted Zones",
+          "price": 0.5,
+          "matched": true,
+          "hit": "0.5"
+        },
+        {
+          "name": "Standard DNS Queries",
+          "price": 0.4,
+          "matched": true,
+          "hit": "0.4"
+        },
+        {
+          "name": "Latency-Based Routing",
+          "price": 0.6,
+          "matched": true,
+          "hit": "0.6"
+        },
+        {
+          "name": "Geo / Geoproximity Routing",
+          "price": 0.7,
+          "matched": true,
+          "hit": "0.7"
+        },
+        {
+          "name": "Health Checks",
+          "price": 0.5,
+          "matched": true,
+          "hit": "0.5"
+        },
+        {
+          "name": "Resolver",
+          "price": 0.125,
+          "matched": true,
+          "hit": "0.125"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/aws-s3.yml",
+      "slug": "aws-s3",
+      "name": "AWS S3",
+      "pricing_url": "https://aws.amazon.com/s3/pricing/",
+      "http_status": 200,
+      "total_prices": 6,
+      "matched_prices": 2,
+      "match_ratio": 0.33,
+      "candidate": true,
+      "details": [
+        {
+          "name": "Free Tier (12 months)",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "S3 Standard",
+          "price": 0.023,
+          "matched": false
+        },
+        {
+          "name": "S3 Intelligent-Tiering",
+          "price": 0.023,
+          "matched": false
+        },
+        {
+          "name": "S3 Standard-IA",
+          "price": 0.0125,
+          "matched": false
+        },
+        {
+          "name": "S3 Glacier Instant Retrieval",
+          "price": 0.004,
+          "matched": true,
+          "hit": "0.004"
+        },
+        {
+          "name": "S3 Glacier Deep Archive",
+          "price": 0.00099,
+          "matched": false
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/axiom.yml",
+      "slug": "axiom",
+      "name": "Axiom",
+      "pricing_url": "https://axiom.co/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Personal",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Axiom Cloud",
+          "price": 25,
+          "matched": true,
+          "hit": "25"
+        },
+        {
+          "name": "Enterprise Add-ons",
+          "price": 50,
+          "matched": true,
+          "hit": "50"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/azure-12-month-free.yml",
+      "slug": "azure-12-month-free",
+      "name": "Azure 12-Month Free",
+      "pricing_url": "https://azure.microsoft.com/en-us/pricing/free-services",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "12-Month Free Services",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Always-Free Services",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/azure-always-free.yml",
+      "slug": "azure-always-free",
+      "name": "Azure Always Free",
+      "pricing_url": "https://azure.microsoft.com/en-us/pricing/free-services",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Always Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Free Account ($200 credit)",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/back4app-containers.yml",
+      "slug": "back4app-containers",
+      "name": "**Back4App Containers**",
+      "pricing_url": "https://www.back4app.com/pricing/container-as-a-service",
+      "http_status": 200,
+      "total_prices": 7,
+      "matched_prices": 7,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Shared",
+          "price": 5,
+          "matched": true,
+          "hit": "5"
+        },
+        {
+          "name": "Shared 2",
+          "price": 15,
+          "matched": true,
+          "hit": "15"
+        },
+        {
+          "name": "Shared 3",
+          "price": 25,
+          "matched": true,
+          "hit": "25"
+        },
+        {
+          "name": "Dedicated",
+          "price": 50,
+          "matched": true,
+          "hit": "50"
+        },
+        {
+          "name": "Dedicated 2",
+          "price": 100,
+          "matched": true,
+          "hit": "100"
+        },
+        {
+          "name": "Dedicated 3",
+          "price": 200,
+          "matched": true,
+          "hit": "200"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/back4app.yml",
+      "slug": "back4app",
+      "name": "**Back4App**",
+      "pricing_url": "https://www.back4app.com/pricing/backend-as-a-service",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 4,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "MVP",
+          "price": 15,
+          "matched": true,
+          "hit": "15"
+        },
+        {
+          "name": "Pay-As-You-Go",
+          "price": 80,
+          "matched": true,
+          "hit": "80"
+        },
+        {
+          "name": "Dedicated",
+          "price": 400,
+          "matched": true,
+          "hit": "400"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/backblaze-b2.yml",
+      "slug": "backblaze-b2",
+      "name": "Backblaze B2",
+      "pricing_url": "https://www.backblaze.com/cloud-storage/pricing",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 3,
+      "match_ratio": 0.75,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pay-As-You-Go",
+          "price": 6.95,
+          "matched": true,
+          "hit": "6.95"
+        },
+        {
+          "name": "B2 Reserve",
+          "price": 19500,
+          "matched": false
+        },
+        {
+          "name": "B2 Overdrive",
+          "price": 15,
+          "matched": true,
+          "hit": "15"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/backendless.yml",
+      "slug": "backendless",
+      "name": "**Backendless**",
+      "pricing_url": "https://backendless.com/pricing/",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 4,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Cloud Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Cloud Scale",
+          "price": 15,
+          "matched": true,
+          "hit": "15"
+        },
+        {
+          "name": "Function Packs",
+          "price": 5,
+          "matched": true,
+          "hit": "5"
+        },
+        {
+          "name": "Backendless Pro (self-host)",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/basecamp.yml",
+      "slug": "basecamp",
+      "name": "Basecamp",
+      "pricing_url": "https://basecamp.com/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Plus",
+          "price": 15,
+          "matched": true,
+          "hit": "15"
+        },
+        {
+          "name": "Pro Unlimited",
+          "price": 299,
+          "matched": true,
+          "hit": "299"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/better-stack-logtail.yml",
+      "slug": "better-stack-logtail",
+      "name": "Better Stack (Logtail)",
+      "pricing_url": "https://betterstack.com/pricing",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 4,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Team Member (Free)",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Responder",
+          "price": 29,
+          "matched": true,
+          "hit": "29"
+        },
+        {
+          "name": "Telemetry Nano",
+          "price": 30,
+          "matched": true,
+          "hit": "30"
+        },
+        {
+          "name": "Telemetry Mega",
+          "price": 250,
+          "matched": true,
+          "hit": "250"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/betterstack.yml",
+      "slug": "betterstack",
+      "name": "BetterStack",
+      "pricing_url": "https://betterstack.com/pricing",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 4,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Team Member (Free)",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Responder",
+          "price": 29,
+          "matched": true,
+          "hit": "29"
+        },
+        {
+          "name": "Telemetry Nano",
+          "price": 30,
+          "matched": true,
+          "hit": "30"
+        },
+        {
+          "name": "Telemetry Mega",
+          "price": 250,
+          "matched": true,
+          "hit": "250"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/biome.yml",
+      "slug": "biome",
+      "name": "Biome",
+      "pricing_url": "https://github.com/biomejs/biome",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/bitbucket.yml",
+      "slug": "bitbucket",
+      "name": "**Bitbucket**",
+      "pricing_url": "https://www.atlassian.com/software/bitbucket/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Standard",
+          "price": 3.65,
+          "matched": true,
+          "hit": "3.65"
+        },
+        {
+          "name": "Premium",
+          "price": 7.25,
+          "matched": true,
+          "hit": "7.25"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/bitrise.yml",
+      "slug": "bitrise",
+      "name": "**Bitrise**",
+      "pricing_url": "https://bitrise.io/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Hobby",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Starter",
+          "price": 89,
+          "matched": true,
+          "hit": "89"
+        },
+        {
+          "name": "Pro",
+          "price": 200,
+          "matched": true,
+          "hit": "200"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/brevo-sendinblue.yml",
+      "slug": "brevo-sendinblue",
+      "name": "Brevo (Sendinblue)",
+      "pricing_url": "https://www.brevo.com/pricing/",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/brevo.yml",
+      "slug": "brevo",
+      "name": "Brevo",
+      "pricing_url": "https://www.brevo.com/pricing/",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Starter",
+          "price": 9,
+          "matched": true,
+          "hit": "9"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/browserstack.yml",
+      "slug": "browserstack",
+      "name": "BrowserStack",
+      "pricing_url": "https://www.browserstack.com/pricing",
+      "http_status": 200,
+      "total_prices": 8,
+      "matched_prices": 8,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free (trial / Percy / Test Mgmt)",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Live - Desktop",
+          "price": 29,
+          "matched": true,
+          "hit": "29"
+        },
+        {
+          "name": "Live - Desktop & Mobile",
+          "price": 39,
+          "matched": true,
+          "hit": "39"
+        },
+        {
+          "name": "Live - Team (5 users)",
+          "price": 150,
+          "matched": true,
+          "hit": "150"
+        },
+        {
+          "name": "Live - Team Pro (5 users)",
+          "price": 249,
+          "matched": true,
+          "hit": "249"
+        },
+        {
+          "name": "Freelancer",
+          "price": 12.5,
+          "matched": true,
+          "hit": "12.5"
+        },
+        {
+          "name": "Automate - Chrome",
+          "price": 59,
+          "matched": true,
+          "hit": "59"
+        },
+        {
+          "name": "Automate - Desktop & Mobile",
+          "price": 175,
+          "matched": true,
+          "hit": "175"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/bunny-cdn.yml",
+      "slug": "bunny-cdn",
+      "name": "Bunny CDN",
+      "pricing_url": "https://bunny.net/pricing/",
+      "http_status": 200,
+      "total_prices": 7,
+      "matched_prices": 7,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "14-day Trial",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Standard EU/NA",
+          "price": 0.01,
+          "matched": true,
+          "hit": "0.01"
+        },
+        {
+          "name": "Standard Asia & Oceania",
+          "price": 0.03,
+          "matched": true,
+          "hit": "0.03"
+        },
+        {
+          "name": "Standard South America",
+          "price": 0.045,
+          "matched": true,
+          "hit": "0.045"
+        },
+        {
+          "name": "Standard Middle East & Africa",
+          "price": 0.06,
+          "matched": true,
+          "hit": "0.06"
+        },
+        {
+          "name": "Volume Network (first 500 TB)",
+          "price": 0.005,
+          "matched": true,
+          "hit": "0.005"
+        },
+        {
+          "name": "Volume Network (1-2 PB)",
+          "price": 0.002,
+          "matched": true,
+          "hit": "0.002"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/bunny-dns.yml",
+      "slug": "bunny-dns",
+      "name": "Bunny DNS",
+      "pricing_url": "https://bunny.net/pricing/dns/",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free tier",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Standard query overage",
+          "price": 0.1,
+          "matched": true,
+          "hit": "0.1"
+        },
+        {
+          "name": "Smart (scriptable) overage",
+          "price": 0.3,
+          "matched": true,
+          "hit": "0.3"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/canva.yml",
+      "slug": "canva",
+      "name": "Canva",
+      "pricing_url": "https://www.canva.com/pricing/",
+      "http_status": 400,
+      "error": null,
+      "candidate": true,
+      "reason": "http 400 — likely bot-blocked"
+    },
+    {
+      "file": "src/content/services/cerebras.yml",
+      "slug": "cerebras",
+      "name": "Cerebras",
+      "pricing_url": "https://www.cerebras.ai/pricing",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 4,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Developer",
+          "price": 10,
+          "matched": true,
+          "hit": "10"
+        },
+        {
+          "name": "Cerebras Code Pro",
+          "price": 50,
+          "matched": true,
+          "hit": "50"
+        },
+        {
+          "name": "Cerebras Code Max",
+          "price": 200,
+          "matched": true,
+          "hit": "200"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/checkly.yml",
+      "slug": "checkly",
+      "name": "Checkly",
+      "pricing_url": "https://www.checklyhq.com/pricing/",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Hobby",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Starter",
+          "price": 24,
+          "matched": true,
+          "hit": "24"
+        },
+        {
+          "name": "Team",
+          "price": 64,
+          "matched": true,
+          "hit": "64"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/chromatic.yml",
+      "slug": "chromatic",
+      "name": "Chromatic",
+      "pricing_url": "https://www.chromatic.com/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Starter",
+          "price": 179,
+          "matched": true,
+          "hit": "179"
+        },
+        {
+          "name": "Pro",
+          "price": 399,
+          "matched": true,
+          "hit": "399"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/circleci.yml",
+      "slug": "circleci",
+      "name": "CircleCI",
+      "pricing_url": "https://circleci.com/pricing/",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Performance",
+          "price": 15,
+          "matched": true,
+          "hit": "15"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/clerk.yml",
+      "slug": "clerk",
+      "name": "Clerk",
+      "pricing_url": "https://clerk.com/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Hobby",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pro",
+          "price": 20,
+          "matched": true,
+          "hit": "20"
+        },
+        {
+          "name": "Business",
+          "price": 250,
+          "matched": true,
+          "hit": "250"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/clickup.yml",
+      "slug": "clickup",
+      "name": "ClickUp",
+      "pricing_url": "https://clickup.com/pricing",
+      "http_status": 200,
+      "total_prices": 5,
+      "matched_prices": 5,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free Forever",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Unlimited",
+          "price": 7,
+          "matched": true,
+          "hit": "7"
+        },
+        {
+          "name": "Business",
+          "price": 12,
+          "matched": true,
+          "hit": "12"
+        },
+        {
+          "name": "Brain AI add-on",
+          "price": 9,
+          "matched": true,
+          "hit": "9"
+        },
+        {
+          "name": "Everything AI add-on",
+          "price": 28,
+          "matched": true,
+          "hit": "28"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/cloud-firestore.yml",
+      "slug": "cloud-firestore",
+      "name": "Cloud Firestore",
+      "pricing_url": "https://firebase.google.com/pricing",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/cloudflare-1-1-1-1-warp.yml",
+      "slug": "cloudflare-1-1-1-1-warp",
+      "name": "**Cloudflare 1.1.1.1 + WARP**",
+      "pricing_url": "https://1.1.1.1/",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 1,
+      "match_ratio": 0.5,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "WARP+",
+          "price": 4.99,
+          "matched": false
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/cloudflare-d1.yml",
+      "slug": "cloudflare-d1",
+      "name": "Cloudflare D1",
+      "pricing_url": "https://developers.cloudflare.com/d1/platform/pricing/",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Workers Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Workers Paid",
+          "price": 5,
+          "matched": true,
+          "hit": "5"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/cloudflare-dns.yml",
+      "slug": "cloudflare-dns",
+      "name": "Cloudflare DNS",
+      "pricing_url": "https://www.cloudflare.com/plans/",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pro",
+          "price": 20,
+          "matched": true,
+          "hit": "20"
+        },
+        {
+          "name": "Business",
+          "price": 200,
+          "matched": true,
+          "hit": "200"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/cloudflare-pages.yml",
+      "slug": "cloudflare-pages",
+      "name": "Cloudflare Pages",
+      "pricing_url": "https://www.cloudflare.com/plans/developer-platform/",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Workers Paid",
+          "price": 5,
+          "matched": true,
+          "hit": "5"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/cloudflare-r2.yml",
+      "slug": "cloudflare-r2",
+      "name": "Cloudflare R2",
+      "pricing_url": "https://developers.cloudflare.com/r2/pricing/",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Standard Storage",
+          "price": 0.015,
+          "matched": true,
+          "hit": "0.015"
+        },
+        {
+          "name": "Infrequent Access",
+          "price": 0.01,
+          "matched": true,
+          "hit": "0.01"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/cloudflare-ssl.yml",
+      "slug": "cloudflare-ssl",
+      "name": "**Cloudflare SSL**",
+      "pricing_url": "https://www.cloudflare.com/plans/free/",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pro",
+          "price": 20,
+          "matched": true,
+          "hit": "20"
+        },
+        {
+          "name": "Business",
+          "price": 200,
+          "matched": true,
+          "hit": "200"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/cloudflare-workers-ai.yml",
+      "slug": "cloudflare-workers-ai",
+      "name": "Cloudflare Workers AI",
+      "pricing_url": "https://developers.cloudflare.com/workers-ai/platform/pricing/",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Workers Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Workers Paid",
+          "price": 0.011,
+          "matched": true,
+          "hit": "0.011"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/cloudinary.yml",
+      "slug": "cloudinary",
+      "name": "Cloudinary",
+      "pricing_url": "https://cloudinary.com/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Plus",
+          "price": 99,
+          "matched": true,
+          "hit": "99"
+        },
+        {
+          "name": "Advanced",
+          "price": 249,
+          "matched": true,
+          "hit": "249"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/cockroachdb.yml",
+      "slug": "cockroachdb",
+      "name": "CockroachDB",
+      "pricing_url": "https://www.cockroachlabs.com/pricing/",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 1,
+      "match_ratio": 0.33,
+      "candidate": true,
+      "details": [
+        {
+          "name": "Basic",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Standard",
+          "price": "$0.18/hr per 2 vCPUs",
+          "matched": false
+        },
+        {
+          "name": "Advanced",
+          "price": "$0.60/hr per 4 vCPUs",
+          "matched": false
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/codacy.yml",
+      "slug": "codacy",
+      "name": "Codacy",
+      "pricing_url": "https://www.codacy.com/pricing",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Developer",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Team",
+          "price": 18,
+          "matched": true,
+          "hit": "18"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/codecov.yml",
+      "slug": "codecov",
+      "name": "Codecov",
+      "pricing_url": "https://about.codecov.io/pricing/",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Developer",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Team",
+          "price": 5,
+          "matched": true,
+          "hit": "5"
+        },
+        {
+          "name": "Pro",
+          "price": 12,
+          "matched": true,
+          "hit": "12"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/codemagic.yml",
+      "slug": "codemagic",
+      "name": "**Codemagic**",
+      "pricing_url": "https://codemagic.io/pricing/",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 1,
+      "match_ratio": 0.25,
+      "candidate": true,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pay As You Go",
+          "price": "$0.045–$0.114/min",
+          "matched": false
+        },
+        {
+          "name": "Fixed Price",
+          "price": "$3,990–$9,000/yr",
+          "matched": false
+        },
+        {
+          "name": "Enterprise",
+          "price": "$12,000+/yr",
+          "matched": false
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/coderabbit.yml",
+      "slug": "coderabbit",
+      "name": "CodeRabbit",
+      "pricing_url": "https://www.coderabbit.ai/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pro",
+          "price": 24,
+          "matched": true,
+          "hit": "24"
+        },
+        {
+          "name": "Pro Plus",
+          "price": 48,
+          "matched": true,
+          "hit": "48"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/cohere.yml",
+      "slug": "cohere",
+      "name": "Cohere",
+      "pricing_url": "https://cohere.com/pricing",
+      "http_status": 200,
+      "total_prices": 5,
+      "matched_prices": 1,
+      "match_ratio": 0.2,
+      "candidate": true,
+      "details": [
+        {
+          "name": "Trial API Key",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Command R+ (Production)",
+          "price": "$2.50 input / $10 output per 1M tokens",
+          "matched": false
+        },
+        {
+          "name": "Command R (Production)",
+          "price": "$0.50 input / $1.50 output per 1M tokens",
+          "matched": false
+        },
+        {
+          "name": "Embed 4 (Production)",
+          "price": "$0.10 per 1M tokens",
+          "matched": false
+        },
+        {
+          "name": "Model Vault",
+          "price": "$2,500–$6,500/mo",
+          "matched": false
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/coherence.yml",
+      "slug": "coherence",
+      "name": "**Coherence**",
+      "pricing_url": "https://www.withcoherence.com/pricing",
+      "http_status": 0,
+      "error": "fetch failed",
+      "candidate": true,
+      "reason": "http error — likely bot-blocked"
+    },
+    {
+      "file": "src/content/services/convex.yml",
+      "slug": "convex",
+      "name": "**Convex**",
+      "pricing_url": "https://www.convex.dev/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 2,
+      "match_ratio": 0.67,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free & Starter",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Professional",
+          "price": 25,
+          "matched": true,
+          "hit": "25"
+        },
+        {
+          "name": "Business & Enterprise",
+          "price": "$2,500+/mo",
+          "matched": false
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/coolify.yml",
+      "slug": "coolify",
+      "name": "**Coolify**",
+      "pricing_url": "https://coolify.io/pricing",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Self-hosted",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Cloud",
+          "price": 5,
+          "matched": true,
+          "hit": "5"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/coveralls.yml",
+      "slug": "coveralls",
+      "name": "Coveralls",
+      "pricing_url": "https://coveralls.io/pricing",
+      "http_status": 200,
+      "total_prices": 9,
+      "matched_prices": 8,
+      "match_ratio": 0.89,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Open Source",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Starter",
+          "price": 10,
+          "matched": true,
+          "hit": "10"
+        },
+        {
+          "name": "Org",
+          "price": 50,
+          "matched": true,
+          "hit": "50"
+        },
+        {
+          "name": "Org+",
+          "price": 100,
+          "matched": true,
+          "hit": "100"
+        },
+        {
+          "name": "Pro",
+          "price": 200,
+          "matched": true,
+          "hit": "200"
+        },
+        {
+          "name": "Unlimited",
+          "price": 400,
+          "matched": true,
+          "hit": "400"
+        },
+        {
+          "name": "Cloud Premium",
+          "price": 800,
+          "matched": true,
+          "hit": "800"
+        },
+        {
+          "name": "Enterprise Cloud",
+          "price": 1200,
+          "matched": false
+        },
+        {
+          "name": "Enterprise On-Premise",
+          "price": 25,
+          "matched": true,
+          "hit": "25"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/creem.yml",
+      "slug": "creem",
+      "name": "Creem",
+      "pricing_url": "https://www.creem.io/pricing",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/cronitor.yml",
+      "slug": "cronitor",
+      "name": "Cronitor",
+      "pricing_url": "https://cronitor.io/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 1,
+      "match_ratio": 0.33,
+      "candidate": true,
+      "details": [
+        {
+          "name": "Hacker",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Business",
+          "price": "$2/monitor + $5/user",
+          "matched": false
+        },
+        {
+          "name": "Enterprise",
+          "price": "$6,000+/yr",
+          "matched": false
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/crowdin.yml",
+      "slug": "crowdin",
+      "name": "Crowdin",
+      "pricing_url": "https://crowdin.com/pricing",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/cursor.yml",
+      "slug": "cursor",
+      "name": "**Cursor**",
+      "pricing_url": "https://cursor.com/docs/models-and-pricing",
+      "http_status": 200,
+      "total_prices": 5,
+      "matched_prices": 5,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Hobby",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pro",
+          "price": 20,
+          "matched": true,
+          "hit": "20"
+        },
+        {
+          "name": "Pro Plus",
+          "price": 60,
+          "matched": true,
+          "hit": "60"
+        },
+        {
+          "name": "Ultra",
+          "price": 200,
+          "matched": true,
+          "hit": "200"
+        },
+        {
+          "name": "Teams",
+          "price": 40,
+          "matched": true,
+          "hit": "40"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/daily-co.yml",
+      "slug": "daily-co",
+      "name": "Daily.co",
+      "pricing_url": "https://www.daily.co/pricing/video-sdk/",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 2,
+      "match_ratio": 0.5,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pay-As-You-Go",
+          "price": "$0.004/participant-minute",
+          "matched": false
+        },
+        {
+          "name": "Premium Support",
+          "price": 1500,
+          "matched": false
+        },
+        {
+          "name": "Enterprise Support",
+          "price": 5000,
+          "matched": true,
+          "hit": "5000"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/datadog.yml",
+      "slug": "datadog",
+      "name": "Datadog",
+      "pricing_url": "https://www.datadoghq.com/pricing/",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pro",
+          "price": 15,
+          "matched": true,
+          "hit": "15"
+        },
+        {
+          "name": "Enterprise",
+          "price": 23,
+          "matched": true,
+          "hit": "23"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/deepseek.yml",
+      "slug": "deepseek",
+      "name": "DeepSeek",
+      "pricing_url": "https://api-docs.deepseek.com/quick_start/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 1,
+      "match_ratio": 0.33,
+      "candidate": true,
+      "details": [
+        {
+          "name": "Trial Credits",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "DeepSeek-V4-Flash",
+          "price": "$0.14 input / $0.28 output per 1M",
+          "matched": false
+        },
+        {
+          "name": "DeepSeek-V4-Pro",
+          "price": "$0.435 input / $0.87 output per 1M",
+          "matched": false
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/deepsource.yml",
+      "slug": "deepsource",
+      "name": "DeepSource",
+      "pricing_url": "https://deepsource.com/pricing",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Open Source",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Team",
+          "price": 24,
+          "matched": true,
+          "hit": "24"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/deno-deploy.yml",
+      "slug": "deno-deploy",
+      "name": "Deno Deploy",
+      "pricing_url": "https://deno.com/deploy/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pro",
+          "price": 20,
+          "matched": true,
+          "hit": "20"
+        },
+        {
+          "name": "Builder",
+          "price": 200,
+          "matched": true,
+          "hit": "200"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/deno-kv.yml",
+      "slug": "deno-kv",
+      "name": "Deno KV",
+      "pricing_url": "https://deno.com/deploy/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pro",
+          "price": 20,
+          "matched": true,
+          "hit": "20"
+        },
+        {
+          "name": "Builder",
+          "price": 200,
+          "matched": true,
+          "hit": "200"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/dependabot-github.yml",
+      "slug": "dependabot-github",
+      "name": "**Dependabot (GitHub)**",
+      "pricing_url": "https://docs.github.com/en/code-security/dependabot",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Dependabot (Free)",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "GitHub Secret Protection",
+          "price": 19,
+          "matched": true,
+          "hit": "19"
+        },
+        {
+          "name": "GitHub Code Security",
+          "price": 30,
+          "matched": true,
+          "hit": "30"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/descope.yml",
+      "slug": "descope",
+      "name": "Descope",
+      "pricing_url": "https://www.descope.com/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free Forever",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pro",
+          "price": 249,
+          "matched": true,
+          "hit": "249"
+        },
+        {
+          "name": "Growth",
+          "price": 799,
+          "matched": true,
+          "hit": "799"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/digitalocean-app-platform.yml",
+      "slug": "digitalocean-app-platform",
+      "name": "**DigitalOcean App Platform**",
+      "pricing_url": "https://www.digitalocean.com/pricing/app-platform",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Paid (Container)",
+          "price": 5,
+          "matched": true,
+          "hit": "5"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/directus-cloud.yml",
+      "slug": "directus-cloud",
+      "name": "**Directus Cloud**",
+      "pricing_url": "https://directus.io/pricing",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Community / Self-Hosted",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Professional",
+          "price": 99,
+          "matched": true,
+          "hit": "99"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/discord.yml",
+      "slug": "discord",
+      "name": "Discord",
+      "pricing_url": "https://discord.com/nitro",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Nitro Basic",
+          "price": 2.99,
+          "matched": true,
+          "hit": "2.99"
+        },
+        {
+          "name": "Nitro",
+          "price": 9.99,
+          "matched": true,
+          "hit": "9.99"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/dns4eu.yml",
+      "slug": "dns4eu",
+      "name": "**DNS4EU**",
+      "pricing_url": "https://www.joindns4.eu/for-public",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/docker-hub.yml",
+      "slug": "docker-hub",
+      "name": "Docker Hub",
+      "pricing_url": "https://www.docker.com/pricing/",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 4,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Personal",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pro",
+          "price": 9,
+          "matched": true,
+          "hit": "9"
+        },
+        {
+          "name": "Team",
+          "price": 15,
+          "matched": true,
+          "hit": "15"
+        },
+        {
+          "name": "Business",
+          "price": 24,
+          "matched": true,
+          "hit": "24"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/docsify-github-pages.yml",
+      "slug": "docsify-github-pages",
+      "name": "Docsify + GitHub Pages",
+      "pricing_url": "https://docsify.js.org/",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/docusaurus-github-pages.yml",
+      "slug": "docusaurus-github-pages",
+      "name": "Docusaurus + GitHub Pages",
+      "pricing_url": "https://docusaurus.io/",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/duckdns.yml",
+      "slug": "duckdns",
+      "name": "DuckDNS",
+      "pricing_url": "https://www.duckdns.org/",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/elasticsearch.yml",
+      "slug": "elasticsearch",
+      "name": "**Elasticsearch**",
+      "pricing_url": "https://www.elastic.co/pricing",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Self-Managed (Open Source)",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Elastic Cloud (14-day trial)",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/emailjs.yml",
+      "slug": "emailjs",
+      "name": "EmailJS",
+      "pricing_url": "https://www.emailjs.com/pricing/",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 4,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Personal",
+          "price": 9,
+          "matched": true,
+          "hit": "9"
+        },
+        {
+          "name": "Professional",
+          "price": 15,
+          "matched": true,
+          "hit": "15"
+        },
+        {
+          "name": "Business",
+          "price": 40,
+          "matched": true,
+          "hit": "40"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/eraser-io.yml",
+      "slug": "eraser-io",
+      "name": "Eraser.io",
+      "pricing_url": "https://www.eraser.io/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Starter",
+          "price": 15,
+          "matched": true,
+          "hit": "15"
+        },
+        {
+          "name": "Business",
+          "price": 45,
+          "matched": true,
+          "hit": "45"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/excalidraw.yml",
+      "slug": "excalidraw",
+      "name": "Excalidraw",
+      "pricing_url": "https://plus.excalidraw.com/pricing",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free (Excalidraw open source)",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Plus",
+          "price": 6,
+          "matched": true,
+          "hit": "6"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/expo-eas.yml",
+      "slug": "expo-eas",
+      "name": "**Expo (EAS)**",
+      "pricing_url": "https://expo.dev/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Starter",
+          "price": 19,
+          "matched": true,
+          "hit": "19"
+        },
+        {
+          "name": "Production",
+          "price": 199,
+          "matched": true,
+          "hit": "199"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/fastlane.yml",
+      "slug": "fastlane",
+      "name": "**Fastlane**",
+      "pricing_url": "https://fastlane.tools/",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/figma.yml",
+      "slug": "figma",
+      "name": "Figma",
+      "pricing_url": "https://www.figma.com/pricing/",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 4,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Starter",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Professional",
+          "price": 16,
+          "matched": true,
+          "hit": "16"
+        },
+        {
+          "name": "Organization",
+          "price": 55,
+          "matched": true,
+          "hit": "55"
+        },
+        {
+          "name": "Enterprise",
+          "price": 90,
+          "matched": true,
+          "hit": "90"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/firebase-app-distribution.yml",
+      "slug": "firebase-app-distribution",
+      "name": "**Firebase (App Distribution)**",
+      "pricing_url": "https://firebase.google.com/pricing",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/firebase-auth.yml",
+      "slug": "firebase-auth",
+      "name": "Firebase Auth",
+      "pricing_url": "https://firebase.google.com/pricing",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/firebase-crashlytics.yml",
+      "slug": "firebase-crashlytics",
+      "name": "**Firebase (Crashlytics)**",
+      "pricing_url": "https://firebase.google.com/pricing",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/firebase-fcm.yml",
+      "slug": "firebase-fcm",
+      "name": "**Firebase (FCM)**",
+      "pricing_url": "https://firebase.google.com/pricing",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/firebase-hosting.yml",
+      "slug": "firebase-hosting",
+      "name": "Firebase Hosting",
+      "pricing_url": "https://firebase.google.com/pricing",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/firebase-realtime-db.yml",
+      "slug": "firebase-realtime-db",
+      "name": "Firebase Realtime DB",
+      "pricing_url": "https://firebase.google.com/pricing",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/firebase-remote-config.yml",
+      "slug": "firebase-remote-config",
+      "name": "**Firebase (Remote Config)**",
+      "pricing_url": "https://firebase.google.com/pricing",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/firebase-storage.yml",
+      "slug": "firebase-storage",
+      "name": "Firebase Storage",
+      "pricing_url": "https://firebase.google.com/pricing",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/firebase.yml",
+      "slug": "firebase",
+      "name": "**Firebase**",
+      "pricing_url": "https://firebase.google.com/pricing",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/fireworks-ai.yml",
+      "slug": "fireworks-ai",
+      "name": "Fireworks AI",
+      "pricing_url": "https://fireworks.ai/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Starter credit",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Fine Tuning",
+          "price": 0.5,
+          "matched": true,
+          "hit": "0.5"
+        },
+        {
+          "name": "On-Demand Deployments",
+          "price": 7,
+          "matched": true,
+          "hit": "7"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/focalboard.yml",
+      "slug": "focalboard",
+      "name": "Focalboard",
+      "pricing_url": "https://www.focalboard.com/",
+      "http_status": 530,
+      "error": null,
+      "candidate": true,
+      "reason": "http 530 — likely bot-blocked"
+    },
+    {
+      "file": "src/content/services/framer.yml",
+      "slug": "framer",
+      "name": "Framer",
+      "pricing_url": "https://www.framer.com/pricing",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 4,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Basic",
+          "price": 10,
+          "matched": true,
+          "hit": "10"
+        },
+        {
+          "name": "Pro",
+          "price": 30,
+          "matched": true,
+          "hit": "30"
+        },
+        {
+          "name": "Scale",
+          "price": 100,
+          "matched": true,
+          "hit": "100"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/fumadocs.yml",
+      "slug": "fumadocs",
+      "name": "Fumadocs",
+      "pricing_url": "https://www.fumadocs.dev/",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/gcp-always-free.yml",
+      "slug": "gcp-always-free",
+      "name": "GCP Always Free",
+      "pricing_url": "https://cloud.google.com/free",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Always Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Free Trial",
+          "price": 300,
+          "matched": true,
+          "hit": "300"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/geoapify.yml",
+      "slug": "geoapify",
+      "name": "Geoapify",
+      "pricing_url": "https://www.geoapify.com/pricing/",
+      "http_status": 200,
+      "total_prices": 7,
+      "matched_prices": 7,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "API 10",
+          "price": 59,
+          "matched": true,
+          "hit": "59"
+        },
+        {
+          "name": "API 25",
+          "price": 109,
+          "matched": true,
+          "hit": "109"
+        },
+        {
+          "name": "API 50",
+          "price": 179,
+          "matched": true,
+          "hit": "179"
+        },
+        {
+          "name": "API 100",
+          "price": 299,
+          "matched": true,
+          "hit": "299"
+        },
+        {
+          "name": "API 250",
+          "price": 609,
+          "matched": true,
+          "hit": "609"
+        },
+        {
+          "name": "Custom",
+          "price": 860,
+          "matched": true,
+          "hit": "860"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/gitbook.yml",
+      "slug": "gitbook",
+      "name": "GitBook",
+      "pricing_url": "https://www.gitbook.com/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Premium",
+          "price": 65,
+          "matched": true,
+          "hit": "65"
+        },
+        {
+          "name": "Ultimate",
+          "price": 249,
+          "matched": true,
+          "hit": "249"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/gitguardian.yml",
+      "slug": "gitguardian",
+      "name": "**GitGuardian**",
+      "pricing_url": "https://www.gitguardian.com/pricing",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/github-actions.yml",
+      "slug": "github-actions",
+      "name": "GitHub Actions",
+      "pricing_url": "https://github.com/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Team",
+          "price": 4,
+          "matched": true,
+          "hit": "4"
+        },
+        {
+          "name": "Enterprise",
+          "price": 21,
+          "matched": true,
+          "hit": "21"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/github-codespaces.yml",
+      "slug": "github-codespaces",
+      "name": "GitHub Codespaces",
+      "pricing_url": "https://github.com/features/codespaces",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "GitHub Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "GitHub Pro",
+          "price": 4,
+          "matched": true,
+          "hit": "4"
+        },
+        {
+          "name": "Pay-as-you-go (Org)",
+          "price": 0.18,
+          "matched": true,
+          "hit": "0.18"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/github-container-registry.yml",
+      "slug": "github-container-registry",
+      "name": "GitHub Container Registry",
+      "pricing_url": "https://docs.github.com/en/billing/concepts/product-billing/github-packages",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 4,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "GitHub Pro",
+          "price": 4,
+          "matched": true,
+          "hit": "4"
+        },
+        {
+          "name": "GitHub Team",
+          "price": 4,
+          "matched": true,
+          "hit": "4"
+        },
+        {
+          "name": "GitHub Enterprise",
+          "price": 21,
+          "matched": true,
+          "hit": "21"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/github-copilot.yml",
+      "slug": "github-copilot",
+      "name": "**GitHub Copilot**",
+      "pricing_url": "https://github.com/features/copilot",
+      "http_status": 200,
+      "total_prices": 5,
+      "matched_prices": 5,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pro",
+          "price": 10,
+          "matched": true,
+          "hit": "10"
+        },
+        {
+          "name": "Pro+",
+          "price": 39,
+          "matched": true,
+          "hit": "39"
+        },
+        {
+          "name": "Business",
+          "price": 19,
+          "matched": true,
+          "hit": "19"
+        },
+        {
+          "name": "Enterprise",
+          "price": 39,
+          "matched": true,
+          "hit": "39"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/github-pages.yml",
+      "slug": "github-pages",
+      "name": "GitHub Pages",
+      "pricing_url": "https://github.com/pricing",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 4,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "GitHub Pro",
+          "price": 4,
+          "matched": true,
+          "hit": "4"
+        },
+        {
+          "name": "GitHub Team",
+          "price": 4,
+          "matched": true,
+          "hit": "4"
+        },
+        {
+          "name": "GitHub Enterprise",
+          "price": 21,
+          "matched": true,
+          "hit": "21"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/github.yml",
+      "slug": "github",
+      "name": "**GitHub**",
+      "pricing_url": "https://github.com/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Team",
+          "price": 4,
+          "matched": true,
+          "hit": "4"
+        },
+        {
+          "name": "Enterprise",
+          "price": 21,
+          "matched": true,
+          "hit": "21"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/gitlab-ci.yml",
+      "slug": "gitlab-ci",
+      "name": "GitLab CI",
+      "pricing_url": "https://about.gitlab.com/pricing/",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Premium",
+          "price": 29,
+          "matched": true,
+          "hit": "29"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/gitlab-container-registry.yml",
+      "slug": "gitlab-container-registry",
+      "name": "GitLab Container Registry",
+      "pricing_url": "https://about.gitlab.com/pricing/",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Premium",
+          "price": 29,
+          "matched": true,
+          "hit": "29"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/gitlab.yml",
+      "slug": "gitlab",
+      "name": "**GitLab**",
+      "pricing_url": "https://about.gitlab.com/pricing/",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Premium",
+          "price": 29,
+          "matched": true,
+          "hit": "29"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/gitpod.yml",
+      "slug": "gitpod",
+      "name": "Gitpod",
+      "pricing_url": "https://gitpod.io/pricing",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Core",
+          "price": 20,
+          "matched": true,
+          "hit": "20"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/goatcounter.yml",
+      "slug": "goatcounter",
+      "name": "GoatCounter",
+      "pricing_url": "https://www.goatcounter.com/",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Self-hosted",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/google-analytics-4.yml",
+      "slug": "google-analytics-4",
+      "name": "Google Analytics 4",
+      "pricing_url": "https://analytics.google.com/",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/google-artifact-registry.yml",
+      "slug": "google-artifact-registry",
+      "name": "Google Artifact Registry",
+      "pricing_url": "https://cloud.google.com/artifact-registry/pricing",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free Tier",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Storage Overage",
+          "price": 0.1,
+          "matched": true,
+          "hit": "0.1"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/google-gemini-api.yml",
+      "slug": "google-gemini-api",
+      "name": "Google Gemini API",
+      "pricing_url": "https://ai.google.dev/gemini-api/docs/rate-limits",
+      "http_status": 0,
+      "error": "fetch failed",
+      "candidate": true,
+      "reason": "http error — likely bot-blocked"
+    },
+    {
+      "file": "src/content/services/google-gemini.yml",
+      "slug": "google-gemini",
+      "name": "Google Gemini API",
+      "pricing_url": "https://ai.google.dev/gemini-api/docs/rate-limits",
+      "http_status": 0,
+      "error": "fetch failed",
+      "candidate": true,
+      "reason": "http error — likely bot-blocked"
+    },
+    {
+      "file": "src/content/services/google-maps-platform.yml",
+      "slug": "google-maps-platform",
+      "name": "Google Maps Platform",
+      "pricing_url": "https://mapsplatform.google.com/pricing/",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 4,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free (Pay-as-you-go)",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Starter",
+          "price": 100,
+          "matched": true,
+          "hit": "100"
+        },
+        {
+          "name": "Essentials",
+          "price": 275,
+          "matched": true,
+          "hit": "275"
+        },
+        {
+          "name": "Pro",
+          "price": 1200,
+          "matched": true,
+          "hit": "1200"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/grafana-cloud-loki.yml",
+      "slug": "grafana-cloud-loki",
+      "name": "Grafana Cloud (Loki)",
+      "pricing_url": "https://grafana.com/pricing/",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 2,
+      "match_ratio": 0.67,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pro",
+          "price": 19,
+          "matched": true,
+          "hit": "19"
+        },
+        {
+          "name": "Enterprise",
+          "price": 25000,
+          "matched": false
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/grafana-cloud.yml",
+      "slug": "grafana-cloud",
+      "name": "Grafana Cloud",
+      "pricing_url": "https://grafana.com/pricing/",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 2,
+      "match_ratio": 0.67,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pro",
+          "price": 19,
+          "matched": true,
+          "hit": "19"
+        },
+        {
+          "name": "Enterprise",
+          "price": 25000,
+          "matched": false
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/groq.yml",
+      "slug": "groq",
+      "name": "Groq",
+      "pricing_url": "https://console.groq.com/docs/rate-limits",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/gumroad.yml",
+      "slug": "gumroad",
+      "name": "Gumroad",
+      "pricing_url": "https://gumroad.com/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Direct Sales Fee",
+          "price": "10% + $0.50",
+          "matched": true,
+          "hit": "10% + $0.50"
+        },
+        {
+          "name": "Marketplace Sales Fee",
+          "price": "30%",
+          "matched": true,
+          "hit": "30%"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/hanko.yml",
+      "slug": "hanko",
+      "name": "Hanko",
+      "pricing_url": "https://www.hanko.io/pricing",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Starter",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pro",
+          "price": 29,
+          "matched": true,
+          "hit": "29"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/harbor-self-hosted.yml",
+      "slug": "harbor-self-hosted",
+      "name": "Harbor (self-hosted)",
+      "pricing_url": "https://goharbor.io/",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/hashicorp-vault.yml",
+      "slug": "hashicorp-vault",
+      "name": "**HashiCorp Vault**",
+      "pricing_url": "https://www.hashicorp.com/en/lp/vault-p",
+      "http_status": 429,
+      "error": null,
+      "candidate": true,
+      "reason": "http 429 — likely bot-blocked"
+    },
+    {
+      "file": "src/content/services/hashnode.yml",
+      "slug": "hashnode",
+      "name": "Hashnode",
+      "pricing_url": "https://hashnode.com/pricing",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/height.yml",
+      "slug": "height",
+      "name": "Height",
+      "pricing_url": "https://height.app/pricing",
+      "http_status": 0,
+      "error": "fetch failed",
+      "candidate": true,
+      "reason": "http error — likely bot-blocked"
+    },
+    {
+      "file": "src/content/services/here.yml",
+      "slug": "here",
+      "name": "HERE",
+      "pricing_url": "https://www.here.com/get-started/pricing",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Limited",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Base",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/hetzner.yml",
+      "slug": "hetzner",
+      "name": "Hetzner",
+      "pricing_url": "https://www.hetzner.com/cloud/",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 0,
+      "match_ratio": 0,
+      "candidate": true,
+      "details": [
+        {
+          "name": "Cost Optimized (Shared)",
+          "price": "From ~$4",
+          "matched": false
+        },
+        {
+          "name": "Regular Performance (Shared)",
+          "price": "From ~$7",
+          "matched": false
+        },
+        {
+          "name": "General Purpose (Dedicated)",
+          "price": "From ~$30",
+          "matched": false
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/hugging-face-inference.yml",
+      "slug": "hugging-face-inference",
+      "name": "Hugging Face Inference",
+      "pricing_url": "https://huggingface.co/pricing",
+      "http_status": 200,
+      "total_prices": 5,
+      "matched_prices": 4,
+      "match_ratio": 0.8,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free Hub",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "PRO",
+          "price": 9,
+          "matched": true,
+          "hit": "9"
+        },
+        {
+          "name": "Team",
+          "price": 20,
+          "matched": true,
+          "hit": "20"
+        },
+        {
+          "name": "Enterprise",
+          "price": 50,
+          "matched": true,
+          "hit": "50"
+        },
+        {
+          "name": "Inference Endpoints",
+          "price": "From $0.033",
+          "matched": false
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/huly.yml",
+      "slug": "huly",
+      "name": "Huly",
+      "pricing_url": "https://huly.io/pricing",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 1,
+      "match_ratio": 0.25,
+      "candidate": true,
+      "details": [
+        {
+          "name": "Common",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Rare",
+          "price": 19.99,
+          "matched": false
+        },
+        {
+          "name": "Epic",
+          "price": 99.99,
+          "matched": false
+        },
+        {
+          "name": "Legendary",
+          "price": 399.99,
+          "matched": false
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/hyperdx.yml",
+      "slug": "hyperdx",
+      "name": "HyperDX",
+      "pricing_url": "https://www.hyperdx.io/pricing",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Starter",
+          "price": 20,
+          "matched": true,
+          "hit": "20"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/hyperswitch.yml",
+      "slug": "hyperswitch",
+      "name": "Hyperswitch",
+      "pricing_url": "https://hyperswitch.io/pricing",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/ibm-cloud.yml",
+      "slug": "ibm-cloud",
+      "name": "IBM Cloud",
+      "pricing_url": "https://www.ibm.com/products/cloud/free",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/iconbuddy.yml",
+      "slug": "iconbuddy",
+      "name": "IconBuddy",
+      "pricing_url": "https://iconbuddy.com/",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/imagekit.yml",
+      "slug": "imagekit",
+      "name": "ImageKit",
+      "pricing_url": "https://imagekit.io/plans/",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Forever Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Lite",
+          "price": 9,
+          "matched": true,
+          "hit": "9"
+        },
+        {
+          "name": "Pro",
+          "price": 89,
+          "matched": true,
+          "hit": "89"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/insomnia.yml",
+      "slug": "insomnia",
+      "name": "**Insomnia**",
+      "pricing_url": "https://insomnia.rest/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Essentials",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pro",
+          "price": 12,
+          "matched": true,
+          "hit": "12"
+        },
+        {
+          "name": "Enterprise",
+          "price": 45,
+          "matched": true,
+          "hit": "45"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/jetbrains-intellij-idea.yml",
+      "slug": "jetbrains-intellij-idea",
+      "name": "**JetBrains IntelliJ IDEA**",
+      "pricing_url": "https://www.jetbrains.com/idea/buy/",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 2,
+      "match_ratio": 0.5,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Community Edition",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Ultimate Individual",
+          "price": 16.9,
+          "matched": false
+        },
+        {
+          "name": "Ultimate Business",
+          "price": 24.9,
+          "matched": true,
+          "hit": "24.9"
+        },
+        {
+          "name": "All Products Pack",
+          "price": 28.9,
+          "matched": false
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/jira.yml",
+      "slug": "jira",
+      "name": "Jira",
+      "pricing_url": "https://www.atlassian.com/software/jira/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 1,
+      "match_ratio": 0.33,
+      "candidate": true,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Standard",
+          "price": 7.53,
+          "matched": false
+        },
+        {
+          "name": "Premium",
+          "price": 13.53,
+          "matched": false
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/jsdelivr.yml",
+      "slug": "jsdelivr",
+      "name": "jsDelivr",
+      "pricing_url": "https://www.jsdelivr.com/",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/kinde.yml",
+      "slug": "kinde",
+      "name": "Kinde",
+      "pricing_url": "https://www.kinde.com/pricing/",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 4,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pro",
+          "price": 25,
+          "matched": true,
+          "hit": "25"
+        },
+        {
+          "name": "Plus",
+          "price": 75,
+          "matched": true,
+          "hit": "75"
+        },
+        {
+          "name": "Scale",
+          "price": 250,
+          "matched": true,
+          "hit": "250"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/koyeb.yml",
+      "slug": "koyeb",
+      "name": "Koyeb",
+      "pricing_url": "https://www.koyeb.com/pricing",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 3,
+      "match_ratio": 0.75,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pro",
+          "price": 29,
+          "matched": true,
+          "hit": "29"
+        },
+        {
+          "name": "Scale",
+          "price": 299,
+          "matched": true,
+          "hit": "299"
+        },
+        {
+          "name": "Enterprise",
+          "price": "From 1000",
+          "matched": false
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/lago.yml",
+      "slug": "lago",
+      "name": "Lago",
+      "pricing_url": "https://getlago.com/pricing",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/lark.yml",
+      "slug": "lark",
+      "name": "Lark",
+      "pricing_url": "https://www.larksuite.com/en_us/plans",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/launchdarkly-observability.yml",
+      "slug": "launchdarkly-observability",
+      "name": "LaunchDarkly Observability",
+      "pricing_url": "https://launchdarkly.com/pricing",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Developer",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Foundation",
+          "price": 12,
+          "matched": true,
+          "hit": "12"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/lemonsqueezy.yml",
+      "slug": "lemonsqueezy",
+      "name": "LemonSqueezy",
+      "pricing_url": "https://www.lemonsqueezy.com/pricing",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/let-s-encrypt.yml",
+      "slug": "let-s-encrypt",
+      "name": "**Let's Encrypt**",
+      "pricing_url": "https://letsencrypt.org/docs/rate-limits/",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/linear.yml",
+      "slug": "linear",
+      "name": "Linear",
+      "pricing_url": "https://linear.app/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Basic",
+          "price": 10,
+          "matched": true,
+          "hit": "10"
+        },
+        {
+          "name": "Business",
+          "price": 16,
+          "matched": true,
+          "hit": "16"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/linode-akamai.yml",
+      "slug": "linode-akamai",
+      "name": "Linode (Akamai)",
+      "pricing_url": "https://www.linode.com/pricing/",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/liveblocks.yml",
+      "slug": "liveblocks",
+      "name": "Liveblocks",
+      "pricing_url": "https://liveblocks.io/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pro",
+          "price": 30,
+          "matched": true,
+          "hit": "30"
+        },
+        {
+          "name": "Team",
+          "price": 600,
+          "matched": true,
+          "hit": "600"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/livekit.yml",
+      "slug": "livekit",
+      "name": "LiveKit",
+      "pricing_url": "https://livekit.com/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Build",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Ship",
+          "price": 50,
+          "matched": true,
+          "hit": "50"
+        },
+        {
+          "name": "Scale",
+          "price": 500,
+          "matched": true,
+          "hit": "500"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/locationiq.yml",
+      "slug": "locationiq",
+      "name": "LocationIQ",
+      "pricing_url": "https://locationiq.com/pricing",
+      "http_status": 200,
+      "total_prices": 6,
+      "matched_prices": 6,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Maps Lite",
+          "price": 45,
+          "matched": true,
+          "hit": "45"
+        },
+        {
+          "name": "Developer",
+          "price": 100,
+          "matched": true,
+          "hit": "100"
+        },
+        {
+          "name": "Startup",
+          "price": 200,
+          "matched": true,
+          "hit": "200"
+        },
+        {
+          "name": "Growth Plus",
+          "price": 500,
+          "matched": true,
+          "hit": "500"
+        },
+        {
+          "name": "Business Plus",
+          "price": 950,
+          "matched": true,
+          "hit": "950"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/locize.yml",
+      "slug": "locize",
+      "name": "Locize",
+      "pricing_url": "https://locize.com/pricing.html",
+      "http_status": 200,
+      "total_prices": 8,
+      "matched_prices": 8,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Starter",
+          "price": 7,
+          "matched": true,
+          "hit": "7"
+        },
+        {
+          "name": "Starter-Plus",
+          "price": 19,
+          "matched": true,
+          "hit": "19"
+        },
+        {
+          "name": "Growth",
+          "price": 49,
+          "matched": true,
+          "hit": "49"
+        },
+        {
+          "name": "Professional",
+          "price": 99,
+          "matched": true,
+          "hit": "99"
+        },
+        {
+          "name": "Professional-Plus",
+          "price": 149,
+          "matched": true,
+          "hit": "149"
+        },
+        {
+          "name": "Enterprise",
+          "price": 199,
+          "matched": true,
+          "hit": "199"
+        },
+        {
+          "name": "Pay-as-you-go",
+          "price": 5,
+          "matched": true,
+          "hit": "5"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/logflare.yml",
+      "slug": "logflare",
+      "name": "Logflare",
+      "pricing_url": "https://logflare.app/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Project (Free)",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Metered",
+          "price": 15,
+          "matched": true,
+          "hit": "15"
+        },
+        {
+          "name": "Metered BYOB",
+          "price": 10,
+          "matched": true,
+          "hit": "10"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/logto.yml",
+      "slug": "logto",
+      "name": "Logto",
+      "pricing_url": "https://logto.io/pricing",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pro",
+          "price": 24,
+          "matched": true,
+          "hit": "24"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/lokalise.yml",
+      "slug": "lokalise",
+      "name": "Lokalise",
+      "pricing_url": "https://lokalise.com/pricing/",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 4,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Explorer",
+          "price": 144,
+          "matched": true,
+          "hit": "144"
+        },
+        {
+          "name": "Growth",
+          "price": 499,
+          "matched": true,
+          "hit": "499"
+        },
+        {
+          "name": "Advanced",
+          "price": 999,
+          "matched": true,
+          "hit": "999"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/loops.yml",
+      "slug": "loops",
+      "name": "Loops",
+      "pricing_url": "https://loops.so/pricing",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/mailchimp.yml",
+      "slug": "mailchimp",
+      "name": "Mailchimp",
+      "pricing_url": "https://mailchimp.com/pricing/marketing/",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 4,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Essentials",
+          "price": 11,
+          "matched": true,
+          "hit": "11"
+        },
+        {
+          "name": "Standard",
+          "price": 17,
+          "matched": true,
+          "hit": "17"
+        },
+        {
+          "name": "Premium",
+          "price": 301,
+          "matched": true,
+          "hit": "301"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/mailersend.yml",
+      "slug": "mailersend",
+      "name": "MailerSend",
+      "pricing_url": "https://www.mailersend.com/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Hobby",
+          "price": 5.6,
+          "matched": true,
+          "hit": "5.6"
+        },
+        {
+          "name": "Starter",
+          "price": 25,
+          "matched": true,
+          "hit": "25"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/mailgun.yml",
+      "slug": "mailgun",
+      "name": "Mailgun",
+      "pricing_url": "https://www.mailgun.com/pricing/",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 4,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Basic",
+          "price": 15,
+          "matched": true,
+          "hit": "15"
+        },
+        {
+          "name": "Foundation",
+          "price": 35,
+          "matched": true,
+          "hit": "35"
+        },
+        {
+          "name": "Scale",
+          "price": 90,
+          "matched": true,
+          "hit": "90"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/mailtrap.yml",
+      "slug": "mailtrap",
+      "name": "Mailtrap",
+      "pricing_url": "https://mailtrap.io/pricing/",
+      "http_status": 200,
+      "total_prices": 5,
+      "matched_prices": 5,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Basic",
+          "price": 15,
+          "matched": true,
+          "hit": "15"
+        },
+        {
+          "name": "Business",
+          "price": 85,
+          "matched": true,
+          "hit": "85"
+        },
+        {
+          "name": "Enterprise",
+          "price": 750,
+          "matched": true,
+          "hit": "750"
+        },
+        {
+          "name": "Sandbox Basic",
+          "price": 14,
+          "matched": true,
+          "hit": "14"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/mapbox.yml",
+      "slug": "mapbox",
+      "name": "Mapbox",
+      "pricing_url": "https://www.mapbox.com/pricing",
+      "http_status": 200,
+      "total_prices": 7,
+      "matched_prices": 7,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free Tier",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Mapbox GL JS",
+          "price": 5,
+          "matched": true,
+          "hit": "5"
+        },
+        {
+          "name": "Maps SDK Mobile",
+          "price": 4,
+          "matched": true,
+          "hit": "4"
+        },
+        {
+          "name": "Geocoding API",
+          "price": 0.75,
+          "matched": true,
+          "hit": "0.75"
+        },
+        {
+          "name": "Directions API",
+          "price": 2,
+          "matched": true,
+          "hit": "2"
+        },
+        {
+          "name": "Individual Support",
+          "price": 50,
+          "matched": true,
+          "hit": "50"
+        },
+        {
+          "name": "Business Support",
+          "price": 500,
+          "matched": true,
+          "hit": "500"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/maptiler.yml",
+      "slug": "maptiler",
+      "name": "MapTiler",
+      "pricing_url": "https://www.maptiler.com/cloud/pricing/",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Flex",
+          "price": 25,
+          "matched": true,
+          "hit": "25"
+        },
+        {
+          "name": "Unlimited",
+          "price": 295,
+          "matched": true,
+          "hit": "295"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/meilisearch.yml",
+      "slug": "meilisearch",
+      "name": "Meilisearch",
+      "pricing_url": "https://www.meilisearch.com/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Self-hosted",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Cloud (Build)",
+          "price": 30,
+          "matched": true,
+          "hit": "30"
+        },
+        {
+          "name": "Cloud (Resource-based)",
+          "price": 23,
+          "matched": true,
+          "hit": "23"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/meta-llama-api.yml",
+      "slug": "meta-llama-api",
+      "name": "Meta Llama API",
+      "pricing_url": "https://www.llama.com/products/llama-api/",
+      "http_status": 400,
+      "error": null,
+      "candidate": true,
+      "reason": "http 400 — likely bot-blocked"
+    },
+    {
+      "file": "src/content/services/mintlify.yml",
+      "slug": "mintlify",
+      "name": "Mintlify",
+      "pricing_url": "https://www.mintlify.com/pricing",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Hobby",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pro",
+          "price": 250,
+          "matched": true,
+          "hit": "250"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/mistral-ai.yml",
+      "slug": "mistral-ai",
+      "name": "Mistral AI",
+      "pricing_url": "https://mistral.ai/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pro",
+          "price": 14.99,
+          "matched": true,
+          "hit": "14.99"
+        },
+        {
+          "name": "Team",
+          "price": 24.99,
+          "matched": true,
+          "hit": "24.99"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/mistral.yml",
+      "slug": "mistral",
+      "name": "Mistral AI",
+      "pricing_url": "https://mistral.ai/pricing/",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pro",
+          "price": 14.99,
+          "matched": true,
+          "hit": "14.99"
+        },
+        {
+          "name": "Team",
+          "price": 24.99,
+          "matched": true,
+          "hit": "24.99"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/mixpanel.yml",
+      "slug": "mixpanel",
+      "name": "Mixpanel",
+      "pricing_url": "https://mixpanel.com/pricing/",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/monday-com.yml",
+      "slug": "monday-com",
+      "name": "Monday.com",
+      "pricing_url": "https://monday.com/pricing",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 4,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Basic",
+          "price": 9,
+          "matched": true,
+          "hit": "9"
+        },
+        {
+          "name": "Standard",
+          "price": 12,
+          "matched": true,
+          "hit": "12"
+        },
+        {
+          "name": "Pro",
+          "price": 19,
+          "matched": true,
+          "hit": "19"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/mongodb-atlas.yml",
+      "slug": "mongodb-atlas",
+      "name": "MongoDB Atlas",
+      "pricing_url": "https://www.mongodb.com/pricing",
+      "http_status": 200,
+      "total_prices": 6,
+      "matched_prices": 5,
+      "match_ratio": 0.83,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free (M0)",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Flex",
+          "price": 8,
+          "matched": true,
+          "hit": "8"
+        },
+        {
+          "name": "M2 (Shared)",
+          "price": 9,
+          "matched": true,
+          "hit": "9"
+        },
+        {
+          "name": "M5 (Shared)",
+          "price": 25,
+          "matched": true,
+          "hit": "25"
+        },
+        {
+          "name": "Dedicated (M10)",
+          "price": 57,
+          "matched": true,
+          "hit": "57"
+        },
+        {
+          "name": "Dedicated (M30+)",
+          "price": 389,
+          "matched": false
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/motherduck.yml",
+      "slug": "motherduck",
+      "name": "MotherDuck",
+      "pricing_url": "https://motherduck.com/product/pricing/",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Lite",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Business",
+          "price": 250,
+          "matched": true,
+          "hit": "250"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/namecheap-freedns.yml",
+      "slug": "namecheap-freedns",
+      "name": "Namecheap FreeDNS",
+      "pricing_url": "https://www.namecheap.com/domains/freedns/",
+      "http_status": 403,
+      "error": null,
+      "candidate": true,
+      "reason": "http 403 — likely bot-blocked"
+    },
+    {
+      "file": "src/content/services/neon.yml",
+      "slug": "neon",
+      "name": "Neon",
+      "pricing_url": "https://neon.tech/pricing",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/netlify-dns.yml",
+      "slug": "netlify-dns",
+      "name": "**Netlify DNS**",
+      "pricing_url": "https://www.netlify.com/pricing/",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Personal",
+          "price": 9,
+          "matched": true,
+          "hit": "9"
+        },
+        {
+          "name": "Pro",
+          "price": 20,
+          "matched": true,
+          "hit": "20"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/netlify.yml",
+      "slug": "netlify",
+      "name": "Netlify",
+      "pricing_url": "https://www.netlify.com/pricing/",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Personal",
+          "price": 9,
+          "matched": true,
+          "hit": "9"
+        },
+        {
+          "name": "Pro",
+          "price": 20,
+          "matched": true,
+          "hit": "20"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/new-relic.yml",
+      "slug": "new-relic",
+      "name": "New Relic",
+      "pricing_url": "https://newrelic.com/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Standard",
+          "price": 10,
+          "matched": true,
+          "hit": "10"
+        },
+        {
+          "name": "Pro",
+          "price": 349,
+          "matched": true,
+          "hit": "349"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/nextdns.yml",
+      "slug": "nextdns",
+      "name": "NextDNS",
+      "pricing_url": "https://nextdns.io/pricing",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 4,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pro",
+          "price": 1.99,
+          "matched": true,
+          "hit": "1.99"
+        },
+        {
+          "name": "Business",
+          "price": 19.9,
+          "matched": true,
+          "hit": "19.9"
+        },
+        {
+          "name": "Education",
+          "price": 19.9,
+          "matched": true,
+          "hit": "19.9"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/nextra.yml",
+      "slug": "nextra",
+      "name": "Nextra",
+      "pricing_url": "https://nextra.site/",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/ngrok.yml",
+      "slug": "ngrok",
+      "name": "**ngrok**",
+      "pricing_url": "https://ngrok.com/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Hobbyist",
+          "price": 8,
+          "matched": true,
+          "hit": "8"
+        },
+        {
+          "name": "Pay-as-you-go",
+          "price": 20,
+          "matched": true,
+          "hit": "20"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/nhost.yml",
+      "slug": "nhost",
+      "name": "**Nhost**",
+      "pricing_url": "https://nhost.io/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Starter",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pro",
+          "price": 25,
+          "matched": true,
+          "hit": "25"
+        },
+        {
+          "name": "Team",
+          "price": 599,
+          "matched": true,
+          "hit": "599"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/no-ip.yml",
+      "slug": "no-ip",
+      "name": "**No-IP**",
+      "pricing_url": "https://www.noip.com/pricing",
+      "http_status": 200,
+      "total_prices": 5,
+      "matched_prices": 5,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free Dynamic DNS",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Enhanced Dynamic DNS",
+          "price": 29.99,
+          "matched": true,
+          "hit": "29.99"
+        },
+        {
+          "name": "Pro Dynamic DNS",
+          "price": 149.99,
+          "matched": true,
+          "hit": "149.99"
+        },
+        {
+          "name": "Plus Managed DNS",
+          "price": 34.99,
+          "matched": true,
+          "hit": "34.99"
+        },
+        {
+          "name": "Premium Managed DNS",
+          "price": 99.99,
+          "matched": true,
+          "hit": "99.99"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/nominatim-openstreetmap.yml",
+      "slug": "nominatim-openstreetmap",
+      "name": "Nominatim (OpenStreetMap)",
+      "pricing_url": "https://operations.osmfoundation.org/policies/nominatim/",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 0,
+      "match_ratio": 0,
+      "candidate": true,
+      "details": [
+        {
+          "name": "Public API",
+          "price": 0,
+          "matched": false
+        },
+        {
+          "name": "Self-Hosted",
+          "price": 0,
+          "matched": false
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/notion.yml",
+      "slug": "notion",
+      "name": "Notion",
+      "pricing_url": "https://www.notion.so/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Plus",
+          "price": 10,
+          "matched": true,
+          "hit": "10"
+        },
+        {
+          "name": "Business",
+          "price": 20,
+          "matched": true,
+          "hit": "20"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/onesignal.yml",
+      "slug": "onesignal",
+      "name": "**OneSignal**",
+      "pricing_url": "https://onesignal.com/pricing",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Growth",
+          "price": 19,
+          "matched": true,
+          "hit": "19"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/openai.yml",
+      "slug": "openai",
+      "name": "OpenAI",
+      "pricing_url": "https://openai.com/api/pricing/",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/opencage.yml",
+      "slug": "opencage",
+      "name": "OpenCage",
+      "pricing_url": "https://opencagedata.com/pricing",
+      "http_status": 200,
+      "total_prices": 6,
+      "matched_prices": 6,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free Trial",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "X-Small",
+          "price": 45,
+          "matched": true,
+          "hit": "45"
+        },
+        {
+          "name": "Small",
+          "price": 110,
+          "matched": true,
+          "hit": "110"
+        },
+        {
+          "name": "Medium",
+          "price": 450,
+          "matched": true,
+          "hit": "450"
+        },
+        {
+          "name": "Large",
+          "price": 900,
+          "matched": true,
+          "hit": "900"
+        },
+        {
+          "name": "Enterprise",
+          "price": 1800,
+          "matched": true,
+          "hit": "1800"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/openpanel.yml",
+      "slug": "openpanel",
+      "name": "OpenPanel",
+      "pricing_url": "https://openpanel.dev/pricing",
+      "http_status": 200,
+      "total_prices": 5,
+      "matched_prices": 5,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free Trial / Self-Hosted",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "5K events",
+          "price": 2.5,
+          "matched": true,
+          "hit": "2.5"
+        },
+        {
+          "name": "100K events",
+          "price": 20,
+          "matched": true,
+          "hit": "20"
+        },
+        {
+          "name": "1M events",
+          "price": 90,
+          "matched": true,
+          "hit": "90"
+        },
+        {
+          "name": "10M+ events",
+          "price": 350,
+          "matched": true,
+          "hit": "350"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/openrouter.yml",
+      "slug": "openrouter",
+      "name": "OpenRouter",
+      "pricing_url": "https://openrouter.ai/collections/free-models",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/oracle-cloud-always-free.yml",
+      "slug": "oracle-cloud-always-free",
+      "name": "Oracle Cloud Always Free",
+      "pricing_url": "https://www.oracle.com/cloud/free/",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Always Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "30-Day Free Trial",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/orama.yml",
+      "slug": "orama",
+      "name": "Orama",
+      "pricing_url": "https://orama.com/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 2,
+      "match_ratio": 0.67,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Base (Free)",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Build",
+          "price": 100,
+          "matched": true,
+          "hit": "100"
+        },
+        {
+          "name": "Scale",
+          "price": 1450,
+          "matched": false
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/ory-kratos.yml",
+      "slug": "ory-kratos",
+      "name": "Ory (Kratos)",
+      "pricing_url": "https://www.ory.com/pricing",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 4,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Developer",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Production",
+          "price": 770,
+          "matched": true,
+          "hit": "770"
+        },
+        {
+          "name": "Growth",
+          "price": 9350,
+          "matched": true,
+          "hit": "9350"
+        },
+        {
+          "name": "Self-Hosted (Open Source)",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/paddle.yml",
+      "slug": "paddle",
+      "name": "Paddle",
+      "pricing_url": "https://www.paddle.com/pricing",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/papertrail.yml",
+      "slug": "papertrail",
+      "name": "Papertrail",
+      "pricing_url": "https://www.papertrail.com/plans/",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/paradedb.yml",
+      "slug": "paradedb",
+      "name": "**ParadeDB**",
+      "pricing_url": "https://www.paradedb.com/pricing",
+      "http_status": 404,
+      "error": null,
+      "candidate": true,
+      "reason": "http 404 — likely bot-blocked"
+    },
+    {
+      "file": "src/content/services/partykit-cloudflare.yml",
+      "slug": "partykit-cloudflare",
+      "name": "PartyKit (Cloudflare)",
+      "pricing_url": "https://www.partykit.io/",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Individual (Free)",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Commercial (BYO Cloudflare)",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/passage-by-1password.yml",
+      "slug": "passage-by-1password",
+      "name": "Passage by 1Password",
+      "pricing_url": "https://passage.1password.com/pricing",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/paypal.yml",
+      "slug": "paypal",
+      "name": "PayPal",
+      "pricing_url": "https://www.paypal.com/us/business/pricing",
+      "http_status": 200,
+      "total_prices": 5,
+      "matched_prices": 1,
+      "match_ratio": 0.2,
+      "candidate": true,
+      "details": [
+        {
+          "name": "Free (account)",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "PayPal Checkout",
+          "price": "2.99% + $0.49",
+          "matched": false
+        },
+        {
+          "name": "Expanded Checkout",
+          "price": "2.89% + $0.29",
+          "matched": false
+        },
+        {
+          "name": "In-Person (Card Present / Tap to Pay)",
+          "price": "2.29% + $0.09",
+          "matched": false
+        },
+        {
+          "name": "PayPal/Venmo Invoices",
+          "price": "3.49% + $0.49",
+          "matched": false
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/penpot.yml",
+      "slug": "penpot",
+      "name": "Penpot",
+      "pricing_url": "https://penpot.app/pricing",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 3,
+      "match_ratio": 0.75,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Professional",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Unlimited",
+          "price": 7,
+          "matched": true,
+          "hit": "7"
+        },
+        {
+          "name": "Enterprise",
+          "price": 950,
+          "matched": true,
+          "hit": "950"
+        },
+        {
+          "name": "Private Server",
+          "price": 50000,
+          "matched": false
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/percy-browserstack.yml",
+      "slug": "percy-browserstack",
+      "name": "Percy (BrowserStack)",
+      "pricing_url": "https://percy.io/pricing",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 1,
+      "match_ratio": 0.5,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Unlimited",
+          "price": 269,
+          "matched": false
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/percy.yml",
+      "slug": "percy",
+      "name": "Percy",
+      "pricing_url": "https://percy.io/pricing",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 1,
+      "match_ratio": 0.5,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Unlimited",
+          "price": 269,
+          "matched": false
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/perplexity-api.yml",
+      "slug": "perplexity-api",
+      "name": "Perplexity API",
+      "pricing_url": "https://docs.perplexity.ai/docs/getting-started/pricing",
+      "http_status": 200,
+      "total_prices": 6,
+      "matched_prices": 6,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "API access (no free tier)",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Sonar",
+          "price": 1,
+          "matched": true,
+          "hit": "1"
+        },
+        {
+          "name": "Sonar Pro",
+          "price": 3,
+          "matched": true,
+          "hit": "3"
+        },
+        {
+          "name": "Sonar Reasoning Pro",
+          "price": 2,
+          "matched": true,
+          "hit": "2"
+        },
+        {
+          "name": "Sonar Deep Research",
+          "price": 2,
+          "matched": true,
+          "hit": "2"
+        },
+        {
+          "name": "Search API",
+          "price": 5,
+          "matched": true,
+          "hit": "5"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/phrase.yml",
+      "slug": "phrase",
+      "name": "Phrase",
+      "pricing_url": "https://phrase.com/pricing/",
+      "http_status": 200,
+      "total_prices": 5,
+      "matched_prices": 5,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "14-day trial",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Freelancer",
+          "price": 27,
+          "matched": true,
+          "hit": "27"
+        },
+        {
+          "name": "Software UI/UX",
+          "price": 525,
+          "matched": true,
+          "hit": "525"
+        },
+        {
+          "name": "Professional (LSP)",
+          "price": 525,
+          "matched": true,
+          "hit": "525"
+        },
+        {
+          "name": "Team",
+          "price": 1245,
+          "matched": true,
+          "hit": "1245"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/plane.yml",
+      "slug": "plane",
+      "name": "Plane",
+      "pricing_url": "https://plane.so/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pro",
+          "price": 6,
+          "matched": true,
+          "hit": "6"
+        },
+        {
+          "name": "Business",
+          "price": 13,
+          "matched": true,
+          "hit": "13"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/plausible.yml",
+      "slug": "plausible",
+      "name": "Plausible",
+      "pricing_url": "https://plausible.io/#pricing",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 4,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Self-hosted (Community Edition)",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Starter",
+          "price": 9,
+          "matched": true,
+          "hit": "9"
+        },
+        {
+          "name": "Growth",
+          "price": 14,
+          "matched": true,
+          "hit": "14"
+        },
+        {
+          "name": "Business",
+          "price": 19,
+          "matched": true,
+          "hit": "19"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/playwright.yml",
+      "slug": "playwright",
+      "name": "Playwright",
+      "pricing_url": "https://playwright.dev/",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/plunk.yml",
+      "slug": "plunk",
+      "name": "Plunk",
+      "pricing_url": "https://www.useplunk.com/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free Forever",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pay as You Grow",
+          "price": 0.001,
+          "matched": true,
+          "hit": "0.001"
+        },
+        {
+          "name": "Self-Hosted",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/pocketbase.yml",
+      "slug": "pocketbase",
+      "name": "**PocketBase**",
+      "pricing_url": "https://pocketbase.io/",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/poeditor.yml",
+      "slug": "poeditor",
+      "name": "POEditor",
+      "pricing_url": "https://poeditor.com/pricing/",
+      "http_status": 200,
+      "total_prices": 5,
+      "matched_prices": 5,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Start",
+          "price": 20,
+          "matched": true,
+          "hit": "20"
+        },
+        {
+          "name": "Plus",
+          "price": 60,
+          "matched": true,
+          "hit": "60"
+        },
+        {
+          "name": "Premium",
+          "price": 160,
+          "matched": true,
+          "hit": "160"
+        },
+        {
+          "name": "Enterprise",
+          "price": 260,
+          "matched": true,
+          "hit": "260"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/polar.yml",
+      "slug": "polar",
+      "name": "Polar",
+      "pricing_url": "https://polar.sh/docs/merchant-of-record/fees",
+      "http_status": 200,
+      "total_prices": 6,
+      "matched_prices": 5,
+      "match_ratio": 0.83,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free (account)",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Transaction fee",
+          "price": "4% + $0.40",
+          "matched": false
+        },
+        {
+          "name": "International cards add-on",
+          "price": "+1.5%",
+          "matched": true,
+          "hit": "+1.5%"
+        },
+        {
+          "name": "Subscription add-on",
+          "price": "+0.5%",
+          "matched": true,
+          "hit": "+0.5%"
+        },
+        {
+          "name": "Dispute fee",
+          "price": 15,
+          "matched": true,
+          "hit": "15"
+        },
+        {
+          "name": "Payout fee",
+          "price": "0.25% + $0.25",
+          "matched": true,
+          "hit": "0.25% + $0.25"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/posthog.yml",
+      "slug": "posthog",
+      "name": "PostHog",
+      "pricing_url": "https://posthog.com/pricing",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Self-hosted (open source)",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/postman.yml",
+      "slug": "postman",
+      "name": "**Postman**",
+      "pricing_url": "https://www.postman.com/pricing/",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 4,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Solo",
+          "price": 9,
+          "matched": true,
+          "hit": "9"
+        },
+        {
+          "name": "Team",
+          "price": 19,
+          "matched": true,
+          "hit": "19"
+        },
+        {
+          "name": "Enterprise",
+          "price": 49,
+          "matched": true,
+          "hit": "49"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/postmark.yml",
+      "slug": "postmark",
+      "name": "Postmark",
+      "pricing_url": "https://postmarkapp.com/pricing",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 4,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Basic",
+          "price": 15,
+          "matched": true,
+          "hit": "15"
+        },
+        {
+          "name": "Pro",
+          "price": 16.5,
+          "matched": true,
+          "hit": "16.5"
+        },
+        {
+          "name": "Platform",
+          "price": 18,
+          "matched": true,
+          "hit": "18"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/propelauth.yml",
+      "slug": "propelauth",
+      "name": "PropelAuth",
+      "pricing_url": "https://www.propelauth.com/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Growth",
+          "price": 150,
+          "matched": true,
+          "hit": "150"
+        },
+        {
+          "name": "Growth Plus",
+          "price": 500,
+          "matched": true,
+          "hit": "500"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/protomaps.yml",
+      "slug": "protomaps",
+      "name": "Protomaps",
+      "pricing_url": "https://protomaps.com/",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/pusher-channels.yml",
+      "slug": "pusher-channels",
+      "name": "Pusher Channels",
+      "pricing_url": "https://pusher.com/channels/pricing/",
+      "http_status": 200,
+      "total_prices": 8,
+      "matched_prices": 7,
+      "match_ratio": 0.88,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Sandbox",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Startup",
+          "price": 49,
+          "matched": true,
+          "hit": "49"
+        },
+        {
+          "name": "Pro",
+          "price": 99,
+          "matched": true,
+          "hit": "99"
+        },
+        {
+          "name": "Business",
+          "price": 299,
+          "matched": true,
+          "hit": "299"
+        },
+        {
+          "name": "Premium",
+          "price": 499,
+          "matched": true,
+          "hit": "499"
+        },
+        {
+          "name": "Growth",
+          "price": 699,
+          "matched": true,
+          "hit": "699"
+        },
+        {
+          "name": "Plus",
+          "price": 899,
+          "matched": true,
+          "hit": "899"
+        },
+        {
+          "name": "Growth Plus",
+          "price": 1199,
+          "matched": false
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/qase.yml",
+      "slug": "qase",
+      "name": "Qase",
+      "pricing_url": "https://qase.io/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Startup",
+          "price": 24,
+          "matched": true,
+          "hit": "24"
+        },
+        {
+          "name": "Business",
+          "price": 30,
+          "matched": true,
+          "hit": "30"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/qlty-formerly-codeclimate.yml",
+      "slug": "qlty-formerly-codeclimate",
+      "name": "Qlty (formerly CodeClimate)",
+      "pricing_url": "https://qlty.sh/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pro",
+          "price": 20,
+          "matched": true,
+          "hit": "20"
+        },
+        {
+          "name": "Enterprise",
+          "price": 30,
+          "matched": true,
+          "hit": "30"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/qodana-jetbrains.yml",
+      "slug": "qodana-jetbrains",
+      "name": "Qodana (JetBrains)",
+      "pricing_url": "https://www.jetbrains.com/qodana/buy/",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/qovery.yml",
+      "slug": "qovery",
+      "name": "**Qovery**",
+      "pricing_url": "https://www.qovery.com/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 2,
+      "match_ratio": 0.67,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Starter",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Team",
+          "price": 899,
+          "matched": true,
+          "hit": "899"
+        },
+        {
+          "name": "Business",
+          "price": 1999,
+          "matched": false
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/quay-io.yml",
+      "slug": "quay-io",
+      "name": "Quay.io",
+      "pricing_url": "https://quay.io/plans/",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/read-the-docs.yml",
+      "slug": "read-the-docs",
+      "name": "Read the Docs",
+      "pricing_url": "https://about.readthedocs.com/pricing/",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 4,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Community",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Basic",
+          "price": 50,
+          "matched": true,
+          "hit": "50"
+        },
+        {
+          "name": "Advanced",
+          "price": 150,
+          "matched": true,
+          "hit": "150"
+        },
+        {
+          "name": "Pro",
+          "price": 250,
+          "matched": true,
+          "hit": "250"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/render.yml",
+      "slug": "render",
+      "name": "Render",
+      "pricing_url": "https://render.com/pricing",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/replicate.yml",
+      "slug": "replicate",
+      "name": "Replicate",
+      "pricing_url": "https://replicate.com/pricing",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/replit.yml",
+      "slug": "replit",
+      "name": "**Replit**",
+      "pricing_url": "https://replit.com/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Starter",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Core",
+          "price": 25,
+          "matched": true,
+          "hit": "25"
+        },
+        {
+          "name": "Pro",
+          "price": 100,
+          "matched": true,
+          "hit": "100"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/resend.yml",
+      "slug": "resend",
+      "name": "Resend",
+      "pricing_url": "https://resend.com/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pro",
+          "price": 20,
+          "matched": true,
+          "hit": "20"
+        },
+        {
+          "name": "Scale",
+          "price": 90,
+          "matched": true,
+          "hit": "90"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/revenuecat.yml",
+      "slug": "revenuecat",
+      "name": "**RevenueCat**",
+      "pricing_url": "https://www.revenuecat.com/pricing/",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Pro",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Growth Tools",
+          "price": 1,
+          "matched": true,
+          "hit": "1"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/rive.yml",
+      "slug": "rive",
+      "name": "Rive",
+      "pricing_url": "https://rive.app/pricing",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 4,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Cadet",
+          "price": 9,
+          "matched": true,
+          "hit": "9"
+        },
+        {
+          "name": "Voyager",
+          "price": 32,
+          "matched": true,
+          "hit": "32"
+        },
+        {
+          "name": "Enterprise",
+          "price": 120,
+          "matched": true,
+          "hit": "120"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/sambanova.yml",
+      "slug": "sambanova",
+      "name": "SambaNova",
+      "pricing_url": "https://cloud.sambanova.ai/plans/pricing",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/semgrep.yml",
+      "slug": "semgrep",
+      "name": "**Semgrep**",
+      "pricing_url": "https://semgrep.dev/pricing/",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Teams",
+          "price": 30,
+          "matched": true,
+          "hit": "30"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/sendbird.yml",
+      "slug": "sendbird",
+      "name": "Sendbird",
+      "pricing_url": "https://sendbird.com/pricing/chat",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/sentry.yml",
+      "slug": "sentry",
+      "name": "Sentry",
+      "pricing_url": "https://sentry.io/pricing/",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Developer",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Team",
+          "price": 26,
+          "matched": true,
+          "hit": "26"
+        },
+        {
+          "name": "Business",
+          "price": 80,
+          "matched": true,
+          "hit": "80"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/seq-self-hosted.yml",
+      "slug": "seq-self-hosted",
+      "name": "Seq (self-hosted)",
+      "pricing_url": "https://datalust.co/pricing",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 4,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Individual",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Team",
+          "price": 790,
+          "matched": true,
+          "hit": "790"
+        },
+        {
+          "name": "Standard",
+          "price": 2290,
+          "matched": true,
+          "hit": "2290"
+        },
+        {
+          "name": "Datacenter",
+          "price": 7990,
+          "matched": true,
+          "hit": "7990"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/shortcut.yml",
+      "slug": "shortcut",
+      "name": "Shortcut",
+      "pricing_url": "https://www.shortcut.com/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Team",
+          "price": 10,
+          "matched": true,
+          "hit": "10"
+        },
+        {
+          "name": "Business",
+          "price": 16,
+          "matched": true,
+          "hit": "16"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/simplelocalize.yml",
+      "slug": "simplelocalize",
+      "name": "SimpleLocalize",
+      "pricing_url": "https://simplelocalize.io/pricing/",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 4,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Community",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Developer",
+          "price": 12,
+          "matched": true,
+          "hit": "12"
+        },
+        {
+          "name": "Team",
+          "price": 35,
+          "matched": true,
+          "hit": "35"
+        },
+        {
+          "name": "Business",
+          "price": 99,
+          "matched": true,
+          "hit": "99"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/slack.yml",
+      "slug": "slack",
+      "name": "Slack",
+      "pricing_url": "https://slack.com/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pro",
+          "price": 8.25,
+          "matched": true,
+          "hit": "8.25"
+        },
+        {
+          "name": "Business+",
+          "price": 18,
+          "matched": true,
+          "hit": "18"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/smtp2go.yml",
+      "slug": "smtp2go",
+      "name": "SMTP2GO",
+      "pricing_url": "https://www.smtp2go.com/pricing/",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Starter",
+          "price": 10,
+          "matched": true,
+          "hit": "10"
+        },
+        {
+          "name": "Professional",
+          "price": 75,
+          "matched": true,
+          "hit": "75"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/snyk.yml",
+      "slug": "snyk",
+      "name": "**Snyk**",
+      "pricing_url": "https://snyk.io/plans/",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 2,
+      "match_ratio": 0.67,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Team",
+          "price": 25,
+          "matched": true,
+          "hit": "25"
+        },
+        {
+          "name": "Ignite",
+          "price": 1260,
+          "matched": false
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/socket-dev.yml",
+      "slug": "socket-dev",
+      "name": "**Socket.dev**",
+      "pricing_url": "https://socket.dev/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Team",
+          "price": 25,
+          "matched": true,
+          "hit": "25"
+        },
+        {
+          "name": "Business",
+          "price": 50,
+          "matched": true,
+          "hit": "50"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/sonarcloud-sonarqube-cloud.yml",
+      "slug": "sonarcloud-sonarqube-cloud",
+      "name": "SonarCloud (SonarQube Cloud)",
+      "pricing_url": "https://www.sonarsource.com/plans-and-pricing/",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Team",
+          "price": 32,
+          "matched": true,
+          "hit": "32"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/spline.yml",
+      "slug": "spline",
+      "name": "Spline",
+      "pricing_url": "https://spline.design/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Starter",
+          "price": 15,
+          "matched": true,
+          "hit": "15"
+        },
+        {
+          "name": "Professional",
+          "price": 25,
+          "matched": true,
+          "hit": "25"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/squarespace-domains.yml",
+      "slug": "squarespace-domains",
+      "name": "**Squarespace Domains**",
+      "pricing_url": "https://domains.squarespace.com/",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/stadia-maps.yml",
+      "slug": "stadia-maps",
+      "name": "Stadia Maps",
+      "pricing_url": "https://stadiamaps.com/pricing/",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 4,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Starter",
+          "price": 20,
+          "matched": true,
+          "hit": "20"
+        },
+        {
+          "name": "Standard",
+          "price": 80,
+          "matched": true,
+          "hit": "80"
+        },
+        {
+          "name": "Professional",
+          "price": 250,
+          "matched": true,
+          "hit": "250"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/starlight-astro.yml",
+      "slug": "starlight-astro",
+      "name": "Starlight (Astro)",
+      "pricing_url": "https://starlight.astro.build/",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/stormkit.yml",
+      "slug": "stormkit",
+      "name": "Stormkit",
+      "pricing_url": "https://www.stormkit.io/",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Premium",
+          "price": 20,
+          "matched": true,
+          "hit": "20"
+        },
+        {
+          "name": "Ultimate",
+          "price": 100,
+          "matched": true,
+          "hit": "100"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/storybook.yml",
+      "slug": "storybook",
+      "name": "Storybook",
+      "pricing_url": "https://storybook.js.org/",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/strapi-cloud.yml",
+      "slug": "strapi-cloud",
+      "name": "**Strapi Cloud**",
+      "pricing_url": "https://strapi.io/pricing-cloud",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/stream.yml",
+      "slug": "stream",
+      "name": "Stream",
+      "pricing_url": "https://getstream.io/chat/pricing/",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Build",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Start",
+          "price": 399,
+          "matched": true,
+          "hit": "399"
+        },
+        {
+          "name": "Elevate",
+          "price": 599,
+          "matched": true,
+          "hit": "599"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/stripe.yml",
+      "slug": "stripe",
+      "name": "Stripe",
+      "pricing_url": "https://stripe.com/pricing",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 3,
+      "match_ratio": 0.75,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Standard (Payments)",
+          "price": "2.9% + $0.30",
+          "matched": false
+        },
+        {
+          "name": "Billing",
+          "price": "0.7%",
+          "matched": true,
+          "hit": "0.7%"
+        },
+        {
+          "name": "Connect",
+          "price": "0.25%",
+          "matched": true,
+          "hit": "0.25%"
+        },
+        {
+          "name": "Radar for Fraud Teams",
+          "price": "$0.02",
+          "matched": true,
+          "hit": "0.02"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/stytch.yml",
+      "slug": "stytch",
+      "name": "Stytch",
+      "pricing_url": "https://stytch.com/pricing",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/sumo-logic.yml",
+      "slug": "sumo-logic",
+      "name": "Sumo Logic",
+      "pricing_url": "https://www.sumologic.com/pricing",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/supabase-auth.yml",
+      "slug": "supabase-auth",
+      "name": "Supabase Auth",
+      "pricing_url": "https://supabase.com/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pro",
+          "price": 25,
+          "matched": true,
+          "hit": "25"
+        },
+        {
+          "name": "Team",
+          "price": 599,
+          "matched": true,
+          "hit": "599"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/supabase-storage.yml",
+      "slug": "supabase-storage",
+      "name": "Supabase Storage",
+      "pricing_url": "https://supabase.com/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pro",
+          "price": 25,
+          "matched": true,
+          "hit": "25"
+        },
+        {
+          "name": "Team",
+          "price": 599,
+          "matched": true,
+          "hit": "599"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/supabase.yml",
+      "slug": "supabase",
+      "name": "Supabase",
+      "pricing_url": "https://supabase.com/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pro",
+          "price": 25,
+          "matched": true,
+          "hit": "25"
+        },
+        {
+          "name": "Team",
+          "price": 599,
+          "matched": true,
+          "hit": "599"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/supertokens.yml",
+      "slug": "supertokens",
+      "name": "SuperTokens",
+      "pricing_url": "https://supertokens.com/pricing",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Self-Hosted (Open Source)",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Cloud (Managed)",
+          "price": "$0.02",
+          "matched": true,
+          "hit": "$0.02"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/surge-sh.yml",
+      "slug": "surge-sh",
+      "name": "Surge.sh",
+      "pricing_url": "https://surge.sh/pricing",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Surge",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Surge Professional",
+          "price": 30,
+          "matched": true,
+          "hit": "30"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/taiga.yml",
+      "slug": "taiga",
+      "name": "Taiga",
+      "pricing_url": "https://taiga.io/deployment-pricing-options/",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 4,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free (Gratis)",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Enthusiast",
+          "price": 5,
+          "matched": true,
+          "hit": "5"
+        },
+        {
+          "name": "Basic",
+          "price": 20,
+          "matched": true,
+          "hit": "20"
+        },
+        {
+          "name": "Premium",
+          "price": 60,
+          "matched": true,
+          "hit": "60"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/tailscale.yml",
+      "slug": "tailscale",
+      "name": "**Tailscale**",
+      "pricing_url": "https://tailscale.com/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Personal",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Standard",
+          "price": 8,
+          "matched": true,
+          "hit": "8"
+        },
+        {
+          "name": "Premium",
+          "price": 18,
+          "matched": true,
+          "hit": "18"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/tantivy.yml",
+      "slug": "tantivy",
+      "name": "**Tantivy**",
+      "pricing_url": "https://github.com/quickwit-oss/tantivy",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/testflight.yml",
+      "slug": "testflight",
+      "name": "**TestFlight**",
+      "pricing_url": "https://developer.apple.com/testflight/",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/tidb-cloud-starter.yml",
+      "slug": "tidb-cloud-starter",
+      "name": "TiDB Cloud Starter",
+      "pricing_url": "https://www.pingcap.com/pricing/",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 3,
+      "match_ratio": 0.75,
+      "candidate": false,
+      "details": [
+        {
+          "name": "TiDB Cloud Starter",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "TiDB Cloud Essential (Preview)",
+          "price": "~$20",
+          "matched": false
+        },
+        {
+          "name": "TiDB Cloud Premium (Preview)",
+          "price": 1800,
+          "matched": true,
+          "hit": "1800"
+        },
+        {
+          "name": "TiDB Cloud Dedicated",
+          "price": "$0.22",
+          "matched": true,
+          "hit": "$0.22"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/tigris.yml",
+      "slug": "tigris",
+      "name": "Tigris",
+      "pricing_url": "https://www.tigrisdata.com/pricing/",
+      "http_status": 200,
+      "total_prices": 5,
+      "matched_prices": 5,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free Tier",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Standard",
+          "price": "$0.02",
+          "matched": true,
+          "hit": "$0.02"
+        },
+        {
+          "name": "Infrequent Access",
+          "price": "$0.01",
+          "matched": true,
+          "hit": "$0.01"
+        },
+        {
+          "name": "Archive",
+          "price": "$0.004",
+          "matched": true,
+          "hit": "$0.004"
+        },
+        {
+          "name": "Archive Instant Retrieval",
+          "price": "$0.004",
+          "matched": true,
+          "hit": "$0.004"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/together-ai.yml",
+      "slug": "together-ai",
+      "name": "Together AI",
+      "pricing_url": "https://www.together.ai/pricing",
+      "http_status": 200,
+      "total_prices": 5,
+      "matched_prices": 1,
+      "match_ratio": 0.2,
+      "candidate": true,
+      "details": [
+        {
+          "name": "Free Credits + Free Models",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Dedicated Inference",
+          "price": "$6.49–$11.95",
+          "matched": false
+        },
+        {
+          "name": "GPU Clusters (On-Demand)",
+          "price": "$5.49–$9.95",
+          "matched": false
+        },
+        {
+          "name": "GPU Clusters (Reserved)",
+          "price": "$3.99–$9.65",
+          "matched": false
+        },
+        {
+          "name": "Fine-Tuning",
+          "price": "$0.48–$8.00",
+          "matched": false
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/tolgee.yml",
+      "slug": "tolgee",
+      "name": "Tolgee",
+      "pricing_url": "https://tolgee.io/pricing",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 4,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Team",
+          "price": 49,
+          "matched": true,
+          "hit": "49"
+        },
+        {
+          "name": "Business",
+          "price": 179,
+          "matched": true,
+          "hit": "179"
+        },
+        {
+          "name": "Advanced",
+          "price": 499,
+          "matched": true,
+          "hit": "499"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/transifex.yml",
+      "slug": "transifex",
+      "name": "Transifex",
+      "pricing_url": "https://www.transifex.com/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Open-Source / Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Starter",
+          "price": 135,
+          "matched": true,
+          "hit": "135"
+        },
+        {
+          "name": "Growth",
+          "price": 200,
+          "matched": true,
+          "hit": "200"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/travis-ci.yml",
+      "slug": "travis-ci",
+      "name": "Travis CI",
+      "pricing_url": "https://www.travis-ci.com/pricing/",
+      "http_status": 200,
+      "total_prices": 6,
+      "matched_prices": 6,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free Trial",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Usage Based (Monthly)",
+          "price": 15,
+          "matched": true,
+          "hit": "15"
+        },
+        {
+          "name": "Usage Based (Annual)",
+          "price": 13.75,
+          "matched": true,
+          "hit": "13.75"
+        },
+        {
+          "name": "Unlimited (Monthly)",
+          "price": 78,
+          "matched": true,
+          "hit": "78"
+        },
+        {
+          "name": "Unlimited (Annual)",
+          "price": 72,
+          "matched": true,
+          "hit": "72"
+        },
+        {
+          "name": "Server",
+          "price": 34,
+          "matched": true,
+          "hit": "34"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/trello.yml",
+      "slug": "trello",
+      "name": "Trello",
+      "pricing_url": "https://trello.com/pricing",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 4,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Standard",
+          "price": 5,
+          "matched": true,
+          "hit": "5"
+        },
+        {
+          "name": "Premium",
+          "price": 10,
+          "matched": true,
+          "hit": "10"
+        },
+        {
+          "name": "Enterprise",
+          "price": 17.5,
+          "matched": true,
+          "hit": "17.5"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/trieve.yml",
+      "slug": "trieve",
+      "name": "Trieve",
+      "pricing_url": "https://www.trieve.ai/blog/usage-based-pricing",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free Tier",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pay-as-you-go",
+          "price": 5,
+          "matched": true,
+          "hit": "5"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/trivy-aqua-security.yml",
+      "slug": "trivy-aqua-security",
+      "name": "**Trivy (Aqua Security)**",
+      "pricing_url": "https://trivy.dev/",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/trunk-check.yml",
+      "slug": "trunk-check",
+      "name": "Trunk Check",
+      "pricing_url": "https://trunk.io/pricing",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/turso.yml",
+      "slug": "turso",
+      "name": "Turso",
+      "pricing_url": "https://turso.tech/pricing",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 4,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Developer",
+          "price": 4.99,
+          "matched": true,
+          "hit": "4.99"
+        },
+        {
+          "name": "Scaler",
+          "price": 24.92,
+          "matched": true,
+          "hit": "24.92"
+        },
+        {
+          "name": "Pro",
+          "price": 416.58,
+          "matched": true,
+          "hit": "416.58"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/twilio.yml",
+      "slug": "twilio",
+      "name": "Twilio",
+      "pricing_url": "https://www.twilio.com/en-us/pricing",
+      "http_status": 200,
+      "total_prices": 5,
+      "matched_prices": 5,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free trial",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "SMS (US)",
+          "price": 0.0083,
+          "matched": true,
+          "hit": "0.0083"
+        },
+        {
+          "name": "Voice",
+          "price": 0.014,
+          "matched": true,
+          "hit": "0.014"
+        },
+        {
+          "name": "Verify",
+          "price": 0.05,
+          "matched": true,
+          "hit": "0.05"
+        },
+        {
+          "name": "SendGrid Email",
+          "price": 19.95,
+          "matched": true,
+          "hit": "19.95"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/twist.yml",
+      "slug": "twist",
+      "name": "Twist",
+      "pricing_url": "https://twist.com/pricing",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Unlimited",
+          "price": 6,
+          "matched": true,
+          "hit": "6"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/typesense-cloud.yml",
+      "slug": "typesense-cloud",
+      "name": "**Typesense Cloud**",
+      "pricing_url": "https://cloud.typesense.org/pricing",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/typesense.yml",
+      "slug": "typesense",
+      "name": "Typesense Cloud",
+      "pricing_url": "https://cloud.typesense.org/pricing",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free trial",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Self-hosted (OSS)",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/umami-cloud.yml",
+      "slug": "umami-cloud",
+      "name": "Umami Cloud",
+      "pricing_url": "https://umami.is/pricing",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/uploadthing.yml",
+      "slug": "uploadthing",
+      "name": "UploadThing",
+      "pricing_url": "https://uploadthing.com/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free (2GB App)",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "100GB App",
+          "price": 10,
+          "matched": true,
+          "hit": "10"
+        },
+        {
+          "name": "Usage Based",
+          "price": 25,
+          "matched": true,
+          "hit": "25"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/upstash-redis.yml",
+      "slug": "upstash-redis",
+      "name": "Upstash Redis",
+      "pricing_url": "https://upstash.com/pricing/redis",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pay as You Go",
+          "price": 0.2,
+          "matched": true,
+          "hit": "0.2"
+        },
+        {
+          "name": "Fixed (Pro)",
+          "price": 10,
+          "matched": true,
+          "hit": "10"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/uptimerobot.yml",
+      "slug": "uptimerobot",
+      "name": "UptimeRobot",
+      "pricing_url": "https://uptimerobot.com/pricing/",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 4,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Solo",
+          "price": 7,
+          "matched": true,
+          "hit": "7"
+        },
+        {
+          "name": "Team",
+          "price": 29,
+          "matched": true,
+          "hit": "29"
+        },
+        {
+          "name": "Enterprise",
+          "price": 54,
+          "matched": true,
+          "hit": "54"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/val-town.yml",
+      "slug": "val-town",
+      "name": "**Val Town**",
+      "pricing_url": "https://www.val.town/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pro",
+          "price": 8.33,
+          "matched": true,
+          "hit": "8.33"
+        },
+        {
+          "name": "Teams",
+          "price": 166.67,
+          "matched": true,
+          "hit": "166.67"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/vector-open-source.yml",
+      "slug": "vector-open-source",
+      "name": "Vector (open-source)",
+      "pricing_url": "https://vector.dev/",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/vercel-dns.yml",
+      "slug": "vercel-dns",
+      "name": "**Vercel DNS**",
+      "pricing_url": "https://vercel.com/docs/domains",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Hobby",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pro",
+          "price": 20,
+          "matched": true,
+          "hit": "20"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/vercel.yml",
+      "slug": "vercel",
+      "name": "Vercel",
+      "pricing_url": "https://vercel.com/pricing",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Hobby",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pro",
+          "price": 20,
+          "matched": true,
+          "hit": "20"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/vikunja.yml",
+      "slug": "vikunja",
+      "name": "Vikunja",
+      "pricing_url": "https://vikunja.io/",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/vonage.yml",
+      "slug": "vonage",
+      "name": "Vonage",
+      "pricing_url": "https://www.vonage.com/communications-apis/pricing/",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/vultr.yml",
+      "slug": "vultr",
+      "name": "Vultr",
+      "pricing_url": "https://www.vultr.com/pricing/",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 4,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free trial credit",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Regular Performance",
+          "price": 2.5,
+          "matched": true,
+          "hit": "2.5"
+        },
+        {
+          "name": "High Frequency",
+          "price": 6,
+          "matched": true,
+          "hit": "6"
+        },
+        {
+          "name": "VX1 Cloud Compute",
+          "price": 43.8,
+          "matched": true,
+          "hit": "43.8"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/weblate.yml",
+      "slug": "weblate",
+      "name": "Weblate",
+      "pricing_url": "https://weblate.org/en/hosting/",
+      "http_status": 200,
+      "total_prices": 5,
+      "matched_prices": 5,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Libre",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "10k",
+          "price": 47,
+          "matched": true,
+          "hit": "47"
+        },
+        {
+          "name": "40k",
+          "price": 70,
+          "matched": true,
+          "hit": "70"
+        },
+        {
+          "name": "160k",
+          "price": 114,
+          "matched": true,
+          "hit": "114"
+        },
+        {
+          "name": "2.5M",
+          "price": 342,
+          "matched": true,
+          "hit": "342"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/windsurf.yml",
+      "slug": "windsurf",
+      "name": "**Windsurf**",
+      "pricing_url": "https://windsurf.com/pricing",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 4,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Pro",
+          "price": 20,
+          "matched": true,
+          "hit": "20"
+        },
+        {
+          "name": "Teams",
+          "price": 40,
+          "matched": true,
+          "hit": "40"
+        },
+        {
+          "name": "Max",
+          "price": 200,
+          "matched": true,
+          "hit": "200"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/workos-authkit.yml",
+      "slug": "workos-authkit",
+      "name": "WorkOS AuthKit",
+      "pricing_url": "https://workos.com/pricing",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free (AuthKit)",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "SSO (per connection)",
+          "price": 125,
+          "matched": true,
+          "hit": "125"
+        },
+        {
+          "name": "Directory Sync (per connection)",
+          "price": 125,
+          "matched": true,
+          "hit": "125"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/workos.yml",
+      "slug": "workos",
+      "name": "WorkOS AuthKit",
+      "pricing_url": "https://workos.com/pricing",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 4,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free (AuthKit)",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Enterprise SSO",
+          "price": 125,
+          "matched": true,
+          "hit": "125"
+        },
+        {
+          "name": "Directory Sync",
+          "price": 125,
+          "matched": true,
+          "hit": "125"
+        },
+        {
+          "name": "Audit Logs",
+          "price": 99,
+          "matched": true,
+          "hit": "99"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/xai-grok.yml",
+      "slug": "xai-grok",
+      "name": "xAI (Grok)",
+      "pricing_url": "https://docs.x.ai/developers/models",
+      "http_status": 200,
+      "total_prices": 5,
+      "matched_prices": 5,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free credits",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Grok 4.3",
+          "price": 1.25,
+          "matched": true,
+          "hit": "1.25"
+        },
+        {
+          "name": "Grok 4.1 Fast",
+          "price": 0.2,
+          "matched": true,
+          "hit": "0.2"
+        },
+        {
+          "name": "Image generation",
+          "price": 0.02,
+          "matched": true,
+          "hit": "0.02"
+        },
+        {
+          "name": "Voice & Audio",
+          "price": 0.05,
+          "matched": true,
+          "hit": "0.05"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/xata.yml",
+      "slug": "xata",
+      "name": "Xata",
+      "pricing_url": "https://xata.io/pricing",
+      "http_status": 200,
+      "total_prices": 2,
+      "matched_prices": 2,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Open Source",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Standard",
+          "price": 0.012,
+          "matched": true,
+          "hit": "0.012"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/youtrack.yml",
+      "slug": "youtrack",
+      "name": "YouTrack",
+      "pricing_url": "https://www.jetbrains.com/youtrack/buy/",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    },
+    {
+      "file": "src/content/services/zeabur.yml",
+      "slug": "zeabur",
+      "name": "Zeabur",
+      "pricing_url": "https://zeabur.com/pricing",
+      "http_status": 200,
+      "total_prices": 4,
+      "matched_prices": 4,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Dev",
+          "price": 5,
+          "matched": true,
+          "hit": "5"
+        },
+        {
+          "name": "Pro",
+          "price": 19,
+          "matched": true,
+          "hit": "19"
+        },
+        {
+          "name": "Team",
+          "price": 79,
+          "matched": true,
+          "hit": "79"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/zeplin.yml",
+      "slug": "zeplin",
+      "name": "Zeplin",
+      "pricing_url": "https://zeplin.io/pricing/",
+      "http_status": 200,
+      "total_prices": 3,
+      "matched_prices": 3,
+      "match_ratio": 1,
+      "candidate": false,
+      "details": [
+        {
+          "name": "Free",
+          "price": 0,
+          "matched": true,
+          "hit": "0"
+        },
+        {
+          "name": "Basic",
+          "price": 13.75,
+          "matched": true,
+          "hit": "13.75"
+        },
+        {
+          "name": "Advanced",
+          "price": 12,
+          "matched": true,
+          "hit": "12"
+        }
+      ]
+    },
+    {
+      "file": "src/content/services/zincsearch.yml",
+      "slug": "zincsearch",
+      "name": "**ZincSearch**",
+      "pricing_url": "https://github.com/zincsearch/zincsearch",
+      "skipped": true,
+      "reason": "fewer than 2 numeric pricing rows"
+    }
+  ]
+}

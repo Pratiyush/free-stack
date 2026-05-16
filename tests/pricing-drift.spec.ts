@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { readFile, readdir } from 'node:fs/promises';
-import { existsSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import yaml from 'js-yaml';
 
@@ -77,6 +77,24 @@ async function loadCandidateSlugs(): Promise<string[]> {
   return FALLBACK_CANDIDATES;
 }
 
+// v3.0 — synchronous candidate load at module-eval time so `playwright test --list`
+// generates a stable suite. Falls back to the hardcoded list if the JSON file
+// doesn't exist or fails to parse. Async loader above kept for compatibility.
+function loadCandidateSlugsSync(): string[] {
+  if (!existsSync(CANDIDATE_LIST_PATH)) return FALLBACK_CANDIDATES;
+  try {
+    const raw = readFileSync(CANDIDATE_LIST_PATH, 'utf-8');
+    const parsed = JSON.parse(raw) as { slugs?: unknown };
+    if (Array.isArray(parsed.slugs) && parsed.slugs.every((s) => typeof s === 'string')) {
+      const slugs = parsed.slugs as string[];
+      return slugs.length > 0 ? slugs : FALLBACK_CANDIDATES;
+    }
+  } catch {
+    // Fall through.
+  }
+  return FALLBACK_CANDIDATES;
+}
+
 async function loadService(slug: string): Promise<ServiceYaml | null> {
   // Try exact slug match first, then fall back to scanning the directory.
   const direct = path.join(SERVICES_DIR, `${slug}.yml`);
@@ -142,27 +160,21 @@ function priceAppearsInHtml(price: number | string, htmlLower: string): boolean 
   return variants.some((v) => htmlLower.includes(v));
 }
 
-// Run sequentially — we hit real external pricing pages and don't want to
-// thunder a single host.
-test.describe.configure({ mode: 'serial' });
+// v3.0 — DON'T use serial mode. In serial, one failure skips all remaining
+// tests in the describe block, which defeats the verifier (we want a FULL
+// drift report, not "first 1 broken"). Use default mode + a single worker
+// (set in playwright.config.ts via `workers: 1`) to avoid hammering hosts.
+
+// Resolve the candidate list synchronously at module eval so the for-loop
+// below generates one test per real candidate (not the fallback).
+const CANDIDATES = loadCandidateSlugsSync();
 
 test.describe('pricing-drift (JS-rendered candidates)', () => {
-  // Use synchronous fallback list at module-load time so test.each-style
-  // generation is deterministic during `playwright test --list`. The async
-  // candidate file (if present) is consulted at the start of the test run
-  // via a setup test.
-  const slugs = FALLBACK_CANDIDATES.slice();
-
-  // Resolve the richer candidate list once (mutates `slugs` if file exists).
   test.beforeAll(async () => {
-    const resolved = await loadCandidateSlugs();
-    if (resolved.length > 0) {
-      slugs.splice(0, slugs.length, ...resolved);
-    }
-    console.log(`Pricing drift check across ${slugs.length} candidate services.`);
+    console.log(`Pricing drift check across ${CANDIDATES.length} candidate services.`);
   });
 
-  for (const slug of FALLBACK_CANDIDATES) {
+  for (const slug of CANDIDATES) {
     test(`${slug}: live prices match YAML`, async ({ page }) => {
       const service = await loadService(slug);
       test.skip(!service, `no YAML found for slug "${slug}"`);
