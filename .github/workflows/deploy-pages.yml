@@ -83,6 +83,11 @@ jobs:
 
       - name: Build Astro site
         if: steps.source.outputs.source == 'astro'
+        env:
+          # Pages serves at pratiyush.github.io/opentier/ today. When the
+          # opentier.dev custom domain lands, flip this to "/" via the secret
+          # PUBLIC_SITE_BASE (set in repo Settings → Secrets → Actions).
+          PUBLIC_SITE_BASE: ${{ vars.PUBLIC_SITE_BASE || '/opentier' }}
         run: pnpm build
 
       - name: Setup Pages

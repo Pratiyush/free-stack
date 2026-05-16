@@ -69,7 +69,7 @@ function nameToIconSlug(name) {
  */
 function candidatesFor(service) {
   const out = [];
-  const slug = service.slug; // free-stack slug, kebab-cased
+  const slug = service.slug; // opentier slug, kebab-cased
   const name = service.name; // human title
 
   // 1. Manual alias.

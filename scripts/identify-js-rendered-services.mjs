@@ -39,7 +39,7 @@ const FETCH_TIMEOUT_MS = 15_000;
 const CONCURRENCY = 6;
 
 const USER_AGENT =
-  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36 free-stack-drift-identify/1.0';
+  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36 opentier-drift-identify/1.0';
 
 const NON_NUMERIC_PRICES = new Set([
   'custom',

@@ -19,7 +19,7 @@
  *   - On miss across all sources, leave the YAML alone and queue the slug
  *     for manual fallback (Lucide-tinted or monogram).
  *
- * Each source has an explicit slug map (per-free-stack-slug → source slug)
+ * Each source has an explicit slug map (per-opentier-slug → source slug)
  * to avoid the "first-word" trap (e.g., a generic `oracle` icon does NOT
  * belong on AWS S3). Auto-fallback to normalized-slug lookup also runs as
  * a safety net but is only consulted for sources where it is safe.
@@ -51,7 +51,7 @@ const SELFHST_RAW = 'https://raw.githubusercontent.com/selfhst/icons/main/svg/';
 /* ============================================================
  * Explicit per-source slug maps.
  *
- * Keys: free-stack service slug (kebab).
+ * Keys: opentier service slug (kebab).
  * Values: source-specific lookup token.
  * ============================================================ */
 
@@ -121,7 +121,7 @@ const SVGL_MAP = {
 };
 
 // iconify @logos — broad brand-logos collection, ~1860 entries. Maps
-// free-stack slug → iconify-logos icon name.
+// opentier slug → iconify-logos icon name.
 const ICONIFY_LOGOS_MAP = {
   'launchdarkly-observability': 'launchdarkly',
   'linode-akamai': 'linode',

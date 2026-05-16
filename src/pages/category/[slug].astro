@@ -37,7 +37,7 @@ const sections = SUBCATEGORY_ORDER.map((key) => ({
   }),
 })).filter((section) => section.services.length > 0);
 
-const siteUrl = 'https://freestack.is-a.dev';
+const siteUrl = 'https://opentier.dev';
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -67,7 +67,7 @@ const jsonLd = {
 <BaseLayout
   title={category.data.name}
   description={category.data.blurb}
-  canonical={`https://freestack.is-a.dev/category/${category.id}`}
+  canonical={`https://opentier.dev/category/${category.id}`}
 >
   <script slot="head" type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)} />
   <section class="category-page container">
@@ -90,7 +90,7 @@ const jsonLd = {
           <p class="no-results-hint">
             In the meantime, browse <a href="/catalog">all services</a> or{' '}
             <a
-              href="https://github.com/Pratiyush/free-stack/issues/new?template=01-submit-service.yml"
+              href="https://github.com/Pratiyush/opentier/issues/new?template=01-submit-service.yml"
               rel="noopener noreferrer"
               target="_blank"
             >

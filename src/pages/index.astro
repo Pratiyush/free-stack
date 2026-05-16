@@ -35,22 +35,22 @@ const wallServices = services
 const issueNumber = '009';
 
 /* Schema.org JSON-LD — Organization + WebSite (with SearchAction) on the home page. */
-const siteUrl = 'https://freestack.is-a.dev';
+const siteUrl = 'https://opentier.dev';
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
       '@type': 'Organization',
-      name: 'free-stack',
+      name: 'opentier',
       url: siteUrl,
       logo: `${siteUrl}/favicon.svg`,
-      sameAs: ['https://github.com/Pratiyush/free-stack'],
+      sameAs: ['https://github.com/Pratiyush/opentier'],
       description:
         'Open-source catalogue of verified free-tier developer services. No ads, no affiliate links.',
     },
     {
       '@type': 'WebSite',
-      name: 'free-stack',
+      name: 'opentier',
       url: siteUrl,
       description: `${services.length} developer services with real free tiers — verified monthly.`,
       potentialAction: {
@@ -76,7 +76,7 @@ const verifiedToday = new Date()
 ---
 
 <BaseLayout
-  title="free-stack"
+  title="opentier"
   description={`${services.length} verified free tiers for developers. No ads, no affiliate links — just the free tier you can actually use.`}
 >
   <script slot="head" type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)} />
@@ -207,7 +207,7 @@ const verifiedToday = new Date()
     <h2>The free-tier list, kept honest.</h2>
     <p>
       Every "awesome free tier" list inevitably rots. Services kill their free tiers; tables get
-      stale; nobody knows what's actually still free. free-stack solves that with a single rule:
+      stale; nobody knows what's actually still free. opentier solves that with a single rule:
       every entry must point at today's pricing page, and every entry has a "verified" date you can
       hold us to.
     </p>

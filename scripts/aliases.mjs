@@ -1,5 +1,5 @@
 /**
- * Manual slug aliases — map a free-stack service slug to the canonical
+ * Manual slug aliases — map a opentier service slug to the canonical
  * simple-icons slug.
  *
  * Used by scripts/bulk-fetch-logos.mjs as a last-step lookup after the

@@ -1,5 +1,5 @@
 /**
- * Single source of truth for the free-stack content Zod schemas.
+ * Single source of truth for the opentier content Zod schemas.
  *
  * This file is plain ESM (`.mjs`) so it can be imported by:
  *   - `src/content.config.ts` (Astro's content collections)

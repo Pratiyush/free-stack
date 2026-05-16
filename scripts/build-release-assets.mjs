@@ -23,7 +23,7 @@ const SERVICES_DIR = path.resolve(ROOT, 'src/content/services');
 const CATEGORIES_DIR = path.resolve(ROOT, 'src/content/categories');
 const OUT_DIR = path.resolve(ROOT, 'dist-assets');
 
-const SITE_URL = 'https://freestack.is-a.dev';
+const SITE_URL = 'https://opentier.dev';
 
 async function listYaml(dir) {
   if (!existsSync(dir)) return [];
@@ -109,7 +109,7 @@ function buildMarkdown(services, categories) {
   });
 
   const lines = [];
-  lines.push(`# free-stack — services export`);
+  lines.push(`# opentier — services export`);
   lines.push('');
   lines.push(
     `Generated ${today} · ${services.length} services across ${orderedCats.length} categories.`,

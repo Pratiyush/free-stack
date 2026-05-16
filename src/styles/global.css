@@ -1,12 +1,11 @@
 @import './tokens.css';
 
-/* Story 5.1c — self-hosted critical font subset for LCP. Loaded FIRST so the
- * browser picks our preloaded /fonts/*.woff2 before Fontsource's bundle. */
-@import './fonts-critical.css';
-
-/* Fontsource Variable fonts — only the wght axis (lightest single-axis import).
- * `index.css` IS the wght-only file; full.css would add opsz/soft/wonk axes.
- * These provide non-latin coverage; latin is served by fonts-critical.css. */
+/* Story 5.1c — critical font @font-face declarations are inlined in BaseLayout
+ * so the url() can carry the base-prefix (works at both /opentier/ subpath
+ * and the future opentier.dev apex).
+ *
+ * Fontsource Variable bundles — non-latin coverage + the opsz/soft/wonk axes
+ * not in our critical subset. */
 @import '@fontsource-variable/fraunces/index.css';
 @import '@fontsource-variable/inter-tight/index.css';
 @import '@fontsource-variable/jetbrains-mono/index.css';

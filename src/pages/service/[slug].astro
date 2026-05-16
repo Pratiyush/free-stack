@@ -59,7 +59,7 @@ const {
 const categoryEntry = await getEntry('categories', category);
 const accent = brand_color ?? FALLBACK_BRAND_COLOR;
 
-const siteUrl = 'https://freestack.is-a.dev';
+const siteUrl = 'https://opentier.dev';
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -138,7 +138,7 @@ const footnotes = collectSources(sources);
 <BaseLayout
   title={name}
   description={summary}
-  canonical={`https://freestack.is-a.dev/service/${service.id}`}
+  canonical={`https://opentier.dev/service/${service.id}`}
   ogImage={`/og/${service.id}.png`}
   ogType="article"
 >
@@ -293,14 +293,14 @@ const footnotes = collectSources(sources);
       <footer class="page-footer">
         <p class="meta">
           <a
-            href={`https://github.com/Pratiyush/free-stack/edit/master/src/content/services/${service.id}.yml`}
+            href={`https://github.com/Pratiyush/opentier/edit/master/src/content/services/${service.id}.yml`}
             rel="noopener noreferrer"
           >
             Suggest an edit
           </a>
           {' · '}
           <a
-            href={`https://github.com/Pratiyush/free-stack/issues/new?title=Pricing+change%3A+${encodeURIComponent(name)}`}
+            href={`https://github.com/Pratiyush/opentier/issues/new?title=Pricing+change%3A+${encodeURIComponent(name)}`}
             rel="noopener noreferrer"
           >
             Report pricing change

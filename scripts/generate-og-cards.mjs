@@ -4,7 +4,7 @@
  *
  * Reads every YAML in src/content/services/, composes an SVG with the service's
  * brand color band, name (Fraunces), tier badge, free-tier headline, and the
- * free-stack wordmark + URL footer. @resvg/resvg-js rasterises to PNG.
+ * opentier wordmark + URL footer. @resvg/resvg-js rasterises to PNG.
  *
  * Output: public/og/<slug>.png (gitignored — regenerated on build).
  *
@@ -126,10 +126,10 @@ function svgFor({ name, brandColor, tier, freeTierHeadline }) {
   <!-- Footer mast: wordmark + URL -->
   <line x1="80" x2="1120" y1="560" y2="560" stroke="#d8d3c6" stroke-width="1" />
   <text x="80" y="600" class="title" font-size="32" fill="#1a1a1a">
-    <tspan fill="${accent}">∗</tspan> free-stack
+    <tspan fill="${accent}">∗</tspan> opentier
   </text>
   <text x="1120" y="600" class="mono" font-size="18" fill="#6b6460" text-anchor="end">
-    freestack.is-a.dev
+    opentier.dev
   </text>
 </svg>`;
 }
@@ -188,7 +188,7 @@ async function generateDefault() {
   const pngPath = path.join(OUT_DIR, 'default.png');
   if (!FORCE && existsSync(pngPath)) return { default: true, skipped: true };
   const svg = svgFor({
-    name: 'free-stack',
+    name: 'opentier',
     brandColor: '#b73d22',
     tier: 'always-free',
     freeTierHeadline:
