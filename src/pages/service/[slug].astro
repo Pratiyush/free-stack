@@ -1,7 +1,13 @@
 ---
 import { getCollection, getEntry } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import TierBadge from '~/components/ui/TierBadge.astro';
+import { FALLBACK_BRAND_COLOR } from '~/lib/theme';
+
+type ServiceEntry = CollectionEntry<'services'>;
+type PricingTier = ServiceEntry['data']['pricing'][number];
+type Sources = NonNullable<ServiceEntry['data']['sources']>;
 
 export async function getStaticPaths() {
   const services = await getCollection('services');
@@ -30,7 +36,7 @@ export async function getStaticPaths() {
   }));
 }
 
-const { service, serial } = Astro.props as { service: any; serial: number };
+const { service, serial } = Astro.props as { service: ServiceEntry; serial: number };
 const {
   name,
   summary,
@@ -51,7 +57,7 @@ const {
 } = service.data;
 
 const categoryEntry = await getEntry('categories', category);
-const accent = brand_color ?? '#1a1a1a';
+const accent = brand_color ?? FALLBACK_BRAND_COLOR;
 
 const siteUrl = 'https://freestack.is-a.dev';
 const jsonLd = {
@@ -113,15 +119,15 @@ const roman = ['i.', 'ii.', 'iii.', 'iv.', 'v.', 'vi.'];
 
 // Sources / footnotes — flatten into a numbered list if present.
 type Source = { url: string; verified?: string; label?: string };
-const collectSources = (s: any): Source[] => {
+const collectSources = (s: Sources | undefined): Source[] => {
   if (!s) return [];
   const out: Source[] = [];
   if (s.pricing?.url)
     out.push({ url: s.pricing.url, verified: s.pricing.verified, label: 'Pricing' });
   if (s.brand?.url) out.push({ url: s.brand.url, verified: s.brand.verified, label: 'Brand' });
-  if (Array.isArray(s.overrides)) {
-    for (const o of s.overrides) {
-      if (o?.url) out.push({ url: o.url, verified: o.verified, label: o.field });
+  if (s.overrides) {
+    for (const [field, o] of Object.entries(s.overrides)) {
+      if (o?.url) out.push({ url: o.url, verified: o.verified, label: field });
     }
   }
   return out;
@@ -191,7 +197,7 @@ const footnotes = collectSources(sources);
           </thead>
           <tbody>
             {
-              pricing.map((tier: any) => {
+              pricing.map((tier: PricingTier) => {
                 const isFree = tier.name === 'Free' || tier.price === 0 || tier.price === 'Free';
                 return (
                   <tr class={isFree ? 'free-row' : ''}>

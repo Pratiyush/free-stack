@@ -1,0 +1,17 @@
+name: Other
+description: Anything else — bugs, doc fixes, site issues, questions about an existing entry.
+title: ''
+labels: ['triage']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For service submissions and pricing changes, please use the dedicated templates — they're much faster to action.
+        For general discussion, please use GitHub Discussions instead.
+  - type: textarea
+    id: issue_summary
+    attributes:
+      label: Issue summary
+      description: What's the problem or request? Steps to reproduce, screenshots, and links are all welcome.
+    validations:
+      required: true

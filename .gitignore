@@ -8,6 +8,7 @@ local/
 drafts/
 .claude/worktrees/
 .claude/settings.local.json
+.claude/scheduled_tasks.lock
 TODO.md
 TASKS.md
 dashboard.html
@@ -15,6 +16,7 @@ dashboard.html
 # Astro / Node build output
 node_modules/
 dist/
+dist-assets/
 .astro/
 
 # Environment

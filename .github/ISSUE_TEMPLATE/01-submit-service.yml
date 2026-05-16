@@ -1,0 +1,102 @@
+name: Submit a service
+description: Propose a new free-tier service for the catalog.
+title: '[Add] '
+labels: ['add-service']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing! Fill out the fields below and a maintainer will turn this into a YAML entry under `src/content/services/`.
+        Please double-check the free-tier details against the official pricing page before submitting.
+  - type: input
+    id: name
+    attributes:
+      label: Service name
+      description: The public product name, exactly as the vendor writes it.
+      placeholder: e.g. Anthropic Claude
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: Pick the closest fit. Suggest a new one via the "Suggest category" template if nothing matches.
+      options:
+        - ai-apis
+        - analytics
+        - auth
+        - baas
+        - code-quality
+        - collaboration
+        - communication
+        - containers
+        - databases
+        - design
+        - dev-tools
+        - dns
+        - documentation
+        - email
+        - hosting
+        - iaas
+        - logs
+        - maps
+        - mobile
+        - paas
+        - payments
+        - project-management
+        - search
+        - security
+        - storage
+        - testing
+        - translation
+    validations:
+      required: true
+  - type: input
+    id: official_url
+    attributes:
+      label: Official URL
+      description: Marketing / homepage URL.
+      placeholder: https://example.com
+    validations:
+      required: true
+  - type: input
+    id: pricing_url
+    attributes:
+      label: Pricing URL
+      description: Link to the official pricing page (preferred over the homepage). Required so we can verify limits.
+      placeholder: https://example.com/pricing
+    validations:
+      required: true
+  - type: textarea
+    id: free_tier
+    attributes:
+      label: Free tier details
+      description: |
+        One concrete limit per line, starting with `-`. Include numeric quotas and rate limits where available.
+      placeholder: |
+        - 1 GB storage
+        - 100k requests / month
+        - No credit card required
+      value: |
+        -
+    validations:
+      required: true
+  - type: dropdown
+    id: tier_type
+    attributes:
+      label: Tier type
+      description: How the free tier works.
+      options:
+        - always-free
+        - free-plan
+        - trial-credit
+        - pay-as-you-go
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes / caveats (optional)
+      description: Auto-pause, credit-card requirement, trial-only, regional limits, etc.
+    validations:
+      required: false

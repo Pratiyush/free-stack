@@ -8,6 +8,7 @@
  */
 import type { CollectionEntry } from 'astro:content';
 import { TIER_LABELS } from '~/lib/labels';
+import { FALLBACK_BRAND_COLOR } from '~/lib/theme';
 
 interface Props {
   services: CollectionEntry<'services'>[];
@@ -24,14 +25,14 @@ const { services, categoryName } = Astro.props;
         <th class="th-name" scope="col">Service</th>
         {
           !categoryName && (
-            <th class="th-cat" scope="col">
+            <th class="th-cat hide-mobile" scope="col">
               Category
             </th>
           )
         }
         <th class="th-tier" scope="col">Tier</th>
-        <th class="th-quotas" scope="col">Quotas</th>
-        <th class="th-cc" scope="col">CC?</th>
+        <th class="th-quotas hide-mobile" scope="col">Quotas</th>
+        <th class="th-cc hide-mobile" scope="col">CC?</th>
         <th class="th-action" scope="col" aria-label="Open"></th>
       </tr>
     </thead>
@@ -39,7 +40,7 @@ const { services, categoryName } = Astro.props;
       {
         services.map((s) => {
           const f = s.data.facets ?? {};
-          const accent = s.data.brand_color ?? '#1a1a1a';
+          const accent = s.data.brand_color ?? FALLBACK_BRAND_COLOR;
           const slugId = `row-${s.data.slug}`;
           const detailId = `detail-${s.data.slug}`;
           const quotas: string[] = [];
@@ -75,7 +76,7 @@ const { services, categoryName } = Astro.props;
                   <span class="row-name">{s.data.name}</span>
                 </td>
                 {!categoryName && (
-                  <td class="cell-cat">
+                  <td class="cell-cat hide-mobile">
                     <span class="cat-mono">{s.data.category}</span>
                   </td>
                 )}
@@ -84,8 +85,8 @@ const { services, categoryName } = Astro.props;
                     {TIER_LABELS[s.data.tier_type]}
                   </span>
                 </td>
-                <td class="cell-quotas">{quotaText}</td>
-                <td class="cell-cc">
+                <td class="cell-quotas hide-mobile">{quotaText}</td>
+                <td class="cell-cc hide-mobile">
                   {f.cc_required === true ? (
                     <span class="cc-yes">CC</span>
                   ) : f.cc_required === false ? (
@@ -257,6 +258,14 @@ const { services, categoryName } = Astro.props;
     min-width: 720px;
     font-size: 0.92rem;
   }
+  @media (max-width: 720px) {
+    .service-table {
+      min-width: 0;
+    }
+    .service-table .hide-mobile {
+      display: none;
+    }
+  }
   .service-table thead th {
     font-family: var(--font-mono);
     font-size: 0.7rem;
@@ -409,6 +418,11 @@ const { services, categoryName } = Astro.props;
     margin-bottom: var(--space-md);
   }
   @media (max-width: 880px) {
+    .detail-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (max-width: 640px) {
     .detail-grid {
       grid-template-columns: 1fr;
     }

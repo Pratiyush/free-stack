@@ -1,0 +1,381 @@
+---
+import { readFileSync } from 'node:fs';
+import path from 'node:path';
+import BaseLayout from '~/layouts/BaseLayout.astro';
+
+/* Read CHANGELOG.md at build time. Astro/Vite execute prerendered pages from
+ * inside `dist/`, so `import.meta.url` is unreliable — anchor to cwd which is
+ * always the project root for `astro dev` / `astro build`. */
+const changelogPath = path.resolve(process.cwd(), 'CHANGELOG.md');
+const rawChangelog = readFileSync(changelogPath, 'utf-8');
+
+/* ----- tiny markdown transformer -----
+ * Handles: h1/h2/h3 (with version-anchor IDs on h2 headings that look like
+ * `[X.Y.Z]` or `[Unreleased]`), bullet lists (one level), paragraphs, inline
+ * code, bold, italic, and links. This is enough for our Keep-a-Changelog file;
+ * we deliberately avoid adding a markdown lib for a single static page.
+ */
+
+type Block =
+  | { kind: 'h1'; text: string }
+  | { kind: 'h2'; text: string; id: string | null }
+  | { kind: 'h3'; text: string }
+  | { kind: 'p'; text: string }
+  | { kind: 'ul'; items: string[] }
+  | { kind: 'hr' };
+
+function versionId(headingText: string): string | null {
+  /* matches `[0.9.0]` / `[1.0.0]` / `[0.1.0-md]` / `[Unreleased]` */
+  const m = headingText.match(/\[([^\]]+)\]/);
+  if (!m) return null;
+  const slug = m[1]
+    .toLowerCase()
+    .replace(/\./g, '')
+    .replace(/[^a-z0-9-]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+  if (!slug) return null;
+  if (slug === 'unreleased') return 'unreleased';
+  /* `0.9.0` -> `v090`; `0.1.0-md` -> `v010-md` */
+  return `v${slug}`;
+}
+
+function escapeHtml(s: string): string {
+  return s
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+function inline(text: string): string {
+  let out = escapeHtml(text);
+  /* code spans first so their internals are not re-formatted */
+  out = out.replace(/`([^`]+)`/g, (_m, code) => `<code>${code}</code>`);
+  /* links [label](href) — only http(s) hrefs to be safe */
+  out = out.replace(
+    /\[([^\]]+)\]\((https?:[^)\s]+)\)/g,
+    (_m, label, href) => `<a href="${href}" rel="noopener noreferrer">${label}</a>`,
+  );
+  /* bold **x** then italic *x* */
+  out = out.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+  out = out.replace(/(^|[^*])\*([^*\n]+)\*/g, '$1<em>$2</em>');
+  return out;
+}
+
+function parseChangelog(md: string): Block[] {
+  const lines = md.split(/\r?\n/);
+  const blocks: Block[] = [];
+  let i = 0;
+  let para: string[] = [];
+  let list: string[] = [];
+
+  const flushPara = () => {
+    if (para.length) {
+      blocks.push({ kind: 'p', text: para.join(' ') });
+      para = [];
+    }
+  };
+  const flushList = () => {
+    if (list.length) {
+      blocks.push({ kind: 'ul', items: list });
+      list = [];
+    }
+  };
+
+  while (i < lines.length) {
+    const line = lines[i];
+    const trimmed = line.trim();
+
+    if (trimmed === '') {
+      flushPara();
+      flushList();
+      i++;
+      continue;
+    }
+    if (trimmed === '---') {
+      flushPara();
+      flushList();
+      blocks.push({ kind: 'hr' });
+      i++;
+      continue;
+    }
+
+    const h3 = trimmed.match(/^###\s+(.+)$/);
+    const h2 = trimmed.match(/^##\s+(.+)$/);
+    const h1 = trimmed.match(/^#\s+(.+)$/);
+
+    if (h1) {
+      flushPara();
+      flushList();
+      blocks.push({ kind: 'h1', text: h1[1].trim() });
+      i++;
+      continue;
+    }
+    if (h2) {
+      flushPara();
+      flushList();
+      const text = h2[1].trim();
+      blocks.push({ kind: 'h2', text, id: versionId(text) });
+      i++;
+      continue;
+    }
+    if (h3) {
+      flushPara();
+      flushList();
+      blocks.push({ kind: 'h3', text: h3[1].trim() });
+      i++;
+      continue;
+    }
+
+    const bullet = line.match(/^[-*]\s+(.+)$/);
+    if (bullet) {
+      flushPara();
+      list.push(bullet[1].trim());
+      i++;
+      continue;
+    }
+    /* continuation of a list item — preceding hyphen-list item with extra
+     * indented text. Keep simple: append to last list item. */
+    if (list.length && /^\s{2,}\S/.test(line)) {
+      list[list.length - 1] += ' ' + line.trim();
+      i++;
+      continue;
+    }
+
+    para.push(trimmed);
+    i++;
+  }
+  flushPara();
+  flushList();
+  return blocks;
+}
+
+function renderBlocks(blocks: Block[]): string {
+  const out: string[] = [];
+  for (const b of blocks) {
+    switch (b.kind) {
+      case 'h1':
+        /* CHANGELOG starts with a "# Changelog" — we render our own <h1>
+         * in the page header, so suppress the first-file h1. */
+        break;
+      case 'h2':
+        if (b.id) {
+          out.push(
+            `<h2 id="${b.id}"><a class="anchor" href="#${b.id}" aria-label="Permalink to ${escapeHtml(
+              b.text,
+            )}">#</a>${inline(b.text)}</h2>`,
+          );
+        } else {
+          out.push(`<h2>${inline(b.text)}</h2>`);
+        }
+        break;
+      case 'h3':
+        out.push(`<h3>${inline(b.text)}</h3>`);
+        break;
+      case 'p':
+        out.push(`<p>${inline(b.text)}</p>`);
+        break;
+      case 'ul':
+        out.push('<ul>');
+        for (const item of b.items) out.push(`  <li>${inline(item)}</li>`);
+        out.push('</ul>');
+        break;
+      case 'hr':
+        out.push('<hr />');
+        break;
+    }
+  }
+  return out.join('\n');
+}
+
+const blocks = parseChangelog(rawChangelog);
+const html = renderBlocks(blocks);
+
+/* Mono dateline — generated at build time. */
+const buildDate = new Date()
+  .toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: '2-digit' })
+  .toUpperCase()
+  .replace(',', '');
+
+/* Build a TOC of version anchors for the sidebar / top jump links. */
+const versions = blocks
+  .filter((b): b is Extract<Block, { kind: 'h2' }> => b.kind === 'h2' && !!b.id)
+  .map((b) => ({ id: b.id!, text: b.text }));
+---
+
+<BaseLayout
+  title="Changelog"
+  description="Every shipped release of free-stack, oldest to newest."
+  canonical="https://freestack.is-a.dev/changelog"
+>
+  <section class="container-narrow changelog-page">
+    <header class="changelog-head">
+      <p class="eyebrow">Changelog</p>
+      <h1>Every shipped release.</h1>
+      <p class="dateline">UPDATED {buildDate} · {versions.length} VERSIONS LOGGED</p>
+      <p class="lede">
+        Each entry is pulled straight from <code>CHANGELOG.md</code> in the repo. The format follows
+        <a href="https://keepachangelog.com/en/1.1.0/" rel="noopener noreferrer">Keep a Changelog</a
+        >. Newest at the top.
+      </p>
+      {
+        versions.length > 0 && (
+          <nav class="version-toc" aria-label="Jump to version">
+            {versions.map((v) => (
+              <a href={`#${v.id}`}>{v.text.replace(/^\[|\].*$/g, '')}</a>
+            ))}
+          </nav>
+        )
+      }
+    </header>
+
+    <article class="changelog-body" set:html={html} />
+  </section>
+
+  <style>
+    .changelog-page {
+      padding-top: var(--space-xl);
+      padding-bottom: var(--space-2xl);
+    }
+    .changelog-head {
+      margin-bottom: var(--space-xl);
+    }
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--color-ink-soft);
+      margin-bottom: var(--space-sm);
+    }
+    .changelog-head h1 {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: clamp(2.4rem, 5vw, 3.4rem);
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      margin: 0;
+    }
+    .dateline {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      color: var(--color-ink-soft);
+      margin-top: var(--space-md);
+      padding-top: var(--space-sm);
+      border-top: var(--border-rule);
+    }
+    .lede {
+      margin-top: var(--space-md);
+      font-size: 1.08rem;
+      color: var(--color-ink-soft);
+      max-width: 60ch;
+    }
+    .version-toc {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.6rem;
+      margin-top: var(--space-md);
+      padding-top: var(--space-md);
+      border-top: var(--border-rule);
+    }
+    .version-toc a {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      color: var(--color-ink-soft);
+      padding: 0.25rem 0.55rem;
+      border: 1px solid var(--color-rule, rgba(0, 0, 0, 0.12));
+      border-radius: 3px;
+      transition:
+        color 0.15s ease,
+        border-color 0.15s ease;
+    }
+    .version-toc a:hover {
+      color: var(--color-ink);
+      border-color: var(--color-ink);
+    }
+
+    /* Body — editorial almanac voice: serif h2/h3, mono code, ink-soft paragraphs. */
+    .changelog-body {
+      font-size: 1rem;
+      color: var(--color-ink-soft);
+      line-height: 1.65;
+    }
+    .changelog-body :global(h2) {
+      font-family: var(--font-display);
+      font-size: 1.7rem;
+      letter-spacing: -0.01em;
+      color: var(--color-ink);
+      margin-top: var(--space-xl);
+      margin-bottom: var(--space-sm);
+      padding-top: var(--space-lg);
+      border-top: var(--border-rule);
+      scroll-margin-top: var(--space-xl);
+      position: relative;
+    }
+    .changelog-body :global(h2 .anchor) {
+      position: absolute;
+      left: -1.4rem;
+      top: 0.35rem;
+      color: var(--color-ink-faint, rgba(0, 0, 0, 0.25));
+      text-decoration: none;
+      font-family: var(--font-mono);
+      font-size: 1rem;
+      opacity: 0;
+      transition: opacity 0.15s ease;
+    }
+    .changelog-body :global(h2:hover .anchor) {
+      opacity: 1;
+    }
+    .changelog-body :global(h3) {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--color-ink);
+      margin-top: var(--space-lg);
+      margin-bottom: var(--space-xs);
+    }
+    .changelog-body :global(p) {
+      margin: 0 0 var(--space-sm);
+      max-width: 65ch;
+    }
+    .changelog-body :global(ul) {
+      padding-left: 1.4rem;
+      margin: 0 0 var(--space-md);
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .changelog-body :global(li) {
+      max-width: 65ch;
+    }
+    .changelog-body :global(code) {
+      font-family: var(--font-mono);
+      font-size: 0.88em;
+      background: var(--color-paper-deep, rgba(0, 0, 0, 0.04));
+      padding: 0.1em 0.35em;
+      border-radius: 3px;
+    }
+    .changelog-body :global(a) {
+      color: var(--color-ink);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.18em;
+    }
+    .changelog-body :global(hr) {
+      border: 0;
+      border-top: var(--border-rule);
+      margin: var(--space-xl) 0;
+    }
+    .changelog-body :global(strong) {
+      color: var(--color-ink);
+    }
+
+    @media (max-width: 640px) {
+      .changelog-body :global(h2 .anchor) {
+        display: none;
+      }
+    }
+  </style>
+</BaseLayout>

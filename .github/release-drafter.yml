@@ -1,0 +1,22 @@
+name-template: 'v$RESOLVED_VERSION'
+tag-template: 'v$RESOLVED_VERSION'
+categories:
+  - title: '🎉 New services'
+    labels: ['add-service', 'content']
+  - title: '📝 Pricing & verification'
+    labels: ['pricing-change', 'verification']
+  - title: '✨ Features'
+    labels: ['feat']
+  - title: '🐛 Bug fixes'
+    labels: ['fix']
+  - title: '🧰 Tooling & maintenance'
+    labels: ['chore', 'ci', 'refactor']
+  - title: '📚 Documentation'
+    labels: ['docs']
+change-template: '- $TITLE (#$NUMBER) @$AUTHOR'
+template: |
+  ## What's changed
+
+  $CHANGES
+
+  **Full changelog**: https://github.com/$OWNER/$REPOSITORY/compare/$PREVIOUS_TAG...v$RESOLVED_VERSION

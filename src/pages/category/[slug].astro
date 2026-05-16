@@ -83,7 +83,24 @@ const jsonLd = {
       <p class="lede">{category.data.blurb}</p>
     </header>
 
-    {services.length === 0 && <p class="empty">No services in this category yet.</p>}
+    {
+      services.length === 0 && (
+        <div class="no-results">
+          <p class="no-results-title">This category is still being curated.</p>
+          <p class="no-results-hint">
+            In the meantime, browse <a href="/catalog">all services</a> or{' '}
+            <a
+              href="https://github.com/Pratiyush/free-stack/issues/new?template=01-submit-service.yml"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              submit one
+            </a>
+            .
+          </p>
+        </div>
+      )
+    }
 
     {
       services.length > 0 && (
@@ -192,10 +209,32 @@ const jsonLd = {
       grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
       gap: var(--space-md);
     }
-    .empty {
-      padding: var(--space-xl) 0;
+    .no-results {
+      background: var(--color-paper-warm);
+      border: 1px dashed var(--color-rule);
+      border-radius: var(--radius-md);
+      padding: var(--space-2xl);
       text-align: center;
       color: var(--color-ink-soft);
+    }
+    .no-results-title {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      color: var(--color-ink);
+      margin: 0 0 var(--space-sm);
+    }
+    .no-results-hint {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--color-ink-soft);
+      margin: 0;
+    }
+    .no-results a {
+      color: var(--color-coral);
+      text-decoration: none;
+    }
+    .no-results a:hover {
+      text-decoration: underline;
     }
   </style>
 </BaseLayout>

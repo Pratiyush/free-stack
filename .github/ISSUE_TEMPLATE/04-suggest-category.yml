@@ -1,0 +1,36 @@
+name: Suggest a new category
+description: Propose a new top-level category for the catalog.
+title: '[Category] '
+labels: ['suggest-category']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this when several existing or candidate services don't fit cleanly into any current category.
+        Categories live in `src/content/categories/` and need at least a handful of viable services to justify their own page.
+  - type: input
+    id: proposed_category
+    attributes:
+      label: Proposed category
+      description: Short, kebab-case slug (e.g. `vector-databases`, `feature-flags`).
+      placeholder: e.g. vector-databases
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale
+      description: Why does this deserve its own category? What does it cover that existing categories don't?
+    validations:
+      required: true
+  - type: textarea
+    id: example_services
+    attributes:
+      label: Example services (3+)
+      description: List at least three services with permanent free tiers that would belong in this category.
+      placeholder: |
+        - Pinecone — https://pinecone.io
+        - Weaviate Cloud — https://weaviate.io
+        - Qdrant Cloud — https://qdrant.tech
+    validations:
+      required: true

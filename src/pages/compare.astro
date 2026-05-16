@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '~/layouts/BaseLayout.astro';
+import { FALLBACK_BRAND_COLOR } from '~/lib/theme';
 
 const services = await getCollection('services');
 
@@ -10,7 +11,7 @@ const services = await getCollection('services');
 const compactServices = services.map((s) => ({
   slug: s.data.slug,
   name: s.data.name,
-  brand_color: s.data.brand_color ?? '#1a1a1a',
+  brand_color: s.data.brand_color ?? FALLBACK_BRAND_COLOR,
   logo: s.data.logo,
   category: s.data.category,
   tier_type: s.data.tier_type,
@@ -38,6 +39,10 @@ const compactServices = services.map((s) => ({
     </header>
 
     <section class="picker" data-picker>
+      <div class="quick-start" data-quick-start hidden>
+        <span class="quick-label">Quick start:</span>
+        <div class="chip-row" data-chip-row></div>
+      </div>
       <label for="picker-input">
         <span class="picker-label">Add a service</span>
         <input
@@ -103,6 +108,12 @@ const compactServices = services.map((s) => ({
     const ledeEl = document.querySelector<HTMLElement>('[data-compare-lede]');
     const pickerInput = document.querySelector<HTMLInputElement>('[data-picker-input]');
     const pickerResults = document.querySelector<HTMLElement>('[data-picker-results]');
+    const quickStartEl = document.querySelector<HTMLElement>('[data-quick-start]');
+    const chipRowEl = document.querySelector<HTMLElement>('[data-chip-row]');
+
+    /* Quick-start example chips — discoverability cues rendered only when the
+       comparison is empty. Click to instantly add to the URL + re-render. */
+    const QUICK_START_SLUGS = ['anthropic-claude', 'groq', 'supabase', 'vercel', 'neon', 'openai'];
 
     /* Facet rows we know how to render. Each row only renders if at least one
        selected service has a non-null value for it. */
@@ -174,9 +185,42 @@ const compactServices = services.map((s) => ({
       window.history.replaceState({}, '', url);
     }
 
+    function renderQuickStart(selectedCount: number) {
+      if (!quickStartEl || !chipRowEl) return;
+      // Show only when no services pinned; hide at the cap to keep the UI tidy.
+      if (selectedCount > 0 || selectedCount >= MAX) {
+        quickStartEl.setAttribute('hidden', '');
+        return;
+      }
+      const chips = QUICK_START_SLUGS.map((slug) => BY_SLUG.get(slug)).filter(Boolean) as Svc[];
+      if (chips.length === 0) {
+        quickStartEl.setAttribute('hidden', '');
+        return;
+      }
+      chipRowEl.innerHTML = chips
+        .map(
+          (s) =>
+            `<button type="button" class="chip" data-chip-add="${s.slug}"><img src="${s.logo}" width="14" height="14" alt="" />${escapeHtml(s.name)}</button>`,
+        )
+        .join('');
+      chipRowEl.querySelectorAll<HTMLButtonElement>('[data-chip-add]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const slug = btn.dataset.chipAdd;
+          if (!slug) return;
+          const next = [...getSlugsFromUrl()];
+          if (!next.includes(slug) && next.length < MAX) next.push(slug);
+          setSlugsInUrl(next);
+          render();
+        });
+      });
+      quickStartEl.removeAttribute('hidden');
+    }
+
     function render() {
       const slugs = getSlugsFromUrl();
       const selected = slugs.map((slug) => BY_SLUG.get(slug)).filter(Boolean) as Svc[];
+
+      renderQuickStart(selected.length);
 
       if (selected.length === 0) {
         gridEl?.setAttribute('hidden', '');
@@ -396,6 +440,52 @@ const compactServices = services.map((s) => ({
       border-radius: var(--radius-md);
       margin-bottom: var(--space-lg);
       position: relative;
+    }
+    .quick-start {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-md);
+    }
+    .quick-label {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-ink-faint);
+    }
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.25rem 0.65rem;
+      background: var(--color-paper-warm);
+      color: var(--color-ink-soft);
+      border: 1px solid var(--color-rule);
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      cursor: pointer;
+      transition:
+        border-color 0.15s ease,
+        color 0.15s ease,
+        background 0.15s ease;
+    }
+    .chip:hover,
+    .chip:focus-visible {
+      border-color: var(--color-ink);
+      color: var(--color-ink);
+      outline: none;
+    }
+    .chip img {
+      flex-shrink: 0;
+      object-fit: contain;
     }
     .picker label {
       display: flex;

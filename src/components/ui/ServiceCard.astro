@@ -1,6 +1,7 @@
 ---
 import TierBadge from './TierBadge.astro';
 import type { CollectionEntry } from 'astro:content';
+import { FALLBACK_BRAND_COLOR } from '~/lib/theme';
 
 interface Props {
   service: CollectionEntry<'services'>;
@@ -11,7 +12,7 @@ interface Props {
 const { service, categoryName, variant = 'default' } = Astro.props;
 const { name, slug, summary, brand_color, logo, tier_type, free_tier, category, facets } =
   service.data;
-const accent = brand_color ?? '#1a1a1a';
+const accent = brand_color ?? FALLBACK_BRAND_COLOR;
 const ccRequired = facets?.cc_required === true;
 ---
 

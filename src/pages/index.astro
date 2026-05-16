@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import ServiceCard from '~/components/ui/ServiceCard.astro';
 import CategoryChip from '~/components/ui/CategoryChip.astro';
+import { FALLBACK_BRAND_COLOR, PLACEHOLDER_BRAND_COLOR } from '~/lib/theme';
 
 const services = await getCollection('services');
 const categories = (await getCollection('categories')).sort((a, b) => a.data.order - b.data.order);
@@ -24,8 +25,8 @@ const wallServices = services
   .filter(
     (s) =>
       s.data.brand_color &&
-      s.data.brand_color !== '#888888' &&
-      s.data.brand_color.toLowerCase() !== '#1a1a1a',
+      s.data.brand_color !== PLACEHOLDER_BRAND_COLOR &&
+      s.data.brand_color.toLowerCase() !== FALLBACK_BRAND_COLOR,
   )
   .sort((a, b) => new Date(b.data.date_added).getTime() - new Date(a.data.date_added).getTime())
   .slice(0, 48);

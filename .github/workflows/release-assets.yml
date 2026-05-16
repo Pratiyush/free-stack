@@ -1,0 +1,54 @@
+name: Release assets
+
+on:
+  release:
+    types: [created]
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-upload:
+    name: Build flat exports + attach to release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build site
+        run: pnpm build
+
+      - name: Build release assets
+        run: node scripts/build-release-assets.mjs
+
+      - name: Resolve tag name
+        id: tag
+        run: |
+          if [ -n "${GITHUB_REF#refs/tags/}" ] && [ "${GITHUB_REF#refs/tags/}" != "$GITHUB_REF" ]; then
+            echo "name=${GITHUB_REF#refs/tags/}" >> "$GITHUB_OUTPUT"
+          else
+            echo "name=${{ github.event.release.tag_name }}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Upload assets to release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release upload "${{ steps.tag.outputs.name }}" \
+            dist-assets/index.json \
+            dist-assets/services.md \
+            --clobber

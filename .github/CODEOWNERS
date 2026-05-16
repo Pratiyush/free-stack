@@ -1,0 +1,7 @@
+# free-stack code owners — auto-request review on these paths
+src/content/services/ @Pratiyush
+src/content/categories/ @Pratiyush
+src/content.config.ts @Pratiyush
+docs/ @Pratiyush
+.github/workflows/ @Pratiyush
+CLAUDE.md @Pratiyush

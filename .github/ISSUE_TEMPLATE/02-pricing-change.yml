@@ -1,0 +1,44 @@
+name: Pricing or free-tier change
+description: Report a change to an existing service's pricing or free-tier limits.
+title: '[Pricing] '
+labels: ['pricing-change']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for changes to limits, quotas, trial length, credit amount, or any other pricing-page edit on an entry that's already in the catalog.
+        For full removals of the free tier, use the "Free tier removed" template instead.
+  - type: input
+    id: service_slug
+    attributes:
+      label: Service slug
+      description: The slug of the existing entry (matches the filename under `src/content/services/`).
+      placeholder: e.g. anthropic-claude
+    validations:
+      required: true
+  - type: textarea
+    id: what_changed
+    attributes:
+      label: What changed
+      description: Old value → new value, with as much specificity as you have.
+      placeholder: |
+        - Free tier dropped from 1M tokens/month to 500k tokens/month
+        - Credit card now required to sign up
+    validations:
+      required: true
+  - type: input
+    id: new_pricing_url
+    attributes:
+      label: New pricing URL (optional)
+      description: If the pricing page URL itself changed, paste the new one here.
+      placeholder: https://example.com/pricing
+    validations:
+      required: false
+  - type: textarea
+    id: source
+    attributes:
+      label: Source
+      description: Link to the changelog, blog post, pricing page, or announcement that documents the change.
+      placeholder: https://example.com/blog/pricing-update
+    validations:
+      required: true

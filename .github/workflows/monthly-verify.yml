@@ -1,0 +1,60 @@
+name: Monthly verification
+
+on:
+  schedule:
+    # 09:00 UTC on the 1st of each month.
+    - cron: '0 9 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  scan:
+    name: Scan for stale date_verified
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build report date
+        id: date
+        run: echo "stamp=$(date -u +%Y%m%d)" >> "$GITHUB_OUTPUT"
+
+      - name: Ensure data directory
+        run: mkdir -p data
+
+      - name: Run stale-services scan
+        id: scan
+        run: |
+          node scripts/stale-services.mjs | tee "data/stale-services-${{ steps.date.outputs.stamp }}.md"
+          stale_count=$(grep -E '^\*\*Stale services: ' "data/stale-services-${{ steps.date.outputs.stamp }}.md" | sed -E 's/[^0-9]//g' || echo 0)
+          echo "stale_count=${stale_count:-0}" >> "$GITHUB_OUTPUT"
+          echo "report_path=data/stale-services-${{ steps.date.outputs.stamp }}.md" >> "$GITHUB_OUTPUT"
+
+      - name: Upload report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: stale-services-${{ steps.date.outputs.stamp }}
+          path: ${{ steps.scan.outputs.report_path }}
+          if-no-files-found: error
+
+      - name: Open issue when stale services exist
+        if: steps.scan.outputs.stale_count != '0'
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: 'Monthly verification: ${{ steps.scan.outputs.stale_count }} services stale'
+          content-filepath: ${{ steps.scan.outputs.report_path }}
+          labels: stale-verification

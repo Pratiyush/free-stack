@@ -1,0 +1,34 @@
+name: Free tier removed
+description: Report that a service has fully removed its free tier (and should move to "Services We Don't Include").
+title: '[Removed] '
+labels: ['dead-service']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this when a service has eliminated its free tier entirely — no permanent free plan, no recurring credits, no usable trial.
+        For limit reductions where a free tier still exists, use the "Pricing change" template instead.
+  - type: input
+    id: service_slug
+    attributes:
+      label: Service slug
+      description: The slug of the existing entry (matches the filename under `src/content/services/`).
+      placeholder: e.g. heroku
+    validations:
+      required: true
+  - type: input
+    id: removal_date
+    attributes:
+      label: Removal date
+      description: When the free tier was (or will be) removed. ISO format preferred.
+      placeholder: '2026-04-15'
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source
+      description: Link to the official announcement, blog post, or pricing page documenting the removal.
+      placeholder: https://example.com/blog/sunset-free-tier
+    validations:
+      required: true

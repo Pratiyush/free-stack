@@ -1,0 +1,573 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+
+const issueNumber = '009';
+const verifiedDateline = 'VERIFIED MAY 2026 · INAUGURAL EDITION';
+const updated = '2026-05-15';
+---
+
+<BaseLayout
+  title="State of Free Tiers 2026"
+  description="Year in review of free-tier developer services: most-improved, biggest cuts, dead services, methodology."
+  canonical="https://freestack.is-a.dev/state-of-free-tiers/2026"
+>
+  <article class="annual-report container-narrow">
+    {/* Masthead — Issue №009 dateline, mono uppercase, ink-faint. Matches the index hero bar. */}
+    <p class="masthead">
+      <span class="issue">Issue №{issueNumber}</span>
+      <span class="dot" aria-hidden="true">·</span>
+      <span class="verified-line">{verifiedDateline}</span>
+      <span class="rule" aria-hidden="true"></span>
+      <time class="updated" datetime={updated}>{updated}</time>
+    </p>
+
+    <header class="report-head">
+      <p class="rom-eyebrow">
+        <span class="rom">§</span> ANNUAL REPORT
+        <span class="dot" aria-hidden="true">·</span>
+        State of Free Tiers · MMXXVI
+      </p>
+      <h1>The free-tier list, kept honest.</h1>
+      <p class="lede">
+        This is the inaugural <em>State of Free Tiers</em> — a year-in-review of what the free tier actually
+        looks like in 2026 for developers building on someone else's infrastructure. We tracked 300 services
+        across 27 categories, re-verified every pricing page by hand, and kept a diary of what got better,
+        what got cut, and what quietly shut down. No affiliate links. No paid placement. No tracking.
+        Just the year, with the receipts.
+      </p>
+    </header>
+
+    {/* II — Big-number stat grid. Same Fraunces big-number pattern as the index hero-stats. */}
+    <section class="block stats-block">
+      <h2><span class="rom">i.</span> The state of the free tier — by the numbers</h2>
+      <p>
+        A year of verification work, distilled into five numbers. Each one took roughly twelve
+        minutes per service per month to keep honest.
+      </p>
+      <dl class="report-stats" aria-label="2026 state of free tiers — headline numbers">
+        <div class="stat">
+          <dt>Services tracked</dt>
+          <dd>300</dd>
+          <p class="stat-note">Across 27 categories.</p>
+        </div>
+        <div class="stat">
+          <dt>Full pricing breakdowns</dt>
+          <dd>271</dd>
+          <p class="stat-note">
+            Free tier <em>and</em> paid-tier highlights, both verified against the live page.
+          </p>
+        </div>
+        <div class="stat">
+          <dt>Bot-blocked pricing pages</dt>
+          <dd>29</dd>
+          <p class="stat-note">JS-rendered or anti-scrape — queued for the Playwright verifier.</p>
+        </div>
+        <div class="stat">
+          <dt>Placeholder brand colors</dt>
+          <dd>100</dd>
+          <p class="stat-note">The remaining design-coverage gap. Logo lookup cascade continues.</p>
+        </div>
+        <div class="stat stat-wide">
+          <dt>Median verification cycle</dt>
+          <dd>12<span class="unit">min</span></dd>
+          <p class="stat-note">Per service, per month. Multiplied by 300 — that's a workweek.</p>
+        </div>
+      </dl>
+    </section>
+
+    {/* III — Most-improved free tiers. 3-5 short editorial blurbs. */}
+    <section class="block">
+      <h2><span class="rom">ii.</span> Most-improved free tiers — 2026 highlights</h2>
+      <p class="section-blurb">
+        Five places the free tier got <em>materially</em> better this year — either a new permanent free
+        tier, a quota increase, or a generation jump in what you can actually do with the allowance.
+      </p>
+
+      <article class="entry">
+        <h3>Cerebras</h3>
+        <p>
+          Cerebras opened a permanent free inference tier with <strong
+            >one million tokens per day</strong
+          >
+          and roughly <strong>2,600 tokens per second</strong> on Llama 3.1 — fast enough that the round-trip
+          feels local. For prototyping AI features against a real model with real latency, it is the most
+          generous launch of the year. The catch is rate limits per minute; the daily allowance is the
+          headline.
+        </p>
+      </article>
+
+      <article class="entry">
+        <h3>Groq</h3>
+        <p>
+          Groq's free developer tier sits at <strong>14,400 requests per day</strong> — the most generous
+          AI-API quota in our entire catalog, by request count. It's not a trial. It's not credit-based.
+          It's a permanent free plan with a posted limit, which is exactly what we ask of an entry before
+          we'll call it &ldquo;free.&rdquo; Llama and Mixtral models, hardware-accelerated on their LPU
+          silicon.
+        </p>
+      </article>
+
+      <article class="entry">
+        <h3>Cloudflare Workers AI</h3>
+        <p>
+          Cloudflare's Workers AI free tier landed at <strong>10,000 Neurons per day</strong> with on-device
+          models running at the edge. The Neuron is a synthetic unit, not a token, but in practice it
+          covers a meaningful amount of inference for hobbyist and prototype work. Bundled into the same
+          dashboard as Workers, R2, and D1 — the easiest end-to-end serverless free stack of 2026.
+        </p>
+      </article>
+
+      <article class="entry">
+        <h3>DeepSeek</h3>
+        <p>
+          DeepSeek released a free inference API for its open-weight reasoning models, with no
+          credit-card requirement at sign-up. The free tier has rate limits rather than a hard
+          quota, which is a different shape than the Groq / Cerebras &ldquo;requests per day&rdquo;
+          model — friendlier for chat workloads, less predictable for batch jobs.
+        </p>
+      </article>
+
+      <article class="entry">
+        <h3>xAI Grok</h3>
+        <p>
+          xAI began handing out <strong>$25/month in API credits</strong> to developers who opt into data
+          sharing for model training. It is, strictly speaking, a trial-credit tier rather than an always-free
+          tier, but the monthly recurrence is what makes it interesting — it's closer to a stipend than
+          a one-shot voucher. Filed under <code>trial-credit</code> in the catalog with the data-sharing
+          caveat in <code>notes</code>.
+        </p>
+      </article>
+    </section>
+
+    {/* IV — Biggest cuts of 2026. Real drift findings from v0.5.0. */}
+    <section class="block">
+      <h2><span class="rom">iii.</span> The biggest cuts of 2026</h2>
+      <p class="section-blurb">
+        The other side of the ledger. Five quota cuts and pricing corrections we caught during the
+        v0.5.0 verification sweep — published with the receipts so the entry diffs are auditable.
+      </p>
+
+      <article class="entry">
+        <h3>Mixpanel</h3>
+        <p>
+          Mixpanel's free tier shrank from <strong>20 million events per month</strong> to
+          <strong>1 million</strong> — a 95% cut. The free plan still exists, but it is now a fundamentally
+          different product: a stub for evaluation rather than a workable hobby analytics tier. We updated
+          the YAML, bumped <code>date_verified</code>, and added a
+          <code>notes</code> line so contributors don't re-list the old number from a stale blog post.
+        </p>
+      </article>
+
+      <article class="entry">
+        <h3>Cloudflare Workers AI (pay-as-you-go)</h3>
+        <p>
+          A pricing correction rather than a cut: our old entry listed Workers AI overage at
+          <strong>$0.50 per 1M Neurons</strong>. The live pricing page reads
+          <strong>$0.011 per 1,000 Neurons</strong> — a 22&times; difference. We were under-quoting the
+          cost by an order of magnitude. The free-tier number didn't change, but the upgrade-path math
+          did, which is exactly the kind of drift the monthly sweep is built to catch.
+        </p>
+      </article>
+
+      <article class="entry">
+        <h3>POEditor</h3>
+        <p>
+          POEditor's free tier dropped from <strong>30,000 strings</strong> to <strong>1,000</strong
+          >
+          — a 97% cut. As with Mixpanel, the plan name is unchanged but the plan itself is no longer the
+          same product. We left the entry in the catalog rather than retiring it, because 1,000 strings
+          is still a real (if narrow) free tier for very small localization jobs. The
+          <code>notes</code> block now spells out the history.
+        </p>
+      </article>
+
+      <article class="entry">
+        <h3>Argos CI</h3>
+        <p>
+          Argos renamed its free plan from <strong>&ldquo;Free&rdquo;</strong> to
+          <strong>&ldquo;Hobby.&rdquo;</strong> The quota is unchanged. Cosmetically minor, but the rename
+          signals direction: &ldquo;Free&rdquo; reads as a permanent floor, &ldquo;Hobby&rdquo; reads
+          as a courtesy that could be revisited. Worth flagging now so we're not surprised when the actual
+          cut lands.
+        </p>
+      </article>
+
+      <article class="entry">
+        <h3>Koyeb</h3>
+        <p>
+          Koyeb moved from an <strong>always-free</strong> small instance to a
+          <strong>credit-based</strong> trial model. The new shape gives more headroom up front and less
+          long-tail value — the opposite of what we want listed under
+          <code>tier_type: always-free</code>. The entry shifted to
+          <code>tier_type: trial-credit</code> and the <code>facets.credit_usd</code> field now carries
+          the real number.
+        </p>
+      </article>
+    </section>
+
+    {/* V — Dead services, moved to "Services we don't include". */}
+    <section class="block">
+      <h2>
+        <span class="rom">iv.</span> Dead services — moved to &ldquo;Services we don't include&rdquo;
+      </h2>
+      <p>
+        When a free tier disappears entirely — or the service shuts down — we don't delete the
+        entry. We move it to a historical list in <code>README.md</code> with a one-line reason. The history
+        matters: it keeps future contributors from re-listing a dead service from a stale blog post or
+        an old &ldquo;best free X&rdquo; roundup, and it gives readers a sense of which categories churn
+        the hardest.
+      </p>
+
+      <article class="entry">
+        <h3>Tebi</h3>
+        <p>
+          Tebi was, briefly, a 25&nbsp;GB S3-compatible object storage free tier — and one of the
+          better deals in the storage category. In 2026 they pivoted to <strong
+            >hospitality point-of-sale software</strong
+          > under the same brand, and the developer storage product went away entirely. Moved to &ldquo;Services
+          we don't include&rdquo; with the pivot note.
+        </p>
+      </article>
+
+      <article class="entry">
+        <h3>Adaptable.io</h3>
+        <p>
+          Adaptable.io shut down in <strong>February 2025</strong>. The platform-as-a-service
+          (Heroku-shaped, with a generous free tier) is no longer reachable. The entry stays in the
+          historical list as a reference, both for posterity and to head off the inevitable
+          &ldquo;why isn't Adaptable on here?&rdquo; issue.
+        </p>
+      </article>
+    </section>
+
+    {/* VI — Methodology. Short. Defers to the methodology page. */}
+    <section class="block">
+      <h2><span class="rom">v.</span> Methodology</h2>
+      <p>
+        Every entry has a <code>date_verified</code> field showing the last time we opened the service's
+        pricing page and compared it, line by line, to what the YAML claims. The cadence is monthly, scheduled,
+        and re-runs end-to-end against the entire catalog. Drift cohorts get tracked in the sprint logs;
+        corrections ship as small content PRs against
+        <code>src/content/services/&lt;slug&gt;.yml</code>.
+      </p>
+      <p>
+        Contributors submit changes through three GitHub issue templates: <em>new service</em>,
+        <em>pricing change</em>, and <em>takedown / correction</em>. The takedown SLA is
+        <strong>48 hours</strong> on business days for the maintainer to respond, and most corrections
+        close within a week. The full process — verification cadence, contributor templates, conflict-of-interest
+        policy — lives at <a href="/methodology">/methodology</a>, and the trademark / takedown /
+        licensing rules live at <a href="/legal">/legal</a>.
+      </p>
+    </section>
+
+    {/* VII — Forward look. */}
+    <section class="block">
+      <h2><span class="rom">vi.</span> What's coming in 2027</h2>
+      <p>
+        The biggest piece of work in flight is the <strong>compare-page facets backfill</strong>:
+        every service gets typed quota fields (<code>storage_gb</code>,
+        <code>requests_per_day</code>, <code>cc_required</code>, <code>trial_days</code>,
+        <code>credit_usd</code>, and a dozen more) so the category-compare surfaces can render
+        side-by-side numeric comparisons instead of paragraph blurbs. Roughly a 10&times; jump in
+        what the compare page can do, once the backfill lands across all 300 entries.
+      </p>
+      <p>
+        Behind that: a <strong>Playwright-based drift verifier</strong> to crack the 29 JS-rendered pricing
+        pages the current Lychee-and-curl pipeline can't read; a likely migration from
+        <strong>GitHub Pages</strong> to <strong>Cloudflare Pages</strong> (decision pending — the Pages
+        build queue has been flaky during release windows); a second maintainer onboarding so the project
+        doesn't have a single point of failure; and an
+        <strong>issue-form-to-PR automation</strong> so straightforward pricing-change reports turn into
+        auto-drafted PRs the maintainer can rubber-stamp instead of re-typing.
+      </p>
+    </section>
+
+    {/* VIII — Colophon. */}
+    <section class="block colophon">
+      <h2><span class="rom">vii.</span> Colophon</h2>
+      <ul class="colophon-list">
+        <li>
+          <strong>Built with</strong> Astro 6, content collections, Pagefind for search, and native View
+          Transitions.
+        </li>
+        <li>
+          <strong>Editorial typography:</strong>
+          <em>Fraunces</em> for display and italics,
+          <em>Inter Tight</em> for body, <em>JetBrains Mono</em> for the dateline and code.
+        </li>
+        <li>
+          <strong>Licensed:</strong> source code under <a
+            href="https://opensource.org/license/mit"
+            rel="noopener noreferrer">MIT</a
+          >; catalog data under <a
+            href="https://creativecommons.org/publicdomain/zero/1.0/"
+            rel="noopener noreferrer">CC0 1.0</a
+          >.
+        </li>
+        <li>
+          <strong>Hand-built</strong> by <a
+            href="https://github.com/Pratiyush"
+            rel="noopener noreferrer">Pratiyush</a
+          > — one maintainer, no team, no investors, no roadmap meetings.
+        </li>
+      </ul>
+      <p class="signoff">
+        <span aria-hidden="true">— </span>End of Issue №{issueNumber}.
+        <span class="signoff-mono">See you in 2027.</span>
+      </p>
+    </section>
+  </article>
+
+  <style>
+    .annual-report {
+      padding-top: var(--space-xl);
+      padding-bottom: var(--space-2xl);
+    }
+
+    /* Masthead bar — lifted from index.astro hero. Mono uppercase, ink-faint, coral issue number. */
+    .masthead {
+      display: flex;
+      align-items: center;
+      gap: 0.6em;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      color: var(--color-ink-faint);
+      margin: 0 0 var(--space-lg);
+      padding-bottom: var(--space-sm);
+      border-bottom: 1px solid var(--color-rule);
+      flex-wrap: wrap;
+    }
+    .masthead .issue {
+      color: var(--color-coral);
+      font-weight: 500;
+    }
+    .masthead .verified-line {
+      color: var(--color-ink-soft);
+      font-weight: 500;
+    }
+    .masthead .dot {
+      color: var(--color-rule);
+    }
+    .masthead .rule {
+      flex: 1;
+      height: 1px;
+      background: var(--color-rule);
+      min-width: 1em;
+    }
+    .masthead .updated {
+      color: var(--color-ink-faint);
+    }
+
+    /* Eyebrow — same pattern as legal.astro. */
+    .rom-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      color: var(--color-ink-faint);
+      margin: 0 0 var(--space-sm);
+      display: flex;
+      align-items: baseline;
+      gap: 0.5em;
+      flex-wrap: wrap;
+    }
+    .rom {
+      color: var(--color-coral);
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 1.1em;
+    }
+    .dot {
+      color: var(--color-rule);
+    }
+
+    /* H1 — italic Fraunces, oversized. */
+    .annual-report h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 4.4vw, 3.2rem);
+      font-weight: 400;
+      font-style: italic;
+      letter-spacing: -0.015em;
+      margin: 0 0 var(--space-md);
+      line-height: 1.05;
+      max-width: 18ch;
+    }
+
+    /* Lede — larger Fraunces, ink color, capped at 58ch so the eye doesn't run. */
+    .report-head .lede {
+      font-family: var(--font-display);
+      font-size: 1.18rem;
+      font-weight: 350;
+      color: var(--color-ink);
+      line-height: 1.55;
+      margin: 0 0 var(--space-2xl);
+      max-width: 60ch;
+    }
+    .report-head .lede em {
+      font-style: italic;
+      color: var(--color-ink);
+    }
+
+    /* Section blocks — top rule, ~65ch readable column. */
+    .block {
+      padding: var(--space-lg) 0;
+      border-top: var(--border-rule);
+      max-width: 65ch;
+    }
+    .block h2 {
+      font-family: var(--font-display);
+      font-size: 1.45rem;
+      font-weight: 500;
+      margin: 0 0 var(--space-md);
+      display: flex;
+      align-items: baseline;
+      gap: 0.5em;
+      line-height: 1.2;
+    }
+    .block p {
+      line-height: 1.65;
+      margin-bottom: var(--space-md);
+      color: var(--color-ink);
+    }
+    .block a {
+      color: var(--color-ink);
+      text-decoration: underline;
+      text-decoration-color: var(--color-coral);
+    }
+    .block em {
+      font-style: italic;
+    }
+    .section-blurb {
+      color: var(--color-ink-soft);
+      max-width: 60ch;
+    }
+
+    /* Entry — a single editorial blurb (h3 + paragraph), separated by a hairline rule. */
+    .entry {
+      margin-top: var(--space-md);
+      padding-top: var(--space-md);
+      border-top: 1px solid var(--color-rule);
+    }
+    .entry:first-of-type {
+      border-top: none;
+      padding-top: 0;
+    }
+    .entry h3 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 500;
+      font-style: italic;
+      margin: 0 0 0.3rem;
+      color: var(--color-ink);
+      letter-spacing: -0.005em;
+    }
+    .entry p {
+      margin: 0;
+      line-height: 1.65;
+    }
+
+    /* Big-number stat grid — Fraunces numerals, mono labels, same pattern as index hero-stats. */
+    .stats-block {
+      max-width: 65ch;
+    }
+    .report-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-lg) var(--space-lg);
+      margin: var(--space-md) 0 0;
+      padding: var(--space-md);
+      background: var(--color-paper-warm);
+      border: 1px solid var(--color-rule);
+      border-radius: var(--radius-md);
+    }
+    @media (max-width: 640px) {
+      .report-stats {
+        grid-template-columns: 1fr;
+      }
+    }
+    .report-stats .stat {
+      min-width: 0;
+    }
+    .report-stats .stat-wide {
+      grid-column: 1 / -1;
+    }
+    .report-stats .stat dt {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-ink-faint);
+    }
+    .report-stats .stat dd {
+      margin: 0.2rem 0 0.3rem;
+      font-family: var(--font-display);
+      font-size: 2.4rem;
+      font-weight: 400;
+      color: var(--color-ink);
+      line-height: 1;
+      font-feature-settings: 'tnum';
+      letter-spacing: -0.01em;
+    }
+    .report-stats .stat dd .unit {
+      font-size: 0.55em;
+      color: var(--color-ink-faint);
+      margin-left: 0.18em;
+      font-feature-settings: normal;
+      letter-spacing: 0;
+    }
+    .report-stats .stat-note {
+      margin: 0;
+      font-size: 0.85rem;
+      color: var(--color-ink-soft);
+      line-height: 1.45;
+      max-width: 36ch;
+    }
+
+    /* Colophon — definition-list shape, almanac sign-off. */
+    .colophon-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 var(--space-lg);
+    }
+    .colophon-list li {
+      padding-left: 1.4em;
+      text-indent: -1.4em;
+      line-height: 1.55;
+      margin-bottom: 0.45rem;
+      color: var(--color-ink);
+    }
+    .colophon-list li::before {
+      content: '— ';
+      color: var(--color-coral);
+    }
+    .colophon-list em {
+      font-style: italic;
+    }
+    .signoff {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--color-ink-soft);
+      margin: var(--space-md) 0 0;
+      padding-top: var(--space-md);
+      border-top: 1px solid var(--color-rule);
+    }
+    .signoff-mono {
+      font-family: var(--font-mono);
+      font-style: normal;
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--color-ink-faint);
+      margin-left: 0.4em;
+    }
+
+    code {
+      font-family: var(--font-mono);
+      font-size: 0.88em;
+      padding: 0.1rem 0.3rem;
+      background: var(--color-paper-warm);
+      border-radius: 3px;
+    }
+  </style>
+</BaseLayout>

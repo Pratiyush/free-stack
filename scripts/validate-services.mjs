@@ -9,59 +9,10 @@ import { readdir, readFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import path from 'node:path';
 import yaml from 'js-yaml';
-import { z } from 'zod';
+import { serviceSchema, categorySchema } from '../src/lib/schema.mjs';
 
 const SERVICES_DIR = path.resolve('src/content/services');
 const CATEGORIES_DIR = path.resolve('src/content/categories');
-
-const TIER_TYPES = ['always-free', 'free-plan', 'trial-credit', 'pay-as-you-go'];
-const SUBCATEGORIES = ['permanent', 'expiring-credits', 'limited'];
-
-const pricingTier = z.object({
-  name: z.string(),
-  description: z.string().optional(),
-  price: z.union([z.number(), z.string()]),
-  unit: z.string().optional(),
-});
-
-const serviceSchema = z.object({
-  name: z.string().min(1).max(60),
-  slug: z.string().regex(/^[a-z0-9-]+$/),
-  category: z.string().regex(/^[a-z0-9-]+$/),
-  subcategory: z.enum(SUBCATEGORIES).optional(),
-  brand_color: z
-    .string()
-    .regex(/^#[0-9a-fA-F]{6}$/)
-    .optional(),
-  logo: z.string().regex(/^\/logos\/.+\.svg$/),
-  summary: z.string().min(10).max(180),
-  notes: z.string().optional(),
-  tier_type: z.enum(TIER_TYPES),
-  free_tier: z.array(z.string().min(3)).min(1),
-  pricing: z.array(pricingTier).min(1),
-  tags: z.array(z.string().regex(/^[a-z0-9-]+$/)).default([]),
-  official_url: z.string().url(),
-  pricing_url: z.string().url().optional(),
-  docs_url: z.string().url().optional(),
-  date_added: z.coerce.date(),
-  date_updated: z
-    .string()
-    .regex(/^\d{4}-\d{2}-\d{2}$/)
-    .optional(),
-  date_verified: z.coerce.date(),
-  last_changed: z.coerce.date().optional(),
-  maintainer_notes: z.string().optional(),
-  submitted_by: z.string().optional(),
-});
-
-const categorySchema = z.object({
-  slug: z.string().regex(/^[a-z0-9-]+$/),
-  name: z.string().min(1).max(60),
-  blurb: z.string().min(10).max(220),
-  icon: z.string().optional(),
-  order: z.number().default(100),
-  parent: z.string().nullable().optional(),
-});
 
 async function listYaml(dir) {
   if (!existsSync(dir)) return [];

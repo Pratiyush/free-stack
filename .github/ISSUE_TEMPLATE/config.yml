@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: General discussion
+    url: https://github.com/Pratiyush/free-stack/discussions
+    about: Anything that isn't a service submission or pricing change.
+  - name: Removal request (trademark / brand)
+    url: mailto:removals@freestack.is-a.dev
+    about: Request removal of your service from the catalog. We respond within 48 hours.
