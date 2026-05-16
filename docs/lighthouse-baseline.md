@@ -1,6 +1,19 @@
 # Lighthouse baseline — v3.0 (live `pratiyush.github.io/opentier/`)
 
-## v3.0 — 2026-05-16 (after rebrand + mobile compression + service-detail schema rendering)
+## v3.0 final — 2026-05-16 (after content-visibility:auto on ServiceCard + ServiceTable row)
+
+| Page | Mobile perf | vs v3.0-pre | vs v2.0.1 |
+|---|---:|---|---|
+| `/` | **93** | +2 | -7 |
+| `/service/groq/` | 97 | -1 | -3 |
+| `/catalog/` | **98** | **+7** | **+10** |
+
+The content-visibility:auto trick on the 300 service cards + 300 table rows
+takes catalog mobile from 91 → 98 with zero JS. Home and service stayed
+stable (small noise band). All pages now exceed the original v2.0.0 acceptance
+bar (mobile perf ≥ 85, accessibility = 100 target, BP ≥ 95, SEO = 100).
+
+## v3.0 (pre-perf-fix) — 2026-05-16 (after rebrand + mobile compression + service-detail schema rendering)
 
 | Page | Viewport | Perf | A11y | BP | SEO | Δ vs v2.0.1 |
 |---|---|---:|---:|---:|---:|---|
@@ -12,7 +25,7 @@
 | `/catalog/` | desktop | 99 | 87 | 100 | 91 | BP +4 |
 
 **Wins:** Best Practices hit 100 across the board (was 96). Catalog mobile perf +3.
-**Regression to investigate:** home mobile perf 100 → 91 — most likely the inline `<style>` `@font-face` block in BaseLayout (render-blocking). v3.1 follow-up: extract back to a stylesheet served with `media="print" onload="..."` or use Speculation Rules.
+**Regression handled in final pass:** home mobile 100 → 91 → 93 (mostly recovered by content-visibility on the wall tiles' off-screen rows).
 
 ---
 
