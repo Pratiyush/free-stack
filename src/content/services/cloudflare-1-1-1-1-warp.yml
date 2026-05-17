@@ -1,4 +1,4 @@
-name: '**Cloudflare 1.1.1.1 + WARP**'
+name: 'Cloudflare 1.1.1.1 + WARP'
 slug: cloudflare-1-1-1-1-warp
 category: dns
 subcategory: permanent

@@ -1,4 +1,4 @@
-name: '**Snyk**'
+name: 'Snyk'
 slug: snyk
 category: security
 subcategory: permanent

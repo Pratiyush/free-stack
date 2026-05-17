@@ -1,4 +1,4 @@
-name: '**Dependabot (GitHub)**'
+name: 'Dependabot (GitHub)'
 slug: dependabot-github
 category: security
 subcategory: permanent

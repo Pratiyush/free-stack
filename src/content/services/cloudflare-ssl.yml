@@ -1,4 +1,4 @@
-name: '**Cloudflare SSL**'
+name: 'Cloudflare SSL'
 slug: cloudflare-ssl
 category: security
 subcategory: permanent

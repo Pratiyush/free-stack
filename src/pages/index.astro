@@ -110,7 +110,7 @@ const verifiedToday = new Date()
           </div>
         </div>
 
-        <aside class="hero-side">
+        <div class="hero-side">
           {/* Sidebar pull-quote — drawn from ref/docs/CONVERSATION.md:18. */}
           <figure class="pull-quote">
             <blockquote>
@@ -140,7 +140,7 @@ const verifiedToday = new Date()
               <dd>0</dd>
             </div>
           </dl>
-        </aside>
+        </div>
       </div>
     </div>
   </section>
@@ -154,12 +154,11 @@ const verifiedToday = new Date()
         Every tile is a service we've verified this month. Click any to open its pricing breakdown.
       </p>
     </header>
-    <div class="wall" role="list">
+    <div class="wall">
       {
         wallServices.map((s) => (
           <a
             class="wall-tile"
-            role="listitem"
             href={`/service/${s.data.slug}`}
             style={`--tile-accent: ${s.data.brand_color};`}
             aria-label={s.data.name}

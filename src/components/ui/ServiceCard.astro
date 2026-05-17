@@ -2,6 +2,7 @@
 import TierBadge from './TierBadge.astro';
 import type { CollectionEntry } from 'astro:content';
 import { FALLBACK_BRAND_COLOR } from '~/lib/theme';
+import { u } from '~/lib/url';
 
 interface Props {
   service: CollectionEntry<'services'>;
@@ -28,7 +29,7 @@ const ccRequired = facets?.cc_required === true;
 
   <header class="hero-zone">
     <div class="logo-frame" aria-hidden="true">
-      <img src={logo} alt="" loading="lazy" width="32" height="32" />
+      <img src={u(logo)} alt="" loading="lazy" width="32" height="32" />
     </div>
     <div class="title-wrap">
       <h3 class="card-name">

@@ -1,4 +1,4 @@
-name: '**Semgrep**'
+name: 'Semgrep'
 slug: semgrep
 category: security
 subcategory: permanent

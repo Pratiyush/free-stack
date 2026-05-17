@@ -1,4 +1,4 @@
-name: '**Trivy (Aqua Security)**'
+name: 'Trivy (Aqua Security)'
 slug: trivy-aqua-security
 category: security
 subcategory: permanent

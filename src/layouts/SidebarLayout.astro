@@ -46,20 +46,19 @@ const pathForCanonical = (Astro.url.pathname || '/').replace(baseStripped, '') |
 const canonical = canonicalProp ?? `${siteUrl}${pathForCanonical}`;
 const absoluteOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
 
+// v5 sandbox has no internal pages — every nav target is a v4 page. Labels
+// suffix `→ v4` so clicks don't feel like silent state loss. See user feedback
+// 2026-05-17: "for v5, when I click on anything, it goes to v4".
 const BROWSE = [
-  { key: 'home', label: 'Home', href: u('/') },
-  { key: 'catalog', label: 'Catalog', href: u('/catalog/'), count: 300 },
-  { key: 'compare', label: 'Compare', href: u('/compare/') },
-  { key: 'report', label: 'State of Free Tiers 2026', href: u('/state-of-free-tiers/2026/') },
+  { key: 'home', label: 'v5 preview (this page)', href: u('/v5-preview') },
 ];
 
-const ABOUT = [
-  { key: 'methodology', label: 'Methodology', href: u('/methodology/') },
-  { key: 'about', label: 'About', href: u('/about/') },
-  { key: 'sponsors', label: 'Sponsors', href: u('/sponsors/') },
-  { key: 'submit', label: 'Submit a service', href: u('/submit/') },
-  { key: 'changelog', label: 'Changelog', href: u('/changelog/') },
-  { key: 'legal', label: 'Legal & takedown', href: u('/legal/') },
+const EXIT_V4 = [
+  { key: 'catalog', label: 'Catalog', href: u('/catalog'), count: 300 },
+  { key: 'compare', label: 'Compare', href: u('/compare') },
+  { key: 'report', label: 'State of Free Tiers 2026', href: u('/state-of-free-tiers/2026') },
+  { key: 'methodology', label: 'Methodology', href: u('/methodology') },
+  { key: 'sponsors', label: 'Sponsors', href: u('/sponsors') },
 ];
 ---
 
@@ -120,7 +119,7 @@ const ABOUT = [
         </div>
 
         <div class="group">
-          <div class="group-head">Browse</div>
+          <div class="group-head">v5 sandbox</div>
           {
             BROWSE.map((item) => (
               <a
@@ -129,31 +128,22 @@ const ABOUT = [
                 aria-current={item.key === activeNav ? 'page' : undefined}
               >
                 {item.label}
-                {item.count != null && <span class="count">{item.count}</span>}
               </a>
             ))
           }
-        </div>
-
-        <div class="group">
-          <div class="group-head">
-            <span>Categories <span style="color: var(--ink-faint);">(27)</span></span>
-          </div>
           <p class="placeholder">
-            CategorySidebar.astro (task #118) lands the collapsible 27-cat list here.
+            Layout preview only — no real v5 routes yet. Links below exit to v4.
           </p>
         </div>
 
         <div class="group">
-          <div class="group-head">About</div>
+          <div class="group-head">Exit to v4 →</div>
           {
-            ABOUT.map((item) => (
-              <a
-                class:list={['nav-item', { active: item.key === activeNav }]}
-                href={item.href}
-                aria-current={item.key === activeNav ? 'page' : undefined}
-              >
+            EXIT_V4.map((item) => (
+              <a class="nav-item exit-link" href={item.href}>
                 {item.label}
+                {item.count != null && <span class="count">{item.count}</span>}
+                <span class="exit-mark" aria-hidden="true">↗</span>
               </a>
             ))
           }
@@ -311,6 +301,22 @@ const ABOUT = [
         background: var(--accent-soft);
         color: var(--accent-readable); /* darkened coral — --accent fails 4.5:1 on --accent-soft */
         font-weight: 500;
+      }
+      .side .nav-item.exit-link {
+        color: var(--ink-faint);
+        font-size: 0.82rem;
+      }
+      .side .nav-item.exit-link:hover {
+        color: var(--accent-readable);
+        background: var(--bg-tint);
+      }
+      .side .nav-item .exit-mark {
+        margin-left: auto;
+        opacity: 0.5;
+        font-size: 0.8rem;
+      }
+      .side .nav-item.exit-link:hover .exit-mark {
+        opacity: 1;
       }
       .side .nav-item .count {
         font-family: var(--mono);

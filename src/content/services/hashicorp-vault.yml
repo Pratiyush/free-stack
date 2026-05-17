@@ -1,4 +1,4 @@
-name: '**HashiCorp Vault**'
+name: 'HashiCorp Vault'
 slug: hashicorp-vault
 category: security
 subcategory: permanent
