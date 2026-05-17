@@ -78,6 +78,7 @@ const compactServices = services.map((s) => ({
   </article>
 
   <script type="application/json" id="compare-data" set:html={JSON.stringify(compactServices)} />
+  <script type="application/json" id="compare-base" set:html={JSON.stringify(import.meta.env.BASE_URL.replace(/\/$/, ''))} />
 
   <script>
     /* ---------- compare page client ---------- */
@@ -98,6 +99,9 @@ const compactServices = services.map((s) => ({
     const dataEl = document.getElementById('compare-data');
     const SERVICES: Svc[] = JSON.parse(dataEl?.textContent ?? '[]');
     const BY_SLUG = new Map(SERVICES.map((s) => [s.slug, s]));
+    const BASE_URL: string = JSON.parse(
+      document.getElementById('compare-base')?.textContent ?? '""',
+    );
 
     const MAX = 4;
     const root = document.querySelector<HTMLElement>('[data-compare-root]');
@@ -245,9 +249,9 @@ const compactServices = services.map((s) => ({
                 (s) => `
                 <th class="svc-col" scope="col" style="--accent: ${s.brand_color}">
                   <div class="svc-head">
-                    <img src="${s.logo}" alt="" width="28" height="28" loading="lazy" />
+                    <img src="${BASE_URL}${s.logo}" alt="" width="28" height="28" loading="lazy" />
                     <div>
-                      <a href="/service/${s.slug}" class="svc-name">${s.name}</a>
+                      <a href="${BASE_URL}/service/${s.slug}" class="svc-name">${s.name}</a>
                       <span class="svc-tier">${s.tier_type.replace('-', ' ')}</span>
                     </div>
                     <button type="button" class="remove-btn" data-remove="${s.slug}" aria-label="Remove ${s.name}">✕</button>

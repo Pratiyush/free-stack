@@ -33,7 +33,7 @@ const ccRequired = facets?.cc_required === true;
     </div>
     <div class="title-wrap">
       <h3 class="card-name">
-        <a href={`/service/${slug}`}>{name}</a>
+        <a href={u(`/service/${slug}`)}>{name}</a>
       </h3>
       {categoryName && <p class="card-category">{categoryName}</p>}
     </div>
@@ -62,7 +62,7 @@ const ccRequired = facets?.cc_required === true;
         )
       }
     </div>
-    <a class="detail-link" href={`/service/${slug}`}>Details →</a>
+    <a class="detail-link" href={u(`/service/${slug}`)}>Details →</a>
   </footer>
 </article>
 

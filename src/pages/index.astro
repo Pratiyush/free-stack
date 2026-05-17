@@ -4,6 +4,7 @@ import BaseLayout from '~/layouts/BaseLayout.astro';
 import ServiceCard from '~/components/ui/ServiceCard.astro';
 import CategoryChip from '~/components/ui/CategoryChip.astro';
 import { FALLBACK_BRAND_COLOR, PLACEHOLDER_BRAND_COLOR } from '~/lib/theme';
+import { u } from '~/lib/url';
 
 const services = await getCollection('services');
 const categories = (await getCollection('categories')).sort((a, b) => a.data.order - b.data.order);
@@ -105,8 +106,8 @@ const verifiedToday = new Date()
             placement.
           </p>
           <div class="cta-row">
-            <a class="cta-primary" href="/catalog">Browse {services.length} services →</a>
-            <a class="cta-secondary" href="/methodology">How we verify</a>
+            <a class="cta-primary" href={u('/catalog')}>Browse {services.length} services →</a>
+            <a class="cta-secondary" href={u('/methodology')}>How we verify</a>
           </div>
         </div>
 
@@ -159,7 +160,7 @@ const verifiedToday = new Date()
         wallServices.map((s) => (
           <a
             class="wall-tile"
-            href={`/service/${s.data.slug}`}
+            href={u(`/service/${s.data.slug}`)}
             style={`--tile-accent: ${s.data.brand_color};`}
             aria-label={s.data.name}
             transition:name={`card-${s.data.slug}`}
@@ -213,7 +214,7 @@ const verifiedToday = new Date()
     <p>
       The project is open source and non-commercial. The only money is voluntary sponsorship via
       GitHub Sponsors and Buy Me a Coffee — used to cover the domain and hosting bill, nothing else.
-      <a href="/sponsors">More on sponsorship →</a>
+      <a href={u('/sponsors')}>More on sponsorship →</a>
     </p>
   </section>
 

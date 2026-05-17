@@ -9,6 +9,7 @@
 import type { CollectionEntry } from 'astro:content';
 import { TIER_LABELS } from '~/lib/labels';
 import { FALLBACK_BRAND_COLOR } from '~/lib/theme';
+import { u } from '~/lib/url';
 
 interface Props {
   services: CollectionEntry<'services'>[];
@@ -173,7 +174,7 @@ const { services, categoryName } = Astro.props;
                       </div>
                     </div>
                     <div class="detail-cta">
-                      <a class="detail-link primary" href={`/service/${s.data.slug}`}>
+                      <a class="detail-link primary" href={u(`/service/${s.data.slug}`)}>
                         Full pricing breakdown →
                       </a>
                       {s.data.pricing_url && (
