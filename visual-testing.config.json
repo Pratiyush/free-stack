@@ -13,7 +13,8 @@
     "/changelog",
     "/legal",
     "/submit",
-    "/about"
+    "/about",
+    "/v5-preview"
   ],
   "viewports": [
     { "w": 1440, "h": 900, "label": "desktop" },
@@ -21,7 +22,7 @@
     { "w": 390, "h": 844, "label": "mobile" }
   ],
   "themes": ["light", "dark"],
-  "shells": ["v5", "v4"],
+  "shells": [],
   "themeStorageKey": "opentier-theme",
   "shellStorageKey": "opentier-layout",
   "fullPage": false,

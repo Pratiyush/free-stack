@@ -20,17 +20,18 @@
   --color-ink: #1a1a1a;
   --color-ink-softer: #2a241e;
   --color-ink-soft: #4a443e; /* WCAG AA: 7.5:1 on paper */
-  --color-ink-faint: #6b6460; /* WCAG AA: 5.5:1 on paper */
+  --color-ink-faint: #595350; /* darken ↑ from #6b6460 — clears 4.5:1 on tinted card bgs (axe) */
   --color-rule: #d8d2c2;
   --color-coral: #b73d22; /* WCAG AA: 5.8:1 on paper */
   --color-coral-accent: #d94c2a;
   --color-sponsor: #5a4fcf;
 
-  /* Tier-type badge colors (light mode) */
-  --tier-always-free: #1a7f37;
-  --tier-free-plan: #0969da;
-  --tier-trial-credit: #bf8700;
-  --tier-pay-as-you-go: #5a5550;
+  /* Tier-type badge colors (light mode) — picked to hit 4.5:1 on the 10% tint
+   * bg over card-accent-tint (paper-warm + brand mix). Darkened from defaults. */
+  --tier-always-free: #136f2e;
+  --tier-free-plan: #0858c0;
+  --tier-trial-credit: #7a5400;
+  --tier-pay-as-you-go: #4a443e;
 
   /* === v5.0 SaaS-sidebar palette (light) === */
   --bg: #ffffff;
@@ -39,11 +40,11 @@
   --bg-elevated: #ffffff;
   --bg-warm: #fef9ed;
   --ink: #0a0c14;
-  --ink-soft: #4b5063;
-  --ink-faint: #767c8c;
+  --ink-soft: #3e4356; /* darken ↑ from #4b5063 for 4.5:1 on --bg-tint */
+  --ink-faint: #5e6373; /* darken ↑ from #767c8c — clears 4.5:1 on --bg (a11y axe) */
   --rule: #eef0f3;
   --rule-strong: #d8dce3;
-  --accent: #b73d22;
+  --accent: #8d2f1a; /* darkened from #b73d22 — clears 4.5:1 on tinted bgs incl. card-tint */
   --accent-soft: #fad8cc; /* darkened for 4.7:1 AA contrast on accent text */
   --accent-text: #ffffff;
   --green: #0a8a5a;
@@ -106,8 +107,8 @@
   --bg-elevated: #1d2030;
   --bg-warm: #1c1810;
   --ink: #f0f1f5;
-  --ink-soft: #b6bbcb;
-  --ink-faint: #828799;
+  --ink-soft: #c4c9d7; /* darken ↑ for 4.7:1 on --bg-card (a11y axe) */
+  --ink-faint: #9aa0b3; /* bump ↑ to clear 4.5:1 on --bg-card (was #828799, ~4.0:1) */
   --rule: #1f2333;
   --rule-strong: #2a2f44;
   --accent: #ff8a6a;
@@ -136,11 +137,11 @@
   --color-coral-accent: var(--accent);
   --color-sponsor: #8b80ff; /* lighter purple for dark bg */
 
-  /* Tier badges (dark mode) */
-  --tier-always-free: #34d399;
-  --tier-free-plan: #60a5fa;
-  --tier-trial-credit: #fbbf24;
-  --tier-pay-as-you-go: #828799;
+  /* Tier badges (dark mode) — colors picked to hit 4.5:1 on --bg-card */
+  --tier-always-free: #6ee7b7;
+  --tier-free-plan: #93c5fd;
+  --tier-trial-credit: #fcd34d;
+  --tier-pay-as-you-go: #c4c9d7;
 }
 
 /* === Reduced motion (shared) === */
@@ -164,7 +165,7 @@
   --color-ink: #1a1a1a;
   --color-ink-softer: #2a241e;
   --color-ink-soft: #4a443e;
-  --color-ink-faint: #6b6460;
+  --color-ink-faint: #595350;
   --color-rule: #d8d2c2;
   --color-coral: #b73d22;
   --color-coral-accent: #d94c2a;

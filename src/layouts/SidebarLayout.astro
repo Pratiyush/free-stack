@@ -136,7 +136,7 @@ const ABOUT = [
 
         <div class="group">
           <div class="group-head">
-            <span>Categories <span style="opacity: 0.6;">(27)</span></span>
+            <span>Categories <span style="color: var(--ink-faint);">(27)</span></span>
           </div>
           <p class="placeholder">
             CategorySidebar.astro (task #118) lands the collapsible 27-cat list here.
@@ -308,7 +308,7 @@ const ABOUT = [
       }
       .side .nav-item.active {
         background: var(--accent-soft);
-        color: var(--accent);
+        color: #8d2f1a; /* darkened coral — --accent fails 4.5:1 on --accent-soft */
         font-weight: 500;
       }
       .side .nav-item .count {

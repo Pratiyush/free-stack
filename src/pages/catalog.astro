@@ -74,7 +74,7 @@ const jsonLd = {
       </fieldset>
       <fieldset class="filter-group">
         <legend>Category</legend>
-        <select class="filter-select" data-filter-category>
+        <select class="filter-select" data-filter-category aria-label="Filter by category">
           <option value="">All categories</option>
           {categories.map((c) => <option value={c.id}>{c.data.name}</option>)}
         </select>
@@ -82,11 +82,12 @@ const jsonLd = {
     </div>
 
     <div class="result-row">
+      <h2 class="sr-only">All free tiers</h2>
       <p class="result-count" data-result-count>{services.length} services</p>
       <ViewToggle />
     </div>
 
-    <div class="grid" data-view="grid" data-grid>
+    <div class="grid" id="view-grid" data-view="grid" data-grid>
       {
         services.map((s) => {
           const cat = categories.find((c) => c.id === s.data.category);
@@ -95,7 +96,7 @@ const jsonLd = {
       }
     </div>
 
-    <div data-view="table" hidden>
+    <div id="view-table" data-view="table" hidden>
       <ServiceTable services={services} />
     </div>
 
