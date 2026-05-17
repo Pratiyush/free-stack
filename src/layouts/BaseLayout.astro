@@ -122,6 +122,7 @@ const cfAnalyticsToken = import.meta.env.PUBLIC_CF_ANALYTICS_TOKEN;
           <a href="/methodology">Methodology</a>
           <a href="/submit">Submit</a>
           <a href="/about">About</a>
+          <a href="/v5-preview" class="v5-preview-link" rel="noopener">Preview v5 →</a>
         </nav>
       </div>
     </header>
@@ -229,6 +230,20 @@ const cfAnalyticsToken = import.meta.env.PUBLIC_CF_ANALYTICS_TOKEN;
         outline: 2px solid var(--color-coral);
         outline-offset: 4px;
         border-radius: 2px;
+      }
+      .site-nav .v5-preview-link {
+        padding: 4px 10px;
+        border: 1px solid var(--color-rule);
+        border-radius: 4px;
+        color: var(--color-coral);
+        font-family: var(--font-mono);
+        font-size: 0.78rem;
+        letter-spacing: 0.02em;
+      }
+      .site-nav .v5-preview-link:hover,
+      .site-nav .v5-preview-link:focus-visible {
+        background: var(--color-paper-warm);
+        outline-offset: 1px;
       }
       main {
         min-height: 60vh;
