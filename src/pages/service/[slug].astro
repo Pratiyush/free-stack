@@ -593,7 +593,7 @@ const footnotes = collectSources(sources);
       font-style: italic;
       font-size: 0.85em;
       font-weight: 400;
-      color: #8d2f1a; /* darkened coral — --accent (#b73d22) fails 4.5:1 on paper */
+      color: var(--accent-readable); /* darkened coral — --accent (#b73d22) fails 4.5:1 on paper */
     }
 
     .free-tier {
@@ -651,7 +651,7 @@ const footnotes = collectSources(sources);
       font-family: var(--font-display);
       font-style: italic;
       font-weight: 400;
-      color: #8d2f1a; /* darkened coral — fails 4.5:1 on 6% accent tint */
+      color: var(--accent-readable); /* darkened coral — fails 4.5:1 on 6% accent tint */
       font-size: 1.05rem;
     }
     .pricing-table .free-row td.notes {
@@ -679,7 +679,7 @@ const footnotes = collectSources(sources);
     .link-list a {
       /* Don't use var(--accent) — per-service brand overrides may fail 4.5:1.
        * Fixed dark coral guarantees contrast across all 300 brand variants. */
-      color: #8d2f1a;
+      color: var(--accent-readable);
       text-decoration: none;
       font-family: var(--font-mono);
       font-size: 0.92rem;

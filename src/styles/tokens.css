@@ -33,26 +33,17 @@
   --tier-trial-credit: #7a5400;
   --tier-pay-as-you-go: #4a443e;
 
-  /* === v5.0 SaaS-sidebar palette (light) === */
+  /* === v5.0 SaaS-sidebar palette (light) — used only by /v5-preview sandbox === */
   --bg: #ffffff;
   --bg-tint: #f8f9fb;
   --bg-card: #ffffff;
-  --bg-elevated: #ffffff;
-  --bg-warm: #fef9ed;
   --ink: #0a0c14;
-  --ink-soft: #3e4356; /* darken ↑ from #4b5063 for 4.5:1 on --bg-tint */
-  --ink-faint: #5e6373; /* darken ↑ from #767c8c — clears 4.5:1 on --bg (a11y axe) */
+  --ink-soft: #3e4356; /* clears 4.5:1 on --bg-tint (a11y) */
+  --ink-faint: #5e6373; /* clears 4.5:1 on --bg (a11y) */
   --rule: #eef0f3;
-  --rule-strong: #d8dce3;
-  --accent: #8d2f1a; /* darkened from #b73d22 — clears 4.5:1 on tinted bgs incl. card-tint */
-  --accent-soft: #fad8cc; /* darkened for 4.7:1 AA contrast on accent text */
-  --accent-text: #ffffff;
-  --green: #0a8a5a;
-  --green-soft: #e6f7ee;
-  --amber: #b07707;
-  --amber-soft: #fff5e0;
-  --red: #b91c1c;
-  --red-soft: #fde8e8;
+  --accent: #b73d22; /* brand coral — DO NOT use for body text, use --accent-readable */
+  --accent-readable: #8d2f1a; /* AA-safe coral (≥4.5:1 on white/paper/tinted bgs) */
+  --accent-soft: #fad8cc;
 
   /* Per-card brand color fallbacks (set inline via style="--card-accent: #..." on ServiceCard) */
   --card-accent: var(--ink);
@@ -98,46 +89,23 @@
   --focus-ring: 2px solid var(--accent);
 }
 
-/* === DARK MODE — overrides v5 tokens AND aliases Almanac legacy === */
+/* === DARK MODE — used ONLY by /v5-preview sandbox (v4 BaseLayout is light-only) === */
 [data-theme='dark'] {
-  /* v5 dark palette */
   --bg: #0a0c14;
   --bg-tint: #11131c;
   --bg-card: #161924;
-  --bg-elevated: #1d2030;
-  --bg-warm: #1c1810;
   --ink: #f0f1f5;
-  --ink-soft: #c4c9d7; /* darken ↑ for 4.7:1 on --bg-card (a11y axe) */
-  --ink-faint: #9aa0b3; /* bump ↑ to clear 4.5:1 on --bg-card (was #828799, ~4.0:1) */
+  --ink-soft: #c4c9d7; /* clears 4.7:1 on --bg-card (a11y) */
+  --ink-faint: #9aa0b3; /* clears 4.5:1 on --bg-card (a11y) */
   --rule: #1f2333;
-  --rule-strong: #2a2f44;
   --accent: #ff8a6a;
+  --accent-readable: #ff8a6a; /* dark mode: lighter coral is the readable one */
   --accent-soft: #4a2418;
-  --accent-text: #0a0c14;
-  --green: #34d399;
-  --green-soft: #04321f;
-  --amber: #fbbf24;
-  --amber-soft: #3a2a08;
-  --red: #f87171;
-  --red-soft: #3a1414;
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.5);
   --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.6);
 
-  /* Almanac legacy aliased to v5 dark — old pages get dark mode for free */
-  --color-paper: var(--bg);
-  --color-paper-warm: var(--bg-tint);
-  --color-paper-deep: var(--bg-card);
-  --color-ink: var(--ink);
-  --color-ink-softer: var(--ink);
-  --color-ink-soft: var(--ink-soft);
-  --color-ink-faint: var(--ink-faint);
-  --color-rule: var(--rule);
-  --color-coral: var(--accent);
-  --color-coral-accent: var(--accent);
-  --color-sponsor: #8b80ff; /* lighter purple for dark bg */
-
-  /* Tier badges (dark mode) — colors picked to hit 4.5:1 on --bg-card */
+  /* Tier badges (dark) — picked to hit 4.5:1 on --bg-card */
   --tier-always-free: #6ee7b7;
   --tier-free-plan: #93c5fd;
   --tier-trial-credit: #fcd34d;

@@ -97,6 +97,7 @@ const ABOUT = [
         document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
       })();
     </script>
+    <slot name="head" />
   </head>
 
   <body>
@@ -308,7 +309,7 @@ const ABOUT = [
       }
       .side .nav-item.active {
         background: var(--accent-soft);
-        color: #8d2f1a; /* darkened coral — --accent fails 4.5:1 on --accent-soft */
+        color: var(--accent-readable); /* darkened coral — --accent fails 4.5:1 on --accent-soft */
         font-weight: 500;
       }
       .side .nav-item .count {

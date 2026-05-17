@@ -10,6 +10,9 @@ import SidebarLayout from '~/layouts/SidebarLayout.astro';
 ---
 
 <SidebarLayout title="v5.0 preview" crumb="DEV · LAYOUT SANDBOX" activeNav="home">
+  <Fragment slot="head">
+    <meta name="robots" content="noindex,nofollow" />
+  </Fragment>
   <section style="max-width: 720px;">
     <p
       style="font-family: var(--mono); font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 14px;"

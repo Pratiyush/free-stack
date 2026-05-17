@@ -44,14 +44,23 @@
 </div>
 
 <script>
-  const STORAGE_KEY = 'fs-catalog-view';
+  import { safeStorage } from '~/lib/storage';
+
+  const STORAGE_KEY = 'opentier-catalog-view';
+  const LEGACY_KEY = 'fs-catalog-view'; // rebrand: read-once + migrate
 
   function getInitialMode(): 'grid' | 'table' {
-    // Priority: URL param > localStorage > default 'grid'.
+    // Priority: URL param > localStorage > legacy key > default 'grid'.
     const url = new URLSearchParams(window.location.search).get('view');
     if (url === 'table' || url === 'grid') return url;
-    const stored = localStorage.getItem(STORAGE_KEY);
+    const stored = safeStorage.get(STORAGE_KEY);
     if (stored === 'table' || stored === 'grid') return stored;
+    const legacy = safeStorage.get(LEGACY_KEY);
+    if (legacy === 'table' || legacy === 'grid') {
+      safeStorage.set(STORAGE_KEY, legacy);
+      safeStorage.remove(LEGACY_KEY);
+      return legacy;
+    }
     return 'grid';
   }
 
@@ -70,7 +79,7 @@
     });
 
     // Persist + URL sync.
-    localStorage.setItem(STORAGE_KEY, mode);
+    safeStorage.set(STORAGE_KEY, mode);
     const url = new URL(window.location.href);
     if (mode === 'table') url.searchParams.set('view', 'table');
     else url.searchParams.delete('view');
