@@ -1,0 +1,46 @@
+---
+/**
+ * /v5-preview — sandbox page rendering the v5.0 SidebarLayout shell.
+ *
+ * Exists so we can review the new chrome (sidebar + topbar + theme toggle)
+ * in isolation while production pages stay on BaseLayout. Delete once the
+ * v5.0 sprint completes and all pages have migrated.
+ */
+import SidebarLayout from '~/layouts/SidebarLayout.astro';
+---
+
+<SidebarLayout title="v5.0 preview" crumb="DEV · LAYOUT SANDBOX" activeNav="home">
+  <section style="max-width: 720px;">
+    <p
+      style="font-family: var(--mono); font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 14px;"
+    >
+      Issue №009 · May 16, 2026
+    </p>
+    <h2
+      style="font-family: var(--display); font-size: clamp(2rem, 4.2vw, 3rem); line-height: 1.15; letter-spacing: -0.015em; font-weight: 400; margin-bottom: 16px; color: var(--ink);"
+    >
+      v5.0 layout shell — preview only.
+    </h2>
+    <p style="font-size: 1.04rem; color: var(--ink-soft); line-height: 1.55; max-width: 60ch;">
+      This page renders SidebarLayout.astro so you can review the v5.0 chrome without touching
+      production. Toggle theme bottom-left. Sidebar nav links go to the live v4.0 pages (which still
+      use BaseLayout) — that's expected until each page migrates.
+    </p>
+    <ul
+      style="margin-top: 22px; padding-left: 20px; color: var(--ink-soft); font-size: 0.92rem; line-height: 1.7;"
+    >
+      <li>
+        <strong style="color: var(--ink);">✓ Shipped:</strong> tokens.css (light + dark), safeStorage,
+        ThemeToggle, SidebarLayout shell.
+      </li>
+      <li>
+        <strong style="color: var(--ink);">Next:</strong> CategorySidebar (#118), CommandPalette (#122),
+        Drawer (#121), CompareCombobox (#123).
+      </li>
+      <li>
+        <strong style="color: var(--ink);">Brand call deferred:</strong> task #128 — A (plain text) /
+        B (restore repetition) / C (tighten current).
+      </li>
+    </ul>
+  </section>
+</SidebarLayout>

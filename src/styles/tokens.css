@@ -1,32 +1,78 @@
-/* Free-Stack design tokens — source of truth for color, type, spacing.
- * Reference: ref/docs/ARCHITECTURE.md §5. Never hardcode hex; always use these vars. */
+/* opentier design tokens — source of truth for color, type, spacing.
+ *
+ * Two coexisting palettes:
+ * 1. Almanac legacy (v4.0) — paper/cream + rust coral, used by current pages
+ * 2. v5.0 SaaS-sidebar — white-bg / dark-bg + accent rust, used by new components
+ *
+ * Dark mode (@ [data-theme='dark']) overrides BOTH so old + new pages share
+ * the inversion. Legacy Almanac tokens alias to v5.0 tokens in dark mode so
+ * pages don't need refactor for dark coverage.
+ *
+ * Reference: docs/sprints/sprint-8-v5.0-migration.md */
 
 @import 'tailwindcss';
 
 :root {
-  /* Color palette */
+  /* === Almanac legacy (v4.0 — light mode only; aliases to v5 in dark) === */
   --color-paper: #f4f1ea;
-  --color-paper-warm: #efeadd; /* subtle warmer cream for hero zones and masthead bands */
+  --color-paper-warm: #efeadd;
   --color-paper-deep: #ebe6d9;
   --color-ink: #1a1a1a;
-  --color-ink-softer: #2a241e; /* softer ink for masthead bands on paper-warm */
-  --color-ink-soft: #4a443e; /* WCAG AA: 7.5:1 on paper (was #5a5550 at 6.4:1) */
-  --color-ink-faint: #6b6460; /* WCAG AA: 5.5:1 on paper (was #8a8580 at 3.2:1 — failed) */
+  --color-ink-softer: #2a241e;
+  --color-ink-soft: #4a443e; /* WCAG AA: 7.5:1 on paper */
+  --color-ink-faint: #6b6460; /* WCAG AA: 5.5:1 on paper */
   --color-rule: #d8d2c2;
-  --color-coral: #b73d22; /* WCAG AA: 5.8:1 on paper (was #d94c2a at 3.7:1 — failed for text) */
-  --color-coral-accent: #d94c2a; /* original coral — for non-text decorative use (borders, dots) */
-  --color-sponsor: #5a4fcf; /* ONLY in /sponsors and footer support link */
+  --color-coral: #b73d22; /* WCAG AA: 5.8:1 on paper */
+  --color-coral-accent: #d94c2a;
+  --color-sponsor: #5a4fcf;
 
-  /* Tier-type badge colors */
+  /* Tier-type badge colors (light mode) */
   --tier-always-free: #1a7f37;
   --tier-free-plan: #0969da;
   --tier-trial-credit: #bf8700;
   --tier-pay-as-you-go: #5a5550;
 
-  /* Typography */
+  /* === v5.0 SaaS-sidebar palette (light) === */
+  --bg: #ffffff;
+  --bg-tint: #f8f9fb;
+  --bg-card: #ffffff;
+  --bg-elevated: #ffffff;
+  --bg-warm: #fef9ed;
+  --ink: #0a0c14;
+  --ink-soft: #4b5063;
+  --ink-faint: #767c8c;
+  --rule: #eef0f3;
+  --rule-strong: #d8dce3;
+  --accent: #b73d22;
+  --accent-soft: #fad8cc; /* darkened for 4.7:1 AA contrast on accent text */
+  --accent-text: #ffffff;
+  --green: #0a8a5a;
+  --green-soft: #e6f7ee;
+  --amber: #b07707;
+  --amber-soft: #fff5e0;
+  --red: #b91c1c;
+  --red-soft: #fde8e8;
+
+  /* Per-card brand color fallbacks (set inline via style="--card-accent: #..." on ServiceCard) */
+  --card-accent: var(--ink);
+  --row-accent: var(--ink);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.1);
+  --shadow-card:
+    0 1px 2px rgba(26, 26, 26, 0.04), 0 4px 12px rgba(26, 26, 26, 0.04); /* Almanac legacy */
+
+  /* Typography (shared across both palettes) */
   --font-display: 'Fraunces Variable', ui-serif, Georgia, serif;
   --font-body: 'Inter Tight Variable', ui-sans-serif, system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono Variable', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* v5 shorthand aliases for the inline-styles patterns used by ServiceCard/Drawer */
+  --display: var(--font-display);
+  --body: var(--font-body);
+  --mono: var(--font-mono);
 
   /* Spacing scale (rem) */
   --space-xs: 0.25rem;
@@ -47,11 +93,71 @@
   --radius-lg: 12px;
   --border-rule: 1px solid var(--color-rule);
 
-  /* Shadows (sparingly — this is an editorial site) */
-  --shadow-card: 0 1px 2px rgba(26, 26, 26, 0.04), 0 4px 12px rgba(26, 26, 26, 0.04);
+  /* Focus ring (shared) */
+  --focus-ring: 2px solid var(--accent);
+}
+
+/* === DARK MODE — overrides v5 tokens AND aliases Almanac legacy === */
+[data-theme='dark'] {
+  /* v5 dark palette */
+  --bg: #0a0c14;
+  --bg-tint: #11131c;
+  --bg-card: #161924;
+  --bg-elevated: #1d2030;
+  --bg-warm: #1c1810;
+  --ink: #f0f1f5;
+  --ink-soft: #b6bbcb;
+  --ink-faint: #828799;
+  --rule: #1f2333;
+  --rule-strong: #2a2f44;
+  --accent: #ff8a6a;
+  --accent-soft: #4a2418;
+  --accent-text: #0a0c14;
+  --green: #34d399;
+  --green-soft: #04321f;
+  --amber: #fbbf24;
+  --amber-soft: #3a2a08;
+  --red: #f87171;
+  --red-soft: #3a1414;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.6);
+
+  /* Almanac legacy aliased to v5 dark — old pages get dark mode for free */
+  --color-paper: var(--bg);
+  --color-paper-warm: var(--bg-tint);
+  --color-paper-deep: var(--bg-card);
+  --color-ink: var(--ink);
+  --color-ink-softer: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-faint: var(--ink-faint);
+  --color-rule: var(--rule);
+  --color-coral: var(--accent);
+  --color-coral-accent: var(--accent);
+  --color-sponsor: #8b80ff; /* lighter purple for dark bg */
+
+  /* Tier badges (dark mode) */
+  --tier-always-free: #34d399;
+  --tier-free-plan: #60a5fa;
+  --tier-trial-credit: #fbbf24;
+  --tier-pay-as-you-go: #828799;
+}
+
+/* === Reduced motion (shared) === */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 @theme {
+  /* Tailwind exports — Almanac tokens only. v5 tokens are referenced directly
+   * via var(--bg) etc. in component styles, not via Tailwind utility classes. */
   --color-paper: #f4f1ea;
   --color-paper-warm: #efeadd;
   --color-paper-deep: #ebe6d9;

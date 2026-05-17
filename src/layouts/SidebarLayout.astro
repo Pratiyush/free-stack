@@ -1,0 +1,469 @@
+---
+/**
+ * SidebarLayout — v5.0 SaaS-sidebar shell.
+ *
+ * Replaces the top-header BaseLayout for pages opted into v5.0. Layout: 240px
+ * sticky aside + main with sticky topbar. Mobile (<880px): sidebar transforms
+ * off-canvas, hamburger toggles. Mobile (<480px): topbar collapses search to
+ * icon, padding shrinks.
+ *
+ * Categories sidebar group is a placeholder block — CategorySidebar.astro
+ * (task #118) will replace the inline list with the 27-collapsible version.
+ *
+ * Drawer + CommandPalette mount points are siblings of .shell — they live
+ * outside the layout grid so the overlay z-stack works without contortion.
+ * Bodies stay empty until tasks #121/#122 ship.
+ */
+import '~/styles/global.css';
+import { u } from '~/lib/url';
+import ThemeToggle from '~/components/ui/ThemeToggle.astro';
+
+interface Props {
+  title: string;
+  crumb?: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: 'website' | 'article';
+  activeNav?: string;
+}
+
+const {
+  title,
+  crumb = 'OPENTIER',
+  description = '300 verified free tiers for developers across 27 categories. No ads, no affiliate links.',
+  canonical: canonicalProp,
+  ogImage = '/og/default.png',
+  ogType = 'website',
+  activeNav,
+} = Astro.props;
+
+const fullTitle = title === 'opentier' ? title : `${title} · opentier`;
+const siteUrl = 'https://opentier.dev';
+
+const baseStripped = (import.meta.env.BASE_URL ?? '/').replace(/\/$/, '');
+const pathForCanonical = (Astro.url.pathname || '/').replace(baseStripped, '') || '/';
+const canonical = canonicalProp ?? `${siteUrl}${pathForCanonical}`;
+const absoluteOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
+
+const BROWSE = [
+  { key: 'home', label: 'Home', href: u('/') },
+  { key: 'catalog', label: 'Catalog', href: u('/catalog/'), count: 300 },
+  { key: 'compare', label: 'Compare', href: u('/compare/') },
+  { key: 'report', label: 'State of Free Tiers 2026', href: u('/state-of-free-tiers/2026/') },
+];
+
+const ABOUT = [
+  { key: 'methodology', label: 'Methodology', href: u('/methodology/') },
+  { key: 'about', label: 'About', href: u('/about/') },
+  { key: 'sponsors', label: 'Sponsors', href: u('/sponsors/') },
+  { key: 'submit', label: 'Submit a service', href: u('/submit/') },
+  { key: 'changelog', label: 'Changelog', href: u('/changelog/') },
+  { key: 'legal', label: 'Legal & takedown', href: u('/legal/') },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href={u('/favicon.svg')} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={absoluteOgImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={absoluteOgImage} />
+
+    {/* Theme bootstrap — synchronous, before body paint, to prevent FOUC. */}
+    <script is:inline>
+      (function () {
+        try {
+          var saved = localStorage.getItem('opentier-theme');
+        } catch (e) {
+          saved = null;
+        }
+        var choice = saved || 'system';
+        var dark =
+          choice === 'dark' ||
+          (choice === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+      })();
+    </script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <button
+      class="hamburger"
+      data-toggle-side
+      aria-label="Toggle sidebar"
+      aria-controls="sidebar"
+      aria-expanded="false"
+      type="button"
+    >
+      ☰
+    </button>
+
+    <div class="shell">
+      <aside class="side" id="sidebar" aria-label="Primary navigation">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">∗</span>opentier
+        </div>
+
+        <div class="group">
+          <div class="group-head">Browse</div>
+          {
+            BROWSE.map((item) => (
+              <a
+                class:list={['nav-item', { active: item.key === activeNav }]}
+                href={item.href}
+                aria-current={item.key === activeNav ? 'page' : undefined}
+              >
+                {item.label}
+                {item.count != null && <span class="count">{item.count}</span>}
+              </a>
+            ))
+          }
+        </div>
+
+        <div class="group">
+          <div class="group-head">
+            <span>Categories <span style="opacity: 0.6;">(27)</span></span>
+          </div>
+          <p class="placeholder">
+            CategorySidebar.astro (task #118) lands the collapsible 27-cat list here.
+          </p>
+        </div>
+
+        <div class="group">
+          <div class="group-head">About</div>
+          {
+            ABOUT.map((item) => (
+              <a
+                class:list={['nav-item', { active: item.key === activeNav }]}
+                href={item.href}
+                aria-current={item.key === activeNav ? 'page' : undefined}
+              >
+                {item.label}
+              </a>
+            ))
+          }
+        </div>
+
+        <div class="group" style="margin-top: auto;">
+          <div class="group-head">Appearance</div>
+          <ThemeToggle />
+        </div>
+      </aside>
+
+      <main class="main" id="main-content" tabindex="-1">
+        <header class="topbar">
+          <div>
+            <p class="crumb">{crumb}</p>
+            <h1 id="page-title">{title}</h1>
+          </div>
+          <div class="actions">
+            {/* CommandPalette (#122) wires the ⌘K trigger; placeholder anchor for now. */}
+            <button class="search" disabled aria-label="Search (coming in v5.1)" type="button">
+              <span style="color: var(--ink-faint);" aria-hidden="true">⌕</span>
+              <span class="search-text">Search services and pages…</span>
+              <span class="kbd" aria-hidden="true">⌘K</span>
+            </button>
+          </div>
+        </header>
+
+        <div class="body-area">
+          <slot />
+        </div>
+      </main>
+    </div>
+
+    {/* Drawer (#121) + CommandPalette (#122) mount here in v5.1. */}
+
+    <script>
+      const hamburger = document.querySelector<HTMLButtonElement>('[data-toggle-side]');
+      hamburger?.addEventListener('click', () => {
+        const open = document.body.classList.toggle('sidebar-open');
+        hamburger.setAttribute('aria-expanded', String(open));
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && document.body.classList.contains('sidebar-open')) {
+          document.body.classList.remove('sidebar-open');
+          hamburger?.setAttribute('aria-expanded', 'false');
+        }
+      });
+      // Close sidebar after nav click on mobile.
+      document.querySelectorAll('aside.side a.nav-item').forEach((el) =>
+        el.addEventListener('click', () => {
+          document.body.classList.remove('sidebar-open');
+          hamburger?.setAttribute('aria-expanded', 'false');
+        }),
+      );
+    </script>
+
+    <style is:global>
+      body {
+        background: var(--bg-tint);
+        color: var(--ink);
+        font-family: var(--body);
+        font-size: 14px;
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+        transition:
+          background 0.18s ease,
+          color 0.18s ease;
+      }
+      *:focus-visible {
+        outline: var(--focus-ring);
+        outline-offset: 2px;
+        border-radius: 4px;
+      }
+      .skip-link {
+        position: absolute;
+        left: -9999px;
+        top: 0;
+        background: var(--ink);
+        color: var(--bg);
+        padding: 10px 14px;
+        z-index: 999;
+      }
+      .skip-link:focus {
+        left: 8px;
+        top: 8px;
+      }
+
+      .shell {
+        display: grid;
+        grid-template-columns: 240px 1fr;
+        min-height: 100vh;
+      }
+      aside.side {
+        background: var(--bg);
+        border-right: 1px solid var(--rule);
+        padding: 16px 12px;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .side .brand {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 8px 14px;
+        font-weight: 600;
+        font-size: 0.96rem;
+        color: var(--ink);
+      }
+      .brand-mark {
+        color: var(--accent);
+        font-size: 1.1rem;
+        line-height: 1;
+      }
+      .side .group {
+        margin-bottom: 12px;
+      }
+      .side .group-head {
+        font-size: 0.64rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--ink-faint);
+        padding: 6px 8px;
+        font-family: var(--mono);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .side .nav-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 7px 10px;
+        border-radius: 6px;
+        font-size: 0.86rem;
+        color: var(--ink-soft);
+        cursor: pointer;
+        transition:
+          background 0.12s ease,
+          color 0.12s ease;
+        user-select: none;
+        text-decoration: none;
+        font-family: inherit;
+        min-height: 28px;
+      }
+      .side .nav-item:hover {
+        background: var(--bg-tint);
+        color: var(--ink);
+      }
+      .side .nav-item.active {
+        background: var(--accent-soft);
+        color: var(--accent);
+        font-weight: 500;
+      }
+      .side .nav-item .count {
+        font-family: var(--mono);
+        font-size: 0.7rem;
+        color: var(--ink-faint);
+      }
+      .side .nav-item.active .count {
+        color: var(--accent);
+      }
+      .side .placeholder {
+        padding: 8px 10px;
+        font-size: 0.78rem;
+        color: var(--ink-faint);
+        font-style: italic;
+        line-height: 1.4;
+      }
+
+      .hamburger {
+        display: none;
+        position: fixed;
+        top: 14px;
+        left: 14px;
+        z-index: 30;
+        padding: 10px 14px;
+        background: var(--bg);
+        border: 1px solid var(--rule);
+        border-radius: 8px;
+        cursor: pointer;
+        font: inherit;
+        color: var(--ink);
+        min-width: 44px;
+        min-height: 44px;
+      }
+
+      main.main {
+        padding: 0;
+        overflow-x: hidden;
+      }
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 28px;
+        background: var(--bg);
+        border-bottom: 1px solid var(--rule);
+        position: sticky;
+        top: 0;
+        z-index: 5;
+        gap: 16px;
+      }
+      .topbar .crumb {
+        font-family: var(--mono);
+        font-size: 0.7rem;
+        color: var(--ink-faint);
+        margin-bottom: 4px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+      .topbar h1 {
+        font-size: 1.45rem;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        color: var(--ink);
+      }
+      .topbar .actions {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+      .search {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 12px;
+        border: 1px solid var(--rule);
+        border-radius: 7px;
+        background: var(--bg);
+        width: 320px;
+        cursor: pointer;
+        color: var(--ink-faint);
+        transition: border-color 0.12s ease;
+        font: inherit;
+        font-size: 0.86rem;
+        text-align: left;
+        min-height: 36px;
+      }
+      .search:disabled {
+        cursor: not-allowed;
+        opacity: 0.6;
+      }
+      .search-text {
+        flex: 1;
+      }
+      .kbd {
+        font-family: var(--mono);
+        font-size: 0.68rem;
+        color: var(--ink-faint);
+        padding: 2px 5px;
+        border: 1px solid var(--rule);
+        border-radius: 4px;
+        background: var(--bg-tint);
+      }
+
+      .body-area {
+        padding: 24px 28px;
+      }
+
+      @media (max-width: 880px) {
+        .shell {
+          grid-template-columns: 1fr;
+        }
+        aside.side {
+          position: fixed;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          width: 260px;
+          transform: translateX(-100%);
+          transition: transform 0.22s ease;
+          z-index: 40;
+        }
+        .sidebar-open aside.side {
+          transform: translateX(0);
+          box-shadow: var(--shadow-lg);
+        }
+        .hamburger {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+        }
+        .topbar {
+          padding-left: 70px;
+        }
+      }
+      @media (max-width: 480px) {
+        .topbar {
+          padding: 12px 14px 12px 64px;
+        }
+        .topbar h1 {
+          font-size: 1.2rem;
+        }
+        .body-area {
+          padding: 18px 14px;
+        }
+        .search {
+          width: 44px;
+          padding: 0;
+          justify-content: center;
+        }
+        .search .search-text,
+        .search .kbd {
+          display: none;
+        }
+      }
+    </style>
+  </body>
+</html>

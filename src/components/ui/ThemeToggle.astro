@@ -1,0 +1,97 @@
+---
+/**
+ * ThemeToggle — light / dark / system.
+ *
+ * Persists choice in localStorage('opentier-theme') via safeStorage.
+ * System mode reads `prefers-color-scheme` AND listens for OS changes mid-session
+ * (round-2 finding: v3 prototype only read matchMedia once at startup).
+ *
+ * The FOUC-prevention bootstrap lives in BaseLayout / SidebarLayout (inline
+ * <script> in <head> that reads localStorage synchronously before body paint).
+ * This component owns the interactive toggle only.
+ */
+---
+
+<div class="theme-row" role="radiogroup" aria-label="Theme">
+  <button class="theme-btn" data-theme-set="light" role="radio" aria-checked="false" type="button">
+    Light
+  </button>
+  <button class="theme-btn" data-theme-set="dark" role="radio" aria-checked="false" type="button">
+    Dark
+  </button>
+  <button class="theme-btn" data-theme-set="system" role="radio" aria-checked="false" type="button">
+    System
+  </button>
+</div>
+
+<script>
+  import { safeStorage } from '~/lib/storage';
+
+  type ThemeChoice = 'light' | 'dark' | 'system';
+
+  const STORAGE_KEY = 'opentier-theme';
+  const buttons = document.querySelectorAll<HTMLButtonElement>('[data-theme-set]');
+  const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+  function resolved(choice: ThemeChoice): 'light' | 'dark' {
+    if (choice === 'system') return mediaQuery.matches ? 'dark' : 'light';
+    return choice;
+  }
+
+  function apply(choice: ThemeChoice) {
+    document.documentElement.setAttribute('data-theme', resolved(choice));
+    buttons.forEach((b) => {
+      const active = b.dataset.themeSet === choice;
+      b.classList.toggle('active', active);
+      b.setAttribute('aria-checked', String(active));
+    });
+    safeStorage.set(STORAGE_KEY, choice);
+  }
+
+  buttons.forEach((b) =>
+    b.addEventListener('click', () => apply(b.dataset.themeSet as ThemeChoice)),
+  );
+
+  const initial = (safeStorage.get(STORAGE_KEY) as ThemeChoice | null) ?? 'system';
+  apply(initial);
+
+  // Round-2 fix: react to OS theme change while in system mode.
+  mediaQuery.addEventListener('change', () => {
+    const current = (safeStorage.get(STORAGE_KEY) as ThemeChoice | null) ?? 'system';
+    if (current === 'system') apply('system');
+  });
+</script>
+
+<style>
+  .theme-row {
+    display: flex;
+    gap: 4px;
+    padding: 3px;
+    background: var(--bg-tint);
+    border: 1px solid var(--rule);
+    border-radius: 7px;
+  }
+  .theme-btn {
+    flex: 1;
+    padding: 6px 8px;
+    border: none;
+    border-radius: 5px;
+    background: transparent;
+    color: var(--ink-faint);
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.76rem;
+    transition:
+      background 0.12s ease,
+      color 0.12s ease;
+    min-height: 28px;
+  }
+  .theme-btn:hover {
+    color: var(--ink-soft);
+  }
+  .theme-btn.active {
+    background: var(--bg);
+    color: var(--ink);
+    box-shadow: var(--shadow-sm);
+  }
+</style>
